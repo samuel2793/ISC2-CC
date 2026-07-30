@@ -157,7 +157,7 @@
         top: 0;
         z-index: 5;
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-columns: minmax(0, 1fr) auto auto;
         gap: 12px;
         align-items: center;
         margin: -30px -30px 28px;
@@ -198,6 +198,13 @@
         background: var(--accent);
         color: #ffffff;
         outline: none;
+      }
+
+      .action-button:disabled {
+        border-color: var(--line);
+        background: var(--panel-soft);
+        color: var(--muted);
+        cursor: wait;
       }
 
       .content-panel {
@@ -398,6 +405,7 @@
       <main class="main">
         <div class="toolbar">
           <input id="searchInput" class="search" type="search" placeholder="Buscar en el dominio actual" autocomplete="off">
+          <button id="epubButton" class="action-button" type="button">EPUB completo</button>
           <button id="printButton" class="action-button" type="button">Imprimir</button>
         </div>
 

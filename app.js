@@ -175,10 +175,12 @@ const menu = document.querySelector("#domainMenu");
 const tocList = document.querySelector("#tocList");
 const content = document.querySelector("#content");
 const searchInput = document.querySelector("#searchInput");
+const epubButton = document.querySelector("#epubButton");
 const printButton = document.querySelector("#printButton");
 
 let activeDomain = null;
 let activeLessons = [];
+const textEncoder = new TextEncoder();
 
 function encodePath(path) {
   return path.split("/").map(encodeURIComponent).join("/");
@@ -193,20 +195,21 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-function parseInline(value, basePath) {
+function parseInline(value, basePath, options = {}) {
   let html = escapeHtml(value);
 
   html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
   html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
     const url = href.startsWith("http") || href.startsWith("#") ? href : encodePath(`${basePath}/${href}`);
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+    const attributes = options.xhtml ? "" : ' target="_blank" rel="noopener noreferrer"';
+    return `<a href="${url}"${attributes}>${label}</a>`;
   });
 
   return html;
 }
 
-function renderMarkdown(markdown, basePath) {
+function renderMarkdown(markdown, basePath, options = {}) {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const blocks = [];
   let index = 0;
@@ -223,8 +226,12 @@ function renderMarkdown(markdown, basePath) {
     const image = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
     if (image) {
       const alt = escapeHtml(image[1] || "imagen");
-      const src = encodePath(`${basePath}/${image[2]}`);
-      blocks.push(`<img src="${src}" alt="${alt}" loading="lazy">`);
+      const src = options.resolveMediaSrc
+        ? options.resolveMediaSrc(image[2])
+        : encodePath(`${basePath}/${image[2]}`);
+      const lazy = options.xhtml ? "" : ' loading="lazy"';
+      const close = options.xhtml ? " />" : ">";
+      blocks.push(`<img src="${src}" alt="${alt}"${lazy}${close}`);
       index += 1;
       continue;
     }
@@ -232,7 +239,7 @@ function renderMarkdown(markdown, basePath) {
     const heading = trimmed.match(/^(#{1,6})\s+(.+)$/);
     if (heading) {
       const level = Math.min(heading[1].length, 5);
-      blocks.push(`<h${level}>${parseInline(heading[2], basePath)}</h${level}>`);
+      blocks.push(`<h${level}>${parseInline(heading[2], basePath, options)}</h${level}>`);
       index += 1;
       continue;
     }
@@ -240,7 +247,7 @@ function renderMarkdown(markdown, basePath) {
     if (trimmed.startsWith("- ")) {
       const items = [];
       while (index < lines.length && lines[index].trim().startsWith("- ")) {
-        items.push(`<li>${parseInline(lines[index].trim().slice(2), basePath)}</li>`);
+        items.push(`<li>${parseInline(lines[index].trim().slice(2), basePath, options)}</li>`);
         index += 1;
       }
       blocks.push(`<ul>${items.join("")}</ul>`);
@@ -257,7 +264,7 @@ function renderMarkdown(markdown, basePath) {
       paragraph.push(next);
       index += 1;
     }
-    blocks.push(`<p>${parseInline(paragraph.join(" "), basePath)}</p>`);
+    blocks.push(`<p>${parseInline(paragraph.join(" "), basePath, options)}</p>`);
   }
 
   return blocks.join("\n");
@@ -400,7 +407,431 @@ function filterLessons() {
   });
 }
 
+function bytes(value) {
+  return typeof value === "string" ? textEncoder.encode(value) : value;
+}
+
+function concatBytes(chunks) {
+  const total = chunks.reduce((sum, chunk) => sum + chunk.length, 0);
+  const output = new Uint8Array(total);
+  let offset = 0;
+
+  chunks.forEach((chunk) => {
+    output.set(chunk, offset);
+    offset += chunk.length;
+  });
+
+  return output;
+}
+
+function makeCrcTable() {
+  const table = new Uint32Array(256);
+
+  for (let i = 0; i < 256; i += 1) {
+    let value = i;
+    for (let bit = 0; bit < 8; bit += 1) {
+      value = value & 1 ? 0xedb88320 ^ (value >>> 1) : value >>> 1;
+    }
+    table[i] = value >>> 0;
+  }
+
+  return table;
+}
+
+const crcTable = makeCrcTable();
+
+function crc32(data) {
+  let crc = 0xffffffff;
+
+  for (let i = 0; i < data.length; i += 1) {
+    crc = crcTable[(crc ^ data[i]) & 0xff] ^ (crc >>> 8);
+  }
+
+  return (crc ^ 0xffffffff) >>> 0;
+}
+
+function dosDateTime(date = new Date()) {
+  const time = (date.getHours() << 11) | (date.getMinutes() << 5) | Math.floor(date.getSeconds() / 2);
+  const dosDate = ((date.getFullYear() - 1980) << 9) | ((date.getMonth() + 1) << 5) | date.getDate();
+  return { time, date: dosDate };
+}
+
+function createZip(entries) {
+  const chunks = [];
+  const centralDirectory = [];
+  const timestamp = dosDateTime();
+  let offset = 0;
+
+  entries.forEach((entry) => {
+    const name = bytes(entry.name);
+    const data = bytes(entry.data);
+    const checksum = crc32(data);
+
+    const localHeader = new Uint8Array(30 + name.length);
+    const localView = new DataView(localHeader.buffer);
+    localView.setUint32(0, 0x04034b50, true);
+    localView.setUint16(4, 20, true);
+    localView.setUint16(6, 0x0800, true);
+    localView.setUint16(8, 0, true);
+    localView.setUint16(10, timestamp.time, true);
+    localView.setUint16(12, timestamp.date, true);
+    localView.setUint32(14, checksum, true);
+    localView.setUint32(18, data.length, true);
+    localView.setUint32(22, data.length, true);
+    localView.setUint16(26, name.length, true);
+    localView.setUint16(28, 0, true);
+    localHeader.set(name, 30);
+
+    const centralHeader = new Uint8Array(46 + name.length);
+    const centralView = new DataView(centralHeader.buffer);
+    centralView.setUint32(0, 0x02014b50, true);
+    centralView.setUint16(4, 20, true);
+    centralView.setUint16(6, 20, true);
+    centralView.setUint16(8, 0x0800, true);
+    centralView.setUint16(10, 0, true);
+    centralView.setUint16(12, timestamp.time, true);
+    centralView.setUint16(14, timestamp.date, true);
+    centralView.setUint32(16, checksum, true);
+    centralView.setUint32(20, data.length, true);
+    centralView.setUint32(24, data.length, true);
+    centralView.setUint16(28, name.length, true);
+    centralView.setUint16(30, 0, true);
+    centralView.setUint16(32, 0, true);
+    centralView.setUint16(34, 0, true);
+    centralView.setUint16(36, 0, true);
+    centralView.setUint32(38, 0, true);
+    centralView.setUint32(42, offset, true);
+    centralHeader.set(name, 46);
+
+    chunks.push(localHeader, data);
+    centralDirectory.push(centralHeader);
+    offset += localHeader.length + data.length;
+  });
+
+  const centralOffset = offset;
+  const centralSize = centralDirectory.reduce((sum, chunk) => sum + chunk.length, 0);
+  const endRecord = new Uint8Array(22);
+  const endView = new DataView(endRecord.buffer);
+  endView.setUint32(0, 0x06054b50, true);
+  endView.setUint16(8, entries.length, true);
+  endView.setUint16(10, entries.length, true);
+  endView.setUint32(12, centralSize, true);
+  endView.setUint32(16, centralOffset, true);
+  endView.setUint16(20, 0, true);
+
+  return concatBytes([...chunks, ...centralDirectory, endRecord]);
+}
+
+function mediaTypeFor(path) {
+  const extension = path.split(".").pop().toLowerCase();
+  const types = {
+    css: "text/css",
+    gif: "image/gif",
+    jpeg: "image/jpeg",
+    jpg: "image/jpeg",
+    png: "image/png",
+    svg: "image/svg+xml",
+    webp: "image/webp",
+    xhtml: "application/xhtml+xml"
+  };
+
+  return types[extension] || "application/octet-stream";
+}
+
+function extractImageRefs(markdown) {
+  const refs = new Set();
+  const regex = /!\[[^\]]*\]\(([^)]+)\)/g;
+  let match = regex.exec(markdown);
+
+  while (match) {
+    if (!match[1].startsWith("http")) refs.add(match[1]);
+    match = regex.exec(markdown);
+  }
+
+  return [...refs];
+}
+
+async function fetchBinary(path) {
+  const response = await fetch(encodePath(path));
+  if (!response.ok) throw new Error(`No se pudo cargar ${path}`);
+  return new Uint8Array(await response.arrayBuffer());
+}
+
+function epubDocument(title, body) {
+  return `<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="es" xml:lang="es">
+  <head>
+    <title>${escapeHtml(title)}</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+${body}
+  </body>
+</html>`;
+}
+
+function chapterName(index) {
+  return `chapter-${String(index + 1).padStart(2, "0")}.xhtml`;
+}
+
+function buildNav(chapters) {
+  const items = chapters.map((chapter) => {
+    const lessons = chapter.lessons.map((lesson) => (
+      `<li><a href="${chapter.href}#${lesson.id}">${escapeHtml(titleFromFile(lesson.file))}</a></li>`
+    )).join("");
+
+    return `<li><a href="${chapter.href}">${escapeHtml(chapter.title)}</a><ol>${lessons}</ol></li>`;
+  }).join("");
+
+  return epubDocument("Indice", `
+    <nav epub:type="toc" id="toc">
+      <h1>Indice</h1>
+      <ol>
+        <li><a href="cover.xhtml">Portada</a></li>
+        ${items}
+      </ol>
+    </nav>`);
+}
+
+function buildNcx(chapters) {
+  let order = 1;
+  const navPoints = chapters.map((chapter) => {
+    const chapterOrder = order;
+    order += 1;
+    const lessons = chapter.lessons.map((lesson) => {
+      const playOrder = order;
+      order += 1;
+      return `
+    <navPoint id="${lesson.id}" playOrder="${playOrder}">
+      <navLabel><text>${escapeHtml(titleFromFile(lesson.file))}</text></navLabel>
+      <content src="${chapter.href}#${lesson.id}" />
+    </navPoint>`;
+    }).join("");
+
+    return `
+  <navPoint id="${chapter.id}" playOrder="${chapterOrder}">
+    <navLabel><text>${escapeHtml(chapter.title)}</text></navLabel>
+    <content src="${chapter.href}" />${lessons}
+  </navPoint>`;
+  }).join("");
+
+  return `<?xml version="1.0" encoding="utf-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:isc2-cc-es" />
+    <meta name="dtb:depth" content="2" />
+    <meta name="dtb:totalPageCount" content="0" />
+    <meta name="dtb:maxPageNumber" content="0" />
+  </head>
+  <docTitle><text>ISC2 CC - Contenido completo</text></docTitle>
+  <navMap>${navPoints}
+  </navMap>
+</ncx>`;
+}
+
+function buildOpf(chapters, imageItems) {
+  const modified = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
+  const chapterItems = chapters.map((chapter) => (
+    `<item id="${chapter.id}" href="${chapter.href}" media-type="application/xhtml+xml" />`
+  )).join("\n    ");
+  const manifestImages = imageItems.map((image) => (
+    `<item id="${image.id}" href="${image.href}" media-type="${image.mediaType}" />`
+  )).join("\n    ");
+  const spineItems = chapters.map((chapter) => `<itemref idref="${chapter.id}" />`).join("\n    ");
+
+  return `<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="book-id">urn:uuid:isc2-cc-es</dc:identifier>
+    <dc:title>ISC2 CC - Contenido completo</dc:title>
+    <dc:language>es</dc:language>
+    <meta property="dcterms:modified">${modified}</meta>
+  </metadata>
+  <manifest>
+    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav" />
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+    <item id="style" href="styles.css" media-type="text/css" />
+    <item id="cover-image" href="cover.jpg" media-type="image/jpeg" properties="cover-image" />
+    <item id="cover-page" href="cover.xhtml" media-type="application/xhtml+xml" />
+    ${chapterItems}
+    ${manifestImages}
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover-page" />
+    ${spineItems}
+  </spine>
+</package>`;
+}
+
+async function buildEpub() {
+  const entries = [
+    { name: "mimetype", data: "application/epub+zip" },
+    {
+      name: "META-INF/container.xml",
+      data: `<?xml version="1.0" encoding="utf-8"?>
+<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
+  <rootfiles>
+    <rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml" />
+  </rootfiles>
+</container>`
+    }
+  ];
+
+  const cover = await fetchBinary("portada.jpg");
+  entries.push({ name: "OEBPS/cover.jpg", data: cover });
+
+  const imageItems = [];
+  const imageData = new Map();
+  const chapters = [];
+
+  for (let domainIndex = 0; domainIndex < DOMAINS.length; domainIndex += 1) {
+    const domain = DOMAINS[domainIndex];
+    const lessons = await Promise.all(domain.files.map((file) => fetchLesson(domain, file)));
+    const imageMap = new Map();
+
+    for (const lesson of lessons) {
+      for (const ref of extractImageRefs(lesson.markdown)) {
+        const source = `${domain.path}/${ref}`;
+        if (!imageMap.has(ref)) {
+          const imageId = `img-${domain.id}-${imageMap.size + 1}`;
+          const href = `images/${imageId}.${ref.split(".").pop().toLowerCase()}`;
+          imageMap.set(ref, href);
+          if (!imageData.has(source)) {
+            imageData.set(source, { id: imageId, href, source });
+          }
+        }
+      }
+    }
+
+    const body = `
+    <section>
+      <h1>${escapeHtml(domain.number)}: ${escapeHtml(domain.title)}</h1>
+      ${lessons.map((lesson) => `
+      <section id="${lessonId(domain.id, lesson.file)}">
+        ${renderMarkdown(lesson.markdown, domain.path, {
+          xhtml: true,
+          resolveMediaSrc(ref) {
+            return imageMap.get(ref) || ref;
+          }
+        })}
+      </section>`).join("\n")}
+    </section>`;
+
+    const href = chapterName(domainIndex);
+    entries.push({
+      name: `OEBPS/${href}`,
+      data: epubDocument(`${domain.number}: ${domain.title}`, body)
+    });
+
+    chapters.push({
+      id: `chapter-${domainIndex + 1}`,
+      href,
+      title: `${domain.number}: ${domain.title}`,
+      lessons: lessons.map((lesson) => ({
+        id: lessonId(domain.id, lesson.file),
+        file: lesson.file
+      }))
+    });
+  }
+
+  for (const image of imageData.values()) {
+    const data = await fetchBinary(image.source);
+    imageItems.push({
+      id: image.id,
+      href: image.href,
+      mediaType: mediaTypeFor(image.href)
+    });
+    entries.push({ name: `OEBPS/${image.href}`, data });
+  }
+
+  entries.push({
+    name: "OEBPS/cover.xhtml",
+    data: epubDocument("Portada", `
+    <section class="cover">
+      <img src="cover.jpg" alt="Portada" />
+    </section>`)
+  });
+  entries.push({
+    name: "OEBPS/nav.xhtml",
+    data: buildNav(chapters)
+  });
+  entries.push({
+    name: "OEBPS/toc.ncx",
+    data: buildNcx(chapters)
+  });
+  entries.push({
+    name: "OEBPS/styles.css",
+    data: `body {
+  color: #1c2430;
+  font-family: serif;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.25;
+}
+
+h1 {
+  color: #0d5268;
+}
+
+img {
+  display: block;
+  height: auto;
+  margin: 1em auto;
+  max-width: 100%;
+}
+
+.cover {
+  text-align: center;
+}
+
+.cover img {
+  max-height: 95vh;
+}`
+  });
+  entries.push({
+    name: "OEBPS/content.opf",
+    data: buildOpf(chapters, imageItems)
+  });
+
+  return new Blob([createZip(entries)], { type: "application/epub+zip" });
+}
+
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+async function downloadEpub() {
+  epubButton.disabled = true;
+  epubButton.textContent = "Generando...";
+
+  try {
+    const epub = await buildEpub();
+    downloadBlob(epub, "isc2-cc-completo.epub");
+  } catch (error) {
+    content.innerHTML = `<div class="error-state">${escapeHtml(error.message)}</div>`;
+  } finally {
+    epubButton.disabled = false;
+    epubButton.textContent = "EPUB completo";
+  }
+}
+
 searchInput.addEventListener("input", filterLessons);
+epubButton.addEventListener("click", downloadEpub);
 printButton.addEventListener("click", () => window.print());
 window.addEventListener("hashchange", () => loadDomain(location.hash.slice(1), false));
 
