@@ -181,9 +181,14 @@ const printButton = document.querySelector("#printButton");
 let activeDomain = null;
 let activeLessons = [];
 const textEncoder = new TextEncoder();
+const baseUrl = new URL(".", document.baseURI);
 
 function encodePath(path) {
   return path.split("/").map(encodeURIComponent).join("/");
+}
+
+function siteUrl(path) {
+  return new URL(encodePath(path), baseUrl).href;
 }
 
 function escapeHtml(value) {
@@ -201,7 +206,7 @@ function parseInline(value, basePath, options = {}) {
   html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
   html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
-    const url = href.startsWith("http") || href.startsWith("#") ? href : encodePath(`${basePath}/${href}`);
+    const url = href.startsWith("http") || href.startsWith("#") ? href : siteUrl(`${basePath}/${href}`);
     const attributes = options.xhtml ? "" : ' target="_blank" rel="noopener noreferrer"';
     return `<a href="${url}"${attributes}>${label}</a>`;
   });
@@ -228,7 +233,7 @@ function renderMarkdown(markdown, basePath, options = {}) {
       const alt = escapeHtml(image[1] || "imagen");
       const src = options.resolveMediaSrc
         ? options.resolveMediaSrc(image[2])
-        : encodePath(`${basePath}/${image[2]}`);
+        : siteUrl(`${basePath}/${image[2]}`);
       const lazy = options.xhtml ? "" : ' loading="lazy"';
       const close = options.xhtml ? " />" : ">";
       blocks.push(`<img src="${src}" alt="${alt}"${lazy}${close}`);
@@ -306,9 +311,10 @@ function setActiveButton(domainId) {
 }
 
 async function fetchLesson(domain, file) {
-  const response = await fetch(encodePath(`${domain.path}/${file}`));
+  const url = siteUrl(`${domain.path}/${file}`);
+  const response = await fetch(url);
   if (!response.ok) {
-    throw new Error(`No se pudo cargar ${file}`);
+    throw new Error(`No se pudo cargar ${file} (${response.status})`);
   }
 
   return {
@@ -552,8 +558,8 @@ function extractImageRefs(markdown) {
 }
 
 async function fetchBinary(path) {
-  const response = await fetch(encodePath(path));
-  if (!response.ok) throw new Error(`No se pudo cargar ${path}`);
+  const response = await fetch(siteUrl(path));
+  if (!response.ok) throw new Error(`No se pudo cargar ${path} (${response.status})`);
   return new Uint8Array(await response.arrayBuffer());
 }
 
