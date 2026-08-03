@@ -68,6 +68,12 @@
         gap: 8px;
       }
 
+      .sidebar-section {
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+      }
+
       .domain-button {
         width: 100%;
         min-height: 54px;
@@ -81,13 +87,30 @@
         transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
       }
 
+      .sidebar-action {
+        display: block;
+        width: 100%;
+        min-height: 46px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel-soft);
+        color: var(--text);
+        cursor: pointer;
+        font-weight: 700;
+        padding: 10px 12px;
+        text-align: left;
+      }
+
       .domain-button:hover,
-      .domain-button:focus-visible {
+      .domain-button:focus-visible,
+      .sidebar-action:hover,
+      .sidebar-action:focus-visible {
         border-color: var(--accent);
         outline: none;
       }
 
-      .domain-button.active {
+      .domain-button.active,
+      .sidebar-action.active {
         border-color: var(--accent);
         background: var(--accent);
         color: #ffffff;
@@ -312,6 +335,140 @@
         color: var(--muted);
       }
 
+      .test-panel {
+        display: grid;
+        gap: 22px;
+        padding: 30px 34px 42px;
+      }
+
+      .test-header h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        line-height: 1.1;
+      }
+
+      .test-header p,
+      .test-meta {
+        color: var(--muted);
+        margin: 8px 0 0;
+      }
+
+      .test-controls {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: end;
+      }
+
+      .field-label {
+        display: grid;
+        gap: 6px;
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .select,
+      .file-input {
+        width: 100%;
+        min-height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+        color: var(--text);
+        padding: 0 12px;
+      }
+
+      .question-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 18px;
+      }
+
+      .question-card.correct {
+        border-color: #2f8f5b;
+        background: #f1fbf5;
+      }
+
+      .question-card.incorrect {
+        border-color: #c45151;
+        background: #fff5f5;
+      }
+
+      .question-title {
+        margin: 0 0 12px;
+        font-weight: 800;
+      }
+
+      .option-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .option-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .option-item:hover {
+        border-color: var(--accent);
+      }
+
+      .option-item.correct {
+        border-color: #2f8f5b;
+        background: #e8f7ee;
+      }
+
+      .option-item.incorrect {
+        border-color: #c45151;
+        background: #ffecec;
+      }
+
+      .option-item:has(input:disabled) {
+        cursor: default;
+      }
+
+      .option-item input {
+        margin-top: 5px;
+      }
+
+      .question-feedback {
+        margin: 14px 0 0;
+        color: var(--muted);
+      }
+
+      .score-box {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel-soft);
+        font-weight: 800;
+        padding: 14px;
+      }
+
+      .test-progress {
+        border-radius: 8px;
+        background: var(--panel-soft);
+        color: var(--accent-strong);
+        font-weight: 800;
+        margin: 16px 0;
+        padding: 10px 12px;
+      }
+
+      .test-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-end;
+        margin-top: 16px;
+      }
+
       mark {
         border-radius: 3px;
         background: rgba(239, 138, 23, 0.24);
@@ -349,7 +506,8 @@
         }
 
         .domain-header,
-        .document {
+        .document,
+        .test-panel {
           padding-left: 20px;
           padding-right: 20px;
         }
@@ -357,7 +515,8 @@
 
       @media (max-width: 560px) {
         .domain-menu,
-        .toolbar {
+        .toolbar,
+        .test-controls {
           grid-template-columns: 1fr;
         }
 
@@ -396,6 +555,9 @@
       <aside class="sidebar" aria-label="Menu de dominios">
         <h1 class="brand">ISC2 CC</h1>
         <nav id="domainMenu" class="domain-menu" aria-label="Dominios"></nav>
+        <div class="sidebar-section">
+          <button id="testMenuButton" class="sidebar-action" type="button">Tests</button>
+        </div>
         <section class="toc" aria-label="Indice del dominio">
           <p class="toc-title">Indice</p>
           <ol id="tocList" class="toc-list"></ol>

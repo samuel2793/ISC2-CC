@@ -177,9 +177,12 @@ const content = document.querySelector("#content");
 const searchInput = document.querySelector("#searchInput");
 const epubButton = document.querySelector("#epubButton");
 const printButton = document.querySelector("#printButton");
+const testMenuButton = document.querySelector("#testMenuButton");
 
 let activeDomain = null;
 let activeLessons = [];
+let testBatteries = [];
+let currentTestRun = null;
 const textEncoder = new TextEncoder();
 const baseUrl = new URL(".", document.baseURI);
 
@@ -308,6 +311,7 @@ function setActiveButton(domainId) {
   document.querySelectorAll(".domain-button").forEach((button) => {
     button.classList.toggle("active", button.dataset.domain === domainId);
   });
+  testMenuButton.classList.remove("active");
 }
 
 async function fetchLesson(domain, file) {
@@ -331,6 +335,8 @@ async function loadDomain(domainId, updateHash = true) {
   setActiveButton(domain.id);
   renderToc(domain);
   searchInput.value = "";
+  searchInput.disabled = false;
+  searchInput.placeholder = "Buscar en el dominio actual";
 
   content.innerHTML = `<div class="loading-state">Cargando ${escapeHtml(domain.number)}...</div>`;
 
@@ -411,6 +417,326 @@ function filterLessons() {
     lesson.hidden = !visible;
     if (visible) highlightText(lesson, query);
   });
+}
+
+function resolveTestPath(file) {
+  return file.includes("/") ? file : `tests/${file}`;
+}
+
+function answerIndex(question) {
+  const answer = question.respuesta ?? question.correcta;
+  if (Number.isInteger(answer)) return answer;
+  if (typeof answer === "string") return question.opciones.indexOf(answer);
+  return -1;
+}
+
+function normalizeBattery(raw, sourceName) {
+  if (!raw || typeof raw !== "object") {
+    throw new Error(`${sourceName}: la bateria no es un objeto JSON valido`);
+  }
+
+  if (!raw.procedencia || typeof raw.procedencia !== "string") {
+    throw new Error(`${sourceName}: falta el atributo obligatorio "procedencia"`);
+  }
+
+  if (!Array.isArray(raw.preguntas) || raw.preguntas.length === 0) {
+    throw new Error(`${sourceName}: falta un array "preguntas" con al menos una pregunta`);
+  }
+
+  const preguntas = raw.preguntas.map((question, index) => {
+    if (!question || typeof question !== "object") {
+      throw new Error(`${sourceName}: la pregunta ${index + 1} no es valida`);
+    }
+
+    const texto = question.pregunta || question.enunciado;
+    const opciones = question.opciones || question.respuestas;
+
+    if (!texto || typeof texto !== "string") {
+      throw new Error(`${sourceName}: la pregunta ${index + 1} no tiene "pregunta"`);
+    }
+
+    if (!Array.isArray(opciones) || opciones.length < 2) {
+      throw new Error(`${sourceName}: la pregunta ${index + 1} necesita al menos dos opciones`);
+    }
+
+    const normalized = {
+      pregunta: texto,
+      opciones: opciones.map(String),
+      respuesta: question.respuesta ?? question.correcta,
+      explicacion: question.explicacion ? String(question.explicacion) : ""
+    };
+
+    const correct = answerIndex(normalized);
+    if (correct < 0 || correct >= normalized.opciones.length) {
+      throw new Error(`${sourceName}: la respuesta de la pregunta ${index + 1} no coincide con ninguna opcion`);
+    }
+
+    return normalized;
+  });
+
+  return {
+    id: `${sourceName}-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+    titulo: raw.titulo || sourceName.replace(/\.json$/i, ""),
+    descripcion: raw.descripcion || "",
+    procedencia: raw.procedencia,
+    preguntas
+  };
+}
+
+async function fetchJson(path) {
+  const response = await fetch(siteUrl(path));
+  if (!response.ok) throw new Error(`No se pudo cargar ${path} (${response.status})`);
+  return response.json();
+}
+
+async function loadTestBatteries() {
+  const manifest = await fetchJson("tests/manifest.json");
+  const files = Array.isArray(manifest) ? manifest : manifest.baterias;
+
+  if (!Array.isArray(files)) {
+    throw new Error('tests/manifest.json debe contener un array "baterias"');
+  }
+
+  const batteries = await Promise.all(files.map(async (file) => {
+    const path = resolveTestPath(file);
+    const raw = await fetchJson(path);
+    return normalizeBattery(raw, path);
+  }));
+
+  return batteries;
+}
+
+function setTestViewActive(updateHash = true) {
+  activeDomain = null;
+  activeLessons = [];
+  document.querySelectorAll(".domain-button").forEach((button) => {
+    button.classList.remove("active");
+  });
+  testMenuButton.classList.add("active");
+  tocList.innerHTML = "";
+  searchInput.value = "";
+  searchInput.disabled = true;
+  searchInput.placeholder = "Busca dentro de un dominio";
+
+  if (updateHash) {
+    history.replaceState(null, "", "#tests");
+  }
+}
+
+async function loadTestsView(updateHash = true) {
+  setTestViewActive(updateHash);
+  content.innerHTML = '<div class="loading-state">Cargando baterias de test...</div>';
+
+  try {
+    testBatteries = await loadTestBatteries();
+    renderTestHome();
+  } catch (error) {
+    testBatteries = [];
+    renderTestHome(error.message);
+  }
+}
+
+function renderTestHome(errorMessage = "") {
+  const options = testBatteries.map((battery, index) => (
+    `<option value="${index}">${escapeHtml(battery.titulo)} - ${escapeHtml(battery.procedencia)}</option>`
+  )).join("");
+
+  content.innerHTML = `
+    <div class="test-panel">
+      <header class="test-header">
+        <h1>Tests</h1>
+        <p>Carga baterias desde <code>tests/manifest.json</code> o importa archivos JSON manualmente.</p>
+      </header>
+
+      ${errorMessage ? `<div class="error-state">${escapeHtml(errorMessage)}</div>` : ""}
+
+      <div class="test-controls">
+        <label class="field-label">
+          Bateria
+          <select id="testBatterySelect" class="select" ${testBatteries.length ? "" : "disabled"}>
+            ${options || '<option value="">No hay baterias cargadas</option>'}
+          </select>
+        </label>
+        <label class="field-label">
+          Importar JSON
+          <input id="testImportInput" class="file-input" type="file" accept="application/json,.json" multiple>
+        </label>
+      </div>
+
+      <div id="testMount"></div>
+    </div>
+  `;
+
+  const select = document.querySelector("#testBatterySelect");
+  const importInput = document.querySelector("#testImportInput");
+
+  select?.addEventListener("change", () => {
+    const battery = testBatteries[Number(select.value)];
+    if (battery) startBattery(battery);
+  });
+
+  importInput?.addEventListener("change", handleTestImport);
+
+  if (testBatteries.length) {
+    startBattery(testBatteries[0]);
+  }
+}
+
+function shuffle(items) {
+  const copy = [...items];
+
+  for (let index = copy.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
+  }
+
+  return copy;
+}
+
+function startBattery(battery) {
+  currentTestRun = {
+    battery,
+    order: shuffle(battery.preguntas.map((_, index) => index)),
+    position: 0,
+    correct: 0,
+    answers: [],
+    currentAnswer: null
+  };
+
+  renderCurrentQuestion();
+}
+
+function currentQuestion() {
+  if (!currentTestRun) return null;
+  const questionIndex = currentTestRun.order[currentTestRun.position];
+  return currentTestRun.battery.preguntas[questionIndex];
+}
+
+function renderCurrentQuestion() {
+  const mount = document.querySelector("#testMount");
+  if (!mount || !currentTestRun) return;
+
+  const { battery, position, order, correct, currentAnswer } = currentTestRun;
+  const question = currentQuestion();
+  const correctIndex = answerIndex(question);
+  const answered = currentAnswer !== null;
+  const isCorrect = answered && currentAnswer === correctIndex;
+
+  const options = question.opciones.map((option, optionIndex) => {
+    let optionClass = "";
+    if (answered && optionIndex === correctIndex) optionClass = " correct";
+    if (answered && optionIndex === currentAnswer && optionIndex !== correctIndex) optionClass = " incorrect";
+
+    return `
+      <label class="option-item${optionClass}">
+        <input type="radio" name="currentQuestion" value="${optionIndex}" ${currentAnswer === optionIndex ? "checked" : ""} ${answered ? "disabled" : ""}>
+        <span>${escapeHtml(option)}</span>
+      </label>
+    `;
+  }).join("");
+
+  const feedback = answered ? `
+    <p class="question-feedback">
+      <strong>${isCorrect ? "Correcto." : "Incorrecto."}</strong>
+      La respuesta correcta es <strong>${escapeHtml(question.opciones[correctIndex])}</strong>.
+      ${question.explicacion ? `<br>${escapeHtml(question.explicacion)}` : ""}
+    </p>
+  ` : "";
+
+  mount.innerHTML = `
+    <section>
+      <p class="test-meta">
+        Procedencia: <strong>${escapeHtml(battery.procedencia)}</strong>
+        ${battery.descripcion ? `<br>${escapeHtml(battery.descripcion)}` : ""}
+      </p>
+      <p class="test-progress">Pregunta ${position + 1} de ${order.length} - Aciertos: ${correct}</p>
+      <article class="question-card${answered ? (isCorrect ? " correct" : " incorrect") : ""}">
+        <p class="question-title">${escapeHtml(question.pregunta)}</p>
+        <div class="option-list">${options}</div>
+        ${feedback}
+      </article>
+      <div class="test-actions">
+        <button id="restartTestButton" class="action-button" type="button">Reiniciar</button>
+        ${answered ? `<button id="nextQuestionButton" class="action-button" type="button">${position + 1 === order.length ? "Ver resultado" : "Siguiente"}</button>` : ""}
+      </div>
+    </section>
+  `;
+
+  mount.querySelectorAll('input[name="currentQuestion"]').forEach((input) => {
+    input.addEventListener("change", () => answerCurrentQuestion(Number(input.value)));
+  });
+  mount.querySelector("#nextQuestionButton")?.addEventListener("click", nextQuestion);
+  mount.querySelector("#restartTestButton")?.addEventListener("click", () => startBattery(battery));
+}
+
+function answerCurrentQuestion(optionIndex) {
+  if (!currentTestRun || currentTestRun.currentAnswer !== null) return;
+
+  const question = currentQuestion();
+  const isCorrect = optionIndex === answerIndex(question);
+  currentTestRun.currentAnswer = optionIndex;
+  currentTestRun.answers.push({
+    questionIndex: currentTestRun.order[currentTestRun.position],
+    selected: optionIndex,
+    correct: isCorrect
+  });
+
+  if (isCorrect) currentTestRun.correct += 1;
+  renderCurrentQuestion();
+}
+
+function nextQuestion() {
+  if (!currentTestRun) return;
+
+  if (currentTestRun.position + 1 >= currentTestRun.order.length) {
+    renderTestResult();
+    return;
+  }
+
+  currentTestRun.position += 1;
+  currentTestRun.currentAnswer = null;
+  renderCurrentQuestion();
+}
+
+function renderTestResult() {
+  const mount = document.querySelector("#testMount");
+  if (!mount || !currentTestRun) return;
+
+  const { battery, correct, order } = currentTestRun;
+  const percent = Math.round((correct / order.length) * 100);
+
+  mount.innerHTML = `
+    <section>
+      <p class="test-meta">Procedencia: <strong>${escapeHtml(battery.procedencia)}</strong></p>
+      <p class="score-box">Resultado final: ${correct} / ${order.length} (${percent}%)</p>
+      <div class="test-actions">
+        <button id="restartTestButton" class="action-button" type="button">Repetir aleatorio</button>
+      </div>
+    </section>
+  `;
+
+  mount.querySelector("#restartTestButton")?.addEventListener("click", () => startBattery(battery));
+}
+
+async function handleTestImport(event) {
+  const files = [...event.target.files];
+  if (!files.length) return;
+
+  try {
+    const imported = await Promise.all(files.map(async (file) => {
+      const raw = JSON.parse(await file.text());
+      return normalizeBattery(raw, file.name);
+    }));
+    testBatteries = [...testBatteries, ...imported];
+    renderTestHome();
+    const select = document.querySelector("#testBatterySelect");
+    if (select) {
+      select.value = String(testBatteries.length - imported.length);
+      startBattery(testBatteries[Number(select.value)]);
+    }
+  } catch (error) {
+    renderTestHome(error.message);
+  }
 }
 
 function bytes(value) {
@@ -839,7 +1165,18 @@ async function downloadEpub() {
 searchInput.addEventListener("input", filterLessons);
 epubButton.addEventListener("click", downloadEpub);
 printButton.addEventListener("click", () => window.print());
-window.addEventListener("hashchange", () => loadDomain(location.hash.slice(1), false));
+testMenuButton.addEventListener("click", () => loadTestsView());
+window.addEventListener("hashchange", () => {
+  if (location.hash.slice(1) === "tests") {
+    loadTestsView(false);
+  } else {
+    loadDomain(location.hash.slice(1), false);
+  }
+});
 
 renderMenu();
-loadDomain(location.hash.slice(1) || DOMAINS[0].id, false);
+if (location.hash.slice(1) === "tests") {
+  loadTestsView(false);
+} else {
+  loadDomain(location.hash.slice(1) || DOMAINS[0].id, false);
+}
