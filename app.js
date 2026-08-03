@@ -183,6 +183,7 @@ let activeDomain = null;
 let activeLessons = [];
 let testBatteries = [];
 let currentTestRun = null;
+let testPopoverOutsideHandler = null;
 const textEncoder = new TextEncoder();
 const baseUrl = new URL(".", document.baseURI);
 const OFFICIAL_PASSING_SCORE = 700;
@@ -425,6 +426,15 @@ function resolveTestPath(file) {
   return file.includes("/") ? file : `tests/${file}`;
 }
 
+function slugify(value, fallback = "grupo") {
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || fallback;
+}
+
 function answerIndex(question) {
   const answer = question.respuesta ?? question.correcta;
   if (Number.isInteger(answer)) return answer;
@@ -432,7 +442,7 @@ function answerIndex(question) {
   return -1;
 }
 
-function normalizeBattery(raw, sourceName) {
+function normalizeBattery(raw, sourceName, group = null) {
   if (!raw || typeof raw !== "object") {
     throw new Error(`${sourceName}: la bateria no es un objeto JSON valido`);
   }
@@ -481,6 +491,7 @@ function normalizeBattery(raw, sourceName) {
     titulo: raw.titulo || sourceName.replace(/\.json$/i, ""),
     descripcion: raw.descripcion || "",
     procedencia: raw.procedencia,
+    grupo: group,
     preguntas
   };
 }
@@ -493,16 +504,72 @@ async function fetchJson(path) {
 
 async function loadTestBatteries() {
   const manifest = await fetchJson("tests/manifest.json");
-  const files = Array.isArray(manifest) ? manifest : manifest.baterias;
+  const entries = [];
 
-  if (!Array.isArray(files)) {
-    throw new Error('tests/manifest.json debe contener un array "baterias"');
+  function pushEntry(file, group = null) {
+    if (typeof file !== "string" || !file.trim()) {
+      throw new Error('tests/manifest.json contiene una bateria sin ruta valida');
+    }
+    entries.push({ file, group });
   }
 
-  const batteries = await Promise.all(files.map(async (file) => {
+  if (Array.isArray(manifest)) {
+    manifest.forEach((file) => pushEntry(file, null));
+  } else if (manifest && typeof manifest === "object") {
+    if (Array.isArray(manifest.baterias)) {
+      manifest.baterias.forEach((item) => {
+        if (typeof item === "string") {
+          pushEntry(item, null);
+          return;
+        }
+        if (item && typeof item === "object" && typeof item.archivo === "string") {
+          pushEntry(item.archivo, item.grupo || null);
+          return;
+        }
+        throw new Error('tests/manifest.json contiene una entrada de bateria no valida');
+      });
+    }
+
+    if (Array.isArray(manifest.grupos)) {
+      manifest.grupos.forEach((group, groupIndex) => {
+        if (!group || typeof group !== "object") {
+          throw new Error(`tests/manifest.json: el grupo ${groupIndex + 1} no es valido`);
+        }
+
+        const groupName = group.titulo || group.nombre || group.id || `Grupo ${groupIndex + 1}`;
+        if (!Array.isArray(group.baterias)) {
+          throw new Error(`tests/manifest.json: el grupo "${groupName}" necesita un array "baterias"`);
+        }
+
+        group.baterias.forEach((item) => {
+          if (typeof item === "string") {
+            pushEntry(item, {
+              id: group.id || slugify(groupName, `grupo-${groupIndex + 1}`),
+              titulo: groupName
+            });
+            return;
+          }
+          if (item && typeof item === "object" && typeof item.archivo === "string") {
+            pushEntry(item.archivo, {
+              id: group.id || slugify(groupName, `grupo-${groupIndex + 1}`),
+              titulo: item.grupo || groupName
+            });
+            return;
+          }
+          throw new Error(`tests/manifest.json: el grupo "${groupName}" contiene una bateria no valida`);
+        });
+      });
+    }
+  }
+
+  if (!entries.length) {
+    throw new Error('tests/manifest.json debe contener "baterias" o "grupos" con al menos una bateria');
+  }
+
+  const batteries = await Promise.all(entries.map(async ({ file, group }) => {
     const path = resolveTestPath(file);
     const raw = await fetchJson(path);
-    return normalizeBattery(raw, path);
+    return normalizeBattery(raw, path, group);
   }));
 
   return batteries;
@@ -540,56 +607,101 @@ async function loadTestsView(updateHash = true) {
 
 function renderTestHome(errorMessage = "") {
   const totalQuestions = testBatteries.reduce((sum, battery) => sum + battery.preguntas.length, 0);
-  const options = testBatteries.map((battery, index) => (
-    `<label class="battery-option">
-      <input type="checkbox" name="testBatteryOption" value="${index}" checked>
-      <span>
-        <span class="battery-option-title">${escapeHtml(battery.titulo)}</span>
-        <span class="battery-option-meta">${escapeHtml(battery.procedencia)} - ${battery.preguntas.length} preguntas</span>
-      </span>
-    </label>`
-  )).join("");
+  const groupedBatteries = testBatteries.reduce((groups, battery, index) => {
+    const key = battery.grupo?.id || "__sin_grupo__";
+    const title = battery.grupo?.titulo || "Sin grupo";
+    if (!groups.has(key)) groups.set(key, { title, items: [] });
+    groups.get(key).items.push({ battery, index });
+    return groups;
+  }, new Map());
+  const options = [...groupedBatteries.entries()].map(([groupId, group]) => `
+    <section class="battery-group" data-group="${escapeHtml(groupId)}">
+      <div class="battery-group-header">
+        <div>
+          <p class="battery-group-title">${escapeHtml(group.title)}</p>
+          <p class="battery-group-meta">${group.items.length} baterias</p>
+        </div>
+        <div class="battery-group-actions">
+          <button class="battery-group-toggle" type="button" data-group-action="select" data-group-id="${escapeHtml(groupId)}">Marcar grupo</button>
+          <button class="battery-group-toggle" type="button" data-group-action="clear" data-group-id="${escapeHtml(groupId)}">Desmarcar grupo</button>
+        </div>
+      </div>
+      <div class="battery-group-list">
+        ${group.items.map(({ battery, index }) => `
+          <label class="battery-option">
+            <input type="checkbox" name="testBatteryOption" value="${index}" checked data-group-id="${escapeHtml(groupId)}">
+            <span>
+              <span class="battery-option-title">${escapeHtml(battery.titulo)}</span>
+              <span class="battery-option-meta">${escapeHtml(battery.procedencia)} - ${battery.preguntas.length} preguntas</span>
+            </span>
+          </label>
+        `).join("")}
+      </div>
+    </section>
+  `).join("");
 
   content.innerHTML = `
     <div class="test-panel">
       <div class="test-shell">
-        <section class="test-intro">
-          <header class="test-header">
+        <section class="test-topbar">
+          <div class="test-heading">
+            <span class="test-kicker">Simulador CC</span>
             <h1>Tests</h1>
-            <p>Marca una o varias baterias para unirlas en una sola sesion. Las preguntas se mezclan y se corrigen al responder.</p>
-          </header>
+            <p>Sesion continua, correccion inmediata y combinacion libre de baterias en una interfaz pensada para practicar sin ruido.</p>
+          </div>
 
-          ${errorMessage ? `<div class="error-state">${escapeHtml(errorMessage)}</div>` : ""}
-
-          <div class="test-controls">
+          <div class="test-selector">
             <label class="field-label">
-              Baterias disponibles
-              <div class="battery-actions">
-                <button id="selectAllBatteriesButton" class="battery-toggle" type="button">Marcar todas</button>
-                <button id="clearAllBatteriesButton" class="battery-toggle" type="button">Desmarcar todas</button>
-              </div>
-              <div id="testBatteryPicker" class="battery-picker">
-                ${options || '<p class="test-meta">No hay baterias cargadas.</p>'}
+              Baterias activas
+              <div class="battery-picker-wrap">
+                <button id="testBatteryTrigger" class="battery-picker-trigger" type="button" aria-haspopup="dialog" aria-expanded="false">
+                  <span class="battery-picker-summary">
+                    <span class="battery-picker-caption">Seleccion actual</span>
+                    <span id="testBatteryTriggerValue" class="battery-picker-value">Todas las baterias</span>
+                  </span>
+                  <span class="battery-picker-chevron">▾</span>
+                </button>
+
+                <div id="testBatteryPopover" class="battery-picker-popover" role="dialog" aria-label="Seleccion de baterias">
+                  <div class="battery-picker-head">
+                    <span class="battery-picker-headline">Selecciona las baterias a combinar</span>
+                    <p class="test-meta">Puedes mezclar varias fuentes en una sola sesion. Las preguntas se barajan al iniciar.</p>
+                    <div class="battery-actions">
+                      <button id="selectAllBatteriesButton" class="battery-toggle" type="button">Marcar todas</button>
+                      <button id="clearAllBatteriesButton" class="battery-toggle" type="button">Desmarcar todas</button>
+                    </div>
+                  </div>
+                  <div id="testBatteryPicker" class="battery-picker">
+                    ${options || '<p class="test-meta">No hay baterias cargadas.</p>'}
+                  </div>
+                </div>
               </div>
             </label>
-
-            <aside class="test-sidecard">
-              <p class="test-sidecard-title">Seleccion y puntuacion</p>
-              <p class="test-sidecard-copy">Marca una o varias baterias para unirlas. El simulador mezcla las preguntas y muestra una estimacion de nota escalada.</p>
-              <div class="test-sidecard-stats">
-                <div class="test-stat">
-                  <span class="test-stat-value">${testBatteries.length}</span>
-                  <span class="test-stat-label">Baterias</span>
-                </div>
-                <div class="test-stat">
-                  <span class="test-stat-value">${totalQuestions}</span>
-                  <span class="test-stat-label">Preguntas</span>
-                </div>
-              </div>
-              <p class="test-official-note">Referencia oficial ISC2 CC: el umbral de aprobado publicado es ${OFFICIAL_PASSING_SCORE} sobre ${OFFICIAL_SCORE_MAX}. ISC2 no publica tu puntuacion exacta del examen real; aqui solo se muestra una estimacion del simulador.</p>
-            </aside>
           </div>
         </section>
+
+        ${errorMessage ? `<div class="error-state">${escapeHtml(errorMessage)}</div>` : ""}
+
+        <section class="test-dashboard">
+          <div class="test-stat test-stat-emphasis">
+            <span class="test-stat-value">${groupedBatteries.size}</span>
+            <span class="test-stat-label">Conjuntos cargados</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${testBatteries.length}</span>
+            <span class="test-stat-label">Baterias disponibles</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${totalQuestions}</span>
+            <span class="test-stat-label">Preguntas disponibles</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${OFFICIAL_PASSING_SCORE}/${OFFICIAL_SCORE_MAX}</span>
+            <span class="test-stat-label">Escala oficial publicada</span>
+          </div>
+        </section>
+
+        <p class="test-official-note">ISC2 publica para Certified in Cybersecurity un umbral de aprobado de ${OFFICIAL_PASSING_SCORE} sobre ${OFFICIAL_SCORE_MAX}. La puntuacion mostrada aqui es solo una equivalencia orientativa del simulador.</p>
 
         <div id="testMount"></div>
       </div>
@@ -597,14 +709,84 @@ function renderTestHome(errorMessage = "") {
   `;
 
   const picker = document.querySelector("#testBatteryPicker");
+  const trigger = document.querySelector("#testBatteryTrigger");
+  const triggerValue = document.querySelector("#testBatteryTriggerValue");
+  const popover = document.querySelector("#testBatteryPopover");
   const selectAllButton = document.querySelector("#selectAllBatteriesButton");
   const clearAllButton = document.querySelector("#clearAllBatteriesButton");
 
-  picker?.addEventListener("change", startSelectedBatteries);
-  selectAllButton?.addEventListener("click", () => setAllBatterySelections(true));
-  clearAllButton?.addEventListener("click", () => setAllBatterySelections(false));
+  if (testPopoverOutsideHandler) {
+    document.removeEventListener("click", testPopoverOutsideHandler);
+    testPopoverOutsideHandler = null;
+  }
+
+  function updateTriggerLabel() {
+    const selected = selectedBatteries();
+    if (!triggerValue) return;
+    if (!selected.length) {
+      triggerValue.textContent = "Ninguna bateria";
+      return;
+    }
+    if (selected.length === testBatteries.length) {
+      triggerValue.textContent = `Todas las baterias (${selected.length})`;
+      return;
+    }
+    if (selected.length === 1) {
+      triggerValue.textContent = selected[0].titulo;
+      return;
+    }
+    triggerValue.textContent = `${selected.length} baterias seleccionadas`;
+  }
+
+  function closePopover() {
+    popover?.classList.remove("open");
+    trigger?.setAttribute("aria-expanded", "false");
+  }
+
+  function togglePopover() {
+    if (!popover || !trigger) return;
+    const opening = !popover.classList.contains("open");
+    popover.classList.toggle("open", opening);
+    trigger.setAttribute("aria-expanded", opening ? "true" : "false");
+  }
+
+  picker?.addEventListener("change", () => {
+    updateTriggerLabel();
+    startSelectedBatteries();
+  });
+  trigger?.addEventListener("click", togglePopover);
+  trigger?.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closePopover();
+  });
+  selectAllButton?.addEventListener("click", () => {
+    setAllBatterySelections(true);
+    updateTriggerLabel();
+  });
+  clearAllButton?.addEventListener("click", () => {
+    setAllBatterySelections(false);
+    updateTriggerLabel();
+  });
+  popover?.querySelectorAll("[data-group-action]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const groupId = button.getAttribute("data-group-id");
+      const checked = button.getAttribute("data-group-action") === "select";
+      popover.querySelectorAll(`input[name="testBatteryOption"][data-group-id="${groupId}"]`).forEach((input) => {
+        input.checked = checked;
+      });
+      updateTriggerLabel();
+      startSelectedBatteries();
+    });
+  });
+  testPopoverOutsideHandler = (event) => {
+    if (!popover || !trigger) return;
+    if (!popover.classList.contains("open")) return;
+    if (popover.contains(event.target) || trigger.contains(event.target)) return;
+    closePopover();
+  };
+  document.addEventListener("click", testPopoverOutsideHandler);
 
   if (testBatteries.length) {
+    updateTriggerLabel();
     startSelectedBatteries();
   }
 }
@@ -705,16 +887,19 @@ function renderCurrentQuestion() {
   const isCorrect = answered && currentAnswer === correctIndex;
   const progressPercent = Math.max(6, Math.round(((position + (answered ? 1 : 0)) / order.length) * 100));
   const score = scoreSnapshot(currentTestRun);
+  const batteryLabel = battery.procedencia || battery.titulo;
 
   const options = question.opciones.map((option, optionIndex) => {
     let optionClass = "";
     if (answered && optionIndex === correctIndex) optionClass = " correct";
     if (answered && optionIndex === currentAnswer && optionIndex !== correctIndex) optionClass = " incorrect";
+    const optionLetter = String.fromCharCode(65 + optionIndex);
 
     return `
       <label class="option-item${optionClass}">
         <input type="radio" name="currentQuestion" value="${optionIndex}" ${currentAnswer === optionIndex ? "checked" : ""} ${answered ? "disabled" : ""}>
-        <span>${escapeHtml(option)}</span>
+        <span class="option-index">${optionLetter}</span>
+        <span class="option-copy">${escapeHtml(option)}</span>
       </label>
     `;
   }).join("");
@@ -729,51 +914,55 @@ function renderCurrentQuestion() {
 
   mount.innerHTML = `
     <section class="test-stage">
-      <header class="test-meta-card">
-        <div class="test-meta-topline">
-          <span class="test-badge">${escapeHtml(battery.titulo)}</span>
-          ${answered ? `<span class="test-badge ${isCorrect ? "success" : "error"}">${isCorrect ? "Correcta" : "Incorrecta"}</span>` : `<span class="test-badge">En curso</span>`}
-        </div>
-        <h2 class="test-battery-title">${escapeHtml(battery.titulo)}</h2>
-        <p class="test-battery-copy">Procedencia: ${escapeHtml(battery.procedencia)}</p>
-        ${battery.descripcion ? `<p class="test-battery-copy">${escapeHtml(battery.descripcion)}</p>` : ""}
-        <div class="test-score-grid">
-          <div class="test-stat">
-            <span class="test-stat-value">${score.answered ? correct : 0}</span>
-            <span class="test-stat-label">Correctas</span>
-          </div>
-          <div class="test-stat">
-            <span class="test-stat-value">${score.incorrect}</span>
-            <span class="test-stat-label">Falladas</span>
-          </div>
-          <div class="test-stat">
-            <span class="test-stat-value">${score.percent}%</span>
-            <span class="test-stat-label">Acierto actual</span>
-          </div>
-          <div class="test-stat">
-            <span class="test-stat-value">${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</span>
-            <span class="test-stat-label">Estimacion</span>
-          </div>
-        </div>
-        <p class="test-official-note">Referencia oficial ISC2 CC: aprobado publicado a partir de ${OFFICIAL_PASSING_SCORE}/${OFFICIAL_SCORE_MAX}. Esta cifra en el simulador es orientativa, no una nota oficial.</p>
-      </header>
+      <div class="test-statusbar">
+        <span class="test-badge">${escapeHtml(batteryLabel)}</span>
+        <span class="test-badge">Pregunta ${position + 1}/${order.length}</span>
+        ${answered ? `<span class="test-badge ${isCorrect ? "success" : "error"}">${isCorrect ? "Correcta" : "Incorrecta"}</span>` : `<span class="test-badge">Pendiente</span>`}
+      </div>
 
       <div class="test-progress">
-        <span>Pregunta ${position + 1} de ${order.length}</span>
+        <span>Progreso</span>
         <div class="test-progress-meter" aria-hidden="true">
           <div class="test-progress-fill" style="width: ${progressPercent}%"></div>
         </div>
-        <span>Aciertos: ${correct}</span>
+        <span>${progressPercent}%</span>
       </div>
 
-      <article class="question-card${answered ? (isCorrect ? " correct" : " incorrect") : ""}">
-        <p class="question-title">${escapeHtml(question.pregunta)}</p>
-        <div class="option-list">${options}</div>
-        ${feedback}
-      </article>
-      <div class="test-actions">
-        <button id="restartTestButton" class="action-button" type="button">Reiniciar</button>
-        ${answered ? `<button id="nextQuestionButton" class="action-button" type="button">${position + 1 === order.length ? "Ver resultado" : "Siguiente"}</button>` : ""}
+      <div class="test-main">
+        <article class="question-card${answered ? (isCorrect ? " correct" : " incorrect") : ""}">
+          <div class="question-eyebrow">
+            <span class="question-chip">Sesion activa</span>
+            ${battery.descripcion ? `<span class="question-chip muted">${escapeHtml(battery.descripcion)}</span>` : ""}
+          </div>
+          <p class="question-title">${escapeHtml(question.pregunta)}</p>
+          <div class="option-list">${options}</div>
+          ${feedback}
+          <div class="test-actions">
+            <button id="restartTestButton" class="action-button" type="button">Reiniciar</button>
+            ${answered ? `<button id="nextQuestionButton" class="action-button" type="button">${position + 1 === order.length ? "Ver resultado" : "Siguiente"}</button>` : ""}
+          </div>
+        </article>
+
+        <aside class="test-score-panel">
+          <p class="test-score-panel-title">Marcador actual</p>
+          <div class="test-stat test-stat-inline">
+            <span class="test-stat-value">${score.answered ? correct : 0}</span>
+            <span class="test-stat-label">Correctas</span>
+          </div>
+          <div class="test-stat test-stat-inline">
+            <span class="test-stat-value">${score.incorrect}</span>
+            <span class="test-stat-label">Falladas</span>
+          </div>
+          <div class="test-stat test-stat-inline">
+            <span class="test-stat-value">${score.percent}%</span>
+            <span class="test-stat-label">Porcentaje de acierto</span>
+          </div>
+          <div class="test-stat test-stat-inline test-stat-highlight">
+            <span class="test-stat-value">${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</span>
+            <span class="test-stat-label">Equivalencia orientativa</span>
+          </div>
+          <p class="test-score-panel-copy">Aprobado oficial publicado: ${OFFICIAL_PASSING_SCORE}/${OFFICIAL_SCORE_MAX}. Esta conversion es aproximada y solo sirve como referencia durante el simulador.</p>
+        </aside>
       </div>
     </section>
   `;
@@ -823,36 +1012,42 @@ function renderTestResult() {
 
   mount.innerHTML = `
     <section class="test-stage">
-      <header class="test-meta-card">
-        <div class="test-meta-topline">
-          <span class="test-badge">Sesion completada</span>
-          <span class="test-badge ${score.passStatus ? "success" : "error"}">${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</span>
-        </div>
-        <h2 class="test-battery-title">${escapeHtml(battery.titulo)}</h2>
-        <p class="test-battery-copy">Procedencia: ${escapeHtml(battery.procedencia)}</p>
-        <div class="test-score-grid">
-          <div class="test-stat">
+      <div class="test-statusbar">
+        <span class="test-badge">Sesion completada</span>
+        <span class="test-badge ${score.passStatus ? "success" : "error"}">${score.passStatus ? "Apto" : "No apto"}</span>
+      </div>
+      <div class="test-main">
+        <section class="question-card question-card-result">
+          <div class="question-eyebrow">
+            <span class="question-chip">Resultado final</span>
+            <span class="question-chip muted">${escapeHtml(battery.procedencia || battery.titulo)}</span>
+          </div>
+          <p class="question-title">${escapeHtml(battery.titulo)}</p>
+          <p class="score-box">Resultado final: ${correct} / ${order.length} - ${score.percent}% - estimacion ${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</p>
+          <div class="test-actions">
+            <button id="restartTestButton" class="action-button" type="button">Repetir aleatorio</button>
+          </div>
+        </section>
+        <aside class="test-score-panel">
+          <p class="test-score-panel-title">Resumen</p>
+          <div class="test-stat test-stat-inline">
             <span class="test-stat-value">${correct}</span>
             <span class="test-stat-label">Correctas</span>
           </div>
-          <div class="test-stat">
+          <div class="test-stat test-stat-inline">
             <span class="test-stat-value">${score.incorrect}</span>
             <span class="test-stat-label">Falladas</span>
           </div>
-          <div class="test-stat">
+          <div class="test-stat test-stat-inline">
             <span class="test-stat-value">${score.percent}%</span>
             <span class="test-stat-label">Porcentaje</span>
           </div>
-          <div class="test-stat">
-            <span class="test-stat-value">${score.passStatus ? "Apto" : "No apto"}</span>
-            <span class="test-stat-label">Umbral ${OFFICIAL_PASSING_SCORE}/${OFFICIAL_SCORE_MAX}</span>
+          <div class="test-stat test-stat-inline test-stat-highlight">
+            <span class="test-stat-value">${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</span>
+            <span class="test-stat-label">Equivalencia orientativa</span>
           </div>
-        </div>
-        <p class="test-official-note">ISC2 publica para CC un umbral de aprobado de ${OFFICIAL_PASSING_SCORE} sobre ${OFFICIAL_SCORE_MAX}. En el examen real, ISC2 no muestra una nota numerica exacta al candidato; este simulador solo ofrece una equivalencia orientativa.</p>
-      </header>
-      <p class="score-box">Resultado final: ${correct} / ${order.length} - ${score.percent}% - estimacion ${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</p>
-      <div class="test-actions">
-        <button id="restartTestButton" class="action-button" type="button">Repetir aleatorio</button>
+          <p class="test-score-panel-copy">Aprobado oficial publicado por ISC2 para CC: ${OFFICIAL_PASSING_SCORE}/${OFFICIAL_SCORE_MAX}. El examen real no te devuelve una puntuacion numerica exacta.</p>
+        </aside>
       </div>
     </section>
   `;
