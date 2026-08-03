@@ -632,7 +632,7 @@ function renderTestHome(errorMessage = "") {
             <input type="checkbox" name="testBatteryOption" value="${index}" checked data-group-id="${escapeHtml(groupId)}">
             <span>
               <span class="battery-option-title">${escapeHtml(battery.titulo)}</span>
-              <span class="battery-option-meta">${escapeHtml(battery.procedencia)} - ${battery.preguntas.length} preguntas</span>
+              <span class="battery-option-meta">${battery.preguntas.length} preguntas</span>
             </span>
           </label>
         `).join("")}
