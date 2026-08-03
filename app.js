@@ -185,6 +185,8 @@ let testBatteries = [];
 let currentTestRun = null;
 const textEncoder = new TextEncoder();
 const baseUrl = new URL(".", document.baseURI);
+const OFFICIAL_PASSING_SCORE = 700;
+const OFFICIAL_SCORE_MAX = 1000;
 
 function encodePath(path) {
   return path.split("/").map(encodeURIComponent).join("/");
@@ -537,48 +539,73 @@ async function loadTestsView(updateHash = true) {
 }
 
 function renderTestHome(errorMessage = "") {
+  const totalQuestions = testBatteries.reduce((sum, battery) => sum + battery.preguntas.length, 0);
   const options = testBatteries.map((battery, index) => (
-    `<option value="${index}">${escapeHtml(battery.titulo)} - ${escapeHtml(battery.procedencia)}</option>`
+    `<label class="battery-option">
+      <input type="checkbox" name="testBatteryOption" value="${index}" ${index === 0 ? "checked" : ""}>
+      <span>
+        <span class="battery-option-title">${escapeHtml(battery.titulo)}</span>
+        <span class="battery-option-meta">${escapeHtml(battery.procedencia)} - ${battery.preguntas.length} preguntas</span>
+      </span>
+    </label>`
   )).join("");
 
   content.innerHTML = `
     <div class="test-panel">
-      <header class="test-header">
-        <h1>Tests</h1>
-        <p>Carga baterias desde <code>tests/manifest.json</code> o importa archivos JSON manualmente.</p>
-      </header>
+      <div class="test-shell">
+        <section class="test-intro">
+          <header class="test-header">
+            <h1>Tests</h1>
+            <p>Marca una o varias baterias para unirlas en una sola sesion. Las preguntas se mezclan y se corrigen al responder.</p>
+          </header>
 
-      ${errorMessage ? `<div class="error-state">${escapeHtml(errorMessage)}</div>` : ""}
+          ${errorMessage ? `<div class="error-state">${escapeHtml(errorMessage)}</div>` : ""}
 
-      <div class="test-controls">
-        <label class="field-label">
-          Bateria
-          <select id="testBatterySelect" class="select" ${testBatteries.length ? "" : "disabled"}>
-            ${options || '<option value="">No hay baterias cargadas</option>'}
-          </select>
-        </label>
-        <label class="field-label">
-          Importar JSON
-          <input id="testImportInput" class="file-input" type="file" accept="application/json,.json" multiple>
-        </label>
+          <div class="test-controls">
+            <label class="field-label">
+              Baterias disponibles
+              <div class="battery-actions">
+                <button id="selectAllBatteriesButton" class="battery-toggle" type="button">Marcar todas</button>
+                <button id="clearAllBatteriesButton" class="battery-toggle" type="button">Desmarcar todas</button>
+              </div>
+              <div id="testBatteryPicker" class="battery-picker">
+                ${options || '<p class="test-meta">No hay baterias cargadas.</p>'}
+              </div>
+            </label>
+
+            <aside class="test-sidecard">
+              <p class="test-sidecard-title">Seleccion y puntuacion</p>
+              <p class="test-sidecard-copy">Marca una o varias baterias para unirlas. El simulador mezcla las preguntas y muestra una estimacion de nota escalada.</p>
+              <div class="test-sidecard-stats">
+                <div class="test-stat">
+                  <span class="test-stat-value">${testBatteries.length}</span>
+                  <span class="test-stat-label">Baterias</span>
+                </div>
+                <div class="test-stat">
+                  <span class="test-stat-value">${totalQuestions}</span>
+                  <span class="test-stat-label">Preguntas</span>
+                </div>
+              </div>
+              <p class="test-official-note">Referencia oficial ISC2 CC: el umbral de aprobado publicado es ${OFFICIAL_PASSING_SCORE} sobre ${OFFICIAL_SCORE_MAX}. ISC2 no publica tu puntuacion exacta del examen real; aqui solo se muestra una estimacion del simulador.</p>
+            </aside>
+          </div>
+        </section>
+
+        <div id="testMount"></div>
       </div>
-
-      <div id="testMount"></div>
     </div>
   `;
 
-  const select = document.querySelector("#testBatterySelect");
-  const importInput = document.querySelector("#testImportInput");
+  const picker = document.querySelector("#testBatteryPicker");
+  const selectAllButton = document.querySelector("#selectAllBatteriesButton");
+  const clearAllButton = document.querySelector("#clearAllBatteriesButton");
 
-  select?.addEventListener("change", () => {
-    const battery = testBatteries[Number(select.value)];
-    if (battery) startBattery(battery);
-  });
-
-  importInput?.addEventListener("change", handleTestImport);
+  picker?.addEventListener("change", startSelectedBatteries);
+  selectAllButton?.addEventListener("click", () => setAllBatterySelections(true));
+  clearAllButton?.addEventListener("click", () => setAllBatterySelections(false));
 
   if (testBatteries.length) {
-    startBattery(testBatteries[0]);
+    startSelectedBatteries();
   }
 }
 
@@ -606,10 +633,65 @@ function startBattery(battery) {
   renderCurrentQuestion();
 }
 
+function selectedBatteries() {
+  const checked = [...document.querySelectorAll('input[name="testBatteryOption"]:checked')];
+  return checked.map((input) => testBatteries[Number(input.value)]).filter(Boolean);
+}
+
+function combineBatteries(batteries) {
+  return {
+    id: batteries.map((battery) => battery.id).join("+"),
+    titulo: batteries.length === 1 ? batteries[0].titulo : `Bateria combinada (${batteries.length})`,
+    descripcion: batteries.length === 1
+      ? batteries[0].descripcion
+      : "Union de varias baterias seleccionadas.",
+    procedencia: batteries.map((battery) => battery.procedencia).join(" | "),
+    preguntas: batteries.flatMap((battery) => battery.preguntas)
+  };
+}
+
+function startSelectedBatteries() {
+  const batteries = selectedBatteries();
+  if (!batteries.length) {
+    const mount = document.querySelector("#testMount");
+    if (mount) {
+      mount.innerHTML = '<div class="empty-state">Selecciona al menos una bateria para empezar el test.</div>';
+    }
+    currentTestRun = null;
+    return;
+  }
+
+  startBattery(combineBatteries(batteries));
+}
+
+function setAllBatterySelections(checked) {
+  document.querySelectorAll('input[name="testBatteryOption"]').forEach((input) => {
+    input.checked = checked;
+  });
+  startSelectedBatteries();
+}
+
 function currentQuestion() {
   if (!currentTestRun) return null;
   const questionIndex = currentTestRun.order[currentTestRun.position];
   return currentTestRun.battery.preguntas[questionIndex];
+}
+
+function scoreSnapshot(run) {
+  const answered = run.answers.length;
+  const incorrect = answered - run.correct;
+  const percent = answered ? Math.round((run.correct / answered) * 100) : 0;
+  const estimatedScaled = Math.round((percent / 100) * OFFICIAL_SCORE_MAX);
+  const remaining = run.order.length - answered;
+
+  return {
+    answered,
+    incorrect,
+    percent,
+    estimatedScaled,
+    remaining,
+    passStatus: estimatedScaled >= OFFICIAL_PASSING_SCORE
+  };
 }
 
 function renderCurrentQuestion() {
@@ -621,6 +703,8 @@ function renderCurrentQuestion() {
   const correctIndex = answerIndex(question);
   const answered = currentAnswer !== null;
   const isCorrect = answered && currentAnswer === correctIndex;
+  const progressPercent = Math.max(6, Math.round(((position + (answered ? 1 : 0)) / order.length) * 100));
+  const score = scoreSnapshot(currentTestRun);
 
   const options = question.opciones.map((option, optionIndex) => {
     let optionClass = "";
@@ -644,12 +728,44 @@ function renderCurrentQuestion() {
   ` : "";
 
   mount.innerHTML = `
-    <section>
-      <p class="test-meta">
-        Procedencia: <strong>${escapeHtml(battery.procedencia)}</strong>
-        ${battery.descripcion ? `<br>${escapeHtml(battery.descripcion)}` : ""}
-      </p>
-      <p class="test-progress">Pregunta ${position + 1} de ${order.length} - Aciertos: ${correct}</p>
+    <section class="test-stage">
+      <header class="test-meta-card">
+        <div class="test-meta-topline">
+          <span class="test-badge">${escapeHtml(battery.titulo)}</span>
+          ${answered ? `<span class="test-badge ${isCorrect ? "success" : "error"}">${isCorrect ? "Correcta" : "Incorrecta"}</span>` : `<span class="test-badge">En curso</span>`}
+        </div>
+        <h2 class="test-battery-title">${escapeHtml(battery.titulo)}</h2>
+        <p class="test-battery-copy">Procedencia: ${escapeHtml(battery.procedencia)}</p>
+        ${battery.descripcion ? `<p class="test-battery-copy">${escapeHtml(battery.descripcion)}</p>` : ""}
+        <div class="test-score-grid">
+          <div class="test-stat">
+            <span class="test-stat-value">${score.answered ? correct : 0}</span>
+            <span class="test-stat-label">Correctas</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${score.incorrect}</span>
+            <span class="test-stat-label">Falladas</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${score.percent}%</span>
+            <span class="test-stat-label">Acierto actual</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</span>
+            <span class="test-stat-label">Estimacion</span>
+          </div>
+        </div>
+        <p class="test-official-note">Referencia oficial ISC2 CC: aprobado publicado a partir de ${OFFICIAL_PASSING_SCORE}/${OFFICIAL_SCORE_MAX}. Esta cifra en el simulador es orientativa, no una nota oficial.</p>
+      </header>
+
+      <div class="test-progress">
+        <span>Pregunta ${position + 1} de ${order.length}</span>
+        <div class="test-progress-meter" aria-hidden="true">
+          <div class="test-progress-fill" style="width: ${progressPercent}%"></div>
+        </div>
+        <span>Aciertos: ${correct}</span>
+      </div>
+
       <article class="question-card${answered ? (isCorrect ? " correct" : " incorrect") : ""}">
         <p class="question-title">${escapeHtml(question.pregunta)}</p>
         <div class="option-list">${options}</div>
@@ -703,12 +819,38 @@ function renderTestResult() {
   if (!mount || !currentTestRun) return;
 
   const { battery, correct, order } = currentTestRun;
-  const percent = Math.round((correct / order.length) * 100);
+  const score = scoreSnapshot(currentTestRun);
 
   mount.innerHTML = `
-    <section>
-      <p class="test-meta">Procedencia: <strong>${escapeHtml(battery.procedencia)}</strong></p>
-      <p class="score-box">Resultado final: ${correct} / ${order.length} (${percent}%)</p>
+    <section class="test-stage">
+      <header class="test-meta-card">
+        <div class="test-meta-topline">
+          <span class="test-badge">Sesion completada</span>
+          <span class="test-badge ${score.passStatus ? "success" : "error"}">${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</span>
+        </div>
+        <h2 class="test-battery-title">${escapeHtml(battery.titulo)}</h2>
+        <p class="test-battery-copy">Procedencia: ${escapeHtml(battery.procedencia)}</p>
+        <div class="test-score-grid">
+          <div class="test-stat">
+            <span class="test-stat-value">${correct}</span>
+            <span class="test-stat-label">Correctas</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${score.incorrect}</span>
+            <span class="test-stat-label">Falladas</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${score.percent}%</span>
+            <span class="test-stat-label">Porcentaje</span>
+          </div>
+          <div class="test-stat">
+            <span class="test-stat-value">${score.passStatus ? "Apto" : "No apto"}</span>
+            <span class="test-stat-label">Umbral ${OFFICIAL_PASSING_SCORE}/${OFFICIAL_SCORE_MAX}</span>
+          </div>
+        </div>
+        <p class="test-official-note">ISC2 publica para CC un umbral de aprobado de ${OFFICIAL_PASSING_SCORE} sobre ${OFFICIAL_SCORE_MAX}. En el examen real, ISC2 no muestra una nota numerica exacta al candidato; este simulador solo ofrece una equivalencia orientativa.</p>
+      </header>
+      <p class="score-box">Resultado final: ${correct} / ${order.length} - ${score.percent}% - estimacion ${score.estimatedScaled}/${OFFICIAL_SCORE_MAX}</p>
       <div class="test-actions">
         <button id="restartTestButton" class="action-button" type="button">Repetir aleatorio</button>
       </div>
@@ -716,27 +858,6 @@ function renderTestResult() {
   `;
 
   mount.querySelector("#restartTestButton")?.addEventListener("click", () => startBattery(battery));
-}
-
-async function handleTestImport(event) {
-  const files = [...event.target.files];
-  if (!files.length) return;
-
-  try {
-    const imported = await Promise.all(files.map(async (file) => {
-      const raw = JSON.parse(await file.text());
-      return normalizeBattery(raw, file.name);
-    }));
-    testBatteries = [...testBatteries, ...imported];
-    renderTestHome();
-    const select = document.querySelector("#testBatterySelect");
-    if (select) {
-      select.value = String(testBatteries.length - imported.length);
-      startBattery(testBatteries[Number(select.value)]);
-    }
-  } catch (error) {
-    renderTestHome(error.message);
-  }
 }
 
 function bytes(value) {
