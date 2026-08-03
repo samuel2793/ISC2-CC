@@ -542,7 +542,7 @@ function renderTestHome(errorMessage = "") {
   const totalQuestions = testBatteries.reduce((sum, battery) => sum + battery.preguntas.length, 0);
   const options = testBatteries.map((battery, index) => (
     `<label class="battery-option">
-      <input type="checkbox" name="testBatteryOption" value="${index}" ${index === 0 ? "checked" : ""}>
+      <input type="checkbox" name="testBatteryOption" value="${index}" checked>
       <span>
         <span class="battery-option-title">${escapeHtml(battery.titulo)}</span>
         <span class="battery-option-meta">${escapeHtml(battery.procedencia)} - ${battery.preguntas.length} preguntas</span>
