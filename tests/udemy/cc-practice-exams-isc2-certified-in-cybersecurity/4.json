@@ -1,0 +1,1832 @@
+{
+  "titulo": "Fundamentos de ciberseguridad ISC2 CC #4",
+  "procedencia": "Banco de preguntas basado en el temario de ISC2 Certified in Cybersecurity (CC) y en referencias técnicas de NIST, CISA, OWASP, Microsoft, PCI SSC y Wi-Fi Alliance incluidas en el test original",
+  "descripcion": "Batería de preguntas sobre principios de seguridad, control de acceso, seguridad de redes, operaciones de seguridad, continuidad de negocio, recuperación ante desastres y respuesta a incidentes.",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué normativa impone un plazo de 72 horas para notificar brechas de datos personales que afecten a residentes de la UE?",
+      "opciones": [
+        "Reglamento General de Protección de Datos (GDPR)",
+        "Health Insurance Portability and Accountability Act (HIPAA)",
+        "Payment Card Industry Data Security Standard (PCI DSS)",
+        "Sarbanes-Oxley Act (SOX)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El artículo 33 del GDPR exige notificar a la autoridad de control en un máximo de 72 horas desde que se conoce la brecha."
+    },
+    {
+      "pregunta": "Según las directrices actuales de NIST para la gestión de contraseñas, ¿qué práctica se desaconseja?",
+      "opciones": [
+        "Exigir cambios de contraseña con una periodicidad fija",
+        "Comprobar las contraseñas nuevas frente a una lista de contraseñas comprometidas",
+        "Permitir contraseñas de hasta 64 caracteres",
+        "Usar algoritmos de hash con salt para almacenar verificadores de contraseña"
+      ],
+      "respuesta": 0,
+      "explicacion": "NIST desaconseja los cambios periódicos sin indicios de compromiso, porque suelen provocar contraseñas más débiles y patrones predecibles."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de establecer una línea base de seguridad para los sistemas operativos de una organización?",
+      "opciones": [
+        "Definir una configuración mínima segura que se aplique de forma uniforme a los sistemas",
+        "Registrar la lista de personal autorizado para acceder a la red",
+        "Documentar cuántos parches se aplicaron a cada sistema durante el ejercicio",
+        "Identificar qué proveedores de hardware ofrecen los SLA más rentables"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una línea base fija el estado mínimo de configuración segura y permite detectar y corregir desviaciones."
+    },
+    {
+      "pregunta": "¿Cuál es el intervalo recomendado de tiempo de espera por inactividad para aplicaciones de alto valor que procesan datos sensibles?",
+      "opciones": [
+        "2-5 minutos",
+        "15-30 minutos",
+        "4-8 horas",
+        "60-90 minutos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los tiempos de espera cortos, de 2 a 5 minutos, reducen la exposición de sesiones desatendidas en aplicaciones sensibles."
+    },
+    {
+      "pregunta": "Un analista descubre que un directivo ordenó desactivar el registro de eventos de seguridad en un sistema con datos sensibles y su supervisor le aconseja no informar. Según el Código Ético de ISC2, ¿qué debe hacer?",
+      "opciones": [
+        "Informar de la infracción mediante los canales organizativos o externos apropiados",
+        "Seguir la indicación del supervisor por tener mayor autoridad",
+        "Esperar a que exista una brecha real antes de actuar",
+        "Enviar un mensaje anónimo al directivo explicando los riesgos"
+      ],
+      "respuesta": 0,
+      "explicacion": "El Código Ético de ISC2 obliga a proteger a la sociedad y actuar con honestidad, por lo que debe usarse un canal formal de denuncia."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de cifrar los datos en reposo?",
+      "opciones": [
+        "Proteger los datos almacenados frente a accesos no autorizados si se compromete el medio de almacenamiento",
+        "Proteger los datos mientras se transmiten por una red",
+        "Verificar que los datos almacenados no hayan sido alterados",
+        "Autenticar a los usuarios antes de acceder a archivos de base de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado en reposo mantiene ilegibles los datos almacenados si el dispositivo, disco o copia de seguridad cae en manos no autorizadas."
+    },
+    {
+      "pregunta": "Un analista observa tráfico de red anormalmente alto y aplicaciones lentas durante el horario laboral. ¿Qué causa potencial debe considerar?",
+      "opciones": [
+        "Un ataque DDoS en curso",
+        "Una operación exitosa de exfiltración de datos",
+        "Una copia de seguridad rutinaria",
+        "Un aumento normal de actividad legítima"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un DDoS suele provocar picos anómalos de tráfico y degradación o indisponibilidad de servicios."
+    },
+    {
+      "pregunta": "¿Qué combinación representa una implementación válida de autenticación multifactor (MFA)?",
+      "opciones": [
+        "Una contraseña y una huella dactilar",
+        "Una contraseña y una pregunta de seguridad",
+        "Un PIN y una frase de contraseña",
+        "Dos contraseñas diferentes"
+      ],
+      "respuesta": 0,
+      "explicacion": "Combina algo que sabes con algo que eres, es decir, factores de categorías distintas."
+    },
+    {
+      "pregunta": "Una aplicación necesita conectarse a una base de datos de producción con registros de clientes. Aplicando el principio de mínimo privilegio, ¿qué acceso debe concederse?",
+      "opciones": [
+        "Solo los permisos mínimos necesarios para realizar su función específica",
+        "Acceso administrativo completo para evitar errores",
+        "Acceso de solo lectura a todas las tablas",
+        "Permisos elevados temporales revocados tras su uso"
+      ],
+      "respuesta": 0,
+      "explicacion": "El mínimo privilegio limita los permisos a lo estrictamente necesario y reduce el impacto de una posible vulneración."
+    },
+    {
+      "pregunta": "¿Qué afirmación describe MEJOR la relación entre las alarmas de intrusión física y la respuesta a incidentes?",
+      "opciones": [
+        "Las alarmas aportan la capacidad de detección que activa los procedimientos de respuesta",
+        "Las alarmas contienen automáticamente los incidentes sin intervención humana",
+        "Las alarmas eliminan la necesidad de planes documentados",
+        "Las alarmas sustituyen otros controles físicos como las tarjetas de acceso"
+      ],
+      "respuesta": 0,
+      "explicacion": "La alarma detecta el evento y desencadena la investigación y respuesta definida por la organización."
+    },
+    {
+      "pregunta": "¿Qué característica distingue a un sitio templado de un sitio frío en recuperación ante desastres?",
+      "opciones": [
+        "Un sitio templado ya tiene parte del equipamiento y de los sistemas instalados",
+        "Un sitio templado no dispone de infraestructura eléctrica",
+        "Un sitio templado está en el mismo edificio que las operaciones principales",
+        "Un sitio templado proporciona conmutación inmediata sin intervención manual"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un warm site dispone de infraestructura y equipamiento parcial, por lo que se activa antes que un cold site, aunque requiere configuración adicional."
+    },
+    {
+      "pregunta": "Un empleado recibe un correo sospechoso que parece proceder del CEO y solicita una transferencia urgente. ¿Qué debe hacer primero?",
+      "opciones": [
+        "Verificar la solicitud mediante un canal conocido y de confianza",
+        "Responder al correo pidiendo confirmación",
+        "Realizar la transferencia por la urgencia",
+        "Eliminar el correo sin realizar ninguna otra acción"
+      ],
+      "respuesta": 0,
+      "explicacion": "La solicitud debe confirmarse por un canal independiente para evitar fraudes de suplantación o Business Email Compromise."
+    },
+    {
+      "pregunta": "Un visitante recibe una acreditación con la indicación 'Escort Required'. ¿Qué significa respecto a sus derechos de acceso?",
+      "opciones": [
+        "No tiene acceso independiente y debe estar acompañado continuamente por personal autorizado",
+        "Puede acceder solo a zonas públicas sin acompañante",
+        "Tiene acceso completo temporal hasta la hora de salida",
+        "Puede acompañar a otros visitantes aprobados"
+      ],
+      "respuesta": 0,
+      "explicacion": "La indicación exige supervisión continua y no concede ningún derecho de acceso autónomo."
+    },
+    {
+      "pregunta": "Una organización tiene un presupuesto limitado para recuperación ante desastres y tolera paradas prolongadas en sistemas no críticos. ¿Qué tipo de sitio es el MÁS adecuado?",
+      "opciones": [
+        "Sitio frío",
+        "Sitio caliente",
+        "Sitio templado",
+        "Sitio recíproco"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un cold site es la opción más económica, aunque necesita instalar y restaurar infraestructura antes de operar."
+    },
+    {
+      "pregunta": "En una evaluación cualitativa de riesgos, ¿qué escala se usa habitualmente en una matriz de riesgos?",
+      "opciones": [
+        "Alto, Medio y Bajo",
+        "500.000, 250.000 y 100.000 dólares",
+        "Valores de probabilidad 1,0; 0,5 y 0,1",
+        "Porcentajes de Annual Rate of Occurrence"
+      ],
+      "respuesta": 0,
+      "explicacion": "El análisis cualitativo utiliza categorías descriptivas de probabilidad e impacto, no valores monetarios o probabilísticos precisos."
+    },
+    {
+      "pregunta": "¿Cuál es el beneficio de seguridad PRINCIPAL de segmentar una red mediante VLAN y subredes?",
+      "opciones": [
+        "Limitar el movimiento lateral si un sistema es comprometido",
+        "Aumentar el ancho de banda total",
+        "Eliminar la necesidad de firewalls",
+        "Cifrar todo el tráfico de red"
+      ],
+      "respuesta": 0,
+      "explicacion": "La segmentación contiene el alcance de una intrusión y dificulta que el atacante avance a otros segmentos."
+    },
+    {
+      "pregunta": "¿Qué combinación representa factores válidos de autenticación multifactor?",
+      "opciones": [
+        "Una contraseña y un token de hardware",
+        "Una contraseña y un PIN",
+        "Una pregunta de seguridad y una frase de contraseña",
+        "Dos contraseñas diferentes"
+      ],
+      "respuesta": 0,
+      "explicacion": "La contraseña es un factor de conocimiento y el token es un factor de posesión."
+    },
+    {
+      "pregunta": "Un administrador usa una herramienta de análisis de paquetes para resolver problemas. ¿Qué actividad maliciosa podría realizar un atacante con una herramienta similar?",
+      "opciones": [
+        "Capturar credenciales sin cifrar que atraviesan la red",
+        "Modificar directamente reglas del firewall",
+        "Descifrar tráfico web protegido por TLS",
+        "Bloquear a usuarios legítimos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un sniffer puede leer credenciales transmitidas por protocolos sin cifrado, como Telnet, FTP o HTTP."
+    },
+    {
+      "pregunta": "¿Por qué un Intrusion Prevention System (IPS) suele desplegarse en línea dentro de la ruta de red?",
+      "opciones": [
+        "Para bloquear activamente el tráfico malicioso antes de que llegue al sistema objetivo",
+        "Para reducir la carga de los switches",
+        "Para acelerar la distribución de firmas",
+        "Para eliminar la necesidad de NAT"
+      ],
+      "respuesta": 0,
+      "explicacion": "Al estar inline, todo el tráfico pasa por el IPS y puede ser descartado en tiempo real."
+    },
+    {
+      "pregunta": "¿Qué método de copia de seguridad requiere más almacenamiento con el tiempo, pero ofrece la restauración más rápida?",
+      "opciones": [
+        "Copia completa",
+        "Copia incremental",
+        "Copia diferencial",
+        "Snapshot"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una copia completa contiene todo el conjunto de datos y puede restaurarse sin depender de otras copias."
+    },
+    {
+      "pregunta": "¿Qué característica distingue MEJOR el análisis cuantitativo del análisis cualitativo de riesgos?",
+      "opciones": [
+        "Asigna valores monetarios a las pérdidas potenciales",
+        "Usa calificaciones de alto, medio y bajo",
+        "Puede realizarse rápidamente sin datos",
+        "Se basa principalmente en opinión experta"
+      ],
+      "respuesta": 0,
+      "explicacion": "El análisis cuantitativo expresa el riesgo con valores numéricos, como la Annual Loss Expectancy (ALE)."
+    },
+    {
+      "pregunta": "Durante un handshake TLS, el servidor presenta su certificado digital. ¿Cuál es su propósito PRINCIPAL para evitar un ataque MitM?",
+      "opciones": [
+        "Permitir que el cliente verifique que el servidor es auténtico",
+        "Cifrar todos los datos de la sesión",
+        "Establecer las reglas del firewall",
+        "Proporcionar al cliente la dirección de red del servidor"
+      ],
+      "respuesta": 0,
+      "explicacion": "El certificado permite validar la identidad del servidor mediante una cadena de confianza antes de establecer la comunicación segura."
+    },
+    {
+      "pregunta": "Un analista revisa registros de firewall y observa tráfico en el puerto TCP 22. ¿Qué protocolo se usa probablemente?",
+      "opciones": ["SSH", "HTTP", "FTP", "HTTPS"],
+      "respuesta": 0,
+      "explicacion": "SSH utiliza por defecto el puerto TCP 22 para acceso remoto cifrado."
+    },
+    {
+      "pregunta": "Cuando un empleado deja una organización, ¿cuál es la acción inmediata MÁS crítica sobre su cuenta?",
+      "opciones": [
+        "Deshabilitar o retirar el acceso para impedir entradas no autorizadas",
+        "Archivar todos sus correos y documentos",
+        "Transferir sus proyectos al sustituto",
+        "Actualizar el organigrama"
+      ],
+      "respuesta": 0,
+      "explicacion": "La desactivación inmediata evita que una persona desvinculada conserve acceso a sistemas y datos."
+    },
+    {
+      "pregunta": "Un analista detecta tráfico inesperado en el puerto TCP 23. ¿Qué protocolo es probable y por qué supone un riesgo?",
+      "opciones": [
+        "Telnet, porque transmite datos en texto claro y permite robar credenciales",
+        "SSH, porque cifra las comunicaciones pero puede indicar acceso no autorizado",
+        "SMTP, porque puede indicar un relay de correo",
+        "HTTP, porque sugiere actividad de servidor web"
+      ],
+      "respuesta": 0,
+      "explicacion": "Telnet usa el puerto 23 y transmite incluso las credenciales sin cifrar."
+    },
+    {
+      "pregunta": "¿Qué componente es esencial para una estrategia eficaz de monitorización continua según los marcos de gestión de riesgos?",
+      "opciones": [
+        "Una frecuencia definida para monitorizar controles e informar de la postura de seguridad a la dirección",
+        "Presupuesto ilimitado para todas las herramientas",
+        "Delegar toda la monitorización en auditores externos",
+        "Eliminar todas las vulnerabilidades antes de monitorizar"
+      ],
+      "respuesta": 0,
+      "explicacion": "La estrategia debe definir qué se controla, con qué frecuencia y cómo se informa del estado y del riesgo."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de un certificado digital durante una conexión TLS/SSL?",
+      "opciones": [
+        "Verificar la identidad del servidor mediante una autoridad de certificación de confianza",
+        "Almacenar las credenciales del usuario",
+        "Analizar el tráfico en busca de contenido malicioso",
+        "Asignar direcciones IP cifradas"
+      ],
+      "respuesta": 0,
+      "explicacion": "El certificado vincula la identidad del servidor con su clave pública y permite validarla mediante una CA de confianza."
+    },
+    {
+      "pregunta": "¿Cuál es un método habitual para medir la eficacia de un programa de concienciación en seguridad?",
+      "opciones": [
+        "Simulaciones de phishing que midan la respuesta de los empleados",
+        "Contar las herramientas de seguridad desplegadas",
+        "Revisar el presupuesto anual del departamento",
+        "Contar las reglas de firewall"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las simulaciones permiten medir tasas de clic, reporte y mejora del comportamiento."
+    },
+    {
+      "pregunta": "¿Dónde deben aplicarse los controles de caducidad de sesión para que los atacantes no puedan eludirlos?",
+      "opciones": [
+        "En el servidor",
+        "En el cliente",
+        "En el perímetro de red",
+        "En la estación del usuario"
+      ],
+      "respuesta": 0,
+      "explicacion": "La expiración debe controlarse en el servidor, donde el usuario no puede manipular el estado ni los temporizadores."
+    },
+    {
+      "pregunta": "¿Qué buena práctica debe seguirse al gestionar reglas de firewall con el tiempo?",
+      "opciones": [
+        "Revisar periódicamente y eliminar reglas temporales o innecesarias",
+        "Aplicar reglas nuevas sin pruebas",
+        "Usar comodines para simplificar",
+        "Desactivar el registro para mejorar el rendimiento"
+      ],
+      "respuesta": 0,
+      "explicacion": "La revisión periódica reduce reglas obsoletas, exposición innecesaria y errores de configuración."
+    },
+    {
+      "pregunta": "¿Qué afirmación describe correctamente el cifrado simétrico?",
+      "opciones": [
+        "La misma clave secreta se usa para cifrar y descifrar",
+        "Se usan dos claves diferentes pero relacionadas",
+        "Los datos se cifran sin claves",
+        "La clave de cifrado puede publicarse y no se necesita clave para descifrar"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado simétrico utiliza una única clave secreta compartida para ambas operaciones."
+    },
+    {
+      "pregunta": "¿Qué técnica se usa MÁS habitualmente para verificar que una copia de seguridad no ha sido corrompida o alterada?",
+      "opciones": [
+        "Hashing y verificación de checksums",
+        "Comparación de ACL",
+        "Inspección de reglas de firewall",
+        "Rotación de claves de cifrado"
+      ],
+      "respuesta": 0,
+      "explicacion": "Comparar hashes o checksums permite detectar cualquier cambio en el contenido de la copia."
+    },
+    {
+      "pregunta": "¿Qué nivel de clasificación corresponde a comunicados de prensa y material de marketing destinado a difusión pública?",
+      "opciones": ["Público", "Confidencial", "Restringido", "Interno"],
+      "respuesta": 0,
+      "explicacion": "La información creada para distribución abierta no requiere protección frente a su divulgación."
+    },
+    {
+      "pregunta": "¿Cuál es la razón PRINCIPAL para probar periódicamente la restauración de copias de seguridad?",
+      "opciones": [
+        "Verificar que las copias pueden restaurarse correctamente cuando se necesiten",
+        "Cumplir requisitos documentales de auditoría anual",
+        "Reducir el espacio de almacenamiento",
+        "Aumentar la velocidad de las copias diarias"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una copia no es útil si no puede recuperarse; las pruebas validan su integridad y el procedimiento de restauración."
+    },
+    {
+      "pregunta": "¿En qué se diferencia el formato de una dirección IPv6 del de una dirección IPv4?",
+      "opciones": [
+        "IPv6 usa ocho grupos de dígitos hexadecimales separados por dos puntos",
+        "IPv6 usa doce grupos decimales separados por puntos",
+        "IPv6 usa cuatro grupos binarios separados por guiones",
+        "IPv6 usa seis grupos decimales separados por punto y coma"
+      ],
+      "respuesta": 0,
+      "explicacion": "IPv6 representa 128 bits mediante ocho grupos hexadecimales separados por dos puntos."
+    },
+    {
+      "pregunta": "¿Qué entidades están principalmente obligadas a cumplir HIPAA?",
+      "opciones": [
+        "Entidades cubiertas, como proveedores sanitarios y planes de salud",
+        "Todas las empresas que operan en Estados Unidos",
+        "Organizaciones que procesan pagos con tarjeta",
+        "Empresas que recopilan datos de residentes de la UE"
+      ],
+      "respuesta": 0,
+      "explicacion": "HIPAA se aplica a covered entities del sector sanitario y a determinados business associates que manejan PHI."
+    },
+    {
+      "pregunta": "¿Por qué deben probarse los parches antes de desplegarlos en producción?",
+      "opciones": [
+        "Para comprobar que no causan interrupciones o conflictos",
+        "Para confirmar que eliminan todas las amenazas futuras",
+        "Para verificar que aumentan la velocidad del sistema",
+        "Para garantizar compatibilidad con todos los dispositivos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las pruebas detectan incompatibilidades, fallos y efectos no deseados antes de afectar a servicios productivos."
+    },
+    {
+      "pregunta": "¿Qué riesgo aparece cuando los usuarios acumulan permisos que superan las necesidades de su puesto actual?",
+      "opciones": [
+        "Privilege creep",
+        "Access aggregation",
+        "Role explosion",
+        "Entitlement sprawl"
+      ],
+      "respuesta": 0,
+      "explicacion": "Privilege creep es la acumulación gradual de privilegios innecesarios, a menudo tras cambios de puesto."
+    },
+    {
+      "pregunta": "Una organización coloca guardias de seguridad en la entrada principal. ¿Qué función cumplen PRINCIPALMENTE?",
+      "opciones": [
+        "Disuasión y verificación de credenciales del personal",
+        "Supervisión de energía de respaldo y extinción de incendios",
+        "Análisis de tráfico e IDS",
+        "Gestión de parches y actualizaciones"
+      ],
+      "respuesta": 0,
+      "explicacion": "La presencia del guardia disuade y permite comprobar identidad y autorización antes de conceder acceso físico."
+    },
+    {
+      "pregunta": "¿Qué control físico está diseñado específicamente para impedir el tailgating al permitir el paso de una sola persona cada vez?",
+      "opciones": [
+        "Mantrap",
+        "Cámara CCTV",
+        "Sensor de movimiento",
+        "Tarjeta de seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una mantrap usa dos puertas interbloqueadas y controla el paso individual de personas autenticadas."
+    },
+    {
+      "pregunta": "¿Qué control físico es MÁS apropiado para proteger servidores en un centro de datos compartido por varios inquilinos?",
+      "opciones": [
+        "Armarios rack cerrados con mecanismos de control de acceso",
+        "Vallado perimetral del edificio",
+        "Guardias en la entrada 24 horas",
+        "CCTV continuo de la sala"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los racks cerrados crean una barrera específica alrededor de los equipos de cada inquilino."
+    },
+    {
+      "pregunta": "¿Qué componente de TLS/SSL protege frente a ataques MitM verificando la identidad del servidor?",
+      "opciones": [
+        "Validación del certificado digital",
+        "Intercambio de clave simétrica",
+        "Algoritmos de compresión",
+        "Configuración de timeout de sesión"
+      ],
+      "respuesta": 0,
+      "explicacion": "La validación comprueba cadena de confianza, vigencia, revocación y coincidencia del nombre del servidor."
+    },
+    {
+      "pregunta": "Un guardia encuentra a una persona sin acreditación visible en una zona restringida. ¿Qué debe hacer primero?",
+      "opciones": [
+        "Acercarse y verificar su identidad y autorización",
+        "Suponer que está autorizada porque ya está dentro",
+        "Esperar a que salga y revisar las cámaras",
+        "Bloquear toda la instalación y llamar a la policía"
+      ],
+      "respuesta": 0,
+      "explicacion": "Primero debe comprobar de forma inmediata y proporcionada si la persona está autorizada."
+    },
+    {
+      "pregunta": "En el cifrado simétrico, ¿qué característica lo distingue del cifrado asimétrico?",
+      "opciones": [
+        "La misma clave se usa para cifrar y descifrar",
+        "Una clave pública cifra y una privada descifra",
+        "Proporciona no repudio mediante firmas digitales",
+        "Requiere una autoridad de certificación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado simétrico usa una única clave secreta compartida para ambas operaciones."
+    },
+    {
+      "pregunta": "¿Por qué debe adaptarse el contenido de concienciación en seguridad a distintos roles?",
+      "opciones": [
+        "Porque los distintos roles afrontan riesgos diferentes en sus tareas diarias",
+        "Porque los directivos están exentos",
+        "Porque elimina la necesidad de formación general",
+        "Porque permite excluir al personal no técnico"
+      ],
+      "respuesta": 0,
+      "explicacion": "La formación basada en roles aborda amenazas concretas y relevantes para cada función."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de la tríada CIA en seguridad de la información?",
+      "opciones": [
+        "Proporcionar un marco para proteger los activos de información",
+        "Establecer requisitos legales",
+        "Definir estándares de cifrado",
+        "Clasificar datos por sensibilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Confidencialidad, integridad y disponibilidad forman un marco básico para evaluar y proteger información y sistemas."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de la formación sobre ingeniería social?",
+      "opciones": [
+        "Cambiar el comportamiento para que los empleados reconozcan y reporten amenazas",
+        "Cumplir únicamente el requisito anual de formación",
+        "Probar controles técnicos de red",
+        "Sustituir los procedimientos de respuesta a incidentes"
+      ],
+      "respuesta": 0,
+      "explicacion": "La finalidad es crear hábitos que permitan identificar, evitar y comunicar intentos de manipulación."
+    },
+    {
+      "pregunta": "¿Qué función introducida junto a WPA3 protege a usuarios de Wi-Fi pública abierta sin exigir contraseña?",
+      "opciones": [
+        "Opportunistic Wireless Encryption (OWE)",
+        "Simultaneous Authentication of Equals (SAE)",
+        "Device Provisioning Protocol (DPP)",
+        "Protected Management Frames (PMF)"
+      ],
+      "respuesta": 0,
+      "explicacion": "OWE cifra individualmente el tráfico de redes abiertas mediante un intercambio de claves no autenticado."
+    },
+    {
+      "pregunta": "En acceso remoto por VPN, ¿qué componente es MÁS crítico para autenticar usuarios antes de crear el túnel?",
+      "opciones": [
+        "Gateway VPN con capacidades de autenticación multifactor",
+        "Switch con port security",
+        "IDS en todos los segmentos",
+        "Proxy de filtrado de contenido"
+      ],
+      "respuesta": 0,
+      "explicacion": "El gateway VPN valida la identidad y aplica MFA y controles de acceso antes de conceder conectividad."
+    },
+    {
+      "pregunta": "¿Qué ayuda a determinar el Recovery Point Objective (RPO)?",
+      "opciones": [
+        "Con qué frecuencia deben realizarse las copias de seguridad",
+        "Con qué rapidez deben restaurarse los sistemas",
+        "Qué empleados participan en recuperación",
+        "Qué soporte de copia debe usarse"
+      ],
+      "respuesta": 0,
+      "explicacion": "El RPO expresa la pérdida de datos tolerable en tiempo y, por tanto, condiciona la frecuencia de copia o replicación."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor definición de Recovery Time Objective (RTO)?",
+      "opciones": [
+        "El retraso máximo aceptable entre la interrupción y la restauración del servicio",
+        "La cantidad máxima de datos que puede perderse",
+        "El coste total de la solución de recuperación",
+        "La frecuencia de rotación de cintas"
+      ],
+      "respuesta": 0,
+      "explicacion": "El RTO es el tiempo máximo que el servicio puede permanecer interrumpido antes de ser restaurado."
+    },
+    {
+      "pregunta": "Una organización quiere asegurar que los controles sigan funcionando con el tiempo. ¿Qué actividad apoya MEJOR este objetivo?",
+      "opciones": [
+        "Evaluación continua de controles seleccionados conforme a una estrategia de monitorización",
+        "Certificación única durante el despliegue",
+        "Revisión anual de políticas sin validación técnica",
+        "Documentar los controles solo en el plan de seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "La evaluación continua confirma periódicamente que los controles siguen operando y produciendo el resultado esperado."
+    },
+    {
+      "pregunta": "Si entran en conflicto los cánones del Código Ético de ISC2, ¿cuál tiene MAYOR precedencia?",
+      "opciones": [
+        "Proteger a la sociedad y el bien común",
+        "Prestar un servicio diligente y competente a los principales",
+        "Promover y proteger la profesión",
+        "Actuar con honor, honestidad, justicia, responsabilidad y legalidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "El Canon I tiene la máxima prioridad y antepone la protección de la sociedad a intereses del empleador o de la profesión."
+    },
+    {
+      "pregunta": "¿Qué documento de gobierno proporciona dirección de alto nivel sin explicar cómo lograr los objetivos de seguridad?",
+      "opciones": ["Política", "Procedimiento", "Línea base", "Estándar"],
+      "respuesta": 0,
+      "explicacion": "Una política define qué debe cumplirse; los procedimientos y estándares concretan cómo hacerlo."
+    },
+    {
+      "pregunta": "¿Cuál es el riesgo de seguridad PRINCIPAL de conservar datos más allá de su periodo requerido?",
+      "opciones": [
+        "Aumenta la exposición de datos sensibles ante posibles brechas",
+        "Deteriora el hardware de almacenamiento",
+        "Ralentiza la red",
+        "Exige más personal"
+      ],
+      "respuesta": 0,
+      "explicacion": "La sobre-retención amplía el volumen de información que podría verse comprometida."
+    },
+    {
+      "pregunta": "En un sistema de seguimiento de formación de seguridad, ¿qué dato es MÁS importante conservar?",
+      "opciones": [
+        "Qué empleados completaron la formación y cuáles no",
+        "Las evaluaciones de los instructores",
+        "Transcripciones de todas las sesiones",
+        "Especificaciones del hardware usado"
+      ],
+      "respuesta": 0,
+      "explicacion": "El objetivo principal es demostrar cumplimiento e identificar personas pendientes de formación."
+    },
+    {
+      "pregunta": "¿Qué característica de rendimiento distingue principalmente una WAN de una LAN?",
+      "opciones": [
+        "Las WAN suelen tener mayor retardo de propagación y menores tasas de transferencia que las LAN",
+        "Las WAN siempre usan fibra y las LAN solo cobre",
+        "Las WAN admiten como máximo 100 dispositivos",
+        "Las WAN requieren conexiones físicas y las LAN permiten inalámbricas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las mayores distancias de una WAN incrementan la latencia y suelen reducir el rendimiento respecto a una LAN."
+    },
+    {
+      "pregunta": "¿Qué enfoque demuestra MEJOR un servicio competente al desarrollar un programa de concienciación según ISC2?",
+      "opciones": [
+        "Adaptar el contenido a las amenazas y riesgos específicos de la organización",
+        "Reutilizar formación genérica idéntica",
+        "Centrarse solo en auditorías de cumplimiento",
+        "Limitar la formación al departamento de TI"
+      ],
+      "respuesta": 0,
+      "explicacion": "La competencia exige que el contenido sea pertinente para el riesgo real y para toda la población afectada."
+    },
+    {
+      "pregunta": "Según NIST, ¿cuáles son los dos tipos de timeout de sesión?",
+      "opciones": [
+        "Timeout total y timeout por inactividad",
+        "Timeout de conexión y de respuesta",
+        "Timeout de lectura y escritura",
+        "Timeout de autenticación y autorización"
+      ],
+      "respuesta": 0,
+      "explicacion": "NIST distingue entre duración máxima total de la sesión y expiración por falta de actividad."
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia PRINCIPAL entre un firewall stateful y uno stateless?",
+      "opciones": [
+        "El stateful mantiene el estado de las conexiones activas y el stateless evalúa cada paquete por separado",
+        "El stateful opera en capa 7 y el stateless en capa 3",
+        "El stateful solo bloquea tráfico entrante",
+        "El stateful usa ACL y el stateless cifrado"
+      ],
+      "respuesta": 0,
+      "explicacion": "El seguimiento de estado permite considerar el contexto de una conexión, algo que un filtro stateless no conserva."
+    },
+    {
+      "pregunta": "Un miembro de ISC2 observa que un colega usa métodos no autorizados fuera del alcance acordado en un pentest. ¿Qué está obligado a hacer?",
+      "opciones": [
+        "Seguir el procedimiento de denuncia ética de ISC2",
+        "Ignorarlo si los resultados son correctos",
+        "Finalizar unilateralmente todo el proyecto",
+        "Resolverlo en privado sin informar"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las infracciones observadas deben comunicarse mediante el procedimiento formal de ética de ISC2."
+    },
+    {
+      "pregunta": "Según el GDPR, ¿cuál es la sanción máxima por las infracciones más graves?",
+      "opciones": [
+        "Hasta 20 millones de euros o el 4 % de la facturación anual global, lo que sea mayor",
+        "Hasta 10 millones de euros o el 2 % de la facturación global",
+        "Hasta 5 millones de euros sin porcentaje",
+        "Hasta 1 millón de euros por infracción"
+      ],
+      "respuesta": 0,
+      "explicacion": "El nivel superior de sanciones del GDPR alcanza 20 millones de euros o el 4 % del volumen de negocio mundial anual."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de mantener registros de finalización de formación de seguridad?",
+      "opciones": [
+        "Demostrar cumplimiento de normas y políticas durante auditorías",
+        "Comparar el rendimiento individual",
+        "Calcular el presupuesto del próximo año",
+        "Identificar candidatos a certificaciones"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los registros constituyen evidencia auditable de quién recibió formación y cuándo."
+    },
+    {
+      "pregunta": "¿Qué medida protege mejor los datos en tránsito frente a MitM creando un túnel cifrado entre dos extremos?",
+      "opciones": [
+        "Virtual Private Network (VPN)",
+        "Intrusion Detection System (IDS)",
+        "Firewall perimetral",
+        "Antivirus"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una VPN cifra el tráfico entre extremos e impide que un interceptor pueda leerlo o alterarlo fácilmente."
+    },
+    {
+      "pregunta": "¿Qué tipo de ataque DDoS intenta agotar el ancho de banda enviando cantidades masivas de tráfico?",
+      "opciones": [
+        "Ataque volumétrico",
+        "Ataque de protocolo",
+        "Ataque de capa de aplicación",
+        "Ataque de reflexión"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los ataques volumétricos saturan la capacidad del enlace con grandes flujos de tráfico."
+    },
+    {
+      "pregunta": "¿Cuál es la relación entre el Business Impact Analysis (BIA) y el Business Continuity Plan (BCP)?",
+      "opciones": [
+        "El BIA identifica requisitos que orientan el desarrollo del BCP",
+        "El BCP debe completarse antes del BIA",
+        "Son documentos no relacionados",
+        "El BIA sustituye al BCP"
+      ],
+      "respuesta": 0,
+      "explicacion": "El BIA identifica funciones críticas y objetivos de recuperación que sirven de base al BCP."
+    },
+    {
+      "pregunta": "¿Qué métrica define el tiempo máximo que una empresa puede sobrevivir sin recursos críticos?",
+      "opciones": [
+        "Maximum Tolerable Downtime (MTD)",
+        "Recovery Time Objective (RTO)",
+        "Recovery Point Objective (RPO)",
+        "Mean Time Between Failures (MTBF)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El MTD es el límite total de interrupción antes de que las consecuencias sean inaceptables."
+    },
+    {
+      "pregunta": "¿Qué acción es MÁS apropiada para la contención de incidentes a corto plazo?",
+      "opciones": [
+        "Aislar de la red los sistemas afectados",
+        "Reinstalar el sistema operativo",
+        "Realizar un análisis de causa raíz",
+        "Aplicar cambios permanentes de configuración"
+      ],
+      "respuesta": 0,
+      "explicacion": "El aislamiento inmediato limita la propagación mientras se prepara una solución de mayor alcance."
+    },
+    {
+      "pregunta": "¿Cuál es la práctica recomendada al usar un gestor de contraseñas en una empresa?",
+      "opciones": [
+        "Generar una contraseña única y compleja para cada cuenta y proteger el gestor con una frase maestra fuerte",
+        "Usar la misma contraseña en todas las cuentas",
+        "Desactivar la generación automática y usar contraseñas simples",
+        "Compartir las credenciales maestras con el equipo"
+      ],
+      "respuesta": 0,
+      "explicacion": "El gestor permite credenciales únicas y aleatorias; la bóveda debe quedar protegida por una frase maestra robusta."
+    },
+    {
+      "pregunta": "¿Qué documento es ESENCIAL antes de iniciar una prueba de penetración autorizada?",
+      "opciones": [
+        "Autorización escrita de las partes interesadas apropiadas",
+        "Lista de vulnerabilidades conocidas",
+        "Diagramas completos de red",
+        "Certificados de seguro"
+      ],
+      "respuesta": 0,
+      "explicacion": "La autorización escrita define el alcance permitido y establece la base legal y ética de la prueba."
+    },
+    {
+      "pregunta": "¿Qué principio debe aplicarse en un firewall para permitir solo el tráfico expresamente autorizado?",
+      "opciones": [
+        "Denegación implícita",
+        "Permiso explícito",
+        "Inspección stateful",
+        "Filtrado de paquetes"
+      ],
+      "respuesta": 0,
+      "explicacion": "La denegación implícita bloquea por defecto todo tráfico que no coincida con una regla de permiso."
+    },
+    {
+      "pregunta": "¿Cuál es el beneficio PRINCIPAL de la gestión out-of-band de dispositivos de red?",
+      "opciones": [
+        "Separar el tráfico administrativo del tráfico normal de usuarios",
+        "Aumentar la velocidad de transferencia",
+        "Eliminar la necesidad de reglas de firewall",
+        "Permitir actualizaciones remotas del fabricante"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un canal de gestión separado reduce la exposición de interfaces administrativas a la red de producción."
+    },
+    {
+      "pregunta": "¿Qué distingue una directriz de un estándar en la jerarquía de gobierno de seguridad?",
+      "opciones": [
+        "Las directrices son recomendaciones y los estándares son requisitos obligatorios",
+        "Las directrices las aprueba la dirección y los estándares son técnicos",
+        "Las directrices solo aplican a usuarios",
+        "Las directrices se actualizan más y los estándares nunca"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las guidelines admiten flexibilidad, mientras que los standards establecen requisitos de obligado cumplimiento."
+    },
+    {
+      "pregunta": "Una organización usa la tasa de finalización como única métrica de concienciación. ¿Cuál es la limitación PRINCIPAL?",
+      "opciones": [
+        "No indica si los empleados cambiaron su comportamiento",
+        "Es demasiado compleja para automatizar",
+        "No puede presentarse a la dirección",
+        "Requiere auditores externos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Completar un curso mide participación, pero no comprensión, retención ni mejora conductual."
+    },
+    {
+      "pregunta": "Un desarrollador crea un formulario que acepta correos electrónicos. ¿Qué enfoque sigue MEJOR las prácticas de validación segura?",
+      "opciones": [
+        "Definir un patrón que especifique exactamente el formato permitido",
+        "Bloquear entradas que contengan script o javascript",
+        "Confiar en el tipo HTML email",
+        "Aceptar cualquier entrada y sanearla antes de almacenarla"
+      ],
+      "respuesta": 0,
+      "explicacion": "La validación allowlist en el servidor define qué formato se acepta y rechaza el resto."
+    },
+    {
+      "pregunta": "Una organización exige credenciales individuales verificadas por un servidor central para cada usuario Wi-Fi. ¿Qué configuración lo permite?",
+      "opciones": [
+        "WPA2-Enterprise con servidor RADIUS",
+        "WPA2-Personal con passphrase compleja",
+        "WPA con TKIP",
+        "Red abierta con filtrado MAC"
+      ],
+      "respuesta": 0,
+      "explicacion": "WPA2-Enterprise usa 802.1X y RADIUS para autenticación centralizada e individual."
+    },
+    {
+      "pregunta": "¿Qué tipo de firewall analiza cada paquete de forma aislada, sin considerar el flujo o estado de conexión?",
+      "opciones": [
+        "Firewall stateless",
+        "Firewall stateful",
+        "Firewall de aplicación",
+        "Next-generation firewall"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un firewall stateless decide solo con los campos del paquete actual, sin contexto de sesión."
+    },
+    {
+      "pregunta": "¿Qué ventaja tienen los guardias frente a controles automáticos como los torniquetes?",
+      "opciones": [
+        "Pueden aplicar juicio y responder dinámicamente a las situaciones",
+        "Generan automáticamente registros digitales de todos los accesos",
+        "Proporcionan autenticación criptográfica",
+        "Eliminan la necesidad de registros y acreditaciones"
+      ],
+      "respuesta": 0,
+      "explicacion": "El personal humano puede interpretar contexto, conducta y excepciones que un mecanismo automático no comprende."
+    },
+    {
+      "pregunta": "¿Qué supervisa principalmente un Host-based Intrusion Detection System (HIDS)?",
+      "opciones": [
+        "Las características y eventos de un host individual",
+        "Los patrones de tráfico de toda la red",
+        "Eventos físicos del perímetro",
+        "El aprovisionamiento de cuentas en toda la empresa"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un HIDS analiza logs, integridad de archivos, procesos y cambios del equipo donde está instalado."
+    },
+    {
+      "pregunta": "Una organización almacena soportes de copia con datos sensibles. ¿Qué medida física ofrece la MEJOR protección?",
+      "opciones": [
+        "Armario cerrado en una sala de acceso restringido con registro de accesos",
+        "Sala climatizada con control de humedad",
+        "Caja ignífuga en una oficina general",
+        "Contenedor cifrado con contraseña compleja"
+      ],
+      "respuesta": 0,
+      "explicacion": "Combina barreras físicas, restricción de acceso y trazabilidad sobre quién accede al soporte."
+    },
+    {
+      "pregunta": "En un sistema de control de acceso basado en identidad con ACL, ¿qué debe ocurrir para conceder acceso a un objeto?",
+      "opciones": [
+        "El sujeto debe presentar una credencial que coincida con una entrada de la ACL",
+        "Debe tener un nivel de clasificación superior al objeto",
+        "Debe pertenecer a un rol predefinido",
+        "Debe cumplir simultáneamente múltiples atributos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La ACL enumera identidades y permisos; una coincidencia autorizada permite el acceso."
+    },
+    {
+      "pregunta": "En una mantrap, ¿qué significa una configuración fail-secure cuando se pierde la alimentación?",
+      "opciones": [
+        "Las puertas permanecen bloqueadas para impedir accesos no autorizados",
+        "Las puertas se desbloquean automáticamente",
+        "El sistema pasa a acceso exclusivo con llave",
+        "El sistema funciona parcialmente"
+      ],
+      "respuesta": 0,
+      "explicacion": "Fail-secure mantiene el control de entrada cerrado durante el fallo, aunque debe respetarse la evacuación de emergencia."
+    },
+    {
+      "pregunta": "Una huella dactilar usada durante el inicio de sesión es un ejemplo de qué factor?",
+      "opciones": [
+        "Algo que eres",
+        "Algo que sabes",
+        "Algo que tienes",
+        "Algo que haces"
+      ],
+      "respuesta": 0,
+      "explicacion": "La huella es un dato biométrico inherente a la persona."
+    },
+    {
+      "pregunta": "¿Qué configuración inalámbrica usa autenticación centralizada mediante 802.1X y RADIUS?",
+      "opciones": [
+        "WPA2-Enterprise con 802.1X y RADIUS",
+        "WPA2-Personal con passphrase compleja",
+        "WPA3-Personal con SAE",
+        "Red abierta con filtrado MAC"
+      ],
+      "respuesta": 0,
+      "explicacion": "WPA2-Enterprise valida credenciales individuales contra un servidor RADIUS."
+    },
+    {
+      "pregunta": "¿Qué evalúa principalmente Network Access Control (NAC) antes de permitir que un dispositivo se conecte?",
+      "opciones": [
+        "La postura de seguridad del dispositivo y su cumplimiento de políticas",
+        "La ubicación física del dispositivo",
+        "El ancho de banda que consumirá",
+        "Todas las aplicaciones instaladas"
+      ],
+      "respuesta": 0,
+      "explicacion": "NAC comprueba aspectos como parches, antivirus y cumplimiento antes de conceder, limitar o poner en cuarentena el acceso."
+    },
+    {
+      "pregunta": "¿Qué esquema clasifica los controles según CUÁNDO actúan respecto a un incidente?",
+      "opciones": [
+        "Preventivos, detectivos y correctivos",
+        "Técnicos, administrativos y físicos",
+        "Obligatorios, discrecionales y basados en roles",
+        "Confidencialidad, integridad y disponibilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "La clasificación preventiva-detectiva-correctiva se basa en si el control actúa antes, durante o después del incidente."
+    },
+    {
+      "pregunta": "Un analista observa tráfico saliente hacia un host externo por el puerto 443. ¿Con qué tráfico se asocia normalmente?",
+      "opciones": [
+        "Tráfico web HTTPS cifrado mediante TLS/SSL",
+        "Tráfico HTTP sin cifrar",
+        "Remote Desktop de Windows",
+        "Correo SMTP"
+      ],
+      "respuesta": 0,
+      "explicacion": "El puerto 443 es el puerto estándar de HTTPS."
+    },
+    {
+      "pregunta": "¿Cuál es la función PRINCIPAL de un lector de tarjetas en un sistema electrónico de acceso?",
+      "opciones": [
+        "Autenticar y verificar la identidad de quien solicita acceso",
+        "Bloquear físicamente la puerta",
+        "Grabar vídeo de las entradas",
+        "Detectar personas no autorizadas en las proximidades"
+      ],
+      "respuesta": 0,
+      "explicacion": "El lector obtiene la credencial y la envía al sistema para comprobar identidad y autorización."
+    },
+    {
+      "pregunta": "Según buenas prácticas, ¿qué debe ocurrir cuando llega un visitante autorizado a una instalación segura?",
+      "opciones": [
+        "Debe recibir una acreditación temporal y permanecer acompañado",
+        "Debe recibir credenciales permanentes",
+        "Debe tener el mismo acceso que un empleado",
+        "Debe circular libremente tras mostrar identificación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El acceso temporal y supervisado aplica mínimo privilegio y mantiene control sobre las zonas visitadas."
+    },
+    {
+      "pregunta": "Según GDPR, ¿en cuánto tiempo debe notificarse a la autoridad de control una brecha con riesgo para las personas?",
+      "opciones": [
+        "En 72 horas",
+        "En 24 horas",
+        "En 7 días naturales",
+        "En 30 días naturales"
+      ],
+      "respuesta": 0,
+      "explicacion": "El artículo 33 establece un plazo máximo de 72 horas desde que la organización conoce la brecha."
+    },
+    {
+      "pregunta": "Tras un ataque de ransomware, ¿qué acción de recuperación es MÁS crítica para volver a un estado conocido y fiable?",
+      "opciones": [
+        "Restaurar desde copias limpias creadas antes de la infección",
+        "Pagar el rescate",
+        "Reconectar inmediatamente todos los sistemas",
+        "Formatear y reinstalar sin usar copias"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las copias previas y verificadas permiten recuperar sistemas y datos sin conservar el malware."
+    },
+    {
+      "pregunta": "¿Qué principio usan los firewalls para tratar tráfico que no coincide con ninguna regla?",
+      "opciones": [
+        "Denegación implícita",
+        "Permiso implícito",
+        "Confianza explícita",
+        "Reenvío de tráfico"
+      ],
+      "respuesta": 0,
+      "explicacion": "El comportamiento seguro por defecto consiste en bloquear lo que no ha sido expresamente autorizado."
+    },
+    {
+      "pregunta": "¿Por qué la gestión de claves es crítica para una estrategia de cifrado?",
+      "opciones": [
+        "Si las claves se comprometen, terceros no autorizados pueden acceder a los datos cifrados",
+        "Guardar claves junto a datos vuelve obsoleto el algoritmo",
+        "Rotar claves hace el cifrado impracticable",
+        "Una vez generadas las claves no requieren más gestión"
+      ],
+      "respuesta": 0,
+      "explicacion": "La protección del cifrado depende de la confidencialidad, distribución, rotación y destrucción adecuadas de las claves."
+    },
+    {
+      "pregunta": "¿Qué función de control físico realiza una puerta cerrada con llave en una sala de servidores?",
+      "opciones": ["Preventiva", "Detectiva", "Correctiva", "Compensatoria"],
+      "respuesta": 0,
+      "explicacion": "La puerta intenta impedir el acceso no autorizado antes de que ocurra."
+    },
+    {
+      "pregunta": "¿Qué consecuencia puede tener una infracción intencionada del Código Ético de ISC2?",
+      "opciones": [
+        "Revisión por un panel de pares que puede terminar en revocación de la certificación",
+        "Revocación automática e inmediata",
+        "Formación correctiva obligatoria",
+        "Suspensión temporal automática con probation"
+      ],
+      "respuesta": 0,
+      "explicacion": "ISC2 prevé un proceso formal de revisión y la revocación es una posible consecuencia."
+    },
+    {
+      "pregunta": "¿Qué componente de PKI vincula la identidad de un servidor con su clave pública y ayuda a evitar suplantaciones MitM?",
+      "opciones": [
+        "Certificado digital",
+        "Clave de cifrado simétrica",
+        "Regla de firewall",
+        "Digest hash"
+      ],
+      "respuesta": 0,
+      "explicacion": "El certificado firmado por una CA asocia una identidad verificada con una clave pública."
+    },
+    {
+      "pregunta": "¿Qué algoritmo de cifrado exige WPA2 para proteger las transmisiones inalámbricas?",
+      "opciones": [
+        "Advanced Encryption Standard (AES)",
+        "Temporal Key Integrity Protocol (TKIP)",
+        "Rivest Cipher 4 (RC4)",
+        "Data Encryption Standard (DES)"
+      ],
+      "respuesta": 0,
+      "explicacion": "WPA2 exige AES mediante CCMP; TKIP quedó como compatibilidad heredada y es más débil."
+    },
+    {
+      "pregunta": "El cifrado protege principalmente qué elemento de la tríada CIA?",
+      "opciones": [
+        "La confidencialidad, al impedir el acceso no autorizado a datos legibles",
+        "La disponibilidad",
+        "La integridad de las ubicaciones de almacenamiento",
+        "El no repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Convierte el texto claro en ciphertext ilegible para quien no posea la clave."
+    },
+    {
+      "pregunta": "Una organización que aún no ha desplegado IPv6, ¿qué debe hacer con ese tráfico en el perímetro?",
+      "opciones": [
+        "Bloquear todo el tráfico IPv6, incluido el tunelizado dentro de IPv4",
+        "Permitirlo porque los sistemas IPv4 lo ignorarán",
+        "Activar dual stack automáticamente",
+        "Monitorizarlo solo en horario laboral"
+      ],
+      "respuesta": 0,
+      "explicacion": "Bloquear IPv6 no gestionado evita que el tráfico eluda controles diseñados únicamente para IPv4."
+    },
+    {
+      "pregunta": "La Acceptable Use Policy de una empresa entra en conflicto con una nueva regulación. ¿Qué debe hacer la organización?",
+      "opciones": [
+        "Actualizar la política para cumplir la regulación",
+        "Mantenerla hasta la próxima revisión",
+        "Dejar que los empleados elijan",
+        "Notificar el conflicto al regulador sin modificarla"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las leyes y regulaciones prevalecen sobre las políticas internas."
+    },
+    {
+      "pregunta": "¿Qué combinación usa factores de dos categorías DIFERENTES?",
+      "opciones": [
+        "Una contraseña y una huella dactilar",
+        "Una contraseña y una pregunta de seguridad",
+        "Un PIN y una passphrase",
+        "Una huella y un escaneo de retina"
+      ],
+      "respuesta": 0,
+      "explicacion": "Combina conocimiento y biometría, mientras que las otras opciones usan dos factores de la misma categoría."
+    },
+    {
+      "pregunta": "Un visitante llega a una instalación segura para una reunión programada. ¿Qué debe hacer PRIMERO el guardia?",
+      "opciones": [
+        "Verificar su identidad y confirmar que la visita está autorizada",
+        "Entregarle una acreditación permanente",
+        "Permitirle entrar y avisar después al anfitrión",
+        "Acompañarlo sin registrar la visita"
+      ],
+      "respuesta": 0,
+      "explicacion": "La identidad y la autorización deben confirmarse antes de conceder acceso."
+    },
+    {
+      "pregunta": "¿Qué característica es esencial para que una mantrap funcione correctamente?",
+      "opciones": [
+        "Solo una puerta puede estar abierta en cada momento",
+        "Ambas puertas permanecen abiertas en horario laboral",
+        "Las puertas deben ser de vidrio",
+        "Debe usar exclusivamente biometría"
+      ],
+      "respuesta": 0,
+      "explicacion": "El interbloqueo obliga a cerrar una puerta antes de abrir la otra y evita el paso simultáneo."
+    },
+    {
+      "pregunta": "Dos servidores tienen hardware y coste idénticos. ¿Qué factor puede darles distinta criticidad?",
+      "opciones": [
+        "La sensibilidad de los datos que procesan o almacenan",
+        "La ubicación física",
+        "La marca y modelo",
+        "La fecha de compra"
+      ],
+      "respuesta": 0,
+      "explicacion": "La criticidad depende del impacto empresarial y del valor de la información, no solo del hardware."
+    },
+    {
+      "pregunta": "Para que solo el destinatario lea un mensaje mediante cifrado asimétrico, ¿qué clave debe usar el remitente?",
+      "opciones": [
+        "La clave pública del destinatario",
+        "La clave privada del remitente",
+        "La clave pública del remitente",
+        "La clave privada del destinatario"
+      ],
+      "respuesta": 0,
+      "explicacion": "Solo la clave privada correspondiente del destinatario podrá descifrar lo cifrado con su clave pública."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de asignar niveles de clasificación a los datos?",
+      "opciones": [
+        "Aplicar controles de seguridad según su sensibilidad",
+        "Determinar un algoritmo de cifrado concreto",
+        "Asignar la propiedad al departamento",
+        "Cumplir inventarios de auditoría"
+      ],
+      "respuesta": 0,
+      "explicacion": "La clasificación permite ajustar acceso, manejo, cifrado, retención y destrucción al riesgo de cada dato."
+    },
+    {
+      "pregunta": "¿Qué elemento de la tríada CIA protege principalmente el cifrado?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado impide que personas no autorizadas comprendan los datos."
+    },
+    {
+      "pregunta": "¿Qué representa el sufijo /24 en 192.168.1.0/24?",
+      "opciones": [
+        "Los primeros 24 bits corresponden a la parte de red",
+        "La red contiene exactamente 24 direcciones de host",
+        "La subred puede dividirse en 24 segmentos",
+        "Es la zona de red número 24"
+      ],
+      "respuesta": 0,
+      "explicacion": "CIDR /24 deja 8 bits para hosts y equivale a la máscara 255.255.255.0."
+    },
+    {
+      "pregunta": "¿Por qué la monitorización continua es más eficaz que depender solo de evaluaciones anuales?",
+      "opciones": [
+        "Las evaluaciones anuales son una instantánea y pueden omitir cambios intermedios",
+        "Elimina toda intervención humana",
+        "Las evaluaciones anuales nunca cumplen regulaciones",
+        "Garantiza que no habrá incidentes"
+      ],
+      "respuesta": 0,
+      "explicacion": "La observación continua detecta cambios de postura y amenazas entre revisiones puntuales."
+    },
+    {
+      "pregunta": "Un analista observa tráfico por el puerto 443. ¿Qué servicio está MÁS probablemente asociado?",
+      "opciones": [
+        "HTTPS para tráfico web cifrado",
+        "FTP para transferencias",
+        "SMTP para correo",
+        "SSH para administración remota"
+      ],
+      "respuesta": 0,
+      "explicacion": "HTTPS usa el puerto TCP 443 de forma predeterminada."
+    },
+    {
+      "pregunta": "¿Qué principio describe el uso sucesivo de vallas, puertas y bolardos como barreras físicas?",
+      "opciones": [
+        "Defensa en profundidad",
+        "Mínimo privilegio",
+        "Segregación de funciones",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La defensa en profundidad superpone controles para que el fallo de uno no deje el activo sin protección."
+    },
+    {
+      "pregunta": "¿Qué afirmación describe correctamente la relación entre accountability y responsibility?",
+      "opciones": [
+        "La accountability no puede delegarse, mientras que la responsibility de las tareas sí puede asignarse",
+        "Ambas pueden delegarse libremente",
+        "La accountability corresponde al personal operativo",
+        "Ninguna puede delegarse"
+      ],
+      "respuesta": 0,
+      "explicacion": "La dirección puede delegar tareas, pero sigue siendo responsable última de los resultados."
+    },
+    {
+      "pregunta": "Una organización ofrece formación inmediata cuando un empleado cae en una simulación de phishing. ¿Cómo se llama este enfoque?",
+      "opciones": [
+        "Just-in-time training",
+        "Role-based training",
+        "Annual compliance training",
+        "Onboarding training"
+      ],
+      "respuesta": 0,
+      "explicacion": "La formación se entrega justo después del error, cuando el contexto y la necesidad de aprendizaje son inmediatos."
+    },
+    {
+      "pregunta": "Según las guías actuales, ¿qué enfoque se recomienda para la caducidad de contraseñas?",
+      "opciones": [
+        "Exigir cambios solo cuando existan indicios de compromiso",
+        "Cambios cada 30 días",
+        "Cambios cada 90 días solo para cuentas privilegiadas",
+        "No permitir nunca cambios"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los cambios deben basarse en eventos de compromiso y no en calendarios arbitrarios."
+    },
+    {
+      "pregunta": "Durante una auditoría regulatoria de formación, ¿qué documentación es MÁS crítica?",
+      "opciones": [
+        "Registros de finalización, fechas y asistentes",
+        "Material comercial del proveedor",
+        "Encuestas de satisfacción",
+        "Correos internos de anuncio"
+      ],
+      "respuesta": 0,
+      "explicacion": "El auditor necesita evidencia verificable de quién recibió la formación y cuándo."
+    },
+    {
+      "pregunta": "Una organización tolera como máximo cuatro horas de pérdida de datos. ¿Qué métrica define este requisito?",
+      "opciones": [
+        "Recovery Point Objective (RPO)",
+        "Recovery Time Objective (RTO)",
+        "Mean Time Between Failures (MTBF)",
+        "Maximum Tolerable Downtime (MTD)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El RPO fija la antigüedad máxima aceptable de los datos recuperados."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de seguridad PRINCIPAL de mantener un registro de visitantes?",
+      "opciones": [
+        "Crear una pista de auditoría de quién accedió y cuándo estuvo presente",
+        "Servir como contrato legal",
+        "Obtener datos de marketing",
+        "Eliminar la necesidad de acompañamiento"
+      ],
+      "respuesta": 0,
+      "explicacion": "El registro aporta trazabilidad de entradas, salidas, anfitriones y finalidad de la visita."
+    },
+    {
+      "pregunta": "¿Qué principio indica que el firewall debe bloquear todo tráfico no permitido expresamente?",
+      "opciones": [
+        "Deny by default",
+        "Allow by default",
+        "Least functionality",
+        "Maximum privilege"
+      ],
+      "respuesta": 0,
+      "explicacion": "Deny by default, o implicit deny, establece una postura segura por defecto."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de un servicio cloud de traffic scrubbing frente a DDoS?",
+      "opciones": [
+        "Filtrar tráfico malicioso y reenviar solo el legítimo al objetivo",
+        "Cifrar todo el tráfico",
+        "Bloquear permanentemente todas las IP atacantes",
+        "Archivar todo el tráfico para forense"
+      ],
+      "respuesta": 0,
+      "explicacion": "El servicio absorbe y analiza grandes volúmenes, separa los paquetes maliciosos y entrega tráfico limpio."
+    },
+    {
+      "pregunta": "Un informe combina información pública con una pequeña sección confidencial. ¿Cómo debe clasificarse?",
+      "opciones": [
+        "Con el nivel de los datos más sensibles que contiene",
+        "Con el nivel que corresponda a la mayoría del contenido",
+        "Con el nivel más bajo para compartirlo",
+        "Sin clasificar hasta eliminar la sección confidencial"
+      ],
+      "respuesta": 0,
+      "explicacion": "Todo el documento debe protegerse según su elemento de mayor sensibilidad."
+    },
+    {
+      "pregunta": "En monitorización, ¿qué distingue un evento de un incidente?",
+      "opciones": [
+        "Un evento es cualquier ocurrencia registrada; un incidente es un evento que viola la política de seguridad",
+        "Un evento siempre es malicioso",
+        "Un evento exige respuesta inmediata y un incidente no",
+        "Un evento es externo y un incidente interno"
+      ],
+      "respuesta": 0,
+      "explicacion": "La mayoría de eventos son actividad normal; un incidente implica violación de política o impacto de seguridad."
+    },
+    {
+      "pregunta": "¿Qué algoritmo es apropiado para proteger datos sensibles en reposo según guías federales actuales?",
+      "opciones": [
+        "AES con claves de 256 bits",
+        "DES con claves de 56 bits",
+        "MD5 con salida de 128 bits",
+        "ROT13"
+      ],
+      "respuesta": 0,
+      "explicacion": "AES-256 es un algoritmo simétrico robusto; DES está obsoleto y MD5 no es cifrado."
+    },
+    {
+      "pregunta": "Según el principio de mínimo privilegio, ¿qué acceso debe concederse a los usuarios?",
+      "opciones": [
+        "El mínimo necesario para realizar sus tareas asignadas",
+        "Permisos estándar por departamento",
+        "El mismo acceso que su supervisor",
+        "Acceso completo y restricciones posteriores"
+      ],
+      "respuesta": 0,
+      "explicacion": "Solo deben asignarse los permisos justificados por las funciones actuales del usuario."
+    },
+    {
+      "pregunta": "Una acreditación temporal indica 'Escort Required'. ¿Qué privilegios tiene el visitante?",
+      "opciones": [
+        "Debe estar acompañado por un empleado autorizado en todo momento",
+        "Tiene acceso completo con comprobaciones periódicas",
+        "Puede moverse solo por zonas comunes",
+        "Puede acompañar a otros visitantes"
+      ],
+      "respuesta": 0,
+      "explicacion": "La marca elimina el acceso independiente y exige supervisión durante toda la visita."
+    },
+    {
+      "pregunta": "¿Cuánto tiempo debe conservarse normalmente el vídeo CCTV?",
+      "opciones": [
+        "Según la política organizativa y los requisitos legales aplicables",
+        "Indefinidamente",
+        "Solo durante cada turno",
+        "Exactamente 90 días en todos los casos"
+      ],
+      "respuesta": 0,
+      "explicacion": "No existe un periodo universal; debe definirse por riesgo, normativa, privacidad y necesidades de investigación."
+    },
+    {
+      "pregunta": "¿Qué métrica define el retraso máximo aceptable entre la interrupción y la restauración del servicio?",
+      "opciones": [
+        "Recovery Time Objective (RTO)",
+        "Recovery Point Objective (RPO)",
+        "Mean Time Between Failures (MTBF)",
+        "Service Level Agreement (SLA)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El RTO fija el tiempo máximo permitido para recuperar el servicio."
+    },
+    {
+      "pregunta": "¿Cómo ayudan las VLAN a proteger frente al packet sniffing interno?",
+      "opciones": [
+        "Crean dominios de broadcast separados que restringen la visibilidad del tráfico",
+        "Cifran automáticamente todo el tráfico",
+        "Impiden toda captura de paquetes",
+        "Bloquean el modo promiscuo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La segmentación limita el tráfico observable por un dispositivo al de su propio dominio o VLAN."
+    },
+    {
+      "pregunta": "¿Qué tipo de cifrado usa una única clave para cifrar y descifrar y es eficiente con grandes volúmenes de datos?",
+      "opciones": [
+        "Cifrado simétrico",
+        "Cifrado asimétrico",
+        "Hashing",
+        "Firmas digitales"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los algoritmos simétricos, como AES, tienen menor coste computacional para cifrado masivo."
+    },
+    {
+      "pregunta": "Durante la respuesta a incidentes, ¿cuál es el propósito PRINCIPAL de la contención?",
+      "opciones": [
+        "Evitar más daños y limitar la propagación a otros sistemas",
+        "Identificar todos los sistemas y documentar el vector",
+        "Eliminar todo el código malicioso",
+        "Restaurar los sistemas con copias"
+      ],
+      "respuesta": 0,
+      "explicacion": "La contención detiene o reduce la expansión del incidente antes de la erradicación y recuperación."
+    },
+    {
+      "pregunta": "¿Qué determina principalmente la criticidad de un activo en una evaluación de riesgos?",
+      "opciones": [
+        "El impacto para la organización si se pierde o se compromete",
+        "El precio de compra",
+        "El número de usuarios con acceso",
+        "La ubicación física"
+      ],
+      "respuesta": 0,
+      "explicacion": "La criticidad refleja la dependencia del negocio y las consecuencias de pérdida, alteración o indisponibilidad."
+    },
+    {
+      "pregunta": "Según el Código Ético de ISC2, ¿qué obligación existe al observar que otro miembro infringe el Código?",
+      "opciones": [
+        "Seguir el procedimiento de denuncia ética para informar de la infracción",
+        "Informar solo si se sufre daño directo",
+        "Resolverlo en privado",
+        "No existe obligación salvo relación jerárquica"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los miembros deben usar el procedimiento formal; no informar puede vulnerar el Canon IV."
+    },
+    {
+      "pregunta": "¿Cuál es la ÚNICA defensa real frente al network packet sniffing?",
+      "opciones": [
+        "Cifrar el tráfico de red",
+        "Usar switches gestionables en vez de hubs",
+        "Aplicar políticas de contraseña fuertes",
+        "Desplegar IDS"
+      ],
+      "respuesta": 0,
+      "explicacion": "Aunque un atacante capture paquetes cifrados, no podrá leer su contenido sin las claves."
+    },
+    {
+      "pregunta": "¿Cuál es el resultado MÁS importante de una revisión de lessons learned tras un incidente?",
+      "opciones": [
+        "Actualizar controles, políticas y procedimientos de respuesta según los hallazgos",
+        "Documentar cada acción realizada",
+        "Evaluar individualmente al equipo",
+        "Calcular el coste total"
+      ],
+      "respuesta": 0,
+      "explicacion": "La revisión debe producir mejoras concretas que reduzcan recurrencia y aumenten la capacidad de respuesta."
+    },
+    {
+      "pregunta": "Un firewall bloquea tráfico no autorizado antes de que entre. ¿Qué tipo de control es?",
+      "opciones": [
+        "Control preventivo",
+        "Control detectivo",
+        "Control correctivo",
+        "Control compensatorio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Su función principal es impedir conexiones no permitidas antes de que causen un incidente."
+    },
+    {
+      "pregunta": "¿Qué puerto debe bloquearse para impedir conexiones Telnet sin cifrar?",
+      "opciones": ["Puerto 23", "Puerto 22", "Puerto 21", "Puerto 25"],
+      "respuesta": 0,
+      "explicacion": "Telnet usa TCP 23 y transmite credenciales en texto claro."
+    },
+    {
+      "pregunta": "Dentro de los controles de acceso físico, ¿en qué función se encuadran MEJOR los guardias de seguridad?",
+      "opciones": [
+        "Monitorización",
+        "Diseño ambiental",
+        "Entrada por puerta",
+        "Sistemas de tarjetas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los guardias observan, detectan y responden a eventos de acceso físico."
+    },
+    {
+      "pregunta": "¿Qué sitio de recuperación ofrece el menor tiempo de recuperación al mantener una instalación plenamente operativa?",
+      "opciones": [
+        "Sitio caliente",
+        "Sitio templado",
+        "Sitio frío",
+        "Sitio móvil"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un hot site dispone de hardware, software y datos preparados para una conmutación rápida."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de una Acceptable Use Policy (AUP)?",
+      "opciones": [
+        "Definir reglas sobre el uso adecuado de los recursos TI de la organización",
+        "Especificar configuraciones técnicas de dispositivos",
+        "Documentar la recuperación de incidentes",
+        "Establecer niveles de clasificación de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La AUP fija conductas permitidas y prohibidas y las consecuencias de su incumplimiento."
+    },
+    {
+      "pregunta": "Según NIST, ¿durante cuánto tiempo puede un Continuity of Operations Plan (COOP) sostener funciones esenciales antes de volver a la normalidad?",
+      "opciones": ["30 días", "7 días", "90 días", "24 horas"],
+      "respuesta": 0,
+      "explicacion": "NIST define el COOP para sostener funciones esenciales hasta 30 días."
+    },
+    {
+      "pregunta": "Un ransomware cifra todos los archivos y los hace inaccesibles. ¿Qué elemento de la tríada CIA se ve afectado principalmente?",
+      "opciones": [
+        "Disponibilidad",
+        "Confidencialidad",
+        "Integridad",
+        "Autenticación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El efecto descrito impide que usuarios autorizados accedan a la información."
+    },
+    {
+      "pregunta": "¿Qué requisito debe INCLUIR una política de contraseñas alineada con buenas prácticas actuales?",
+      "opciones": [
+        "Comprobar las contraseñas nuevas frente a una blocklist de contraseñas comprometidas",
+        "Exigir cambios cada 30 días",
+        "Obligar a usar mayúsculas, minúsculas, números y símbolos",
+        "Prohibir espacios y caracteres especiales"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las blocklists evitan credenciales conocidas por atacantes; NIST ya no recomienda reglas arbitrarias de composición o caducidad."
+    },
+    {
+      "pregunta": "Al validar un certificado TLS, ¿dónde termina la cadena de confianza de PKI?",
+      "opciones": [
+        "En una autoridad de certificación raíz de confianza",
+        "En la clave privada del servidor",
+        "En el firewall local del cliente",
+        "En el resolver DNS"
+      ],
+      "respuesta": 0,
+      "explicacion": "La root CA del almacén de confianza actúa como trust anchor de la cadena."
+    },
+    {
+      "pregunta": "En una auditoría, faltan horas de salida en el registro de visitantes. ¿Qué preocupación indica PRINCIPALMENTE?",
+      "opciones": [
+        "No puede confirmarse que todos los visitantes hayan abandonado la instalación",
+        "Falta recopilar más identificación personal",
+        "No existe control lógico de acceso",
+        "Deben sustituirse los guardias por un sistema automático"
+      ],
+      "respuesta": 0,
+      "explicacion": "Sin una salida registrada queda una brecha de responsabilidad sobre quién permanece dentro."
+    },
+    {
+      "pregunta": "¿Por qué es una buena práctica probar los parches antes de producción?",
+      "opciones": [
+        "Para verificar que no causan interrupciones no previstas",
+        "Para validar la licencia digital",
+        "Para confirmar que los usuarios fueron formados",
+        "Para decidir si se necesita más hardware"
+      ],
+      "respuesta": 0,
+      "explicacion": "El entorno de prueba permite descubrir incompatibilidades y efectos adversos antes del despliegue real."
+    },
+    {
+      "pregunta": "Según NIST SP 800-88, ¿qué método de sanitización deja el soporte incapaz de almacenar datos después?",
+      "opciones": ["Destroy", "Clear", "Purge", "Disposal"],
+      "respuesta": 0,
+      "explicacion": "Destroy usa destrucción física y deja el medio inutilizable para almacenamiento posterior."
+    },
+    {
+      "pregunta": "¿Cuál es la MEJOR práctica para mantener mínimo privilegio en un entorno RBAC?",
+      "opciones": [
+        "Realizar revisiones periódicas de acceso para verificar que los permisos siguen siendo adecuados",
+        "Conceder permisos máximos y retirarlos tras problemas",
+        "Asignar todos los roles que puedan necesitarse en el futuro",
+        "Permitir que los usuarios elijan sus roles"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las revisiones detectan privilege creep y alinean roles y permisos con las funciones actuales."
+    },
+    {
+      "pregunta": "¿Qué tipo de copia requiere solo la última copia completa y la última copia de su mismo tipo para restaurar todo?",
+      "opciones": [
+        "Copia diferencial",
+        "Copia incremental",
+        "Copia completa",
+        "Copy backup"
+      ],
+      "respuesta": 0,
+      "explicacion": "La diferencial contiene todos los cambios desde la última copia completa."
+    },
+    {
+      "pregunta": "¿Qué práctica debe EVITARSE en recuperación de contraseñas según buenas prácticas actuales?",
+      "opciones": [
+        "Usar autenticación basada en conocimiento",
+        "Comprobar contraseñas frente a listas comprometidas",
+        "Almacenar contraseñas con hash y salt",
+        "Permitir pegar contraseñas desde un gestor"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las preguntas de seguridad suelen poder adivinarse o encontrarse mediante redes sociales e ingeniería social."
+    },
+    {
+      "pregunta": "Si el tráfico no coincide con ninguna regla de una ACL del firewall y se bloquea, ¿qué concepto representa?",
+      "opciones": [
+        "Denegación implícita",
+        "Permiso explícito",
+        "Acceso basado en roles",
+        "Control de acceso obligatorio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La implicit deny bloquea por defecto cualquier solicitud que no tenga una autorización expresa."
+    },
+    {
+      "pregunta": "¿Cuáles son los niveles de clasificación del Gobierno de EE. UU. de menor a mayor sensibilidad?",
+      "opciones": [
+        "Confidential, Secret, Top Secret",
+        "Public, Sensitive, Classified",
+        "Restricted, Confidential, Secret",
+        "Internal, Confidential, Restricted"
+      ],
+      "respuesta": 0,
+      "explicacion": "El esquema oficial de seguridad nacional usa Confidential, Secret y Top Secret."
+    },
+    {
+      "pregunta": "Un miembro de ISC2 observa a otro escaneando sistemas fuera del alcance autorizado. ¿Qué exige el Código Ético?",
+      "opciones": [
+        "Seguir el procedimiento de denuncia ética de ISC2",
+        "Enfrentarse personalmente al colega",
+        "Notificar directamente a la organización objetivo",
+        "Documentarlo y esperar a que se repita"
+      ],
+      "respuesta": 0,
+      "explicacion": "La conducta fuera de alcance debe reportarse mediante el proceso formal de ética."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de configurar un umbral de bloqueo de cuenta?",
+      "opciones": [
+        "Limitar ataques de fuerza bruta bloqueando cuentas tras intentos fallidos",
+        "Eliminar automáticamente cuentas inactivas",
+        "Forzar cambios de contraseña al volver",
+        "Medir tendencias de autenticación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El bloqueo reduce la cantidad de intentos que un atacante puede realizar contra una cuenta."
+    },
+    {
+      "pregunta": "¿Qué ventaja tiene un NIDS frente a un HIDS?",
+      "opciones": [
+        "Un solo NIDS puede monitorizar tráfico que afecta a múltiples hosts del segmento",
+        "Puede identificar exactamente las cuentas implicadas",
+        "Puede vigilar directamente archivos y procesos",
+        "Puede analizar contenido cifrado sin configuración adicional"
+      ],
+      "respuesta": 0,
+      "explicacion": "Al situarse en un segmento, un NIDS observa comunicaciones de varios equipos con menos sensores."
+    },
+    {
+      "pregunta": "¿Qué característica operativa ESENCIAL hace eficaz una mantrap?",
+      "opciones": [
+        "Las dos puertas no pueden abrirse simultáneamente",
+        "Debe ser grande para varias personas",
+        "Debe usar vidrio antibalas",
+        "Debe tener guardias armados dentro"
+      ],
+      "respuesta": 0,
+      "explicacion": "El interbloqueo de puertas evita el paso simultáneo y fuerza la autenticación secuencial."
+    },
+    {
+      "pregunta": "¿Qué significa /24 en la dirección 192.168.1.0/24?",
+      "opciones": [
+        "Los primeros 24 bits identifican la red y quedan 8 bits para hosts",
+        "La red contiene 24 subredes de 256 hosts",
+        "La dirección se divide en 24 segmentos",
+        "Admite 24 conexiones simultáneas"
+      ],
+      "respuesta": 0,
+      "explicacion": "El prefijo CIDR indica la longitud de la parte de red."
+    },
+    {
+      "pregunta": "¿Qué recomienda CISA para limitar la propagación de ataques dentro de una organización?",
+      "opciones": [
+        "Segmentar y separar las redes para contener incidentes maliciosos",
+        "Conectar todas las LAN directamente a internet",
+        "Usar una red plana",
+        "Mantener configuraciones predeterminadas del fabricante"
+      ],
+      "respuesta": 0,
+      "explicacion": "La segmentación reduce el movimiento lateral y limita el alcance de una intrusión."
+    },
+    {
+      "pregunta": "En Windows, ¿cuál es la función principal de una System Access Control List (SACL)?",
+      "opciones": [
+        "Permitir registrar intentos de acceso a un objeto protegido",
+        "Definir quién puede o no acceder al objeto",
+        "Cifrar archivos sensibles",
+        "Autenticar usuarios"
+      ],
+      "respuesta": 0,
+      "explicacion": "La SACL especifica qué accesos deben generar eventos de auditoría; la DACL controla permisos."
+    },
+    {
+      "pregunta": "¿Qué regulación reconoce el derecho de los interesados a acceder, corregir y solicitar la supresión de sus datos personales?",
+      "opciones": [
+        "General Data Protection Regulation (GDPR)",
+        "Payment Card Industry Data Security Standard (PCI DSS)",
+        "Sarbanes-Oxley Act (SOX)",
+        "Federal Information Security Management Act (FISMA)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El GDPR establece derechos de acceso, rectificación, supresión, limitación y portabilidad."
+    },
+    {
+      "pregunta": "Un atacante activa el modo promiscuo en una tarjeta de red compartida. ¿Cuál es la preocupación PRINCIPAL?",
+      "opciones": [
+        "Puede capturar pasivamente todo el tráfico que atraviesa el segmento",
+        "Puede modificar tablas de enrutamiento",
+        "Puede lanzar DDoS automáticamente",
+        "Puede autenticarse de inmediato con tokens capturados"
+      ],
+      "respuesta": 0,
+      "explicacion": "El modo promiscuo permite recibir paquetes no dirigidos al host y facilita el sniffing."
+    },
+    {
+      "pregunta": "¿Qué método de evaluación usa categorías Alto, Medio y Bajo para probabilidad e impacto?",
+      "opciones": [
+        "Análisis cualitativo de riesgos",
+        "Análisis cuantitativo de riesgos",
+        "Análisis de transferencia de riesgo",
+        "Análisis coste-beneficio"
+      ],
+      "respuesta": 0,
+      "explicacion": "El análisis cualitativo utiliza escalas descriptivas y juicio experto."
+    },
+    {
+      "pregunta": "¿Qué recomendación mejora MEJOR la seguridad VPN para trabajadores remotos?",
+      "opciones": [
+        "Implementar MFA en todas las conexiones VPN",
+        "Permitir acceso remoto a la interfaz de administración",
+        "Usar protocolos propietarios",
+        "Habilitar SSL/TLS 1.0"
+      ],
+      "respuesta": 0,
+      "explicacion": "MFA reduce el riesgo de acceso no autorizado incluso cuando se compromete una contraseña."
+    },
+    {
+      "pregunta": "¿Qué método se recomienda para probar un plan de respuesta a incidentes y verificar roles y procedimientos?",
+      "opciones": [
+        "Realizar ejercicios tabletop",
+        "Instalar más antivirus",
+        "Actualizar reglas de firewall mensualmente",
+        "Revisar logs a diario"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un tabletop permite ensayar decisiones, coordinación y responsabilidades mediante escenarios simulados."
+    },
+    {
+      "pregunta": "Una persona cree que un contratista certificado por ISC2 prestó un servicio incompetente y vulneró el Canon III. ¿Quién tiene legitimación para presentar la queja?",
+      "opciones": [
+        "El empleador o cliente que mantiene una relación principal con el contratista",
+        "Cualquier miembro del público",
+        "Solo otros profesionales certificados",
+        "El Comité de Ética de ISC2 por iniciativa propia"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las quejas por Canon III corresponden a quienes tienen relación de principal, como empleador o cliente."
+    },
+    {
+      "pregunta": "¿Qué dispositivo conecta dos redes IP separadas y permite comunicación entre subredes?",
+      "opciones": ["Router", "Switch", "Hub", "Repeater"],
+      "respuesta": 0,
+      "explicacion": "Un router opera en capa 3 y reenvía paquetes entre redes según direcciones IP y tablas de rutas."
+    },
+    {
+      "pregunta": "¿Cómo reducen las VLAN el riesgo de packet sniffing?",
+      "opciones": [
+        "Crean dominios de broadcast separados que limitan la visibilidad",
+        "Cifran automáticamente el tráfico",
+        "Impiden el modo promiscuo",
+        "Bloquean las herramientas de análisis"
+      ],
+      "respuesta": 0,
+      "explicacion": "El atacante solo ve normalmente el tráfico del segmento o VLAN al que tiene acceso."
+    },
+    {
+      "pregunta": "¿Cómo debe relacionarse la fortaleza de los controles con la clasificación de los datos?",
+      "opciones": [
+        "Debe aumentar a medida que aumenta la sensibilidad",
+        "Todos los datos deben tener siempre el máximo nivel",
+        "Solo los datos de máxima sensibilidad requieren controles",
+        "Los controles solo cambian en revisiones anuales"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los controles deben ser proporcionales al impacto y sensibilidad de la información."
+    },
+    {
+      "pregunta": "Una organización almacena contraseñas con una función matemática unidireccional y un valor aleatorio único. ¿Qué práctica describe?",
+      "opciones": [
+        "Salting y hashing de contraseñas",
+        "Cifrado simétrico de contraseñas",
+        "Almacenamiento en texto claro",
+        "Reglas de complejidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "El hash es unidireccional y el salt evita que contraseñas iguales produzcan el mismo resultado."
+    },
+    {
+      "pregunta": "¿Qué control administrativo ayuda MEJOR a que los empleados reconozcan y reporten phishing?",
+      "opciones": [
+        "Simulaciones periódicas de phishing con formación posterior",
+        "Filtro de correo",
+        "MFA en el correo",
+        "Protección endpoint"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las simulaciones y el refuerzo educativo modifican directamente el comportamiento del usuario."
+    },
+    {
+      "pregunta": "¿Qué dispositivo es el MÁS adecuado para controlar y filtrar tráfico entre la red interna e internet?",
+      "opciones": ["Firewall", "Hub", "Switch", "Repeater"],
+      "respuesta": 0,
+      "explicacion": "El firewall aplica reglas de seguridad en la frontera entre redes de distinta confianza."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor descripción de una Access Control List (ACL)?",
+      "opciones": [
+        "Una lista que especifica qué entidades tienen permitido o denegado el acceso a un recurso",
+        "Una herramienta de monitorización que genera alertas",
+        "Un estándar de cifrado para unidades compartidas",
+        "Una base de datos de credenciales para autenticación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una ACL implementa autorización enumerando identidades y acciones permitidas o denegadas sobre un recurso."
+    }
+  ]
+}
