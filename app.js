@@ -885,7 +885,7 @@ function renderCurrentQuestion() {
   const correctIndex = answerIndex(question);
   const answered = currentAnswer !== null;
   const isCorrect = answered && currentAnswer === correctIndex;
-  const progressPercent = Math.max(6, Math.round(((position + (answered ? 1 : 0)) / order.length) * 100));
+  const progressPercent = Math.round(((position + (answered ? 1 : 0)) / order.length) * 100);
   const score = scoreSnapshot(currentTestRun);
   const batteryLabel = battery.procedencia || battery.titulo;
 
@@ -915,7 +915,6 @@ function renderCurrentQuestion() {
   mount.innerHTML = `
     <section class="test-stage">
       <div class="test-statusbar">
-        <span class="test-badge">${escapeHtml(batteryLabel)}</span>
         <span class="test-badge">Pregunta ${position + 1}/${order.length}</span>
         ${answered ? `<span class="test-badge ${isCorrect ? "success" : "error"}">${isCorrect ? "Correcta" : "Incorrecta"}</span>` : `<span class="test-badge">Pendiente</span>`}
       </div>
