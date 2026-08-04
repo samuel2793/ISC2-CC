@@ -1,0 +1,1072 @@
+{
+  "titulo": "Fundamentos de ciberseguridad e ISC2 #5",
+  "procedencia": "Banco de preguntas proporcionado por el usuario, basado en contenidos y guías de estudio de ISC2",
+  "descripcion": "Batería de 100 preguntas sobre principios de seguridad, gestión de riesgos, continuidad de negocio, redes, control de acceso, respuesta a incidentes, seguridad de datos y operaciones.",
+  "preguntas": [
+    {
+      "pregunta": "Una copia de seguridad que captura los cambios realizados desde la última copia de seguridad completa es un ejemplo de:",
+      "opciones": [
+        "Una copia de seguridad completa",
+        "Una instantánea de copia de seguridad",
+        "Una copia de seguridad incremental",
+        "Una copia de seguridad diferencial"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una copia diferencial incluye todos los cambios realizados desde la última copia completa."
+    },
+    {
+      "pregunta": "¿Cuál es la principal diferencia entre la monitorización de ingreso (ingress) y la monitorización de egreso (egress)?",
+      "opciones": [
+        "La monitorización ingress se centra en el tráfico entrante, mientras que la monitorización egress se centra en el tráfico saliente",
+        "La monitorización ingress se centra en amenazas externas, mientras que la monitorización egress se centra en amenazas internas",
+        "La monitorización ingress se centra en empleados que se incorporan, mientras que la monitorización egress se centra en empleados que abandonan la organización",
+        "La monitorización ingress se centra en información enviada entre equipos internos, mientras que la monitorización egress se centra en información enviada a contratistas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Ingress analiza el tráfico que entra en la red y egress el tráfico que sale de ella."
+    },
+    {
+      "pregunta": "Una función hash es:",
+      "opciones": [
+        "Un algoritmo criptográfico utilizado para cifrar",
+        "Un identificador único asignado a una red informática",
+        "Una función matemática que genera una cadena de caracteres de tamaño fijo",
+        "Un método para comprimir datos y reducir los requisitos de almacenamiento"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una función hash transforma una entrada de longitud variable en un valor de salida normalmente fijo."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO es un ejemplo de control técnico?",
+      "opciones": [
+        "Lista de control de acceso de un router",
+        "Regla de firewall",
+        "Cifrado",
+        "Clasificación de datos"
+      ],
+      "respuesta": 3,
+      "explicacion": "La clasificación de datos es un control administrativo o de gestión, no un control técnico."
+    },
+    {
+      "pregunta": "¿Cuál es el término para conservar y mantener información durante el tiempo que sea necesaria?",
+      "opciones": [
+        "Política de almacenamiento de datos",
+        "Almacenamiento de datos",
+        "Mantenimiento de activos",
+        "Retención de registros"
+      ],
+      "respuesta": 3,
+      "explicacion": "La retención de registros establece cuánto tiempo debe mantenerse la información."
+    },
+    {
+      "pregunta": "¿Qué beneficios de seguridad proporcionan las firmas digitales?",
+      "opciones": [
+        "Confidencialidad de los datos y cifrado",
+        "Integridad de los datos y no repudio",
+        "Disponibilidad de los datos y redundancia",
+        "Anonimización y ofuscación de los datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las firmas digitales permiten detectar modificaciones y vincular la firma con el firmante, aportando integridad y no repudio."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un objetivo PRINCIPAL del uso de firmas digitales?",
+      "opciones": [
+        "Garantizar la confidencialidad de los datos en tránsito",
+        "Verificar la identidad de un usuario que accede a un sistema",
+        "Proteger los datos frente a modificaciones no autorizadas",
+        "Proporcionar un método seguro de almacenamiento de contraseñas"
+      ],
+      "respuesta": 2,
+      "explicacion": "La firma digital permite verificar que los datos no han sido alterados después de firmarse."
+    },
+    {
+      "pregunta": "¿Qué atributo criptográfico se demuestra cuando Alice prueba que el mensaje de Bob procedía indudablemente de él?",
+      "opciones": [
+        "Autenticación",
+        "Confidencialidad",
+        "No repudio",
+        "Integridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El no repudio impide que el emisor niegue posteriormente haber enviado o firmado el mensaje."
+    },
+    {
+      "pregunta": "¿En qué técnica criptográfica se basan PRINCIPALMENTE las firmas digitales?",
+      "opciones": [
+        "Criptografía de clave simétrica",
+        "Criptografía de clave asimétrica",
+        "Funciones hash",
+        "Cifradores de flujo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las firmas digitales usan una clave privada para firmar y la clave pública correspondiente para verificar."
+    },
+    {
+      "pregunta": "¿Cuál es la principal diferencia entre el cifrado simétrico y el asimétrico?",
+      "opciones": [
+        "El cifrado simétrico utiliza la misma clave para cifrar y descifrar, mientras que el asimétrico utiliza claves diferentes",
+        "El cifrado simétrico es más lento que el asimétrico",
+        "El cifrado simétrico suele ser más seguro que el asimétrico",
+        "El cifrado asimétrico utiliza la misma clave para cifrar y descifrar, mientras que el simétrico utiliza las mismas claves para ambas operaciones"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado simétrico comparte una única clave; el asimétrico usa un par de claves pública y privada."
+    },
+    {
+      "pregunta": "¿Cuál es la segunda fase del ciclo de vida de gestión de los datos?",
+      "opciones": [
+        "Fase de creación",
+        "Fase de almacenamiento",
+        "Fase de compartición",
+        "Fase de destrucción"
+      ],
+      "respuesta": 1,
+      "explicacion": "Tras la creación, los datos pasan a la fase de almacenamiento seguro."
+    },
+    {
+      "pregunta": "¿Cómo se denomina el derecho del GDPR que permite a una persona solicitar la supresión de sus datos personales?",
+      "opciones": [
+        "Derecho de acceso",
+        "Privacidad desde el diseño",
+        "Derecho al olvido",
+        "Derecho a la portabilidad de los datos"
+      ],
+      "respuesta": 2,
+      "explicacion": "El derecho al olvido permite solicitar la eliminación de datos personales cuando se cumplen los requisitos legales."
+    },
+    {
+      "pregunta": "¿Qué atributo NO está asociado a un algoritmo hash?",
+      "opciones": [
+        "Requiere una clave criptográfica",
+        "Es irreversible",
+        "Es difícil encontrar dos mensajes con el mismo valor hash",
+        "Acepta entradas de longitud variable"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las funciones hash criptográficas no requieren una clave para operar."
+    },
+    {
+      "pregunta": "Alice y Bob quieren intercambiar mensajes de forma segura. Alice recibe un mensaje cifrado de Bob. ¿Qué clave utiliza Alice para descifrarlo?",
+      "opciones": [
+        "La clave pública de Alice",
+        "La clave privada de Alice",
+        "La clave pública de Bob",
+        "La clave privada de Bob"
+      ],
+      "respuesta": 1,
+      "explicacion": "En cifrado asimétrico para confidencialidad, Bob cifra con la clave pública de Alice y ella descifra con su clave privada."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es el método MÁS eficaz para destruir los datos de una cinta o disco magnético?",
+      "opciones": [
+        "Formateo del disco",
+        "Cifrado del disco",
+        "Desmagnetización (degaussing)",
+        "Sobrescritura con ceros"
+      ],
+      "respuesta": 2,
+      "explicacion": "La desmagnetización altera el soporte magnético y hace que los datos resulten irrecuperables."
+    },
+    {
+      "pregunta": "Para proteger información sensible, ¿cuándo se requiere sanitización o destrucción?",
+      "opciones": [
+        "Cuando se van a retirar y sustituir elementos del sistema",
+        "Cuando se añaden nuevos datos al sistema",
+        "Cuando se actualiza software del sistema",
+        "Cuando se añaden elementos al sistema"
+      ],
+      "respuesta": 0,
+      "explicacion": "Antes de retirar o reemplazar soportes o equipos, los datos sensibles deben eliminarse de forma segura."
+    },
+    {
+      "pregunta": "¿Por qué clasifican las organizaciones su información?",
+      "opciones": [
+        "Para aumentar el acceso a la información",
+        "Para ayudar a los empleados a buscar información",
+        "Para evitar ataques de ransomware",
+        "Para restringir el acceso a la información"
+      ],
+      "respuesta": 3,
+      "explicacion": "La clasificación permite aplicar controles de acceso acordes con la sensibilidad de los datos."
+    },
+    {
+      "pregunta": "¿Cuántos niveles de clasificación suelen considerarse difíciles de gestionar para una organización?",
+      "opciones": ["Dos", "Dos o tres", "Menos de cuatro", "Más de cuatro"],
+      "respuesta": 3,
+      "explicacion": "Más de cuatro niveles suelen aumentar excesivamente la complejidad operativa y de control."
+    },
+    {
+      "pregunta": "¿Qué significa una etiqueta de datos de «baja sensibilidad»?",
+      "opciones": [
+        "Que una filtración podría causar una pérdida significativa de vidas",
+        "Que una filtración podría causar una pérdida temporal de ventaja competitiva",
+        "Que una filtración podría causar una interrupción menor",
+        "Que una filtración no causaría ningún daño"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los datos de baja sensibilidad pueden provocar molestias o impactos menores si se comprometen."
+    },
+    {
+      "pregunta": "¿Qué significa la etiqueta «datos públicos sin restricciones»?",
+      "opciones": [
+        "Que una filtración podría causar una pérdida significativa de vidas",
+        "Que una filtración podría causar una pérdida temporal de ventaja competitiva",
+        "Que una filtración podría causar una interrupción menor",
+        "Que una filtración no causaría ningún daño"
+      ],
+      "respuesta": 3,
+      "explicacion": "Son datos libremente accesibles cuya exposición no produce un perjuicio."
+    },
+    {
+      "pregunta": "¿Cuáles son los seis componentes del ciclo de vida de los datos?",
+      "opciones": [
+        "Crear, almacenar, usar, compartir, archivar y destruir",
+        "Crear, guardar, usar, compartir, archivar y destruir",
+        "Crear, almacenar, usar, compartir, archivar y eliminar",
+        "Crear, almacenar, utilizar, compartir, archivar y destruir"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las fases reconocidas son creación, almacenamiento, uso, compartición, archivo y destrucción."
+    },
+    {
+      "pregunta": "¿Qué método consiste en escribir múltiples patrones sobre todo el medio de almacenamiento?",
+      "opciones": ["Eliminar", "Purgar", "Destruir", "Sobrescribir"],
+      "respuesta": 3,
+      "explicacion": "La sobrescritura reemplaza los datos existentes con varios patrones para dificultar su recuperación."
+    },
+    {
+      "pregunta": "¿Cuál es un error común en la retención de registros?",
+      "opciones": [
+        "Aplicar el periodo de retención más corto a toda la información",
+        "Aplicar el periodo de retención más largo a todos los tipos de información",
+        "No conservar ningún registro",
+        "Conservar solo registros digitales y desechar las copias físicas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Aplicar el periodo máximo a todo provoca sobre-retención, costes innecesarios y mayor exposición legal."
+    },
+    {
+      "pregunta": "La remanencia de datos es:",
+      "opciones": [
+        "Datos que permanecen en un soporte después de eliminarlos",
+        "Datos eliminados permanentemente",
+        "Datos trasladados a otro dispositivo de almacenamiento",
+        "Datos cifrados"
+      ],
+      "respuesta": 0,
+      "explicacion": "La remanencia es la información residual que puede seguir recuperándose tras una eliminación lógica."
+    },
+    {
+      "pregunta": "¿Qué método impide recuperar la información incluso en un entorno de laboratorio?",
+      "opciones": [
+        "Limpieza (clearing)",
+        "Purga (purging)",
+        "Borrado (wiping)",
+        "Sobrescritura"
+      ],
+      "respuesta": 1,
+      "explicacion": "La purga elimina los datos de modo que no puedan reconstruirse mediante técnicas conocidas, incluidas las de laboratorio."
+    },
+    {
+      "pregunta": "¿Por qué es esencial que las organizaciones revisen periódicamente los registros retenidos?",
+      "opciones": [
+        "Para conservar solo información pertinente",
+        "Para liberar espacio de almacenamiento",
+        "Para cumplir regulaciones cambiantes",
+        "Para detectar posibles riesgos de seguridad en los datos almacenados"
+      ],
+      "respuesta": 2,
+      "explicacion": "La revisión permite adaptar los periodos de retención a cambios legales y regulatorios."
+    },
+    {
+      "pregunta": "Una institución europea quiere aplicar protocolos distintos según el tipo de información almacenada. ¿Qué debe hacer?",
+      "opciones": [
+        "Clasificar los registros",
+        "Anonimizar los datos",
+        "Asignar un custodio de datos",
+        "Realizar una evaluación de vulnerabilidades"
+      ],
+      "respuesta": 0,
+      "explicacion": "La clasificación agrupa los datos por sensibilidad y permite aplicar controles de tratamiento específicos."
+    },
+    {
+      "pregunta": "¿Cuál es el primer paso para clasificar los datos almacenados en un sistema de información?",
+      "opciones": ["Etiquetar", "Almacenar", "Recopilar", "Compartir"],
+      "respuesta": 2,
+      "explicacion": "Primero se identifican y recopilan los datos que posteriormente se evaluarán y etiquetarán."
+    },
+    {
+      "pregunta": "¿Qué significa una etiqueta de datos «altamente restringidos»?",
+      "opciones": [
+        "Que una filtración podría causar una pérdida considerable de vidas o daños materiales",
+        "Que una filtración podría causar una pérdida temporal de ventaja competitiva",
+        "Que una filtración podría causar impactos menores",
+        "Que una filtración podría causar interrupciones menores"
+      ],
+      "respuesta": 0,
+      "explicacion": "La categoría altamente restringida se reserva para información cuyo compromiso tendría consecuencias graves."
+    },
+    {
+      "pregunta": "Una copia de seguridad que captura los cambios realizados desde la última copia completa es un ejemplo de:",
+      "opciones": [
+        "Una copia de seguridad completa",
+        "Una instantánea de copia de seguridad",
+        "Una copia de seguridad incremental",
+        "Una copia de seguridad diferencial"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una copia diferencial contiene todos los cambios acumulados desde la última copia completa."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de la desmagnetización (degaussing)?",
+      "opciones": [
+        "Borrar los datos de un disco",
+        "Prevenir ataques de canal lateral magnético",
+        "Reducir datos ruidosos en un disco",
+        "Conservar los datos de un disco"
+      ],
+      "respuesta": 0,
+      "explicacion": "La desmagnetización busca eliminar la información almacenada en medios magnéticos."
+    },
+    {
+      "pregunta": "¿Cuál de estos es un error COMÚN al implantar políticas de retención de registros?",
+      "opciones": [
+        "Aplicar los periodos de retención más largos a la información",
+        "Aplicar periodos de retención más cortos a la información",
+        "No categorizar el tipo de información que se retendrá",
+        "No etiquetar el tipo de información que se retendrá"
+      ],
+      "respuesta": 0,
+      "explicacion": "La sobre-retención aumenta costes, complejidad y exposición ante brechas o litigios."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL del cifrado?",
+      "opciones": [
+        "Proteger los datos frente al acceso no autorizado",
+        "Almacenar datos de forma segura",
+        "Procesar datos con eficiencia",
+        "Analizar datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado transforma los datos para que solo puedan leerlos quienes posean la clave adecuada."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el objetivo PRINCIPAL de una política de retención de datos?",
+      "opciones": [
+        "Conservar los datos indefinidamente",
+        "Especificar cuánto tiempo deben conservarse la información y los activos",
+        "Garantizar que los datos se conserven al menos cinco años",
+        "Delimitar áreas fuera del alcance de la gestión temporal de datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "La política define periodos de conservación según requisitos legales, regulatorios y de negocio."
+    },
+    {
+      "pregunta": "El objetivo PRINCIPAL de una línea base de seguridad es establecer:",
+      "opciones": [
+        "Un nivel mínimo, conocido y aceptable de requisitos de seguridad",
+        "Requisitos de seguridad y configuración",
+        "Un nivel máximo, conocido y aceptable de requisitos de seguridad",
+        "Un nivel mínimo, conocido y bueno de requisitos de seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una línea base fija el nivel mínimo de seguridad aceptable que debe cumplir un sistema."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de una reversión (rollback) en el proceso de gestión de cambios?",
+      "opciones": [
+        "Restaurar el sistema al último estado anterior al cambio",
+        "Validar el proceso de cambio del sistema",
+        "Establecer un nivel mínimo, conocido y aceptable de requisitos de seguridad",
+        "Identificar los cambios necesarios"
+      ],
+      "respuesta": 0,
+      "explicacion": "La reversión devuelve el sistema a su estado estable previo cuando un cambio falla o causa problemas."
+    },
+    {
+      "pregunta": "¿Qué término se refiere a una colección de correcciones?",
+      "opciones": ["Service Pack", "Parche", "Hotfix", "Downgrade"],
+      "respuesta": 0,
+      "explicacion": "Un Service Pack agrupa múltiples actualizaciones, correcciones y mejoras en un único paquete instalable."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un control de seguridad correctivo?",
+      "opciones": [
+        "Cifrado",
+        "Parches",
+        "Sistemas de detección de intrusiones",
+        "Directrices"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los parches corrigen vulnerabilidades o fallos y restauran el sistema a un estado seguro."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de las líneas base de seguridad?",
+      "opciones": [
+        "Identificar amenazas potenciales",
+        "Monitorizar y detectar eventos de seguridad",
+        "Establecer un estándar para las configuraciones de seguridad",
+        "Proteger los datos frente al acceso no autorizado"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las líneas base definen configuraciones de seguridad estándar contra las que se comparan los sistemas."
+    },
+    {
+      "pregunta": "¿Qué requisito NO es necesario para una función hash criptográfica?",
+      "opciones": [
+        "Que funcione con diversos tamaños de entrada",
+        "Que sea eficiente de calcular",
+        "Que sea unidireccional",
+        "Que tenga una baja probabilidad de producir la misma salida para entradas diferentes"
+      ],
+      "respuesta": 0,
+      "explicacion": "Según el planteamiento del test, admitir diversos tamaños de entrada no es un requisito imprescindible; sí lo son eficiencia, preimagen difícil y resistencia a colisiones."
+    },
+    {
+      "pregunta": "¿Qué término describe una gran colección de parches no relacionados publicada conjuntamente?",
+      "opciones": [
+        "Hotfix",
+        "Actualización",
+        "Corrección de seguridad",
+        "Service Pack"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un Service Pack reúne de forma acumulativa múltiples parches y correcciones en una sola distribución."
+    },
+    {
+      "pregunta": "¿Qué instrumento ayuda a los administradores proporcionando plantillas de configuración segura para sistemas operativos y aplicaciones?",
+      "opciones": [
+        "Directrices de seguridad",
+        "Política de seguridad",
+        "Configuración de línea base",
+        "Configuración en ejecución"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una configuración de línea base define ajustes seguros y repetibles para desplegar y revisar sistemas."
+    },
+    {
+      "pregunta": "¿Qué tecnología se utiliza para garantizar que dentro de una organización solo se use software autorizado?",
+      "opciones": [
+        "Lista de denegación",
+        "Gestión de configuración",
+        "Lista de permitidos",
+        "Greylisting"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una lista de permitidos autoriza únicamente las aplicaciones aprobadas y bloquea las demás."
+    },
+    {
+      "pregunta": "¿Qué técnica de hardening reduce la superficie de ataque eliminando software y servicios innecesarios?",
+      "opciones": [
+        "Gestión de parches",
+        "Principio de mínimo privilegio",
+        "Gestión de configuración de seguridad",
+        "Reducción del número de elementos del sistema"
+      ],
+      "respuesta": 3,
+      "explicacion": "Eliminar componentes innecesarios reduce los puntos que un atacante puede explotar."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de las líneas base?",
+      "opciones": [
+        "Identificar amenazas potenciales",
+        "Monitorizar y detectar eventos de seguridad",
+        "Establecer un nivel mínimo de protección que sirva como referencia",
+        "Proteger los datos frente al acceso no autorizado"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una línea base proporciona un nivel mínimo de protección y un punto de comparación."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes NO es una práctica común de hardening de sistemas?",
+      "opciones": [
+        "Deshabilitar servicios y protocolos innecesarios",
+        "Implantar políticas de contraseñas robustas",
+        "Actualizar regularmente el antivirus",
+        "Realizar copias de seguridad regularmente"
+      ],
+      "respuesta": 3,
+      "explicacion": "Las copias de seguridad son esenciales para recuperación, pero no reducen directamente la superficie de ataque."
+    },
+    {
+      "pregunta": "¿Cómo contribuye el cifrado al hardening de sistemas?",
+      "opciones": [
+        "Reduciendo la superficie de ataque del sistema",
+        "Protegiendo los datos en reposo y en tránsito frente al acceso no autorizado",
+        "Gestionando permisos de usuario y controles de acceso",
+        "Implantando políticas de contraseñas robustas"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado mantiene la confidencialidad de los datos aunque otros controles sean superados."
+    },
+    {
+      "pregunta": "En gestión de cambios, ¿cuál es el propósito de un plan de reversión?",
+      "opciones": [
+        "Introducir nuevos cambios en el entorno",
+        "Recuperar el sistema al estado anterior al cambio",
+        "Probar nuevos parches y actualizaciones del sistema",
+        "Utilizarlo en pruebas de proveedores externos"
+      ],
+      "respuesta": 1,
+      "explicacion": "El plan de reversión permite deshacer un cambio problemático y recuperar el estado previo."
+    },
+    {
+      "pregunta": "En el contexto de la gestión de cambios, ¿qué es una línea base de seguridad?",
+      "opciones": [
+        "Un proceso para solicitar cambios en una línea base",
+        "Un nivel máximo de protección usado como referencia",
+        "Un nivel mínimo de protección usado como referencia",
+        "Un proceso de regresión y validación"
+      ],
+      "respuesta": 2,
+      "explicacion": "La línea base establece el nivel mínimo de seguridad que los cambios no deben reducir."
+    },
+    {
+      "pregunta": "¿Qué garantiza la gestión de configuración?",
+      "opciones": [
+        "Que cualquier cambio realizado en un sistema sea no autorizado e invalidado",
+        "Que todos los cambios realizados en un sistema sean autorizados y validados",
+        "Que todos los cambios sean no autorizados pero validados",
+        "Que todos los cambios sean autorizados pero invalidados"
+      ],
+      "respuesta": 1,
+      "explicacion": "La gestión de configuración controla que los cambios estén aprobados, documentados y verificados."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO es uno de los cuatro componentes de la gestión de cambios según ISC2?",
+      "opciones": [
+        "Identificación",
+        "Línea base",
+        "Control de cambios",
+        "Regresión"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los cuatro componentes son identificación, control de cambios, línea base y verificación y auditoría."
+    },
+    {
+      "pregunta": "¿Por qué muchas organizaciones encuentran difícil mantener un entorno de pruebas separado?",
+      "opciones": [
+        "Porque es innecesario para la gestión de cambios",
+        "Porque exige depender de pruebas de proveedores externos",
+        "Porque presenta dificultades logísticas",
+        "Porque simplifica el plan de reversión"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un entorno separado requiere hardware, software, personal y coordinación para reproducir producción con fidelidad."
+    },
+    {
+      "pregunta": "En un proceso de gestión de cambios, ¿cuál es el propósito de la verificación y auditoría?",
+      "opciones": [
+        "Solicitar cambios en una línea base",
+        "Verificar que los cambios aplicados no rompan nada",
+        "Identificar la línea base de un sistema",
+        "Proporcionar un nivel mínimo de protección a los desarrolladores"
+      ],
+      "respuesta": 1,
+      "explicacion": "La verificación y auditoría comprueban que el cambio funciona y no introduce efectos no deseados."
+    },
+    {
+      "pregunta": "En gestión de cambios, ¿qué significa la identificación de la línea base?",
+      "opciones": [
+        "Solicitar cambios en uno o varios componentes de la línea base",
+        "Verificar que los cambios aplicados no hayan dañado el sistema",
+        "Identificar y documentar el sistema, sus componentes, interfaces y documentación",
+        "Proporcionar un nivel mínimo de protección"
+      ],
+      "respuesta": 2,
+      "explicacion": "Consiste en documentar exhaustivamente el estado actual del sistema para usarlo como referencia."
+    },
+    {
+      "pregunta": "¿Por qué es importante disponer de un plan de reversión cuando una organización no puede probar completamente un cambio?",
+      "opciones": [
+        "Porque permite introducir nuevos cambios en el entorno",
+        "Porque permite depender de pruebas de proveedores externos",
+        "Porque permite volver a un estado anterior si es necesario",
+        "Porque permite determinar la línea base del sistema"
+      ],
+      "respuesta": 2,
+      "explicacion": "El rollback actúa como mecanismo de seguridad ante fallos o vulnerabilidades imprevistas."
+    },
+    {
+      "pregunta": "En un proceso de respuesta a incidentes, ¿qué fase utiliza indicadores de compromiso y análisis de logs para revisar eventos?",
+      "opciones": [
+        "Preparación",
+        "Contención",
+        "Erradicación",
+        "Identificación"
+      ],
+      "respuesta": 3,
+      "explicacion": "La fase de identificación analiza evidencias, indicadores de compromiso y registros para determinar si existe un incidente."
+    },
+    {
+      "pregunta": "¿Cuál de estos elementos se incluye en un documento SLA?",
+      "opciones": [
+        "Instrucciones sobre propiedad y destrucción de datos",
+        "Instrucciones para detectar, responder y limitar las consecuencias de un ciberataque",
+        "Un plan para mantener las operaciones mientras se recupera la organización de una interrupción grave",
+        "Un plan para preparar la continuidad de funciones críticas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un SLA puede definir la propiedad de los datos y las condiciones y plazos para su devolución o destrucción."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de una política de gestión de cambios?",
+      "opciones": [
+        "Garantizar que los cambios del sistema se realicen sin afectar negativamente a las operaciones del negocio",
+        "Garantizar que los sistemas tengan instalado el último parche de seguridad",
+        "Estandarizar el uso de la red y los sistemas informáticos de la organización",
+        "Estandarizar la creación de la red y los sistemas informáticos de la organización"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión de cambios busca obtener los beneficios del cambio minimizando interrupciones y riesgos operativos."
+    },
+    {
+      "pregunta": "Cuando una empresa recopila PII, ¿qué política necesita?",
+      "opciones": [
+        "Política de privacidad",
+        "Política de uso aceptable",
+        "GDPR",
+        "Política de acceso remoto"
+      ],
+      "respuesta": 0,
+      "explicacion": "La política de privacidad define cómo se recopila, almacena, utiliza y protege la PII."
+    },
+    {
+      "pregunta": "¿Cuál de estas NO es una buena práctica de gestión de accesos?",
+      "opciones": [
+        "Evaluar periódicamente si los permisos de usuario siguen siendo aplicables",
+        "Confiar, pero verificar",
+        "Conceder solo la cantidad adecuada de permisos",
+        "Exigir una justificación al elevar privilegios"
+      ],
+      "respuesta": 1,
+      "explicacion": "El enfoque moderno Zero Trust evita asumir confianza inicial y exige verificación continua."
+    },
+    {
+      "pregunta": "¿Qué entidad es responsable de firmar las políticas de una organización?",
+      "opciones": [
+        "La alta dirección",
+        "El ingeniero de seguridad",
+        "Recursos Humanos",
+        "El departamento financiero"
+      ],
+      "respuesta": 0,
+      "explicacion": "La alta dirección aprueba y respalda formalmente las políticas de la organización."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes NO es una función de un SIEM?",
+      "opciones": [
+        "Consolidación de logs",
+        "Retención de logs",
+        "Auditoría de logs",
+        "Cifrado de logs"
+      ],
+      "respuesta": 2,
+      "explicacion": "Según el test, un SIEM consolida, retiene, analiza y puede cifrar logs, mientras que la auditoría periódica de su fiabilidad no se considera una función propia."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes es una buena práctica para las políticas de copias de seguridad?",
+      "opciones": [
+        "Almacenar todas las copias en la misma ubicación física",
+        "Cifrar las copias para proteger la confidencialidad e integridad de los datos",
+        "Realizar copias solo cuando sea necesario",
+        "No probar la recuperación de las copias"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado protege las copias frente a accesos o alteraciones no autorizados."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de una Política de Uso Aceptable (AUP)?",
+      "opciones": [
+        "Informar a los usuarios de las expectativas de la empresa al usar sistemas y redes",
+        "Garantizar la seguridad de la red y los sistemas de la organización",
+        "Proporcionar directrices para elegir una contraseña corporativa",
+        "Monitorizar el uso de la red y los sistemas de la organización"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una AUP establece las reglas y conductas permitidas al utilizar recursos tecnológicos corporativos."
+    },
+    {
+      "pregunta": "¿Qué política indica si se permite utilizar equipos personales con fines empresariales?",
+      "opciones": [
+        "Política de tratamiento de datos (DHP)",
+        "Política de contraseñas (PP)",
+        "Política de uso aceptable (AUP)",
+        "Política Bring Your Own Device (BYOD)"
+      ],
+      "respuesta": 3,
+      "explicacion": "La política BYOD regula el uso de dispositivos personales para acceder a recursos o datos corporativos."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes es una buena práctica para respaldar obligaciones regulatorias y contractuales?",
+      "opciones": [
+        "Garantizar la sencillez para que los usuarios comprendan",
+        "Incluir todos los requisitos en una única política",
+        "Definir el uso adecuado de los datos dentro de la organización",
+        "Cumplir las definiciones legales y las regulaciones"
+      ],
+      "respuesta": 3,
+      "explicacion": "El cumplimiento de requisitos legales y regulatorios permite satisfacer obligaciones y evitar sanciones."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de una política de contraseñas?",
+      "opciones": [
+        "Garantizar que cada usuario tenga una contraseña única para cada sistema",
+        "Exigir contraseñas robustas y complejas, así como cambios periódicos",
+        "Permitir que los usuarios compartan contraseñas por comodidad",
+        "Exigir que los usuarios anoten sus contraseñas para recuperarlas fácilmente"
+      ],
+      "respuesta": 1,
+      "explicacion": "La política establece requisitos de creación y gestión que reducen el riesgo de contraseñas débiles o comprometidas."
+    },
+    {
+      "pregunta": "¿Cómo se denomina el valor aleatorio añadido a una contraseña para impedir ataques con tablas rainbow?",
+      "opciones": ["Hash", "Salt", "Extender", "MD5"],
+      "respuesta": 1,
+      "explicacion": "El salt se añade antes del hashing para que contraseñas iguales produzcan hashes distintos."
+    },
+    {
+      "pregunta": "¿Cuál es la PRIMERA actividad de los componentes de gestión de cambios?",
+      "opciones": [
+        "Solicitud de cambio",
+        "Realización del cambio",
+        "Aprobación del cambio",
+        "Reversión del cambio"
+      ],
+      "respuesta": 0,
+      "explicacion": "El proceso comienza con una solicitud formal que describe el cambio propuesto y su justificación."
+    },
+    {
+      "pregunta": "¿Por qué es una buena práctica disponer de un plan de respuesta a incidentes documentado?",
+      "opciones": [
+        "Para garantizar que los incidentes se ignoren y no se comuniquen",
+        "Para proporcionar un proceso claro y coherente que permita gestionar incidentes y minimizar su impacto",
+        "Para eliminar la necesidad de formación de seguridad",
+        "Para reducir la frecuencia de auditorías y evaluaciones de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un plan documentado define responsabilidades y pasos repetibles para contener, erradicar y recuperar."
+    },
+    {
+      "pregunta": "¿Qué pretende lograr una política de seguridad bien diseñada?",
+      "opciones": [
+        "Aumentar el potencial de brechas de seguridad",
+        "Reducir el potencial de brechas de seguridad a un nivel aceptable",
+        "Reducir el coste de operación de los sistemas",
+        "Reducir la complejidad del sistema"
+      ],
+      "respuesta": 1,
+      "explicacion": "La política establece reglas y controles para reducir el riesgo hasta un nivel aceptable para la organización."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes elementos NO suele incluirse en una Política de Uso Aceptable (AUP)?",
+      "opciones": [
+        "Acceso a datos",
+        "Acceso a sistemas",
+        "Acceso a instalaciones físicas",
+        "Uso de Internet"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una AUP se centra en el uso de recursos digitales; el acceso físico se regula mediante políticas específicas."
+    },
+    {
+      "pregunta": "¿Cuál es uno de los retos de una política Bring Your Own Device (BYOD)?",
+      "opciones": [
+        "Disminución de la moral de los empleados",
+        "Garantizar el control de la privacidad",
+        "Garantizar que el dispositivo esté configurado de forma segura",
+        "Aumentar la necesidad de auditorías forenses"
+      ],
+      "respuesta": 2,
+      "explicacion": "La organización tiene menos control directo sobre la configuración y el estado de seguridad de dispositivos personales."
+    },
+    {
+      "pregunta": "¿Qué suele estipular una política de privacidad?",
+      "opciones": [
+        "Cómo responder a una brecha de privacidad",
+        "Los lugares adecuados para guardar objetos personales",
+        "Qué información se considera información de identificación personal (PII)",
+        "Qué empleados se ocupan de la privacidad de los datos"
+      ],
+      "respuesta": 2,
+      "explicacion": "La política define qué datos constituyen PII y cómo se recopilan, usan, divulgan y protegen."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de la gestión de cambios en ciberseguridad?",
+      "opciones": [
+        "Detectar nuevas vulnerabilidades en el sistema",
+        "Publicar software sin introducir nuevas vulnerabilidades",
+        "Crear parches para corregir vulnerabilidades",
+        "Garantizar que todos los entornos estén libres de vulnerabilidades"
+      ],
+      "respuesta": 1,
+      "explicacion": "La gestión de cambios controla la implantación para minimizar el riesgo de introducir fallos o vulnerabilidades."
+    },
+    {
+      "pregunta": "¿Cuál es un requisito de PCI DSS respecto a los datos de tarjetas de crédito?",
+      "opciones": [
+        "Los datos deben seudonimizarse y segregarse en otra base de datos",
+        "Ningún empleado puede ver nunca datos de tarjeta sin enmascarar",
+        "Los datos deben clasificarse como confidenciales y cifrarse",
+        "Los datos deben conservarse menos tiempo que cualquier otro dato"
+      ],
+      "respuesta": 2,
+      "explicacion": "PCI DSS exige proteger los datos del titular, incluido su cifrado cuando se almacenan o transmiten en condiciones aplicables."
+    },
+    {
+      "pregunta": "¿Qué garantiza una política de seguridad de la información?",
+      "opciones": [
+        "El tratamiento correcto de información de empleados en redes sociales",
+        "Que los documentos financieros tengan copias de seguridad seguras",
+        "El compromiso de la alta dirección para garantizar un acceso seguro a los datos",
+        "La comunicación adecuada de la postura de seguridad de la organización"
+      ],
+      "respuesta": 2,
+      "explicacion": "La aprobación de la política evidencia el compromiso de la alta dirección con la protección de la información."
+    },
+    {
+      "pregunta": "¿Cuál es un beneficio PRINCIPAL del principio de mínimo privilegio?",
+      "opciones": [
+        "Simplificar el proceso de conceder privilegios a una cuenta",
+        "Minimizar el riesgo de acceso no autorizado a datos sensibles",
+        "Reducir el número de cuentas de usuario del sistema",
+        "Simplificar la creación de cuentas de usuario"
+      ],
+      "respuesta": 1,
+      "explicacion": "Conceder solo los permisos necesarios limita el daño potencial de errores, abusos o cuentas comprometidas."
+    },
+    {
+      "pregunta": "Una aplicación corporativa exige que los empleados reconozcan que solo pueden usarla personas autorizadas y pulsen «Aceptar términos». ¿Qué ejemplifica PRINCIPALMENTE?",
+      "opciones": [
+        "Política de Uso Aceptable (AUP)",
+        "Acuerdo de Confidencialidad (NDA)",
+        "Acuerdo de Nivel de Servicio (SLA)",
+        "Memorando de Entendimiento (MOU)"
+      ],
+      "respuesta": 0,
+      "explicacion": "La aceptación expresa de reglas de uso de un recurso corporativo es un ejemplo de AUP."
+    },
+    {
+      "pregunta": "Un cartel que recuerda las mejores prácticas de gestión de contraseñas es un ejemplo de qué tipo de actividad de aprendizaje?",
+      "opciones": [
+        "Concienciación",
+        "Educación",
+        "Formación práctica",
+        "Escolarización"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un cartel busca captar la atención y recordar riesgos o comportamientos, por lo que es una actividad de concienciación."
+    },
+    {
+      "pregunta": "Al realizar verificaciones de antecedentes de nuevos empleados, ¿cuál de estos atributos NUNCA puede utilizarse para discriminar?",
+      "opciones": [
+        "Referencias, educación, afiliación política e historial laboral",
+        "Historial crediticio, historial laboral y referencias",
+        "Historial laboral, referencias y antecedentes penales",
+        "Antecedentes penales, historial crediticio y referencias"
+      ],
+      "respuesta": 0,
+      "explicacion": "Según el test, la afiliación política no puede emplearse como criterio discriminatorio en decisiones de contratación."
+    },
+    {
+      "pregunta": "¿Qué ejercicio recorre paso a paso un incidente de ejemplo y valida qué hará cada persona?",
+      "opciones": [
+        "Ejercicio de lista de comprobación",
+        "Ejercicio de simulación",
+        "Ejercicio tabletop",
+        "Ejercicio walk-through"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un walk-through revisa secuencialmente las acciones y responsabilidades de cada participante."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de la formación en seguridad?",
+      "opciones": [
+        "Garantizar que todos los empleados tengan acceso administrativo",
+        "Desarrollar competencia en un conjunto de habilidades o acciones de seguridad",
+        "Eliminar la necesidad de políticas y procedimientos de seguridad",
+        "Reducir el número de auditorías y evaluaciones de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "La formación desarrolla habilidades prácticas para reconocer, prevenir y responder a amenazas."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un tema común en la formación de concienciación sobre seguridad?",
+      "opciones": [
+        "Cómo conceder acceso administrativo a todos los usuarios",
+        "La importancia de compartir contraseñas con compañeros",
+        "Reconocer y comunicar intentos de phishing",
+        "Desactivar el antivirus para mejorar el rendimiento"
+      ],
+      "respuesta": 2,
+      "explicacion": "La formación de concienciación enseña a identificar y reportar mensajes de phishing."
+    },
+    {
+      "pregunta": "¿Por qué es importante impartir periódicamente formación de concienciación en seguridad?",
+      "opciones": [
+        "Para mantener a los empleados al día sobre las amenazas y mejores prácticas más recientes",
+        "Para permitir que los empleados eludan controles de seguridad",
+        "Para reducir la necesidad de políticas y procedimientos de seguridad",
+        "Para evitar auditorías y evaluaciones de seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las amenazas y técnicas cambian, por lo que la formación periódica mantiene vigentes los conocimientos y comportamientos."
+    },
+    {
+      "pregunta": "¿Cuál describe mejor el objetivo PRINCIPAL de las actividades de concienciación en seguridad dentro de una organización?",
+      "opciones": [
+        "Desarrollar competencia en habilidades o acciones específicas de seguridad",
+        "Mejorar la comprensión de principios de seguridad y su aplicación",
+        "Llamar la atención sobre problemas y preocupaciones de seguridad",
+        "Centrarse únicamente en flujos de trabajo de seguridad complejos"
+      ],
+      "respuesta": 2,
+      "explicacion": "La concienciación busca que las personas presten atención y sean conscientes de los riesgos de seguridad."
+    },
+    {
+      "pregunta": "¿Cuál es el beneficio PRINCIPAL de incorporar ejemplos y escenarios reales a la formación de concienciación?",
+      "opciones": [
+        "Animar a compartir información sensible con personas no autorizadas",
+        "Hacer la formación más atractiva y facilitar la comprensión de las implicaciones prácticas de las buenas prácticas",
+        "Reducir la postura general de seguridad",
+        "Demostrar que las amenazas no son relevantes para la organización"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los escenarios reales mejoran la comprensión, el recuerdo y la aplicación práctica de las medidas de seguridad."
+    },
+    {
+      "pregunta": "¿Qué término describe los ataques de phishing dirigidos específicamente a administradores o altos cargos de una empresa?",
+      "opciones": [
+        "Ataques barracuda",
+        "Ataques de whaling",
+        "Ataques shark",
+        "Ataques piranha"
+      ],
+      "respuesta": 1,
+      "explicacion": "Whaling es phishing dirigido a objetivos de alto nivel, como directivos o administradores."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes NO es una práctica recomendada para proteger contraseñas?",
+      "opciones": [
+        "Usar contraseñas diferentes en sistemas distintos",
+        "Utilizar un gestor de contraseñas",
+        "Reutilizar contraseñas en varios sistemas",
+        "Evitar compartir contraseñas con compañeros"
+      ],
+      "respuesta": 2,
+      "explicacion": "Reutilizar contraseñas permite que una sola filtración comprometa múltiples cuentas."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor un programa sólido de concienciación en seguridad?",
+      "opciones": [
+        "Solo educación sobre amenazas potenciales",
+        "Formación práctica para gestionar amenazas",
+        "Solo actividades de concienciación",
+        "Una combinación de educación, formación y actividades de concienciación"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un programa sólido combina conocimiento conceptual, práctica de habilidades y recordatorios continuos."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de la formación de concienciación?",
+      "opciones": [
+        "Garantizar que todos sepan qué se espera de ellos",
+        "Dar a los empleados un descanso de sus tareas habituales",
+        "Dar a la organización la oportunidad de probar nuevas tecnologías",
+        "Proporcionar una oportunidad de trabajo en equipo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La concienciación comunica las conductas y responsabilidades de seguridad esperadas."
+    },
+    {
+      "pregunta": "En tácticas de ingeniería social, ¿a qué se refiere «vishing»?",
+      "opciones": [
+        "Suplantar a una figura de autoridad o persona de confianza",
+        "Utilizar un sistema fraudulento de respuesta de voz interactiva",
+        "Seguir a un usuario autorizado para entrar en una zona restringida",
+        "Solicitar credenciales a cambio de una compensación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Vishing es phishing por voz o teléfono, a menudo mediante llamadas o sistemas IVR fraudulentos."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO es un tipo de ataque de phishing?",
+      "opciones": ["Whaling", "Spear phishing", "Vishing", "Tailgating"],
+      "respuesta": 3,
+      "explicacion": "Tailgating es una intrusión física que consiste en seguir a una persona autorizada, no un ataque de phishing."
+    },
+    {
+      "pregunta": "¿Qué es la ingeniería social?",
+      "opciones": [
+        "Una técnica para optimizar algoritmos de redes sociales y aumentar la interacción",
+        "Una técnica utilizada por atacantes para engañar a personas y obtener información sensible",
+        "Una técnica de diseño de espacios públicos para fomentar reuniones",
+        "Una técnica para estudiar sistemáticamente la sociedad y sus instituciones"
+      ],
+      "respuesta": 1,
+      "explicacion": "La ingeniería social manipula la confianza o el comportamiento humano para obtener acceso o información."
+    },
+    {
+      "pregunta": "¿Cuál es una desventaja de los gestores de contraseñas?",
+      "opciones": [
+        "Son complejos y difíciles de usar",
+        "Pueden verse comprometidos si se protegen con una contraseña débil",
+        "Son caros",
+        "No son compatibles con la mayoría de sistemas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una contraseña maestra débil puede permitir el acceso a todas las credenciales almacenadas."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor un programa sólido de concienciación en seguridad?",
+      "opciones": [
+        "Educación sobre amenazas potenciales",
+        "Formación práctica para gestionar amenazas",
+        "Actividades de concienciación",
+        "Una combinación de educación, formación y actividades de concienciación"
+      ],
+      "respuesta": 3,
+      "explicacion": "La combinación de educación, práctica y concienciación continua cubre conocimientos, habilidades y conducta."
+    },
+    {
+      "pregunta": "Un empleado recibe un SMS sospechoso con un número de factura desconocido y un enlace para obtener más información. ¿Qué ataque se describe con MAYOR probabilidad?",
+      "opciones": ["Vishing", "Whaling", "Phishing", "Smishing"],
+      "respuesta": 3,
+      "explicacion": "Smishing es phishing realizado mediante mensajes SMS que intentan inducir al destinatario a pulsar enlaces o revelar datos."
+    },
+    {
+      "pregunta": "¿Cuál es la PRIMERA actividad de los componentes de gestión de cambios?",
+      "opciones": [
+        "Solicitud de cambio",
+        "Realización del cambio",
+        "Aprobación del cambio",
+        "Reversión del cambio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión de cambios comienza con una solicitud formal que identifica y justifica el cambio."
+    },
+    {
+      "pregunta": "¿Cuál es un beneficio PRINCIPAL del principio de mínimo privilegio?",
+      "opciones": [
+        "Simplificar el proceso de conceder privilegios a una cuenta",
+        "Minimizar el riesgo de acceso no autorizado a datos sensibles y recursos del sistema",
+        "Reducir el número de cuentas de usuario",
+        "Simplificar el proceso de creación de cuentas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Limitar los permisos al mínimo necesario reduce el alcance de un abuso o compromiso de cuenta."
+    },
+    {
+      "pregunta": "¿Por qué es una buena práctica disponer de un plan de respuesta a incidentes documentado?",
+      "opciones": [
+        "Para garantizar que los incidentes se ignoren y no se comuniquen",
+        "Para proporcionar un proceso claro y coherente que permita gestionar incidentes y minimizar su impacto",
+        "Para eliminar la necesidad de formación de seguridad",
+        "Para reducir la frecuencia de auditorías y evaluaciones"
+      ],
+      "respuesta": 1,
+      "explicacion": "El plan documentado coordina una respuesta repetible y eficiente para limitar daños y restaurar operaciones."
+    }
+  ]
+}

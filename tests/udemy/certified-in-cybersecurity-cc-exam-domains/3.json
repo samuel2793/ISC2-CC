@@ -1,0 +1,1042 @@
+{
+  "titulo": "Fundamentos de ciberseguridad e ISC2 #3",
+  "procedencia": "Banco de preguntas proporcionado por el usuario, basado en contenidos y guías de estudio de ISC2",
+  "descripcion": "Batería de 100 preguntas sobre principios de seguridad, gestión de riesgos, continuidad de negocio, redes, control de acceso, respuesta a incidentes, seguridad de datos y operaciones.",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál de estos tipos de credenciales NO se utiliza en la autenticación multifactor (MFA)?",
+      "opciones": [
+        "Algo que eres",
+        "Algo que tienes",
+        "Algo que sabes",
+        "Algo en lo que confías"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los factores habituales de MFA son algo que sabes, algo que tienes y algo que eres; «algo en lo que confías» no es un factor de identidad."
+    },
+    {
+      "pregunta": "¿Cuál de estas tecnologías es la MENOS eficaz para evitar el uso de cuentas compartidas?",
+      "opciones": [
+        "Requisitos de complejidad de contraseñas",
+        "Exigir autenticación biométrica",
+        "Exigir contraseñas de un solo uso mediante un token",
+        "Exigir una contraseña de un solo uso mediante una aplicación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una contraseña compleja puede seguir compartiéndose. La biometría y las contraseñas de un solo uso dificultan mucho más el uso compartido de cuentas."
+    },
+    {
+      "pregunta": "El nombre, la edad, la ubicación y el puesto de trabajo de una persona son ejemplos de:",
+      "opciones": [
+        "Factores biométricos",
+        "Factores de identidad",
+        "Atributos",
+        "Permisos de cuenta"
+      ],
+      "respuesta": 2,
+      "explicacion": "Son atributos porque describen características de una persona y permiten identificarla o diferenciarla en los sistemas."
+    },
+    {
+      "pregunta": "¿Qué principio de seguridad se aplica cuando se deniega una solicitud de acceso, pese a que el usuario posee la habilitación necesaria, porque no existe una justificación empresarial?",
+      "opciones": [
+        "Mínimo privilegio",
+        "Control de dos personas",
+        "Necesidad de saber",
+        "Separación de funciones"
+      ],
+      "respuesta": 2,
+      "explicacion": "La necesidad de saber limita el acceso a la información que una persona necesita para realizar su trabajo, aunque tenga una habilitación suficiente."
+    },
+    {
+      "pregunta": "¿Qué principio de control de acceso impide que una misma persona cree una cuenta de usuario y le asigne privilegios de superusuario en el mismo sistema?",
+      "opciones": [
+        "Separación de funciones",
+        "Mínimo privilegio",
+        "Rotación de puestos",
+        "Seguridad por oscuridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "La separación de funciones distribuye tareas sensibles entre varias personas para evitar que una sola controle todo el proceso."
+    },
+    {
+      "pregunta": "¿Qué principio limita el acceso a información de identificación personal (PII) únicamente a la información esencial?",
+      "opciones": [
+        "Separación de funciones",
+        "Interfaces restringidas",
+        "Control dependiente del contexto",
+        "Necesidad de saber"
+      ],
+      "respuesta": 3,
+      "explicacion": "La necesidad de saber concede acceso solo a la información esencial requerida para desempeñar una función laboral."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones NO representa un tipo de dato biométrico?",
+      "opciones": [
+        "Huella dactilar",
+        "Escaneo de retina",
+        "Tarjeta inteligente",
+        "Registro de voz"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una tarjeta inteligente es un factor de posesión, no un rasgo físico o conductual biométrico."
+    },
+    {
+      "pregunta": "¿Qué término designa los permisos estándar asignados a una cuenta de usuario en el momento de su creación?",
+      "opciones": [
+        "Agregación",
+        "Transitividad",
+        "Línea base",
+        "Derecho de acceso"
+      ],
+      "respuesta": 2,
+      "explicacion": "La línea base es el conjunto inicial y estándar de permisos asignados a una cuenta al crearla."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes mecanismos normalmente NO se utiliza como medida antifraude?",
+      "opciones": [
+        "Rotación de puestos",
+        "Vacaciones obligatorias",
+        "Recursos humanos",
+        "Control de dos personas"
+      ],
+      "respuesta": 2,
+      "explicacion": "Recursos humanos cumple funciones organizativas y laborales, pero no suele considerarse por sí mismo un control antifraude directo."
+    },
+    {
+      "pregunta": "¿Qué proceso debe realizar una empresa para verificar que un empleado conserva únicamente los privilegios necesarios para sus funciones en RR. HH., nóminas y atención al cliente?",
+      "opciones": [
+        "Reaprovisionamiento",
+        "Revisión de cuentas",
+        "Acumulación de privilegios",
+        "Revocación de cuentas"
+      ],
+      "respuesta": 1,
+      "explicacion": "La revisión de cuentas comprueba periódicamente que los permisos siguen siendo pertinentes y necesarios para las funciones actuales."
+    },
+    {
+      "pregunta": "¿Cuántos factores de autenticación utiliza una organización que exige nombre de usuario, PIN, token y escaneo de retina durante el inicio de sesión?",
+      "opciones": ["Uno", "Dos", "Tres", "Cuatro"],
+      "respuesta": 2,
+      "explicacion": "El nombre de usuario y el PIN pertenecen al factor de conocimiento; el token es posesión y la retina es biometría. En total hay tres factores."
+    },
+    {
+      "pregunta": "¿Qué principio de seguridad de la información se aplica al restringir el acceso a servidores administrativos únicamente a los administradores de sistemas de TI?",
+      "opciones": [
+        "Necesidad de saber",
+        "Mínimo privilegio",
+        "Control de dos personas",
+        "Confianza transitiva"
+      ],
+      "respuesta": 1,
+      "explicacion": "El mínimo privilegio concede solo los permisos mínimos necesarios para realizar las tareas asignadas."
+    },
+    {
+      "pregunta": "¿En qué tres elementos se basa el acceso?",
+      "opciones": [
+        "Sujeto, objeto y reglas",
+        "Sujeto, permisos y reglas",
+        "Sujeto, capas y reglas",
+        "Permisos, capas y reglas"
+      ],
+      "respuesta": 0,
+      "explicacion": "El sujeto solicita acceso al objeto y las reglas determinan si dicho acceso se permite y con qué permisos."
+    },
+    {
+      "pregunta": "¿Qué otro nombre reciben los controles de seguridad?",
+      "opciones": [
+        "Salvaguardas de seguridad",
+        "Escudos de seguridad",
+        "Bloqueadores de seguridad",
+        "Agentes de seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los controles de seguridad también se denominan salvaguardas porque protegen la confidencialidad, integridad y disponibilidad de la información."
+    },
+    {
+      "pregunta": "¿Qué medida de seguridad puede ayudar a detectar conductas fraudulentas, como transferencias de fondos de empleados a sus cuentas personales?",
+      "opciones": [
+        "Separación de funciones",
+        "Mínimo privilegio",
+        "Zero Trust",
+        "Vacaciones obligatorias"
+      ],
+      "respuesta": 3,
+      "explicacion": "Las vacaciones obligatorias permiten que otra persona asuma temporalmente las funciones y pueda detectar irregularidades ocultas."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de la Prevención del Delito mediante el Diseño Ambiental (CPTED)?",
+      "opciones": [
+        "Crear espacios de trabajo más seguros mediante elementos de diseño pasivo",
+        "Usar las últimas tecnologías verdes de centros de datos para mejorar la ciberseguridad",
+        "Crear espacios de trabajo más seguros mediante elementos de diseño ecológico",
+        "Reducir el ciberdelito mediante políticas corporativas ecológicas"
+      ],
+      "respuesta": 0,
+      "explicacion": "CPTED busca disuadir la delincuencia mediante iluminación, visibilidad, distribución del espacio y otros elementos de diseño físico."
+    },
+    {
+      "pregunta": "¿Cuáles son ejemplos de controles de acceso físico?",
+      "opciones": [
+        "Contraseñas y PIN",
+        "Datos cifrados y firewalls",
+        "Vallas, cerraduras, guardias de seguridad, credenciales y alarmas",
+        "Programas de formación y verificaciones de antecedentes"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las vallas, cerraduras, guardias, credenciales y alarmas restringen o detectan el acceso físico a instalaciones y recursos."
+    },
+    {
+      "pregunta": "Publicar fotografías de documentos confidenciales con información identificativa de clientes que quedaron desatendidos en una impresora se considera una:",
+      "opciones": ["Brecha", "Explotación", "Ataque", "Ocurrencia"],
+      "respuesta": 0,
+      "explicacion": "Es una brecha porque implica la divulgación no autorizada de información personal o registros confidenciales."
+    },
+    {
+      "pregunta": "¿Por qué pueden sentirse incómodos algunos usuarios al emplear biometría como método de autenticación?",
+      "opciones": [
+        "Porque es fácil de eludir",
+        "Porque puede considerarse una invasión de la privacidad",
+        "Porque no siempre es precisa al 100 %",
+        "Porque es menos segura que otros métodos de autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La biometría requiere recopilar y tratar datos biológicos personales, lo que puede generar preocupación por su almacenamiento o uso indebido."
+    },
+    {
+      "pregunta": "¿Cuál es una desventaja de la autenticación biométrica?",
+      "opciones": [
+        "Es asequible para cualquiera",
+        "Puede revelar información médica",
+        "Puede hackearse fácilmente",
+        "Requiere una alimentación eléctrica constante"
+      ],
+      "respuesta": 1,
+      "explicacion": "Determinadas características biométricas pueden reflejar condiciones médicas, por lo que su exposición puede revelar información sensible."
+    },
+    {
+      "pregunta": "En una lista de control de acceso (ACL), el elemento que determina qué permisos tienes es:",
+      "opciones": ["El sujeto", "El objeto", "La regla", "El firmware"],
+      "respuesta": 2,
+      "explicacion": "Cada regla de una ACL especifica los permisos, como lectura, escritura o ejecución, que un sujeto tiene sobre un objeto."
+    },
+    {
+      "pregunta": "En un escenario con una política DAC, ¿cuál de estas tareas solo puede realizar el propietario del objeto?",
+      "opciones": [
+        "Cambiar los atributos de seguridad",
+        "Leer la información",
+        "Modificar la información",
+        "Ejecutar la información"
+      ],
+      "respuesta": 0,
+      "explicacion": "En DAC, el propietario controla los atributos de seguridad y decide qué permisos concede a otros usuarios."
+    },
+    {
+      "pregunta": "¿Cuál de estos modelos de control de acceso se utiliza habitualmente en el ámbito militar?",
+      "opciones": [
+        "Control de acceso obligatorio (MAC)",
+        "Control de acceso discrecional (DAC)",
+        "Control de acceso basado en atributos (ABAC)",
+        "Control de acceso basado en roles (RBAC)"
+      ],
+      "respuesta": 0,
+      "explicacion": "MAC aplica clasificaciones y niveles de habilitación gestionados centralmente, adecuados para entornos militares y gubernamentales."
+    },
+    {
+      "pregunta": "Exigir un rol de usuario específico para acceder a recursos es un ejemplo de qué modelo de control de acceso:",
+      "opciones": [
+        "Control de acceso basado en atributos (ABAC)",
+        "Control de acceso discrecional (DAC)",
+        "Control de acceso obligatorio (MAC)",
+        "Control de acceso basado en roles (RBAC)"
+      ],
+      "respuesta": 3,
+      "explicacion": "RBAC asigna permisos según los roles y responsabilidades laborales de cada usuario."
+    },
+    {
+      "pregunta": "¿Qué principio establece que las personas deben actuar conforme a lo que haría una persona razonable en circunstancias similares?",
+      "opciones": [
+        "Diligencia debida",
+        "Separación de funciones",
+        "Cuidado debido",
+        "Mínimo privilegio"
+      ],
+      "respuesta": 2,
+      "explicacion": "El cuidado debido exige actuar con el nivel de prudencia y responsabilidad que se esperaría de una persona razonable."
+    },
+    {
+      "pregunta": "¿Cómo se denomina la situación en la que un usuario acumula privilegios del sistema que superan los requisitos de su puesto?",
+      "opciones": [
+        "Acumulación de privilegios",
+        "Colisión de derechos",
+        "Mínimo privilegio",
+        "Privilegios excesivos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La acumulación de privilegios ocurre cuando se añaden permisos por nuevas funciones y no se eliminan los permisos anteriores."
+    },
+    {
+      "pregunta": "¿Qué tipo de autenticación basada en tokens genera códigos a intervalos fijos sin un desafío del servidor? (★)",
+      "opciones": ["Asíncrona", "Tarjeta inteligente", "Síncrona", "RFID"],
+      "respuesta": 2,
+      "explicacion": "Los tokens síncronos generan códigos periódicos y se mantienen sincronizados temporalmente con el servidor."
+    },
+    {
+      "pregunta": "Al desarrollar un sitio web bancario, ¿cuál es el método recomendado para confirmar la identidad de los usuarios?",
+      "opciones": [
+        "Exigir contraseña y nombre de usuario",
+        "Exigir contraseña y código PIN",
+        "Exigir contraseña y token por SMS",
+        "Exigir contraseña y respuestas personales"
+      ],
+      "respuesta": 2,
+      "explicacion": "La contraseña y el token por SMS combinan dos factores distintos y proporcionan una capa adicional de autenticación."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones NO es una característica de una cuenta de usuario privilegiada?",
+      "opciones": [
+        "No interactúa directamente con servidores ni otros dispositivos de infraestructura",
+        "Debe exigir el uso de MFA",
+        "Debe tener el máximo nivel de registro de sus acciones",
+        "A menudo puede crear usuarios y asignar permisos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las cuentas privilegiadas sí interactúan directamente con servidores e infraestructura para realizar tareas administrativas críticas."
+    },
+    {
+      "pregunta": "¿Cuál es el problema PRINCIPAL que suele asociarse al control de acceso descentralizado?",
+      "opciones": [
+        "Posibles interrupciones del acceso",
+        "Control incoherente",
+        "Control excesivamente detallado",
+        "Costes de formación elevados"
+      ],
+      "respuesta": 1,
+      "explicacion": "La gestión distribuida puede producir políticas, permisos y niveles de seguridad distintos entre departamentos o sistemas."
+    },
+    {
+      "pregunta": "Una organización quiere reducir el número de incidencias del servicio de soporte relacionadas con cambios de contraseña. ¿Qué medida puede adoptar? (★)",
+      "opciones": [
+        "Autenticación de dos factores",
+        "Autenticación biométrica",
+        "Restablecimiento de contraseña de autoservicio",
+        "Frases de contraseña"
+      ],
+      "respuesta": 2,
+      "explicacion": "El autoservicio permite que los usuarios restablezcan sus contraseñas sin intervención del servicio de soporte."
+    },
+    {
+      "pregunta": "¿Qué problema de control de acceso existe si una auditoría descubre que un responsable de TI conserva permisos sobre carpetas compartidas de puestos anteriores? (★)",
+      "opciones": [
+        "Aprovisionamiento excesivo",
+        "Acceso no autorizado",
+        "Acumulación de privilegios",
+        "Revisión de cuentas"
+      ],
+      "respuesta": 2,
+      "explicacion": "La acumulación de privilegios se produce cuando una persona conserva permisos de funciones anteriores que ya no necesita."
+    },
+    {
+      "pregunta": "En un entorno de red, ¿cuál de los siguientes es un ejemplo de control de seguridad?",
+      "opciones": [
+        "Credenciales de usuario",
+        "Una prueba delictiva",
+        "Un firewall",
+        "Un registro de acceso"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un firewall controla activamente el tráfico de red según reglas de seguridad, por lo que es un control técnico."
+    },
+    {
+      "pregunta": "Los controles de acceso son:",
+      "opciones": [
+        "Mecanismos para proteger la integridad de los datos críticos",
+        "Mecanismos que proporcionan el máximo nivel de acceso a todo el personal",
+        "Mecanismos que conceden niveles de acceso adecuados al personal autorizado y deniegan el acceso al no autorizado",
+        "Mecanismos que siempre deben implantarse por parejas"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los controles de acceso permiten el uso autorizado de recursos y bloquean a usuarios o procesos no autorizados."
+    },
+    {
+      "pregunta": "¿Qué factor debe considerarse al elegir un sistema de control de acceso?",
+      "opciones": ["Simplicidad", "Eficiencia", "Rendimiento", "Estética"],
+      "respuesta": 2,
+      "explicacion": "El rendimiento incluye eficacia, fiabilidad, escalabilidad y compatibilidad para cumplir correctamente la función de control de acceso."
+    },
+    {
+      "pregunta": "¿Cuál debe ser la consideración PRINCIPAL al decidir si se instalan escáneres biométricos en todas las puertas de la organización o solo en algunas?",
+      "opciones": [
+        "El número de puertas del edificio",
+        "La función del área de trabajo",
+        "Los resultados de una evaluación del emplazamiento",
+        "La popularidad de los escáneres biométricos"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una evaluación del emplazamiento valora sensibilidad, riesgos, costes e impacto operativo para determinar dónde son necesarios."
+    },
+    {
+      "pregunta": "¿Cuál es el factor más crítico al implantar controles de acceso en un emplazamiento físico?",
+      "opciones": [
+        "La tecnología utilizada",
+        "El número de puertas y portones que deben protegerse",
+        "La relación entre el coste de los controles y el valor de lo protegido",
+        "El tiempo necesario para aplicar los controles"
+      ],
+      "respuesta": 2,
+      "explicacion": "El coste de un control debe ser proporcional al valor y al riesgo de los activos que protege."
+    },
+    {
+      "pregunta": "El término «defensa en profundidad» se refiere a:",
+      "opciones": [
+        "Usar una única barrera sólida para impedir ciberataques",
+        "Una estrategia que utiliza múltiples medidas de seguridad para proteger los sistemas de una organización",
+        "Usar únicamente la tecnología más sofisticada para proteger el sistema",
+        "Usar únicamente medidas tecnológicas de defensa"
+      ],
+      "respuesta": 1,
+      "explicacion": "La defensa en profundidad combina varias capas de controles administrativos, técnicos y físicos."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de aplicar defensa en profundidad?",
+      "opciones": [
+        "Garantizar que no se produzca ningún ciberataque",
+        "Prevenir o disuadir un ciberataque mediante múltiples capas de seguridad",
+        "Sustituir medidas obsoletas por otras más avanzadas",
+        "Hacer que la red sea impenetrable"
+      ],
+      "respuesta": 1,
+      "explicacion": "La estrategia busca que, si una capa falla, otras puedan bloquear, detectar o limitar el ataque."
+    },
+    {
+      "pregunta": "¿Cuál es la respuesta habitual cuando se detecta que alguien intenta acceder a una base de datos sin autorización?",
+      "opciones": [
+        "Eliminar la cuenta del usuario",
+        "Advertir al usuario",
+        "Registrar el intento y bloquear al usuario",
+        "Promover al usuario a un nivel superior de acceso"
+      ],
+      "respuesta": 2,
+      "explicacion": "La respuesta normal es registrar el intento para auditoría y bloquear el acceso para impedir nuevas acciones no autorizadas."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL del control de acceso?",
+      "opciones": [
+        "Restringir el acceso a sistemas de información y datos",
+        "Proteger datos y sistemas frente a amenazas internas",
+        "Proteger datos y sistemas frente a amenazas externas",
+        "Conceder el nivel de acceso adecuado al personal y a los procesos autorizados"
+      ],
+      "respuesta": 3,
+      "explicacion": "El control de acceso asegura que las personas y procesos autorizados dispongan exactamente del acceso que necesitan."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de colusión?",
+      "opciones": [
+        "Dos o más personas colaboran para eludir la separación de funciones con fines fraudulentos",
+        "Dos o más personas deciden colectivamente no realizar sus funciones",
+        "Dos o más personas dividen una tarea por igual",
+        "Dos o más personas asumen las funciones de otro empleado con fines fraudulentos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La colusión consiste en que varias personas cooperan para eludir controles, como la separación de funciones, y cometer fraude."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de control dual?",
+      "opciones": [
+        "Un empleado crea una factura y un responsable la aprueba",
+        "Una contraseña del sistema se divide en dos partes y ninguna persona conoce la contraseña completa",
+        "Dos o más personas comparten el acceso al mismo dispositivo",
+        "Dos o más personas presentan y revisan una propuesta de cambio de configuración"
+      ],
+      "respuesta": 1,
+      "explicacion": "El control dual exige la participación simultánea de dos personas; dividir una contraseña impide que una sola pueda usarla."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de la regla de dos personas en una estrategia de seguridad?",
+      "opciones": [
+        "Reducir la carga de trabajo dividiendo las tareas de seguridad",
+        "Exigir que al menos dos personas estén juntas en áreas de alta seguridad",
+        "Limitar el acceso a las áreas de alta seguridad a solo dos personas",
+        "Garantizar que todas las tareas se realicen dos veces"
+      ],
+      "respuesta": 1,
+      "explicacion": "La regla exige la presencia de dos personas autorizadas para reducir el riesgo de acciones no autorizadas o abusos."
+    },
+    {
+      "pregunta": "¿Cuáles son los tres conceptos principales del control de acceso?",
+      "opciones": [
+        "Objetos, reglas y sujetos",
+        "Responsables, sujetos y datos",
+        "Confidencialidad, integridad y disponibilidad",
+        "Temas, objetos y reglas"
+      ],
+      "respuesta": 0,
+      "explicacion": "El sujeto intenta acceder al objeto y las reglas determinan las interacciones permitidas."
+    },
+    {
+      "pregunta": "En seguridad de la información, ¿qué es un «control»?",
+      "opciones": [
+        "Un protocolo de comunicación protegida",
+        "Una salvaguarda concebida para garantizar la CIA de los datos",
+        "Una técnica de cifrado de datos en reposo",
+        "Un documento que describe las políticas de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un control es una medida técnica, física o administrativa destinada a proteger la confidencialidad, integridad y disponibilidad."
+    },
+    {
+      "pregunta": "¿Qué concepto ocupa el centro del modelo de círculos concéntricos de defensa en profundidad? (★)",
+      "opciones": [
+        "Controles físicos",
+        "Activos",
+        "Controles lógicos o técnicos",
+        "Controles administrativos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los activos son el elemento que se protege; las distintas capas de controles se sitúan alrededor de ellos."
+    },
+    {
+      "pregunta": "Publicar fotografías de documentos confidenciales con información identificativa de clientes que quedaron desatendidos en una impresora se considera una:",
+      "opciones": ["Brecha", "Explotación", "Ataque", "Ocurrencia"],
+      "respuesta": 0,
+      "explicacion": "Es una brecha porque supone la divulgación no autorizada de información personal o registros confidenciales."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo del principio de mínimo privilegio?",
+      "opciones": [
+        "Los usuarios tienen acceso sin restricciones a toda la información",
+        "Los usuarios solo pueden acceder a los activos que necesitan para su función y nada más",
+        "Los usuarios pueden acceder a todos los elementos, pero solo modificar los que necesitan",
+        "Los usuarios pueden decidir quién accede a su información"
+      ],
+      "respuesta": 1,
+      "explicacion": "El mínimo privilegio limita el acceso a los recursos estrictamente necesarios para realizar el trabajo."
+    },
+    {
+      "pregunta": "En una organización sanitaria, ¿cuál sería un ejemplo del principio de mínimo privilegio?",
+      "opciones": [
+        "Todo el personal sanitario puede acceder a todos los datos de pacientes",
+        "El personal sanitario solo puede acceder a los activos necesarios para su función",
+        "Todos los médicos pueden acceder a todos los datos de pacientes",
+        "Los pacientes pueden acceder a datos de otros pacientes para compararlos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Cada trabajador debe acceder únicamente a la información necesaria para atender sus responsabilidades concretas."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL del principio de separación de funciones?",
+      "opciones": [
+        "Garantizar que todas las tareas se verifiquen dos veces",
+        "Evitar que una sola persona controle una tarea de alto riesgo de principio a fin",
+        "Distribuir uniformemente las tareas de alto riesgo",
+        "Garantizar que todos los empleados conozcan por igual todas las tareas"
+      ],
+      "respuesta": 1,
+      "explicacion": "La separación de funciones reduce fraude y errores al dividir las etapas críticas entre varias personas."
+    },
+    {
+      "pregunta": "¿Qué tipo de control de seguridad NO incluye las cámaras CCTV?",
+      "opciones": ["Disuasorio", "Correctivo", "Preventivo", "Detectivo"],
+      "respuesta": 1,
+      "explicacion": "Las cámaras pueden disuadir, detectar y aportar evidencia, pero no corrigen por sí mismas un error o incidente ya producido."
+    },
+    {
+      "pregunta": "¿Cuál de estos elementos NO puede ser un control de seguridad correctivo?",
+      "opciones": [
+        "Copias de seguridad",
+        "Parches",
+        "Plan de recuperación ante desastres",
+        "Bolardos"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los bolardos son controles físicos preventivos o disuasorios; no reparan vulnerabilidades ni restauran operaciones."
+    },
+    {
+      "pregunta": "¿Cuál de estos pares NO constituye autenticación multifactor (MFA)?",
+      "opciones": [
+        "Nombre de usuario y escaneo de retina",
+        "PIN y tarjeta de crédito",
+        "Huella dactilar y contraseña",
+        "Contraseña y nombre de usuario"
+      ],
+      "respuesta": 3,
+      "explicacion": "La contraseña y el nombre de usuario pertenecen al factor de conocimiento; MFA requiere factores de categorías diferentes."
+    },
+    {
+      "pregunta": "¿Qué control de acceso físico es MENOS eficaz para impedir el acceso no autorizado de personas a un centro de datos?",
+      "opciones": ["Vallas", "Barreras", "Torniquetes", "Bolardos"],
+      "respuesta": 3,
+      "explicacion": "Los bolardos están diseñados principalmente para detener vehículos, no para impedir el paso de personas."
+    },
+    {
+      "pregunta": "¿Cuál es la medida de seguridad física más eficaz para una instalación informática reciente, sin personal, con detectores de movimiento y autenticación secundaria?",
+      "opciones": ["CCTV", "IPS", "Mantrap", "Jaulas de Faraday"],
+      "respuesta": 2,
+      "explicacion": "Un mantrap controla dos puertas interbloqueadas y evita que una persona avance sin completar la verificación de acceso."
+    },
+    {
+      "pregunta": "¿Qué tipo de control representan habitualmente los perros, guardias y vallas?",
+      "opciones": ["Detectivo", "De recuperación", "Administrativo", "Físico"],
+      "respuesta": 3,
+      "explicacion": "Son medidas tangibles destinadas a impedir o disuadir el acceso físico no autorizado."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes tipos de control de acceso NO implica una cerradura?",
+      "opciones": ["Físico", "Directivo", "Preventivo", "Disuasorio"],
+      "respuesta": 1,
+      "explicacion": "Un control directivo consiste en políticas, instrucciones o normas; no necesita un mecanismo físico como una cerradura."
+    },
+    {
+      "pregunta": "¿Cómo se denomina el hecho de que un usuario autenticado pueda realizar actividades específicas dentro de una aplicación o sistema?",
+      "opciones": [
+        "Roles",
+        "Gestión de grupos",
+        "Inicios de sesión",
+        "Autorización"
+      ],
+      "respuesta": 3,
+      "explicacion": "La autorización determina qué acciones y recursos puede utilizar un usuario después de autenticar su identidad."
+    },
+    {
+      "pregunta": "¿Cómo pueden las organizaciones combinar eficazmente distintos controles de acceso físico para mejorar la seguridad?",
+      "opciones": [
+        "Implantando un único mecanismo universal para todas las áreas",
+        "Utilizando varias capas, como control electrónico y autenticación biométrica",
+        "Eliminando los controles físicos y confiando solo en la vigilancia de los empleados",
+        "Permitiendo acceso sin restricciones para fomentar la confianza"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las capas múltiples exigen verificaciones independientes y reducen la probabilidad de que falle todo el sistema de protección."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo PRINCIPAL de una política de gestión de visitantes dentro de los controles de acceso físico?",
+      "opciones": [
+        "Garantizar acceso sin restricciones a todas las áreas",
+        "Controlar y supervisar el acceso de visitantes, permitiendo la entrada solo a personas autorizadas",
+        "Eliminar la necesidad de controles físicos para visitantes",
+        "Evitar que los visitantes se identifiquen o registren"
+      ],
+      "respuesta": 1,
+      "explicacion": "La política registra, autoriza y limita los movimientos de visitantes para proteger la instalación y sus activos."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones NO es una capa de control de acceso?",
+      "opciones": ["Física", "Política", "Administrativa", "Técnica"],
+      "respuesta": 1,
+      "explicacion": "Las capas son física, administrativa y técnica. Las políticas forman parte de los controles administrativos, pero no constituyen una capa separada."
+    },
+    {
+      "pregunta": "¿Cuál es un objetivo PRINCIPAL de implantar controles de acceso físico en una organización?",
+      "opciones": [
+        "Impedir el acceso no autorizado a instalaciones y proteger información y recursos sensibles",
+        "Garantizar que todos los empleados accedan a todas las áreas",
+        "Permitir acceso público a áreas sensibles",
+        "Evitar la necesidad de controles técnicos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los controles físicos restringen la entrada a instalaciones y áreas sensibles para proteger personas, datos, sistemas y activos."
+    },
+    {
+      "pregunta": "¿Qué mecanismo de control de acceso físico utiliza tarjetas electrónicas o llaveros con información identificativa única?",
+      "opciones": [
+        "Control de acceso biométrico",
+        "Cerraduras y llaves mecánicas",
+        "Control de acceso electrónico",
+        "Prevención de tailgating"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los sistemas electrónicos leen identificadores únicos de tarjetas o llaveros y los comparan con una base de usuarios autorizados."
+    },
+    {
+      "pregunta": "En el contexto de los controles de acceso físico, ¿para qué se implanta un mantrap?",
+      "opciones": [
+        "Para permitir acceso sin restricciones a áreas seguras",
+        "Para evitar el tailgating",
+        "Para ofrecer una sala de espera cómoda",
+        "Para eliminar la necesidad de personal de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las puertas interbloqueadas de un mantrap impiden que una persona no autorizada siga a otra hacia un área protegida."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes métodos de control de acceso físico está diseñado para autenticar la identidad de quienes entran en una instalación?",
+      "opciones": [
+        "Tarjetas de acceso",
+        "Guardias de seguridad",
+        "Hojas de registro de visitantes",
+        "Videovigilancia"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las tarjetas contienen un identificador que el sistema compara con una base de datos de usuarios autorizados."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de usar un mantrap en el control de acceso físico?",
+      "opciones": [
+        "Supervisar la actividad de los empleados",
+        "Permitir la entrada simultánea de varias personas",
+        "Evitar el tailgating o piggybacking",
+        "Actuar como método secundario de autenticación"
+      ],
+      "respuesta": 2,
+      "explicacion": "El mantrap permite el paso controlado de una persona cada vez e impide que otra la siga sin autorización."
+    },
+    {
+      "pregunta": "Los controles de acceso físico se emplean para:",
+      "opciones": [
+        "Garantizar que todos accedan a la instalación",
+        "Proteger los activos de una empresa, incluido su personal",
+        "Facilitar la entrada y salida sin restricciones",
+        "Registrar los movimientos de los empleados"
+      ],
+      "respuesta": 1,
+      "explicacion": "Su función principal es proteger personas, instalaciones y activos frente al acceso físico no autorizado."
+    },
+    {
+      "pregunta": "¿Cuál es una consideración PRINCIPAL al elegir controles de acceso físico?",
+      "opciones": [
+        "La seguridad del edificio",
+        "La seguridad de los equipos",
+        "La seguridad del personal",
+        "La seguridad de la red"
+      ],
+      "respuesta": 2,
+      "explicacion": "La protección de las personas tiene prioridad sobre la protección de edificios, equipos o redes."
+    },
+    {
+      "pregunta": "¿Cuál es un método habitual para que un sistema de control de acceso autentique a una persona?",
+      "opciones": [
+        "Comparar su credencial con una base de datos verificada",
+        "Comparar su vestimenta con un código de vestimenta",
+        "Comparar sus datos biométricos con los de otras personas cercanas",
+        "Comparar sus horarios de acceso anteriores y actuales"
+      ],
+      "respuesta": 0,
+      "explicacion": "El sistema valida el identificador de la credencial frente a una base de datos de personas autorizadas."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe un posible proceso de enrolamiento en un entorno de alta seguridad?",
+      "opciones": [
+        "Emitir una credencial con los identificadores del empleado y, posiblemente, datos biométricos",
+        "Emitir una credencial y permitir que el empleado elija sus identificadores",
+        "Emitir una credencial y usar una ubicación fija como identificador",
+        "Emitir una credencial y recopilar el historial religioso del empleado"
+      ],
+      "respuesta": 0,
+      "explicacion": "El enrolamiento vincula una credencial única con la identidad verificada del empleado y puede incorporar biometría."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de autenticación biométrica?",
+      "opciones": [
+        "Dirección de correo electrónico y contraseña",
+        "OTP y PIN",
+        "Llave física y contraseña",
+        "Huella de voz"
+      ],
+      "respuesta": 3,
+      "explicacion": "La huella de voz utiliza características físicas y conductuales únicas de la voz para verificar la identidad."
+    },
+    {
+      "pregunta": "¿Cuál NO es un ejemplo de dato biométrico?",
+      "opciones": [
+        "Identificadores de huella dactilar",
+        "Identificadores de retina",
+        "Identificadores del historial crediticio",
+        "Identificadores de dinámica de pulsación de teclas"
+      ],
+      "respuesta": 2,
+      "explicacion": "El historial crediticio describe conducta financiera, no una característica física o conductual usada para reconocimiento automático."
+    },
+    {
+      "pregunta": "¿Qué tipo de tarjetas puede utilizarse como herramienta para conceder acceso?",
+      "opciones": [
+        "Tarjetas de visita",
+        "Tarjetas inteligentes",
+        "Tarjetas de cumpleaños",
+        "Tarjetas de crédito"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las tarjetas inteligentes incorporan un chip que permite autenticación, almacenamiento y procesamiento de datos."
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia más importante entre el control de acceso obligatorio (MAC) y el control de acceso discrecional (DAC)?",
+      "opciones": [
+        "En MAC, los administradores de seguridad asignan permisos; en DAC, los permisos dependen del propietario del objeto",
+        "En MAC, los permisos dependen del propietario; en DAC, los asignan los administradores de seguridad",
+        "En MAC, los administradores asignan permisos; en DAC, los administradores definen roles",
+        "En MAC, los administradores definen roles; en DAC, los roles dependen del propietario"
+      ],
+      "respuesta": 0,
+      "explicacion": "MAC aplica permisos definidos centralmente según etiquetas y habilitaciones; DAC permite que el propietario del objeto decida el acceso."
+    },
+    {
+      "pregunta": "¿Qué modelo se utiliza en el control de acceso obligatorio (MAC)?",
+      "opciones": [
+        "Discrecional",
+        "Basado en grupos",
+        "Basado en retículas",
+        "Basado en reglas"
+      ],
+      "respuesta": 2,
+      "explicacion": "MAC suele emplear un modelo de retícula que relaciona niveles de habilitación de sujetos y clasificación de objetos."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO es un requisito típico de seguridad física para armarios de cableado? (★)",
+      "opciones": [
+        "Instalarlos únicamente en áreas supervisadas",
+        "Prohibir el almacenamiento de materiales inflamables",
+        "Usar sensores de puerta para registrar entradas",
+        "Realizar inspecciones periódicas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Evitar materiales inflamables es una buena práctica general, pero no suele citarse como requisito específico del control de acceso a armarios de cableado."
+    },
+    {
+      "pregunta": "Entre el control de acceso obligatorio (MAC) y el discrecional (DAC), ¿qué modelo es más flexible y escalable?",
+      "opciones": [
+        "MAC, porque permite añadir etiquetas con flexibilidad",
+        "DAC, porque permite que administradores o propietarios individuales tomen decisiones",
+        "MAC, por su compartimentación y facilidad para añadir compartimentos",
+        "DAC, por su toma de decisiones centralizada"
+      ],
+      "respuesta": 1,
+      "explicacion": "DAC es más adaptable porque los propietarios o administradores de recursos pueden modificar permisos según las necesidades."
+    },
+    {
+      "pregunta": "¿Qué recibe una etiqueta en un modelo MAC?",
+      "opciones": [
+        "Los objetos y los sujetos reciben etiquetas",
+        "Cada objeto recibe una etiqueta y cada sujeto un compartimento",
+        "Todos los objetos y sujetos reciben la misma etiqueta",
+        "Cada sujeto recibe una etiqueta y cada objeto un compartimento"
+      ],
+      "respuesta": 0,
+      "explicacion": "En MAC, tanto sujetos como objetos reciben etiquetas que representan habilitación y clasificación."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso es habitual en los firewalls?",
+      "opciones": [
+        "Control de acceso discrecional (DAC)",
+        "Control de acceso basado en reglas (RuBAC)",
+        "Control de acceso basado en roles (RBAC)",
+        "Control de acceso obligatorio (MAC)"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los firewalls permiten o bloquean tráfico mediante reglas basadas en direcciones, puertos, protocolos y otros criterios."
+    },
+    {
+      "pregunta": "¿Qué modelo lógico de control de acceso utiliza un conjunto de reglas para determinar si un sujeto puede acceder a un objeto concreto?",
+      "opciones": [
+        "Control de acceso discrecional (DAC)",
+        "Control de acceso basado en roles (RBAC)",
+        "Control de acceso obligatorio (MAC)",
+        "Control de acceso basado en reglas (RuBAC)"
+      ],
+      "respuesta": 3,
+      "explicacion": "RuBAC toma decisiones de acceso aplicando reglas predefinidas a las características de la solicitud."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso permite al propietario de un archivo conceder acceso a otras personas mediante una ACL?",
+      "opciones": [
+        "Basado en roles",
+        "No discrecional",
+        "Basado en reglas",
+        "Discrecional"
+      ],
+      "respuesta": 3,
+      "explicacion": "En DAC, el propietario del recurso decide quién puede acceder y qué acciones puede realizar."
+    },
+    {
+      "pregunta": "¿Cuál es la función de una lista de control de acceso (ACL) en un sistema de archivos Unix?",
+      "opciones": [
+        "Establecer permisos predeterminados para archivos nuevos",
+        "Especificar qué usuarios tienen acceso a los recursos",
+        "Ajustar permisos según la actividad del usuario",
+        "Supervisar intentos de acceso no autorizado"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una ACL define permisos detallados para usuarios y grupos sobre archivos u otros recursos."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un método lógico de control de acceso que verifica la identidad de un usuario antes de concederle acceso a un sistema?",
+      "opciones": [
+        "Cifrado",
+        "Firewall",
+        "Sistema de detección de intrusiones",
+        "Autenticación"
+      ],
+      "respuesta": 3,
+      "explicacion": "La autenticación comprueba la identidad antes de permitir el acceso; los demás mecanismos cumplen funciones distintas."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito PRINCIPAL de implantar control de acceso basado en roles (RBAC)?",
+      "opciones": [
+        "Impedir el acceso físico no autorizado",
+        "Conceder acceso a recursos según las responsabilidades laborales",
+        "Añadir una capa de seguridad mediante cifrado",
+        "Supervisar la actividad de usuarios en la red"
+      ],
+      "respuesta": 1,
+      "explicacion": "RBAC asigna permisos a roles definidos por funciones laborales y después asigna usuarios a esos roles."
+    },
+    {
+      "pregunta": "¿Quién dicta las reglas de acceso en un control de acceso discrecional (DAC)?",
+      "opciones": [
+        "Solo los administradores de seguridad",
+        "El sujeto que creó el objeto",
+        "El último usuario que utilizó el objeto",
+        "El CEO o CISO de la empresa"
+      ],
+      "respuesta": 1,
+      "explicacion": "En DAC, el creador o propietario del objeto decide quién puede acceder y con qué permisos."
+    },
+    {
+      "pregunta": "El objetivo PRINCIPAL del modelo Bell-LaPadula es: (★)",
+      "opciones": [
+        "Garantizar que solo el propietario acceda a un archivo",
+        "Evitar la divulgación no autorizada de información clasificada",
+        "Garantizar que toda comunicación de red esté cifrada",
+        "Proteger los equipos frente a virus y malware"
+      ],
+      "respuesta": 1,
+      "explicacion": "Bell-LaPadula protege la confidencialidad mediante las reglas «no leer hacia arriba» y «no escribir hacia abajo»."
+    },
+    {
+      "pregunta": "Puede afirmarse que el control de acceso obligatorio (MAC) es:",
+      "opciones": [
+        "Una política en la que los sujetos controlan completamente el acceso",
+        "Una política aplicada uniformemente a todos los sujetos y objetos dentro del límite del sistema",
+        "Una política que permite a todos acceder a cualquier información",
+        "Un control que solo existe en sistemas de seguridad física"
+      ],
+      "respuesta": 1,
+      "explicacion": "MAC aplica de forma centralizada una política uniforme basada en etiquetas de clasificación y niveles de habilitación."
+    },
+    {
+      "pregunta": "¿Quién controla el acceso en un sistema de control de acceso obligatorio (MAC)?",
+      "opciones": [
+        "Cualquier usuario con acceso al sistema",
+        "Solo administradores de seguridad debidamente designados",
+        "El CEO de la empresa",
+        "Auditores externos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los administradores de seguridad asignan etiquetas y gestionan las políticas que determinan el acceso."
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia PRINCIPAL entre DAC y MAC?",
+      "opciones": [
+        "El nivel de seguridad que proporcionan",
+        "El tipo de sistemas en que se utilizan",
+        "Quién controla el acceso: el propietario del objeto en DAC y los administradores de seguridad en MAC",
+        "La tecnología que utilizan"
+      ],
+      "respuesta": 2,
+      "explicacion": "La diferencia esencial es la autoridad que decide el acceso: el propietario en DAC y una autoridad central en MAC."
+    },
+    {
+      "pregunta": "¿Qué es el control de acceso basado en roles (RBAC)?",
+      "opciones": [
+        "Un control basado en descripciones de puestos",
+        "Un control en el que los permisos de usuario se establecen según roles",
+        "Un control que solo permite acceder a determinados roles",
+        "Un control que exige verificación biométrica"
+      ],
+      "respuesta": 1,
+      "explicacion": "RBAC define roles según funciones organizativas y asigna a cada rol los permisos necesarios."
+    },
+    {
+      "pregunta": "¿Cómo se asignan normalmente los permisos en un modelo de control de acceso basado en roles (RBAC)?",
+      "opciones": [
+        "Según las necesidades individuales de cada usuario",
+        "Según el rol del usuario dentro de la organización",
+        "Según el último usuario que accedió al sistema",
+        "Según la discreción del administrador de sistemas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los permisos se asocian a roles organizativos y los usuarios reciben permisos al ser asignados a esos roles."
+    },
+    {
+      "pregunta": "¿Cuál es la ventaja PRINCIPAL de utilizar un modelo de control de acceso basado en reglas (RuBAC)? (★)",
+      "opciones": [
+        "Permite que el CEO o CISO tenga el control absoluto",
+        "Permite que el último usuario determine el acceso",
+        "Proporciona control de acceso dinámico basado en reglas predefinidas",
+        "Permite que el creador del objeto dicte el acceso"
+      ],
+      "respuesta": 2,
+      "explicacion": "RuBAC evalúa reglas del sistema para adaptar las decisiones de acceso a condiciones como horario, origen o tipo de recurso."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso se basa en la habilitación del usuario y la clasificación del objeto?",
+      "opciones": [
+        "Control de acceso discrecional (DAC)",
+        "Control de acceso basado en roles (RBAC)",
+        "Control de acceso obligatorio (MAC)",
+        "Control de acceso basado en reglas (RuBAC)"
+      ],
+      "respuesta": 2,
+      "explicacion": "MAC compara la habilitación del sujeto con la clasificación del objeto para decidir el acceso."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones está relacionada con el control de acceso discrecional (DAC)?",
+      "opciones": [
+        "Permite que el administrador del sistema tenga control total",
+        "Permite que el último usuario determine el acceso",
+        "Proporciona acceso dinámico según reglas predefinidas",
+        "Permite que el creador del objeto determine el acceso"
+      ],
+      "respuesta": 3,
+      "explicacion": "DAC concede al propietario o creador del recurso la facultad de otorgar o denegar permisos."
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia entre «denegación implícita» y «denegación explícita» en control de acceso?",
+      "opciones": [
+        "La implícita deniega el acceso salvo concesión expresa; la explícita deniega el acceso de forma específica",
+        "La implícita deniega a administradores y la explícita al creador del objeto",
+        "La implícita la decide el último usuario y la explícita el sistema",
+        "No existe diferencia"
+      ],
+      "respuesta": 0,
+      "explicacion": "La denegación implícita bloquea todo lo no autorizado expresamente; una denegación explícita contiene una regla concreta que prohíbe el acceso."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes detectaría un acceso no autorizado en el perímetro de un centro de datos seguro?",
+      "opciones": [
+        "Señales de advertencia",
+        "Un firewall",
+        "Sensores de movimiento",
+        "Barreras de seguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los sensores de movimiento detectan desplazamientos físicos y pueden activar una alarma ante una intrusión."
+    },
+    {
+      "pregunta": "¿En qué modelo de control de acceso decide el propietario de los datos quién puede acceder a ellos?",
+      "opciones": ["DAC", "RBAC", "MAC", "RAC"],
+      "respuesta": 0,
+      "explicacion": "En DAC, el propietario del recurso tiene discreción para conceder o retirar acceso."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO suele ser un componente de un sistema mantrap? (★)",
+      "opciones": [
+        "Autenticación biométrica",
+        "Dos conjuntos de puertas interbloqueadas",
+        "Un sistema de detección de intrusiones (IDS)",
+        "Videovigilancia"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un mantrap puede incluir puertas interbloqueadas, biometría y videovigilancia; un IDS supervisa redes o sistemas, no el paso físico."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el propósito de una jaula de Faraday? (★)",
+      "opciones": [
+        "Impedir el acceso físico no autorizado a una instalación",
+        "Bloquear transmisiones electromagnéticas",
+        "Controlar la propagación de fuego y humo",
+        "Proteger canales de comunicación de la alta dirección"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una jaula de Faraday es un recinto conductor que bloquea o atenúa campos y transmisiones electromagnéticas."
+    }
+  ]
+}
