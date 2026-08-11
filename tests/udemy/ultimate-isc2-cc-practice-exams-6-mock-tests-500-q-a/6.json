@@ -1,0 +1,932 @@
+{
+  "titulo": "Fundamentos de ciberseguridad #6",
+  "procedencia": "Batería proporcionada por el usuario, organizada en las secciones Security Principles, Business Continuity, DR & Incident Response, Access Controls Concepts, Network Security y Security Operations",
+  "descripcion": "Batería de preguntas sobre principios de seguridad, continuidad de negocio, respuesta a incidentes, control de acceso, seguridad de redes y operaciones de seguridad.",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué acción preserva mejor la integridad de un archivo transmitido?",
+      "opciones": [
+        "Enviar un hash criptográfico junto con el archivo para su verificación",
+        "Comprimir el archivo",
+        "Cambiar el nombre del archivo",
+        "Aumentar el tamaño del archivo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un hash permite verificar que el archivo no fue alterado durante la transmisión."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el término «factor de exposición» en un análisis cuantitativo de riesgos?",
+      "opciones": [
+        "El porcentaje del valor del activo que se pierde en un único incidente",
+        "El número de incidentes por año",
+        "El valor total de todos los activos",
+        "El nivel de riesgo aceptable"
+      ],
+      "respuesta": 0,
+      "explicacion": "El factor de exposición es la proporción del valor de un activo que se pierde en un solo evento; SLE = valor del activo × EF."
+    },
+    {
+      "pregunta": "En la fórmula ALE = SLE × ARO, ¿qué representa ARO?",
+      "opciones": [
+        "La tasa anualizada de ocurrencia del riesgo",
+        "La expectativa de pérdida única",
+        "El valor total del activo",
+        "El factor de exposición"
+      ],
+      "respuesta": 0,
+      "explicacion": "ARO representa cuántas veces por año se espera que ocurra el evento de pérdida."
+    },
+    {
+      "pregunta": "Si SLE es 10.000 y ARO es 2, ¿cuál es el ALE?",
+      "opciones": ["20.000", "5.000", "10.000", "12.000"],
+      "respuesta": 0,
+      "explicacion": "ALE = SLE × ARO = 10.000 × 2 = 20.000."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es el mejor ejemplo de un control físico preventivo?",
+      "opciones": [
+        "Una puerta cerrada con llave que restringe la entrada a una sala de servidores",
+        "Una revisión de registros de auditoría",
+        "Una restauración desde una copia de seguridad",
+        "Una señal de advertencia"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una cerradura impide la entrada física no autorizada y constituye un control físico preventivo."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor «defensa en profundidad» a nivel conceptual?",
+      "opciones": [
+        "Superponer controles diversos para que el fallo de uno no provoque una vulneración",
+        "Depender de un único control muy fuerte",
+        "Ocultar el diseño del sistema",
+        "Conceder privilegios máximos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La defensa en profundidad utiliza múltiples capas independientes para que el fallo de una no comprometa todo el sistema."
+    },
+    {
+      "pregunta": "Una empresa debe notificar a las personas afectadas en un plazo de 72 horas tras descubrir una brecha de datos personales. ¿Con qué normativa se asocia principalmente este requisito?",
+      "opciones": ["GDPR", "PCI DSS", "HIPAA", "SOX"],
+      "respuesta": 0,
+      "explicacion": "El enunciado asocia el requisito de notificación de brechas en 72 horas con el GDPR."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de protección de la confidencialidad mediante un control administrativo?",
+      "opciones": [
+        "Exigir a los empleados que firmen acuerdos de confidencialidad",
+        "Cifrar un disco duro",
+        "Instalar una cerradura en una puerta",
+        "Desplegar un firewall"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los acuerdos de confidencialidad son controles administrativos para proteger información sensible."
+    },
+    {
+      "pregunta": "¿Qué afirmación sobre la «aceptación» como tratamiento del riesgo es correcta?",
+      "opciones": [
+        "Debe ser una decisión documentada e informada dentro de la tolerancia al riesgo",
+        "Significa ignorar el riesgo sin tener conocimiento de él",
+        "Siempre requiere contratar un seguro",
+        "Elimina el riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La aceptación es una decisión consciente y documentada cuando el riesgo está dentro de la tolerancia de la organización."
+    },
+    {
+      "pregunta": "¿Qué canon del Código de Ética de ISC2 aborda el avance y la protección de la profesión?",
+      "opciones": [
+        "El cuarto canon",
+        "El primer canon",
+        "El segundo canon",
+        "El tercer canon"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cuarto canon establece el deber de avanzar y proteger la profesión."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor razón para mantener un inventario preciso de activos como parte de la gestión de riesgos?",
+      "opciones": [
+        "No se puede proteger lo que no se sabe que se tiene",
+        "Para aumentar el número de activos",
+        "Para hacer que las auditorías duren más",
+        "Para evitar aplicar parches"
+      ],
+      "respuesta": 0,
+      "explicacion": "Conocer los activos es fundamental para evaluar sus riesgos y aplicar las protecciones adecuadas."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de un control físico que también actúa como elemento disuasorio?",
+      "opciones": [
+        "Cámaras de seguridad visibles",
+        "Un algoritmo de cifrado",
+        "Una política de contraseñas",
+        "Un parche de software"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las cámaras visibles pueden disuadir intentos y además registrar eventos."
+    },
+    {
+      "pregunta": "¿Qué beneficio principal obtiene un programa de seguridad que mapea sus controles a un estándar reconocido?",
+      "opciones": [
+        "Un enfoque estructurado y comparable, y una demostración de cumplimiento más sencilla",
+        "Inmunidad frente a todos los ataques",
+        "Eliminación de toda la documentación",
+        "Garantía de riesgo cero"
+      ],
+      "respuesta": 0,
+      "explicacion": "Alinear los controles con un estándar aporta estructura y facilita demostrar el cumplimiento."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes situaciones describe mejor que la accountability está siendo socavada?",
+      "opciones": [
+        "Las acciones no pueden atribuirse a una persona concreta",
+        "Cada acción se registra asociada a un usuario único",
+        "Se aplica MFA",
+        "Se realizan revisiones de acceso"
+      ],
+      "respuesta": 0,
+      "explicacion": "La accountability se debilita cuando las acciones no pueden atribuirse a una persona específica."
+    },
+    {
+      "pregunta": "Una organización quiere reducir el riesgo de amenazas internas sin perjudicar la productividad. ¿Qué combinación es la más adecuada?",
+      "opciones": [
+        "Mínimo privilegio, monitorización y separación de funciones",
+        "Dar derechos de administrador a todo el mundo",
+        "Eliminar todos los registros",
+        "Compartir cuentas para simplificar el acceso"
+      ],
+      "respuesta": 0,
+      "explicacion": "Estos controles limitan y ayudan a detectar el uso indebido interno sin impedir el trabajo legítimo."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones distingue mejor una política de un procedimiento?",
+      "opciones": [
+        "Una política indica qué y por qué; un procedimiento indica cómo",
+        "Un procedimiento indica qué y por qué; una política indica cómo",
+        "Son lo mismo",
+        "Ninguno se documenta"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las políticas expresan intención y requisitos; los procedimientos describen cómo ejecutarlos."
+    },
+    {
+      "pregunta": "¿Qué término describe el principio de que la información solo debe estar disponible para quienes están autorizados a acceder a ella?",
+      "opciones": [
+        "Confidencialidad",
+        "Disponibilidad",
+        "Integridad",
+        "Redundancia"
+      ],
+      "respuesta": 0,
+      "explicacion": "La confidencialidad restringe la información a las partes autorizadas."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es el mejor ejemplo de un control correctivo a nivel de gobierno?",
+      "opciones": [
+        "Actualizar una política tras un incidente para evitar que se repita",
+        "Instalar una cerradura en una puerta",
+        "Mostrar un aviso de advertencia",
+        "Revisar registros"
+      ],
+      "respuesta": 0,
+      "explicacion": "Revisar una política después de un incidente es una acción correctiva de gobierno."
+    },
+    {
+      "pregunta": "Una organización realiza una evaluación de riesgos y decide que un riesgo concreto está dentro de su apetito de riesgo. ¿Cuál es el siguiente paso adecuado?",
+      "opciones": [
+        "Documentar formalmente la aceptación del riesgo",
+        "Cerrar inmediatamente la empresa",
+        "Ignorar el riesgo sin dejar constancia",
+        "Transferirlo independientemente del coste"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los riesgos dentro del apetito de riesgo pueden aceptarse formalmente mediante una decisión documentada."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor «security assurance»?",
+      "opciones": [
+        "Confianza en que los controles están implementados correctamente y funcionan de forma eficaz",
+        "Garantía de que no habrá incidentes futuros",
+        "Eliminación de todas las vulnerabilidades",
+        "Una afirmación de marketing"
+      ],
+      "respuesta": 0,
+      "explicacion": "Security assurance es la confianza justificada de que los controles funcionan según lo previsto."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor razón para alinear las políticas de seguridad con los requisitos legales y regulatorios?",
+      "opciones": [
+        "Evitar sanciones legales y garantizar el cumplimiento",
+        "Aumentar el tiempo de inactividad de los sistemas",
+        "Alargar las políticas sin otro propósito",
+        "Eliminar la accountability"
+      ],
+      "respuesta": 0,
+      "explicacion": "La alineación con leyes y regulaciones ayuda a evitar sanciones y demostrar cumplimiento."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe con mayor precisión el «modelado de amenazas»?",
+      "opciones": [
+        "Identificar sistemáticamente amenazas potenciales y cómo podrían atacar un sistema",
+        "Cifrar todos los datos en reposo",
+        "Asignar direcciones IP",
+        "Proteger físicamente un edificio"
+      ],
+      "respuesta": 0,
+      "explicacion": "El modelado de amenazas identifica amenazas y rutas de ataque potenciales para orientar las defensas."
+    },
+    {
+      "pregunta": "¿Qué principio de seguridad se refuerza más directamente al exigir la aprobación de dos responsables para grandes transferencias de fondos?",
+      "opciones": [
+        "Separación de funciones",
+        "Disponibilidad",
+        "Redundancia",
+        "Oscuridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Exigir varios aprobadores divide la autoridad y reduce el riesgo de fraude."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el propósito de un runbook de respuesta a incidentes?",
+      "opciones": [
+        "Proporcionar instrucciones paso a paso para responder a tipos específicos de incidentes",
+        "Listar los días festivos de la empresa",
+        "Definir un plan de marketing",
+        "Emitir una orden de compra de hardware"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un runbook proporciona procedimientos predefinidos para gestionar incidentes concretos de forma coherente."
+    },
+    {
+      "pregunta": "¿En qué fase se identificaría la causa raíz de un incidente para evitar que se repita?",
+      "opciones": [
+        "Actividad posterior al incidente o lecciones aprendidas",
+        "Preparación",
+        "Detección",
+        "Contención"
+      ],
+      "respuesta": 0,
+      "explicacion": "El análisis de causa raíz y las mejoras se realizan en la fase posterior al incidente."
+    },
+    {
+      "pregunta": "¿Cuál es una razón clave para definir niveles de gravedad de incidentes?",
+      "opciones": [
+        "Priorizar los esfuerzos de respuesta y asignar recursos adecuadamente",
+        "Hacer que todos los incidentes sean igual de urgentes",
+        "Evitar documentar los incidentes",
+        "Eliminar la necesidad de un equipo de respuesta"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los niveles de gravedad permiten clasificar los incidentes y responder de forma proporcional a su impacto."
+    },
+    {
+      "pregunta": "Una empresa mantiene en otra ubicación una copia totalmente replicada y en tiempo real de sus sistemas para conmutación inmediata por error. ¿Cómo se describe mejor esta configuración?",
+      "opciones": [
+        "Un hot site con replicación en tiempo real",
+        "Un cold site",
+        "Un warm site",
+        "Ausencia de capacidad de recuperación"
+      ],
+      "respuesta": 0,
+      "explicacion": "La replicación en tiempo real y la conmutación inmediata por error son características de un hot site."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de un plan de comunicaciones de emergencia durante un desastre?",
+      "opciones": [
+        "Garantizar una comunicación oportuna y precisa con las partes interesadas",
+        "Aumentar la confusión",
+        "Ocultar el incidente a todo el mundo",
+        "Detener todas las funciones del negocio"
+      ],
+      "respuesta": 0,
+      "explicacion": "El plan mantiene informados a empleados, clientes y otras partes interesadas durante una crisis."
+    },
+    {
+      "pregunta": "¿Cuál es la relación correcta entre RTO y MTD?",
+      "opciones": [
+        "El RTO debe ser menor o igual que el MTD",
+        "El RTO siempre debe superar el MTD",
+        "RTO y MTD no están relacionados",
+        "El MTD debe ser menor que el RPO"
+      ],
+      "respuesta": 0,
+      "explicacion": "La recuperación debe completarse dentro del tiempo máximo tolerable de inactividad, por lo que el RTO debe estar dentro del MTD."
+    },
+    {
+      "pregunta": "¿Cuál es el mejor primer paso al detectar una brecha de datos confirmada que afecta a datos personales?",
+      "opciones": [
+        "Activar el plan de respuesta a incidentes e iniciar la contención",
+        "Eliminar inmediatamente todos los registros",
+        "Ignorarla hasta el final del trimestre",
+        "Publicar los datos robados sin procesar"
+      ],
+      "respuesta": 0,
+      "explicacion": "Activar el plan de respuesta a incidentes moviliza al equipo para contener y gestionar la brecha."
+    },
+    {
+      "pregunta": "¿Por qué deben los responsables de respuesta a incidentes documentar sus acciones y marcas de tiempo durante un incidente?",
+      "opciones": [
+        "Para crear un registro preciso útil para análisis, informes y posible uso legal",
+        "Para ralentizar la respuesta",
+        "Para evitar aprender del incidente",
+        "Para ocultar lo ocurrido"
+      ],
+      "respuesta": 0,
+      "explicacion": "La documentación detallada respalda la investigación, los informes y las posibles necesidades probatorias."
+    },
+    {
+      "pregunta": "¿Cuál es la principal debilidad de la autenticación basada solo en contraseña?",
+      "opciones": [
+        "Una única contraseña robada o adivinada concede acceso completo",
+        "Es demasiado compleja para los usuarios",
+        "No puede registrarse",
+        "Requiere hardware especial"
+      ],
+      "respuesta": 0,
+      "explicacion": "Al existir un solo factor, el compromiso de la contraseña compromete por completo la cuenta."
+    },
+    {
+      "pregunta": "Una organización implementa control de acceso basado en roles y revisa los roles trimestralmente. ¿Qué riesgo aborda específicamente esta revisión?",
+      "opciones": [
+        "La acumulación de privilegios por cambios de rol o puesto",
+        "La latencia de red",
+        "Los cortes de energía",
+        "La gestión del cableado"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las revisiones periódicas detectan permisos acumulados que ya no corresponden al rol actual."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor la «federación de autenticación»?",
+      "opciones": [
+        "Confiar en el proveedor de identidad de otra organización para autenticar usuarios",
+        "Almacenar todas las contraseñas en texto claro",
+        "Bloquear a todos los usuarios externos",
+        "Desactivar MFA"
+      ],
+      "respuesta": 0,
+      "explicacion": "La federación permite confiar en otro IdP para autenticar usuarios que acceden a recursos."
+    },
+    {
+      "pregunta": "¿Cuál es el enfoque más seguro para conceder acceso a sistemas internos a un proveedor externo?",
+      "opciones": [
+        "Acceso de mínimo privilegio, limitado en el tiempo y monitorizado",
+        "Acceso permanente de administrador",
+        "Cuentas compartidas de proveedor sin registros",
+        "Acceso VPN sin restricciones a todo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Limitar el alcance y la duración del acceso y monitorizar la actividad reduce el riesgo asociado a terceros."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un factor de inherencia?",
+      "opciones": [
+        "Reconocimiento de voz",
+        "Un PIN",
+        "Un token de hardware",
+        "Una aplicación de códigos de un solo uso"
+      ],
+      "respuesta": 0,
+      "explicacion": "El reconocimiento de voz es un factor biométrico, es decir, algo que el usuario es."
+    },
+    {
+      "pregunta": "Un sistema de control de acceso deniega una solicitud porque la acreditación del usuario es inferior a la clasificación del objeto. ¿Qué modelo se está utilizando?",
+      "opciones": [
+        "Mandatory Access Control (MAC)",
+        "Discretionary Access Control (DAC)",
+        "Acceso anónimo",
+        "Acceso abierto"
+      ],
+      "respuesta": 0,
+      "explicacion": "La comparación entre acreditación y etiquetas de clasificación es característica de MAC."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes medidas reduce mejor el riesgo de acceso no autorizado a partir de portátiles robados?",
+      "opciones": [
+        "Cifrado completo de disco junto con autenticación fuerte",
+        "Dejar el portátil desbloqueado por comodidad",
+        "No usar contraseña",
+        "Compartir el portátil entre muchos usuarios"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado completo de disco y la autenticación fuerte protegen los datos si el dispositivo es robado."
+    },
+    {
+      "pregunta": "¿Qué práctica garantiza que el acceso de un usuario se ajuste rápidamente cuando se traslada a otro departamento?",
+      "opciones": [
+        "Recertificación de accesos y reasignación de rol durante el traslado",
+        "Mantener todos los accesos anteriores",
+        "Conceder acceso a todos los departamentos",
+        "Desactivar el registro durante el traslado"
+      ],
+      "respuesta": 0,
+      "explicacion": "Reevaluar los accesos durante un traslado elimina permisos antiguos y concede los nuevos que correspondan."
+    },
+    {
+      "pregunta": "¿Cuál es el mejor ejemplo de una debilidad de autenticación basada en conocimiento?",
+      "opciones": [
+        "Preguntas de seguridad cuyas respuestas pueden encontrarse en redes sociales",
+        "Un token de hardware que se pierde",
+        "Una huella dactilar que cambia",
+        "Una tarjeta inteligente clonada"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las respuestas que pueden descubrirse públicamente son autenticadores débiles."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe la prevención de la «acumulación de autorizaciones»?",
+      "opciones": [
+        "Eliminar durante revisiones periódicas los accesos que ya no son necesarios",
+        "Añadir acceso cada vez que un usuario lo solicita",
+        "No revisar nunca los accesos",
+        "Compartir cuentas ampliamente"
+      ],
+      "respuesta": 0,
+      "explicacion": "Eliminar periódicamente permisos innecesarios evita la acumulación de privilegios o autorizaciones."
+    },
+    {
+      "pregunta": "Una empresa exige biometría y tarjeta de acceso para entrar en su laboratorio más sensible. ¿Cuál es el principal beneficio de combinarlas?",
+      "opciones": [
+        "Mayor garantía mediante dos factores independientes",
+        "Entrada más rápida con menos seguridad",
+        "No necesitar registrar las entradas",
+        "Eliminar todo riesgo físico"
+      ],
+      "respuesta": 0,
+      "explicacion": "Combinar un factor de inherencia y uno de posesión aumenta la garantía de acceso."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor razón para registrar tanto los intentos de autenticación correctos como los fallidos?",
+      "opciones": [
+        "Los intentos fallidos pueden revelar ataques y los correctos respaldan la accountability",
+        "Para llenar el espacio en disco",
+        "Para ralentizar los inicios de sesión",
+        "Para ocultar la actividad a los auditores"
+      ],
+      "respuesta": 0,
+      "explicacion": "Registrar éxitos y fallos proporciona indicadores de ataque y trazabilidad."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes situaciones indicaría con mayor probabilidad un compromiso de credenciales?",
+      "opciones": [
+        "Inicios de sesión desde ubicaciones geográficamente imposibles en un intervalo corto",
+        "Un usuario inicia sesión desde su oficina asignada",
+        "Un cambio de contraseña durante un restablecimiento programado",
+        "Un usuario completa MFA correctamente una vez"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los inicios de sesión con «viaje imposible» son un indicador fuerte de uso de credenciales robadas."
+    },
+    {
+      "pregunta": "¿Qué control aplica mejor que los usuarios solo accedan a recursos adecuados a su acreditación y necesidad de saber?",
+      "opciones": [
+        "Una combinación de etiquetado MAC y restricciones de necesidad de saber",
+        "Acceso abierto para todos",
+        "Cuentas compartidas",
+        "Desactivar la autenticación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El etiquetado MAC aplica la acreditación y la necesidad de saber limita aún más el acceso."
+    },
+    {
+      "pregunta": "Una organización quiere reducir las llamadas al soporte técnico relacionadas con contraseñas y mejorar a la vez la seguridad. ¿Qué solución es la más adecuada?",
+      "opciones": [
+        "Single sign-on combinado con MFA",
+        "Eliminar todas las contraseñas sin ningún otro factor",
+        "Obligar a cambiar la contraseña a diario",
+        "Permitir reutilizar la misma contraseña en todos los sistemas"
+      ],
+      "respuesta": 0,
+      "explicacion": "SSO reduce la fatiga de contraseñas y MFA mantiene una autenticación fuerte."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el valor de seguridad de «implicit deny» como valor predeterminado en listas de control de acceso?",
+      "opciones": [
+        "Todo lo que no esté permitido explícitamente se bloquea, reduciendo la exposición accidental",
+        "Todo está permitido salvo que se bloquee",
+        "Cifra todo el tráfico",
+        "Concede derechos de administrador a todos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Implicit deny garantiza que solo se conceda el acceso expresamente autorizado."
+    },
+    {
+      "pregunta": "¿Cuál es el control de acceso más adecuado para un blog corporativo de lectura pública?",
+      "opciones": [
+        "Lectura anónima y escritura restringida a usuarios autenticados",
+        "Acceso completo de administrador para cualquiera",
+        "Sin acceso de lectura para nadie",
+        "Exigir MFA para leer publicaciones públicas"
+      ],
+      "respuesta": 0,
+      "explicacion": "El contenido público puede leerse de forma anónima mientras la escritura se limita a usuarios autorizados."
+    },
+    {
+      "pregunta": "¿Qué medida reduce mejor el riesgo de que un atacante use una cookie de sesión robada?",
+      "opciones": [
+        "Sesiones de corta duración y reautenticación para acciones sensibles",
+        "Sesiones que nunca caducan",
+        "Almacenar cookies en registros en texto claro",
+        "Desactivar el registro de sesiones"
+      ],
+      "respuesta": 0,
+      "explicacion": "Limitar la duración de la sesión y exigir reautenticación reduce el valor de una sesión robada."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones ordena correctamente las capas OSI desde la capa 1 hasta la capa 7?",
+      "opciones": [
+        "Física, Enlace de datos, Red, Transporte, Sesión, Presentación, Aplicación",
+        "Aplicación, Física, Red, Transporte, Sesión, Enlace de datos, Presentación",
+        "Red, Física, Transporte, Enlace de datos, Aplicación, Sesión, Presentación",
+        "Transporte, Aplicación, Física, Sesión, Red, Presentación, Enlace de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "El orden estándar del modelo OSI es Física, Enlace de datos, Red, Transporte, Sesión, Presentación y Aplicación."
+    },
+    {
+      "pregunta": "¿Qué combinación de protocolo y puerto es correcta?",
+      "opciones": [
+        "HTTPS en el puerto 443",
+        "SSH en el puerto 80",
+        "DNS en el puerto 25",
+        "RDP en el puerto 21"
+      ],
+      "respuesta": 0,
+      "explicacion": "HTTPS utiliza el puerto TCP 443."
+    },
+    {
+      "pregunta": "¿Cuál es un beneficio de un intrusion prevention system (IPS) configurado correctamente?",
+      "opciones": [
+        "Puede bloquear automáticamente tráfico malicioso conocido en tiempo real",
+        "Solo envía correos y no realiza ninguna acción",
+        "Asigna direcciones IP",
+        "Resuelve nombres de dominio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un IPS funciona en línea y puede bloquear ataques reconocidos mientras ocurren."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe el riesgo de un dispositivo de red sin parches, como un router?",
+      "opciones": [
+        "Vulnerabilidades conocidas pueden explotarse para comprometer la red",
+        "Funcionará más rápido",
+        "Se vuelve inmune a los ataques",
+        "Cifra automáticamente el tráfico"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los dispositivos sin parches exponen vulnerabilidades conocidas que los atacantes pueden explotar."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor descripción de una virtual LAN (VLAN)?",
+      "opciones": [
+        "Una agrupación lógica de dispositivos en un dominio de difusión independientemente de su ubicación física",
+        "Un cable físico que conecta dos edificios",
+        "Un algoritmo de cifrado",
+        "Un tipo de malware"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una VLAN es un dominio de difusión lógico independiente de la ubicación física de los dispositivos."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones proporciona la protección más fuerte para los datos transmitidos por una red inalámbrica?",
+      "opciones": [
+        "Cifrado WPA3",
+        "Una red abierta",
+        "WEP",
+        "Solo filtrado MAC"
+      ],
+      "respuesta": 0,
+      "explicacion": "WPA3 proporciona una protección inalámbrica más fuerte que una red abierta, WEP o el filtrado MAC por sí solo."
+    },
+    {
+      "pregunta": "¿Por qué el filtrado de direcciones MAC por sí solo se considera un control de seguridad débil?",
+      "opciones": [
+        "Porque un atacante puede suplantar direcciones MAC",
+        "Porque cifra todo el tráfico con demasiada fuerza",
+        "Porque requiere enrolamiento biométrico",
+        "Porque no se puede configurar"
+      ],
+      "respuesta": 0,
+      "explicacion": "El filtrado MAC puede eludirse porque las direcciones MAC pueden falsificarse."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el «egress filtering» en un firewall?",
+      "opciones": [
+        "Controlar y restringir el tráfico saliente de la red",
+        "Permitir todo el tráfico saliente sin inspección",
+        "Inspeccionar únicamente el tráfico entrante",
+        "Asignar direcciones IP"
+      ],
+      "respuesta": 0,
+      "explicacion": "El egress filtering limita el tráfico saliente y ayuda a prevenir la exfiltración de datos."
+    },
+    {
+      "pregunta": "¿Cuál es una ventaja de seguridad de la segmentación de red para el cumplimiento normativo?",
+      "opciones": [
+        "Puede reducir el alcance de los sistemas sujetos a una normativa como PCI DSS",
+        "Expone todos los sistemas a la normativa",
+        "Elimina la necesidad de cumplimiento",
+        "Cifra todos los datos automáticamente"
+      ],
+      "respuesta": 0,
+      "explicacion": "Aislar los sistemas regulados puede reducir el alcance de cumplimiento y la carga de auditoría."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe un «reverse proxy»?",
+      "opciones": [
+        "Un servidor situado delante de los servidores web que reenvía hacia ellos las solicitudes de los clientes",
+        "Una herramienta del lado cliente que oculta la navegación del usuario",
+        "Un resolvedor DNS",
+        "Únicamente un dispositivo físico de firewall"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un reverse proxy se sitúa delante de los servidores backend y puede aportar seguridad, balanceo de carga y caché."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor mitigación frente al envenenamiento ARP en una red conmutada?",
+      "opciones": [
+        "Dynamic ARP Inspection (DAI)",
+        "Desactivar todos los switches",
+        "Usar cables más largos",
+        "Desactivar el registro"
+      ],
+      "respuesta": 0,
+      "explicacion": "DAI valida el tráfico ARP frente a asociaciones de confianza para bloquear la suplantación."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre TCP y UDP es correcta?",
+      "opciones": [
+        "TCP es fiable y orientado a conexión; UDP es más rápido y no orientado a conexión",
+        "TCP no está orientado a conexión; UDP sí",
+        "Ambos garantizan la entrega por igual",
+        "Ninguno se utiliza en Internet"
+      ],
+      "respuesta": 0,
+      "explicacion": "TCP es fiable y orientado a conexión; UDP es no orientado a conexión y tiene menor sobrecarga."
+    },
+    {
+      "pregunta": "¿Qué opción detectaría mejor dispositivos no autorizados que se conectan a una red corporativa?",
+      "opciones": [
+        "Network Access Control (NAC)",
+        "Un servidor web público",
+        "Una red de invitados abierta",
+        "Un servidor DNS"
+      ],
+      "respuesta": 0,
+      "explicacion": "NAC autentica y evalúa los dispositivos antes de permitir su acceso a la red."
+    },
+    {
+      "pregunta": "¿Cuál es un beneficio de seguridad clave de desactivar los puertos de switch no utilizados?",
+      "opciones": [
+        "Impide que dispositivos no autorizados se conecten y obtengan acceso",
+        "Acelera Internet",
+        "Cifra todo el tráfico",
+        "Resuelve nombres de dominio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Desactivar puertos no utilizados bloquea la conexión de dispositivos no autorizados."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el cifrado «en tránsito» para una aplicación de base de datos?",
+      "opciones": [
+        "Cifrar la conexión entre la aplicación y la base de datos",
+        "Cifrar los archivos almacenados de la base de datos",
+        "Cifrar datos solo en la CPU",
+        "Eliminar la base de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado en tránsito protege los datos mientras se mueven entre la aplicación y la base de datos, por ejemplo mediante TLS."
+    },
+    {
+      "pregunta": "¿Cuál es una razón para utilizar un jump server o bastion host para el acceso administrativo?",
+      "opciones": [
+        "Proporciona un único punto de entrada reforzado y monitorizado hacia sistemas sensibles",
+        "Da a todos los usuarios acceso directo a todos los servidores",
+        "Desactiva la autenticación",
+        "Elimina la necesidad de registros"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un jump server centraliza y controla el acceso administrativo y facilita su monitorización."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes situaciones describe un fallo de la defensa en profundidad debido a un punto único de fallo?",
+      "opciones": [
+        "Todos los controles dependen de un único dispositivo que, si se compromete, expone todo",
+        "Múltiples capas independientes protegen el activo",
+        "Los controles son diversos y redundantes",
+        "Cada capa se mantiene de forma independiente"
+      ],
+      "respuesta": 0,
+      "explicacion": "Si las capas dependen de un único componente, el fallo de este puede derrotar toda la defensa."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor la evaluación de postura de Network Access Control (NAC)?",
+      "opciones": [
+        "Comprobar el estado de seguridad de un dispositivo antes de concederle acceso a la red",
+        "Asignar una IP pública a cada dispositivo",
+        "Cifrar todos los datos en reposo",
+        "Resolver nombres de dominio"
+      ],
+      "respuesta": 0,
+      "explicacion": "NAC puede verificar parches, antivirus y configuración antes de admitir un dispositivo."
+    },
+    {
+      "pregunta": "¿Cuál es la forma más eficaz de protegerse contra escuchas en una red inalámbrica?",
+      "opciones": [
+        "Usar cifrado inalámbrico fuerte como WPA3",
+        "Ocultar únicamente el SSID",
+        "Usar una red abierta",
+        "Depender solo del filtrado MAC"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado fuerte impide que un atacante lea fácilmente el tráfico inalámbrico interceptado."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el propósito de una revisión de reglas de firewall?",
+      "opciones": [
+        "Eliminar reglas obsoletas o demasiado permisivas que aumentan el riesgo",
+        "Añadir tantas reglas de permiso como sea posible",
+        "Desactivar el firewall",
+        "Cifrar el conjunto de reglas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las revisiones periódicas eliminan reglas obsoletas o excesivamente permisivas."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el propósito de la separación de funciones en las operaciones de seguridad?",
+      "opciones": [
+        "Dividir tareas críticas para que ninguna persona pueda abusar de todo el proceso",
+        "Dar a un único operador control total",
+        "Eliminar la necesidad de registros",
+        "Compartir cuentas entre operadores"
+      ],
+      "respuesta": 0,
+      "explicacion": "La separación de funciones reduce el riesgo de fraude o error por parte de una sola persona."
+    },
+    {
+      "pregunta": "Una organización quiere garantizar que los registros estén disponibles al menos un año por motivos de cumplimiento. ¿Qué control aborda este requisito?",
+      "opciones": [
+        "Una política de retención de registros con almacenamiento suficiente",
+        "Eliminar los registros semanalmente",
+        "Desactivar el registro",
+        "Guardar los registros solo en memoria volátil"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una política de retención con capacidad suficiente garantiza que los registros se conserven durante el periodo exigido."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor práctica para administrar el principio de mínimo privilegio a lo largo del tiempo?",
+      "opciones": [
+        "Revisar regularmente y revocar permisos innecesarios",
+        "Conceder acceso amplio una vez y no revisarlo nunca",
+        "Dar derechos de administrador a todos los usuarios",
+        "Desactivar las revisiones de acceso"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las revisiones periódicas mantienen los permisos alineados con las necesidades y evitan la acumulación de privilegios."
+    },
+    {
+      "pregunta": "¿Cuál es un indicador fuerte de que un sistema puede formar parte de una botnet?",
+      "opciones": [
+        "Conexiones salientes periódicas a un servidor de mando y control desconocido",
+        "Actualizaciones ocasionales de software del proveedor",
+        "Un usuario navegando por la intranet corporativa",
+        "Un análisis antivirus programado"
+      ],
+      "respuesta": 0,
+      "explicacion": "El beaconing hacia un servidor de mando y control es un indicador típico de pertenencia a una botnet."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor «Security Orchestration, Automation, and Response» (SOAR)?",
+      "opciones": [
+        "Automatizar y coordinar tareas y respuestas de seguridad entre distintas herramientas",
+        "Revisar manualmente cada registro, únicamente a mano",
+        "Asignar direcciones IP",
+        "Proteger físicamente servidores"
+      ],
+      "respuesta": 0,
+      "explicacion": "SOAR automatiza y coordina flujos de respuesta entre distintas herramientas de seguridad."
+    },
+    {
+      "pregunta": "¿Qué debe hacerse antes de conectar un dispositivo nuevo a la red de producción?",
+      "opciones": [
+        "Asegurar que cumple la configuración base de seguridad y que está parcheado",
+        "Conectarlo inmediatamente con la configuración predeterminada",
+        "Desactivar primero su firewall",
+        "Compartir públicamente su contraseña de administrador"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los dispositivos deben endurecerse y actualizarse antes de incorporarse a producción."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el objetivo de un estándar de configuración de «least functionality»?",
+      "opciones": [
+        "Que los sistemas proporcionen solo los servicios y funciones necesarios para su función",
+        "Que los sistemas ejecuten todos los servicios disponibles",
+        "Que los sistemas desactiven todas las funciones de seguridad",
+        "Que los sistemas concedan derechos de administrador a todos los usuarios"
+      ],
+      "respuesta": 0,
+      "explicacion": "Least functionality reduce la superficie de ataque eliminando capacidades innecesarias."
+    },
+    {
+      "pregunta": "¿Cuál es la forma más segura de gestionar un archivo adjunto de correo sospechoso?",
+      "opciones": [
+        "No abrirlo y reportarlo al equipo de seguridad",
+        "Abrirlo para comprobar qué contiene",
+        "Reenviarlo a compañeros",
+        "Guardarlo en una unidad compartida"
+      ],
+      "respuesta": 0,
+      "explicacion": "No abrir un adjunto sospechoso y reportarlo reduce el riesgo de ejecución o propagación de malware."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el valor de un diagrama de red actualizado en las operaciones de seguridad?",
+      "opciones": [
+        "Ayuda a los responsables de respuesta a comprender el entorno durante un incidente",
+        "Sustituye la necesidad de monitorización",
+        "Cifra el tráfico de red",
+        "Asigna direcciones IP"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un diagrama preciso facilita el análisis y la respuesta al mostrar claramente el entorno de red."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe el cifrado de «datos en reposo» en operaciones?",
+      "opciones": [
+        "Cifrar datos almacenados en discos, bases de datos o copias de seguridad",
+        "Cifrar datos mientras viajan por la red",
+        "Cifrar datos mientras se procesan en memoria",
+        "Eliminar todos los datos almacenados"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado en reposo protege los datos almacenados frente a accesos no autorizados."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor razón para realizar simulaciones periódicas de phishing?",
+      "opciones": [
+        "Medir y mejorar la resistencia de los empleados frente al phishing",
+        "Castigar públicamente a los empleados",
+        "Aumentar el éxito de los ataques",
+        "Sustituir todos los controles técnicos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las simulaciones permiten medir la susceptibilidad y reforzar la formación frente al phishing."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor la «defensa en profundidad» aplicada a la protección de datos?",
+      "opciones": [
+        "Combinar clasificación, controles de acceso, cifrado y monitorización",
+        "Depender de una única contraseña",
+        "Almacenar datos sin controles",
+        "No cifrar nada para ahorrar tiempo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Combinar varias capas de protección reduce la dependencia de un único control."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor acción después de identificar una vulnerabilidad crítica en un servidor de producción?",
+      "opciones": [
+        "Priorizar la remediación mediante control de cambios y aplicar controles compensatorios si es necesario",
+        "Ignorarla hasta la revisión anual",
+        "Cerrar toda la empresa",
+        "Publicar los detalles de la vulnerabilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las vulnerabilidades críticas deben remediarse rápidamente y de forma controlada, usando controles compensatorios si es necesario."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones respalda mejor la accountability en las operaciones diarias de seguridad?",
+      "opciones": [
+        "Credenciales únicas y registro exhaustivo de actividad",
+        "Cuentas compartidas de operadores",
+        "Acceso administrativo anónimo",
+        "Desactivar las trazas de auditoría"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las identidades únicas y los registros permiten atribuir las acciones a personas concretas."
+    },
+    {
+      "pregunta": "¿Cuál es el primer paso más adecuado al incorporar un nuevo proveedor SaaS externo?",
+      "opciones": [
+        "Evaluar la postura de seguridad del proveedor y sus prácticas de tratamiento de datos",
+        "Compartir inmediatamente todos los datos de clientes",
+        "Conceder al proveedor derechos de administrador de dominio",
+        "Desactivar el propio registro"
+      ],
+      "respuesta": 0,
+      "explicacion": "La evaluación de seguridad o due diligence debe realizarse antes de conceder acceso o compartir datos."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor la naturaleza continua de las operaciones de seguridad?",
+      "opciones": [
+        "Monitorización, mantenimiento y mejora continuos de los controles de seguridad",
+        "Una única auditoría realizada una sola vez",
+        "Responder únicamente después de que ocurra una brecha",
+        "Comprar hardware y detenerse ahí"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las operaciones de seguridad son un ciclo continuo de monitorización, mantenimiento y mejora."
+    }
+  ]
+}

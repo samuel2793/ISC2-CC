@@ -1,0 +1,832 @@
+{
+  "titulo": "Fundamentos de ciberseguridad #1",
+  "procedencia": "Batería proporcionada por el usuario, organizada en las secciones Security Principles, Business Continuity, DR & Incident Response, Access Controls Concepts, Network Security y Security Operations",
+  "descripcion": "Batería de preguntas sobre principios de seguridad, continuidad de negocio, respuesta a incidentes, control de acceso, seguridad de redes y operaciones de seguridad.",
+  "preguntas": [
+    {
+      "pregunta": "Una organización quiere garantizar que los datos almacenados en un servidor no puedan ser leídos por partes no autorizadas. ¿Qué elemento de la tríada CIA se está abordando?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La confidencialidad garantiza que la información no sea divulgada ni accesible para personas, sistemas o procesos no autorizados."
+    },
+    {
+      "pregunta": "Un hospital debe garantizar que los historiales médicos de los pacientes no sean alterados sin autorización. ¿Qué objetivo de seguridad está implicado más directamente?",
+      "opciones": [
+        "Integridad",
+        "Confidencialidad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 0,
+      "explicacion": "La integridad garantiza que los datos permanezcan exactos y no sean modificados salvo mediante cambios autorizados."
+    },
+    {
+      "pregunta": "Un ataque de denegación de servicio inunda un servidor web de modo que los usuarios legítimos no pueden acceder a él. ¿Qué parte de la tríada CIA se ve afectada principalmente?",
+      "opciones": [
+        "Disponibilidad",
+        "Confidencialidad",
+        "Integridad",
+        "Responsabilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los ataques DoS afectan a la disponibilidad al impedir que los usuarios legítimos accedan a un recurso o servicio."
+    },
+    {
+      "pregunta": "Un usuario firma una transacción con una firma digital para que posteriormente no pueda negar haberla autorizado. ¿Qué concepto de seguridad proporciona esto?",
+      "opciones": ["No repudio", "Disponibilidad", "Redundancia", "Ofuscación"],
+      "respuesta": 0,
+      "explicacion": "El no repudio impide que una parte pueda negar posteriormente la autenticidad de una acción que realizó."
+    },
+    {
+      "pregunta": "En terminología de riesgos, ¿qué es una vulnerabilidad?",
+      "opciones": [
+        "Una debilidad que podría ser explotada",
+        "Una persona o evento que puede causar daño",
+        "La probabilidad y el impacto de una pérdida",
+        "Una salvaguarda que reduce el riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una vulnerabilidad es una debilidad o deficiencia de un sistema o proceso que una amenaza puede explotar."
+    },
+    {
+      "pregunta": "¿Qué término describe a una persona, entidad o evento con potencial para causar daño a un sistema de información?",
+      "opciones": ["Amenaza", "Vulnerabilidad", "Control", "Activo"],
+      "respuesta": 0,
+      "explicacion": "Una amenaza es cualquier circunstancia, entidad o evento que puede causar daño a un activo."
+    },
+    {
+      "pregunta": "Una organización decide contratar un seguro de ciberseguridad para afrontar el impacto financiero de una posible brecha. ¿Qué tratamiento del riesgo representa?",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Aceptación del riesgo",
+        "Mitigación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La contratación de un seguro transfiere parte del impacto financiero del riesgo a un tercero."
+    },
+    {
+      "pregunta": "Una empresa decide no desplegar un nuevo servicio en línea porque considera que el riesgo de seguridad es demasiado alto. ¿Qué estrategia de tratamiento del riesgo es?",
+      "opciones": [
+        "Evitación del riesgo",
+        "Transferencia del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La evitación elimina el riesgo al decidir no realizar la actividad que lo genera."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones define mejor el riesgo?",
+      "opciones": [
+        "La combinación de la probabilidad de un evento y su impacto",
+        "Cualquier debilidad de un sistema",
+        "Un actor malicioso",
+        "Una salvaguarda aplicada a un activo"
+      ],
+      "respuesta": 0,
+      "explicacion": "El riesgo se determina en función de la probabilidad de que ocurra un evento adverso y del impacto resultante."
+    },
+    {
+      "pregunta": "Un firewall, un algoritmo de cifrado y una lista de control de acceso son ejemplos de ¿qué categoría de controles?",
+      "opciones": [
+        "Controles técnicos",
+        "Controles administrativos",
+        "Controles físicos",
+        "Controles detectivos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los firewalls, el cifrado y las ACL son controles técnicos o lógicos implementados mediante tecnología."
+    },
+    {
+      "pregunta": "La formación de concienciación en seguridad, las verificaciones de antecedentes y la separación de funciones son ejemplos de ¿qué categoría de controles?",
+      "opciones": [
+        "Controles administrativos",
+        "Controles técnicos",
+        "Controles físicos",
+        "Controles compensatorios"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los controles administrativos incluyen políticas, procedimientos y prácticas relacionadas con la gestión de personas."
+    },
+    {
+      "pregunta": "Las vallas, cerraduras, guardias de seguridad y lectores de credenciales son ejemplos de ¿qué categoría de controles?",
+      "opciones": [
+        "Controles físicos",
+        "Controles técnicos",
+        "Controles administrativos",
+        "Controles correctivos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los controles físicos protegen instalaciones y activos tangibles frente al acceso físico no autorizado o daños."
+    },
+    {
+      "pregunta": "Según el Código de Ética de ISC2, ¿qué canon aparece primero y tiene precedencia?",
+      "opciones": [
+        "Proteger a la sociedad, el bien común, la confianza pública necesaria y la infraestructura",
+        "Actuar honorablemente, honestamente, justamente, responsablemente y legalmente",
+        "Proporcionar un servicio diligente y competente a los principales",
+        "Promover y proteger la profesión"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los cánones de ISC2 están ordenados por prioridad y la protección de la sociedad y el bien común ocupa el primer lugar."
+    },
+    {
+      "pregunta": "¿Qué tipo de documento es una declaración obligatoria y de alto nivel de la intención de la dirección que debe cumplirse?",
+      "opciones": ["Política", "Directriz", "Procedimiento", "Línea base"],
+      "respuesta": 0,
+      "explicacion": "Una política es una directiva obligatoria de alto nivel que establece la orientación de la dirección."
+    },
+    {
+      "pregunta": "¿Qué término describe instrucciones detalladas y paso a paso para realizar una tarea específica?",
+      "opciones": ["Procedimiento", "Política", "Estándar", "Directriz"],
+      "respuesta": 0,
+      "explicacion": "Un procedimiento establece los pasos específicos y secuenciales necesarios para ejecutar una tarea."
+    },
+    {
+      "pregunta": "¿Qué término describe un conjunto de acciones recomendadas pero no obligatorias?",
+      "opciones": ["Directriz", "Estándar", "Política", "Regulación"],
+      "respuesta": 0,
+      "explicacion": "Las directrices proporcionan recomendaciones, pero no tienen carácter obligatorio."
+    },
+    {
+      "pregunta": "El principio de mínimo privilegio establece que los usuarios deben recibir ¿qué nivel de acceso?",
+      "opciones": [
+        "Solo el acceso necesario para realizar su trabajo",
+        "Acceso administrativo completo para mayor flexibilidad",
+        "El mismo acceso que su responsable",
+        "Ningún acceso hasta que ocurra un incidente"
+      ],
+      "respuesta": 0,
+      "explicacion": "El mínimo privilegio limita los permisos al nivel mínimo necesario para que el usuario pueda desempeñar sus funciones."
+    },
+    {
+      "pregunta": "¿Qué estrategia de seguridad utiliza múltiples controles en capas para que, si uno falla, otros continúen protegiendo el activo?",
+      "opciones": [
+        "Defensa en profundidad",
+        "Mínimo privilegio",
+        "Inicio de sesión único",
+        "Separación de funciones"
+      ],
+      "respuesta": 0,
+      "explicacion": "La defensa en profundidad utiliza múltiples capas de controles para evitar que el fallo de un único control comprometa el activo."
+    },
+    {
+      "pregunta": "Exigir que dos empleados diferentes completen una transacción financiera sensible es un ejemplo de ¿qué principio?",
+      "opciones": [
+        "Separación de funciones",
+        "Mínimo privilegio",
+        "Defensa en profundidad",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La separación de funciones divide una tarea crítica entre varias personas para evitar que una sola persona controle todo el proceso."
+    },
+    {
+      "pregunta": "Una regulación como el GDPR se describe mejor como ¿cuál de las siguientes opciones?",
+      "opciones": [
+        "Una norma jurídicamente exigible emitida por un gobierno o autoridad",
+        "Una buena práctica opcional del sector",
+        "Un procedimiento interno de una empresa",
+        "Una línea base de configuración técnica"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las regulaciones son requisitos obligatorios respaldados por la autoridad legal correspondiente."
+    },
+    {
+      "pregunta": "Adoptar medidas razonables para proteger los activos de una organización, como implementar controles, se describe mejor mediante ¿qué concepto?",
+      "opciones": [
+        "Due care",
+        "Due diligence",
+        "Aceptación del riesgo",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Due care consiste en actuar de manera razonable y responsable para proteger los activos; due diligence proporciona la investigación que sustenta esas acciones."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor un activo en seguridad de la información?",
+      "opciones": [
+        "Cualquier elemento de valor para la organización que deba protegerse",
+        "Una debilidad que puede ser explotada",
+        "El potencial de pérdida",
+        "Un evento malicioso"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un activo es cualquier recurso de valor para la organización, como datos, sistemas, personas o instalaciones, que requiere protección."
+    },
+    {
+      "pregunta": "¿Qué plan se centra en mantener operativas las funciones críticas del negocio durante y después de una interrupción?",
+      "opciones": [
+        "Business Continuity Plan (BCP)",
+        "Disaster Recovery Plan (DRP)",
+        "Incident Response Plan (IRP)",
+        "Acceptable Use Policy (AUP)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un BCP busca mantener las funciones esenciales del negocio durante una interrupción y facilitar su continuidad."
+    },
+    {
+      "pregunta": "¿Qué métrica define la cantidad máxima aceptable de pérdida de datos medida en tiempo?",
+      "opciones": [
+        "Recovery Point Objective (RPO)",
+        "Recovery Time Objective (RTO)",
+        "Maximum Tolerable Downtime (MTD)",
+        "Mean Time To Repair (MTTR)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El RPO establece cuánto tiempo de datos puede perderse como máximo de forma aceptable."
+    },
+    {
+      "pregunta": "¿Qué métrica especifica el tiempo objetivo dentro del cual debe restaurarse un proceso de negocio después de una interrupción?",
+      "opciones": [
+        "Recovery Time Objective (RTO)",
+        "Recovery Point Objective (RPO)",
+        "Annual Loss Expectancy (ALE)",
+        "Service Level Agreement (SLA)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El RTO establece el tiempo objetivo máximo para restaurar un sistema o proceso después de una interrupción."
+    },
+    {
+      "pregunta": "¿Cuál es el orden correcto de las fases de respuesta a incidentes tal como se enseña habitualmente en ISC2 CC?",
+      "opciones": [
+        "Preparación, Detección y Análisis, Contención/Erradicación/Recuperación, Actividad posterior al incidente",
+        "Detección, Preparación, Recuperación, Contención",
+        "Contención, Detección, Preparación, Recuperación",
+        "Recuperación, Erradicación, Detección, Preparación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El ciclo estándar comienza con la preparación, continúa con detección y análisis, contención, erradicación y recuperación, y finaliza con las actividades posteriores al incidente."
+    },
+    {
+      "pregunta": "¿Durante qué fase de respuesta a incidentes se aísla de la red un host comprometido para detener la propagación de un ataque?",
+      "opciones": [
+        "Contención",
+        "Preparación",
+        "Detección",
+        "Lecciones aprendidas"
+      ],
+      "respuesta": 0,
+      "explicacion": "La contención busca limitar el alcance y los daños del incidente, por ejemplo aislando sistemas comprometidos."
+    },
+    {
+      "pregunta": "¿Qué sitio de recuperación ante desastres está completamente equipado y puede asumir las operaciones casi inmediatamente?",
+      "opciones": ["Hot site", "Cold site", "Warm site", "Mobile site"],
+      "respuesta": 0,
+      "explicacion": "Un hot site dispone de equipos, infraestructura y datos preparados para una recuperación o conmutación prácticamente inmediata."
+    },
+    {
+      "pregunta": "¿Qué tipo de sitio de recuperación es el menos costoso pero requiere más tiempo para estar operativo?",
+      "opciones": ["Cold site", "Hot site", "Warm site", "Cloud site"],
+      "respuesta": 0,
+      "explicacion": "Un cold site proporciona principalmente espacio e infraestructura básica, por lo que es económico pero requiere más tiempo para activarse."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de un Business Impact Analysis (BIA)?",
+      "opciones": [
+        "Identificar las funciones críticas y el impacto de su interrupción",
+        "Configurar reglas de firewall",
+        "Cifrar datos sensibles en reposo",
+        "Realizar pruebas de penetración"
+      ],
+      "respuesta": 0,
+      "explicacion": "El BIA identifica las funciones críticas y evalúa las consecuencias de su interrupción para establecer prioridades de recuperación."
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia entre identificación y autenticación?",
+      "opciones": [
+        "La identificación declara una identidad; la autenticación la demuestra",
+        "Son el mismo proceso",
+        "La autenticación declara una identidad; la identificación la demuestra",
+        "Ambas ocurren únicamente después de la autorización"
+      ],
+      "respuesta": 0,
+      "explicacion": "La identificación consiste en declarar quién se es, mientras que la autenticación verifica que esa identidad declarada sea válida."
+    },
+    {
+      "pregunta": "Después de autenticar a un usuario, ¿qué proceso determina a qué recursos puede acceder?",
+      "opciones": [
+        "Autorización",
+        "Identificación",
+        "Autenticación",
+        "Accounting"
+      ],
+      "respuesta": 0,
+      "explicacion": "La autorización determina los permisos y recursos a los que puede acceder una identidad previamente autenticada."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso basa las decisiones en etiquetas y niveles de autorización y es aplicado por el sistema, no por el propietario de los datos?",
+      "opciones": [
+        "Mandatory Access Control (MAC)",
+        "Discretionary Access Control (DAC)",
+        "Role-Based Access Control (RBAC)",
+        "Rule-Based Access Control"
+      ],
+      "respuesta": 0,
+      "explicacion": "MAC utiliza etiquetas de seguridad y niveles de autorización aplicados obligatoriamente por el sistema."
+    },
+    {
+      "pregunta": "¿En qué modelo de control de acceso decide el propietario del recurso quién puede acceder a él?",
+      "opciones": [
+        "Discretionary Access Control (DAC)",
+        "Mandatory Access Control (MAC)",
+        "Role-Based Access Control (RBAC)",
+        "Attribute-Based Access Control (ABAC)"
+      ],
+      "respuesta": 0,
+      "explicacion": "En DAC, el propietario del recurso puede conceder o retirar permisos a su discreción."
+    },
+    {
+      "pregunta": "Una organización asigna permisos a funciones laborales como 'Contable' o 'Responsable de RR. HH.' y asigna usuarios a esas funciones. ¿Qué modelo de control de acceso utiliza?",
+      "opciones": [
+        "Role-Based Access Control (RBAC)",
+        "Discretionary Access Control (DAC)",
+        "Mandatory Access Control (MAC)",
+        "Rule-Based Access Control"
+      ],
+      "respuesta": 0,
+      "explicacion": "RBAC asigna permisos a roles y los usuarios heredan esos permisos al pertenecer a un determinado rol."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo del factor de autenticación 'algo que eres'?",
+      "opciones": [
+        "Un escaneo de huella dactilar",
+        "Una contraseña",
+        "Un token de hardware",
+        "Un PIN"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las características biométricas, como las huellas dactilares, corresponden al factor de inherencia o 'algo que eres'."
+    },
+    {
+      "pregunta": "¿Qué requiere la autenticación multifactor (MFA)?",
+      "opciones": [
+        "Dos o más factores de categorías diferentes",
+        "Dos contraseñas",
+        "Un nombre de usuario y una contraseña",
+        "Cualquier único factor biométrico fuerte"
+      ],
+      "respuesta": 0,
+      "explicacion": "MFA combina al menos dos factores pertenecientes a categorías diferentes, como conocimiento y posesión."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal del principio de mínimo privilegio en el control de acceso?",
+      "opciones": [
+        "Conceder a los usuarios únicamente el acceso necesario para sus funciones",
+        "Conceder a todos los usuarios el mismo acceso",
+        "Eliminar todo acceso de los usuarios",
+        "Conceder temporalmente derechos de administrador a todo el mundo"
+      ],
+      "respuesta": 0,
+      "explicacion": "El mínimo privilegio reduce el riesgo limitando los permisos a los estrictamente necesarios para cada función."
+    },
+    {
+      "pregunta": "¿Qué control de acceso físico utiliza dos puertas para impedir el tailgating permitiendo el paso de una sola persona cada vez?",
+      "opciones": [
+        "Mantrap (vestíbulo de control de acceso)",
+        "Torniquete",
+        "Bolardo",
+        "Jaula de Faraday"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un mantrap utiliza puertas interbloqueadas para controlar el acceso individual y dificultar el tailgating."
+    },
+    {
+      "pregunta": "Seguir a una persona a través de una puerta protegida sin presentar credenciales se conoce como ¿qué?",
+      "opciones": ["Tailgating", "Phishing", "Spoofing", "Shoulder surfing"],
+      "respuesta": 0,
+      "explicacion": "El tailgating consiste en entrar en una zona protegida siguiendo a una persona autorizada sin autenticarse."
+    },
+    {
+      "pregunta": "¿A qué se refiere el término 'subject' en control de acceso?",
+      "opciones": [
+        "Una entidad activa, como un usuario o proceso, que solicita acceso",
+        "Un recurso pasivo al que se accede",
+        "La política que gobierna el acceso",
+        "El registro de eventos de acceso"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un subject es la entidad activa que solicita realizar una acción sobre un object o recurso."
+    },
+    {
+      "pregunta": "¿A qué se refiere el término 'object' en control de acceso?",
+      "opciones": [
+        "Un recurso pasivo, como un archivo o una base de datos, al que se accede",
+        "Un usuario que solicita acceso",
+        "Un factor de autenticación",
+        "Una regla de firewall"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un object es el recurso pasivo sobre el que un subject intenta realizar una acción."
+    },
+    {
+      "pregunta": "¿Qué concepto de control de acceso exige que un usuario vuelva a verificar su identidad para acceder a recursos más sensibles incluso dentro de la misma sesión?",
+      "opciones": [
+        "Autenticación step-up o adaptativa",
+        "Single sign-on",
+        "Mínimo privilegio",
+        "Responsabilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "La autenticación step-up exige una verificación adicional o más fuerte cuando aumenta el riesgo o la sensibilidad de la operación."
+    },
+    {
+      "pregunta": "Una empresa implementa single sign-on (SSO). ¿Cuál es uno de sus principales beneficios?",
+      "opciones": [
+        "Los usuarios se autentican una vez para acceder a múltiples sistemas",
+        "Cada aplicación requiere una contraseña independiente",
+        "Elimina completamente la necesidad de autenticación",
+        "Desactiva el registro de la actividad de los usuarios"
+      ],
+      "respuesta": 0,
+      "explicacion": "SSO permite autenticarse una vez y posteriormente acceder a múltiples aplicaciones autorizadas sin repetir el proceso completo."
+    },
+    {
+      "pregunta": "¿Cuál es un posible problema de seguridad del single sign-on (SSO)?",
+      "opciones": [
+        "Una credencial SSO comprometida puede dar acceso a muchos sistemas",
+        "Los usuarios deben recordar muchas contraseñas",
+        "Impide utilizar MFA",
+        "No puede registrarse en logs"
+      ],
+      "respuesta": 0,
+      "explicacion": "SSO concentra el acceso, por lo que el compromiso de una única credencial puede afectar a múltiples aplicaciones."
+    },
+    {
+      "pregunta": "¿Qué modelo de control concede acceso evaluando atributos como departamento, ubicación y hora del día frente a una política?",
+      "opciones": [
+        "Attribute-Based Access Control (ABAC)",
+        "Discretionary Access Control (DAC)",
+        "Mandatory Access Control (MAC)",
+        "Role-Based Access Control (RBAC)"
+      ],
+      "respuesta": 0,
+      "explicacion": "ABAC toma decisiones de acceso evaluando atributos del usuario, recurso, entorno y otros elementos contra políticas definidas."
+    },
+    {
+      "pregunta": "La última 'A' del marco AAA de control de acceso corresponde a accounting. ¿Qué proporciona accounting?",
+      "opciones": [
+        "Un registro de las acciones realizadas por un subject",
+        "La declaración de una identidad",
+        "La demostración de una identidad",
+        "La concesión de permisos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Accounting registra y rastrea las acciones realizadas por los usuarios, permitiendo auditoría y responsabilidad."
+    },
+    {
+      "pregunta": "¿Por qué deben revisarse los derechos de acceso cuando un empleado cambia de función dentro de una empresa?",
+      "opciones": [
+        "Para evitar privilege creep eliminando accesos que ya no son necesarios",
+        "Para aumentar automáticamente el acceso del empleado",
+        "Para desactivar la auditoría",
+        "Para compartir las credenciales del empleado con el equipo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La revisión evita la acumulación de permisos innecesarios cuando un usuario cambia de puesto o responsabilidades."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor la responsabilidad o accountability en seguridad?",
+      "opciones": [
+        "La capacidad de atribuir de forma única las acciones a un individuo",
+        "Conceder el mínimo acceso necesario",
+        "Cifrar datos en tránsito",
+        "Proporcionar sistemas redundantes"
+      ],
+      "respuesta": 0,
+      "explicacion": "La accountability permite vincular acciones concretas con identidades específicas mediante cuentas únicas y registros de auditoría."
+    },
+    {
+      "pregunta": "¿Qué dispositivo reenvía tráfico entre redes diferentes basándose en direcciones IP?",
+      "opciones": ["Router", "Switch", "Hub", "Repeater"],
+      "respuesta": 0,
+      "explicacion": "Un router opera en la capa 3 y reenvía paquetes entre redes utilizando direcciones IP."
+    },
+    {
+      "pregunta": "¿En qué capa del modelo OSI opera principalmente un switch tradicional?",
+      "opciones": [
+        "Capa 2 (Data Link)",
+        "Capa 3 (Network)",
+        "Capa 4 (Transport)",
+        "Capa 7 (Application)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un switch tradicional opera en la capa 2 y reenvía tramas utilizando direcciones MAC."
+    },
+    {
+      "pregunta": "¿Qué capa del modelo OSI es responsable del direccionamiento lógico y el enrutamiento de paquetes?",
+      "opciones": [
+        "Capa 3 (Network)",
+        "Capa 2 (Data Link)",
+        "Capa 1 (Physical)",
+        "Capa 4 (Transport)"
+      ],
+      "respuesta": 0,
+      "explicacion": "La capa de red, o capa 3, gestiona el direccionamiento IP y el enrutamiento entre redes."
+    },
+    {
+      "pregunta": "¿Qué protocolo proporciona entrega de datos fiable y orientada a conexión?",
+      "opciones": ["TCP", "UDP", "ICMP", "ARP"],
+      "respuesta": 0,
+      "explicacion": "TCP es orientado a conexión y proporciona entrega fiable y ordenada de los datos."
+    },
+    {
+      "pregunta": "¿Qué protocolo no está orientado a conexión y prioriza la velocidad frente a la entrega garantizada, por lo que resulta adecuado para streaming?",
+      "opciones": ["UDP", "TCP", "HTTPS", "FTP"],
+      "respuesta": 0,
+      "explicacion": "UDP tiene poca sobrecarga y no garantiza la entrega, lo que lo hace adecuado para determinadas aplicaciones en tiempo real."
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de un firewall?",
+      "opciones": [
+        "Filtrar el tráfico de red según reglas definidas",
+        "Cifrar todos los datos almacenados",
+        "Asignar direcciones IP a los hosts",
+        "Resolver nombres de dominio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un firewall permite o bloquea tráfico de red según una política y un conjunto de reglas configuradas."
+    },
+    {
+      "pregunta": "¿Qué dispositivo de seguridad supervisa el tráfico y bloquea activamente en tiempo real la actividad maliciosa detectada?",
+      "opciones": [
+        "Intrusion Prevention System (IPS)",
+        "Intrusion Detection System (IDS)",
+        "Servidor proxy",
+        "Balanceador de carga"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un IPS funciona en línea y puede detectar y bloquear tráfico malicioso automáticamente."
+    },
+    {
+      "pregunta": "¿Qué dispositivo de seguridad detecta actividad sospechosa y genera alertas, pero no bloquea el tráfico?",
+      "opciones": [
+        "Intrusion Detection System (IDS)",
+        "Intrusion Prevention System (IPS)",
+        "Firewall",
+        "Concentrador VPN"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un IDS supervisa y genera alertas sobre actividad sospechosa, mientras que un IPS puede bloquearla activamente."
+    },
+    {
+      "pregunta": "¿Qué proporciona principalmente una VPN cuando un usuario remoto se conecta a través de Internet?",
+      "opciones": [
+        "Un túnel cifrado que protege los datos en tránsito",
+        "Mayor velocidad de Internet",
+        "Wi-Fi público gratuito",
+        "Eliminación automática de malware"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una VPN crea un túnel cifrado que protege la confidencialidad y la integridad del tráfico sobre redes no confiables."
+    },
+    {
+      "pregunta": "¿Qué técnica de segmentación de red aísla dispositivos en dominios de broadcast separados sobre el mismo switch físico?",
+      "opciones": ["VLAN", "NAT", "VPN", "DMZ"],
+      "respuesta": 0,
+      "explicacion": "Una VLAN permite dividir lógicamente una infraestructura de switching en dominios de broadcast independientes."
+    },
+    {
+      "pregunta": "Un servidor web expuesto públicamente se coloca en una zona de red segmentada entre Internet y la LAN interna. ¿Cómo se denomina esta zona?",
+      "opciones": [
+        "DMZ (demilitarized zone / screened subnet)",
+        "VLAN trunk",
+        "Intranet",
+        "Extranet"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una DMZ aloja servicios expuestos públicamente y los separa de la red interna para reducir el riesgo."
+    },
+    {
+      "pregunta": "¿Qué ataque intercepta la comunicación entre dos partes para escuchar o modificar los mensajes?",
+      "opciones": [
+        "Ataque man-in-the-middle (on-path)",
+        "Ataque de denegación de servicio",
+        "SQL injection",
+        "Ataque de fuerza bruta"
+      ],
+      "respuesta": 0,
+      "explicacion": "En un ataque man-in-the-middle u on-path, el atacante se sitúa entre dos extremos para interceptar o alterar sus comunicaciones."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de Network Address Translation (NAT)?",
+      "opciones": [
+        "Mapear direcciones IP privadas internas a direcciones públicas",
+        "Cifrar el tráfico entre hosts",
+        "Detectar intrusiones",
+        "Resolver nombres de host a direcciones IP"
+      ],
+      "respuesta": 0,
+      "explicacion": "NAT traduce direcciones entre redes privadas y públicas, permitiendo que múltiples sistemas internos utilicen direccionamiento público."
+    },
+    {
+      "pregunta": "¿Qué puerto utiliza HTTPS de forma predeterminada?",
+      "opciones": ["443", "80", "22", "25"],
+      "respuesta": 0,
+      "explicacion": "HTTPS utiliza de forma predeterminada el puerto TCP 443."
+    },
+    {
+      "pregunta": "¿Qué protocolo permite administrar dispositivos de red y realizar transferencias mediante un canal cifrado en el puerto 22?",
+      "opciones": ["SSH", "Telnet", "FTP", "HTTP"],
+      "respuesta": 0,
+      "explicacion": "SSH proporciona administración remota cifrada y mecanismos de transferencia segura utilizando normalmente el puerto 22."
+    },
+    {
+      "pregunta": "¿Por qué Telnet se considera inseguro para la administración remota?",
+      "opciones": [
+        "Transmite credenciales y datos en texto claro",
+        "Utiliza demasiado ancho de banda",
+        "Requiere una tarjeta inteligente",
+        "Solo funciona en redes inalámbricas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Telnet transmite la información sin cifrar, lo que permite que credenciales y datos sean interceptados."
+    },
+    {
+      "pregunta": "Una arquitectura screened subnet utiliza normalmente ¿cuántos firewalls para separar Internet, la DMZ y la red interna?",
+      "opciones": [
+        "Dos firewalls",
+        "Cero firewalls",
+        "Un único firewall sin segmentación",
+        "Diez firewalls"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una screened subnet clásica sitúa la DMZ entre un firewall exterior y otro interior."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor un ataque distribuido de denegación de servicio (DDoS)?",
+      "opciones": [
+        "Muchos sistemas comprometidos inundan un objetivo para agotar sus recursos",
+        "Un único usuario intenta repetidamente adivinar una contraseña",
+        "Un atacante intercepta el tráfico entre dos hosts",
+        "Un malware cifra archivos para exigir un rescate"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un DDoS utiliza múltiples sistemas distribuidos, frecuentemente una botnet, para saturar los recursos de un objetivo y afectar su disponibilidad."
+    },
+    {
+      "pregunta": "¿Qué protocolo resuelve nombres de dominio legibles por humanos en direcciones IP?",
+      "opciones": ["DNS", "DHCP", "ARP", "SNMP"],
+      "respuesta": 0,
+      "explicacion": "DNS traduce nombres de dominio, como example.com, a las direcciones IP correspondientes."
+    },
+    {
+      "pregunta": "¿Qué protocolo asigna automáticamente direcciones IP y parámetros de configuración de red a los hosts?",
+      "opciones": ["DHCP", "DNS", "FTP", "ICMP"],
+      "respuesta": 0,
+      "explicacion": "DHCP proporciona dinámicamente a los clientes direcciones IP y otros parámetros de configuración de red."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones es un beneficio de la segmentación de red?",
+      "opciones": [
+        "Limita el movimiento lateral de un atacante entre segmentos",
+        "Elimina la necesidad de firewalls",
+        "Garantiza un 100 % de disponibilidad",
+        "Cifra automáticamente todos los datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La segmentación limita la comunicación entre zonas y puede contener una intrusión, reduciendo el movimiento lateral."
+    },
+    {
+      "pregunta": "¿Qué tipo de malware se disfraza de software legítimo para engañar a los usuarios y conseguir que lo instalen?",
+      "opciones": ["Trojan", "Worm", "Rootkit", "Adware"],
+      "respuesta": 0,
+      "explicacion": "Un Trojan se presenta como software legítimo o atractivo para inducir al usuario a ejecutarlo o instalarlo."
+    },
+    {
+      "pregunta": "¿Qué tipo de malware se autorreplica y se propaga por redes sin interacción del usuario?",
+      "opciones": ["Worm", "Trojan", "Spyware", "Ransomware"],
+      "respuesta": 0,
+      "explicacion": "Un worm puede propagarse automáticamente entre sistemas sin requerir que el usuario ejecute manualmente el malware."
+    },
+    {
+      "pregunta": "¿Qué malware cifra los archivos de una víctima y exige un pago para restaurar el acceso?",
+      "opciones": ["Ransomware", "Adware", "Rootkit", "Keylogger"],
+      "respuesta": 0,
+      "explicacion": "El ransomware cifra los datos de la víctima y exige un rescate, normalmente a cambio de una clave o mecanismo de recuperación."
+    },
+    {
+      "pregunta": "Un correo fraudulento finge proceder de un banco y pide al usuario que pulse un enlace e introduzca sus credenciales. ¿Cómo se denomina este ataque?",
+      "opciones": ["Phishing", "Tailgating", "SQL injection", "Sniffing"],
+      "respuesta": 0,
+      "explicacion": "El phishing utiliza mensajes fraudulentos para engañar a las víctimas y obtener credenciales u otra información sensible."
+    },
+    {
+      "pregunta": "¿Cómo se denomina un ataque de phishing altamente dirigido contra un alto ejecutivo concreto?",
+      "opciones": ["Whaling", "Vishing", "Smishing", "Pharming"],
+      "respuesta": 0,
+      "explicacion": "Whaling es una forma de spear phishing dirigida específicamente a ejecutivos u otros objetivos de alto valor."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de la clasificación de datos?",
+      "opciones": [
+        "Aplicar una protección adecuada según la sensibilidad de los datos",
+        "Eliminar todos los datos antiguos",
+        "Hacer públicos todos los datos",
+        "Aumentar los costes de almacenamiento"
+      ],
+      "respuesta": 0,
+      "explicacion": "La clasificación permite aplicar controles de protección proporcionales a la sensibilidad, valor y requisitos de los datos."
+    },
+    {
+      "pregunta": "¿Qué tecnología permite recopilar, correlacionar y analizar de forma centralizada logs de múltiples sistemas para detectar eventos de seguridad?",
+      "opciones": [
+        "Security Information and Event Management (SIEM)",
+        "Data Loss Prevention (DLP)",
+        "Gestión de parches",
+        "Balanceo de carga"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un SIEM centraliza los logs y correlaciona eventos procedentes de distintas fuentes para facilitar la detección e investigación de incidentes."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de la gestión de parches?",
+      "opciones": [
+        "Corregir vulnerabilidades conocidas mediante la aplicación de actualizaciones",
+        "Cifrar todo el tráfico de red",
+        "Asignar direcciones IP",
+        "Clasificar datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión de parches reduce el riesgo aplicando actualizaciones que corrigen vulnerabilidades y otros defectos conocidos."
+    },
+    {
+      "pregunta": "¿Qué tecnología impide que datos sensibles salgan de la organización mediante correo electrónico o medios extraíbles?",
+      "opciones": ["Data Loss Prevention (DLP)", "SIEM", "VPN", "IDS"],
+      "respuesta": 0,
+      "explicacion": "DLP identifica y puede bloquear transferencias no autorizadas de información sensible hacia destinos o soportes no permitidos."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de una Acceptable Use Policy (AUP)?",
+      "opciones": [
+        "Definir cómo pueden utilizar los empleados los sistemas y recursos de la organización",
+        "Configurar hardware de servidores",
+        "Cifrar datos en reposo",
+        "Enrutar paquetes de red"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una AUP establece las reglas y restricciones para el uso adecuado de los sistemas y recursos tecnológicos de la organización."
+    },
+    {
+      "pregunta": "Cifrar datos almacenados en un disco duro los protege ¿en qué estado?",
+      "opciones": [
+        "Datos en reposo",
+        "Datos en tránsito",
+        "Datos en uso",
+        "Datos en transformación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los datos almacenados son datos en reposo y el cifrado protege su confidencialidad cuando no están siendo transmitidos."
+    },
+    {
+      "pregunta": "¿Qué concepto describe la eliminación segura de datos para que no puedan recuperarse antes de desechar una unidad?",
+      "opciones": [
+        "Data sanitization",
+        "Clasificación de datos",
+        "Replicación de datos",
+        "Enmascaramiento de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Data sanitization utiliza técnicas como borrado seguro, desmagnetización o destrucción para hacer que los datos sean irrecuperables."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal del logging y la monitorización de seguridad?",
+      "opciones": [
+        "Detectar, investigar y responder a eventos de seguridad",
+        "Aumentar la velocidad de la red",
+        "Sustituir la necesidad de firewalls",
+        "Cifrar datos almacenados"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los logs y la monitorización proporcionan visibilidad sobre los sistemas y permiten detectar, investigar y responder a posibles incidentes."
+    },
+    {
+      "pregunta": "¿Qué principio recomienda mantener los sistemas y las configuraciones tan simples como sea posible para reducir el riesgo de seguridad?",
+      "opciones": [
+        "Mantener la simplicidad y reducir la complejidad",
+        "Security through obscurity",
+        "Fail open por defecto",
+        "Maximizar privilegios"
+      ],
+      "respuesta": 0,
+      "explicacion": "Reducir la complejidad disminuye la superficie de ataque y la probabilidad de errores de configuración."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el concepto de gestión de configuración en operaciones de seguridad?",
+      "opciones": [
+        "Mantener una línea base conocida y segura de configuraciones del sistema y controlar los cambios",
+        "Eliminar regularmente todos los logs del sistema",
+        "Permitir que los usuarios cambien libremente cualquier configuración",
+        "Desactivar todas las actualizaciones del sistema"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión de configuración establece líneas base seguras y garantiza que los cambios sobre ellas se realicen de forma controlada y trazable."
+    }
+  ]
+}
