@@ -1,0 +1,902 @@
+{
+  "titulo": "Batería de fundamentos de ciberseguridad #1",
+  "procedencia": "Test proporcionado por el usuario",
+  "descripcion": "Batería de 100 preguntas sobre principios de seguridad, gestión de riesgos, gobernanza, continuidad de negocio, IAM, redes, nube, operaciones de seguridad y respuesta a incidentes.",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué concepto de la tríada CIA garantiza que los datos no se divulguen a personas, procesos o sistemas no autorizados?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La confidencialidad impide que la información sensible sea accesible o divulgada a entidades no autorizadas."
+    },
+    {
+      "pregunta": "¿Qué concepto de la tríada CIA garantiza que los datos sean exactos, completos y estén protegidos frente a modificaciones no autorizadas?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La integridad garantiza que los datos no sean alterados de forma no autorizada y mantengan su exactitud y completitud."
+    },
+    {
+      "pregunta": "¿Qué concepto de la tríada CIA garantiza que los usuarios autorizados tengan acceso oportuno y fiable a los datos y sistemas?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autorización"
+      ],
+      "respuesta": 2,
+      "explicacion": "La disponibilidad busca que sistemas y datos estén accesibles cuando los usuarios autorizados los necesitan."
+    },
+    {
+      "pregunta": "¿Qué fase del marco AAA consiste en demostrar la identidad declarada por un usuario, por ejemplo comprobando una contraseña?",
+      "opciones": ["Autenticación", "Autorización", "Accounting", "Auditoría"],
+      "respuesta": 0,
+      "explicacion": "La autenticación verifica que un usuario es quien afirma ser mediante credenciales u otros factores."
+    },
+    {
+      "pregunta": "¿Qué fase del marco AAA determina qué acciones puede realizar un usuario en un sistema?",
+      "opciones": [
+        "Autenticación",
+        "Autorización",
+        "Accounting",
+        "Identificación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La autorización determina los permisos y acciones permitidas después de autenticar al usuario."
+    },
+    {
+      "pregunta": "¿Qué fase del marco AAA implica registrar y realizar seguimiento de la actividad de un usuario para poder exigir responsabilidades?",
+      "opciones": [
+        "Autenticación",
+        "Autorización",
+        "Accounting",
+        "Control de acceso"
+      ],
+      "respuesta": 2,
+      "explicacion": "Accounting registra quién hizo qué y cuándo, proporcionando trazabilidad y responsabilidad."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal del programa de gestión de riesgos de una organización?",
+      "opciones": [
+        "Eliminar el 100 % de todos los riesgos.",
+        "Transferir todos los riesgos a un proveedor cloud.",
+        "Reducir el riesgo a un nivel aceptable y alineado con los objetivos de negocio.",
+        "Ignorar completamente los riesgos menores."
+      ],
+      "respuesta": 2,
+      "explicacion": "El riesgo no puede eliminarse por completo; debe reducirse o gestionarse hasta un nivel aceptable para la organización."
+    },
+    {
+      "pregunta": "Una organización decide dejar de utilizar por completo una aplicación de software obsoleta y vulnerable. ¿Qué estrategia de tratamiento del riesgo representa?",
+      "opciones": [
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Transferencia del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La evitación elimina el riesgo abandonando la actividad que lo genera."
+    },
+    {
+      "pregunta": "Una organización contrata un seguro de ciberseguridad para cubrir los costes de una posible brecha de datos. ¿Qué estrategia de tratamiento del riesgo representa?",
+      "opciones": [
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Transferencia del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 2,
+      "explicacion": "El seguro transfiere parte del impacto financiero del riesgo a un tercero."
+    },
+    {
+      "pregunta": "Una organización implementa protección avanzada de endpoints y firewalls para reducir la probabilidad de una infección por malware. ¿Qué estrategia de tratamiento del riesgo representa?",
+      "opciones": [
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Transferencia del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "La mitigación introduce controles para reducir la probabilidad o el impacto de un riesgo."
+    },
+    {
+      "pregunta": "¿Qué documento de gobierno de seguridad es una declaración obligatoria y de alto nivel sobre la intención de la dirección?",
+      "opciones": ["Política", "Procedimiento", "Estándar", "Directriz"],
+      "respuesta": 0,
+      "explicacion": "Una política expresa de forma obligatoria y de alto nivel la intención y los requisitos de la dirección."
+    },
+    {
+      "pregunta": "¿Qué documento de gobierno de seguridad especifica configuraciones obligatorias de hardware y software para garantizar uniformidad?",
+      "opciones": ["Política", "Procedimiento", "Estándar", "Directriz"],
+      "respuesta": 2,
+      "explicacion": "Un estándar establece requisitos técnicos específicos y obligatorios."
+    },
+    {
+      "pregunta": "¿Qué documento de gobierno de seguridad proporciona instrucciones muy detalladas y paso a paso para completar una tarea específica?",
+      "opciones": ["Política", "Procedimiento", "Estándar", "Directriz"],
+      "respuesta": 1,
+      "explicacion": "Un procedimiento describe de forma detallada y secuencial cómo realizar una tarea."
+    },
+    {
+      "pregunta": "Una política corporativa de comprobación de antecedentes es un ejemplo de qué tipo de control de seguridad?",
+      "opciones": [
+        "Control administrativo",
+        "Control técnico",
+        "Control físico",
+        "Control correctivo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las políticas y procesos gestionados por la organización o RR. HH. son controles administrativos."
+    },
+    {
+      "pregunta": "Un sistema de prevención de intrusiones (IPS) que bloquea automáticamente tráfico malicioso es un ejemplo de qué tipo de control de seguridad?",
+      "opciones": [
+        "Control administrativo",
+        "Control técnico",
+        "Control físico",
+        "Control disuasorio"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un IPS es un control técnico porque utiliza tecnología para detectar y bloquear tráfico malicioso."
+    },
+    {
+      "pregunta": "Un bolardo de acero colocado fuera de un edificio para impedir que un vehículo embista la entrada es un ejemplo de qué tipo de control de seguridad?",
+      "opciones": [
+        "Control administrativo",
+        "Control técnico",
+        "Control físico",
+        "Control lógico"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un bolardo constituye una barrera física diseñada para impedir físicamente el acceso de vehículos."
+    },
+    {
+      "pregunta": "Según el Código de Ética de ISC2, ¿qué canon exige priorizar la seguridad de la vida humana y de la infraestructura pública por encima de todo?",
+      "opciones": [
+        "Canon 1: Proteger a la sociedad, el bien común y la infraestructura",
+        "Canon 2: Actuar honorablemente, honestamente, justamente, responsablemente y legalmente",
+        "Canon 3: Prestar un servicio diligente y competente",
+        "Canon 4: Promover y proteger la profesión"
+      ],
+      "respuesta": 0,
+      "explicacion": "El primer canon prioriza la protección de la sociedad, el bien común, la confianza pública y la infraestructura."
+    },
+    {
+      "pregunta": "Según el Código de Ética de ISC2, ¿qué canon exige cumplir todas las leyes y no participar nunca en hacking malicioso?",
+      "opciones": [
+        "Canon 1: Proteger a la sociedad",
+        "Canon 2: Actuar honorablemente, honestamente, justamente, responsablemente y legalmente",
+        "Canon 3: Prestar un servicio diligente y competente",
+        "Canon 4: Promover la profesión"
+      ],
+      "respuesta": 1,
+      "explicacion": "El segundo canon exige una conducta honorable, responsable y conforme a la ley."
+    },
+    {
+      "pregunta": "Tomar las acciones necesarias y esperadas para proteger a una organización frente a daños, es decir, hacer lo correcto, se conoce legalmente como:",
+      "opciones": [
+        "Due Diligence",
+        "Due Care",
+        "Aceptación del riesgo",
+        "Defense in Depth"
+      ],
+      "respuesta": 1,
+      "explicacion": "Due Care consiste en adoptar de forma efectiva las medidas prudentes y razonables necesarias para proteger la organización."
+    },
+    {
+      "pregunta": "Un documento que especifica que todos los portátiles deben utilizar cifrado de disco completo AES-256 es un:",
+      "opciones": ["Directriz", "Estándar", "Política", "Recomendación"],
+      "respuesta": 1,
+      "explicacion": "Un requisito técnico concreto y obligatorio, como utilizar AES-256, corresponde a un estándar."
+    },
+    {
+      "pregunta": "Un documento de buenas prácticas recomendado pero opcional es una:",
+      "opciones": ["Política", "Estándar", "Directriz", "Ley"],
+      "respuesta": 2,
+      "explicacion": "Una directriz proporciona recomendaciones y buenas prácticas que normalmente no son obligatorias."
+    },
+    {
+      "pregunta": "Según el Código de Ética de (ISC)², cuando existen conflictos entre los cánones, un miembro debe:",
+      "opciones": [
+        "Elegir el que resulte más fácil",
+        "Aplicar los cánones según su orden de prioridad establecido",
+        "Ignorar el código",
+        "Preguntar a un amigo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los cánones se aplican siguiendo el orden de prioridad en el que están establecidos."
+    },
+    {
+      "pregunta": "El primer canon del Código de Ética de (ISC)² consiste en proteger:",
+      "opciones": [
+        "Los beneficios del empleador",
+        "La sociedad, el bien común y la infraestructura",
+        "Únicamente la propia reputación",
+        "Al proveedor"
+      ],
+      "respuesta": 1,
+      "explicacion": "El primer canon establece como prioridad proteger a la sociedad, el bien común, la confianza pública y la infraestructura."
+    },
+    {
+      "pregunta": "Tomar las medidas razonables y prudentes que adoptaría un profesional competente es la definición de:",
+      "opciones": [
+        "Due care",
+        "Due diligence",
+        "Negligencia",
+        "Responsabilidad legal"
+      ],
+      "respuesta": 0,
+      "explicacion": "Due care es la obligación de actuar de forma razonable y prudente para proteger los activos y reducir daños."
+    },
+    {
+      "pregunta": "Investigar, supervisar y verificar continuamente que los controles siguen siendo efectivos es:",
+      "opciones": ["Due care", "Due diligence", "Aceptación", "Evitación"],
+      "respuesta": 1,
+      "explicacion": "Due diligence implica la investigación, supervisión y verificación continua de que las medidas adoptadas siguen siendo adecuadas."
+    },
+    {
+      "pregunta": "Un documento mediante el cual un nuevo empleado acepta no divulgar secretos de la empresa es un:",
+      "opciones": ["SLA", "NDA", "MOU", "AUP"],
+      "respuesta": 1,
+      "explicacion": "Un NDA es un acuerdo de confidencialidad que obliga a no divulgar información protegida."
+    },
+    {
+      "pregunta": "Un documento que define qué pueden y qué no pueden hacer los empleados con los sistemas de la empresa es una:",
+      "opciones": ["AUP (Acceptable Use Policy)", "SLA", "NDA", "RPO"],
+      "respuesta": 0,
+      "explicacion": "Una AUP establece las reglas de uso aceptable de los sistemas y recursos tecnológicos de una organización."
+    },
+    {
+      "pregunta": "El malware que cifra los archivos de una víctima y exige un pago por la clave es:",
+      "opciones": ["Spyware", "Ransomware", "Adware", "Rootkit"],
+      "respuesta": 1,
+      "explicacion": "El ransomware cifra o bloquea los datos y exige un rescate para recuperar el acceso."
+    },
+    {
+      "pregunta": "El malware que se disfraza de software legítimo y que el usuario instala voluntariamente es un:",
+      "opciones": ["Worm", "Trojan", "Logic bomb", "Virus"],
+      "respuesta": 1,
+      "explicacion": "Un Trojan aparenta ser software legítimo para inducir al usuario a ejecutarlo o instalarlo."
+    },
+    {
+      "pregunta": "El malware autorreplicante que se propaga por una red SIN intervención del usuario es un:",
+      "opciones": ["Trojan", "Worm", "Macro virus", "Keylogger"],
+      "respuesta": 1,
+      "explicacion": "Un worm puede propagarse automáticamente entre sistemas sin necesidad de intervención del usuario."
+    },
+    {
+      "pregunta": "El código malicioso que permanece inactivo hasta que una fecha o condición específica lo activa es una:",
+      "opciones": ["Logic bomb", "Worm", "Adware", "Botnet"],
+      "respuesta": 0,
+      "explicacion": "Una logic bomb se ejecuta únicamente cuando se cumple una condición o evento previamente definido."
+    },
+    {
+      "pregunta": "Un atacante se hace pasar por soporte de TI por teléfono para engañar a un usuario y conseguir que revele su contraseña. Esto es:",
+      "opciones": [
+        "Vishing (voice phishing)",
+        "Smishing",
+        "Tailgating",
+        "Skimming"
+      ],
+      "respuesta": 0,
+      "explicacion": "El vishing es phishing realizado mediante llamadas de voz o comunicaciones telefónicas."
+    },
+    {
+      "pregunta": "Un correo de phishing dirigido específicamente a un único ejecutivo de alto valor es:",
+      "opciones": [
+        "Spear phishing contra un objetivo de alto nivel (whaling)",
+        "Smishing",
+        "Pharming",
+        "Vishing"
+      ],
+      "respuesta": 0,
+      "explicacion": "El whaling es una modalidad de spear phishing dirigida específicamente a ejecutivos u otros objetivos de alto perfil."
+    },
+    {
+      "pregunta": "Un atacante sigue a un empleado a través de una puerta segura antes de que se cierre, sin utilizar credencial. Esto es:",
+      "opciones": [
+        "Tailgating/piggybacking",
+        "Phishing",
+        "Shoulder surfing",
+        "Dumpster diving"
+      ],
+      "respuesta": 0,
+      "explicacion": "El tailgating consiste en acceder físicamente a una zona protegida siguiendo a una persona autorizada."
+    },
+    {
+      "pregunta": "En un desastre físico grave, por ejemplo un gran incendio, ¿cuál es SIEMPRE la primera prioridad absoluta para una organización?",
+      "opciones": [
+        "Apagar los servidores de forma controlada.",
+        "Restaurar los datos desde copias de seguridad externas.",
+        "Garantizar la seguridad física y la salud de todo el personal.",
+        "Contactar con las fuerzas de seguridad."
+      ],
+      "respuesta": 2,
+      "explicacion": "La protección de la vida y la seguridad de las personas tiene prioridad sobre equipos, datos y continuidad operativa."
+    },
+    {
+      "pregunta": "¿Qué documento legal o forense se utiliza para registrar exactamente quién manipuló una evidencia, dónde se almacenó y cuándo fue analizada para garantizar su admisibilidad judicial?",
+      "opciones": [
+        "Informe de incidente",
+        "Cadena de custodia",
+        "Business Impact Analysis",
+        "Registro de riesgos"
+      ],
+      "respuesta": 1,
+      "explicacion": "La cadena de custodia mantiene un registro continuo y documentado de todas las personas que han manipulado una evidencia."
+    },
+    {
+      "pregunta": "Observar por encima del hombro de una persona mientras introduce su PIN es:",
+      "opciones": ["Shoulder surfing", "Pretexting", "Baiting", "Pharming"],
+      "respuesta": 0,
+      "explicacion": "El shoulder surfing consiste en observar directamente información sensible mientras una persona la introduce o consulta."
+    },
+    {
+      "pregunta": "El malware que se oculta a bajo nivel, incluido el kernel, para esconder su presencia y mantener el acceso es un:",
+      "opciones": ["Rootkit", "Adware", "Spam", "Cookie"],
+      "respuesta": 0,
+      "explicacion": "Un rootkit está diseñado para mantener acceso persistente y ocultar procesos, archivos o actividad maliciosa a bajo nivel."
+    },
+    {
+      "pregunta": "El malware que no utiliza un archivo en disco y se ejecuta completamente en memoria para evitar la detección es:",
+      "opciones": [
+        "Un macro virus",
+        "Fileless malware",
+        "Adware",
+        "Una logic bomb"
+      ],
+      "respuesta": 1,
+      "explicacion": "El fileless malware opera principalmente en memoria y utiliza componentes existentes del sistema para reducir los artefactos en disco."
+    },
+    {
+      "pregunta": "Una pequeña sala con dos puertas interbloqueadas en la que solo puede abrirse una puerta cada vez y que controla el acceso de una persona por turno es un:",
+      "opciones": [
+        "Torniquete",
+        "Mantrap (access control vestibule)",
+        "Bolardo",
+        "Jaula"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un mantrap utiliza dos puertas interbloqueadas para controlar estrictamente el acceso individual a una zona protegida."
+    },
+    {
+      "pregunta": "Los postes cortos y resistentes instalados para impedir que un vehículo embista la entrada de un edificio son:",
+      "opciones": ["Bolardos", "Torniquetes", "Mantraps", "Sensores"],
+      "respuesta": 0,
+      "explicacion": "Los bolardos son barreras físicas diseñadas para impedir o dificultar el acceso de vehículos."
+    },
+    {
+      "pregunta": "Un sistema contra incendios de un centro de datos que mantiene las tuberías secas y solo las llena de agua cuando se confirma un incendio es un:",
+      "opciones": [
+        "Sistema de tubería húmeda",
+        "Sistema de tubería seca",
+        "Sistema de diluvio",
+        "Sistema de espuma"
+      ],
+      "respuesta": 1,
+      "explicacion": "En un sistema de tubería seca, las tuberías no contienen agua de forma permanente, reduciendo el riesgo de fugas accidentales."
+    },
+    {
+      "pregunta": "Un agente de extinción de incendios que elimina oxígeno o interrumpe la combustión SIN dañar los equipos electrónicos es un:",
+      "opciones": [
+        "Rociador de agua",
+        "Agente limpio, por ejemplo FM-200 o gas inerte",
+        "Sistema de tubería húmeda",
+        "Espuma"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los agentes limpios permiten extinguir incendios sin los daños asociados al uso de agua sobre equipos electrónicos."
+    },
+    {
+      "pregunta": "Organizar los racks de servidores de forma que los pasillos de entrada de aire frío queden enfrentados y los pasillos de salida de aire caliente también queden enfrentados es:",
+      "opciones": [
+        "Contención de pasillos calientes/fríos",
+        "Air gapping",
+        "Balanceo de carga",
+        "Solo gestión de cableado"
+      ],
+      "respuesta": 0,
+      "explicacion": "La disposición de pasillos calientes y fríos separa el aire frío de entrada del aire caliente expulsado para mejorar la eficiencia de refrigeración."
+    },
+    {
+      "pregunta": "Un dispositivo que proporciona alimentación por batería durante un breve periodo para que los servidores puedan apagarse de forma segura ante una interrupción de energía es un:",
+      "opciones": [
+        "Generador",
+        "UPS",
+        "Protector contra sobretensiones",
+        "PDU"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un UPS proporciona energía inmediata mediante batería durante interrupciones breves o hasta que entra en funcionamiento otra fuente de alimentación."
+    },
+    {
+      "pregunta": "Mantener un sistema crítico en una red SIN conexión con ninguna otra red ni con Internet es un:",
+      "opciones": ["Air gap", "Allowlist", "Overlay", "Uplink"],
+      "respuesta": 0,
+      "explicacion": "Un air gap implica aislamiento de red, evitando conexiones directas con otras redes o Internet."
+    },
+    {
+      "pregunta": "Los controles ambientales que mantienen una temperatura y humedad estables en una sala de servidores son proporcionados por:",
+      "opciones": ["Sistemas HVAC", "Firewalls", "Matrices RAID", "VPN"],
+      "respuesta": 0,
+      "explicacion": "Los sistemas HVAC controlan calefacción, ventilación, aire acondicionado, temperatura y condiciones ambientales."
+    },
+    {
+      "pregunta": "Un recinto metálico cerrado con llave alrededor de un espacio de racks compartido en una instalación de colocation es una:",
+      "opciones": ["Jaula", "Bolardo", "Mantrap", "Torniquete"],
+      "respuesta": 0,
+      "explicacion": "Una jaula proporciona una separación física cerrada para proteger equipos dentro de instalaciones compartidas."
+    },
+    {
+      "pregunta": "Una iluminación adecuada alrededor del perímetro de una instalación es principalmente un control:",
+      "opciones": [
+        "Correctivo",
+        "Disuasorio",
+        "Compensatorio",
+        "De recuperación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La iluminación visible puede disuadir a posibles intrusos al aumentar la probabilidad de ser detectados."
+    },
+    {
+      "pregunta": "Una ley estadounidense que protege la privacidad de los expedientes educativos de los estudiantes es:",
+      "opciones": ["HIPAA", "FERPA", "PCI DSS", "SOX"],
+      "respuesta": 1,
+      "explicacion": "FERPA protege la privacidad de los registros educativos de estudiantes en Estados Unidos."
+    },
+    {
+      "pregunta": "Una ley estadounidense que exige a las instituciones financieras proteger la información financiera personal de sus clientes es:",
+      "opciones": ["GLBA", "FERPA", "HIPAA", "COPPA"],
+      "respuesta": 0,
+      "explicacion": "GLBA establece obligaciones de privacidad y protección de información para determinadas instituciones financieras."
+    },
+    {
+      "pregunta": "Una ley estadounidense que protege la privacidad online de los menores de 13 años es:",
+      "opciones": ["COPPA", "HIPAA", "SOX", "PCI DSS"],
+      "respuesta": 0,
+      "explicacion": "COPPA regula la recopilación y tratamiento de información personal de menores de 13 años en servicios online."
+    },
+    {
+      "pregunta": "Según GDPR, el rol que decide POR QUÉ y CÓMO se procesan los datos personales es el:",
+      "opciones": [
+        "Data processor",
+        "Data controller",
+        "Data subject",
+        "Data custodian"
+      ],
+      "respuesta": 1,
+      "explicacion": "El data controller determina los fines y medios del tratamiento de datos personales."
+    },
+    {
+      "pregunta": "Un requisito legal que obliga a almacenar determinados datos de los ciudadanos de un país dentro de las fronteras de ese país es:",
+      "opciones": [
+        "Soberanía/residencia de datos",
+        "Tokenización",
+        "Enmascaramiento de datos",
+        "Replicación"
+      ],
+      "respuesta": 0,
+      "explicacion": "La soberanía o residencia de datos puede exigir que determinada información permanezca almacenada dentro de una jurisdicción concreta."
+    },
+    {
+      "pregunta": "Recopilar únicamente los datos personales que realmente se necesitan y nada más corresponde al principio de:",
+      "opciones": [
+        "Maximización de datos",
+        "Minimización de datos",
+        "Retención de datos",
+        "Replicación de datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "La minimización de datos exige limitar la recopilación a la información necesaria para la finalidad prevista."
+    },
+    {
+      "pregunta": "Una planificación que determina cuánto tiempo deben conservarse los registros y cuándo deben destruirse es una:",
+      "opciones": [
+        "Política de retención de datos",
+        "Rotación de copias de seguridad",
+        "Matriz de acceso",
+        "Registro de riesgos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una política de retención establece durante cuánto tiempo se conservan los datos y cuándo deben eliminarse."
+    },
+    {
+      "pregunta": "El marco que permite mapear controles a las funciones Identify, Protect, Detect, Respond y Recover es:",
+      "opciones": ["NIST Cybersecurity Framework", "PCI DSS", "FERPA", "GLBA"],
+      "respuesta": 0,
+      "explicacion": "Las funciones Identify, Protect, Detect, Respond y Recover corresponden al modelo clásico del NIST Cybersecurity Framework."
+    },
+    {
+      "pregunta": "Destruir datos de forma segura y permanente para que no puedan reconstruirse es:",
+      "opciones": [
+        "Archivado de datos",
+        "Sanitización/destrucción de datos",
+        "Enmascaramiento de datos",
+        "Replicación de datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "La sanitización o destrucción busca hacer que los datos sean irrecuperables."
+    },
+    {
+      "pregunta": "Destruir físicamente un disco duro mediante trituración o degaussing es apropiado cuando:",
+      "opciones": [
+        "El disco va a reutilizarse internamente",
+        "El soporte va a retirarse y no debe producirse ninguna fuga de datos",
+        "Solo se quiere disponer de más espacio",
+        "Se necesita una copia de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "La destrucción física o el degaussing son apropiados para soportes retirados cuando debe impedirse la recuperación de información sensible."
+    },
+    {
+      "pregunta": "Un banco muestra saldos de cuentas incorrectos debido a un error de corrupción de la base de datos. ¿Qué pilar de CIA ha fallado?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los datos incorrectos o alterados representan un fallo de integridad."
+    },
+    {
+      "pregunta": "Un ataque de ransomware hace que los historiales de un hospital sean inaccesibles para el personal. ¿Qué pilar resulta afectado más directamente?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 2,
+      "explicacion": "La imposibilidad de acceder a los datos cuando se necesitan constituye una pérdida de disponibilidad."
+    },
+    {
+      "pregunta": "Una base de datos de clientes filtrada se publica en Internet. ¿Qué pilar ha fallado?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Responsabilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "La exposición pública de información que debía permanecer restringida supone una pérdida de confidencialidad."
+    },
+    {
+      "pregunta": "Una firma digital en un contrato demuestra que el remitente no puede negar posteriormente haberlo firmado. Esto proporciona:",
+      "opciones": [
+        "Disponibilidad",
+        "No repudio",
+        "Confidencialidad",
+        "Redundancia"
+      ],
+      "respuesta": 1,
+      "explicacion": "El no repudio proporciona evidencia que impide negar posteriormente la autoría o realización de una acción."
+    },
+    {
+      "pregunta": "En AAA, confirmar QUIÉN eres comprobando tus credenciales es:",
+      "opciones": [
+        "Autorización",
+        "Autenticación",
+        "Accounting",
+        "Disponibilidad"
+      ],
+      "respuesta": 1,
+      "explicacion": "La autenticación comprueba la identidad de un usuario mediante sus credenciales."
+    },
+    {
+      "pregunta": "En AAA, decidir QUÉ puede hacer un usuario autenticado es:",
+      "opciones": [
+        "Autenticación",
+        "Autorización",
+        "Accounting",
+        "Solo auditoría"
+      ],
+      "respuesta": 1,
+      "explicacion": "La autorización concede o deniega acciones y recursos en función de los permisos del usuario."
+    },
+    {
+      "pregunta": "En AAA, registrar qué archivos ha consultado un usuario y cuándo es:",
+      "opciones": [
+        "Autenticación",
+        "Autorización",
+        "Accounting (accountability)",
+        "Cifrado"
+      ],
+      "respuesta": 2,
+      "explicacion": "Accounting registra las actividades realizadas para proporcionar trazabilidad y accountability."
+    },
+    {
+      "pregunta": "Calcular el hash de un archivo descargado y compararlo con el hash publicado por el proveedor verifica:",
+      "opciones": [
+        "Disponibilidad",
+        "Integridad",
+        "Confidencialidad",
+        "Anonimato"
+      ],
+      "respuesta": 1,
+      "explicacion": "Si los hashes coinciden, se obtiene evidencia de que el archivo no ha sido modificado."
+    },
+    {
+      "pregunta": "El balanceo de carga y los servidores redundantes respaldan principalmente qué pilar de CIA?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 2,
+      "explicacion": "La redundancia y el balanceo de carga ayudan a mantener los servicios accesibles ante fallos o sobrecarga."
+    },
+    {
+      "pregunta": "Cifrar el disco de un portátil protege qué pilar si el portátil es robado?",
+      "opciones": [
+        "Disponibilidad",
+        "Integridad",
+        "Confidencialidad",
+        "Accounting"
+      ],
+      "respuesta": 2,
+      "explicacion": "El cifrado impide que un tercero no autorizado pueda leer los datos almacenados en el dispositivo."
+    },
+    {
+      "pregunta": "Durante la respuesta a incidentes, aislar un host infectado de la red para detener la propagación corresponde a la fase de:",
+      "opciones": ["Detección", "Contención", "Erradicación", "Recuperación"],
+      "respuesta": 1,
+      "explicacion": "La contención busca limitar el alcance de un incidente y evitar que siga propagándose."
+    },
+    {
+      "pregunta": "Eliminar el malware y corregir la vulnerabilidad explotada corresponde a la fase de:",
+      "opciones": [
+        "Contención",
+        "Erradicación",
+        "Recuperación",
+        "Lecciones aprendidas"
+      ],
+      "respuesta": 1,
+      "explicacion": "La erradicación elimina la amenaza y, cuando es posible, su causa raíz o vía de explotación."
+    },
+    {
+      "pregunta": "Restaurar los sistemas desde copias de seguridad limpias y volver al funcionamiento normal corresponde a la fase de:",
+      "opciones": ["Erradicación", "Recuperación", "Contención", "Preparación"],
+      "respuesta": 1,
+      "explicacion": "La recuperación restaura servicios y sistemas a un estado operativo normal después del incidente."
+    },
+    {
+      "pregunta": "Una revisión posterior al incidente para mejorar la respuesta futura corresponde a la fase de:",
+      "opciones": [
+        "Detección",
+        "Lecciones aprendidas (post-incidente)",
+        "Contención",
+        "Identificación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La fase de lecciones aprendidas analiza lo ocurrido e identifica mejoras para prevenir o responder mejor a incidentes futuros."
+    },
+    {
+      "pregunta": "Mantener un registro documentado e ininterrumpido de quién ha manipulado una evidencia es:",
+      "opciones": [
+        "Cadena de custodia",
+        "Gestión de cambios",
+        "Rotación de logs",
+        "Tokenización"
+      ],
+      "respuesta": 0,
+      "explicacion": "La cadena de custodia documenta de forma continua la posesión, transferencia y manipulación de una evidencia."
+    },
+    {
+      "pregunta": "Un proceso que exige aprobación, pruebas y documentación antes de modificar sistemas de producción es:",
+      "opciones": [
+        "Gestión de cambios",
+        "Respuesta a incidentes",
+        "Penetration testing",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión de cambios controla las modificaciones mediante procesos de aprobación, pruebas, documentación y seguimiento."
+    },
+    {
+      "pregunta": "Recopilar y correlacionar logs de múltiples sistemas para detectar patrones y alertar a los analistas es una función de un:",
+      "opciones": ["SIEM", "CDN", "VPN", "RAID"],
+      "respuesta": 0,
+      "explicacion": "Un SIEM centraliza, correlaciona y analiza eventos y logs de múltiples fuentes para generar alertas de seguridad."
+    },
+    {
+      "pregunta": "Automatizar tareas repetitivas de respuesta, como aislar automáticamente un host ante una alerta, mediante playbooks es:",
+      "opciones": ["SOAR", "DHCP", "NAT", "CRL"],
+      "respuesta": 0,
+      "explicacion": "SOAR permite orquestar y automatizar flujos y playbooks de respuesta a incidentes."
+    },
+    {
+      "pregunta": "Un entorno controlado y aislado utilizado para ejecutar de forma segura y observar archivos sospechosos es un:",
+      "opciones": ["Sandbox", "Honeypot", "DMZ", "Hot site"],
+      "respuesta": 0,
+      "explicacion": "Un sandbox permite ejecutar contenido sospechoso en un entorno aislado para analizar su comportamiento."
+    },
+    {
+      "pregunta": "Una organización envía sus logs a un servidor separado y append-only. Esto protege la:",
+      "opciones": [
+        "Disponibilidad únicamente",
+        "Integridad de los logs frente a manipulaciones",
+        "Ancho de banda",
+        "Compresión"
+      ],
+      "respuesta": 1,
+      "explicacion": "El almacenamiento remoto y append-only dificulta que un atacante modifique o elimine registros ya generados."
+    },
+    {
+      "pregunta": "Una empresa contrata un ciberseguro para cubrir los costes de una brecha. Esta respuesta al riesgo es:",
+      "opciones": ["Evitación", "Transferencia", "Aceptación", "Mitigación"],
+      "respuesta": 1,
+      "explicacion": "El seguro transfiere a un tercero parte del impacto financiero asociado al riesgo."
+    },
+    {
+      "pregunta": "Una empresa decide NO lanzar en absoluto una nueva línea de productos arriesgada. Esta respuesta al riesgo es:",
+      "opciones": ["Aceptación", "Evitación", "Transferencia", "Mitigación"],
+      "respuesta": 1,
+      "explicacion": "La evitación elimina el riesgo al decidir no realizar la actividad que lo produciría."
+    },
+    {
+      "pregunta": "El riesgo que permanece DESPUÉS de aplicar los controles se denomina:",
+      "opciones": [
+        "Riesgo inherente",
+        "Riesgo residual",
+        "Riesgo total",
+        "Apetito de riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "El riesgo residual es el nivel de riesgo que permanece tras aplicar medidas de seguridad."
+    },
+    {
+      "pregunta": "La cantidad de riesgo que una organización está dispuesta a aceptar para alcanzar sus objetivos es su:",
+      "opciones": [
+        "Apetito/tolerancia al riesgo",
+        "Evitación",
+        "Transferencia",
+        "Registro"
+      ],
+      "respuesta": 0,
+      "explicacion": "El apetito o tolerancia al riesgo define el nivel de riesgo que la organización considera aceptable."
+    },
+    {
+      "pregunta": "Single Loss Expectancy (SLE) se calcula como:",
+      "opciones": [
+        "ARO × ALE",
+        "Asset Value × Exposure Factor",
+        "ALE ÷ ARO",
+        "Threat × Vulnerability"
+      ],
+      "respuesta": 1,
+      "explicacion": "SLE se calcula multiplicando el valor del activo (Asset Value) por el factor de exposición (Exposure Factor)."
+    },
+    {
+      "pregunta": "Annualized Loss Expectancy (ALE) se calcula como:",
+      "opciones": ["SLE × ARO", "SLE ÷ EF", "AV × ARO", "EF × ARO"],
+      "respuesta": 0,
+      "explicacion": "ALE es el producto de la pérdida esperada por incidente, SLE, y la frecuencia anual estimada, ARO."
+    },
+    {
+      "pregunta": "Un control debería implementarse cuando su coste anual es:",
+      "opciones": [
+        "Mayor que el ALE que reduce",
+        "Menor que el ALE que reduce",
+        "Igual al valor del activo",
+        "Irrelevante respecto al ALE"
+      ],
+      "respuesta": 1,
+      "explicacion": "Desde un criterio estrictamente económico, un control es rentable cuando su coste es inferior a la pérdida anual esperada que permite evitar o reducir."
+    },
+    {
+      "pregunta": "Asignar valores Alto/Medio/Bajo a los riesgos en lugar de cantidades monetarias corresponde a una evaluación:",
+      "opciones": ["Cuantitativa", "Cualitativa", "Monetaria", "Estadística"],
+      "respuesta": 1,
+      "explicacion": "La evaluación cualitativa utiliza categorías descriptivas como Alto, Medio y Bajo en lugar de valores monetarios exactos."
+    },
+    {
+      "pregunta": "Un documento central que enumera los riesgos identificados, sus propietarios y el estado de su tratamiento es un:",
+      "opciones": [
+        "Registro de riesgos",
+        "Inventario de activos",
+        "Registro de cambios",
+        "Audit trail"
+      ],
+      "respuesta": 0,
+      "explicacion": "El registro de riesgos documenta los riesgos identificados, responsables, tratamientos y estado de seguimiento."
+    },
+    {
+      "pregunta": "Una debilidad que una amenaza podría explotar es una:",
+      "opciones": ["Amenaza", "Vulnerabilidad", "Riesgo", "Control"],
+      "respuesta": 1,
+      "explicacion": "Una vulnerabilidad es una debilidad susceptible de ser explotada por una amenaza."
+    },
+    {
+      "pregunta": "En un sistema gubernamental, el acceso se concede según etiquetas de clasificación, por ejemplo Secret, y lo impone el sistema en lugar del propietario. Esto es:",
+      "opciones": ["DAC", "MAC (Mandatory Access Control)", "RBAC", "ABAC"],
+      "respuesta": 1,
+      "explicacion": "MAC utiliza etiquetas de clasificación y niveles de autorización impuestos centralmente por el sistema."
+    },
+    {
+      "pregunta": "El propietario de un archivo decide personalmente quién puede leerlo o editarlo. Este modelo de acceso es:",
+      "opciones": [
+        "MAC",
+        "DAC (Discretionary Access Control)",
+        "RBAC",
+        "Basado en reglas"
+      ],
+      "respuesta": 1,
+      "explicacion": "En DAC, el propietario del recurso tiene capacidad discrecional para asignar permisos."
+    },
+    {
+      "pregunta": "Los usuarios reciben permisos porque pertenecen al rol profesional 'Nurse'. Esto es:",
+      "opciones": ["RBAC (Role-Based Access Control)", "DAC", "MAC", "ABAC"],
+      "respuesta": 0,
+      "explicacion": "RBAC asigna permisos en función del rol o función laboral del usuario."
+    },
+    {
+      "pregunta": "Conceder acceso únicamente si se cumple 'department=Finance AND time=business hours AND device=managed' corresponde a:",
+      "opciones": [
+        "RBAC",
+        "ABAC (Attribute-Based Access Control)",
+        "MAC",
+        "DAC"
+      ],
+      "respuesta": 1,
+      "explicacion": "ABAC toma decisiones de acceso mediante políticas que evalúan múltiples atributos del usuario, recurso, dispositivo o contexto."
+    },
+    {
+      "pregunta": "Una puerta cerrada con llave de una sala de servidores es, por su naturaleza, qué tipo de control?",
+      "opciones": ["Administrativo", "Técnico", "Físico", "Detective"],
+      "respuesta": 2,
+      "explicacion": "Una puerta cerrada es una barrera tangible, por lo que constituye un control físico."
+    },
+    {
+      "pregunta": "La formación de concienciación en seguridad es qué TIPO de control?",
+      "opciones": ["Físico", "Técnico", "Administrativo", "Disuasorio"],
+      "respuesta": 2,
+      "explicacion": "La formación, las políticas y los procedimientos son controles administrativos o de gestión."
+    },
+    {
+      "pregunta": "El cifrado y los firewalls son qué TIPO de control?",
+      "opciones": [
+        "Físico",
+        "Técnico (lógico)",
+        "Administrativo",
+        "Compensatorio"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado y los firewalls aplican controles mediante tecnología, por lo que son controles técnicos o lógicos."
+    },
+    {
+      "pregunta": "Una cámara CCTV que graba intrusos para su posterior revisión es un control de función:",
+      "opciones": ["Preventiva", "Detective", "Disuasoria", "Correctiva"],
+      "respuesta": 1,
+      "explicacion": "La función principal de la grabación para revisión posterior es detectar y documentar eventos que han ocurrido."
+    },
+    {
+      "pregunta": "Restaurar desde una copia de seguridad después de un ataque de ransomware corresponde a qué FUNCIÓN de control?",
+      "opciones": ["Preventiva", "Detective", "Correctiva", "Disuasoria"],
+      "respuesta": 2,
+      "explicacion": "Un control correctivo actúa después de un incidente para reparar daños o restaurar el funcionamiento."
+    },
+    {
+      "pregunta": "Cuando no puede utilizarse un control principal, una alternativa temporal que cumple el mismo objetivo es un control:",
+      "opciones": ["Compensatorio", "Preventivo", "Físico", "Detective"],
+      "respuesta": 0,
+      "explicacion": "Un control compensatorio sustituye a otro control cuando este no resulta viable, manteniendo un nivel de protección equivalente o suficiente."
+    },
+    {
+      "pregunta": "Un cartel de advertencia que indica 'Los intrusos serán procesados' corresponde a qué FUNCIÓN de control?",
+      "opciones": ["Detective", "Disuasoria", "Correctiva", "De recuperación"],
+      "respuesta": 1,
+      "explicacion": "Un aviso de este tipo intenta desalentar una conducta no autorizada antes de que se produzca."
+    }
+  ]
+}

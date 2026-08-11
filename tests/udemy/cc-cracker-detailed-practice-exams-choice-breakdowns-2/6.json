@@ -1,0 +1,1057 @@
+{
+  "titulo": "Batería de fundamentos de ciberseguridad #6",
+  "procedencia": "Test proporcionado por el usuario",
+  "descripcion": "Batería de 100 preguntas sobre principios de seguridad, gestión de riesgos, gobernanza, continuidad de negocio, IAM, redes, nube, operaciones de seguridad y respuesta a incidentes.",
+  "preguntas": [
+    {
+      "pregunta": "El sistema de historiales clínicos de un hospital queda fuera de servicio durante 48 horas debido a un ciberataque, impidiendo el acceso a los registros. ¿Qué pilar de la CIA se vulnera de forma MÁS directa?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 2,
+      "explicacion": "Si los usuarios autorizados no pueden acceder al sistema, se vulnera directamente la Disponibilidad."
+    },
+    {
+      "pregunta": "AES, el estándar actual del gobierno de Estados Unidos para cifrado simétrico, ¿a qué algoritmo anterior sustituyó?",
+      "opciones": ["RSA", "DES", "SHA-1", "MD5"],
+      "respuesta": 1,
+      "explicacion": "AES sustituyó a DES y posteriormente a 3DES como estándar moderno de cifrado simétrico."
+    },
+    {
+      "pregunta": "RSA es un ejemplo popular de ¿qué tipo de criptografía?",
+      "opciones": [
+        "Cifrado simétrico",
+        "Cifrado asimétrico",
+        "Hashing",
+        "Esteganografía"
+      ],
+      "respuesta": 1,
+      "explicacion": "RSA es un algoritmo de criptografía asimétrica o de clave pública."
+    },
+    {
+      "pregunta": "¿Por qué MD5 se considera inseguro actualmente para funciones hash críticas de seguridad?",
+      "opciones": [
+        "Es demasiado lento",
+        "Presenta colisiones predecibles y está criptográficamente roto",
+        "Solo funciona en Windows",
+        "Requiere una licencia especial"
+      ],
+      "respuesta": 1,
+      "explicacion": "MD5 tiene vulnerabilidades de colisión conocidas que permiten que entradas diferentes produzcan el mismo hash."
+    },
+    {
+      "pregunta": "¿Por qué SHA-1 está obsoleto para usos sensibles de seguridad?",
+      "opciones": [
+        "No se ha actualizado desde 1990",
+        "Se han demostrado ataques prácticos de colisión contra SHA-1",
+        "Solo genera 64 bits",
+        "Requiere demasiado espacio en disco"
+      ],
+      "respuesta": 1,
+      "explicacion": "Se han demostrado colisiones prácticas contra SHA-1, por lo que ya no ofrece una resistencia adecuada a colisiones."
+    },
+    {
+      "pregunta": "¿Qué algoritmo de hashing está diseñado específicamente para ser LENTO y dificultar el cracking de contraseñas?",
+      "opciones": ["MD5", "SHA-1", "SHA-256", "bcrypt"],
+      "respuesta": 3,
+      "explicacion": "bcrypt está diseñado deliberadamente para ser costoso computacionalmente y permite ajustar su factor de coste."
+    },
+    {
+      "pregunta": "El key escrow es un sistema en el que:",
+      "opciones": [
+        "Los usuarios ocultan sus claves a los administradores",
+        "Copias de las claves de cifrado se almacenan de forma segura en un tercero de confianza para su recuperación",
+        "Las claves se autodestruyen después de 24 horas",
+        "Las claves se publican en Internet"
+      ],
+      "respuesta": 1,
+      "explicacion": "El key escrow conserva copias protegidas de claves mediante un tercero de confianza para recuperación o acceso autorizado."
+    },
+    {
+      "pregunta": "Un ataque de análisis de frecuencias es MÁS eficaz contra:",
+      "opciones": [
+        "El cifrado AES moderno",
+        "Cifrados de sustitución simples como César",
+        "Funciones hash",
+        "Criptografía de clave pública"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los cifrados de sustitución conservan patrones estadísticos de los caracteres que pueden explotarse mediante análisis de frecuencias."
+    },
+    {
+      "pregunta": "Un ataque de cumpleaños ataca específicamente una debilidad de:",
+      "opciones": [
+        "Claves de cifrado simétrico",
+        "Funciones hash mediante la búsqueda de colisiones",
+        "Reglas de firewall",
+        "Cerraduras físicas"
+      ],
+      "respuesta": 1,
+      "explicacion": "El ataque de cumpleaños aprovecha la probabilidad estadística de encontrar colisiones en funciones hash."
+    },
+    {
+      "pregunta": "¿Qué defensa mitiga MEJOR un ataque de fuerza bruta contra el formulario de inicio de sesión?",
+      "opciones": [
+        "Usar contraseñas más cortas",
+        "Bloquear la cuenta después de un pequeño número de intentos fallidos",
+        "Desactivar el cifrado",
+        "Eliminar el campo de contraseña"
+      ],
+      "respuesta": 1,
+      "explicacion": "El bloqueo tras varios intentos fallidos limita el número de combinaciones que un atacante puede probar."
+    },
+    {
+      "pregunta": "¿Qué defensa contrarresta específicamente los ataques Rainbow Table contra contraseñas hasheadas?",
+      "opciones": [
+        "Aplicar el hash dos veces",
+        "Añadir un salt único a cada contraseña antes de aplicar el hash",
+        "Usar MD5",
+        "Acortar las contraseñas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un salt único hace que las tablas precalculadas de hashes dejen de ser reutilizables entre contraseñas."
+    },
+    {
+      "pregunta": "En criptografía, el mensaje original y legible recibe el nombre de:",
+      "opciones": ["Ciphertext", "Plaintext", "Hash", "Salt"],
+      "respuesta": 1,
+      "explicacion": "Plaintext es la información legible antes de aplicar el cifrado."
+    },
+    {
+      "pregunta": "Un stream cipher cifra los datos:",
+      "opciones": [
+        "En bloques de tamaño fijo",
+        "Un bit o byte cada vez, de forma continua",
+        "Solo después de cargar el archivo completo",
+        "Sin utilizar ninguna clave"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un stream cipher procesa un flujo continuo de datos, normalmente bit a bit o byte a byte."
+    },
+    {
+      "pregunta": "Una empresa decide DEJAR de ofrecer una función de pagos en línea porque el riesgo de seguridad es demasiado alto. Esto es un ejemplo de:",
+      "opciones": [
+        "Mitigación del riesgo",
+        "Evitación del riesgo",
+        "Aceptación del riesgo",
+        "Transferencia del riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Eliminar por completo la actividad que genera el riesgo constituye evitación del riesgo."
+    },
+    {
+      "pregunta": "Implementar un firewall, antivirus y MFA para REDUCIR el impacto de los ataques es un ejemplo de:",
+      "opciones": [
+        "Mitigación del riesgo",
+        "Aceptación del riesgo",
+        "Evitación del riesgo",
+        "Transferencia del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La mitigación consiste en implantar controles que reduzcan la probabilidad o el impacto del riesgo."
+    },
+    {
+      "pregunta": "Una organización documenta un riesgo de bajo impacto y decide no hacer NADA porque el coste de los controles supera la pérdida potencial. Esto es:",
+      "opciones": [
+        "Evitación del riesgo",
+        "Aceptación del riesgo",
+        "Mitigación del riesgo",
+        "Transferencia del riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "La aceptación del riesgo es una decisión consciente y documentada de asumir sus posibles consecuencias."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de análisis cuantitativo de riesgos?",
+      "opciones": [
+        "Clasificar un riesgo como Alto en un mapa de calor",
+        "Calcular ALE = SLE × ARO en términos monetarios",
+        "Clasificar un riesgo como grave",
+        "Usar una escala de severidad mediante emojis"
+      ],
+      "respuesta": 1,
+      "explicacion": "El análisis cuantitativo utiliza valores numéricos y monetarios, como SLE, ARO y ALE."
+    },
+    {
+      "pregunta": "El análisis cualitativo de riesgos se describe MEJOR como:",
+      "opciones": [
+        "Producir estimaciones exactas de pérdidas monetarias",
+        "Clasificar riesgos mediante escalas descriptivas como Bajo/Medio/Alto",
+        "Calcular el ROI de cada control",
+        "Utilizar exclusivamente fórmulas matemáticas"
+      ],
+      "respuesta": 1,
+      "explicacion": "El análisis cualitativo utiliza categorías descriptivas y clasificaciones relativas en lugar de valores monetarios exactos."
+    },
+    {
+      "pregunta": "Si un activo vale 50.000 dólares y una inundación destruiría el 40 % de su valor, ¿cuál es la Single Loss Expectancy (SLE)?",
+      "opciones": [
+        "5.000 dólares",
+        "20.000 dólares",
+        "40.000 dólares",
+        "50.000 dólares"
+      ],
+      "respuesta": 1,
+      "explicacion": "SLE = Asset Value × Exposure Factor = 50.000 × 0,40 = 20.000 dólares."
+    },
+    {
+      "pregunta": "Si una pérdida individual cuesta 20.000 dólares y se espera que ocurra dos veces al año, ¿cuál es la Annualized Loss Expectancy (ALE)?",
+      "opciones": [
+        "10.000 dólares",
+        "20.000 dólares",
+        "40.000 dólares",
+        "200.000 dólares"
+      ],
+      "respuesta": 2,
+      "explicacion": "ALE = SLE × ARO = 20.000 × 2 = 40.000 dólares anuales."
+    },
+    {
+      "pregunta": "Si se espera que un evento de 100.000 dólares ocurra una vez cada 10 años, ¿cuál es la Annualized Rate of Occurrence (ARO)?",
+      "opciones": ["10", "1", "0.1", "0.01"],
+      "respuesta": 2,
+      "explicacion": "Un evento esperado una vez cada 10 años tiene un ARO de 1/10, es decir, 0.1."
+    },
+    {
+      "pregunta": "Al decidir si implementar un control de 30.000 dólares, debería compararse su coste con:",
+      "opciones": [
+        "Únicamente el precio indicado por el proveedor",
+        "La ALE que el control evitaría o reduciría",
+        "Los ingresos totales de la empresa",
+        "El presupuesto de marketing del año anterior"
+      ],
+      "respuesta": 1,
+      "explicacion": "La decisión debe considerar si el coste del control está justificado por la reducción esperada de la ALE."
+    },
+    {
+      "pregunta": "Un control que cuesta 5.000 dólares al año y reduce una ALE de 50.000 a 10.000 dólares, ¿cuánto ahorra neto anualmente?",
+      "opciones": [
+        "5.000 dólares",
+        "35.000 dólares",
+        "45.000 dólares",
+        "50.000 dólares"
+      ],
+      "respuesta": 1,
+      "explicacion": "El ahorro neto es 50.000 - 10.000 - 5.000 = 35.000 dólares al año."
+    },
+    {
+      "pregunta": "El Total Cost of Ownership (TCO) de un control incluye:",
+      "opciones": [
+        "Solo el precio de compra",
+        "Compra, mantenimiento, formación y retirada durante toda la vida útil del control",
+        "Solo la licencia",
+        "Solo los tickets del help desk"
+      ],
+      "respuesta": 1,
+      "explicacion": "El TCO contempla todos los costes asociados al control durante su ciclo de vida completo."
+    },
+    {
+      "pregunta": "Según el Código Ético de ISC2, ¿qué canon exige proporcionar un servicio diligente y competente a los principales, como empleadores o clientes?",
+      "opciones": [
+        "Canon 1: Proteger a la sociedad",
+        "Canon 2: Actuar honorablemente y con honestidad",
+        "Canon 3: Proporcionar un servicio diligente y competente",
+        "Canon 4: Promover y proteger la profesión"
+      ],
+      "respuesta": 2,
+      "explicacion": "El Canon 3 exige proporcionar un servicio diligente y competente a los principales."
+    },
+    {
+      "pregunta": "Según el Código Ético de ISC2, ¿qué canon exige PROMOVER Y PROTEGER la propia profesión de ciberseguridad?",
+      "opciones": ["Canon 1", "Canon 2", "Canon 3", "Canon 4"],
+      "respuesta": 3,
+      "explicacion": "El Canon 4 se refiere a promover y proteger la profesión."
+    },
+    {
+      "pregunta": "¿Qué valores produce PRINCIPALMENTE un Business Impact Analysis (BIA)?",
+      "opciones": [
+        "Configuraciones de firewall y ACL",
+        "RTO, RPO y MTD para procesos de negocio críticos",
+        "Reglas de complejidad de contraseñas",
+        "Número de licencias de software"
+      ],
+      "respuesta": 1,
+      "explicacion": "El BIA identifica procesos críticos y determina métricas de recuperación como RTO, RPO y MTD."
+    },
+    {
+      "pregunta": "Maximum Tolerable Downtime (MTD) se define MEJOR como:",
+      "opciones": [
+        "El tiempo objetivo de restauración",
+        "El tiempo máximo absoluto que un negocio puede permanecer inoperativo antes de sufrir consecuencias inaceptables",
+        "La cantidad de datos que se pueden perder",
+        "El tiempo necesario para realizar una copia de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "MTD representa el límite máximo de interrupción que el negocio puede tolerar."
+    },
+    {
+      "pregunta": "Work Recovery Time (WRT) hace referencia a:",
+      "opciones": [
+        "El tiempo necesario para reconstruir físicamente un centro de datos",
+        "El tiempo posterior a la restauración de los sistemas necesario para validarlos y reanudar las operaciones normales",
+        "El tiempo para cifrar las copias de seguridad",
+        "El tiempo necesario para un ejercicio tabletop"
+      ],
+      "respuesta": 1,
+      "explicacion": "WRT es el tiempo posterior a la restauración técnica necesario para validar sistemas y recuperar la actividad normal."
+    },
+    {
+      "pregunta": "¿Qué tipo de sitio de recuperación está completamente equipado con hardware y datos y puede estar operativo en cuestión de horas?",
+      "opciones": ["Cold site", "Warm site", "Hot site", "Reciprocal site"],
+      "respuesta": 2,
+      "explicacion": "Un hot site está completamente equipado y preparado para asumir operaciones con muy poca demora."
+    },
+    {
+      "pregunta": "¿Qué sitio de recuperación tiene equipamiento instalado pero carece de datos actuales y requiere una preparación significativa?",
+      "opciones": ["Hot site", "Warm site", "Cold site", "Mobile site"],
+      "respuesta": 1,
+      "explicacion": "Un warm site dispone de infraestructura y parte del equipamiento, pero necesita cargar datos y completar la configuración."
+    },
+    {
+      "pregunta": "¿Qué sitio de recuperación es el más barato pero tarda MÁS tiempo en ponerse en funcionamiento?",
+      "opciones": ["Hot site", "Warm site", "Cold site", "Cloud site"],
+      "respuesta": 2,
+      "explicacion": "Un cold site proporciona principalmente espacio e infraestructura básica, por lo que es barato pero lento de activar."
+    },
+    {
+      "pregunta": "Un reciprocal agreement como opción de recuperación significa:",
+      "opciones": [
+        "Comprar un seguro",
+        "Establecer un acuerdo formal con otra organización para compartir instalaciones durante un desastre",
+        "Configurar una copia de seguridad externa",
+        "Comprar directamente un hot site"
+      ],
+      "respuesta": 1,
+      "explicacion": "En un acuerdo recíproco, dos organizaciones acuerdan proporcionarse instalaciones mutuamente en caso de desastre."
+    },
+    {
+      "pregunta": "Los sitios de recuperación ante desastres basados en cloud son populares actualmente PRINCIPALMENTE porque:",
+      "opciones": [
+        "Eliminan todos los costes",
+        "Ofrecen activación rápida, redundancia geográfica y precios de pago por uso",
+        "No requieren planificación",
+        "Sustituyen completamente al BIA"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cloud permite desplegar recursos rápidamente, distribuirlos geográficamente y utilizar modelos de coste flexibles."
+    },
+    {
+      "pregunta": "Un sitio de recuperación Mobile o portable se describe MEJOR como:",
+      "opciones": [
+        "Un portátil con datos de la empresa",
+        "Un remolque o contenedor autónomo con servidores y equipamiento que puede desplegarse cerca del desastre",
+        "Una oficina doméstica",
+        "Un smartphone"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un mobile site es una instalación transportable equipada para proporcionar capacidad informática temporal."
+    },
+    {
+      "pregunta": "Una organización define RTO = 4 horas y MTD = 8 horas. ¿Qué implica esto respecto al WRT?",
+      "opciones": [
+        "El WRT puede ser de hasta 12 horas",
+        "El WRT debe ser de 4 horas o menos para que RTO + WRT ≤ MTD",
+        "El WRT es irrelevante",
+        "El WRT debe ser 0"
+      ],
+      "respuesta": 1,
+      "explicacion": "Si el MTD es de 8 horas y el RTO consume 4, el WRT no puede superar las 4 horas restantes."
+    },
+    {
+      "pregunta": "En el contexto de AAA, declarar una identidad, por ejemplo escribiendo un nombre de usuario, se denomina:",
+      "opciones": [
+        "Autenticación",
+        "Identificación",
+        "Autorización",
+        "Accounting"
+      ],
+      "respuesta": 1,
+      "explicacion": "La identificación consiste en declarar quién se afirma ser; la autenticación demuestra posteriormente esa identidad."
+    },
+    {
+      "pregunta": "¿Como qué tipo de factor de autenticación se clasifica una contraseña?",
+      "opciones": [
+        "Tipo 1: Algo que sabes",
+        "Tipo 2: Algo que tienes",
+        "Tipo 3: Algo que eres",
+        "Tipo 4: Algún lugar en el que estás"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una contraseña es información memorizada y pertenece al factor Algo que sabes."
+    },
+    {
+      "pregunta": "¿Qué tipo de factor de autenticación representa una smart card o una llave de seguridad USB?",
+      "opciones": [
+        "Tipo 1: Saber",
+        "Tipo 2: Tener",
+        "Tipo 3: Ser",
+        "Tipo 5: Hacer"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una smart card o una llave USB es un objeto físico que el usuario posee, por lo que corresponde a Algo que tienes."
+    },
+    {
+      "pregunta": "¿Qué tipo de factor de autenticación representa un escaneo de iris?",
+      "opciones": [
+        "Tipo 1: Saber",
+        "Tipo 2: Tener",
+        "Tipo 3: Ser",
+        "Tipo 4: Dónde estás"
+      ],
+      "respuesta": 2,
+      "explicacion": "El iris es una característica biométrica física y corresponde al factor Algo que eres."
+    },
+    {
+      "pregunta": "¿Cuál es el beneficio PRINCIPAL del Single Sign-On (SSO)?",
+      "opciones": [
+        "Elimina la necesidad de cualquier autenticación",
+        "Los usuarios se autentican una vez y acceden a múltiples aplicaciones, reduciendo la fatiga de contraseñas",
+        "Elimina la necesidad de MFA",
+        "Hace imposible la auditoría"
+      ],
+      "respuesta": 1,
+      "explicacion": "SSO permite utilizar una única autenticación para acceder a múltiples aplicaciones, simplificando la experiencia del usuario."
+    },
+    {
+      "pregunta": "¿Cuál es el riesgo PRINCIPAL del Single Sign-On (SSO)?",
+      "opciones": [
+        "Inicios de sesión más lentos",
+        "Si se compromete la credencial de SSO, el atacante puede acceder a todas las aplicaciones conectadas",
+        "Demasiadas contraseñas que recordar",
+        "Mayor coste de hardware"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una credencial SSO comprometida puede proporcionar acceso a numerosos servicios, por lo que debe protegerse especialmente, por ejemplo con MFA."
+    },
+    {
+      "pregunta": "Kerberos se utiliza PRINCIPALMENTE para:",
+      "opciones": [
+        "Cifrar discos duros",
+        "Autenticación de red mediante tickets, especialmente en dominios Windows",
+        "Bloquear correos de phishing",
+        "Realizar copias de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Kerberos es un protocolo de autenticación basado en tickets ampliamente utilizado en Active Directory."
+    },
+    {
+      "pregunta": "SAML se utiliza PRINCIPALMENTE para habilitar:",
+      "opciones": [
+        "Cifrado de discos",
+        "Autenticación federada y SSO entre dominios de seguridad",
+        "Resolución DNS",
+        "Captura de paquetes de red"
+      ],
+      "respuesta": 1,
+      "explicacion": "SAML intercambia assertions de identidad entre proveedores para facilitar federación y SSO."
+    },
+    {
+      "pregunta": "OAuth está diseñado PRINCIPALMENTE para proporcionar:",
+      "opciones": [
+        "Autenticación de identidad",
+        "Autorización para delegar acceso sin compartir la contraseña",
+        "Cifrado de correo electrónico",
+        "Reglas de firewall de red"
+      ],
+      "respuesta": 1,
+      "explicacion": "OAuth permite conceder acceso limitado a recursos a otra aplicación sin entregar las credenciales del usuario."
+    },
+    {
+      "pregunta": "¿Qué capacidad añade OpenID Connect (OIDC) sobre OAuth?",
+      "opciones": [
+        "Discos duros cifrados",
+        "Una capa de autenticación que verifica quién es el usuario",
+        "Gestión de copias de seguridad",
+        "Análisis antivirus"
+      ],
+      "respuesta": 1,
+      "explicacion": "OIDC añade autenticación e información de identidad sobre el framework de autorización de OAuth."
+    },
+    {
+      "pregunta": "LDAP se utiliza PRINCIPALMENTE para:",
+      "opciones": [
+        "Cifrar archivos en reposo",
+        "Consultar servicios de directorio para obtener información de usuarios, grupos y recursos",
+        "Sustituir DNS",
+        "Realizar copias de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "LDAP permite consultar y gestionar información almacenada en servicios de directorio."
+    },
+    {
+      "pregunta": "RADIUS se utiliza PRINCIPALMENTE para:",
+      "opciones": [
+        "Transferencia de archivos",
+        "Autenticación centralizada para acceso a red, como VPN, Wi-Fi y switches",
+        "Navegación web",
+        "Consultas DNS"
+      ],
+      "respuesta": 1,
+      "explicacion": "RADIUS proporciona servicios AAA centralizados para acceso a redes y dispositivos."
+    },
+    {
+      "pregunta": "En comparación con RADIUS, TACACS+ se caracteriza por:",
+      "opciones": [
+        "Cifrar únicamente la contraseña",
+        "Cifrar todo el payload y separar Authentication, Authorization y Accounting",
+        "No utilizar cifrado",
+        "Funcionar únicamente en Windows"
+      ],
+      "respuesta": 1,
+      "explicacion": "TACACS+ cifra el contenido del paquete y separa claramente las funciones de Authentication, Authorization y Accounting."
+    },
+    {
+      "pregunta": "Una política de bloqueo de cuenta que bloquea el acceso después de 5 intentos fallidos está diseñada para contrarrestar:",
+      "opciones": [
+        "Phishing",
+        "Ataques de fuerza bruta contra contraseñas",
+        "DDoS",
+        "Ingeniería social"
+      ],
+      "respuesta": 1,
+      "explicacion": "El bloqueo limita el número de intentos posibles y dificulta los ataques automatizados de fuerza bruta."
+    },
+    {
+      "pregunta": "Las directrices modernas de NIST sobre contraseñas recomiendan:",
+      "opciones": [
+        "Forzar cambios de contraseña cada 30 días",
+        "Utilizar passphrases largas sin rotación periódica obligatoria salvo que se sospeche un compromiso",
+        "Utilizar únicamente requisitos complejos de caracteres",
+        "Utilizar contraseñas de solo 4 caracteres"
+      ],
+      "respuesta": 1,
+      "explicacion": "NIST prioriza contraseñas largas y el cambio cuando existe evidencia de compromiso, en lugar de rotaciones periódicas arbitrarias."
+    },
+    {
+      "pregunta": "Las biometrías conductuales incluyen:",
+      "opciones": [
+        "Huellas dactilares",
+        "Ritmo de escritura y dinámica de la firma",
+        "Patrones de retina",
+        "ADN"
+      ],
+      "respuesta": 1,
+      "explicacion": "La biometría conductual analiza la forma en que una persona realiza una acción, como escribir o firmar."
+    },
+    {
+      "pregunta": "¿Cuál es el escaneo biométrico MENOS invasivo?",
+      "opciones": [
+        "Escaneo de retina",
+        "Escaneo de iris",
+        "Muestra de sangre",
+        "Hisopo de ADN"
+      ],
+      "respuesta": 1,
+      "explicacion": "El escaneo de iris puede realizarse sin contacto físico y a cierta distancia."
+    },
+    {
+      "pregunta": "La autenticación biométrica por voz es vulnerable a:",
+      "opciones": [
+        "Colisiones de hash",
+        "Ataques de grabación y replay",
+        "Inundación TCP/IP",
+        "Corrupción de disco"
+      ],
+      "respuesta": 1,
+      "explicacion": "Sin mecanismos de liveness detection, una grabación de la voz legítima puede utilizarse en un ataque de replay."
+    },
+    {
+      "pregunta": "Un usuario estándar descubre un fallo que le concede acceso root o administrador. ¿Cómo se denomina este ataque?",
+      "opciones": [
+        "Tailgating",
+        "Escalada de privilegios",
+        "Pretexting",
+        "Phishing"
+      ],
+      "respuesta": 1,
+      "explicacion": "Obtener privilegios superiores a los inicialmente concedidos mediante una vulnerabilidad constituye una escalada de privilegios."
+    },
+    {
+      "pregunta": "La Separation of Duties se ilustra MEJOR mediante:",
+      "opciones": [
+        "Una persona gestiona las solicitudes y las aprobaciones de pago",
+        "Personas diferentes gestionan las solicitudes de pago y las aprobaciones",
+        "Una sola persona controla todos los sistemas",
+        "Todos comparten el mismo inicio de sesión"
+      ],
+      "respuesta": 1,
+      "explicacion": "La Separation of Duties divide funciones sensibles entre distintas personas para reducir errores, abuso y fraude."
+    },
+    {
+      "pregunta": "Two-Person Integrity, también denominado Two-Person Control, requiere:",
+      "opciones": [
+        "Que una persona lo haga todo",
+        "Que dos individuos autorizados estén presentes para acceder o realizar una acción sensible",
+        "Autenticación de usuario en dos pasos",
+        "Dos firewalls en serie"
+      ],
+      "respuesta": 1,
+      "explicacion": "Two-Person Integrity exige la participación de dos personas autorizadas para completar una operación sensible."
+    },
+    {
+      "pregunta": "Las políticas de Mandatory Vacation ayudan a detectar qué amenaza?",
+      "opciones": [
+        "Ataques de hackers externos",
+        "Fraude interno prolongado que una persona oculta mientras mantiene el control continuo",
+        "Correos de phishing",
+        "Cortes de energía"
+      ],
+      "respuesta": 1,
+      "explicacion": "Obligar a una persona a ausentarse temporalmente permite que otros asuman sus funciones y puede revelar irregularidades ocultas."
+    },
+    {
+      "pregunta": "Un ataque SYN flood explota el handshake de conexión de ¿qué protocolo?",
+      "opciones": ["UDP", "TCP", "ICMP", "ARP"],
+      "respuesta": 1,
+      "explicacion": "SYN flood abusa del three-way handshake de TCP dejando numerosas conexiones semiabiertas."
+    },
+    {
+      "pregunta": "Un ataque DDoS se diferencia PRINCIPALMENTE de un ataque DoS porque:",
+      "opciones": [
+        "DDoS utiliza cifrado",
+        "DDoS se lanza simultáneamente desde numerosas fuentes distribuidas",
+        "DDoS solo ataca correos electrónicos",
+        "DDoS requiere acceso físico"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un DDoS utiliza múltiples sistemas distribuidos para generar el ataque simultáneamente."
+    },
+    {
+      "pregunta": "Un ataque Smurf amplifica una pequeña solicitud hasta producir una gran inundación mediante:",
+      "opciones": [
+        "El cifrado de cada paquete",
+        "La suplantación de la IP de la víctima y el envío de pings a una dirección de broadcast",
+        "El secuestro de una cookie de sesión",
+        "La fuerza bruta de contraseñas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Smurf envía solicitudes ICMP a un broadcast utilizando como origen la IP falsificada de la víctima, haciendo que múltiples hosts respondan contra ella."
+    },
+    {
+      "pregunta": "ARP poisoning permite a un atacante situado en la MISMA LAN:",
+      "opciones": [
+        "Crackear contraseñas",
+        "Interceptar tráfico engañando a los dispositivos para que asocien una MAC incorrecta con una IP",
+        "Ocultar un proceso en el disco",
+        "Cifrar los archivos del usuario"
+      ],
+      "respuesta": 1,
+      "explicacion": "ARP poisoning falsifica asociaciones IP-MAC y puede posicionar al atacante como MITM dentro de la LAN."
+    },
+    {
+      "pregunta": "DNS poisoning o cache poisoning provoca que:",
+      "opciones": [
+        "La conexión a Internet sea más lenta",
+        "Las víctimas sean dirigidas a direcciones IP falsas al consultar nombres de dominio legítimos",
+        "Las consultas DNS estén cifradas",
+        "Los sitios web carguen más rápido"
+      ],
+      "respuesta": 1,
+      "explicacion": "DNS poisoning altera la información de resolución para devolver una IP controlada por el atacante para un dominio legítimo."
+    },
+    {
+      "pregunta": "Un ataque Man-in-the-Middle (MITM) PRINCIPALMENTE:",
+      "opciones": [
+        "Cifra los archivos del usuario para exigir un rescate",
+        "Intercepta y posiblemente modifica el tráfico entre dos partes sin que estas lo sepan",
+        "Inunda un sitio web con tráfico",
+        "Introduce malware mediante dispositivos USB"
+      ],
+      "respuesta": 1,
+      "explicacion": "En un MITM, el atacante se sitúa entre dos partes para observar o modificar sus comunicaciones."
+    },
+    {
+      "pregunta": "Un Replay Attack consiste en:",
+      "opciones": [
+        "Grabar un intercambio de autenticación legítimo y reenviarlo posteriormente para obtener acceso",
+        "Cifrar archivos para exigir un rescate",
+        "Desfigurar un sitio web",
+        "Provocar la caída de una red"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un replay reutiliza datos válidos previamente capturados; nonces y timestamps ayudan a impedirlo."
+    },
+    {
+      "pregunta": "El secuestro de sesión mediante cookies robadas permite a un atacante:",
+      "opciones": [
+        "Leer el contenido cifrado de un disco",
+        "Suplantar a un usuario que ya ha iniciado sesión sin conocer su contraseña",
+        "Provocar la caída del servidor",
+        "Desactivar el antivirus"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una cookie de sesión válida puede permitir al atacante reutilizar la sesión autenticada de la víctima."
+    },
+    {
+      "pregunta": "SQL Injection ataca PRINCIPALMENTE:",
+      "opciones": [
+        "Backends de bases de datos mediante entradas de la aplicación no tratadas adecuadamente",
+        "Routers de red",
+        "Puntos de acceso Wi-Fi",
+        "Puertas físicas"
+      ],
+      "respuesta": 0,
+      "explicacion": "SQL Injection introduce instrucciones SQL maliciosas mediante entradas no parametrizadas o incorrectamente validadas."
+    },
+    {
+      "pregunta": "Los ataques Cross-Site Scripting (XSS) ejecutan código malicioso en:",
+      "opciones": [
+        "Únicamente la memoria del servidor web",
+        "El navegador de la víctima cuando visita la página web afectada",
+        "El firmware del router",
+        "La BIOS del usuario"
+      ],
+      "respuesta": 1,
+      "explicacion": "XSS provoca que scripts inyectados se ejecuten en el contexto del navegador de la víctima."
+    },
+    {
+      "pregunta": "Cross-Site Request Forgery (CSRF) engaña al navegador de una víctima para que:",
+      "opciones": [
+        "Provoque la caída del servidor",
+        "Envíe una solicitud autenticada no deseada a un sitio en el que la víctima ya ha iniciado sesión",
+        "Cifre todos los archivos",
+        "Desactive el Wi-Fi"
+      ],
+      "respuesta": 1,
+      "explicacion": "CSRF aprovecha una sesión autenticada existente para inducir al navegador a realizar una acción que el usuario no pretendía."
+    },
+    {
+      "pregunta": "Un ataque de buffer overflow explota:",
+      "opciones": [
+        "Contraseñas débiles",
+        "Código que escribe más allá de los límites de memoria asignados, pudiendo permitir ejecución arbitraria de código",
+        "Redes Wi-Fi abiertas",
+        "Certificados SSL obsoletos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un buffer overflow puede sobrescribir memoria adyacente y alterar el flujo de ejecución del programa."
+    },
+    {
+      "pregunta": "El principio central del modelo de seguridad Zero Trust es:",
+      "opciones": [
+        "Confiar en los dispositivos situados dentro del perímetro de red",
+        "Nunca confiar y verificar siempre: cada solicitud debe autenticarse y autorizarse",
+        "Cifrar únicamente los datos sensibles",
+        "Sustituir todos los firewalls por VPN"
+      ],
+      "respuesta": 1,
+      "explicacion": "Zero Trust elimina la confianza implícita basada en la ubicación de red y exige verificación continua."
+    },
+    {
+      "pregunta": "La microsegmentación favorece Zero Trust mediante:",
+      "opciones": [
+        "La creación de una única red de gran tamaño",
+        "La división de la red en numerosas zonas pequeñas y aisladas con controles de acceso estrictos entre ellas",
+        "La eliminación de todos los firewalls",
+        "La desactivación del logging"
+      ],
+      "respuesta": 1,
+      "explicacion": "La microsegmentación limita el movimiento lateral al aplicar controles entre segmentos pequeños y aislados."
+    },
+    {
+      "pregunta": "El tráfico que circula entre servidores DENTRO de un centro de datos se denomina:",
+      "opciones": [
+        "Tráfico north-south",
+        "Tráfico east-west",
+        "Tráfico diagonal",
+        "Tráfico loopback"
+      ],
+      "respuesta": 1,
+      "explicacion": "East-west describe el tráfico lateral entre sistemas internos, como servidores de un mismo centro de datos."
+    },
+    {
+      "pregunta": "Un honeypot se describe MEJOR como:",
+      "opciones": [
+        "Una base de datos legítima de producción",
+        "Un sistema señuelo diseñado para atraer y estudiar atacantes sin exponer los activos reales",
+        "Un tipo de firewall",
+        "Un servidor de backup"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un honeypot es un recurso señuelo diseñado para observar actividad maliciosa y recopilar información sobre los atacantes."
+    },
+    {
+      "pregunta": "Una honeynet se diferencia de un honeypot en que es:",
+      "opciones": [
+        "Un único dispositivo señuelo",
+        "Una red completa de sistemas señuelo que simula un entorno realista",
+        "Un tipo de antivirus",
+        "Una estrategia de backup"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una honeynet integra múltiples honeypots y servicios para simular una infraestructura más completa."
+    },
+    {
+      "pregunta": "Un network TAP se utiliza para:",
+      "opciones": [
+        "Cifrar todo el tráfico",
+        "Crear una copia pasiva del tráfico de red para monitorización sin afectar al tráfico original",
+        "Reiniciar todos los switches",
+        "Filtrar correos de spam"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un TAP duplica pasivamente el tráfico para enviarlo a herramientas como IDS o sistemas de monitorización."
+    },
+    {
+      "pregunta": "Un puerto SPAN o mirror de un switch se utiliza para:",
+      "opciones": [
+        "Sustituir un firewall",
+        "Copiar tráfico de uno o varios puertos hacia otro puerto para su monitorización",
+        "Aumentar el alcance Wi-Fi",
+        "Desactivar una VLAN"
+      ],
+      "respuesta": 1,
+      "explicacion": "SPAN es una función del switch que replica tráfico seleccionado hacia un puerto de monitorización."
+    },
+    {
+      "pregunta": "Un bastion host o jump server se utiliza para:",
+      "opciones": [
+        "Sustituir los portátiles de los usuarios",
+        "Proporcionar a los administradores un único punto de entrada reforzado y auditado hacia sistemas internos",
+        "Distribuir actualizaciones de software",
+        "Alojar sitios web públicos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un jump server centraliza y controla el acceso administrativo a zonas o sistemas sensibles."
+    },
+    {
+      "pregunta": "Una red air-gapped es aquella que:",
+      "opciones": [
+        "Tiene la conexión a Internet más rápida",
+        "No tiene conexión física ni inalámbrica con otras redes",
+        "Utiliza únicamente conexiones inalámbricas",
+        "Ejecuta únicamente Linux"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una red air-gapped está físicamente aislada de otras redes y no mantiene conexiones cableadas ni inalámbricas con ellas."
+    },
+    {
+      "pregunta": "Una jaula de Faraday protege contra:",
+      "opciones": [
+        "Intrusiones físicas",
+        "Espionaje electromagnético TEMPEST y fugas de señales",
+        "SQL Injection",
+        "Phishing"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una jaula de Faraday atenúa o bloquea emisiones electromagnéticas que podrían utilizarse para transmitir o captar información."
+    },
+    {
+      "pregunta": "TLS (Transport Layer Security) es el sustituto moderno de ¿qué protocolo obsoleto?",
+      "opciones": ["SSH", "SSL", "IPsec", "WPA2"],
+      "respuesta": 1,
+      "explicacion": "TLS reemplazó a SSL como protocolo estándar para proteger comunicaciones como HTTPS."
+    },
+    {
+      "pregunta": "Network Address Translation (NAT) proporciona principalmente:",
+      "opciones": [
+        "Cifrado extremo a extremo",
+        "El mapeo de múltiples IP privadas internas a una o varias IP públicas, ocultando la estructura interna",
+        "Consultas DNS más rápidas",
+        "Autenticación Wi-Fi"
+      ],
+      "respuesta": 1,
+      "explicacion": "NAT traduce direcciones privadas a públicas, permitiendo compartir direcciones IPv4 públicas y ocultando parcialmente el direccionamiento interno."
+    },
+    {
+      "pregunta": "En un penetration test White-box, los testers:",
+      "opciones": [
+        "No tienen información previa sobre el objetivo",
+        "Tienen conocimiento completo del sistema, incluido el código fuente y la arquitectura",
+        "Utilizan únicamente información pública",
+        "No pueden utilizar herramientas"
+      ],
+      "respuesta": 1,
+      "explicacion": "En White-box los testers disponen de información interna detallada para realizar pruebas profundas y eficientes."
+    },
+    {
+      "pregunta": "En un penetration test Black-box, los testers:",
+      "opciones": [
+        "Tienen acceso completo al código fuente",
+        "No tienen conocimiento previo del objetivo y simulan a un atacante externo real",
+        "Están limitados exclusivamente a ataques físicos",
+        "Solo pueden utilizar una herramienta"
+      ],
+      "respuesta": 1,
+      "explicacion": "Black-box parte sin información interna previa y busca reproducir la perspectiva de un atacante externo."
+    },
+    {
+      "pregunta": "En un penetration test Gray-box, los testers tienen:",
+      "opciones": [
+        "Cero información",
+        "Información parcial, como una cuenta de usuario normal, pero sin acceso administrativo ni código fuente",
+        "Código fuente completo",
+        "Acceso físico al edificio"
+      ],
+      "respuesta": 1,
+      "explicacion": "Gray-box proporciona información o acceso limitado y puede simular a un usuario comprometido o a una amenaza interna."
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia principal entre un Vulnerability Scan y un Penetration Test?",
+      "opciones": [
+        "Son idénticos",
+        "El Vulnerability Scan IDENTIFICA debilidades, mientras que el Penetration Test intenta EXPLOTARLAS activamente",
+        "El Vulnerability Scan es ilegal y el Penetration Test es legal",
+        "Solo los Vulnerability Scan utilizan herramientas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un escaneo detecta vulnerabilidades potenciales; un penetration test intenta demostrar de forma controlada que pueden explotarse."
+    },
+    {
+      "pregunta": "En un ejercicio Red Team frente a Blue Team, el Red Team:",
+      "opciones": [
+        "Defiende la organización",
+        "Simula ataques contra la organización para poner a prueba sus defensas",
+        "Redacta la política de seguridad",
+        "Gestiona las copias de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Red Team desempeña el papel ofensivo y emula técnicas de adversarios para evaluar las defensas."
+    },
+    {
+      "pregunta": "La función PRINCIPAL de un Purple Team es:",
+      "opciones": [
+        "Sustituir tanto al Red Team como al Blue Team",
+        "Facilitar la colaboración entre Red Team y Blue Team para mejorar la detección y la respuesta",
+        "Auditar registros financieros",
+        "Gestionar cuentas de usuario"
+      ],
+      "respuesta": 1,
+      "explicacion": "Purple Team fomenta el intercambio de información entre equipos ofensivos y defensivos para mejorar las capacidades de seguridad."
+    },
+    {
+      "pregunta": "Un programa Bug Bounty está diseñado para:",
+      "opciones": [
+        "Castigar a los desarrolladores internos",
+        "Recompensar a investigadores de seguridad externos por revelar vulnerabilidades de forma responsable",
+        "Sustituir completamente los penetration tests",
+        "Vender código de exploits"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un Bug Bounty recompensa investigaciones autorizadas y la comunicación responsable de vulnerabilidades."
+    },
+    {
+      "pregunta": "Responsible Disclosure significa que un investigador de seguridad:",
+      "opciones": [
+        "Publica inmediatamente la vulnerabilidad en Internet",
+        "Informa de forma privada al proveedor y le concede tiempo para corregirla antes de una divulgación pública",
+        "Vende la vulnerabilidad al mejor postor",
+        "Ignora por completo la vulnerabilidad"
+      ],
+      "respuesta": 1,
+      "explicacion": "La divulgación responsable proporciona al proveedor un periodo razonable para corregir el problema antes de hacerlo público."
+    },
+    {
+      "pregunta": "Durante Incident Response, ¿qué actividad define la fase de CONTAINMENT?",
+      "opciones": [
+        "Documentar las lecciones aprendidas",
+        "Limitar la propagación del incidente aislando los sistemas afectados",
+        "Restaurar sistemas desde una copia de seguridad",
+        "Identificar la brecha inicial"
+      ],
+      "respuesta": 1,
+      "explicacion": "Containment busca impedir que el incidente continúe propagándose o causando daño adicional."
+    },
+    {
+      "pregunta": "Durante Incident Response, ERADICATION se refiere a:",
+      "opciones": [
+        "Documentar las lecciones aprendidas",
+        "Eliminar malware, presencia del atacante y causa raíz de los sistemas afectados",
+        "Notificar a los clientes",
+        "Comprar nuevo hardware"
+      ],
+      "respuesta": 1,
+      "explicacion": "Eradication elimina los componentes maliciosos, mecanismos de persistencia y vulnerabilidades que permitieron el incidente."
+    },
+    {
+      "pregunta": "La fase Lessons Learned de Incident Response debería realizarse:",
+      "opciones": [
+        "Antes de que comience el incidente",
+        "Después de resolver completamente el incidente, mientras los detalles siguen recientes",
+        "Solo si el incidente fue grave",
+        "Una vez al año, independientemente de los incidentes"
+      ],
+      "respuesta": 1,
+      "explicacion": "La revisión posterior al incidente debe realizarse tras la resolución para identificar mejoras mientras la información aún está disponible."
+    },
+    {
+      "pregunta": "La documentación de Chain of Custody en informática forense garantiza que:",
+      "opciones": [
+        "La respuesta sea lo más rápida posible",
+        "La evidencia se rastree y controle adecuadamente y pueda ser admisible en un procedimiento judicial",
+        "Las claves de cifrado se almacenen mediante escrow",
+        "Las copias de seguridad se realicen automáticamente"
+      ],
+      "respuesta": 1,
+      "explicacion": "Chain of Custody documenta quién tuvo acceso a la evidencia, cuándo y con qué finalidad, preservando su integridad y trazabilidad."
+    },
+    {
+      "pregunta": "Una forensic image de un disco duro es:",
+      "opciones": [
+        "Una fotografía del exterior del disco",
+        "Una copia bit a bit de todos sus sectores que preserva el estado original",
+        "Una simple copia de archivos",
+        "Una copia de seguridad cifrada"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una imagen forense copia los sectores del dispositivo para preservar archivos, metadatos, espacio libre y otros artefactos."
+    },
+    {
+      "pregunta": "El beneficio PRINCIPAL de un SIEM (Security Information and Event Management) es:",
+      "opciones": [
+        "Sustituir todos los firewalls",
+        "Centralizar la recopilación de logs, correlacionarlos y generar alertas a partir de múltiples fuentes",
+        "Proporcionar Wi-Fi gratuito a invitados",
+        "Cifrar discos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un SIEM agrega logs de numerosas fuentes, correlaciona eventos y permite detectar y alertar sobre patrones de seguridad."
+    },
+    {
+      "pregunta": "¿Qué capacidad añade SOAR SOBRE un SIEM?",
+      "opciones": [
+        "Más almacenamiento de logs",
+        "Orquestación y automatización de playbooks de respuesta, como aislar sistemas o crear tickets automáticamente",
+        "Mejor Wi-Fi",
+        "Licencias más baratas"
+      ],
+      "respuesta": 1,
+      "explicacion": "SOAR automatiza y coordina acciones de respuesta mediante workflows y playbooks integrados."
+    },
+    {
+      "pregunta": "Endpoint Detection and Response (EDR) se diferencia PRINCIPALMENTE del antivirus tradicional porque:",
+      "opciones": [
+        "Cuesta menos",
+        "Utiliza análisis de comportamiento y monitorización continua en lugar de depender únicamente de firmas",
+        "Solo funciona en Linux",
+        "Elimina la necesidad de logs"
+      ],
+      "respuesta": 1,
+      "explicacion": "EDR monitoriza continuamente la actividad del endpoint y detecta comportamientos anómalos además de indicadores conocidos."
+    },
+    {
+      "pregunta": "XDR (Extended Detection and Response) amplía EDR mediante:",
+      "opciones": [
+        "La eliminación de la cobertura de endpoints",
+        "La correlación de telemetría de endpoints, red, correo electrónico, cloud e identidad en una plataforma unificada",
+        "La reducción del volumen de logs",
+        "La desactivación de alertas"
+      ],
+      "respuesta": 1,
+      "explicacion": "XDR extiende la detección más allá de los endpoints y correlaciona señales procedentes de múltiples capas de seguridad."
+    },
+    {
+      "pregunta": "Una herramienta EDR/XDR alerta sobre un proceso con comportamiento sospechoso, pero no existe ningún archivo de malware en disco. Probablemente se trata de:",
+      "opciones": [
+        "Un falso positivo",
+        "Malware fileless ejecutándose en memoria",
+        "Una copia de seguridad programada",
+        "Una actualización de firmware"
+      ],
+      "respuesta": 1,
+      "explicacion": "El malware fileless opera principalmente en memoria o mediante herramientas legítimas del sistema y puede no dejar un ejecutable malicioso en disco."
+    }
+  ]
+}

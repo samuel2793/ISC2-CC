@@ -1,0 +1,917 @@
+{
+  "titulo": "Batería de fundamentos de ciberseguridad #3",
+  "procedencia": "Test proporcionado por el usuario",
+  "descripcion": "Batería de 100 preguntas sobre principios de seguridad, gestión de riesgos, gobernanza, continuidad de negocio, IAM, redes, nube, operaciones de seguridad y respuesta a incidentes.",
+  "preguntas": [
+    {
+      "pregunta": "Un hospital utiliza control de acceso basado en roles para garantizar que los recepcionistas no puedan ver el diagnóstico médico de un paciente, aunque sí puedan consultar su dirección de facturación. ¿Qué principio de la tríada CIA se está aplicando principalmente?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Impedir que usuarios no autorizados accedan a información sensible protege la confidencialidad."
+    },
+    {
+      "pregunta": "Una institución financiera implementa bloqueo de base de datos para garantizar que, una vez confirmada una transacción, un empleado de caja no pueda modificarla. ¿Qué principio de la tríada CIA se está protegiendo?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Evitar modificaciones no autorizadas después de confirmar una transacción protege la integridad."
+    },
+    {
+      "pregunta": "Un comercio electrónico aprovisiona servidores web redundantes en AWS distribuidos entre tres regiones geográficas para soportar picos de tráfico durante las vacaciones. Este diseño arquitectónico favorece directamente:",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 2,
+      "explicacion": "La redundancia geográfica permite mantener el servicio operativo ante fallos o incrementos de carga, mejorando la disponibilidad."
+    },
+    {
+      "pregunta": "Un empleado intenta negar que envió un correo electrónico amenazante a un compañero. El departamento de TI demuestra que el mensaje se originó en su cuenta mediante la verificación de la firma digital. Esto es un ejemplo de:",
+      "opciones": [
+        "Autenticación",
+        "Autorización",
+        "No repudio",
+        "Contabilidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una firma digital permite demostrar el origen de una acción y dificulta que el autor pueda negarla posteriormente."
+    },
+    {
+      "pregunta": "En la fórmula de gestión de riesgos Risk = Threat × Vulnerability × Impact, ¿qué representa Threat?",
+      "opciones": [
+        "Un servidor sin parchear",
+        "Un peligro potencial que puede explotar una debilidad",
+        "La pérdida financiera resultante de una brecha",
+        "Un control de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una amenaza es un peligro o agente potencial capaz de aprovechar una vulnerabilidad."
+    },
+    {
+      "pregunta": "Una empresa descubre que su oficina física está en una zona inundable. Trasladarse costaría 5 millones de dólares, mientras que el daño potencial de una inundación se estima en solo 50.000 dólares. La dirección decide permanecer en el edificio y no tomar medidas. Esto es:",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 3,
+      "explicacion": "La organización reconoce el riesgo y decide asumirlo porque el coste de tratarlo supera el impacto esperado."
+    },
+    {
+      "pregunta": "En lugar de gestionar sus propios servidores físicos, una organización traslada toda su infraestructura a AWS y paga a AWS para que gestione la seguridad física del centro de datos. Esto es:",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La responsabilidad asociada a la seguridad física se desplaza a un tercero, lo que constituye transferencia del riesgo."
+    },
+    {
+      "pregunta": "Un departamento de TI instala un agente avanzado de Endpoint Detection and Response (EDR) en todos los portátiles para reducir la probabilidad de infecciones por malware. Esto es un ejemplo de:",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 2,
+      "explicacion": "La instalación de un control que reduce la probabilidad o el impacto de una amenaza constituye mitigación del riesgo."
+    },
+    {
+      "pregunta": "Un documento obligatorio y de alto nivel publicado por el CEO que establece que la organización priorizará la protección de los datos de privacidad de los clientes es un ejemplo de:",
+      "opciones": ["Procedimiento", "Directriz", "Estándar", "Política"],
+      "respuesta": 3,
+      "explicacion": "Una política expresa requisitos e intenciones de alto nivel definidos por la dirección."
+    },
+    {
+      "pregunta": "Un documento que proporciona una lista detallada de 10 pasos para que un administrador configure de forma segura un nuevo firewall es un ejemplo de:",
+      "opciones": ["Procedimiento", "Directriz", "Estándar", "Política"],
+      "respuesta": 0,
+      "explicacion": "Un procedimiento especifica instrucciones detalladas y secuenciales para realizar una tarea."
+    },
+    {
+      "pregunta": "Un documento establece: 'Todos los smartphones corporativos DEBEN utilizar un PIN alfanumérico de 6 caracteres'. Este requisito técnico obligatorio es un ejemplo de:",
+      "opciones": ["Procedimiento", "Directriz", "Estándar", "Política"],
+      "respuesta": 2,
+      "explicacion": "Un estándar establece requisitos técnicos específicos y obligatorios que deben cumplirse."
+    },
+    {
+      "pregunta": "¿Qué tipo de control de seguridad es un programa obligatorio anual de concienciación en seguridad para todos los empleados?",
+      "opciones": [
+        "Control administrativo",
+        "Control técnico",
+        "Control físico",
+        "Control correctivo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La formación y las políticas relacionadas con el comportamiento de las personas son controles administrativos."
+    },
+    {
+      "pregunta": "En respuesta a incidentes, ¿en qué fase se elimina el malware y se corrige la vulnerabilidad explotada?",
+      "opciones": [
+        "Contención",
+        "Erradicación",
+        "Recuperación",
+        "Lecciones aprendidas"
+      ],
+      "respuesta": 1,
+      "explicacion": "La erradicación elimina la amenaza y corrige su causa raíz, incluida la vulnerabilidad aprovechada."
+    },
+    {
+      "pregunta": "No aplicar durante tres meses un parche crítico de seguridad de Microsoft disponible y sufrir posteriormente un grave ataque de ransomware se considera legalmente un incumplimiento de:",
+      "opciones": [
+        "Due Diligence",
+        "Due Care",
+        "Transferencia del riesgo",
+        "No repudio"
+      ],
+      "respuesta": 1,
+      "explicacion": "Due Care implica aplicar medidas razonables de protección; ignorar un parche crítico puede constituir negligencia."
+    },
+    {
+      "pregunta": "Un responsable dedica dos semanas a investigar y evaluar las certificaciones de seguridad de un nuevo proveedor cloud antes de firmar un contrato plurianual. Este proceso de investigación se denomina:",
+      "opciones": [
+        "Due Diligence",
+        "Due Care",
+        "Aceptación del riesgo",
+        "Mitigación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Due Diligence consiste en investigar y evaluar adecuadamente antes de tomar una decisión."
+    },
+    {
+      "pregunta": "Una sesión en la que el equipo de respuesta analiza sus funciones ante un incidente simulado sin interactuar con sistemas reales es un:",
+      "opciones": [
+        "Full interruption test",
+        "Tabletop exercise",
+        "Parallel test",
+        "Failover drill"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un tabletop exercise es una simulación basada en discusión que no requiere intervenir sistemas de producción."
+    },
+    {
+      "pregunta": "Un profesional de TI observa a un compañero instalando software pirateado e ilegal en un portátil corporativo. ¿Qué canon de ISC2 obliga al profesional a informar de esta conducta?",
+      "opciones": [
+        "Proteger a la sociedad",
+        "Actuar honorable, honesta, justa, responsable y legalmente",
+        "Proporcionar un servicio diligente y competente",
+        "Promover la profesión"
+      ],
+      "respuesta": 1,
+      "explicacion": "La instalación de software ilegal afecta directamente al canon que exige actuar de forma honesta y legal."
+    },
+    {
+      "pregunta": "Un sistema de seguridad utiliza varias capas superpuestas, como un firewall perimetral, VLAN internas, antivirus en endpoints y MFA obligatorio, para proteger datos sensibles. Esta estrategia se conoce como:",
+      "opciones": [
+        "Denegación implícita",
+        "Defensa en profundidad",
+        "Separación de funciones",
+        "Necesidad de saber"
+      ],
+      "respuesta": 1,
+      "explicacion": "La defensa en profundidad utiliza múltiples controles superpuestos para que el fallo de una capa no elimine toda la protección."
+    },
+    {
+      "pregunta": "Un servidor cuesta 50.000 dólares. Se estima que un incendio eléctrico causaría un 20 % de daño al servidor. ¿Cuál es el Exposure Factor (EF)?",
+      "opciones": ["10.000 dólares", "20 %", "2", "50.000 dólares"],
+      "respuesta": 1,
+      "explicacion": "El EF representa el porcentaje del valor del activo que se perdería en un incidente."
+    },
+    {
+      "pregunta": "Un servidor cuesta 50.000 dólares. Se estima que un incendio eléctrico causaría un 20 % de daño al servidor. ¿Cuál es la Single Loss Expectancy (SLE)?",
+      "opciones": [
+        "10.000 dólares",
+        "20 %",
+        "50.000 dólares",
+        "100.000 dólares"
+      ],
+      "respuesta": 0,
+      "explicacion": "SLE = Asset Value × Exposure Factor: 50.000 × 0,20 = 10.000 dólares."
+    },
+    {
+      "pregunta": "Un control diseñado para bloquear automáticamente la cuenta de un usuario después de 5 intentos fallidos de contraseña funciona como:",
+      "opciones": [
+        "Control preventivo",
+        "Control detectivo",
+        "Control correctivo",
+        "Control disuasorio"
+      ],
+      "respuesta": 0,
+      "explicacion": "El bloqueo de cuenta impide que continúen los intentos de acceso y actúa de forma preventiva."
+    },
+    {
+      "pregunta": "Un control que envía un correo de alerta a los administradores cuando un usuario introduce una contraseña incorrecta 5 veces seguidas, pero no bloquea la cuenta, funciona como:",
+      "opciones": [
+        "Control preventivo",
+        "Control detectivo",
+        "Control correctivo",
+        "Control disuasorio"
+      ],
+      "respuesta": 1,
+      "explicacion": "El control identifica y notifica el comportamiento sospechoso, pero no lo impide, por lo que es detectivo."
+    },
+    {
+      "pregunta": "Una empresa utiliza carteles de 'Cuidado con el perro' en su valla perimetral. ¿Qué tipo de control es?",
+      "opciones": [
+        "Control preventivo",
+        "Control detectivo",
+        "Control correctivo",
+        "Control disuasorio"
+      ],
+      "respuesta": 3,
+      "explicacion": "El cartel pretende desalentar una acción mediante un efecto psicológico, por lo que es un control disuasorio."
+    },
+    {
+      "pregunta": "¿Qué proporciona un análisis cuantitativo de riesgos que no proporciona un análisis cualitativo?",
+      "opciones": [
+        "Evaluaciones más rápidas",
+        "Mapas de calor codificados por colores",
+        "Cifras financieras exactas que estiman pérdidas potenciales",
+        "Opiniones subjetivas de responsables de departamento"
+      ],
+      "respuesta": 2,
+      "explicacion": "El análisis cuantitativo utiliza valores numéricos y financieros para estimar pérdidas y exposición al riesgo."
+    },
+    {
+      "pregunta": "Un escáner de vulnerabilidades descubre un fallo en un servidor legado crítico. El servidor no puede parchearse, por lo que el equipo de seguridad lo coloca detrás de un firewall secundario muy restrictivo. El firewall actúa como:",
+      "opciones": [
+        "Control detectivo",
+        "Control compensatorio",
+        "Control disuasorio",
+        "Control administrativo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un control compensatorio proporciona una protección alternativa cuando el control principal, como aplicar un parche, no es viable."
+    },
+    {
+      "pregunta": "Según ISC2, ¿cuál es el objetivo último de implantar un programa de seguridad de la información?",
+      "opciones": [
+        "Eliminar el 100 % de todos los riesgos",
+        "Comprar el software de seguridad más reciente",
+        "Garantizar que la seguridad esté alineada con los objetivos generales del negocio y los apoye",
+        "Supervisar todo el uso de Internet de los empleados"
+      ],
+      "respuesta": 2,
+      "explicacion": "La seguridad debe apoyar y alinearse con los objetivos de negocio de la organización."
+    },
+    {
+      "pregunta": "¿Qué plan se centra específicamente en restaurar los sistemas e infraestructura de TI después de un desastre?",
+      "opciones": [
+        "Business Continuity Plan",
+        "Disaster Recovery Plan",
+        "Incident Response Plan",
+        "Acceptable Use Policy"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Disaster Recovery Plan se centra en recuperar la infraestructura y los servicios de TI después de un desastre."
+    },
+    {
+      "pregunta": "¿En qué fase se documenta qué funcionó correctamente y qué falló DESPUÉS de resolver un incidente?",
+      "opciones": [
+        "Preparación",
+        "Contención",
+        "Recuperación",
+        "Lecciones aprendidas (post-incidente)"
+      ],
+      "respuesta": 3,
+      "explicacion": "La fase de lecciones aprendidas revisa el incidente una vez finalizado para mejorar procesos y controles."
+    },
+    {
+      "pregunta": "El tiempo total durante el que una función crítica de negocio puede permanecer inactiva antes de que el daño sea irrecuperable es:",
+      "opciones": ["RTO", "RPO", "Maximum Tolerable Downtime (MTD)", "MTTR"],
+      "respuesta": 2,
+      "explicacion": "El MTD representa el límite máximo de interrupción que una función puede soportar antes de sufrir consecuencias inaceptables."
+    },
+    {
+      "pregunta": "El malware que se disfraza de software legítimo para engañar al usuario y conseguir que lo instale es un:",
+      "opciones": ["Worm", "Trojan", "Rootkit", "Logic bomb"],
+      "respuesta": 1,
+      "explicacion": "Un Trojan se presenta como software legítimo o atractivo para inducir al usuario a ejecutarlo."
+    },
+    {
+      "pregunta": "El malware autorreplicante que se propaga por redes SIN intervención del usuario es un:",
+      "opciones": ["Virus", "Worm", "Trojan", "Spyware"],
+      "respuesta": 1,
+      "explicacion": "Un worm puede propagarse automáticamente por una red sin necesitar que el usuario ejecute un archivo."
+    },
+    {
+      "pregunta": "El código malicioso que permanece inactivo y se ejecuta cuando se cumple una condición específica, como una fecha, es un:",
+      "opciones": ["Worm", "Logic bomb", "Rootkit", "Adware"],
+      "respuesta": 1,
+      "explicacion": "Una logic bomb se activa cuando ocurre una condición o evento previamente definido."
+    },
+    {
+      "pregunta": "El malware diseñado para ocultar su presencia y mantener acceso privilegiado y sigiloso a un sistema es un:",
+      "opciones": ["Rootkit", "Trojan", "Worm", "Keylogger"],
+      "respuesta": 0,
+      "explicacion": "Un rootkit está diseñado para ocultarse y mantener acceso privilegiado persistente al sistema."
+    },
+    {
+      "pregunta": "Un correo fraudulento que simula proceder de un banco y solicita al usuario que pulse un enlace e introduzca sus credenciales es:",
+      "opciones": ["Phishing", "Tailgating", "DDoS", "Escalada de privilegios"],
+      "respuesta": 0,
+      "explicacion": "El phishing utiliza mensajes engañosos para inducir a la víctima a revelar credenciales u otra información sensible."
+    },
+    {
+      "pregunta": "Un ataque de phishing dirigido específicamente contra un ejecutivo de alto valor, como un CEO, se denomina:",
+      "opciones": ["Vishing", "Whaling", "Smishing", "Pharming"],
+      "respuesta": 1,
+      "explicacion": "Whaling es phishing específicamente dirigido contra altos ejecutivos u objetivos de elevado valor."
+    },
+    {
+      "pregunta": "Un ataque de ingeniería social realizado mediante mensajes de texto SMS se conoce como:",
+      "opciones": ["Vishing", "Smishing", "Whaling", "Spear phishing"],
+      "respuesta": 1,
+      "explicacion": "Smishing es una modalidad de phishing realizada mediante mensajes SMS."
+    },
+    {
+      "pregunta": "Un atacante inventa un escenario falso creíble, por ejemplo haciéndose pasar por soporte de TI, para obtener información. Esto es:",
+      "opciones": [
+        "Pretexting",
+        "Dumpster diving",
+        "Shoulder surfing",
+        "Tailgating"
+      ],
+      "respuesta": 0,
+      "explicacion": "Pretexting consiste en crear una identidad o situación ficticia para ganarse la confianza de la víctima y obtener información."
+    },
+    {
+      "pregunta": "El cifrado que utiliza la MISMA clave para cifrar y descifrar se denomina:",
+      "opciones": [
+        "Cifrado asimétrico",
+        "Cifrado simétrico",
+        "Hashing",
+        "Esteganografía"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado simétrico utiliza una única clave compartida tanto para cifrar como para descifrar."
+    },
+    {
+      "pregunta": "Para enviar un mensaje cifrado que solo pueda abrir el destinatario, el remitente cifra utilizando la:",
+      "opciones": [
+        "Clave privada del destinatario",
+        "Clave pública del destinatario",
+        "Contraseña compartida",
+        "Hash"
+      ],
+      "respuesta": 1,
+      "explicacion": "En criptografía asimétrica se cifra con la clave pública del destinatario y se descifra con su clave privada."
+    },
+    {
+      "pregunta": "Para crear una firma digital que demuestre su autoría, un remitente firma utilizando:",
+      "opciones": [
+        "La clave pública del destinatario",
+        "La clave privada del remitente",
+        "La clave privada del destinatario",
+        "Un secreto compartido"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una firma digital se genera con la clave privada del firmante y puede verificarse con su clave pública."
+    },
+    {
+      "pregunta": "¿Qué propiedad de un hash criptográfico robusto implica que debe ser extremadamente difícil que dos entradas distintas produzcan la misma salida?",
+      "opciones": [
+        "Reversibilidad",
+        "Resistencia a colisiones",
+        "Compresibilidad",
+        "Longitud de clave"
+      ],
+      "respuesta": 1,
+      "explicacion": "La resistencia a colisiones dificulta encontrar dos entradas diferentes que generen el mismo valor hash."
+    },
+    {
+      "pregunta": "Añadir un valor aleatorio a cada contraseña antes de aplicar hashing, de modo que contraseñas idénticas generen hashes distintos, se denomina:",
+      "opciones": ["Solo peppering", "Salting", "Stretching", "Encoding"],
+      "respuesta": 1,
+      "explicacion": "Salting añade un valor aleatorio único a cada contraseña antes de calcular su hash."
+    },
+    {
+      "pregunta": "¿Qué método de intercambio de claves permite que dos partes deriven un secreto compartido a través de un canal inseguro sin transmitir directamente la clave?",
+      "opciones": ["Diffie-Hellman", "MD5", "Base64", "Telnet"],
+      "respuesta": 0,
+      "explicacion": "Diffie-Hellman permite acordar un secreto compartido sobre un canal no confiable sin enviar directamente dicho secreto."
+    },
+    {
+      "pregunta": "Triturar físicamente un disco duro para que sus datos nunca puedan recuperarse corresponde a qué método de eliminación de datos?",
+      "opciones": ["Clearing", "Purging", "Destruction", "Formateo"],
+      "respuesta": 2,
+      "explicacion": "Destruction implica destruir físicamente el soporte para impedir la recuperación de la información."
+    },
+    {
+      "pregunta": "Sustituir por asteriscos todos los dígitos de un número de tarjeta excepto los cuatro últimos en un recibo es un ejemplo de:",
+      "opciones": ["Cifrado", "Data Masking", "Hashing", "Tokenización"],
+      "respuesta": 1,
+      "explicacion": "Data Masking oculta parte de un dato sensible manteniendo visible únicamente la información necesaria."
+    },
+    {
+      "pregunta": "Sustituir datos sensibles por un valor no sensible que puede volver a asociarse con el original mediante una tabla de correspondencias segura es:",
+      "opciones": ["Masking", "Tokenización", "Esteganografía", "Ofuscación"],
+      "respuesta": 1,
+      "explicacion": "La tokenización reemplaza el dato real por un token y mantiene la correspondencia en un sistema seguro."
+    },
+    {
+      "pregunta": "Deshabilitar servicios no utilizados, cerrar puertos innecesarios y eliminar cuentas predeterminadas de un servidor se denomina:",
+      "opciones": [
+        "System Hardening",
+        "Load Balancing",
+        "Solo parcheado",
+        "Tunneling"
+      ],
+      "respuesta": 0,
+      "explicacion": "System Hardening reduce la superficie de ataque eliminando funciones, servicios y configuraciones innecesarias."
+    },
+    {
+      "pregunta": "Un sistema central que agrega y correlaciona registros procedentes de múltiples fuentes para detectar amenazas es un:",
+      "opciones": ["SIEM", "Servidor DHCP", "Load balancer", "Proxy"],
+      "respuesta": 0,
+      "explicacion": "Un SIEM centraliza, analiza y correlaciona eventos y registros de seguridad procedentes de diferentes sistemas."
+    },
+    {
+      "pregunta": "Probar y aprobar un parche en un entorno de staging antes de desplegarlo en producción forma parte de una buena:",
+      "opciones": [
+        "Gestión de parches",
+        "Respuesta a incidentes",
+        "Aceptación del riesgo",
+        "Tokenización"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión de parches incluye evaluar, probar, aprobar y desplegar actualizaciones de forma controlada."
+    },
+    {
+      "pregunta": "Un proceso formal que exige revisión y aprobación antes de realizar cualquier modificación en sistemas de producción es:",
+      "opciones": [
+        "Change Management",
+        "Configuration drift",
+        "Rotación de puestos",
+        "Data masking"
+      ],
+      "respuesta": 0,
+      "explicacion": "Change Management controla y autoriza las modificaciones antes de aplicarlas a sistemas de producción."
+    },
+    {
+      "pregunta": "Una tecnología que inspecciona el tráfico saliente y bloquea archivos sensibles para impedir que abandonen la organización es:",
+      "opciones": ["DLP (Data Loss Prevention)", "SIEM", "NAC", "VPN"],
+      "respuesta": 0,
+      "explicacion": "DLP detecta y bloquea la salida no autorizada de información sensible."
+    },
+    {
+      "pregunta": "Cifrar un archivo de base de datos almacenado en disco para que una unidad robada no revele su contenido protege los datos en qué estado?",
+      "opciones": [
+        "Datos en tránsito",
+        "Datos en reposo",
+        "Datos en uso",
+        "Datos en movimiento"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los datos almacenados en discos u otros soportes se consideran datos en reposo."
+    },
+    {
+      "pregunta": "TLS protegiendo una sesión web entre un navegador y un servidor protege los datos en qué estado?",
+      "opciones": [
+        "Datos en reposo",
+        "Datos en tránsito",
+        "Datos en uso",
+        "Datos archivados"
+      ],
+      "respuesta": 1,
+      "explicacion": "TLS protege información mientras se transmite por una red, es decir, datos en tránsito."
+    },
+    {
+      "pregunta": "La persona que decide cómo se clasifica un conjunto de datos concreto y quién puede acceder a él es el:",
+      "opciones": [
+        "Data Custodian",
+        "Data Owner",
+        "Data Processor",
+        "Data Subject"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Data Owner es responsable de determinar la clasificación y los requisitos de acceso de los datos."
+    },
+    {
+      "pregunta": "El miembro del personal de TI que implementa copias de seguridad y controles de acceso según las instrucciones recibidas, pero no establece las políticas, es el:",
+      "opciones": [
+        "Data Owner",
+        "Data Custodian",
+        "Data Subject",
+        "Data Controller"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Data Custodian aplica y mantiene técnicamente las protecciones definidas por el propietario de los datos."
+    },
+    {
+      "pregunta": "El tiempo durante el cual deben conservarse los registros antes de poder eliminarlos está regulado por una:",
+      "opciones": [
+        "Retention Policy",
+        "Acceptable Use Policy",
+        "Change Policy",
+        "Password Policy"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una Retention Policy establece cuánto tiempo deben conservarse los diferentes tipos de información."
+    },
+    {
+      "pregunta": "Un guardia de seguridad revisa grabaciones de cámaras y detecta a un intruso después de que haya entrado. ¿Qué función de control está realizando?",
+      "opciones": ["Preventiva", "Detectiva", "Disuasoria", "Correctiva"],
+      "respuesta": 1,
+      "explicacion": "Identificar un evento una vez que ya se ha producido o está ocurriendo corresponde a una función detectiva."
+    },
+    {
+      "pregunta": "Un torno físico en la entrada de un edificio que solo permite el paso de una persona cada vez está diseñado para prevenir qué ataque de ingeniería social?",
+      "opciones": [
+        "Shoulder Surfing",
+        "Phishing",
+        "Tailgating",
+        "Dumpster Diving"
+      ],
+      "respuesta": 2,
+      "explicacion": "El tailgating consiste en seguir a una persona autorizada para entrar en una zona restringida; un torno limita este riesgo."
+    },
+    {
+      "pregunta": "¿Qué capa del modelo OSI es responsable de establecer, mantener y finalizar sesiones de comunicación entre dos aplicaciones?",
+      "opciones": [
+        "Capa 3 (Red)",
+        "Capa 4 (Transporte)",
+        "Capa 5 (Sesión)",
+        "Capa 7 (Aplicación)"
+      ],
+      "respuesta": 2,
+      "explicacion": "La capa 5, Sesión, administra el establecimiento, mantenimiento y finalización de sesiones entre aplicaciones."
+    },
+    {
+      "pregunta": "Una alarma activada por movimiento que avisa al personal de seguridad cuando se produce una entrada fuera del horario laboral es qué tipo de control?",
+      "opciones": [
+        "Físico preventivo",
+        "Físico detectivo",
+        "Administrativo disuasorio",
+        "Técnico correctivo"
+      ],
+      "respuesta": 1,
+      "explicacion": "La alarma detecta un evento físico y genera una alerta, por lo que es un control físico detectivo."
+    },
+    {
+      "pregunta": "Una organización contrata un ciberseguro Y además instala un agente EDR. ¿Qué tratamiento del riesgo representa específicamente la parte correspondiente al seguro?",
+      "opciones": ["Mitigación", "Transferencia", "Evitación", "Aceptación"],
+      "respuesta": 1,
+      "explicacion": "El seguro transfiere parte del impacto financiero del riesgo a una aseguradora."
+    },
+    {
+      "pregunta": "Una empresa decide NO lanzar una nueva funcionalidad arriesgada porque el peligro supera al beneficio. Esto es:",
+      "opciones": ["Mitigación", "Aceptación", "Evitación", "Transferencia"],
+      "respuesta": 2,
+      "explicacion": "No realizar la actividad que genera el riesgo constituye evitación del riesgo."
+    },
+    {
+      "pregunta": "¿Qué tipo de documento contendría los comandos CLI exactos que un administrador debe ejecutar para rotar claves de cifrado?",
+      "opciones": ["Política", "Estándar", "Procedimiento", "Directriz"],
+      "respuesta": 2,
+      "explicacion": "Un procedimiento contiene instrucciones concretas y secuenciales, incluidos comandos específicos."
+    },
+    {
+      "pregunta": "Un documento que afirma que 'la empresa valora la protección de la confianza de los clientes' sin proporcionar detalles técnicos es una:",
+      "opciones": ["Procedimiento", "Estándar", "Política", "Baseline"],
+      "respuesta": 2,
+      "explicacion": "Una política expresa principios e intenciones de alto nivel sin entrar necesariamente en detalles técnicos."
+    },
+    {
+      "pregunta": "A un penetration tester NO se le proporciona conocimiento previo sobre el entorno objetivo. Este tipo de evaluación es:",
+      "opciones": ["White box", "Black box", "Gray box", "Crystal box"],
+      "respuesta": 1,
+      "explicacion": "En una prueba black box el evaluador parte sin información interna previa sobre el objetivo."
+    },
+    {
+      "pregunta": "Un escaneo de vulnerabilidades que únicamente enumera debilidades SIN explotarlas se diferencia de un penetration test porque un penetration test:",
+      "opciones": [
+        "Está completamente automatizado",
+        "Explota activamente vulnerabilidades para demostrar su impacto",
+        "Nunca interactúa con producción",
+        "Solo comprueba parches"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un penetration test intenta explotar vulnerabilidades dentro del alcance autorizado para demostrar su impacto real."
+    },
+    {
+      "pregunta": "Según el Código de Ética de ISC2, mentir en un informe de cumplimiento viola más directamente qué canon?",
+      "opciones": [
+        "Canon 1: Proteger a la sociedad",
+        "Canon 2: Actuar honorable, honesta, justa, responsable y legalmente",
+        "Canon 3: Servicio diligente",
+        "Canon 4: Promover la profesión"
+      ],
+      "respuesta": 1,
+      "explicacion": "La falsedad en un informe contradice directamente el deber de actuar con honestidad y legalidad."
+    },
+    {
+      "pregunta": "¿Qué canon entra en juego cuando un profesional orienta a nuevos miembros y protege la reputación de la certificación?",
+      "opciones": [
+        "Canon 1",
+        "Canon 2",
+        "Canon 3",
+        "Canon 4: Promover y proteger la profesión"
+      ],
+      "respuesta": 3,
+      "explicacion": "El Canon 4 se refiere a promover y proteger la profesión y su reputación."
+    },
+    {
+      "pregunta": "El riesgo que permanece DESPUÉS de aplicar todos los controles seleccionados es:",
+      "opciones": [
+        "Riesgo inherente",
+        "Riesgo residual",
+        "Riesgo total",
+        "Riesgo transferido"
+      ],
+      "respuesta": 1,
+      "explicacion": "El riesgo residual es la exposición que continúa existiendo después de aplicar los controles."
+    },
+    {
+      "pregunta": "Una empresa mantiene un documento vivo que enumera cada riesgo, su responsable, severidad y estado de tratamiento. Este documento es el:",
+      "opciones": [
+        "Business Impact Analysis",
+        "Risk Register",
+        "Disaster Recovery Plan",
+        "Security Policy"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Risk Register centraliza la información sobre riesgos, responsables, valoración y acciones de tratamiento."
+    },
+    {
+      "pregunta": "Asignar a cada riesgo una puntuación numérica de 1 a 25 multiplicando una probabilidad de 1 a 5 por un impacto de 1 a 5 corresponde a qué estilo de análisis?",
+      "opciones": [
+        "Puramente cuantitativo, en valores monetarios",
+        "Semicuantitativo",
+        "Actuarial",
+        "Forense"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las escalas numéricas ordinales sin utilizar importes monetarios reales corresponden a un análisis semicuantitativo."
+    },
+    {
+      "pregunta": "Una tarjeta de empleado que debe pasarse por un lector para desbloquear una puerta pertenece a qué categoría Y función de control?",
+      "opciones": [
+        "Administrativo, detectivo",
+        "Técnico/físico, preventivo",
+        "Físico, correctivo",
+        "Administrativo, disuasorio"
+      ],
+      "respuesta": 1,
+      "explicacion": "El lector y la cerradura aplican técnicamente una restricción física que impide el acceso no autorizado."
+    },
+    {
+      "pregunta": "El rol definido por la legislación de privacidad que determina POR QUÉ y CÓMO se procesan los datos personales es el:",
+      "opciones": [
+        "Data Processor",
+        "Data Controller",
+        "Data Custodian",
+        "Data Subject"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Data Controller determina los fines y los medios del tratamiento de datos personales."
+    },
+    {
+      "pregunta": "Un proveedor cloud que almacena y procesa datos estrictamente siguiendo las instrucciones de un cliente actúa como:",
+      "opciones": [
+        "Data Controller",
+        "Data Processor",
+        "Data Owner",
+        "Data Subject"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Data Processor procesa información en nombre del Data Controller y conforme a sus instrucciones."
+    },
+    {
+      "pregunta": "La persona a la que describen unos determinados datos personales se denomina:",
+      "opciones": [
+        "Data Owner",
+        "Data Subject",
+        "Data Custodian",
+        "Data Processor"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Data Subject es la persona física a la que se refieren los datos personales."
+    },
+    {
+      "pregunta": "Un código de un solo uso generado por una aplicación de autenticación que cambia cada 30 segundos es qué tipo de token?",
+      "opciones": [
+        "Token estático",
+        "Time-based One-Time Password (TOTP)",
+        "Certificado de smart card",
+        "Entrada de gestor de contraseñas"
+      ],
+      "respuesta": 1,
+      "explicacion": "TOTP genera códigos temporales de un solo uso basados en el tiempo, normalmente con intervalos cortos."
+    },
+    {
+      "pregunta": "¿Qué ataque reutiliza datos de autenticación válidos previamente capturados para suplantar posteriormente a un usuario?",
+      "opciones": [
+        "Replay attack",
+        "Fuerza bruta",
+        "Phishing",
+        "SQL injection"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un replay attack captura datos válidos y los retransmite posteriormente para intentar repetir una autenticación."
+    },
+    {
+      "pregunta": "¿Qué concepto de control de acceso revoca automáticamente el acceso de un usuario cuando cambia su puesto o función laboral?",
+      "opciones": [
+        "Aprovisionamiento estático",
+        "Aprovisionamiento basado en roles",
+        "Desaprovisionamiento manual",
+        "Federación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Con aprovisionamiento basado en roles, los permisos se vinculan al rol y se actualizan cuando este cambia."
+    },
+    {
+      "pregunta": "Un protocolo que utiliza tickets y un Key Distribution Center para autenticación Single Sign-On es:",
+      "opciones": ["RADIUS", "Kerberos", "TLS", "SNMP"],
+      "respuesta": 1,
+      "explicacion": "Kerberos utiliza tickets y un KDC para proporcionar autenticación y Single Sign-On."
+    },
+    {
+      "pregunta": "¿Qué dispositivo se sitúa entre los usuarios e Internet, reenvía sus solicitudes web y puede filtrar contenidos?",
+      "opciones": ["Forward proxy", "Load balancer", "Switch", "Repeater"],
+      "respuesta": 0,
+      "explicacion": "Un forward proxy intermedia las solicitudes salientes de los usuarios y puede aplicar políticas de filtrado."
+    },
+    {
+      "pregunta": "¿Qué puerto utiliza RDP (Remote Desktop Protocol) de forma predeterminada?",
+      "opciones": ["22", "3389", "443", "161"],
+      "respuesta": 1,
+      "explicacion": "RDP utiliza de forma predeterminada el puerto 3389."
+    },
+    {
+      "pregunta": "Un atacante envenena una caché DNS para que los usuarios que escriben la URL real de un banco terminen en un sitio falso. Esto es:",
+      "opciones": ["Pharming", "Vishing", "Tailgating", "Smishing"],
+      "respuesta": 0,
+      "explicacion": "Pharming manipula la resolución de nombres, por ejemplo mediante DNS poisoning, para redirigir a las víctimas a sitios falsos."
+    },
+    {
+      "pregunta": "¿Qué estrategia de copias de seguridad mantiene tres copias de los datos, en dos soportes diferentes, con una copia fuera de las instalaciones?",
+      "opciones": [
+        "RAID 5",
+        "Regla 3-2-1",
+        "Solo hot site",
+        "Una única copia completa"
+      ],
+      "respuesta": 1,
+      "explicacion": "La regla 3-2-1 establece tres copias, dos tipos de soporte y al menos una copia fuera de la ubicación principal."
+    },
+    {
+      "pregunta": "El mirroring de discos que escribe datos idénticos en dos unidades para proporcionar tolerancia a fallos es:",
+      "opciones": ["RAID 0", "RAID 1", "RAID 5", "JBOD"],
+      "respuesta": 1,
+      "explicacion": "RAID 1 mantiene una copia idéntica de los datos en dos o más discos mediante mirroring."
+    },
+    {
+      "pregunta": "¿Qué enfoque de pruebas de seguridad proporciona al evaluador conocimiento PARCIAL, similar al que tendría un empleado normal?",
+      "opciones": ["Black box", "White box", "Gray box", "Blind box"],
+      "respuesta": 2,
+      "explicacion": "Gray box proporciona al evaluador una cantidad limitada de información interna sobre el entorno."
+    },
+    {
+      "pregunta": "Una regla de firewall procesada de arriba abajo que permite o deniega tráfico según IP y puerto es un ejemplo de:",
+      "opciones": [
+        "Role-Based Access Control",
+        "Rule-Based Access Control (RuBAC)",
+        "Mandatory Access Control",
+        "Discretionary Access Control"
+      ],
+      "respuesta": 1,
+      "explicacion": "RuBAC aplica decisiones de acceso mediante reglas predefinidas, como permitir o denegar tráfico según IP, puerto o protocolo."
+    },
+    {
+      "pregunta": "¿Qué concepto garantiza que el fallo de un único componente no pueda derribar todo el sistema?",
+      "opciones": [
+        "Single point of failure",
+        "Redundancia",
+        "Ofuscación",
+        "Tokenización"
+      ],
+      "respuesta": 1,
+      "explicacion": "La redundancia utiliza componentes alternativos para evitar que un único fallo provoque la caída completa del sistema."
+    },
+    {
+      "pregunta": "Un dispositivo de protección eléctrica que mantiene los servidores funcionando durante unos minutos tras un corte para permitir un apagado seguro es un:",
+      "opciones": [
+        "Generador",
+        "UPS (Uninterruptible Power Supply)",
+        "PDU",
+        "Protector contra sobretensiones"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un UPS proporciona energía mediante batería durante interrupciones breves hasta recuperar el suministro o apagar los sistemas."
+    },
+    {
+      "pregunta": "Cifrar por completo el disco de un portátil para que resulte ilegible sin la clave protege principalmente contra:",
+      "opciones": [
+        "Network sniffing",
+        "Robo del dispositivo físico",
+        "Correos de phishing",
+        "DDoS"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado de disco completo impide acceder a los datos almacenados cuando un dispositivo se pierde o es robado."
+    },
+    {
+      "pregunta": "Una medida documentada y acordada de disponibilidad y tiempos de respuesta que un proveedor garantiza a un cliente es un:",
+      "opciones": ["BIA", "SLA (Service Level Agreement)", "MOU", "NDA"],
+      "respuesta": 1,
+      "explicacion": "Un SLA define niveles de servicio medibles que un proveedor se compromete contractualmente a cumplir."
+    },
+    {
+      "pregunta": "Un acuerdo entre dos organizaciones para utilizar mutuamente sus instalaciones en caso de desastre es un:",
+      "opciones": ["SLA", "Acuerdo recíproco o de ayuda mutua", "NDA", "AUP"],
+      "respuesta": 1,
+      "explicacion": "Un acuerdo recíproco establece que las organizaciones compartirán recursos o instalaciones durante una contingencia."
+    },
+    {
+      "pregunta": "¿Qué documento obliga legalmente a dos partes a mantener en secreto la información compartida?",
+      "opciones": ["SLA", "NDA (Non-Disclosure Agreement)", "MOU", "BIA"],
+      "respuesta": 1,
+      "explicacion": "Un NDA establece obligaciones legales de confidencialidad sobre la información compartida."
+    },
+    {
+      "pregunta": "¿Qué malware registra secretamente cada pulsación de teclado realizada por un usuario para capturar contraseñas?",
+      "opciones": ["Keylogger", "Adware", "Worm", "Ransomware"],
+      "respuesta": 0,
+      "explicacion": "Un keylogger registra las pulsaciones de teclado y puede utilizarse para robar credenciales y otra información introducida por el usuario."
+    },
+    {
+      "pregunta": "Una lista publicada por una Certificate Authority que identifica certificados que ya no son válidos es una:",
+      "opciones": [
+        "CRL (Certificate Revocation List)",
+        "CSR",
+        "Certificado raíz",
+        "Almacén de claves privadas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una CRL contiene los certificados que una CA ha revocado antes de su fecha de expiración."
+    },
+    {
+      "pregunta": "Una forma más rápida y en tiempo real de comprobar el estado de revocación de un único certificado, en lugar de descargar una lista completa, es:",
+      "opciones": ["CRL", "OCSP", "CSR", "PKI"],
+      "respuesta": 1,
+      "explicacion": "OCSP permite consultar en tiempo real el estado de revocación de un certificado concreto."
+    },
+    {
+      "pregunta": "El archivo que un solicitante envía a una CA con su clave pública e información de identidad para solicitar un certificado es un:",
+      "opciones": [
+        "CRL",
+        "Certificate Signing Request (CSR)",
+        "Root CA",
+        "Respuesta OCSP"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un CSR contiene la clave pública y datos del solicitante necesarios para pedir a una CA la emisión de un certificado."
+    },
+    {
+      "pregunta": "Un certificado firmado por la misma entidad que lo posee, sin confianza proporcionada por una CA externa, es un:",
+      "opciones": [
+        "Certificado raíz",
+        "Certificado autofirmado",
+        "Certificado wildcard",
+        "Certificado intermedio"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un certificado autofirmado es firmado con su propia clave y no dispone, por sí mismo, de una cadena de confianza externa."
+    },
+    {
+      "pregunta": "¿Qué puerto utiliza SMTP para enviar correo electrónico entre servidores de correo?",
+      "opciones": ["25", "110", "143", "389"],
+      "respuesta": 0,
+      "explicacion": "SMTP utiliza tradicionalmente el puerto 25 para la transferencia de correo entre servidores."
+    },
+    {
+      "pregunta": "¿Qué protocolo y puerto se utilizan para consultar un servicio de directorio como Active Directory?",
+      "opciones": [
+        "LDAP, puerto 389",
+        "DNS, puerto 53",
+        "SMTP, puerto 25",
+        "RDP, puerto 3389"
+      ],
+      "respuesta": 0,
+      "explicacion": "LDAP utiliza el puerto 389 de forma predeterminada para consultas de directorio; LDAPS utiliza habitualmente el 636."
+    },
+    {
+      "pregunta": "¿Qué protocolo legado de acceso remoto transmite credenciales en TEXTO PLANO y debería sustituirse por SSH?",
+      "opciones": ["Telnet", "HTTPS", "SFTP", "IPsec"],
+      "respuesta": 0,
+      "explicacion": "Telnet no cifra de forma nativa la sesión ni las credenciales, por lo que debe sustituirse por SSH."
+    }
+  ]
+}

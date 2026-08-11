@@ -1,0 +1,962 @@
+{
+  "titulo": "Batería de fundamentos de ciberseguridad #5",
+  "procedencia": "Test proporcionado por el usuario",
+  "descripcion": "Batería de 100 preguntas sobre principios de seguridad, gestión de riesgos, gobernanza, continuidad de negocio, IAM, redes, nube, operaciones de seguridad y respuesta a incidentes.",
+  "preguntas": [
+    {
+      "pregunta": "Un usuario cifra una hoja de cálculo altamente sensible antes de subirla a una unidad compartida en la nube. ¿Qué elemento de la tríada CIA se está protegiendo principalmente?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado impide que personas no autorizadas puedan leer los datos, por lo que protege la confidencialidad."
+    },
+    {
+      "pregunta": "Un administrador de TI implementa una herramienta de supervisión mediante hashes que alerta al equipo de seguridad si se modifican archivos esenciales del sistema operativo. ¿Qué elemento de la tríada CIA protege?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los hashes permiten detectar modificaciones en los archivos, por lo que protegen su integridad."
+    },
+    {
+      "pregunta": "Para evitar que el fallo de un único servidor deje fuera de servicio toda una aplicación web, un ingeniero despliega un clúster de tres servidores web detrás de un balanceador de carga. Esto favorece:",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autorización"
+      ],
+      "respuesta": 2,
+      "explicacion": "La redundancia permite mantener el servicio operativo aunque falle un servidor, mejorando la disponibilidad."
+    },
+    {
+      "pregunta": "Un usuario inicia sesión correctamente en un portal corporativo con su nombre de usuario y contraseña. ¿Qué parte del marco AAA satisface específicamente esta acción?",
+      "opciones": ["Autenticación", "Autorización", "Accounting", "Auditoría"],
+      "respuesta": 0,
+      "explicacion": "La contraseña permite verificar que el usuario es quien afirma ser, lo que corresponde a autenticación."
+    },
+    {
+      "pregunta": "Una empresa evalúa el riesgo de fallo de un servidor. Determina que el servidor vale 10.000 $, que un fallo provocaría una pérdida del 100 % (EF=1,0) y que falla dos veces al año (ARO=2). ¿Cuál es la Annualized Loss Expectancy (ALE)?",
+      "opciones": ["5.000 $", "10.000 $", "20.000 $", "40.000 $"],
+      "respuesta": 2,
+      "explicacion": "SLE = 10.000 × 1,0 = 10.000 $. ALE = SLE × ARO = 10.000 × 2 = 20.000 $."
+    },
+    {
+      "pregunta": "Un banco determina que el riesgo de mantener cajas de seguridad físicas en una sucursal concreta es demasiado alto debido a un aumento reciente de la delincuencia. Decide cerrar permanentemente la sucursal. Esto es:",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Al dejar de realizar la actividad que genera el riesgo, la organización lo evita."
+    },
+    {
+      "pregunta": "Una organización contrata un Service Level Agreement (SLA) completo con un proveedor cloud que incluye penalizaciones económicas si el proveedor no mantiene un 99,99 % de disponibilidad. Esto es un ejemplo de:",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las penalizaciones contractuales desplazan parte del impacto financiero del riesgo al proveedor."
+    },
+    {
+      "pregunta": "Un hospital instala firewalls de nueva generación y MFA obligatorio para reducir considerablemente la probabilidad de éxito de un ataque de ransomware. Esta estrategia se conoce como:",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 2,
+      "explicacion": "Añadir controles para reducir la probabilidad o el impacto de un riesgo constituye mitigación."
+    },
+    {
+      "pregunta": "Una pequeña empresa observa que un fallo menor de software podría causar pérdidas de productividad de 100 $ al año. El parche cuesta 2.000 $. El propietario documenta el fallo pero no toma ninguna medida. Esto es:",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 3,
+      "explicacion": "La empresa conoce y documenta el riesgo, pero decide asumirlo porque el coste del control supera la pérdida esperada."
+    },
+    {
+      "pregunta": "¿Qué documento de gobierno de seguridad es explícitamente obligatorio, está impulsado directamente por la alta dirección y establece el 'qué' y el 'por qué' generales de la estrategia de seguridad de la organización?",
+      "opciones": ["Procedimiento", "Directriz", "Estándar", "Política"],
+      "respuesta": 3,
+      "explicacion": "Una política expresa los objetivos y requisitos de alto nivel establecidos por la dirección."
+    },
+    {
+      "pregunta": "Un documento establece que 'todos los routers de la organización deben utilizar el protocolo de enrutamiento OSPF y ejecutar la versión de firmware 12.x o superior'. Esta línea base obligatoria es un:",
+      "opciones": ["Procedimiento", "Directriz", "Estándar", "Política"],
+      "respuesta": 2,
+      "explicacion": "Un estándar define requisitos técnicos concretos y obligatorios."
+    },
+    {
+      "pregunta": "Un técnico de TI sigue un documento muy detallado de 20 pasos para instalar y configurar correctamente la estación de trabajo de un nuevo empleado. Este documento es un:",
+      "opciones": ["Procedimiento", "Directriz", "Estándar", "Política"],
+      "respuesta": 0,
+      "explicacion": "Un procedimiento contiene instrucciones detalladas y secuenciales para realizar una tarea."
+    },
+    {
+      "pregunta": "Un documento recomienda que 'los empleados deberían utilizar frases de contraseña en lugar de contraseñas complejas si el sistema lo permite'. Al tratarse de una recomendación, es una:",
+      "opciones": ["Procedimiento", "Directriz", "Estándar", "Política"],
+      "respuesta": 1,
+      "explicacion": "Una directriz proporciona recomendaciones o buenas prácticas que no necesariamente son obligatorias."
+    },
+    {
+      "pregunta": "Según el Código de Ética de ISC2, si tu empleador te ordena configurar un servidor de una forma que pone activamente en peligro vidas humanas o infraestructuras públicas, debes negarte basándote en:",
+      "opciones": [
+        "Canon 1: Proteger a la sociedad, el bien común y la infraestructura",
+        "Canon 2: Actuar de forma honorable, honesta, justa, responsable y legal",
+        "Canon 3: Prestar un servicio diligente y competente",
+        "Canon 4: Promover y proteger la profesión"
+      ],
+      "respuesta": 0,
+      "explicacion": "La protección de la sociedad, las personas y la infraestructura constituye la prioridad del Canon 1."
+    },
+    {
+      "pregunta": "Un profesional certificado descubre que un compañero vende datos corporativos robados a un competidor. ¿Qué canon de ISC2 exige actuar frente a esta actividad ilegal?",
+      "opciones": [
+        "Canon 1: Proteger a la sociedad",
+        "Canon 2: Actuar de forma honorable, honesta, justa, responsable y legal",
+        "Canon 3: Prestar un servicio diligente y competente",
+        "Canon 4: Promover la profesión"
+      ],
+      "respuesta": 1,
+      "explicacion": "La venta de datos robados constituye una actividad ilegal, por lo que corresponde al deber de actuar legalmente del Canon 2."
+    },
+    {
+      "pregunta": "¿Qué tipo de control se basa en normas organizativas, políticas de RR. HH., formación de concienciación en seguridad y verificaciones de antecedentes?",
+      "opciones": [
+        "Control administrativo",
+        "Control técnico",
+        "Control físico",
+        "Control correctivo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las políticas, la formación y los procesos gestionados por la organización son controles administrativos."
+    },
+    {
+      "pregunta": "Un lector de huellas conectado a un portátil que impide arrancar el sistema operativo sin una coincidencia es ¿qué tipo de control?",
+      "opciones": [
+        "Control administrativo",
+        "Control técnico",
+        "Control físico",
+        "Control disuasorio"
+      ],
+      "respuesta": 1,
+      "explicacion": "La aplicación automática del control mediante hardware y software corresponde a un control técnico."
+    },
+    {
+      "pregunta": "Un bolardo de acero de alta resistencia colocado delante de un centro de datos para impedir que un vehículo impacte contra el edificio es ¿qué tipo de control?",
+      "opciones": [
+        "Control administrativo",
+        "Control técnico",
+        "Control físico",
+        "Control lógico"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un bolardo es una barrera tangible que protege físicamente las instalaciones."
+    },
+    {
+      "pregunta": "Una organización es demandada por negligencia tras una brecha porque nunca instaló software antivirus básico y estándar del sector en sus servidores. Se considera que careció de:",
+      "opciones": [
+        "Due Diligence",
+        "Due Care",
+        "Aceptación del riesgo",
+        "Defense in Depth"
+      ],
+      "respuesta": 1,
+      "explicacion": "Due Care implica aplicar medidas razonables de protección; no implementar controles básicos puede constituir negligencia."
+    },
+    {
+      "pregunta": "Antes de firmar un acuerdo de fusión, la empresa compradora contrata a una firma para auditar exhaustivamente la red de la empresa objetivo en busca de fallos de seguridad ocultos. Esta investigación se denomina:",
+      "opciones": [
+        "Due Diligence",
+        "Due Care",
+        "Transferencia del riesgo",
+        "Evitación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Due Diligence consiste en investigar y evaluar los riesgos antes de tomar una decisión o asumir una obligación."
+    },
+    {
+      "pregunta": "¿Cuál es la principal diferencia de alcance entre un Business Continuity Plan (BCP) y un Disaster Recovery Plan (DRP)?",
+      "opciones": [
+        "El BCP se centra en la recuperación técnica de TI; el DRP se centra en las operaciones de negocio.",
+        "El BCP se centra en mantener las operaciones críticas del negocio; el DRP se centra específicamente en restaurar sistemas y datos de TI.",
+        "El BCP es para desastres naturales; el DRP es para ciberataques.",
+        "El BCP es un documento técnico; el DRP es un documento de gestión."
+      ],
+      "respuesta": 1,
+      "explicacion": "El BCP aborda la continuidad de las funciones críticas del negocio, mientras que el DRP se centra en la recuperación de sistemas y datos de TI."
+    },
+    {
+      "pregunta": "Durante un Business Impact Analysis (BIA), el equipo determina el tiempo máximo absoluto que el negocio puede sobrevivir sin la plataforma de comercio electrónico antes de sufrir consecuencias inaceptables. ¿Qué métrica es?",
+      "opciones": [
+        "Recovery Point Objective (RPO)",
+        "Recovery Time Objective (RTO)",
+        "Maximum Tolerable Downtime (MTD)",
+        "Work Recovery Time (WRT)"
+      ],
+      "respuesta": 2,
+      "explicacion": "El MTD representa el máximo periodo de interrupción que el negocio puede tolerar antes de sufrir un daño inaceptable."
+    },
+    {
+      "pregunta": "Una organización configura su base de datos para replicar datos a una instalación externa cada 15 minutos porque el negocio no puede permitirse perder más de 15 minutos de datos transaccionales. Este umbral de 15 minutos es el:",
+      "opciones": [
+        "Recovery Point Objective (RPO)",
+        "Recovery Time Objective (RTO)",
+        "Maximum Tolerable Downtime (MTD)",
+        "Mean Time Between Failures (MTBF)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El RPO expresa la cantidad máxima de datos que puede perderse, normalmente medida como un intervalo temporal."
+    },
+    {
+      "pregunta": "Un servidor deja de funcionar. El equipo de TI debe reconstruirlo, restaurarlo y dejarlo completamente operativo en un máximo de 4 horas. Este objetivo de 4 horas es el:",
+      "opciones": [
+        "Recovery Point Objective (RPO)",
+        "Recovery Time Objective (RTO)",
+        "Maximum Tolerable Downtime (MTD)",
+        "Work Recovery Time (WRT)"
+      ],
+      "respuesta": 1,
+      "explicacion": "El RTO define el tiempo objetivo máximo para restaurar un servicio después de una interrupción."
+    },
+    {
+      "pregunta": "Una biblioteca publica su catálogo, pero restringe el sistema que almacena el historial de préstamos de los usuarios. ¿Qué pilar protege el historial restringido?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Restringir quién puede consultar información privada protege su confidencialidad."
+    },
+    {
+      "pregunta": "Un sistema de votación utiliza sellos que evidencian manipulaciones para que cualquier cambio en un voto registrado pueda detectarse. Esto protege:",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Detectar modificaciones no autorizadas en los votos protege la integridad de los datos."
+    },
+    {
+      "pregunta": "Un servicio de streaming añade servidores en varias regiones para que una caída en una de ellas no interrumpa la reproducción. Esto protege:",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Privacidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "La redundancia regional mantiene el servicio accesible ante fallos, aumentando la disponibilidad."
+    },
+    {
+      "pregunta": "Un contrato firmado, almacenado con una marca de tiempo y el certificado del firmante, impide que este niegue posteriormente haberlo firmado. Esto proporciona:",
+      "opciones": [
+        "Disponibilidad",
+        "No repudio",
+        "Confidencialidad",
+        "Anonimato"
+      ],
+      "respuesta": 1,
+      "explicacion": "El no repudio proporciona evidencias que impiden negar posteriormente una acción o firma realizada."
+    },
+    {
+      "pregunta": "Escanear una tarjeta para ENTRAR en un edificio demuestra la identidad en la puerta. ¿Qué paso de AAA representa?",
+      "opciones": ["Autenticación", "Autorización", "Accounting", "Auditoría"],
+      "respuesta": 0,
+      "explicacion": "Demostrar la identidad corresponde al proceso de autenticación."
+    },
+    {
+      "pregunta": "Después de iniciar sesión, un sistema comprueba si un usuario puede eliminar registros. ¿Qué paso de AAA representa?",
+      "opciones": [
+        "Autenticación",
+        "Autorización",
+        "Accounting",
+        "Identificación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La autorización determina qué acciones puede realizar un usuario autenticado."
+    },
+    {
+      "pregunta": "¿Qué fase de Incident Response incluye actualizar las políticas de firewall y redactar nuevos playbooks de incidentes antes de que ocurra un ciberataque?",
+      "opciones": ["Detección", "Contención", "Preparación", "Recuperación"],
+      "respuesta": 2,
+      "explicacion": "La fase de preparación comprende la planificación, formación, herramientas y medidas previas necesarias para responder a incidentes."
+    },
+    {
+      "pregunta": "Un SIEM registra que el usuario jdoe exportó 4 GB a las 2:00. Registrar esta actividad corresponde a ¿qué paso de AAA?",
+      "opciones": ["Autenticación", "Autorización", "Accounting", "Evitación"],
+      "respuesta": 2,
+      "explicacion": "Accounting registra las acciones y actividades realizadas por los usuarios."
+    },
+    {
+      "pregunta": "Escribir únicamente un nombre de usuario para DECLARAR quién eres, antes de introducir una contraseña, corresponde a:",
+      "opciones": [
+        "Identificación",
+        "Autenticación",
+        "Autorización",
+        "Accounting"
+      ],
+      "respuesta": 0,
+      "explicacion": "La identificación consiste en declarar una identidad; la autenticación demuestra posteriormente que esa identidad es válida."
+    },
+    {
+      "pregunta": "Una clínica médica cifra sus registros Y conserva una copia de seguridad offline. ¿Qué pilar protege específicamente la copia de seguridad?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las copias de seguridad permiten recuperar los datos y mantener su disponibilidad tras un incidente."
+    },
+    {
+      "pregunta": "Un checksum mostrado junto a una descarga de software permite a los usuarios verificar que el archivo no ha sido modificado. Esto favorece:",
+      "opciones": [
+        "Disponibilidad",
+        "Integridad",
+        "Confidencialidad",
+        "Autorización"
+      ],
+      "respuesta": 1,
+      "explicacion": "Comparar el checksum permite detectar alteraciones y verificar la integridad del archivo."
+    },
+    {
+      "pregunta": "En un desastre físico grave, ¿cuál es SIEMPRE la prioridad absoluta de una organización?",
+      "opciones": [
+        "Apagar correctamente los servidores.",
+        "Restaurar los datos desde copias de seguridad externas.",
+        "Garantizar la seguridad física y la salud de todo el personal.",
+        "Contactar con las fuerzas de seguridad."
+      ],
+      "respuesta": 2,
+      "explicacion": "La protección de la vida y la seguridad de las personas tiene prioridad sobre sistemas, datos y otros activos."
+    },
+    {
+      "pregunta": "Un torno físico en la entrada de un edificio que solo permite pasar a una persona cada vez está diseñado para prevenir específicamente ¿qué ataque de ingeniería social?",
+      "opciones": [
+        "Shoulder Surfing",
+        "Phishing",
+        "Tailgating",
+        "Dumpster Diving"
+      ],
+      "respuesta": 2,
+      "explicacion": "El tailgating consiste en seguir a una persona autorizada para entrar en una zona restringida; el torno limita el paso a una sola persona."
+    },
+    {
+      "pregunta": "Una cadena de restaurantes contrata a una empresa externa para operar y proteger los servidores de su aplicación de fidelización, desplazando hacia ella parte de la responsabilidad. Esto es:",
+      "opciones": ["Evitación", "Mitigación", "Transferencia", "Aceptación"],
+      "respuesta": 2,
+      "explicacion": "Delegar la actividad y parte de la responsabilidad a un tercero constituye transferencia del riesgo."
+    },
+    {
+      "pregunta": "Una startup añade rate limiting y un WAF a su API para reducir la probabilidad de abuso. Este tratamiento es:",
+      "opciones": ["Evitación", "Mitigación", "Transferencia", "Aceptación"],
+      "respuesta": 1,
+      "explicacion": "Añadir controles que reducen la probabilidad o el impacto de un riesgo constituye mitigación."
+    },
+    {
+      "pregunta": "Una universidad decide no almacenar en absoluto los números de la Seguridad Social de los estudiantes, eliminando así el riesgo de exposición de esos datos. Esto es:",
+      "opciones": ["Aceptación", "Evitación", "Mitigación", "Transferencia"],
+      "respuesta": 1,
+      "explicacion": "Eliminar completamente la actividad que origina el riesgo constituye evitación."
+    },
+    {
+      "pregunta": "Un minorista calcula que un control de 2.000 $ evitaría únicamente 80 $ de pérdidas esperadas al año y decide no implementarlo. Esto es:",
+      "opciones": ["Evitación", "Mitigación", "Transferencia", "Aceptación"],
+      "respuesta": 3,
+      "explicacion": "La organización acepta conscientemente el riesgo porque el coste del control supera el beneficio esperado."
+    },
+    {
+      "pregunta": "Un usuario inicia sesión con una contraseña y después el sistema le solicita la respuesta a una pregunta secreta de seguridad. ¿Se considera Multi-Factor Authentication (MFA)?",
+      "opciones": [
+        "Sí, porque existen dos pasos.",
+        "Sí, porque las preguntas de seguridad son inherentemente seguras.",
+        "No, porque ambos son factores de 'algo que sabes'.",
+        "No, porque MFA exige un escaneo biométrico."
+      ],
+      "respuesta": 2,
+      "explicacion": "MFA requiere factores pertenecientes a categorías diferentes; una contraseña y una pregunta secreta son ambos factores de conocimiento."
+    },
+    {
+      "pregunta": "Si un activo vale 50.000 $ y un incendio destruiría el 40 % de su valor, ¿cuál es la Single Loss Expectancy (SLE)?",
+      "opciones": ["50.000 $", "20.000 $", "40.000 $", "2.000 $"],
+      "respuesta": 1,
+      "explicacion": "SLE = Asset Value × Exposure Factor = 50.000 × 0,40 = 20.000 $."
+    },
+    {
+      "pregunta": "Un control cuesta 8.000 $ al año y reduce la pérdida anual esperada de 30.000 $ a 5.000 $. El control es:",
+      "opciones": [
+        "No es rentable",
+        "Es rentable, con un ahorro neto de 17.000 $ al año",
+        "Está exactamente en el punto de equilibrio",
+        "Es irrelevante para la ALE"
+      ],
+      "respuesta": 1,
+      "explicacion": "Reduce la pérdida esperada en 25.000 $ y cuesta 8.000 $, generando un beneficio neto anual de 17.000 $."
+    },
+    {
+      "pregunta": "Clasificar un riesgo como 'Crítico' en una matriz roja/ámbar/verde durante un taller corresponde a ¿qué tipo de análisis?",
+      "opciones": ["Cuantitativo", "Cualitativo", "Actuarial", "Forense"],
+      "respuesta": 1,
+      "explicacion": "Los niveles descriptivos, colores y valoraciones subjetivas corresponden al análisis cualitativo."
+    },
+    {
+      "pregunta": "El PRIMER paso del ciclo de vida de gestión de riesgos, antes de evaluarlos o tratarlos, es:",
+      "opciones": [
+        "Tratar el riesgo",
+        "Identificar el riesgo",
+        "Monitorizar el riesgo",
+        "Transferir el riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los riesgos deben identificarse antes de poder evaluarlos, tratarlos y monitorizarlos."
+    },
+    {
+      "pregunta": "Después de aplicar controles, supervisar continuamente la aparición de riesgos nuevos o cambios en los existentes corresponde a ¿qué fase del ciclo de vida?",
+      "opciones": [
+        "Identificación",
+        "Evaluación",
+        "Tratamiento",
+        "Monitorización"
+      ],
+      "respuesta": 3,
+      "explicacion": "La monitorización consiste en revisar de forma continua los riesgos y la eficacia de sus tratamientos."
+    },
+    {
+      "pregunta": "La exposición total de una organización cuando NO se ha aplicado ningún control es su:",
+      "opciones": [
+        "Riesgo residual",
+        "Riesgo inherente",
+        "Riesgo transferido",
+        "Riesgo aceptado"
+      ],
+      "respuesta": 1,
+      "explicacion": "El riesgo inherente es el nivel de riesgo existente antes de aplicar controles."
+    },
+    {
+      "pregunta": "Un sistema bloquea una cuenta después de 5 intentos fallidos de contraseña. Este control protege principalmente frente a:",
+      "opciones": [
+        "Phishing",
+        "Ataques de fuerza bruta o adivinación de contraseñas",
+        "DDoS",
+        "Tailgating"
+      ],
+      "respuesta": 1,
+      "explicacion": "El bloqueo limita los intentos repetidos de contraseña, dificultando los ataques de fuerza bruta."
+    },
+    {
+      "pregunta": "Conceder privilegios elevados únicamente durante el breve periodo en que una tarea los necesita y revocarlos posteriormente se denomina:",
+      "opciones": [
+        "Privilegio permanente",
+        "Acceso Just-in-Time (JIT)",
+        "Administrador permanente",
+        "Cuentas compartidas"
+      ],
+      "respuesta": 1,
+      "explicacion": "JIT proporciona privilegios temporales bajo demanda y los elimina cuando dejan de ser necesarios."
+    },
+    {
+      "pregunta": "Una bóveda que entrega, rota y audita contraseñas administrativas es un:",
+      "opciones": [
+        "Sistema Privileged Access Management (PAM)",
+        "Servidor DHCP",
+        "Balanceador de carga",
+        "Honeypot"
+      ],
+      "respuesta": 0,
+      "explicacion": "PAM administra, protege, rota y audita credenciales y accesos privilegiados."
+    },
+    {
+      "pregunta": "Para prevenir el fraude, una organización exige que un empleado redacte un cheque y que un gerente diferente lo firme. Esto aplica:",
+      "opciones": [
+        "Separation of Duties (SoD)",
+        "Least Privilege",
+        "Need to Know",
+        "Mandatory Access Control"
+      ],
+      "respuesta": 0,
+      "explicacion": "SoD divide una operación sensible entre varias personas para impedir que una sola controle todo el proceso."
+    },
+    {
+      "pregunta": "¿Por qué se desaconsejan las cuentas compartidas o genéricas en entornos seguros?",
+      "opciones": [
+        "Son más lentas",
+        "Impiden la responsabilidad individual",
+        "Utilizan más almacenamiento",
+        "No pueden tener contraseñas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Con una cuenta compartida resulta difícil atribuir una acción concreta a una persona específica."
+    },
+    {
+      "pregunta": "Un estándar abierto que permite a un usuario conceder a una aplicación de terceros acceso limitado a su cuenta SIN compartir la contraseña es:",
+      "opciones": ["OAuth", "WEP", "ARP", "NTP"],
+      "respuesta": 0,
+      "explicacion": "OAuth permite delegar autorización a aplicaciones mediante tokens sin entregarles la contraseña del usuario."
+    },
+    {
+      "pregunta": "Un estándar basado en XML utilizado para intercambiar información de autenticación y autorización entre proveedores de identidad y servicios, común en SSO, es:",
+      "opciones": ["SAML", "SMTP", "ICMP", "RAID"],
+      "respuesta": 0,
+      "explicacion": "SAML utiliza aserciones XML para federar información de identidad y facilitar SSO."
+    },
+    {
+      "pregunta": "Exigir una contraseña MÁS una huella dactilar constituye MFA fuerte porque los factores son:",
+      "opciones": [
+        "De la misma categoría",
+        "De dos categorías diferentes",
+        "Ambos de 'algo que tienes'",
+        "Ambos de 'algo que sabes'"
+      ],
+      "respuesta": 1,
+      "explicacion": "La contraseña es un factor de conocimiento y la huella un factor inherente, por lo que pertenecen a categorías diferentes."
+    },
+    {
+      "pregunta": "Exigir dos contraseñas para iniciar sesión NO se considera auténtica autenticación multifactor porque:",
+      "opciones": [
+        "Las contraseñas son demasiado largas",
+        "Ambas pertenecen a la misma categoría de factor: conocimiento",
+        "Es demasiado lento",
+        "Las contraseñas no pueden almacenarse mediante hashes"
+      ],
+      "respuesta": 1,
+      "explicacion": "MFA exige combinar categorías de factores distintas; dos contraseñas siguen siendo dos factores de conocimiento."
+    },
+    {
+      "pregunta": "Crear automáticamente cuentas y asignar acceso basado en roles cuando se incorpora un empleado se denomina:",
+      "opciones": ["Deprovisioning", "Provisioning", "Federación", "Auditoría"],
+      "respuesta": 1,
+      "explicacion": "Provisioning es el proceso de crear cuentas y conceder los accesos necesarios a nuevos usuarios."
+    },
+    {
+      "pregunta": "Revisar periódicamente si los permisos de cada usuario siguen correspondiendo con su función actual es una:",
+      "opciones": [
+        "Revisión de acceso o recertificación",
+        "Prueba de penetración",
+        "Copia de seguridad",
+        "Ciclo de parcheado"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las revisiones de acceso o recertificaciones verifican periódicamente que los permisos continúen siendo apropiados."
+    },
+    {
+      "pregunta": "Un firewall stateful es más seguro que un filtro de paquetes stateless porque:",
+      "opciones": [
+        "Cifra todo el tráfico",
+        "Mantiene el estado de las conexiones activas",
+        "Sustituye al router",
+        "Únicamente bloquea todos los puertos por defecto"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un firewall stateful mantiene información sobre las conexiones y puede validar que el tráfico pertenece a sesiones legítimas."
+    },
+    {
+      "pregunta": "Traducir muchas direcciones IP privadas internas a una única dirección IP pública para acceder a Internet es:",
+      "opciones": ["NAT", "DNS", "ARP", "VLAN"],
+      "respuesta": 0,
+      "explicacion": "NAT traduce direcciones entre redes privadas y públicas; PAT permite que múltiples hosts compartan una dirección pública mediante puertos."
+    },
+    {
+      "pregunta": "¿Qué dispositivo opera exclusivamente en la Capa 1, limitándose a regenerar y repetir señales eléctricas?",
+      "opciones": ["Router", "Switch", "Hub/Repeater", "Firewall"],
+      "respuesta": 2,
+      "explicacion": "Un hub o repetidor trabaja en la capa física y retransmite señales sin interpretar tramas ni paquetes."
+    },
+    {
+      "pregunta": "Una red Wi-Fi para invitados mantenida separada de la red corporativa es un ejemplo de:",
+      "opciones": [
+        "Segmentación de red",
+        "Port forwarding",
+        "Tunneling",
+        "Broadcasting"
+      ],
+      "respuesta": 0,
+      "explicacion": "Separar el tráfico de invitados del tráfico corporativo constituye segmentación de red."
+    },
+    {
+      "pregunta": "Una VPN site-to-site entre dos oficinas proporciona principalmente:",
+      "opciones": [
+        "Internet más rápido",
+        "Un túnel cifrado sobre Internet público",
+        "Más direcciones IP",
+        "DNS gratuito"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una VPN site-to-site crea un túnel protegido que conecta dos redes a través de una infraestructura pública."
+    },
+    {
+      "pregunta": "Desactivar la difusión del SSID y habilitar WPA3 son medidas para proteger una:",
+      "opciones": [
+        "Red inalámbrica",
+        "Base de datos",
+        "Servidor de correo",
+        "Registro de firewall"
+      ],
+      "respuesta": 0,
+      "explicacion": "SSID y WPA3 son configuraciones relacionadas con redes Wi-Fi."
+    },
+    {
+      "pregunta": "Una red de gestión out-of-band utilizada para administrar dispositivos se mantiene aislada para que:",
+      "opciones": [
+        "Funcione más rápido",
+        "Una intrusión en la red de producción no pueda alcanzar la red de gestión",
+        "No necesite contraseñas",
+        "No necesite cifrado"
+      ],
+      "respuesta": 1,
+      "explicacion": "Separar el plano de gestión reduce la posibilidad de que una intrusión en producción comprometa también los interfaces administrativos."
+    },
+    {
+      "pregunta": "¿Qué protocolo de seguridad Wi-Fi es el MÁS seguro y recomendado actualmente entre estas opciones?",
+      "opciones": ["WEP", "WPA", "WPA2", "WPA3"],
+      "respuesta": 3,
+      "explicacion": "WPA3 es la generación más reciente de las opciones indicadas y mejora las protecciones de los protocolos anteriores."
+    },
+    {
+      "pregunta": "Copiar el tráfico de un puerto de un switch hacia una herramienta de monitorización para analizarlo se denomina:",
+      "opciones": [
+        "Port mirroring (SPAN)",
+        "Port forwarding",
+        "NAT",
+        "Load balancing"
+      ],
+      "respuesta": 0,
+      "explicacion": "Port mirroring o SPAN duplica tráfico de uno o varios puertos hacia un puerto de monitorización."
+    },
+    {
+      "pregunta": "Un jump server o bastion host se utiliza para:",
+      "opciones": [
+        "Almacenar copias de seguridad",
+        "Proporcionar un único punto de entrada reforzado para administrar sistemas internos",
+        "Sustituir al firewall",
+        "Alojar sitios web públicos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un bastion host proporciona un punto administrativo controlado, reforzado y auditable para acceder a sistemas internos."
+    },
+    {
+      "pregunta": "Bloquear dominios maliciosos conocidos en el resolver para impedir que los usuarios accedan a ellos es:",
+      "opciones": [
+        "Filtrado DNS",
+        "ARP poisoning",
+        "Escaneo de puertos",
+        "Tokenización"
+      ],
+      "respuesta": 0,
+      "explicacion": "El filtrado DNS bloquea o modifica la resolución de dominios considerados maliciosos o no permitidos."
+    },
+    {
+      "pregunta": "¿Por qué se suele elegir cifrado simétrico para cifrar archivos grandes en lugar de cifrado asimétrico?",
+      "opciones": [
+        "Es intrínsecamente más seguro",
+        "Es mucho más rápido para grandes volúmenes de datos",
+        "No necesita ninguna clave",
+        "No puede romperse"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los algoritmos simétricos son computacionalmente mucho más eficientes para cifrar grandes cantidades de datos."
+    },
+    {
+      "pregunta": "Un sistema de cifrado híbrido utiliza criptografía asimétrica para:",
+      "opciones": [
+        "Cifrar el archivo completo",
+        "Intercambiar de forma segura la clave simétrica de sesión",
+        "Calcular el hash de los datos",
+        "Comprimir el archivo"
+      ],
+      "respuesta": 1,
+      "explicacion": "La criptografía asimétrica suele utilizarse para proteger el intercambio de una clave de sesión, mientras el cifrado simétrico procesa los datos."
+    },
+    {
+      "pregunta": "Una función hash produce siempre una salida que es:",
+      "opciones": [
+        "De longitud variable según la entrada",
+        "De longitud fija independientemente del tamaño de la entrada",
+        "Reversible al contenido original",
+        "Cifrada mediante una clave"
+      ],
+      "respuesta": 1,
+      "explicacion": "Para un algoritmo hash determinado, el digest tiene una longitud fija independientemente del tamaño de los datos de entrada."
+    },
+    {
+      "pregunta": "¿Qué algoritmo de hashing de contraseñas está diseñado para ser deliberadamente lento y memory-hard para dificultar el cracking?",
+      "opciones": ["MD5", "SHA-1", "Argon2", "CRC32"],
+      "respuesta": 2,
+      "explicacion": "Argon2 está diseñado específicamente para el almacenamiento de contraseñas y permite utilizar un coste computacional y de memoria elevado."
+    },
+    {
+      "pregunta": "Un 'nonce' utilizado una única vez en un intercambio criptográfico previene principalmente:",
+      "opciones": [
+        "Fuerza bruta",
+        "Ataques de replay",
+        "Phishing",
+        "Tailgating"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un nonce introduce un valor único que permite detectar y rechazar la reutilización de mensajes capturados anteriormente."
+    },
+    {
+      "pregunta": "El cifrado end-to-end en una aplicación de mensajería significa que:",
+      "opciones": [
+        "El proveedor puede leer los mensajes",
+        "Solo los usuarios participantes en la comunicación pueden leer los mensajes",
+        "Los mensajes se almacenan en texto plano",
+        "El cifrado únicamente se aplica a los datos en reposo"
+      ],
+      "respuesta": 1,
+      "explicacion": "En un esquema end-to-end correctamente implementado, el contenido se cifra y descifra en los extremos de la comunicación."
+    },
+    {
+      "pregunta": "Una codificación como Base64 se diferencia del cifrado porque Base64:",
+      "opciones": [
+        "Requiere una clave secreta",
+        "No proporciona confidencialidad y puede revertirse fácilmente",
+        "Es irrompible",
+        "Calcula un hash de los datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Base64 es un mecanismo de codificación, no de cifrado, y cualquiera puede decodificarlo sin una clave secreta."
+    },
+    {
+      "pregunta": "Una empresa desecha servidores antiguos. Para garantizar que ningún dato pueda recuperarse, pasa los discos duros por una trituradora industrial. Esto es un ejemplo de:",
+      "opciones": [
+        "Sanitización / Destrucción",
+        "Enmascaramiento",
+        "Cifrado simétrico",
+        "Etiquetado de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La destrucción física del soporte es un método de sanitización destinado a impedir la recuperación de los datos."
+    },
+    {
+      "pregunta": "Perfect Forward Secrecy garantiza que, si posteriormente se roba la clave privada de larga duración de un servidor:",
+      "opciones": [
+        "Todas las sesiones anteriores pueden descifrarse",
+        "Las claves de sesiones anteriores permanecen protegidas",
+        "El servidor se bloquea",
+        "Los hashes pasan a ser reversibles"
+      ],
+      "respuesta": 1,
+      "explicacion": "Perfect Forward Secrecy utiliza claves efímeras de sesión para evitar que comprometer una clave de larga duración permita descifrar sesiones pasadas."
+    },
+    {
+      "pregunta": "La esteganografía se diferencia de la criptografía porque la esteganografía:",
+      "opciones": [
+        "Revuelve el contenido del mensaje",
+        "Oculta la propia existencia del mensaje",
+        "Utiliza una clave pública",
+        "Siempre utiliza AES"
+      ],
+      "respuesta": 1,
+      "explicacion": "La esteganografía busca ocultar que existe una comunicación, mientras que la criptografía protege principalmente su contenido."
+    },
+    {
+      "pregunta": "Un proveedor de software publica un checksum SHA-256 junto al enlace de descarga. ¿Cuál es la finalidad de seguridad de este checksum?",
+      "opciones": [
+        "Cifrar la descarga",
+        "Verificar mediante hashing la integridad del archivo descargado",
+        "Proporcionar confidencialidad",
+        "Ocultar el tamaño del archivo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Comparar el SHA-256 calculado con el publicado permite detectar si el archivo descargado ha sido alterado."
+    },
+    {
+      "pregunta": "¿Por qué el registro centralizado es crítico para Security Operations?",
+      "opciones": [
+        "Libera espacio en disco en los dispositivos de usuario",
+        "Proporciona un registro de auditoría centralizado para investigar incidentes de seguridad",
+        "Impide que se ejecute ransomware",
+        "Cifra el tráfico de red"
+      ],
+      "respuesta": 1,
+      "explicacion": "Centralizar los logs permite correlacionar eventos, conservar evidencias y reconstruir lo ocurrido durante un incidente."
+    },
+    {
+      "pregunta": "¿Qué herramienta recopila logs de firewalls, servidores y routers, correlaciona los datos y alerta a los analistas sobre posibles amenazas en tiempo real?",
+      "opciones": [
+        "SIEM (Security Information and Event Management)",
+        "VPN (Virtual Private Network)",
+        "VLAN (Virtual LAN)",
+        "Servidor DHCP"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un SIEM centraliza y correlaciona eventos de múltiples fuentes para facilitar la detección y análisis de amenazas."
+    },
+    {
+      "pregunta": "La ofuscación del código fuente tiene como objetivo principal:",
+      "opciones": [
+        "Cifrar la base de datos",
+        "Hacer que la lógica sea difícil de comprender para una persona",
+        "Acelerar la ejecución",
+        "Demostrar la identidad del autor"
+      ],
+      "respuesta": 1,
+      "explicacion": "La ofuscación transforma el código para dificultar su lectura, análisis o ingeniería inversa sin cambiar sustancialmente su comportamiento."
+    },
+    {
+      "pregunta": "Un malware cifra las bases de datos críticas de una organización y muestra un mensaje exigiendo Bitcoin a cambio de la clave de descifrado. ¿Qué tipo de malware es?",
+      "opciones": ["Trojan Horse", "Ransomware", "Worm", "Rootkit"],
+      "respuesta": 1,
+      "explicacion": "El ransomware cifra o bloquea recursos de la víctima y exige un pago para recuperar el acceso."
+    },
+    {
+      "pregunta": "Mean Time Between Failures (MTBF) mide:",
+      "opciones": [
+        "Cuánto tardan las reparaciones",
+        "El tiempo medio que un sistema funciona antes de fallar",
+        "La frecuencia de las copias de seguridad",
+        "El punto de recuperación"
+      ],
+      "respuesta": 1,
+      "explicacion": "MTBF es una medida de fiabilidad que expresa el tiempo medio de funcionamiento entre fallos."
+    },
+    {
+      "pregunta": "Mean Time To Repair (MTTR) mide:",
+      "opciones": [
+        "El tiempo antes de que ocurra un fallo",
+        "El tiempo medio necesario para restaurar un componente que ha fallado",
+        "La tolerancia a pérdida de datos",
+        "La frecuencia de amenazas"
+      ],
+      "respuesta": 1,
+      "explicacion": "MTTR expresa el tiempo medio necesario para reparar o restaurar un componente tras un fallo."
+    },
+    {
+      "pregunta": "Dos servidores configurados para que el segundo asuma inmediatamente el servicio si falla el primero constituyen:",
+      "opciones": [
+        "Failover clustering",
+        "Rotación de cintas",
+        "Cold site",
+        "Air gap"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un clúster de failover permite que un nodo alternativo asuma automáticamente las funciones del nodo que ha fallado."
+    },
+    {
+      "pregunta": "Una prueba de DR en la que el personal repasa verbalmente el plan alrededor de una mesa, sin intervenir sobre los sistemas, es un:",
+      "opciones": [
+        "Full-interruption test",
+        "Tabletop exercise",
+        "Parallel test",
+        "Failover test"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un tabletop exercise consiste en discutir y recorrer escenarios y procedimientos sin ejecutar cambios reales sobre los sistemas."
+    },
+    {
+      "pregunta": "Una prueba de DR en la que el sitio de recuperación se pone en marcha y funciona EN PARALELO con producción, sin detener producción, es un:",
+      "opciones": [
+        "Checklist test",
+        "Parallel test",
+        "Tabletop",
+        "Full-interruption test"
+      ],
+      "respuesta": 1,
+      "explicacion": "En una prueba paralela, la infraestructura alternativa se ejecuta simultáneamente mientras el entorno de producción continúa funcionando."
+    },
+    {
+      "pregunta": "La prueba de DR más arriesgada y exhaustiva, que detiene realmente producción para demostrar que el sitio alternativo funciona, es:",
+      "opciones": [
+        "Tabletop",
+        "Walkthrough",
+        "Full-interruption test",
+        "Checklist"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una full-interruption test detiene el entorno de producción y realiza la recuperación real en el entorno alternativo."
+    },
+    {
+      "pregunta": "Situar un centro de datos redundante en una región diferente para sobrevivir a un desastre regional es:",
+      "opciones": [
+        "Redundancia geográfica",
+        "Load shedding",
+        "Escalado vertical",
+        "Tokenización"
+      ],
+      "respuesta": 0,
+      "explicacion": "La redundancia geográfica distribuye sistemas o datos entre ubicaciones suficientemente separadas para evitar un único punto de fallo regional."
+    },
+    {
+      "pregunta": "Una organización que puede tolerar como máximo 1 hora de pérdida de datos tiene un RPO de:",
+      "opciones": ["1 hora", "Cero", "24 horas", "Ilimitado"],
+      "respuesta": 0,
+      "explicacion": "El RPO representa la cantidad máxima tolerable de pérdida de datos expresada como tiempo; en este caso es una hora."
+    },
+    {
+      "pregunta": "'Los sistemas deben volver a estar operativos en un máximo de 4 horas después de una interrupción' define el:",
+      "opciones": ["RPO", "RTO", "MTBF", "SLE"],
+      "respuesta": 1,
+      "explicacion": "El RTO define cuánto tiempo puede tardar como máximo la restauración de un servicio."
+    },
+    {
+      "pregunta": "El tiempo máximo que una función de negocio puede permanecer inactiva antes de que la empresa sufra un daño inaceptable es el:",
+      "opciones": [
+        "RPO",
+        "Maximum Tolerable Downtime (MTD)",
+        "ARO",
+        "Exposure Factor"
+      ],
+      "respuesta": 1,
+      "explicacion": "El MTD es el límite máximo de interrupción que el negocio puede tolerar antes de sufrir consecuencias inaceptables."
+    },
+    {
+      "pregunta": "¿Qué equipo de pruebas de seguridad actúa como adversario, intentando eludir los controles y comprometer activamente la organización?",
+      "opciones": ["Blue Team", "Red Team", "Purple Team", "White Team"],
+      "respuesta": 1,
+      "explicacion": "El Red Team simula a un adversario real mediante técnicas ofensivas para poner a prueba las defensas."
+    },
+    {
+      "pregunta": "¿Qué equipo de pruebas de seguridad es responsable de monitorizar la red, detectar ataques y defender la infraestructura?",
+      "opciones": ["Blue Team", "Red Team", "Purple Team", "White Team"],
+      "respuesta": 0,
+      "explicacion": "El Blue Team desempeña funciones defensivas como monitorización, detección, análisis y respuesta ante ataques."
+    },
+    {
+      "pregunta": "Un documento obligatorio de alto nivel que establece que 'todos los datos deben cifrarse en reposo' es una:",
+      "opciones": ["Procedimiento", "Política", "Directriz", "Baseline"],
+      "respuesta": 1,
+      "explicacion": "Una política establece reglas y requisitos obligatorios de alto nivel sobre lo que debe hacerse."
+    },
+    {
+      "pregunta": "Un departamento de TI despliega un sistema que aplica automáticamente actualizaciones de seguridad a todos los endpoints Windows cada martes por la noche. Este mantenimiento proactivo se conoce como:",
+      "opciones": [
+        "Patch Management",
+        "Incident Response",
+        "Penetration Testing",
+        "Tabletop Exercise"
+      ],
+      "respuesta": 0,
+      "explicacion": "Patch Management gestiona la identificación, planificación, distribución y aplicación de actualizaciones y correcciones de seguridad."
+    },
+    {
+      "pregunta": "Un conjunto de instrucciones paso a paso para restablecer la contraseña de un usuario es un:",
+      "opciones": ["Política", "Estándar", "Procedimiento", "Directriz"],
+      "respuesta": 2,
+      "explicacion": "Un procedimiento describe de forma detallada cómo ejecutar una tarea específica."
+    }
+  ]
+}
