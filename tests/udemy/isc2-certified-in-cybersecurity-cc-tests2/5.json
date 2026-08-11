@@ -1,0 +1,1082 @@
+{
+  "titulo": "Batería de 100 preguntas de fundamentos de ciberseguridad",
+  "procedencia": "Banco de preguntas proporcionado por el usuario, con referencias a ThorTeaches.com",
+  "descripcion": "Cuestionario sobre principios de seguridad, gobierno, IAM, redes, nube, operaciones de seguridad y respuesta a incidentes.",
+  "preguntas": [
+    {
+      "pregunta": "Un analista de seguridad revisa los registros del firewall y observa intentos de conexión repetidos desde una dirección IP desconocida a través de un puerto no estándar. ¿Qué acción debe realizar primero para abordar esta posible amenaza?",
+      "opciones": [
+        "Bloquear la dirección IP en el firewall",
+        "Ignorar las entradas del registro por considerarlas posibles falsos positivos",
+        "Realizar un escaneo de puertos sobre la dirección IP desconocida",
+        "Actualizar las firmas del Intrusion Detection System (IDS)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Bloquear primero la IP detiene de inmediato nuevos intentos de conexión mientras se investiga si la actividad es maliciosa o legítima."
+    },
+    {
+      "pregunta": "¿Cuál es uno de los errores MÁS comunes al implementar un Business Continuity Plan (BCP)?",
+      "opciones": [
+        "No identificar a las partes interesadas clave ni sus funciones en el plan",
+        "No actualizar ni probar periódicamente el plan",
+        "No priorizar la protección de datos y activos sensibles",
+        "Pasar por alto la comunicación y colaboración eficaces entre los miembros del equipo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un BCP que no se actualiza ni se prueba puede quedar desalineado con los procesos, la tecnología y el personal actuales, y fallar durante una interrupción real."
+    },
+    {
+      "pregunta": "¿Cuál es el enfoque MÁS eficaz para gestionar las amenazas de ciberseguridad en una organización?",
+      "opciones": [
+        "Implantar una política estricta de contraseñas",
+        "Invertir en la tecnología de ciberseguridad más reciente",
+        "Realizar periódicamente evaluaciones de seguridad y de riesgos",
+        "Formar a los empleados en buenas prácticas de ciberseguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las evaluaciones periódicas permiten identificar vulnerabilidades, estimar impacto y probabilidad, priorizar controles y adaptar la defensa a la evolución del riesgo."
+    },
+    {
+      "pregunta": "Un administrador revisa la Access Control List (ACL) de una carpeta y observa Allow Read para el grupo Finanzas y Deny Read para un usuario concreto que también pertenece a Finanzas. El usuario no puede abrir ningún archivo. ¿Qué explica este comportamiento?",
+      "opciones": [
+        "Las entradas Deny suelen prevalecer sobre las entradas Allow cuando se aplican al mismo usuario",
+        "Las entradas Allow siempre prevalecen sobre las Deny para evitar bloqueos accidentales",
+        "Los permisos de grupo se ignoran cuando un usuario tiene cualquier permiso explícito",
+        "El usuario debe cerrar y volver a iniciar sesión antes de que se evalúen los permisos de grupo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una denegación explícita aplicable al usuario bloquea el permiso aunque exista una autorización heredada por pertenencia a un grupo."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes enfoques es el mejor para proteger datos en tránsito a través de una red pública?",
+      "opciones": [
+        "Implementar una VPN con IPSec",
+        "Usar filtrado estático de paquetes",
+        "Aplicar vinculación de direcciones MAC",
+        "Dividir la red en subredes"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una VPN con IPSec aporta cifrado, autenticación e integridad para proteger los paquetes frente a interceptación o manipulación."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es el control de seguridad MENOS eficaz para proteger frente a ataques de malware?",
+      "opciones": [
+        "Software antivirus",
+        "Firewalls",
+        "Filtros de correo electrónico",
+        "Controles de acceso"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los controles de acceso limitan el alcance y el daño, pero no están diseñados principalmente para detectar o bloquear la entrada de malware."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso utiliza roles predefinidos para regular el acceso a los recursos?",
+      "opciones": [
+        "Discretionary Access Control (DAC)",
+        "Mandatory Access Control (MAC)",
+        "Role-Based Access Control (RBAC)",
+        "Attribute-Based Access Control (ABAC)"
+      ],
+      "respuesta": 2,
+      "explicacion": "RBAC asigna permisos según roles organizativos, agrupando a usuarios con necesidades de acceso similares."
+    },
+    {
+      "pregunta": "La red de una empresa presenta actividad inusual y se sospechan múltiples intentos no autorizados de acceder a datos sensibles. Como analista de seguridad, ¿qué herramienta usaría para identificar proactivamente estas actividades sospechosas en tiempo real?",
+      "opciones": [
+        "Intrusion Detection System (IDS)",
+        "Firewall",
+        "Data Loss Prevention (DLP)",
+        "Escáner de vulnerabilidades"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un IDS analiza el tráfico y genera alertas en tiempo real cuando detecta patrones compatibles con intrusiones o accesos no autorizados."
+    },
+    {
+      "pregunta": "Durante una prueba de penetración, se descubre un servidor FTP abierto en la red de la empresa. ¿Cuál es el principal motivo de preocupación?",
+      "opciones": [
+        "Las conexiones FTP consumen muchos recursos y ralentizan la red",
+        "Los servidores FTP pueden utilizarse para almacenar copias de seguridad",
+        "FTP se utiliza para enviar correo electrónico dentro de la organización",
+        "FTP transmite datos en texto claro y expone información sensible"
+      ],
+      "respuesta": 3,
+      "explicacion": "FTP transmite datos y credenciales sin cifrado, por lo que pueden ser interceptados por cualquiera con visibilidad sobre la red."
+    },
+    {
+      "pregunta": "¿Qué principio de seguridad se conoce como Defense in Depth?",
+      "opciones": [
+        "Mínimo privilegio",
+        "Seguridad por oscuridad",
+        "Separation of Duties (SOD)",
+        "Seguridad por capas"
+      ],
+      "respuesta": 3,
+      "explicacion": "Defense in Depth consiste en combinar varias capas de controles técnicos, administrativos y físicos para que el fallo de una no comprometa todo el sistema."
+    },
+    {
+      "pregunta": "Un analista investiga cambios sospechosos en un dispositivo de red. El equipo necesita atribuir de forma fiable las acciones privilegiadas a una persona concreta. ¿Qué control de Privileged Access Management (PAM) respalda más directamente este objetivo?",
+      "opciones": [
+        "Usar una contraseña de administrador compartida y almacenada en una bóveda de equipo",
+        "Exigir Multi-Factor Authentication (MFA) a todos los usuarios, incluidas las cuentas estándar",
+        "Implantar cuentas privilegiadas únicas con grabación de sesiones y registro centralizado",
+        "Deshabilitar toda administración remota y exigir únicamente acceso por consola"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las cuentas individuales permiten atribuir identidad, y la grabación de sesiones junto con los registros centralizados conserva evidencia de las acciones realizadas."
+    },
+    {
+      "pregunta": "Una organización quiere que sus desarrolladores de aplicaciones web conozcan las vulnerabilidades de seguridad más comunes. ¿Qué herramienta o práctica logra mejor este objetivo?",
+      "opciones": [
+        "Revisiones de configuración del firewall",
+        "Ofuscación de código",
+        "Escaneos periódicos de vulnerabilidades",
+        "Formación basada en OWASP"
+      ],
+      "respuesta": 3,
+      "explicacion": "La formación de OWASP enseña vulnerabilidades frecuentes de aplicaciones web, como las incluidas en OWASP Top 10, y ayuda a evitarlas durante el desarrollo."
+    },
+    {
+      "pregunta": "¿Cuál es una ventaja clave del cifrado asimétrico en comunicaciones seguras?",
+      "opciones": [
+        "Procesos de cifrado y descifrado más rápidos",
+        "Facilidad de implementación en dispositivos de hardware",
+        "Distribución y gestión de claves simplificadas",
+        "Mayor resistencia a ataques de fuerza bruta"
+      ],
+      "respuesta": 2,
+      "explicacion": "El cifrado asimétrico permite distribuir públicamente una clave sin compartir el secreto privado, lo que simplifica el intercambio seguro de claves."
+    },
+    {
+      "pregunta": "Durante una evaluación de riesgos, ¿qué medida se prioriza para garantizar la confidencialidad de datos sensibles?",
+      "opciones": [
+        "Configurar firewalls robustos",
+        "Cifrar los datos en reposo",
+        "Implantar gestión de parches",
+        "Realizar auditorías periódicas"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado en reposo protege directamente la confidencialidad de los datos almacenados, incluso si el soporte o el sistema cae en manos no autorizadas."
+    },
+    {
+      "pregunta": "Un empleado recibe un correo que parece proceder de una empresa de software reputada y solicita confirmar sus credenciales. Se descubre que es phishing. ¿Cuál es la mejor medida para prevenir incidentes similares?",
+      "opciones": [
+        "Bloquear la dirección de correo del remitente",
+        "Iniciar un programa de concienciación en seguridad",
+        "Incluir en una lista negra la dirección IP del servidor de correo",
+        "Activar filtros antispam en el sistema de correo"
+      ],
+      "respuesta": 1,
+      "explicacion": "La formación enseña a reconocer y gestionar intentos de phishing, reduciendo el riesgo incluso cuando cambian remitentes, dominios o técnicas."
+    },
+    {
+      "pregunta": "Una empresa implanta un proceso de ciclo de vida de identidades y quiere reducir errores manuales cuando los empleados abandonan la organización. ¿Qué métrica indica más directamente si el offboarding se ejecuta correctamente?",
+      "opciones": [
+        "Tiempo medio desde la terminación laboral hasta la retirada de acceso en sistemas críticos",
+        "Número de correos de phishing reportados por los usuarios cada mes",
+        "Porcentaje de portátiles con cifrado completo de disco",
+        "Tiempo medio para aplicar parches a sistemas operativos tras su publicación"
+      ],
+      "respuesta": 0,
+      "explicacion": "La eficacia del offboarding depende directamente de la rapidez con que se revocan los accesos después de una baja."
+    },
+    {
+      "pregunta": "Una organización realiza una evaluación de riesgos y necesita identificar de forma eficaz todas las amenazas potenciales para su infraestructura de red. ¿Cuál es un componente crítico de este proceso?",
+      "opciones": [
+        "Generar un inventario completo de activos",
+        "Realizar pruebas de penetración periódicas",
+        "Revisar y actualizar los Incident Response Plans (IRP)",
+        "Impartir formación de concienciación en seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Sin un inventario completo no es posible saber qué activos existen, qué debe protegerse ni dónde pueden existir vulnerabilidades y amenazas."
+    },
+    {
+      "pregunta": "Durante una auditoría se descubre que los usuarios acceden a la aplicación web corporativa con contraseñas débiles. ¿Cuál es el control más eficaz para mitigar este riesgo?",
+      "opciones": [
+        "Recordar periódicamente a los usuarios que cambien sus contraseñas",
+        "Aplicar una política de Multi-Factor Authentication (MFA)",
+        "Bloquear la cuenta tras varios intentos fallidos",
+        "Exigir el cambio de contraseña cada 90 días"
+      ],
+      "respuesta": 1,
+      "explicacion": "MFA añade factores de verificación adicionales y reduce considerablemente el riesgo de acceso no autorizado aunque la contraseña sea débil o quede comprometida."
+    },
+    {
+      "pregunta": "Se está considerando no proporcionar portátiles a los empleados como respuesta a los riesgos asociados. ¿Qué tipo de respuesta al riesgo sería?",
+      "opciones": ["Evitación", "Transferencia", "Mitigación", "Aceptación"],
+      "respuesta": 0,
+      "explicacion": "No realizar la actividad que origina el riesgo elimina esa exposición, lo que corresponde a una estrategia de evitación."
+    },
+    {
+      "pregunta": "Una empresa necesita proteger datos sensibles de clientes en tránsito por Internet. ¿Qué tecnología garantiza mejor la integridad y la confidencialidad durante la transmisión?",
+      "opciones": [
+        "Cifrado simétrico",
+        "VPN",
+        "Firmas digitales",
+        "Access Control List (ACL)"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una VPN cifra el tráfico y utiliza mecanismos de integridad para proteger la comunicación frente a lectura o modificación durante el tránsito."
+    },
+    {
+      "pregunta": "¿Cuál es el beneficio PRINCIPAL de la virtualización en un entorno empresarial?",
+      "opciones": [
+        "Reduce la necesidad de hardware físico",
+        "Facilita las copias de seguridad y la recuperación",
+        "Mejora la seguridad de red",
+        "Aumenta el número de usuarios que pueden acceder simultáneamente"
+      ],
+      "respuesta": 0,
+      "explicacion": "La virtualización permite ejecutar varias Virtual Machines (VM) en un mismo host y aprovechar mejor los recursos, reduciendo la cantidad de hardware físico necesario."
+    },
+    {
+      "pregunta": "¿Qué protocolo es más adecuado para transferir archivos de forma segura a través de una red no confiable?",
+      "opciones": ["FTP", "TFTP", "SFTP", "HTTP"],
+      "respuesta": 2,
+      "explicacion": "SFTP funciona sobre SSH y cifra tanto los comandos como los datos, evitando escuchas y manipulaciones."
+    },
+    {
+      "pregunta": "Una organización necesita implantar una estrategia sólida de segmentación de red. ¿Qué concepto permite lograrlo con mayor eficacia?",
+      "opciones": [
+        "Implementar Virtual Local Area Networks (VLANs)",
+        "Desplegar un Web Application Firewall (WAF)",
+        "Utilizar soluciones de Single Sign-On (SSO)",
+        "Realizar pruebas de penetración periódicas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las VLAN segmentan lógicamente el tráfico dentro de una misma infraestructura física y permiten aislar grupos y limitar comunicaciones entre segmentos."
+    },
+    {
+      "pregunta": "¿Cuál es la MEJOR medida de seguridad para proteger datos sensibles ante un desastre natural?",
+      "opciones": [
+        "Firewall",
+        "Cifrado",
+        "Copias de seguridad fuera de las instalaciones",
+        "Software antivirus"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las copias externas y geográficamente separadas permiten recuperar los datos aunque la ubicación principal y sus sistemas sean destruidos."
+    },
+    {
+      "pregunta": "Una empresa quiere que los contratistas accedan a un repositorio solo hasta la fecha de finalización de su contrato y que el acceso caduque automáticamente. ¿Qué método de asignación es el más adecuado?",
+      "opciones": [
+        "Asignación basada en roles mediante un rol de Contratista que debe retirarse manualmente",
+        "Asignación basada en grupos donde el responsable del proyecto elimina a los contratistas al finalizar",
+        "Asignación basada en atributos usando una fecha de fin evaluada durante la autorización",
+        "Acceso mediante una cuenta compartida para evitar gestionar identidades individuales"
+      ],
+      "respuesta": 2,
+      "explicacion": "ABAC puede evaluar automáticamente el atributo de fecha de finalización y denegar el acceso una vez vencido, sin depender de una acción manual."
+    },
+    {
+      "pregunta": "Como nuevo responsable de seguridad de ThorTeaches.com, debe impedir que personas no autorizadas entren en una instalación segura. ¿Qué medida de seguridad debe implantarse?",
+      "opciones": [
+        "Implementar un firewall",
+        "Instalar cámaras de seguridad",
+        "Implementar autenticación de dos factores",
+        "Exigir credenciales físicas de acceso"
+      ],
+      "respuesta": 3,
+      "explicacion": "Las credenciales físicas controlan directamente la entrada a la instalación, validan la identidad y pueden registrar quién accede y a qué zonas."
+    },
+    {
+      "pregunta": "Un responsable propone gestionar un riesgo recién descubierto mediante la contratación de un seguro cibernético en lugar de implantar controles adicionales. ¿Qué opción de tratamiento del riesgo propone?",
+      "opciones": [
+        "Transferir el riesgo",
+        "Evitar el riesgo",
+        "Mitigar el riesgo",
+        "Aceptar el riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "El seguro transfiere a un tercero parte del impacto financiero del riesgo, aunque la amenaza subyacente siga existiendo."
+    },
+    {
+      "pregunta": "¿Cuál es el método MÁS eficaz para implantar Defense in Depth?",
+      "opciones": [
+        "Usar un único firewall para proteger todos los puntos de acceso",
+        "Implantar varias capas de controles de seguridad en distintos puntos de la red",
+        "Confiar en la formación de usuarios para evitar brechas",
+        "Usar cifrado para toda transmisión de datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Defense in Depth requiere controles superpuestos en varias capas, de modo que otros mecanismos sigan protegiendo si uno falla o es eludido."
+    },
+    {
+      "pregunta": "Un analista de cumplimiento crea una correspondencia entre declaraciones de políticas y artefactos de implementación para garantizar la trazabilidad. ¿Qué secuencia representa mejor el flujo desde la intención hasta la acción?",
+      "opciones": [
+        "Política, framework, estándares y procedimientos",
+        "Procedimiento, política y framework",
+        "Estándares, política y framework",
+        "Framework, política y declaración de misión"
+      ],
+      "respuesta": 0,
+      "explicacion": "La política fija la intención, el framework traduce las capacidades necesarias y los estándares y procedimientos definen la implementación operativa."
+    },
+    {
+      "pregunta": "Durante una prueba de penetración, se descubre un host que ejecuta una versión obsoleta de software de servidor web. ¿Cuál es el método más eficaz para mitigar el riesgo de explotación?",
+      "opciones": [
+        "Aplicar los últimos parches y actualizaciones de seguridad",
+        "Implementar segmentación de red",
+        "Instalar un Intrusion Detection System (IDS)",
+        "Establecer reglas estrictas de firewall"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los parches corrigen directamente las vulnerabilidades conocidas del software obsoleto y eliminan la causa raíz del riesgo."
+    },
+    {
+      "pregunta": "Una startup prepara el lanzamiento de su primer servicio en la nube. ¿Cuál debe ser el foco principal para proteger los datos de clientes durante el proceso?",
+      "opciones": [
+        "Implantar cifrado robusto para datos en reposo y en tránsito",
+        "Configurar un firewall público y un Intrusion Detection System",
+        "Desarrollar una estrategia integral de marketing",
+        "Invertir en atención al cliente para soporte técnico"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado protege directamente la confidencialidad de los datos tanto almacenados como transmitidos."
+    },
+    {
+      "pregunta": "¿Cuál es el PRIMER paso para establecer una conexión segura a Internet con un ISP (Internet Service Provider)?",
+      "opciones": [
+        "Configurar el firewall",
+        "Establecer un protocolo de comunicación seguro",
+        "Configurar una Virtual Private Network (VPN)",
+        "Elegir un ISP de buena reputación"
+      ],
+      "respuesta": 3,
+      "explicacion": "Seleccionar un proveedor fiable establece la base del servicio antes de configurar controles adicionales como firewall, protocolos seguros o VPN."
+    },
+    {
+      "pregunta": "Un administrador de seguridad quiere mitigar el riesgo de ataques de escalada de privilegios. ¿Qué control es el más eficaz?",
+      "opciones": [
+        "Deshabilitar todas las cuentas con privilegios de administrador",
+        "Aplicar el principio de mínimo privilegio",
+        "Implantar un honeypot para distraer a los atacantes",
+        "Aumentar los umbrales de bloqueo de cuentas"
+      ],
+      "respuesta": 1,
+      "explicacion": "El mínimo privilegio limita los permisos de usuarios y aplicaciones a lo estrictamente necesario, reduciendo el alcance de una escalada."
+    },
+    {
+      "pregunta": "Como parte de la formación y concienciación del personal se realizan simulacros. ¿Cuál es su propósito PRINCIPAL?",
+      "opciones": [
+        "Probar el plan de respuesta ante emergencias",
+        "Formar al personal para que sea más eficiente",
+        "Identificar posibles vulnerabilidades",
+        "Mejorar la seguridad física de la instalación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los simulacros validan si el plan, los procedimientos y las responsabilidades funcionan bajo condiciones simuladas de emergencia."
+    },
+    {
+      "pregunta": "¿Cuál es el PRIMER paso para abordar componentes vulnerables y obsoletos en una red?",
+      "opciones": [
+        "Implantar un proceso de gestión de parches",
+        "Realizar una evaluación de seguridad",
+        "Instalar software antivirus",
+        "Actualizar el software del sistema"
+      ],
+      "respuesta": 1,
+      "explicacion": "La evaluación identifica qué componentes están obsoletos, qué vulnerabilidades existen y qué acciones deben priorizarse antes de aplicar cambios."
+    },
+    {
+      "pregunta": "Tras varios incidentes de fuga de datos, una empresa decide restringir el acceso de empleados a archivos confidenciales. ¿Qué modelo de control de acceso es el más adecuado?",
+      "opciones": [
+        "Mandatory Access Control (MAC)",
+        "Role-Based Access Control (RBAC)",
+        "Discretionary Access Control (DAC)",
+        "Attribute-Based Access Control (ABAC)"
+      ],
+      "respuesta": 1,
+      "explicacion": "RBAC asigna permisos según la función laboral y permite administrar de forma centralizada y coherente quién necesita acceder a cada recurso."
+    },
+    {
+      "pregunta": "En una red corporativa, ¿cuál es la forma más eficaz de mitigar el riesgo de un ataque Man-in-the-Middle (MitM)?",
+      "opciones": [
+        "Implementar IPSec para conexiones VPN",
+        "Usar contraseñas robustas y cambiarlas periódicamente",
+        "Configurar un firewall con reglas estrictas de acceso",
+        "Formar periódicamente a los empleados para detectar phishing"
+      ],
+      "respuesta": 0,
+      "explicacion": "IPSec cifra, autentica y protege la integridad del tráfico IP, dificultando su interceptación o modificación durante el tránsito."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de un plan de Business Continuity (BC)?",
+      "opciones": [
+        "Garantizar que los empleados accedan a sistemas y datos críticos durante un desastre",
+        "Minimizar el impacto financiero de un desastre",
+        "Evitar que ocurran desastres",
+        "Garantizar que la organización reanude rápidamente sus operaciones después de un desastre"
+      ],
+      "respuesta": 3,
+      "explicacion": "El objetivo global es mantener o recuperar las funciones esenciales y reanudar las operaciones normales con la mayor rapidez posible."
+    },
+    {
+      "pregunta": "Durante una auditoría, una organización afirma utilizar split knowledge para la contraseña de la cuenta root. ¿Qué evidencia respalda mejor esa afirmación?",
+      "opciones": [
+        "Una política que exige al menos 20 caracteres y símbolos especiales",
+        "Un registro que demuestra que la contraseña se cambia tras cada salida de un administrador",
+        "Documentación que indica que la contraseña se guarda en un sobre sellado dentro de una caja fuerte",
+        "Registros que muestran que dos custodios poseen partes separadas del secreto y ambos son necesarios para usarlo"
+      ],
+      "respuesta": 3,
+      "explicacion": "Split knowledge exige que ninguna persona conozca el secreto completo y que varios custodios deban colaborar para reconstruirlo o utilizarlo."
+    },
+    {
+      "pregunta": "¿Qué problema de seguridad plantea una aplicación sin parches dentro de una red empresarial?",
+      "opciones": [
+        "Podría permitir la ejecución no autorizada de código",
+        "Podría aumentar el riesgo de divulgación accidental de datos",
+        "Podría reducir el rendimiento de red por usar protocolos obsoletos",
+        "Podría provocar un problema legal de cumplimiento de leyes de privacidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las vulnerabilidades sin corregir pueden permitir que un atacante ejecute código malicioso y comprometa el sistema."
+    },
+    {
+      "pregunta": "Zaw, CISO de una organización sanitaria, descubre que un empleado almacena datos de pacientes en un portátil personal inseguro, en contra de la política. Existe un riesgo significativo de acceso no autorizado. ¿Cuál es la actuación más adecuada?",
+      "opciones": [
+        "Aplicar medidas disciplinarias al empleado, como advertencia o despido",
+        "Cifrar los datos del portátil personal",
+        "Impartir formación adicional de seguridad a todos los empleados",
+        "Notificar el incidente a los organismos reguladores correspondientes y adoptar medidas para evitar que se repita"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un posible incidente con datos sanitarios puede activar obligaciones de notificación; además deben corregirse las causas y prevenirse futuros casos."
+    },
+    {
+      "pregunta": "Tras varios ciberataques exitosos, la dirección busca una estrategia centrada en reducir vulnerabilidades y puntos de entrada que los atacantes pueden utilizar. ¿Cuál es?",
+      "opciones": [
+        "Segmentación de red",
+        "Control de acceso de usuarios",
+        "Cifrado",
+        "Escaneo de vulnerabilidades"
+      ],
+      "respuesta": 0,
+      "explicacion": "La segmentación reduce la superficie y limita el alcance de un compromiso al dividir la red en zonas aisladas."
+    },
+    {
+      "pregunta": "Una organización sin ánimo de lucro tiene a una sola persona que prepara las nóminas y envía el archivo al banco. ¿Qué enfoque compensa más directamente la falta de Separation of Duties?",
+      "opciones": [
+        "Pedir al empleado que confirme verbalmente los totales a un responsable antes del envío",
+        "Exigir Multi-Factor Authentication (MFA) en el portal bancario",
+        "Hacer que un responsable concilie el débito bancario y el registro de nóminas tras cada ejecución e investigue las diferencias",
+        "Aumentar el salario del empleado para reducir la probabilidad de conducta indebida"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una conciliación independiente es un control compensatorio que puede detectar pagos no autorizados o importes manipulados."
+    },
+    {
+      "pregunta": "Para disponer de redundancia eléctrica real, ¿qué configuración se debe utilizar?",
+      "opciones": [
+        "Dos fuentes de alimentación dependientes entre sí",
+        "Varias fuentes de alimentación conectadas a varios UPS",
+        "Dos fuentes de alimentación conectadas a la misma red eléctrica",
+        "Varias fuentes de alimentación conectadas a un único UPS"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las fuentes independientes y los UPS separados evitan que el fallo de una fuente o de un único UPS interrumpa todo el servicio."
+    },
+    {
+      "pregunta": "¿Qué tipo de autenticación puede utilizar la forma en que una persona escribe en un teclado?",
+      "opciones": [
+        "Contraseña",
+        "Token",
+        "Biométrica",
+        "Velocidad de escritura"
+      ],
+      "respuesta": 2,
+      "explicacion": "El ritmo, la velocidad y los patrones de pulsación forman una biometría conductual que puede utilizarse para verificar identidad."
+    },
+    {
+      "pregunta": "Un administrador descubre un punto de acceso inalámbrico no autorizado en la red. ¿Cuál es la mejor forma de abordar este problema?",
+      "opciones": [
+        "Activar filtrado de direcciones MAC en todos los dispositivos",
+        "Realizar periódicamente un estudio del entorno inalámbrico para identificar dispositivos no autorizados",
+        "Implementar segmentación para aislar conexiones sospechosas",
+        "Realizar evaluaciones periódicas de vulnerabilidades"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los estudios inalámbricos detectan puntos de acceso rogue y permiten identificar y retirar dispositivos no autorizados de forma periódica."
+    },
+    {
+      "pregunta": "Un auditor pregunta cómo puede demostrarse que las decisiones de revisión de accesos se completaron y no fueron alteradas después. ¿Qué función de una herramienta automatizada de certificación de accesos responde mejor?",
+      "opciones": [
+        "Un registro de auditoría a prueba de manipulaciones con acciones y marcas de tiempo del revisor",
+        "Una política de complejidad de contraseñas con caracteres especiales",
+        "Un escáner de vulnerabilidades que comprueba parches ausentes",
+        "Una regla de segmentación que aísla la subred de finanzas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un registro inalterable conserva quién tomó cada decisión, cuándo la tomó y qué resultado dejó, aportando trazabilidad y no repudio."
+    },
+    {
+      "pregunta": "Un consultor de seguridad asesora a una empresa para mejorar su postura general. ¿Qué principio garantiza que los usuarios solo reciban el acceso necesario para sus funciones?",
+      "opciones": [
+        "Defense in Depth",
+        "Mínimo privilegio",
+        "Seguridad por oscuridad",
+        "Separation of Duties (SOD)"
+      ],
+      "respuesta": 1,
+      "explicacion": "El mínimo privilegio concede únicamente los permisos imprescindibles para realizar las tareas asignadas."
+    },
+    {
+      "pregunta": "¿Qué principio limita los derechos de acceso de los usuarios a lo estrictamente necesario para realizar su trabajo?",
+      "opciones": [
+        "Separation of Duties (SOD)",
+        "Rotación de puestos",
+        "Mínimo privilegio",
+        "Integridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El mínimo privilegio reduce la exposición y el impacto de errores, abusos o cuentas comprometidas al limitar permisos innecesarios."
+    },
+    {
+      "pregunta": "¿Cuál es la MEJOR práctica para proteger datos en la nube frente a accesos no autorizados?",
+      "opciones": [
+        "Implantar políticas de contraseñas robustas",
+        "Actualizar periódicamente el antivirus",
+        "Aplicar el principio de mínimo privilegio",
+        "Almacenar todos los datos en servidores locales"
+      ],
+      "respuesta": 2,
+      "explicacion": "El mínimo privilegio limita cada identidad a los datos y funciones que necesita, reduciendo el impacto de errores, abuso interno o credenciales comprometidas."
+    },
+    {
+      "pregunta": "Un arquitecto de seguridad teme que un insider malicioso altere registros de transacciones y cambie saldos. Al clasificar la amenaza con STRIDE, ¿qué categoría corresponde MEJOR a la modificación no autorizada de datos o código?",
+      "opciones": [
+        "Information Disclosure",
+        "Tampering",
+        "Denial of Service (DoS)",
+        "Repudiation"
+      ],
+      "respuesta": 1,
+      "explicacion": "Tampering describe la modificación no autorizada de datos o código y afecta directamente a la integridad."
+    },
+    {
+      "pregunta": "Una organización quiere reducir el riesgo de que dispositivos rogue se conecten a puertos de pared no utilizados fuera del horario laboral. ¿Qué control relacionado con Network Access Control (NAC) impone más directamente la frontera lógica en el momento de la conexión?",
+      "opciones": [
+        "Configurar autenticación 802.1X en los puertos de switch para exigir autenticación antes de conceder acceso",
+        "Activar cifrado completo de disco en todos los portátiles corporativos",
+        "Ejecutar mensualmente un escáner de vulnerabilidades sobre las subredes internas",
+        "Realizar copias nocturnas de los recursos compartidos en una ubicación externa"
+      ],
+      "respuesta": 0,
+      "explicacion": "802.1X exige autenticación antes de habilitar el puerto y evita que un dispositivo no autorizado obtenga acceso a la red."
+    },
+    {
+      "pregunta": "Una empresa lanza una plataforma de comercio electrónico en un servidor web público. Para proteger los datos en movimiento y equilibrar confidencialidad, integridad y disponibilidad (CIA), ¿cuál es la estrategia más eficaz?",
+      "opciones": [
+        "Implementar Secure Sockets Layer/Transport Layer Security (SSL/TLS) para cifrar los datos",
+        "Utilizar IPv6 para el tráfico de red",
+        "Aumentar la capacidad del servidor para garantizar alta disponibilidad",
+        "Instalar un firewall de nueva generación con inspección profunda de paquetes"
+      ],
+      "respuesta": 0,
+      "explicacion": "SSL/TLS cifra las comunicaciones y protege su integridad, lo que responde directamente a los riesgos de interceptación y manipulación en una plataforma de comercio electrónico."
+    },
+    {
+      "pregunta": "El servidor web de una empresa sufre problemas de rendimiento y caídas frecuentes por un ataque DDoS. ¿Qué medida inmediata debe adoptarse?",
+      "opciones": [
+        "Ejecutar un análisis completo de malware en el servidor",
+        "Contactar con las fuerzas de seguridad",
+        "Desplegar un Web Application Firewall",
+        "Redirigir el tráfico a través de un servicio de protección DDoS"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un servicio especializado puede filtrar el tráfico malicioso a gran escala y dejar pasar las solicitudes legítimas, proporcionando mitigación inmediata."
+    },
+    {
+      "pregunta": "En un entorno empresarial, ¿cuál es el propósito principal de implantar Multi-Factor Authentication (MFA)?",
+      "opciones": [
+        "Sustituir por completo la necesidad de contraseñas complejas",
+        "Proporcionar un método alternativo si falla la autenticación principal",
+        "Mejorar la seguridad del acceso exigiendo varios métodos de verificación",
+        "Simplificar el inicio de sesión mediante Single Sign-On (SSO)"
+      ],
+      "respuesta": 2,
+      "explicacion": "MFA exige dos o más factores independientes y reduce la probabilidad de acceso no autorizado cuando uno de ellos queda comprometido."
+    },
+    {
+      "pregunta": "¿Qué tecnología debe implantar una organización para evitar la extracción no autorizada de datos a través del tráfico de red?",
+      "opciones": [
+        "Data Loss Prevention (DLP)",
+        "Intrusion Detection System (IDS)",
+        "Public Key Infrastructure (PKI)",
+        "Security Information and Event Management (SIEM)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los sistemas DLP inspeccionan los flujos de datos y pueden bloquear transferencias no autorizadas de información sensible."
+    },
+    {
+      "pregunta": "En un entorno de red, ¿qué método se utiliza principalmente para prevenir ataques Man-in-the-Middle (MitM) durante la transmisión?",
+      "opciones": [
+        "Implementar una Demilitarized Zone (DMZ)",
+        "Activar cifrado WPA3 en redes inalámbricas",
+        "Desplegar un Intrusion Detection System (IDS)",
+        "Usar Secure Shell (SSH) para las comunicaciones"
+      ],
+      "respuesta": 3,
+      "explicacion": "SSH crea un canal cifrado y autenticado que protege la confidencialidad e integridad frente a interceptación y manipulación."
+    },
+    {
+      "pregunta": "¿Cuál es la forma MÁS eficaz de establecer y mantener la concienciación en seguridad en una organización?",
+      "opciones": [
+        "Impartir sesiones periódicas de formación sobre buenas prácticas de seguridad",
+        "Aplicar sanciones estrictas por infracciones",
+        "Ignorar las preocupaciones de seguridad y esperar que no ocurra nada",
+        "Comunicar diariamente a todos los empleados la importancia de la seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "La formación periódica mantiene actualizados los conocimientos y enseña a reconocer amenazas y responder correctamente."
+    },
+    {
+      "pregunta": "Una organización considera trasladar procesos críticos a un Cloud Service Provider (CSP). ¿Qué preocupación de seguridad es la más importante antes de decidir?",
+      "opciones": [
+        "Cumplimiento de soberanía de datos",
+        "Escalabilidad del ancho de banda",
+        "Seguridad física de los centros de datos",
+        "Facilidad de integración con los sistemas existentes"
+      ],
+      "respuesta": 0,
+      "explicacion": "Debe conocerse dónde se almacenan y procesan los datos para cumplir las leyes y obligaciones de cada jurisdicción."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor un modelo Zero Trust?",
+      "opciones": [
+        "Un modelo que asume que todo el tráfico de red puede estar comprometido",
+        "Un modelo que concede acceso total tras autenticar al usuario",
+        "Un modelo definido únicamente por exigir MFA en todos los recursos",
+        "Un modelo definido únicamente por segmentar redes en fronteras aisladas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Zero Trust parte de que no existe confianza implícita y verifica continuamente cada solicitud, tanto dentro como fuera de la red."
+    },
+    {
+      "pregunta": "Un CISO valida un Disaster Recovery Plan (DRP) mediante una prueba de Parallel Processing. ¿Cuál es su principal ventaja?",
+      "opciones": [
+        "Permite apagar por completo los sistemas primarios durante la prueba",
+        "Valida la preparación del sitio secundario sin afectar la operación normal del sitio primario",
+        "Ofrece siempre la forma más barata de probar el DRP",
+        "Permite probar el sitio secundario necesariamente a carga máxima"
+      ],
+      "respuesta": 1,
+      "explicacion": "El sitio secundario se ejecuta en paralelo mientras el primario continúa operando, lo que permite validar la recuperación con menor riesgo de interrupción."
+    },
+    {
+      "pregunta": "Un desarrollador necesita un servidor temporal para una prueba de concepto y lo aprovisiona directamente desde un portal cloud sin contactar con soporte de TI. ¿Qué característica de cloud computing demuestra?",
+      "opciones": [
+        "On-Demand Self-Service",
+        "Broad Network Access",
+        "Resource Pooling",
+        "Measured Service"
+      ],
+      "respuesta": 0,
+      "explicacion": "On-Demand Self-Service permite al consumidor aprovisionar recursos por sí mismo, sin intervención humana del proveedor."
+    },
+    {
+      "pregunta": "Para mantener confidenciales los datos almacenados en un servidor incluso si el equipo físico cae en manos no autorizadas, ¿qué medida principal debe implantarse?",
+      "opciones": [
+        "Hashing de datos",
+        "Compresión de datos",
+        "Borrado de datos",
+        "Cifrado de datos"
+      ],
+      "respuesta": 3,
+      "explicacion": "El cifrado de datos en reposo impide leer la información sin la clave, aunque se obtenga acceso físico al servidor."
+    },
+    {
+      "pregunta": "¿Qué proceso periódico verifica si es apropiado conceder y mantener acceso a los recursos de una organización?",
+      "opciones": [
+        "Restablecimiento de contraseñas",
+        "Revisión de acceso a cuentas",
+        "Comprobación de antecedentes",
+        "Análisis antivirus"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las revisiones de acceso comprueban que las cuentas y permisos siguen siendo necesarios, adecuados y autorizados."
+    },
+    {
+      "pregunta": "¿Cuál es la consideración de seguridad MÁS importante al implantar varios centros de procesamiento?",
+      "opciones": [
+        "Garantizar que todos los centros tengan exactamente los mismos controles",
+        "Garantizar un método seguro de comunicación entre los centros",
+        "Garantizar medidas físicas adecuadas en todos los centros",
+        "Garantizar diversidad geográfica"
+      ],
+      "respuesta": 1,
+      "explicacion": "La comunicación entre centros debe proteger confidencialidad, integridad y autenticidad para evitar interceptación o manipulación."
+    },
+    {
+      "pregunta": "¿Cuál es el aspecto MÁS importante de la notificación obligatoria?",
+      "opciones": [
+        "Garantizar el cumplimiento de los requisitos regulatorios",
+        "Proteger la reputación de la organización",
+        "Mantener la confidencialidad de la información sensible",
+        "Prestar apoyo a las personas afectadas"
+      ],
+      "respuesta": 0,
+      "explicacion": "La notificación obligatoria existe principalmente para cumplir deberes legales y regulatorios de informar a las autoridades competentes."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes NO es una fase del proceso de gestión de riesgos?",
+      "opciones": [
+        "Identificación del riesgo",
+        "Evaluación del riesgo",
+        "Implementación del riesgo",
+        "Mitigación del riesgo"
+      ],
+      "respuesta": 2,
+      "explicacion": "«Implementación del riesgo» no es una fase reconocida; el proceso incluye identificar, evaluar, tratar y supervisar riesgos."
+    },
+    {
+      "pregunta": "Al implantar una nueva política de seguridad, ¿qué factor es el MÁS importante?",
+      "opciones": [
+        "El coste de implantación",
+        "La viabilidad técnica",
+        "El posible impacto en la productividad",
+        "La alineación con buenas prácticas del sector"
+      ],
+      "respuesta": 3,
+      "explicacion": "La alineación con prácticas reconocidas proporciona una base sólida para que la política cubra riesgos reales y controles eficaces."
+    },
+    {
+      "pregunta": "¿Qué proceso se utiliza para actualizar periódicamente el software según un calendario regular?",
+      "opciones": [
+        "Gestión de proyectos",
+        "Gestión de cambios",
+        "Gestión de parches",
+        "Gestión de personal"
+      ],
+      "respuesta": 2,
+      "explicacion": "La gestión de parches organiza la adquisición, prueba y despliegue recurrente de actualizaciones y correcciones."
+    },
+    {
+      "pregunta": "¿Cuál es el método MENOS eficaz para recuperar datos después de un ciberataque?",
+      "opciones": [
+        "Copias de seguridad diferenciales",
+        "Copias de seguridad completas",
+        "Copias de seguridad incrementales",
+        "Mantener todos los datos en un único dispositivo"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un único dispositivo constituye un punto único de fallo y puede perderse o quedar comprometido por completo durante el ataque."
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia principal entre un buffer overflow y un heap overflow?",
+      "opciones": [
+        "Un buffer overflow solo ocurre en la pila, mientras que un heap overflow puede ocurrir en pila o heap",
+        "Un buffer overflow implica inyectar código malicioso y un heap overflow no",
+        "Un buffer overflow escribe fuera de los límites de un búfer de longitud fija, mientras que un heap overflow escribe fuera de un bloque asignado dinámicamente",
+        "Un buffer overflow puede comprometer el programa, mientras que un heap overflow solo provoca una caída"
+      ],
+      "respuesta": 2,
+      "explicacion": "El heap overflow es un desbordamiento que afecta a memoria asignada dinámicamente; el concepto general de buffer overflow se refiere a escribir más allá de los límites del búfer."
+    },
+    {
+      "pregunta": "El consejo de administración quiere un framework que traduzca necesidades de stakeholders en objetivos específicos de TI a nivel operativo. ¿Por qué COBIT es más apropiado que COSO?",
+      "opciones": [
+        "COBIT se centra en toda la organización a nivel estratégico y COSO en TI",
+        "COBIT adapta el enfoque de COSO para traducir necesidades de stakeholders en objetivos de TI operativos",
+        "COSO y COBIT son frameworks idénticos con nombres distintos",
+        "COBIT se usa exclusivamente para auditoría financiera y no para gobierno de TI"
+      ],
+      "respuesta": 1,
+      "explicacion": "COBIT está orientado al gobierno y gestión de TI y traduce necesidades empresariales en objetivos y controles específicos de tecnología."
+    },
+    {
+      "pregunta": "¿Qué tipo de malware se utiliza principalmente para extorsionar a las víctimas cifrando sus datos o bloqueando sus dispositivos?",
+      "opciones": ["Spyware", "Ransomware", "Rootkit", "Adware"],
+      "respuesta": 1,
+      "explicacion": "El ransomware niega el acceso a datos o sistemas y exige un pago para restaurarlo."
+    },
+    {
+      "pregunta": "Durante una evaluación de riesgos se identifican varios sistemas críticos cuya pérdida detendría las operaciones. ¿Cuál es la acción más adecuada a continuación?",
+      "opciones": [
+        "Realizar un análisis coste-beneficio para cada sistema",
+        "Implantar redundancia para los sistemas críticos",
+        "Desarrollar un Incident Response Plan (IRP) general",
+        "Impartir formación de seguridad a todos los empleados"
+      ],
+      "respuesta": 1,
+      "explicacion": "La redundancia permite mantener la operación o conmutar a sistemas alternativos si un sistema crítico falla o queda comprometido."
+    },
+    {
+      "pregunta": "Una empresa quiere mantener confidenciales los datos entre una oficina remota y la sede central. ¿Qué protocolo debe implantar?",
+      "opciones": ["PPTP", "IPSec", "FTP", "HTTP"],
+      "respuesta": 1,
+      "explicacion": "IPSec autentica y cifra el tráfico IP, proporcionando confidencialidad e integridad entre ubicaciones."
+    },
+    {
+      "pregunta": "Como CFO responsable de diseñar el programa de auditoría de ThorTeaches.com, ¿qué elemento es esencial para crear un programa eficaz?",
+      "opciones": [
+        "Garantizar que todos los empleados tengan instalado el software de seguridad más reciente",
+        "Impartir formación periódica de seguridad a todos los empleados",
+        "Implantar políticas de contraseñas robustas y actualizarlas periódicamente",
+        "Identificar y priorizar riesgos y vulnerabilidades potenciales"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un programa de auditoría debe partir de los riesgos y vulnerabilidades más relevantes para asignar recursos y revisar primero las áreas críticas."
+    },
+    {
+      "pregunta": "Un equipo de seguridad necesita garantizar permisos adecuados cuando los usuarios cambian de función dentro de la organización. ¿Qué control es el más eficaz?",
+      "opciones": [
+        "Implantar Single Sign-On (SSO)",
+        "Realizar revisiones de acceso de usuarios",
+        "Aplicar Role-Based Access Control (RBAC)",
+        "Exigir contraseñas complejas"
+      ],
+      "respuesta": 2,
+      "explicacion": "RBAC vincula permisos a funciones laborales y permite que el acceso cambie de forma coherente cuando cambia el rol del usuario."
+    },
+    {
+      "pregunta": "Un analista observa intentos repetidos de inicio de sesión con contraseñas incorrectas desde varias direcciones IP. ¿Cuál es el tipo de ataque más probable?",
+      "opciones": [
+        "Denial of Service (DoS)",
+        "Ataque de fuerza bruta",
+        "SQL Injection",
+        "Phishing"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los intentos repetidos de adivinar credenciales son característicos de un ataque de fuerza bruta, incluso si se distribuyen entre varias IP."
+    },
+    {
+      "pregunta": "Juanita, CISO de ThorTeaches.com, recibe informes de empleados que acceden a datos sensibles sin autorización. ¿Qué debe hacer para abordar el problema?",
+      "opciones": [
+        "Implantar controles de acceso más robustos y auditar periódicamente dichos controles",
+        "Despedir a los empleados que accedieron sin autorización",
+        "Informar inmediatamente a las fuerzas de seguridad locales",
+        "Avergonzar públicamente a los empleados para disuadir a otros"
+      ],
+      "respuesta": 0,
+      "explicacion": "Reforzar y auditar los controles corrige la causa raíz, limita el acceso indebido y permite detectar futuras desviaciones."
+    },
+    {
+      "pregunta": "Un tester introduce caracteres inesperados en un formulario web y recibe una página de error que revela el tipo de base de datos y un stack trace. ¿Qué enfoque de pruebas es MÁS probable que detecte mensajes de error excesivamente detallados interactuando con la aplicación en ejecución?",
+      "opciones": [
+        "Dynamic Application Security Testing que observa respuestas en tiempo de ejecución",
+        "Análisis estático del código fuente sin ejecutarlo",
+        "Threat modeling para identificar motivaciones de atacantes",
+        "Revisión de arquitectura centrada solo en segmentación de red"
+      ],
+      "respuesta": 0,
+      "explicacion": "DAST envía entradas a la aplicación desplegada y analiza sus respuestas, por lo que detecta directamente fugas de información en errores de ejecución."
+    },
+    {
+      "pregunta": "Un analista debe explicar la diferencia entre KPIs y KRIs. ¿Qué comparación es la MÁS adecuada?",
+      "opciones": [
+        "Los KPIs miran al futuro y los KRIs son históricos",
+        "Los KPIs miden el desempeño frente a objetivos y los KRIs indican posibles condiciones futuras de riesgo",
+        "Los KPIs son solo técnicos y los KRIs solo administrativos",
+        "Los KPIs son opcionales y los KRIs obligatorios en toda organización"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los KPIs muestran cómo rinden procesos y objetivos, mientras que los KRIs actúan como señales tempranas de aumento del riesgo."
+    },
+    {
+      "pregunta": "Una empresa quiere autenticación robusta sin desplegar tokens físicos. ¿Cuál es la alternativa más adecuada?",
+      "opciones": [
+        "Autenticación con smart card",
+        "Autenticación biométrica",
+        "One-Time Password (OTP) por correo electrónico",
+        "Aplicación Time-based One-Time Password (TOTP)"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una aplicación TOTP genera códigos temporales en el dispositivo del usuario y aporta un segundo factor sin necesidad de un token físico dedicado."
+    },
+    {
+      "pregunta": "Almacenar contraseñas en texto claro es una vulnerabilidad grave. ¿Cuál es la razón más plausible por la que una organización podría hacerlo?",
+      "opciones": [
+        "La organización desconoce los riesgos de seguridad",
+        "La organización intenta ahorrar tiempo y dinero en cifrado de contraseñas",
+        "La organización tiene una política que obliga a almacenarlas en texto claro",
+        "La organización recibió permiso explícito de los usuarios"
+      ],
+      "respuesta": 0,
+      "explicacion": "El desconocimiento o la falta de competencia en seguridad es la explicación más plausible, aunque la práctica siga siendo inaceptable."
+    },
+    {
+      "pregunta": "¿Cuál describe mejor el propósito de implantar multifactor authentication (MFA) en una organización?",
+      "opciones": [
+        "Sustituir las contraseñas por un método más seguro",
+        "Aumentar la velocidad y comodidad de identificación",
+        "Separar roles y permisos dentro de una aplicación",
+        "Añadir una capa adicional de seguridad mediante varias formas de verificación"
+      ],
+      "respuesta": 3,
+      "explicacion": "MFA combina factores independientes de autenticación y dificulta el acceso no autorizado cuando uno de ellos queda comprometido."
+    },
+    {
+      "pregunta": "Acaba de ser nombrado CISO de una multinacional y quiere alinear el departamento de seguridad con la misión, visión y valores de la empresa. ¿Cuál es el primer paso más eficaz?",
+      "opciones": [
+        "Comprender en profundidad la misión, visión y valores de la empresa",
+        "Proponer de inmediato un aumento del presupuesto de seguridad",
+        "Implantar nuevos protocolos y herramientas de seguridad en toda la organización",
+        "Defender una inversión inmediata en herramientas avanzadas de cyber threat intelligence"
+      ],
+      "respuesta": 0,
+      "explicacion": "Comprender primero los principios y objetivos corporativos permite diseñar una estrategia de seguridad coherente con las prioridades del negocio."
+    },
+    {
+      "pregunta": "Cuando un penetration tester intenta acceder a información sensible de un servidor, ¿qué tipo de control de acceso está probando?",
+      "opciones": [
+        "Control de acceso físico",
+        "Control de acceso administrativo",
+        "Control de acceso lógico",
+        "Access Control List (ACL)"
+      ],
+      "respuesta": 2,
+      "explicacion": "El acceso digital a sistemas y datos se regula mediante controles lógicos como autenticación, permisos y ACL."
+    },
+    {
+      "pregunta": "Una cuenta genera un fallo de inicio de sesión, después un acceso correcto, una solicitud de privilegios elevados y una gran transferencia saliente. ¿Qué práctica ayuda MÁS a reconocer una secuencia de ataque coherente?",
+      "opciones": [
+        "Correlacionar varios eventos para identificar un patrón significativo",
+        "Aumentar el umbral para que solo alerten las transferencias más grandes",
+        "Cerrar el fallo inicial como falso positivo",
+        "Deshabilitar el registro de escaladas de privilegios para no saturar el SIEM"
+      ],
+      "respuesta": 0,
+      "explicacion": "La correlación conecta eventos que por separado podrían parecer benignos y revela una cadena compatible con compromiso y exfiltración."
+    },
+    {
+      "pregunta": "Un CIO pregunta si el programa de seguridad es más eficaz que hace un año tras desplegar nuevos controles. Se dispone de datos operativos de los últimos 12 meses. ¿Qué enfoque respalda MEJOR una respuesta defendible?",
+      "opciones": [
+        "Presentar un único valor actual de tiempo medio de detección y declararlo aceptable",
+        "Mostrar varias métricas de seguridad con su tendencia temporal y explicar la dirección del cambio",
+        "Enumerar los controles implantados y asumir eficacia por su cobertura",
+        "Resumir incidentes recientes y usar su gravedad como prueba principal"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las tendencias de varias métricas permiten comparar periodos, observar mejora o deterioro y demostrar resultados en lugar de limitarse a inventariar controles."
+    },
+    {
+      "pregunta": "¿Cuál es el aspecto MÁS importante de una evaluación de riesgos entendida como proceso iterativo?",
+      "opciones": [
+        "Revisarla y actualizarla periódicamente",
+        "Identificar todos los riesgos posibles",
+        "Implantar controles para reducir riesgos",
+        "Comunicar los resultados a los stakeholders"
+      ],
+      "respuesta": 0,
+      "explicacion": "El entorno y las amenazas cambian, por lo que la evaluación debe revisarse de forma continua para mantener vigentes prioridades y controles."
+    },
+    {
+      "pregunta": "¿Qué medida es más eficaz para impedir accesos no autorizados a aplicaciones de software dentro de una organización?",
+      "opciones": [
+        "Aplicar políticas de contraseñas robustas",
+        "Implementar Role-Based Access Control (RBAC)",
+        "Actualizar periódicamente el software",
+        "Impartir formación semestral de concienciación"
+      ],
+      "respuesta": 1,
+      "explicacion": "RBAC restringe el acceso según la función laboral y garantiza que cada usuario solo utilice las aplicaciones necesarias."
+    },
+    {
+      "pregunta": "Una empresa quiere sustituir su firewall por uno que analice cabeceras de paquetes en la capa 3 del modelo OSI. ¿Qué tipo debe elegir?",
+      "opciones": [
+        "Firewall de inspección con estado",
+        "Gateway de nivel de aplicación",
+        "Firewall de filtrado de paquetes",
+        "Firewall Network Address Translation (NAT)"
+      ],
+      "respuesta": 2,
+      "explicacion": "El filtrado de paquetes opera principalmente en la capa de red y decide según direcciones IP, protocolo y puertos de las cabeceras."
+    },
+    {
+      "pregunta": "En un entorno Bring Your Own Device (BYOD), ¿qué medida ayuda a separar los datos personales y laborales en los dispositivos de empleados?",
+      "opciones": [
+        "Software Mobile Device Management (MDM)",
+        "Túneles Virtual Private Network (VPN)",
+        "Web Application Firewall (WAF)",
+        "Sistemas Network Access Control (NAC)"
+      ],
+      "respuesta": 0,
+      "explicacion": "MDM puede crear contenedores o perfiles separados, aplicar políticas corporativas y proteger los datos de trabajo sin mezclar los personales."
+    },
+    {
+      "pregunta": "Una organización ha sufrido un ciberataque que provocó la pérdida de datos y sistemas, y la recuperación está tardando demasiado. ¿Qué medida debe adoptarse para minimizar futuros impactos y recuperar a tiempo?",
+      "opciones": [
+        "Implantar un Disaster Recovery Plan (DRP) con copias periódicas y pruebas del proceso de recuperación",
+        "Realizar una evaluación integral de riesgos",
+        "Impartir formación para reconocer ciberamenazas",
+        "Crear un plan de comunicación de crisis"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un DRP probado, respaldado por copias válidas, define cómo restaurar sistemas y datos dentro de plazos aceptables."
+    },
+    {
+      "pregunta": "¿Qué plan debe alinearse con los planes estratégicos empresariales a largo plazo?",
+      "opciones": [
+        "Incident Response Plan (IRP)",
+        "Disaster Recovery Plan (DRP)",
+        "Business Continuity Plan (BCP)",
+        "Plan de operaciones de seguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El BCP es un plan estratégico para mantener funciones críticas y apoyar la misión de la organización durante interrupciones graves."
+    },
+    {
+      "pregunta": "¿Qué ataque implica tomar el control de una sesión activa para acceder sin autorización y extraer datos?",
+      "opciones": [
+        "Man-in-the-Middle (MitM)",
+        "Session hijacking",
+        "Cross-Site Scripting (XSS)",
+        "Denial of Service (DoS)"
+      ],
+      "respuesta": 1,
+      "explicacion": "Session hijacking consiste en obtener o reutilizar identificadores de sesión para actuar como el usuario dentro de una sesión válida."
+    },
+    {
+      "pregunta": "Una aplicación distribuida necesita un modelo formal que describa cómo los sujetos crean objetos, conceden permisos y revocan derechos mediante reglas definidas. ¿Qué modelo se asocia más con este enfoque?",
+      "opciones": [
+        "Modelo Graham-Denning",
+        "Modelo Bell-LaPadula",
+        "Modelo Biba",
+        "Lattice-Based Access Control"
+      ],
+      "respuesta": 0,
+      "explicacion": "Graham-Denning define sujetos, objetos y reglas explícitas para crear, destruir, conceder y retirar derechos."
+    },
+    {
+      "pregunta": "Se descubre una nueva vulnerabilidad y se publica un parche. ¿Cuál debe ser la acción inmediata siguiente para mitigar el riesgo?",
+      "opciones": [
+        "Notificar la vulnerabilidad a todos los usuarios",
+        "Desarrollar y probar el parche en un entorno sandbox",
+        "Desplegar el parche directamente en todos los sistemas",
+        "Realizar primero una evaluación de riesgos completa"
+      ],
+      "respuesta": 1,
+      "explicacion": "Probar el parche en un entorno aislado valida que corrige la vulnerabilidad sin causar incompatibilidades o interrupciones en producción."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones NO es una ventaja de una nube híbrida?",
+      "opciones": [
+        "Flexibilidad para escalar recursos",
+        "Mejora de la seguridad",
+        "Costes más altos",
+        "Mayor privacidad de los datos"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los costes más altos pueden ser una desventaja derivada de la complejidad de operar e integrar entornos públicos y privados."
+    },
+    {
+      "pregunta": "Un responsable de seguridad recomienda simulacros de evacuación trimestrales, aunque la empresa solo los realiza una vez al año por ser el mínimo legal. ¿Cuál es la frecuencia recomendada y por qué?",
+      "opciones": [
+        "Una vez cada cinco años, porque los edificios cambian poco",
+        "Trimestralmente, porque la práctica frecuente mejora la respuesta ante emergencias reales",
+        "Una vez al año, sin necesidad de mayor frecuencia",
+        "No son necesarios si existen sistemas automáticos de evacuación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los simulacros trimestrales refuerzan conductas, prueban el plan con frecuencia e incorporan a nuevos empleados antes de una emergencia real."
+    },
+    {
+      "pregunta": "¿Cuál es el tipo de red MÁS común en hogares y pequeñas empresas?",
+      "opciones": ["WAN", "LAN", "SAN", "MAN"],
+      "respuesta": 1,
+      "explicacion": "Una Local Area Network (LAN) conecta dispositivos dentro de un área limitada como una vivienda, oficina o edificio."
+    }
+  ]
+}
