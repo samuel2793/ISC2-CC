@@ -1,0 +1,912 @@
+{
+  "titulo": "Batería de fundamentos de ciberseguridad e ISC2 #6",
+  "procedencia": "Test de opción múltiple proporcionado por el usuario, organizado por dominios de seguridad e ISC2.",
+  "descripcion": "Batería de preguntas sobre principios de seguridad, gobierno, IAM, redes, nube, operaciones de seguridad, criptografía y respuesta a incidentes.",
+  "preguntas": [
+    {
+      "pregunta": "Una empresa utiliza cifrado simétrico para proteger los correos electrónicos entre sus sucursales. ¿Cuál es el PRINCIPAL desafío al que se enfrenta?",
+      "opciones": [
+        "El cifrado simétrico es demasiado lento para el correo electrónico.",
+        "Distribuir de forma segura la clave compartida a ambas partes.",
+        "Los cifrados simétricos no pueden cifrar archivos grandes.",
+        "El cifrado simétrico utiliza claves públicas."
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado simétrico es rápido, pero ambas partes deben disponer de la misma clave secreta, por lo que su distribución segura es uno de sus principales retos."
+    },
+    {
+      "pregunta": "¿Qué tamaño de clave AES se considera la opción estándar más robusta de las siguientes?",
+      "opciones": ["AES-64", "AES-128", "AES-192", "AES-256"],
+      "respuesta": 3,
+      "explicacion": "AES admite claves estándar de 128, 192 y 256 bits. AES-256 utiliza la clave de mayor tamaño de las opciones estándar."
+    },
+    {
+      "pregunta": "Dos desconocidos necesitan intercambiar una clave simétrica a través de Internet público. ¿Qué tecnología permite resolver este problema?",
+      "opciones": [
+        "Una contraseña compartida enviada por mensaje de texto.",
+        "Cifrado asimétrico mediante intercambio de clave pública.",
+        "Esteganografía para ocultar la clave dentro de una imagen.",
+        "Publicar la clave en un foro privado."
+      ],
+      "respuesta": 1,
+      "explicacion": "La criptografía asimétrica permite establecer o proteger el intercambio de una clave simétrica sin haber compartido previamente un secreto."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de una función hash en ciberseguridad?",
+      "opciones": [
+        "Cifrar archivos para que solo una persona pueda leerlos.",
+        "Comprimir datos para ahorrar almacenamiento.",
+        "Verificar la integridad de los datos mediante una huella de longitud fija.",
+        "Ocultar la existencia de un archivo."
+      ],
+      "respuesta": 2,
+      "explicacion": "Una función hash genera una huella digital de longitud fija que permite detectar modificaciones en los datos y verificar su integridad."
+    },
+    {
+      "pregunta": "¿Cuántos bits tiene la salida del algoritmo hash SHA-256?",
+      "opciones": ["128 bits", "160 bits", "256 bits", "512 bits"],
+      "respuesta": 2,
+      "explicacion": "SHA-256 produce un resumen de 256 bits, equivalente a 32 bytes."
+    },
+    {
+      "pregunta": "¿Qué servicio de seguridad proporciona una firma digital en un correo electrónico que el cifrado por sí solo NO proporciona?",
+      "opciones": [
+        "Confidencialidad",
+        "Disponibilidad",
+        "No repudio",
+        "Solo autenticación"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una firma digital permite verificar el origen y la integridad del mensaje y proporciona evidencia que contribuye al no repudio."
+    },
+    {
+      "pregunta": "En una Public Key Infrastructure (PKI), ¿cuál es la función de una Certificate Authority (CA)?",
+      "opciones": [
+        "Cifrar los archivos de los usuarios.",
+        "Emitir y validar certificados digitales.",
+        "Comprimir los datos en tránsito.",
+        "Eliminar la necesidad de utilizar claves privadas."
+      ],
+      "respuesta": 1,
+      "explicacion": "Una CA es una entidad de confianza que emite, firma y gestiona certificados digitales dentro de una PKI."
+    },
+    {
+      "pregunta": "¿Por qué se añade un 'salt' único a cada contraseña antes de aplicar una función hash?",
+      "opciones": [
+        "Para que las contraseñas sean más fáciles de recordar.",
+        "Para dificultar los ataques mediante tablas rainbow precalculadas.",
+        "Para comprimir la contraseña.",
+        "Para cifrar la contraseña de forma reversible."
+      ],
+      "respuesta": 1,
+      "explicacion": "Un salt aleatorio y único hace que contraseñas iguales produzcan hashes diferentes y evita reutilizar eficazmente tablas rainbow precalculadas."
+    },
+    {
+      "pregunta": "En comparación con el cifrado simétrico, el cifrado asimétrico generalmente es:",
+      "opciones": [
+        "Más rápido y utiliza claves más pequeñas.",
+        "Más lento, pero resuelve el problema del intercambio de claves.",
+        "Idéntico en velocidad y casos de uso.",
+        "Utilizado únicamente para hashing."
+      ],
+      "respuesta": 1,
+      "explicacion": "La criptografía asimétrica requiere más recursos computacionales, pero facilita el intercambio seguro de claves y las firmas digitales."
+    },
+    {
+      "pregunta": "Un cifrado César que desplaza cada letra tres posiciones es un ejemplo de qué técnica criptográfica clásica?",
+      "opciones": ["Transposición", "Sustitución", "Esteganografía", "Hashing"],
+      "respuesta": 1,
+      "explicacion": "El cifrado César sustituye cada carácter por otro según un desplazamiento fijo, por lo que pertenece a los cifrados de sustitución."
+    },
+    {
+      "pregunta": "Ocultar un mensaje secreto dentro de los píxeles de una fotografía se denomina:",
+      "opciones": ["Cifrado", "Hashing", "Esteganografía", "Salting"],
+      "respuesta": 2,
+      "explicacion": "La esteganografía busca ocultar la existencia de la información introduciéndola dentro de otro medio, como una imagen."
+    },
+    {
+      "pregunta": "Un atacante modifica durante el tránsito una transferencia bancaria y cambia el número de cuenta de destino. ¿Qué pilar de la CIA se ha vulnerado?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La modificación no autorizada de los datos supone una vulneración de la integridad."
+    },
+    {
+      "pregunta": "¿A qué se refiere el 'riesgo residual' en la gestión de riesgos?",
+      "opciones": [
+        "Al riesgo existente antes de aplicar controles.",
+        "Al riesgo que permanece después de aplicar controles.",
+        "Al riesgo transferido a una aseguradora.",
+        "Al máximo riesgo que una organización puede soportar."
+      ],
+      "respuesta": 1,
+      "explicacion": "El riesgo residual es el nivel de riesgo que permanece después de implementar los controles de seguridad."
+    },
+    {
+      "pregunta": "¿Qué documento registra los riesgos identificados de una organización, sus responsables y sus planes de tratamiento?",
+      "opciones": [
+        "Acceptable Use Policy",
+        "Risk Register",
+        "Business Impact Analysis",
+        "Service Level Agreement"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Risk Register centraliza los riesgos identificados junto con información como responsables, valoración y tratamiento."
+    },
+    {
+      "pregunta": "¿Qué estándar permite obtener una certificación internacionalmente reconocida para un Information Security Management System (ISMS)?",
+      "opciones": ["NIST CSF", "ISO 27001", "COBIT", "ITIL"],
+      "respuesta": 1,
+      "explicacion": "ISO/IEC 27001 especifica requisitos para un ISMS y permite la certificación formal de una organización."
+    },
+    {
+      "pregunta": "En la estructura clásica del NIST Cybersecurity Framework anterior a CSF 2.0, ¿cuál era la PRIMERA de sus cinco funciones principales?",
+      "opciones": ["Protect", "Detect", "Identify", "Respond"],
+      "respuesta": 2,
+      "explicacion": "En las versiones anteriores a NIST CSF 2.0, las cinco funciones eran Identify, Protect, Detect, Respond y Recover, comenzando por Identify."
+    },
+    {
+      "pregunta": "¿Qué estándar se aplica específicamente a organizaciones que almacenan, procesan o transmiten datos de titulares de tarjetas de pago?",
+      "opciones": ["HIPAA", "GDPR", "PCI-DSS", "SOX"],
+      "respuesta": 2,
+      "explicacion": "PCI-DSS establece requisitos de seguridad para proteger los datos de titulares de tarjetas de pago."
+    },
+    {
+      "pregunta": "¿Qué normativa estadounidense protege la privacidad de la Protected Health Information (PHI)?",
+      "opciones": ["GDPR", "HIPAA", "SOX", "GLBA"],
+      "respuesta": 1,
+      "explicacion": "HIPAA establece requisitos estadounidenses relacionados con la protección y privacidad de determinada información sanitaria, incluida la PHI."
+    },
+    {
+      "pregunta": "¿Qué regulación puede aplicarse a organizaciones que procesan datos personales de residentes o interesados de la UE aunque la empresa se encuentre fuera de la Unión Europea?",
+      "opciones": ["HIPAA", "PCI-DSS", "GDPR", "FERPA"],
+      "respuesta": 2,
+      "explicacion": "El GDPR contempla alcance extraterritorial en determinadas circunstancias relacionadas con el tratamiento de datos personales de personas en la UE."
+    },
+    {
+      "pregunta": "La Sarbanes-Oxley Act (SOX) se creó PRINCIPALMENTE para abordar:",
+      "opciones": [
+        "Brechas de datos sanitarios.",
+        "Fraude con tarjetas de crédito.",
+        "Fraude e irregularidades en la información financiera corporativa.",
+        "Privacidad de estudiantes."
+      ],
+      "respuesta": 2,
+      "explicacion": "SOX reforzó los controles y responsabilidades relacionados con la información financiera y el gobierno corporativo de empresas cotizadas estadounidenses."
+    },
+    {
+      "pregunta": "El principio 'Privacy by Design' requiere:",
+      "opciones": [
+        "Añadir funciones de privacidad después del lanzamiento si los clientes se quejan.",
+        "Integrar la privacidad en los sistemas desde las primeras fases de diseño.",
+        "Aplicar la privacidad únicamente a los directivos.",
+        "Hacer que la privacidad sea responsabilidad exclusiva de los abogados."
+      ],
+      "respuesta": 1,
+      "explicacion": "Privacy by Design implica incorporar requisitos y controles de privacidad desde el diseño inicial y durante todo el ciclo de vida del sistema."
+    },
+    {
+      "pregunta": "Un hospital etiqueta los historiales de pacientes como 'Confidencial' y los folletos de marketing como 'Público'. Esto es un ejemplo de:",
+      "opciones": [
+        "Cifrado de datos",
+        "Clasificación de datos",
+        "Enmascaramiento de datos",
+        "Copia de seguridad de datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Asignar categorías o etiquetas según la sensibilidad y requisitos de protección de la información es clasificación de datos."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de Risk Avoidance?",
+      "opciones": [
+        "Contratar un seguro de ciberseguridad.",
+        "Decidir no lanzar una nueva línea de producto que implica un riesgo inaceptable.",
+        "Aceptar un riesgo pequeño y continuar.",
+        "Instalar software antivirus."
+      ],
+      "respuesta": 1,
+      "explicacion": "La evitación del riesgo consiste en eliminar la actividad que origina el riesgo."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de Risk Transference?",
+      "opciones": [
+        "Aplicar inmediatamente parches a los servidores.",
+        "Contratar un seguro de responsabilidad cibernética.",
+        "Documentar el riesgo y continuar sin aplicar cambios.",
+        "Desactivar el servicio vulnerable."
+      ],
+      "respuesta": 1,
+      "explicacion": "Un seguro transfiere a un tercero parte de las consecuencias financieras asociadas al riesgo."
+    },
+    {
+      "pregunta": "Una declaración de 'Risk Appetite' describe:",
+      "opciones": [
+        "Cada riesgo específico existente en la organización.",
+        "La cantidad y el tipo de riesgo que una organización está dispuesta a asumir para alcanzar sus objetivos.",
+        "El límite legal de riesgo establecido para cada sector.",
+        "El valor monetario total de todos los activos."
+      ],
+      "respuesta": 1,
+      "explicacion": "El Risk Appetite expresa el nivel general de riesgo que una organización está dispuesta a asumir en la consecución de sus objetivos."
+    },
+    {
+      "pregunta": "Un atacante engaña al help desk para que restablezca la contraseña de un usuario haciéndose pasar por él. ¿Qué pilar de la CIA se ve principalmente afectado?",
+      "opciones": [
+        "Disponibilidad",
+        "Integridad",
+        "Confidencialidad",
+        "Los tres"
+      ],
+      "respuesta": 2,
+      "explicacion": "El atacante obtiene acceso no autorizado a la cuenta y potencialmente a información protegida, afectando principalmente a la confidencialidad."
+    },
+    {
+      "pregunta": "¿Qué nivel RAID distribuye los datos entre varios discos para aumentar el rendimiento pero NO proporciona redundancia?",
+      "opciones": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+      "respuesta": 0,
+      "explicacion": "RAID 0 utiliza striping sin paridad ni mirroring, por lo que mejora el rendimiento pero no tolera el fallo de un disco."
+    },
+    {
+      "pregunta": "¿Qué nivel RAID utiliza mirroring, de modo que los datos escritos en un disco se duplican en otro?",
+      "opciones": ["RAID 0", "RAID 1", "RAID 5", "RAID 6"],
+      "respuesta": 1,
+      "explicacion": "RAID 1 mantiene copias espejo de los datos en dos o más discos para proporcionar redundancia."
+    },
+    {
+      "pregunta": "¿Qué nivel RAID distribuye datos y paridad entre los discos y puede sobrevivir al fallo de UN solo disco?",
+      "opciones": ["RAID 0", "RAID 1", "RAID 5", "RAID 6"],
+      "respuesta": 2,
+      "explicacion": "RAID 5 utiliza striping con paridad distribuida y puede continuar funcionando tras el fallo de un disco."
+    },
+    {
+      "pregunta": "¿Qué configuración RAID combina striping y mirroring para proporcionar rendimiento y redundancia?",
+      "opciones": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+      "respuesta": 3,
+      "explicacion": "RAID 10 combina conjuntos en espejo con striping, obteniendo redundancia y buen rendimiento."
+    },
+    {
+      "pregunta": "Una copia de seguridad que copia TODOS los datos cada noche, independientemente de los cambios realizados, es una:",
+      "opciones": [
+        "Copia de seguridad completa",
+        "Copia de seguridad incremental",
+        "Copia de seguridad diferencial",
+        "Snapshot"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una copia completa almacena todos los datos seleccionados en cada ejecución."
+    },
+    {
+      "pregunta": "Una copia de seguridad incremental contiene:",
+      "opciones": [
+        "Todos los archivos del sistema.",
+        "Todos los cambios realizados desde la última copia de seguridad de cualquier tipo.",
+        "Todos los cambios realizados desde la última copia de seguridad completa.",
+        "Solo los archivos marcados como críticos."
+      ],
+      "respuesta": 1,
+      "explicacion": "Una copia incremental almacena los cambios producidos desde la copia anterior, ya sea completa o incremental."
+    },
+    {
+      "pregunta": "¿Qué recomienda la regla de copias de seguridad '3-2-1'?",
+      "opciones": [
+        "3 copias, 2 tipos de medios y 1 copia fuera de las instalaciones.",
+        "3 horas de RTO, 2 horas de RPO y 1 hora de MTD.",
+        "3 copias al día, 2 a la semana y 1 al mes.",
+        "3 empleados, 2 ubicaciones y 1 nube."
+      ],
+      "respuesta": 0,
+      "explicacion": "La regla 3-2-1 recomienda mantener tres copias de los datos, utilizar dos tipos de medios distintos y conservar una copia en una ubicación separada."
+    },
+    {
+      "pregunta": "¿Cuál es la PRINCIPAL diferencia entre RTO y RPO?",
+      "opciones": [
+        "RTO representa la tolerancia a pérdida de datos y RPO la tolerancia al tiempo de inactividad.",
+        "RTO representa la tolerancia al tiempo de inactividad y RPO la tolerancia a pérdida de datos.",
+        "Son términos intercambiables.",
+        "RTO se aplica a copias de seguridad y RPO únicamente al hardware."
+      ],
+      "respuesta": 1,
+      "explicacion": "RTO define el tiempo objetivo para restaurar un servicio, mientras que RPO define cuánto historial de datos puede perderse como máximo respecto al punto de recuperación."
+    },
+    {
+      "pregunta": "¿Qué métrica representa el tiempo máximo absoluto que una organización puede soportar una interrupción antes de sufrir consecuencias inaceptables o potencialmente catastróficas?",
+      "opciones": [
+        "Recovery Time Objective (RTO)",
+        "Recovery Point Objective (RPO)",
+        "Maximum Tolerable Downtime (MTD)",
+        "Mean Time To Repair (MTTR)"
+      ],
+      "respuesta": 2,
+      "explicacion": "El MTD representa el límite máximo tolerable de interrupción de un proceso antes de que el impacto resulte inaceptable."
+    },
+    {
+      "pregunta": "Una empresa realiza un Business Impact Analysis (BIA). ¿Cuál es su objetivo PRINCIPAL?",
+      "opciones": [
+        "Seleccionar proveedores de firewalls.",
+        "Identificar procesos críticos y determinar prioridades de recuperación.",
+        "Auditar registros contables.",
+        "Sustituir la política de seguridad."
+      ],
+      "respuesta": 1,
+      "explicacion": "El BIA identifica procesos críticos, analiza las consecuencias de su interrupción y ayuda a establecer prioridades y objetivos de recuperación."
+    },
+    {
+      "pregunta": "¿En qué modelo de control de acceso el propietario de un recurso decide quién puede acceder a él?",
+      "opciones": [
+        "Mandatory Access Control (MAC)",
+        "Discretionary Access Control (DAC)",
+        "Role-Based Access Control (RBAC)",
+        "Rule-Based Access Control (RuBAC)"
+      ],
+      "respuesta": 1,
+      "explicacion": "En DAC, el propietario del recurso dispone de discreción para conceder o revocar permisos de acceso."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso aplica etiquetas de seguridad y niveles de autorización, siendo habitual en entornos gubernamentales y militares?",
+      "opciones": ["DAC", "MAC", "RBAC", "ABAC"],
+      "respuesta": 1,
+      "explicacion": "MAC aplica políticas centralizadas basadas en clasificaciones, etiquetas y niveles de autorización que los usuarios no pueden modificar libremente."
+    },
+    {
+      "pregunta": "Un hospital concede al rol 'Enfermería' acceso a historiales clínicos y al rol 'Facturación' acceso a facturas. ¿Qué modelo utiliza?",
+      "opciones": ["DAC", "MAC", "RBAC", "ABAC"],
+      "respuesta": 2,
+      "explicacion": "RBAC asigna permisos a roles relacionados con funciones laborales y posteriormente asigna esos roles a los usuarios."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso evalúa múltiples atributos, como departamento del usuario, hora, dispositivo y ubicación, antes de conceder acceso?",
+      "opciones": ["DAC", "MAC", "RBAC", "ABAC"],
+      "respuesta": 3,
+      "explicacion": "ABAC toma decisiones utilizando atributos del sujeto, recurso, acción y contexto, permitiendo políticas de acceso muy flexibles."
+    },
+    {
+      "pregunta": "¿Cuál es el MEJOR ejemplo de Rule-Based Access Control (RuBAC)?",
+      "opciones": [
+        "Una regla de firewall que permite el puerto 443 únicamente de 09:00 a 17:00.",
+        "Un responsable que concede acceso a archivos a su equipo.",
+        "Una comprobación de autorización para documentos clasificados.",
+        "Un usuario que elige su propia contraseña."
+      ],
+      "respuesta": 0,
+      "explicacion": "RuBAC aplica reglas predefinidas basadas en condiciones, como puerto, dirección, horario u otros criterios."
+    },
+    {
+      "pregunta": "¿Qué factor de autenticación se describe MEJOR como 'algo que eres'?",
+      "opciones": [
+        "Una contraseña",
+        "Una tarjeta inteligente",
+        "Una huella dactilar",
+        "Una pregunta de seguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las características biométricas físicas, como una huella dactilar, pertenecen al factor 'algo que eres'."
+    },
+    {
+      "pregunta": "¿Qué factor de autenticación se describe MEJOR como 'algo que tienes'?",
+      "opciones": [
+        "Un patrón de retina",
+        "Un token de hardware",
+        "Un PIN introducido manualmente",
+        "Tu ritmo de escritura"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un token físico es un objeto que posee el usuario, por lo que corresponde al factor 'algo que tienes'."
+    },
+    {
+      "pregunta": "Un código de un solo uso enviado por SMS a un teléfono registrado corresponde a qué factor de autenticación?",
+      "opciones": [
+        "Algo que sabes",
+        "Algo que tienes",
+        "Algo que eres",
+        "Algún lugar en el que estás"
+      ],
+      "respuesta": 1,
+      "explicacion": "El método depende de que el usuario tenga acceso al teléfono o SIM registrados, por lo que se clasifica como un factor de posesión."
+    },
+    {
+      "pregunta": "Un sistema biométrico con una tasa de False Acceptance Rate (FAR) ALTA provoca qué problema?",
+      "opciones": [
+        "Se rechaza a usuarios legítimos.",
+        "Se concede acceso incorrectamente a impostores.",
+        "La autenticación es más rápida.",
+        "Se reduce el coste del hardware."
+      ],
+      "respuesta": 1,
+      "explicacion": "FAR mide la frecuencia con la que el sistema acepta incorrectamente a una persona no autorizada."
+    },
+    {
+      "pregunta": "Un sistema biométrico con una tasa de False Rejection Rate (FRR) ALTA provoca qué problema?",
+      "opciones": [
+        "Se permite el acceso a impostores.",
+        "Se deniega el acceso a usuarios legítimos.",
+        "Se obtiene un cifrado más robusto.",
+        "Se reduce el CER."
+      ],
+      "respuesta": 1,
+      "explicacion": "FRR mide la frecuencia con la que un sistema biométrico rechaza incorrectamente a un usuario legítimo."
+    },
+    {
+      "pregunta": "Una medida de seguridad física que obliga a una persona a atravesar dos puertas interbloqueadas, una cada vez, antes de entrar en una zona sensible se denomina:",
+      "opciones": ["Bollard", "Mantrap", "Turnstile", "Faraday cage"],
+      "respuesta": 1,
+      "explicacion": "Un mantrap utiliza dos puertas controladas de forma que normalmente solo una puede abrirse a la vez, reduciendo el riesgo de accesos no autorizados por seguimiento."
+    },
+    {
+      "pregunta": "Una persona no autorizada sigue a un empleado a través de una puerta segura antes de que esta se cierre. ¿Cómo se denomina esta técnica?",
+      "opciones": ["Phishing", "Tailgating", "Shoulder surfing", "Pretexting"],
+      "respuesta": 1,
+      "explicacion": "Tailgating consiste en aprovechar el acceso autorizado de otra persona para entrar físicamente en una zona restringida."
+    },
+    {
+      "pregunta": "¿Cuál es el PRIMER paso de un ciclo típico de aprovisionamiento de cuentas?",
+      "opciones": [
+        "Terminación de la cuenta",
+        "Verificación de identidad y creación de la cuenta",
+        "Revisión anual de accesos",
+        "Escalada de privilegios"
+      ],
+      "respuesta": 1,
+      "explicacion": "El aprovisionamiento comienza verificando la identidad del usuario y creando la cuenta correspondiente antes de asignar los accesos necesarios."
+    },
+    {
+      "pregunta": "Cuando un empleado deja la organización, ¿cuál es la acción MÁS crítica respecto a sus cuentas?",
+      "opciones": [
+        "Enviar un mensaje de agradecimiento.",
+        "Deshabilitar o eliminar inmediatamente su acceso.",
+        "Esperar 30 días antes de retirar el acceso.",
+        "Transferir automáticamente todos sus permisos a otro empleado."
+      ],
+      "respuesta": 1,
+      "explicacion": "La desprovisión inmediata reduce el riesgo de acceso no autorizado mediante credenciales de una persona que ya no debe tener acceso."
+    },
+    {
+      "pregunta": "Just-in-Time (JIT) access significa:",
+      "opciones": [
+        "Conceder permisos permanentemente.",
+        "Conceder permisos elevados solo cuando son necesarios y durante un tiempo limitado.",
+        "Autenticar a los usuarios una vez al año.",
+        "Solicitar el acceso exclusivamente mediante correo electrónico."
+      ],
+      "respuesta": 1,
+      "explicacion": "JIT limita los privilegios elevados al periodo concreto en el que son necesarios, reduciendo los privilegios permanentes."
+    },
+    {
+      "pregunta": "Las herramientas de Privileged Access Management (PAM) protegen PRINCIPALMENTE:",
+      "opciones": [
+        "Cuentas normales de usuarios finales.",
+        "Cuentas de administrador, root y cuentas de servicio.",
+        "Direcciones de correo de clientes.",
+        "Contenido público de sitios web."
+      ],
+      "respuesta": 1,
+      "explicacion": "PAM está orientado a controlar, proteger y supervisar cuentas y credenciales con privilegios elevados."
+    },
+    {
+      "pregunta": "¿Qué tecnología puede almacenar credenciales privilegiadas e inyectarlas en una sesión de forma que el administrador no tenga que conocer la contraseña real?",
+      "opciones": [
+        "Gestor de contraseñas para usuarios finales",
+        "Bóveda de Privileged Access Management (PAM)",
+        "Portal SSO",
+        "Servidor RADIUS"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una solución PAM puede custodiar credenciales privilegiadas y utilizarlas de forma controlada durante una sesión sin revelarlas directamente al usuario."
+    },
+    {
+      "pregunta": "Un factor de autenticación 'algún lugar en el que estás' sería:",
+      "opciones": [
+        "Tu contraseña.",
+        "Tu huella dactilar.",
+        "Tu ubicación GPS o la dirección IP de la oficina.",
+        "Tu token de hardware."
+      ],
+      "respuesta": 2,
+      "explicacion": "Los factores de ubicación utilizan información como GPS, red o dirección IP para determinar desde dónde se intenta acceder."
+    },
+    {
+      "pregunta": "Un factor de autenticación 'algo que haces' sería:",
+      "opciones": [
+        "Una frase de contraseña.",
+        "Tu ritmo de escritura o patrón de firma.",
+        "Una tarjeta inteligente.",
+        "El patrón de tu iris."
+      ],
+      "respuesta": 1,
+      "explicacion": "Los patrones de comportamiento, como la cadencia de escritura o la forma de firmar, corresponden a biometría conductual."
+    },
+    {
+      "pregunta": "¿Por qué el Single Sign-On (SSO) es a la vez una ventaja y un riesgo?",
+      "opciones": [
+        "Porque cuesta más que utilizar inicios de sesión separados.",
+        "Porque mejora la experiencia de usuario, pero una cuenta SSO comprometida puede proporcionar acceso a múltiples aplicaciones.",
+        "Porque solo funciona con biometría.",
+        "Porque no puede combinarse con MFA."
+      ],
+      "respuesta": 1,
+      "explicacion": "SSO reduce el número de autenticaciones necesarias, pero aumenta el impacto potencial de comprometer la identidad central, por lo que suele combinarse con MFA."
+    },
+    {
+      "pregunta": "Un atacante explota una vulnerabilidad para convertir una cuenta de usuario normal en una cuenta con permisos de administrador. Esto se denomina:",
+      "opciones": [
+        "Escalada de privilegios",
+        "Tailgating",
+        "Pretexting",
+        "Smishing"
+      ],
+      "respuesta": 0,
+      "explicacion": "La escalada de privilegios consiste en obtener permisos superiores a los que originalmente tenía asignados el usuario o proceso."
+    },
+    {
+      "pregunta": "¿Qué escenario ilustra MEJOR el principio de Separation of Duties?",
+      "opciones": [
+        "Una misma persona solicita y aprueba su propio pago.",
+        "La persona que solicita un pago es diferente de la persona que lo aprueba.",
+        "Un único administrador conoce todas las contraseñas del sistema.",
+        "Los usuarios comparten credenciales para mayor comodidad."
+      ],
+      "respuesta": 1,
+      "explicacion": "Separation of Duties divide las funciones críticas entre varias personas para evitar que una sola pueda completar unilateralmente todo el proceso sensible."
+    },
+    {
+      "pregunta": "¿Qué puerto TCP utiliza normalmente el tráfico HTTP estándar sin cifrar?",
+      "opciones": ["21", "22", "80", "443"],
+      "respuesta": 2,
+      "explicacion": "HTTP utiliza por defecto el puerto TCP 80."
+    },
+    {
+      "pregunta": "¿Qué puerto TCP utiliza HTTPS para tráfico web cifrado?",
+      "opciones": ["80", "443", "8080", "53"],
+      "respuesta": 1,
+      "explicacion": "HTTPS utiliza por defecto el puerto TCP 443 para comunicaciones web protegidas mediante TLS."
+    },
+    {
+      "pregunta": "¿Qué puerto utiliza SSH para acceso remoto cifrado mediante shell?",
+      "opciones": ["21", "22", "23", "25"],
+      "respuesta": 1,
+      "explicacion": "SSH utiliza por defecto el puerto TCP 22."
+    },
+    {
+      "pregunta": "¿Qué puerto utiliza SMTP tradicionalmente para enviar correo electrónico entre servidores de correo?",
+      "opciones": ["25", "110", "143", "443"],
+      "respuesta": 0,
+      "explicacion": "El puerto TCP 25 se utiliza tradicionalmente para la transferencia SMTP entre servidores de correo."
+    },
+    {
+      "pregunta": "¿Qué puerto utiliza FTP estándar en texto claro para su conexión de control?",
+      "opciones": ["21", "22", "80", "443"],
+      "respuesta": 0,
+      "explicacion": "FTP utiliza por defecto el puerto TCP 21 para la conexión de control y no proporciona cifrado por sí mismo."
+    },
+    {
+      "pregunta": "¿Qué puerto utiliza DNS para la resolución de nombres de dominio?",
+      "opciones": ["25", "53", "80", "443"],
+      "respuesta": 1,
+      "explicacion": "DNS utiliza el puerto 53, normalmente sobre UDP para consultas habituales y también sobre TCP en determinados casos."
+    },
+    {
+      "pregunta": "¿Qué puerto utiliza por defecto Microsoft Remote Desktop Protocol (RDP)?",
+      "opciones": ["22", "443", "3389", "8080"],
+      "respuesta": 2,
+      "explicacion": "RDP utiliza por defecto el puerto 3389."
+    },
+    {
+      "pregunta": "¿Por qué debe evitarse Telnet, puerto 23, para la administración remota?",
+      "opciones": [
+        "Porque es demasiado lento.",
+        "Porque transmite credenciales y comandos en texto claro.",
+        "Porque necesita demasiado espacio en disco.",
+        "Porque solo funciona en Windows."
+      ],
+      "respuesta": 1,
+      "explicacion": "Telnet no cifra la sesión, por lo que credenciales y comandos pueden ser interceptados. SSH es la alternativa segura habitual."
+    },
+    {
+      "pregunta": "¿Cuál es la PRINCIPAL ventaja de un firewall stateful frente a uno stateless?",
+      "opciones": [
+        "Es más barato.",
+        "Mantiene información sobre el estado de las conexiones activas y puede identificar tráfico de respuesta perteneciente a sesiones legítimas.",
+        "Utiliza menos CPU.",
+        "Solo filtra por dirección IP."
+      ],
+      "respuesta": 1,
+      "explicacion": "Un firewall stateful mantiene una tabla de estado de conexiones y utiliza ese contexto para decidir si el tráfico pertenece a una sesión válida."
+    },
+    {
+      "pregunta": "¿Qué capacidades añade normalmente un Next-Generation Firewall (NGFW) respecto a un firewall stateful convencional?",
+      "opciones": [
+        "Ninguna función adicional.",
+        "Deep Packet Inspection, conocimiento de aplicaciones e IPS integrado.",
+        "Sustitución completa del antivirus.",
+        "Únicamente filtrado por IP y puerto."
+      ],
+      "respuesta": 1,
+      "explicacion": "Un NGFW amplía el filtrado stateful con funciones como inspección profunda, identificación de aplicaciones, control a nivel de aplicación e integración con IPS."
+    },
+    {
+      "pregunta": "Un Web Application Firewall (WAF) está diseñado específicamente para defender frente a:",
+      "opciones": [
+        "Intrusiones físicas.",
+        "Ataques contra aplicaciones web como SQL injection y XSS.",
+        "Escuchas de redes inalámbricas.",
+        "Phishing por correo electrónico."
+      ],
+      "respuesta": 1,
+      "explicacion": "Un WAF inspecciona tráfico HTTP/HTTPS destinado a aplicaciones web y puede bloquear patrones asociados a ataques como SQL injection y XSS."
+    },
+    {
+      "pregunta": "¿Cuál es la PRINCIPAL diferencia entre un IDS y un IPS?",
+      "opciones": [
+        "El IDS cifra el tráfico y el IPS no.",
+        "El IDS detecta y genera alertas, mientras que el IPS puede detectar y bloquear activamente el tráfico.",
+        "El IDS siempre es hardware y el IPS siempre es software.",
+        "Son tecnologías idénticas."
+      ],
+      "respuesta": 1,
+      "explicacion": "Un IDS normalmente supervisa y alerta, mientras que un IPS suele estar en línea y puede impedir o bloquear tráfico identificado como malicioso."
+    },
+    {
+      "pregunta": "Según el modelo de responsabilidad compartida en la nube, en un despliegue IaaS el CLIENTE es responsable de:",
+      "opciones": [
+        "Únicamente el centro de datos físico.",
+        "El sistema operativo, las aplicaciones y los datos desplegados sobre la infraestructura del proveedor.",
+        "Nada, porque el proveedor gestiona absolutamente todo.",
+        "Únicamente los cables de red."
+      ],
+      "respuesta": 1,
+      "explicacion": "En IaaS, el proveedor protege la infraestructura física y de virtualización, mientras que el cliente normalmente gestiona elementos como el sistema operativo invitado, aplicaciones, configuraciones y datos."
+    },
+    {
+      "pregunta": "En un despliegue SaaS, el CLIENTE es principalmente responsable de:",
+      "opciones": [
+        "El código de la aplicación y los servidores subyacentes.",
+        "La gestión del acceso de sus usuarios y los datos que introduce en el servicio.",
+        "Construir el centro de datos.",
+        "Aplicar parches al sistema operativo subyacente."
+      ],
+      "respuesta": 1,
+      "explicacion": "En SaaS el proveedor gestiona la plataforma y aplicación, mientras que el cliente conserva responsabilidades sobre sus usuarios, permisos, configuración y datos."
+    },
+    {
+      "pregunta": "¿Qué modelo de servicio cloud proporciona al cliente el MAYOR control sobre la infraestructura lógica subyacente?",
+      "opciones": ["SaaS", "PaaS", "IaaS", "FaaS"],
+      "respuesta": 2,
+      "explicacion": "IaaS proporciona al cliente mayor control sobre sistemas operativos, redes virtuales, aplicaciones y otros componentes que PaaS, SaaS o FaaS."
+    },
+    {
+      "pregunta": "Un despliegue cloud en el que múltiples organizaciones no relacionadas utilizan infraestructura compartida de un proveedor se denomina:",
+      "opciones": [
+        "Private cloud",
+        "Public cloud",
+        "Hybrid cloud",
+        "Community cloud"
+      ],
+      "respuesta": 1,
+      "explicacion": "En una public cloud, los recursos del proveedor se ofrecen a múltiples clientes o tenants sobre una infraestructura compartida."
+    },
+    {
+      "pregunta": "Una 'Community cloud' se define MEJOR como:",
+      "opciones": [
+        "Una nube compartida por todos los usuarios de Internet.",
+        "Una nube compartida por organizaciones con requisitos o intereses comunes, como varios hospitales.",
+        "Una nube utilizada únicamente por una organización.",
+        "Una nube que funciona sin conexión a red."
+      ],
+      "respuesta": 1,
+      "explicacion": "Una community cloud está destinada a varias organizaciones que comparten requisitos, objetivos, regulaciones o necesidades comunes."
+    },
+    {
+      "pregunta": "Una empresa ejecuta cargas sensibles en una private cloud y desplaza cargas no sensibles a AWS durante los picos de demanda. ¿Cómo se denomina este modelo?",
+      "opciones": [
+        "Public cloud",
+        "Private cloud",
+        "Hybrid cloud",
+        "Multi-cloud"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una hybrid cloud integra recursos privados y públicos para ejecutar o desplazar cargas entre ambos entornos."
+    },
+    {
+      "pregunta": "Network Access Control (NAC) garantiza PRINCIPALMENTE que:",
+      "opciones": [
+        "Solo dispositivos autorizados y que cumplen las políticas puedan conectarse a la red.",
+        "Los firewalls tengan reglas actualizadas.",
+        "El correo electrónico llegue a su destino.",
+        "Las copias de seguridad se realicen según el calendario."
+      ],
+      "respuesta": 0,
+      "explicacion": "NAC evalúa aspectos como identidad, autorización y postura de seguridad de los dispositivos antes de permitir o limitar su acceso a la red."
+    },
+    {
+      "pregunta": "Una DMZ de red se utiliza para:",
+      "opciones": [
+        "Alojar las bases de datos internas más sensibles.",
+        "Situar servidores expuestos a Internet en una zona intermedia entre Internet y la LAN interna.",
+        "Sustituir el firewall.",
+        "Proporcionar Wi-Fi gratuito a los invitados."
+      ],
+      "respuesta": 1,
+      "explicacion": "Una DMZ segmenta los sistemas expuestos públicamente de la red interna para reducir el impacto de una posible intrusión."
+    },
+    {
+      "pregunta": "Un túnel VPN proporciona principalmente:",
+      "opciones": [
+        "Mayor velocidad de Internet.",
+        "Confidencialidad del tráfico sobre redes no confiables mediante cifrado.",
+        "Acceso gratuito a Internet.",
+        "Protección física de los cables."
+      ],
+      "respuesta": 1,
+      "explicacion": "Una VPN crea un túnel protegido criptográficamente que ayuda a preservar la confidencialidad y, según el protocolo, también la integridad y autenticidad del tráfico."
+    },
+    {
+      "pregunta": "¿Qué protocolo ha sustituido a SSL para proteger el tráfico web moderno?",
+      "opciones": ["SSH", "TLS", "IPsec", "WPA3"],
+      "respuesta": 1,
+      "explicacion": "TLS es el sucesor de SSL y es el protocolo utilizado actualmente para proteger las conexiones HTTPS."
+    },
+    {
+      "pregunta": "Una organización utiliza simultáneamente dos proveedores cloud, AWS y Azure, para reducir la dependencia de un único proveedor. Esto se denomina:",
+      "opciones": [
+        "Hybrid cloud",
+        "Multi-cloud",
+        "Private cloud",
+        "Community cloud"
+      ],
+      "respuesta": 1,
+      "explicacion": "Multi-cloud describe el uso de servicios de más de un proveedor de nube dentro de la estrategia tecnológica de una organización."
+    },
+    {
+      "pregunta": "Software-Defined Networking (SDN) desacopla qué dos planos?",
+      "opciones": [
+        "Alimentación eléctrica y refrigeración.",
+        "Plano de control y plano de datos.",
+        "Permisos de usuario y administrador.",
+        "Cifrado y hashing."
+      ],
+      "respuesta": 1,
+      "explicacion": "SDN separa la lógica de control de la función de reenvío de paquetes, permitiendo una gestión de red más centralizada y programable."
+    },
+    {
+      "pregunta": "Un correo electrónico engañoso, genérico y enviado masivamente a miles de usuarios para que hagan clic en un enlace se denomina:",
+      "opciones": ["Spear phishing", "Phishing", "Whaling", "Vishing"],
+      "respuesta": 1,
+      "explicacion": "El phishing genérico utiliza mensajes fraudulentos enviados a gran escala con el objetivo de engañar a múltiples posibles víctimas."
+    },
+    {
+      "pregunta": "Un atacante investiga a un empleado concreto y le envía un correo fraudulento altamente personalizado. Esto es:",
+      "opciones": ["Phishing", "Spear phishing", "Vishing", "Smishing"],
+      "respuesta": 1,
+      "explicacion": "Spear phishing es una modalidad de phishing dirigida y personalizada contra una persona u organización concreta."
+    },
+    {
+      "pregunta": "Un ataque de phishing dirigido específicamente al CEO o CFO de una empresa se denomina:",
+      "opciones": ["Spear phishing", "Whaling", "Vishing", "Smishing"],
+      "respuesta": 1,
+      "explicacion": "Whaling es una forma de phishing dirigido contra ejecutivos u otros objetivos de alto valor dentro de una organización."
+    },
+    {
+      "pregunta": "Un atacante llama a un empleado haciéndose pasar por personal de TI y le solicita su contraseña. Esto es:",
+      "opciones": ["Smishing", "Vishing", "Whaling", "Tailgating"],
+      "respuesta": 1,
+      "explicacion": "Vishing es ingeniería social realizada mediante llamadas de voz con el objetivo de obtener información o inducir acciones fraudulentas."
+    },
+    {
+      "pregunta": "Un empleado recibe un SMS fraudulento indicando que su paquete no puede entregarse e incluyendo un enlace. Esto es:",
+      "opciones": ["Vishing", "Smishing", "Whaling", "Pretexting"],
+      "respuesta": 1,
+      "explicacion": "Smishing es phishing realizado mediante mensajes SMS o sistemas similares de mensajería de texto."
+    },
+    {
+      "pregunta": "Un atacante llama diciendo: 'Soy el nuevo auditor y necesito tus credenciales para verificar el acceso'. ¿Cómo se denomina el uso de este escenario inventado?",
+      "opciones": ["Phishing", "Pretexting", "Tailgating", "Watering hole"],
+      "respuesta": 1,
+      "explicacion": "Pretexting consiste en inventar una identidad o situación creíble para convencer a la víctima de que proporcione información o realice una acción."
+    },
+    {
+      "pregunta": "Un atacante busca en los contenedores de basura de una empresa documentos desechados que contienen contraseñas o información sensible. Esto se denomina:",
+      "opciones": [
+        "Shoulder surfing",
+        "Dumpster diving",
+        "Tailgating",
+        "Pretexting"
+      ],
+      "respuesta": 1,
+      "explicacion": "Dumpster diving consiste en buscar información sensible en residuos físicos desechados por una organización o persona."
+    },
+    {
+      "pregunta": "Un atacante en una cafetería mira por encima de tu hombro mientras introduces tu contraseña en un portátil. Esto se denomina:",
+      "opciones": ["Smishing", "Shoulder surfing", "Tailgating", "Pretexting"],
+      "respuesta": 1,
+      "explicacion": "Shoulder surfing consiste en obtener información sensible observando directamente la pantalla, teclado u otras acciones de la víctima."
+    },
+    {
+      "pregunta": "Un atacante compromete un blog popular del sector porque sabe que los empleados de su objetivo lo visitan con frecuencia. Este patrón de ataque se denomina:",
+      "opciones": ["Phishing", "Pretexting", "Watering hole", "Smishing"],
+      "respuesta": 2,
+      "explicacion": "En un watering hole attack, el atacante compromete un sitio que las víctimas objetivo visitan habitualmente para intentar infectarlas o atacarlas desde allí."
+    },
+    {
+      "pregunta": "¿Qué tipo de malware permanece inactivo y se ejecuta únicamente cuando se cumple una fecha, evento o condición específicos?",
+      "opciones": ["Worm", "Logic bomb", "Adware", "Spyware"],
+      "respuesta": 1,
+      "explicacion": "Una logic bomb es código malicioso diseñado para activarse cuando se cumple una condición o desencadenante predefinido."
+    },
+    {
+      "pregunta": "El software que registra silenciosamente pulsaciones de teclado, historial del navegador y capturas de pantalla y envía esa información a un atacante es:",
+      "opciones": ["Adware", "Spyware", "Ransomware", "Rootkit"],
+      "respuesta": 1,
+      "explicacion": "Spyware está diseñado para recopilar información sobre el usuario o sistema de forma oculta y transmitirla a terceros."
+    },
+    {
+      "pregunta": "El software que muestra continuamente pop-ups y anuncios no deseados, normalmente con fines publicitarios, se denomina:",
+      "opciones": ["Spyware", "Adware", "Worm", "Trojan"],
+      "respuesta": 1,
+      "explicacion": "Adware es software orientado a mostrar publicidad no solicitada, redirecciones u otros contenidos promocionales."
+    },
+    {
+      "pregunta": "El malware que ejecuta su carga maliciosa principalmente en memoria y evita depender de archivos tradicionales escritos en disco se denomina:",
+      "opciones": ["Trojan", "Worm", "Fileless malware", "Spyware"],
+      "respuesta": 2,
+      "explicacion": "El fileless malware utiliza memoria y herramientas o componentes ya presentes en el sistema para reducir los artefactos tradicionales en disco y dificultar su detección."
+    },
+    {
+      "pregunta": "Una botnet se describe MEJOR como:",
+      "opciones": [
+        "Una red de servidores web legítimos.",
+        "Un conjunto de equipos infectados controlados remotamente por un atacante.",
+        "Un clúster de firewalls.",
+        "Un sistema de almacenamiento de copias de seguridad."
+      ],
+      "respuesta": 1,
+      "explicacion": "Una botnet es una red de dispositivos comprometidos bajo control de un operador malicioso y puede utilizarse para actividades como DDoS, spam o distribución de malware."
+    },
+    {
+      "pregunta": "Un Remote Access Trojan (RAT) proporciona a un atacante:",
+      "opciones": [
+        "Una visualización única de la pantalla.",
+        "Control remoto interactivo y persistente sobre el equipo de la víctima.",
+        "Espacio de disco gratuito.",
+        "Protección frente al phishing."
+      ],
+      "respuesta": 1,
+      "explicacion": "Un RAT instala una puerta trasera que permite al atacante controlar remotamente funciones del sistema comprometido durante un periodo prolongado."
+    },
+    {
+      "pregunta": "Una vulnerabilidad 'zero-day' es una vulnerabilidad que:",
+      "opciones": [
+        "Fue parcheada ayer.",
+        "Todavía no dispone de un parche conocido del proveedor.",
+        "Afecta únicamente a un usuario.",
+        "Fue creada el 1 de enero."
+      ],
+      "respuesta": 1,
+      "explicacion": "En el contexto de la pregunta, una vulnerabilidad zero-day carece todavía de una corrección disponible y puede ser explotada antes de que los defensores dispongan de un parche."
+    },
+    {
+      "pregunta": "Un Indicator of Compromise (IoC) se describe MEJOR como:",
+      "opciones": [
+        "Contenido de marketing de la web de un proveedor de seguridad.",
+        "Evidencia o artefactos técnicos, como un hash de archivo, una IP o un cambio en el registro, que pueden indicar que se ha producido una intrusión.",
+        "Un documento formal de políticas.",
+        "Un calendario de copias de seguridad."
+      ],
+      "respuesta": 1,
+      "explicacion": "Un IoC es un artefacto observable asociado potencialmente con actividad maliciosa o con un sistema comprometido y puede utilizarse para detección e investigación."
+    },
+    {
+      "pregunta": "Un atacante que explota una vulnerabilidad ANTES de que exista un parche o una firma de detección está explotando:",
+      "opciones": [
+        "Una vulnerabilidad conocida",
+        "Una vulnerabilidad zero-day",
+        "Únicamente un error de configuración",
+        "Una deficiencia de formación de usuarios"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un zero-day exploit aprovecha una vulnerabilidad para la que los defensores todavía no disponen de una corrección o mecanismos de detección suficientemente establecidos."
+    }
+  ]
+}
