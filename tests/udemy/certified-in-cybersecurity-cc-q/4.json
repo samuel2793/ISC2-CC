@@ -1,0 +1,1038 @@
+{
+  "titulo": "Batería de fundamentos de ciberseguridad #4",
+  "procedencia": "Test de evaluación proporcionado por el usuario",
+  "descripcion": "Batería de 99 preguntas sobre control de acceso, seguridad de redes, operaciones de seguridad, continuidad de negocio, recuperación ante desastres y principios de seguridad.",
+  "preguntas": [
+    {
+      "pregunta": "Un administrador de bases de datos abandona la empresa para incorporarse a un competidor. Durante el proceso de baja, el equipo de seguridad descubre que tenía acceso administrativo sin restricciones al sistema de nóminas de RR. HH., algo completamente ajeno a sus funciones. ¿Qué principio de seguridad se vulneró al concederle ese acceso?",
+      "opciones": [
+        "El principio de separación de funciones",
+        "El principio de control dual",
+        "El principio de denegación implícita",
+        "El principio de mínimo privilegio"
+      ],
+      "respuesta": 3,
+      "explicacion": "El principio de mínimo privilegio establece que cada usuario debe disponer únicamente de los permisos necesarios para realizar sus funciones. El acceso administrativo del DBA a nóminas era innecesario."
+    },
+    {
+      "pregunta": "Una empresa tecnológica diseña el control de acceso físico a una sala de servidores. Quiere que cada entrada quede vinculada de forma inequívoca a una persona y que el tailgating sea físicamente imposible. ¿Qué combinación de controles satisface mejor los requisitos de no repudio y prevención del tailgating?",
+      "opciones": [
+        "Exigir identificaciones visibles y colocar un guardia que compruebe manualmente los documentos",
+        "Implantar autenticación biométrica integrada con un mantrap que permita pasar a una sola persona cada vez",
+        "Usar un teclado con un código secreto compartido seguido de una tarjeta de proximidad",
+        "Instalar cámaras activadas por movimiento y conservar las grabaciones durante 90 días"
+      ],
+      "respuesta": 1,
+      "explicacion": "La biometría vincula el acceso a características únicas de una persona y favorece el no repudio, mientras que el mantrap impide físicamente que más de una persona atraviese el acceso a la vez."
+    },
+    {
+      "pregunta": "Una empresa quiere que los usuarios reciban únicamente los permisos necesarios para sus funciones y que esos permisos se actualicen o revoquen automáticamente cuando cambien de departamento o abandonen la organización. ¿Qué concepto y modelo de control de acceso pretende implantar principalmente?",
+      "opciones": [
+        "Discretionary Access Control, permitiendo a los propietarios delegar derechos",
+        "Mandatory Access Control basado en niveles de autorización de seguridad",
+        "Role-Based Access Control aplicando el principio de mínimo privilegio",
+        "Rule-Based Access Control mediante filtrado IP y restricciones horarias"
+      ],
+      "respuesta": 2,
+      "explicacion": "RBAC asigna permisos a roles asociados a funciones laborales. Esto facilita aplicar mínimo privilegio y modificar automáticamente los derechos cuando cambia el rol de un empleado."
+    },
+    {
+      "pregunta": "Una agencia gubernamental necesita que el acceso a información de inteligencia esté determinado por una autoridad central según la habilitación de seguridad del usuario y la clasificación de los datos. Los usuarios no deben poder cambiar los permisos de los archivos. ¿Qué modelo debe aplicar?",
+      "opciones": [
+        "Discretionary Access Control para todos los archivos de inteligencia",
+        "Mandatory Access Control basado en la clasificación de los datos",
+        "Role-Based Access Control mediante pertenencia a grupos",
+        "Attribute-Based Access Control utilizando ubicación y hora"
+      ],
+      "respuesta": 1,
+      "explicacion": "Mandatory Access Control (MAC) utiliza etiquetas de clasificación y niveles de autorización definidos centralmente, sin permitir que los usuarios modifiquen discrecionalmente los permisos."
+    },
+    {
+      "pregunta": "Una empresa ha migrado su repositorio de código fuente a la nube. Ya utiliza usuario y contraseña robusta, pero quiere añadir un factor adicional que ofrezca una protección fuerte frente a phishing, credential harvesting y credential stuffing. ¿Cuál es la implementación más segura?",
+      "opciones": [
+        "Obligar a cambiar la contraseña cada mes",
+        "Añadir una pregunta secreta sobre la primera mascota del usuario",
+        "Implantar llaves de seguridad hardware FIDO2 para todos los usuarios",
+        "Solicitar también el número de empleado durante el inicio de sesión"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las llaves FIDO2 proporcionan un factor de posesión resistente al phishing y emplean mecanismos criptográficos, por lo que constituyen una forma robusta de MFA."
+    },
+    {
+      "pregunta": "Una empresa contrata becarios de corta duración para trabajar únicamente en un módulo concreto. Quiere que solo accedan a los repositorios y documentación necesarios para esa tarea. ¿Qué enfoque debe aplicar?",
+      "opciones": [
+        "Conceder privilegios administrativos para que puedan resolver incidencias",
+        "Crear una cuenta de invitado compartida y de solo lectura para todos",
+        "Usar Discretionary Access Control gestionado por los responsables del proyecto",
+        "Aplicar mínimo privilegio mediante Role-Based Access Control"
+      ],
+      "respuesta": 3,
+      "explicacion": "El mínimo privilegio limita el acceso a lo estrictamente necesario y RBAC permite administrar esos permisos de forma consistente mediante roles."
+    },
+    {
+      "pregunta": "En un centro de datos, personas no autorizadas siguen a empleados legítimos cuando estos mantienen abierta la puerta segura. ¿Qué control físico está específicamente diseñado para impedir este tailgating o piggybacking?",
+      "opciones": [
+        "Cámaras CCTV de alta definición",
+        "Un guardia de seguridad que compruebe identificaciones",
+        "Sensores de movimiento en el pasillo",
+        "Un mantrap o vestíbulo de seguridad"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un mantrap utiliza dos puertas interbloqueadas y obliga a completar la autenticación antes de abrir la segunda, dificultando que otra persona siga al usuario autorizado."
+    },
+    {
+      "pregunta": "Un usuario accede remotamente a un servidor introduciendo primero su contraseña y después un código único de seis dígitos generado por una aplicación en su smartphone registrado. ¿Qué concepto de seguridad representa este proceso?",
+      "opciones": [
+        "Single Sign-On usando algo que eres y algo que sabes",
+        "Autenticación de doble factor usando algo que tienes y algo que eres",
+        "Identidad federada usando algo que sabes y algún lugar en el que estás",
+        "MFA usando algo que sabes y algo que tienes"
+      ],
+      "respuesta": 3,
+      "explicacion": "La contraseña es un factor de conocimiento y el código generado en el smartphone representa un factor de posesión, por lo que se trata de MFA."
+    },
+    {
+      "pregunta": "Una organización quiere impedir el tailgating en la entrada de un centro de datos y garantizar que solo una persona pueda atravesar el acceso después de autenticarse correctamente. ¿Qué control físico es más efectivo?",
+      "opciones": [
+        "Cámaras CCTV de alta resolución",
+        "Instalación de un mantrap o portal de seguridad",
+        "Una alarma DTMF",
+        "Un guardia en el vestíbulo principal"
+      ],
+      "respuesta": 1,
+      "explicacion": "El mantrap emplea puertas interbloqueadas y control de autenticación para permitir el paso individual, por lo que constituye un control preventivo específico frente al tailgating."
+    },
+    {
+      "pregunta": "Durante una auditoría se descubre que todos los empleados de marketing tienen permisos de Full Control sobre todo el servidor de archivos, incluidos documentos legales y financieros ajenos a sus funciones. ¿Qué concepto de control de acceso se está ignorando?",
+      "opciones": [
+        "Aplicar el principio de mínimo privilegio a todas las cuentas",
+        "Implantar Mandatory Access Control basado en habilitaciones",
+        "Aplicar Attribute-Based Access Control para permisos dinámicos",
+        "Utilizar controles físicos para proteger la sala de servidores"
+      ],
+      "respuesta": 0,
+      "explicacion": "El mínimo privilegio obliga a conceder únicamente los permisos necesarios para el puesto, evitando accesos excesivos a información no relacionada con las funciones del usuario."
+    },
+    {
+      "pregunta": "Una empresa quiere que cada acceso a un repositorio sensible verifique identidad y permisos y, además, registre de forma auditable las acciones realizadas. ¿Qué componente del marco AAA es responsable principalmente de registrar esas acciones?",
+      "opciones": [
+        "Accounting, que registra actividades de usuario y uso de recursos para auditoría",
+        "Authentication, que valida las credenciales del usuario",
+        "Authorization, que determina el nivel de acceso concedido",
+        "Identification, que permite al usuario declarar una identidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Accounting es el componente de AAA encargado de registrar las actividades realizadas por los usuarios, proporcionando trazabilidad y evidencias para auditoría."
+    },
+    {
+      "pregunta": "Un administrador propone conceder Full Control sobre todo el servidor de archivos a todos los miembros del departamento de contabilidad para simplificar la gestión. El responsable de seguridad se opone. ¿Qué principio está aplicando?",
+      "opciones": [
+        "Mandatory Access Control basado en etiquetas de sensibilidad",
+        "Rule-Based Access Control utilizando lógica de firewall",
+        "Principio de mínimo privilegio para los permisos de usuario",
+        "Separación de funciones para tareas financieras críticas"
+      ],
+      "respuesta": 2,
+      "explicacion": "El principio de mínimo privilegio exige limitar los permisos a aquellos estrictamente necesarios para las funciones de cada usuario."
+    },
+    {
+      "pregunta": "Una firma contable quiere que los auditores junior reciban automáticamente acceso de solo lectura a carpetas de clientes en función de su función laboral, reduciendo la administración individual de permisos. ¿Qué modelo de acceso es el más adecuado?",
+      "opciones": [
+        "Discretionary Access Control",
+        "Mandatory Access Control",
+        "Role-Based Access Control",
+        "Attribute-Based Access Control"
+      ],
+      "respuesta": 2,
+      "explicacion": "RBAC permite asociar los permisos al rol de auditor junior y asignarlos automáticamente a los usuarios que desempeñan esa función."
+    },
+    {
+      "pregunta": "Una empresa con arquitectura Zero Trust quiere implantar MFA combinando categorías de autenticación distintas. ¿Qué combinación representa la opción más robusta de las siguientes?",
+      "opciones": [
+        "Una contraseña maestra compleja y una segunda contraseña de respaldo",
+        "Huella dactilar y reconocimiento facial",
+        "Un PIN enviado por SMS y una pregunta de seguridad",
+        "Una contraseña robusta y un token temporal generado por una aplicación autenticadora verificada"
+      ],
+      "respuesta": 3,
+      "explicacion": "La contraseña pertenece a algo que sabes y el token generado por el dispositivo a algo que tienes, combinando dos categorías diferentes de autenticación."
+    },
+    {
+      "pregunta": "Una organización utiliza usuario y contraseña para sus aplicaciones cloud y quiere añadir un token hardware que genere contraseñas de un solo uso. ¿Qué está implementando?",
+      "opciones": [
+        "MFA utilizando categorías de autenticación diferentes",
+        "Single Sign-On para simplificar el inicio de sesión",
+        "Verificación biométrica de presencia física",
+        "Una política estricta de complejidad y rotación de contraseñas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Combinar una contraseña, algo que se sabe, con un token hardware, algo que se posee, constituye MFA."
+    },
+    {
+      "pregunta": "Un edificio utiliza lectores de tarjeta y torniquetes ópticos capaces de detectar si dos personas intentan pasar después de una sola autenticación válida. Si ocurre, el acceso se bloquea y suena una alarma. ¿Qué amenaza física pretende mitigar?",
+      "opciones": [
+        "Shoulder surfing",
+        "Dumpster diving",
+        "Ingeniería social mediante llamadas fraudulentas",
+        "Tailgating o piggybacking"
+      ],
+      "respuesta": 3,
+      "explicacion": "El tailgating o piggybacking consiste en que una persona no autorizada acceda siguiendo a otra autorizada. Los torniquetes pueden detectar y bloquear este comportamiento."
+    },
+    {
+      "pregunta": "Para entrar en una sala de servidores se exige presentar una smart card física y superar un escaneo biométrico del iris. ¿Qué mecanismo de autenticación representa?",
+      "opciones": [
+        "Autenticación de un solo factor usando dos tokens físicos",
+        "MFA combinando algo que tienes y algo que eres",
+        "Autenticación mutua entre el servidor y el usuario físico",
+        "Federación de identidad mediante aserciones SAML"
+      ],
+      "respuesta": 1,
+      "explicacion": "La smart card es un factor de posesión y el iris un factor biométrico de inherencia; al pertenecer a categorías distintas, constituyen MFA."
+    },
+    {
+      "pregunta": "Una empresa exige una contraseña y un código de un solo uso enviado al móvil para acceder al correo corporativo. ¿Qué aspecto del marco AAA se refuerza principalmente?",
+      "opciones": [
+        "Authorization sobre carpetas concretas de correo",
+        "Accounting de las actividades de inicio de sesión",
+        "Authentication de la identidad del usuario",
+        "Auditoría del tráfico de red sospechoso"
+      ],
+      "respuesta": 2,
+      "explicacion": "MFA refuerza el proceso de Authentication al aumentar la confianza en que el usuario es realmente quien afirma ser."
+    },
+    {
+      "pregunta": "Una empresa exige una contraseña y una llave hardware registrada para acceder a sus repositorios de código, de modo que una contraseña robada no sea suficiente. ¿Qué concepto representa este diseño?",
+      "opciones": [
+        "Single Sign-On",
+        "Role-Based Access Control",
+        "MFA mediante algo que sabes y algo que tienes",
+        "Federación de identidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "La contraseña es un factor de conocimiento y la llave física un factor de posesión; su combinación constituye MFA."
+    },
+    {
+      "pregunta": "Una empresa concede a cada empleado únicamente el nivel mínimo de acceso necesario. Por ejemplo, un agente de atención al cliente puede ver información de contacto, pero no exportar toda la base de datos ni modificar registros de facturación. ¿Qué principio se aplica?",
+      "opciones": [
+        "Separación de funciones",
+        "Need to Know",
+        "Autenticación de dos factores",
+        "Mínimo privilegio"
+      ],
+      "respuesta": 3,
+      "explicacion": "El mínimo privilegio restringe los derechos de cada usuario a las acciones estrictamente necesarias para desempeñar su función."
+    },
+    {
+      "pregunta": "Una empresa quiere que los usuarios se identifiquen, autentiquen mediante contraseña y token, reciban permisos según su rol y que todas sus acciones queden registradas para auditoría. ¿Qué enfoque debe implantar?",
+      "opciones": [
+        "Solo las fases de identificación, autenticación y autorización",
+        "Un marco AAA completo que incluya Accounting",
+        "MFA sin registro centralizado ni gestión de permisos",
+        "Mandatory Access Control basado en niveles de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "AAA integra Authentication, Authorization y Accounting, cubriendo la verificación de identidad, la concesión de permisos y el registro de actividades."
+    },
+    {
+      "pregunta": "Una empresa quiere que cualquier dispositivo conectado a un puerto físico de un switch tenga que autenticarse y ser autorizado mediante 802.1X antes de transmitir datos. ¿Qué control técnico se describe?",
+      "opciones": [
+        "Port Security y 802.1X",
+        "Network Address Translation (NAT)",
+        "Virtual Private Network (VPN)",
+        "Filtrado de direcciones MAC"
+      ],
+      "respuesta": 0,
+      "explicacion": "802.1X proporciona control de acceso a red basado en puertos y suele utilizar un servidor como RADIUS para autenticar el dispositivo antes de habilitar el tráfico."
+    },
+    {
+      "pregunta": "Una empresa minorista quiere aislar sus terminales de procesamiento de pagos de la red administrativa, bloquear el tráfico lateral entre ambas y permitir que los terminales accedan a Internet para verificar pagos. ¿Qué solución debe implementar?",
+      "opciones": [
+        "Una conexión VPN",
+        "Un Web Application Firewall en la DMZ",
+        "Un IDS en los hosts",
+        "Segmentación de red mediante firewalls y VLANs"
+      ],
+      "respuesta": 3,
+      "explicacion": "Las VLANs permiten separar lógicamente los entornos y los firewalls controlan qué comunicaciones pueden atravesar los segmentos."
+    },
+    {
+      "pregunta": "Una empresa necesita un mecanismo de filtrado que mantenga el estado de las conexiones activas, permita dinámicamente el tráfico de respuesta correspondiente a solicitudes salientes y bloquee conexiones entrantes no solicitadas. ¿Qué tecnología debe utilizar?",
+      "opciones": [
+        "Un firewall de inspección stateful con una tabla de conexiones",
+        "Un router de filtrado stateless que evalúe cada paquete de forma aislada",
+        "Un IDS que analice patrones y genere alertas",
+        "Un reverse proxy que almacene contenido y termine conexiones TLS"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un firewall stateful mantiene información sobre las sesiones activas y puede permitir automáticamente el tráfico de retorno asociado mientras bloquea conexiones no solicitadas."
+    },
+    {
+      "pregunta": "Un administrador quiere proteger las comunicaciones entre estaciones de trabajo y servidores internos frente a escuchas de atacantes con acceso físico a la red. ¿Qué opción proporciona cifrado de los datos en tránsito?",
+      "opciones": [
+        "Telnet sin cifrar",
+        "Transport Layer Security para el tráfico interno",
+        "Filtrado MAC en los switches",
+        "SNMP versión 1"
+      ],
+      "respuesta": 1,
+      "explicacion": "TLS proporciona confidencialidad e integridad mediante cifrado de los datos en tránsito, impidiendo que un atacante pueda interpretar los paquetes interceptados."
+    },
+    {
+      "pregunta": "Los consultores invitados conectan sus portátiles a las mismas redes físicas que los servidores internos. El administrador quiere aislar lógicamente el tráfico de invitados aunque se utilicen los mismos switches. ¿Qué técnica debe implementar?",
+      "opciones": [
+        "VLANs para separar el tráfico de invitados de la red interna",
+        "Firewalls de host en todos los servidores",
+        "Un acelerador WAN",
+        "Direcciones IP estáticas en los equipos invitados"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las VLANs crean dominios lógicos separados sobre la misma infraestructura física y permiten aislar la red de invitados de los sistemas sensibles."
+    },
+    {
+      "pregunta": "Una institución financiera coloca sus servidores web expuestos a Internet en un segmento público y la base de datos en otro segmento aislado, permitiendo únicamente determinados puertos entre ambos. ¿Qué diseño de red está utilizando?",
+      "opciones": [
+        "Una VPN con cifrado extremo a extremo",
+        "Una puerta de enlace NAT para ocultar la IP de la base de datos",
+        "Un IPS para bloquear comandos SQL no autorizados",
+        "Una DMZ con segmentación de red y reglas de firewall"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una DMZ separa los servicios expuestos públicamente de los sistemas internos y utiliza firewalls para limitar estrictamente el tráfico entre zonas."
+    },
+    {
+      "pregunta": "Una empresa quiere detectar y bloquear activamente ataques contra aplicaciones web, como SQL injection y XSS, antes de que alcancen sus servidores. ¿Qué dispositivo y ubicación son adecuados?",
+      "opciones": [
+        "Un IPS desplegado inline entre el firewall externo y los servidores web",
+        "Un IDS en modo pasivo conectado a un puerto de monitorización",
+        "Un firewall stateful dentro de la zona de bases de datos",
+        "Una puerta de enlace VPN en las oficinas remotas de los clientes"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un IPS inline está directamente en la ruta del tráfico y puede detectar y descartar tráfico malicioso antes de que llegue al objetivo."
+    },
+    {
+      "pregunta": "Los desarrolladores conectan portátiles personales a la VLAN de producción. El administrador quiere que únicamente dispositivos corporativos autorizados puedan comunicarse con ese segmento. ¿Qué estrategia está implementando?",
+      "opciones": [
+        "Una VPN para todas las conexiones remotas",
+        "Un IDS para monitorizar a los desarrolladores",
+        "Segmentación de red y Network Access Control (NAC)",
+        "Un proxy para filtrar el tráfico saliente de producción"
+      ],
+      "respuesta": 2,
+      "explicacion": "La segmentación aísla el entorno de producción y NAC verifica que los dispositivos estén autorizados y cumplan las políticas antes de permitirles el acceso."
+    },
+    {
+      "pregunta": "Un empleado usa HTTP sin cifrar desde una Wi-Fi pública para acceder al CRM corporativo, permitiendo que un atacante cercano intercepte el token de sesión. ¿Qué protocolo o herramienta debería haberse utilizado?",
+      "opciones": [
+        "Una VPN cifrada o HTTPS para proteger el tráfico",
+        "Un IPS de red en el perímetro corporativo",
+        "DNSSEC en el equipo del empleado",
+        "Filtrado estático de direcciones MAC"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una VPN o HTTPS cifra los datos en tránsito, evitando que un atacante conectado a la misma red inalámbrica pueda leer credenciales o tokens interceptados."
+    },
+    {
+      "pregunta": "Una tienda online quiere proteger los datos de tarjetas durante su transmisión y permitir que el cliente compruebe que está conectado al servidor legítimo. ¿Qué tecnología satisface ambos requisitos?",
+      "opciones": [
+        "TLS para cifrado de confidencialidad y certificados para autenticación del servidor",
+        "Aplicar SHA-256 a los números de tarjeta antes de transmitirlos",
+        "Exigir a cada cliente instalar una VPN",
+        "Activar MFA para todos los clientes"
+      ],
+      "respuesta": 0,
+      "explicacion": "TLS cifra la comunicación y utiliza certificados, normalmente mediante PKI, para autenticar la identidad del servidor."
+    },
+    {
+      "pregunta": "Un empleado que trabaja desde casa necesita acceder a una aplicación interna y la empresa quiere cifrar todo el tráfico entre su portátil y la red corporativa a través de Internet. ¿Qué tecnología debe utilizar?",
+      "opciones": [
+        "Endpoint Detection and Response",
+        "VPN mediante IPsec o TLS",
+        "Intrusion Prevention System",
+        "SFTP para todas las cargas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una VPN crea un túnel cifrado mediante protocolos como IPsec o TLS, protegiendo el tráfico de acceso remoto a través de redes no confiables."
+    },
+    {
+      "pregunta": "Un servidor web permite HTTP en el puerto 80. Para proteger información sensible enviada mediante formularios, el administrador deshabilita HTTP y obliga a utilizar HTTPS en el puerto 443. ¿Qué objetivo de seguridad persigue principalmente?",
+      "opciones": [
+        "Proteger la integridad del sistema operativo del servidor",
+        "Garantizar la disponibilidad frente a ataques DoS",
+        "Mantener la confidencialidad de los datos durante la transmisión",
+        "Mejorar la accountability de los usuarios"
+      ],
+      "respuesta": 2,
+      "explicacion": "HTTPS utiliza TLS para cifrar los datos en tránsito, evitando que terceros puedan leer información interceptada."
+    },
+    {
+      "pregunta": "Los administradores gestionan directamente por Internet varios servidores Linux cloud, exponiéndolos continuamente a ataques de fuerza bruta contra SSH. ¿Qué patrón de diseño debe emplearse para reducir la exposición directa?",
+      "opciones": [
+        "Un bastion host seguro en una subred privada por el que pase todo el tráfico administrativo mediante SSH",
+        "Habilitar Telnet en el firewall perimetral",
+        "Desplegar un punto de acceso Wi-Fi abierto",
+        "Usar un balanceador público para distribuir los ataques entre los servidores"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un bastion host o jump box centraliza el acceso administrativo en un único punto endurecido y evita exponer directamente los puertos de gestión de todos los servidores."
+    },
+    {
+      "pregunta": "Una empresa quiere que, aunque un servidor web expuesto a Internet sea comprometido, el atacante no pueda pivotar fácilmente hacia la red interna. Necesita un segmento específico para servidores que deban comunicarse con Internet y con la red privada bajo controles estrictos. ¿Qué debe implantar?",
+      "opciones": [
+        "Una VPN para empleados remotos",
+        "Una Demilitarized Zone (DMZ)",
+        "Una red Wi-Fi de invitados",
+        "Un Network IDS en la LAN interna"
+      ],
+      "respuesta": 1,
+      "explicacion": "La DMZ aísla los servicios públicos de la red interna y permite aplicar reglas de firewall estrictas para limitar el movimiento lateral."
+    },
+    {
+      "pregunta": "Un administrador utiliza Telnet para gestionar servidores Linux remotos. La auditoría señala que Telnet transmite usuarios, contraseñas y comandos en texto claro. ¿Cuál es la alternativa más segura?",
+      "opciones": ["FTP", "Secure Shell (SSH)", "SNMPv1", "HTTP"],
+      "respuesta": 1,
+      "explicacion": "SSH cifra toda la sesión de administración remota y es el sustituto seguro estándar de Telnet."
+    },
+    {
+      "pregunta": "Los sistemas POS que procesan tarjetas están en la misma red local que quioscos públicos de Internet. ¿Qué cambio estructural es más efectivo para impedir que un quiosco comprometido alcance los sistemas de pago?",
+      "opciones": [
+        "Instalar antivirus de alto rendimiento en cada quiosco",
+        "Separar POS y quioscos en VLANs distintas y aisladas",
+        "Actualizar los switches para aumentar la velocidad de transferencia",
+        "Usar un único firewall en la puerta de enlace principal de Internet"
+      ],
+      "respuesta": 1,
+      "explicacion": "La segmentación mediante VLANs y controles entre segmentos limita el movimiento lateral y separa los dispositivos públicos del entorno de pagos."
+    },
+    {
+      "pregunta": "Un equipo comercial trabaja frecuentemente desde cafeterías y hoteles y necesita acceder al CRM corporativo. ¿Qué tecnología debe desplegarse en sus portátiles para crear un túnel cifrado hacia la red corporativa?",
+      "opciones": [
+        "VPN de acceso remoto con IPsec o TLS",
+        "WPA3-Personal",
+        "NAT en el router corporativo",
+        "Web Application Firewall"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una VPN de acceso remoto cifra el tráfico a través de redes públicas no confiables y protege los datos frente a escuchas locales."
+    },
+    {
+      "pregunta": "Un hospital descubre que dispositivos médicos como equipos de MRI comparten segmento con la Wi-Fi pública de visitantes. Se recomienda mover los dispositivos a una red aislada con controles estrictos de tráfico. ¿Cómo se denomina esta estrategia?",
+      "opciones": [
+        "VPN para cifrar la comunicación entre dispositivos",
+        "Load Balancing",
+        "Port Security",
+        "Network Segmentation"
+      ],
+      "respuesta": 3,
+      "explicacion": "La segmentación de red divide la infraestructura en zonas separadas y permite controlar el tráfico entre ellas mediante firewalls o ACLs."
+    },
+    {
+      "pregunta": "Tras un ataque, el atacante elimina todos los logs locales de un servidor comprometido. ¿Qué debe implantar la organización para conservar registros utilizables en futuras investigaciones aunque el host local sea comprometido?",
+      "opciones": [
+        "Antivirus con análisis en tiempo real",
+        "SIEM con logging remoto",
+        "Discretionary Access Control sobre el directorio de logs",
+        "DLP para impedir el borrado de archivos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un SIEM con envío remoto de logs centraliza y conserva los eventos fuera del host comprometido, evitando que un atacante pueda borrar toda la evidencia local."
+    },
+    {
+      "pregunta": "Un ransomware se propagó lateralmente porque todos los equipos utilizaban la misma contraseña de administrador local. ¿Qué control habría sido más efectivo para impedir esa propagación?",
+      "opciones": [
+        "Implementar LAPS para aleatorizar las credenciales de administrador local",
+        "Realizar formación anual de concienciación",
+        "Configurar copias incrementales diarias offline",
+        "Desplegar un IDS basado en firmas en la puerta de enlace"
+      ],
+      "respuesta": 0,
+      "explicacion": "LAPS asigna contraseñas de administrador local únicas y robustas a los equipos, evitando que una credencial comprometida pueda reutilizarse para desplazarse lateralmente."
+    },
+    {
+      "pregunta": "Durante un brote de malware, el equipo ya ha identificado y aislado los equipos infectados. Ahora realiza análisis de causa raíz, busca backdoors y elimina por completo archivos y claves de registro maliciosos. ¿En qué fase de respuesta a incidentes se encuentra?",
+      "opciones": ["Eradication", "Containment", "Preparation", "Recovery"],
+      "respuesta": 0,
+      "explicacion": "La fase de Eradication consiste en eliminar la amenaza, sus mecanismos de persistencia y las causas que permitieron la infección."
+    },
+    {
+      "pregunta": "Un analista detecta tráfico saliente anómalo por el puerto 53 desde un servidor de bases de datos y sospecha exfiltración activa mediante DNS tunneling. ¿Cuál es el siguiente paso inmediato del ciclo de respuesta a incidentes?",
+      "opciones": [
+        "Realizar un análisis completo de causa raíz",
+        "Borrar el sistema operativo para erradicar la amenaza",
+        "Aislar inmediatamente el host afectado de la red",
+        "Restaurar la máquina virtual desde la última copia semanal"
+      ],
+      "respuesta": 2,
+      "explicacion": "Ante una exfiltración activa, la prioridad es la contención. Aislar el host detiene la fuga de datos y limita el movimiento lateral."
+    },
+    {
+      "pregunta": "Un EDR alerta de que una estación de RR. HH. establece conexiones cifradas a una IP extranjera a las 3:00 y ejecuta un proceso que suplanta a un servicio legítimo. ¿Cuál es el paso inmediato más apropiado?",
+      "opciones": [
+        "Formatear inmediatamente el disco duro",
+        "Aislar la estación de trabajo de la red",
+        "Preguntar al empleado si estaba trabajando y transfiriendo archivos",
+        "Eliminar manualmente el proceso y reiniciar el equipo"
+      ],
+      "respuesta": 1,
+      "explicacion": "El aislamiento es una acción de contención que detiene la exfiltración y el movimiento lateral sin destruir las evidencias necesarias para la investigación."
+    },
+    {
+      "pregunta": "Un analista de SIEM confirma que un servidor de bases de datos está enviando un volumen anormal de datos a una IP externa y que existe una exfiltración real. ¿Qué acción debe realizar inmediatamente?",
+      "opciones": [
+        "Iniciar Recovery restaurando el servidor",
+        "Contener el incidente aislando el servidor de la red",
+        "Realizar una revisión post-incidente",
+        "Erradicar la amenaza reformateando los discos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Tras confirmar un incidente activo, la prioridad es la contención para detener la pérdida de datos antes de proceder a erradicación y recuperación."
+    },
+    {
+      "pregunta": "Una organización contrata un equipo externo para simular de forma sigilosa y realista un ciberataque contra producción sin avisar previamente al equipo defensor, con el objetivo de evaluar detección y respuesta. ¿Qué tipo de evaluación es?",
+      "opciones": [
+        "Vulnerability assessment automatizado",
+        "Red team engagement para poner a prueba al blue team",
+        "Pentest gray-box",
+        "Auditoría white-hat de cumplimiento"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un red team engagement simula técnicas y comportamiento de adversarios reales para evaluar personas, procesos y controles defensivos, incluido el blue team."
+    },
+    {
+      "pregunta": "Un SIEM genera cientos de alertas de escalada de privilegios que, tras investigarlas, resultan corresponder a una herramienta autorizada de despliegue de software. ¿Cómo deben clasificarse y qué debe hacerse?",
+      "opciones": [
+        "Como falsos positivos y ajustar las reglas de correlación para excluir el comportamiento legítimo de la herramienta",
+        "Como verdaderos positivos y aislar inmediatamente el servidor de despliegue",
+        "Como falsos negativos y desactivar completamente las reglas de escalada de privilegios",
+        "Como verdaderos positivos benignos e ignorar todas las alertas futuras de esa herramienta"
+      ],
+      "respuesta": 0,
+      "explicacion": "Son falsos positivos porque actividad legítima fue identificada como maliciosa. El SIEM debe ajustarse para reducir ruido sin eliminar la capacidad de detectar ataques reales."
+    },
+    {
+      "pregunta": "Una organización necesita correlacionar intentos de inicio de sesión fallidos, accesos exitosos anómalos y otros eventos procedentes de diferentes sistemas en una plataforma centralizada. ¿Qué herramienta está diseñada específicamente para ello?",
+      "opciones": [
+        "Security Information and Event Management (SIEM)",
+        "Endpoint Detection and Response (EDR)",
+        "Intrusion Prevention System (IPS)",
+        "Data Loss Prevention (DLP)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un SIEM recopila y normaliza logs de múltiples fuentes, correlaciona eventos y genera alertas sobre patrones de actividad potencialmente maliciosos."
+    },
+    {
+      "pregunta": "Un EDR detecta que un ransomware ha comenzado a cifrar archivos en un portátil. El responsable lo desconecta inmediatamente de la red para impedir que alcance los servidores de archivos. ¿En qué fase de respuesta a incidentes está actuando?",
+      "opciones": [
+        "Detection and Analysis",
+        "Containment",
+        "Eradication",
+        "Recovery"
+      ],
+      "respuesta": 1,
+      "explicacion": "Desconectar el equipo limita la propagación y el impacto del incidente, que es precisamente el objetivo de la fase de Containment."
+    },
+    {
+      "pregunta": "Un analista detecta numerosos inicios de sesión fallidos seguidos de uno exitoso desde una ubicación inusual a las 3:00. Confirma que el usuario está de vacaciones y no está trabajando. ¿Cuál es el siguiente paso más apropiado?",
+      "opciones": [
+        "Eliminar la cuenta de Active Directory",
+        "Aislar la cuenta y el host afectados",
+        "Crear una imagen forense completa del controlador de dominio",
+        "Notificar inmediatamente una brecha al departamento legal"
+      ],
+      "respuesta": 1,
+      "explicacion": "El siguiente paso es contener el incidente deshabilitando o aislando las credenciales y sistemas comprometidos para impedir nuevas acciones del atacante."
+    },
+    {
+      "pregunta": "Una agencia centraliza en un SIEM los logs de firewalls, controladores de dominio y servidores web. ¿Cuál es una ventaja principal de esta centralización?",
+      "opciones": [
+        "Aplicación automática de parches en los dispositivos origen",
+        "Eliminar la necesidad de un equipo de respuesta a incidentes",
+        "Correlacionar eventos procedentes de múltiples fuentes diferentes",
+        "Garantizar protección total frente a exploits zero-day"
+      ],
+      "respuesta": 2,
+      "explicacion": "La correlación permite relacionar eventos de sistemas diferentes para identificar patrones de ataque que serían difíciles de detectar revisando cada fuente de forma aislada."
+    },
+    {
+      "pregunta": "Un SOC está saturado por miles de alertas procedentes de firewalls, antivirus e IDS y necesita agregarlas y correlacionarlas para detectar ataques de varias fases. ¿Qué solución debe implantar?",
+      "opciones": [
+        "EDR en todas las estaciones de trabajo",
+        "SIEM para centralizar y correlacionar logs",
+        "Next-Generation Firewall",
+        "Escáner de vulnerabilidades mensual"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un SIEM centraliza eventos de múltiples tecnologías, los normaliza y aplica reglas de correlación para detectar incidentes complejos."
+    },
+    {
+      "pregunta": "Una organización sanitaria necesita recopilar logs de servidores Windows y Linux, plataformas cloud y firewalls físicos, normalizarlos y correlacionarlos en tiempo real. ¿Qué herramienta es la más adecuada?",
+      "opciones": ["EDR", "Next-Generation Firewall", "SIEM", "IPS"],
+      "respuesta": 2,
+      "explicacion": "Un SIEM está diseñado para agregar, normalizar, analizar y correlacionar eventos procedentes de fuentes heterogéneas."
+    },
+    {
+      "pregunta": "Varios servidores llevan más de seis meses sin recibir actualizaciones críticas del sistema operativo. ¿Qué proceso operativo debe implantar el administrador para abordar sistemáticamente esta vulnerabilidad?",
+      "opciones": [
+        "Un programa de patch management con escaneos regulares y pruebas escalonadas de parches",
+        "EDR para bloquear automáticamente todos los exploits",
+        "SIEM para registrar intentos de acceso no autorizado",
+        "Un análisis de riesgos para calcular el Annual Loss Expectancy"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un programa de gestión de parches identifica actualizaciones pendientes, las prueba y las despliega de forma controlada para reducir vulnerabilidades conocidas."
+    },
+    {
+      "pregunta": "Un SIEM detecta intentos fallidos contra un controlador de dominio seguidos de un acceso exitoso desde laEM detecta intentos fallidos contra un controlador de dominio seguidos de un acceso exitoso desde la misma IP y la ejecución de PowerShell para exportar datos de Active Directory. ¿Qué debe hacer inmediatamente el analista?",
+      "opciones": [
+        "Eliminar el controlador de dominio del entorno virtual",
+        "Aislar el host o la cuenta afectada para contener la amenaza",
+        "Bloquear indefinidamente todo el tráfico de países extranjeros",
+        "Preparar un comunicado público"
+      ],
+      "respuesta": 1,
+      "explicacion": "Tras identificar una intrusión activa, la prioridad es la contención para impedir nuevas acciones o movimiento lateral y conservar evidencias."
+    },
+    {
+      "pregunta": "Un SOC detecta que una estación de RR. HH. se comunica con un servidor Command and Control (C2) asociado a ransomware. ¿Cuál debe ser la prioridad inmediata durante la fase de contención?",
+      "opciones": [
+        "Aislar inmediatamente la estación de trabajo de la red",
+        "Borrar el equipo y restaurarlo desde una copia limpia",
+        "Ejecutar un análisis antivirus completo",
+        "Seguir monitorizando el tráfico para descubrir más IP maliciosas"
+      ],
+      "respuesta": 0,
+      "explicacion": "El aislamiento corta la comunicación con el C2 y limita la exfiltración y el movimiento lateral, preservando además el equipo para análisis forense."
+    },
+    {
+      "pregunta": "Un WAF registra numerosos intentos de introducir cadenas como OR 1=1 y UNION SELECT en los campos de inicio de sesión de una aplicación web. ¿Qué tipo de ataque representan?",
+      "opciones": [
+        "Distributed Denial of Service",
+        "Cross-Site Scripting",
+        "Directory Traversal",
+        "SQL Injection"
+      ],
+      "respuesta": 3,
+      "explicacion": "Expresiones como OR 1=1 y UNION SELECT son patrones característicos de SQL injection destinados a alterar las consultas ejecutadas contra la base de datos."
+    },
+    {
+      "pregunta": "La dirección de una entidad financiera determina que el sistema de transacciones no puede perder más de dos horas de datos. ¿Qué métrica debe establecerse para reflejar ese requisito?",
+      "opciones": [
+        "Recovery Time Objective de al menos dos horas",
+        "Recovery Point Objective de no más de dos horas",
+        "Un hot site con replicación síncrona en tiempo real",
+        "Una copia incremental cada 24 horas"
+      ],
+      "respuesta": 1,
+      "explicacion": "El RPO define la máxima cantidad de datos que se puede perder, expresada como el intervalo temporal entre el fallo y el último punto recuperable."
+    },
+    {
+      "pregunta": "Un hospital quiere probar anualmente su plan de recuperación sin afectar a las operaciones clínicas. Reúne a responsables de negocio y administradores para recorrer verbalmente un escenario de ransomware paso a paso. ¿Qué tipo de prueba realiza?",
+      "opciones": [
+        "Full interruption test",
+        "Parallel test",
+        "Tabletop exercise",
+        "Simulation test con failover de sistemas"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un tabletop exercise es una revisión basada en discusión que permite validar roles, procedimientos y documentación sin alterar los sistemas de producción."
+    },
+    {
+      "pregunta": "Un banco necesita un sitio secundario con hardware y software instalados y datos sincronizados casi en tiempo real para permitir un failover inmediato. ¿Qué tipo de sitio necesita?",
+      "opciones": [
+        "Hot site",
+        "Warm site",
+        "Cold site",
+        "Solución de backup cloud"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un hot site mantiene infraestructura plenamente operativa y datos actuales, permitiendo una transición muy rápida con RTO y RPO reducidos."
+    },
+    {
+      "pregunta": "Una instalación secundaria dispone de espacio, energía, refrigeración y red, pero no tiene servidores ni las últimas copias de datos cargadas. Serían necesarios varios días para enviar y configurar el hardware. ¿Cómo se clasifica?",
+      "opciones": [
+        "Hot site",
+        "Cold site",
+        "Warm site",
+        "Reciprocal agreement"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un cold site ofrece principalmente las instalaciones y servicios básicos, pero requiere llevar e instalar el hardware y restaurar los datos."
+    },
+    {
+      "pregunta": "Un servidor falla a las 14:00 y se restaura con la última copia de seguridad realizada a las 02:00. La política establece que no pueden perderse más de cuatro horas de datos. ¿Qué métrica se ha incumplido?",
+      "opciones": [
+        "Recovery Point Objective (RPO)",
+        "Recovery Time Objective (RTO)",
+        "Maximum Tolerable Downtime (MTD)",
+        "Work Recovery Time (WRT)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Se perdieron potencialmente 12 horas de datos, por lo que se excedió el RPO máximo permitido de cuatro horas."
+    },
+    {
+      "pregunta": "Tras un incendio, una empresa redirige sus operaciones a un sitio secundario con hardware, energía y conectividad ya instalados, pero necesita restaurar las últimas cintas de backup antes de operar. ¿Qué tipo de sitio es?",
+      "opciones": ["Hot site", "Cold site", "Warm site", "Mobile site"],
+      "respuesta": 2,
+      "explicacion": "Un warm site dispone de infraestructura y hardware preparados, pero requiere restaurar datos y completar configuraciones antes de entrar en producción."
+    },
+    {
+      "pregunta": "Una agencia gubernamental necesita un sitio secundario que pueda estar operativo en pocas horas y que ya disponga de hardware, telecomunicaciones y datos actuales. ¿Qué solución es la adecuada?",
+      "opciones": [
+        "Cold site",
+        "Warm site",
+        "Mobile recovery site",
+        "Hot site con datos sincronizados y hardware redundante"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un hot site mantiene una réplica prácticamente operativa de producción, por lo que permite recuperaciones muy rápidas."
+    },
+    {
+      "pregunta": "Una empresa quiere comprobar técnicamente que sus sistemas pueden operar desde un hot site, pero sin causar ningún impacto sobre producción. ¿Qué tipo de prueba de Disaster Recovery debe realizar?",
+      "opciones": [
+        "Tabletop exercise",
+        "Parallel test",
+        "Full interruption test",
+        "Checklist test"
+      ],
+      "respuesta": 1,
+      "explicacion": "En una prueba paralela, el entorno de recuperación se pone en funcionamiento y se valida mientras el entorno productivo continúa operando normalmente."
+    },
+    {
+      "pregunta": "Ante la llegada prevista de un huracán, una entidad financiera redirige proactivamente los procesos de atención al cliente y transacciones a un sitio alternativo para que los servicios continúen sin interrupción. ¿Cuál es el objetivo principal de esta actuación?",
+      "opciones": [
+        "Activar el Disaster Recovery Plan para restaurar servicios después del daño",
+        "Aplicar el Business Continuity Plan para mantener operativos los procesos críticos durante el desastre",
+        "Realizar un Business Impact Analysis",
+        "Revisar el Incident Response Plan"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Business Continuity Plan busca mantener en funcionamiento las actividades críticas durante una interrupción, mientras que Disaster Recovery se centra en recuperar sistemas afectados."
+    },
+    {
+      "pregunta": "Una entidad financiera quiere definir la máxima cantidad de datos que puede perder, expresada en tiempo desde el fallo hasta la última copia recuperable. ¿Qué métrica está definiendo?",
+      "opciones": [
+        "Maximum Tolerable Downtime (MTD)",
+        "Recovery Point Objective (RPO)",
+        "Recovery Time Objective (RTO)",
+        "Work Recovery Time (WRT)"
+      ],
+      "respuesta": 1,
+      "explicacion": "El RPO determina hasta qué punto temporal debe poder recuperarse la información y, por tanto, condiciona la frecuencia de backups o replicación."
+    },
+    {
+      "pregunta": "Una empresa alquila una instalación con energía, refrigeración y cableado de red, pero sin servidores ni estaciones de trabajo preinstalados. En un desastre tendría que enviar e instalar su propio hardware. ¿Qué tipo de sitio es?",
+      "opciones": ["Hot site", "Warm site", "Cold site", "Mirrored site"],
+      "respuesta": 2,
+      "explicacion": "Un cold site proporciona la infraestructura física básica, pero no los equipos informáticos ni los datos necesarios para operar inmediatamente."
+    },
+    {
+      "pregunta": "El BCP define un RTO de 2 horas para un servidor crítico, pero el procedimiento actual de restauración desde backup necesita al menos 5 horas. ¿Cuál es la evaluación correcta?",
+      "opciones": [
+        "El proceso está cumpliendo correctamente el RPO",
+        "El sistema tiene alta disponibilidad por disponer de backups externos",
+        "La organización no está cumpliendo el RTO definido",
+        "Debe declararse inmediatamente un desastre y utilizar un cold site"
+      ],
+      "respuesta": 2,
+      "explicacion": "Si el tiempo real de restauración es de cinco horas y el RTO es de dos, la capacidad técnica actual no satisface el objetivo de recuperación establecido."
+    },
+    {
+      "pregunta": "Una base de datos falla a las 14:00 y se restaura desde la última copia verificada de las 06:00. La política permite perder como máximo cuatro horas de transacciones. ¿Qué métrica se incumple?",
+      "opciones": [
+        "Recovery Time Objective",
+        "Service Level Agreement",
+        "Recovery Point Objective",
+        "Maximum Tolerable Downtime"
+      ],
+      "respuesta": 2,
+      "explicacion": "El intervalo entre la última copia y el fallo es de ocho horas, superior a las cuatro horas de pérdida máxima permitidas por el RPO."
+    },
+    {
+      "pregunta": "Tras un incendio, los sistemas cambian al sitio secundario en 10 minutos, pero se pierden cuatro horas de transacciones porque el punto de recuperación era cuatro horas anterior. ¿Qué métrica debe reducirse para minimizar futuras pérdidas de datos?",
+      "opciones": [
+        "Recovery Time Objective",
+        "Recovery Point Objective",
+        "Maximum Tolerable Downtime",
+        "Work Recovery Time"
+      ],
+      "respuesta": 1,
+      "explicacion": "El RPO determina la antigüedad máxima aceptable de los datos recuperados. Reducirlo obliga a realizar copias o replicaciones con mayor frecuencia."
+    },
+    {
+      "pregunta": "Una empresa puede tolerar un máximo de dos horas de pérdida de datos en su sistema de transacciones y debe recuperar el servicio en ocho horas. ¿Qué métrica corresponde específicamente al límite de dos horas de pérdida?",
+      "opciones": [
+        "Recovery Time Objective (RTO)",
+        "Recovery Point Objective (RPO)",
+        "Maximum Tolerable Downtime (MTD)",
+        "Work Recovery Time (WRT)"
+      ],
+      "respuesta": 1,
+      "explicacion": "El RPO representa la pérdida máxima de datos aceptable en términos temporales; las ocho horas para recuperar el servicio corresponderían al RTO."
+    },
+    {
+      "pregunta": "Durante un Business Impact Analysis se quiere determinar cuánto tiempo máximo puede permanecer inactivo un sistema de pagos antes de que el negocio sufra daños irreversibles. ¿Qué métrica debe definirse para establecer ese límite absoluto?",
+      "opciones": [
+        "Maximum Tolerable Downtime (MTD)",
+        "Recovery Time Objective (RTO)",
+        "Recovery Point Objective (RPO)",
+        "Work Recovery Time (WRT)"
+      ],
+      "respuesta": 0,
+      "explicacion": "El MTD representa el tiempo máximo total durante el cual una función empresarial puede permanecer interrumpida antes de provocar consecuencias inaceptables."
+    },
+    {
+      "pregunta": "Una empresa puede tolerar como máximo cuatro horas de pérdida de datos y exige que el sistema de transacciones vuelva a estar operativo en 12 horas. ¿Qué métricas corresponden a estos límites?",
+      "opciones": [
+        "RPO de 4 horas y RTO de 12 horas",
+        "RTO de 4 horas y RPO de 12 horas",
+        "MTD de 4 horas y WRT de 12 horas",
+        "MTTR de 4 horas y MTBF de 12 horas"
+      ],
+      "respuesta": 0,
+      "explicacion": "El RPO mide la pérdida máxima aceptable de datos y el RTO el tiempo objetivo para restaurar el servicio."
+    },
+    {
+      "pregunta": "Una empresa realiza un backup completo cada domingo y, cada noche, guarda todos los cambios realizados desde ese último backup completo. ¿Qué tipo de copia utiliza?",
+      "opciones": [
+        "Backup incremental",
+        "Backup diferencial",
+        "Backup espejo",
+        "Snapshot"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una copia diferencial contiene todos los cambios producidos desde el último backup completo, por lo que aumenta de tamaño a medida que avanza la semana."
+    },
+    {
+      "pregunta": "Un sistema de transacciones puede tolerar un máximo de 15 minutos de indisponibilidad, pero los backups replican datos cada cuatro horas. Según el planteamiento original, ¿qué métrica representa los 15 minutos y cuál es el problema principal?",
+      "opciones": [
+        "MTD de 15 minutos, con un RPO de 4 horas que lo supera",
+        "RTO de 15 minutos, con un RPO actual de 4 horas excesivamente largo",
+        "RPO de 15 minutos, con un RTO actual de 4 horas demasiado corto",
+        "WRT de 15 minutos, y la frecuencia de backup debe ser idéntica al tiempo de recuperación"
+      ],
+      "respuesta": 1,
+      "explicacion": "El escenario define 15 minutos como objetivo de restauración del servicio, RTO, mientras que la replicación cada cuatro horas implica un RPO de cuatro horas y una posible pérdida de datos considerable."
+    },
+    {
+      "pregunta": "Un administrador de nóminas modifica accidentalmente los salarios de varios ejecutivos. Nadie no autorizado ha visto los datos y el sistema sigue disponible, pero los valores son incorrectos. ¿Qué objetivo de seguridad debe restaurarse?",
+      "opciones": [
+        "Disponibilidad de los datos de nómina",
+        "Integridad de los registros financieros",
+        "Confidencialidad de los salarios",
+        "No repudio de los cambios administrativos"
+      ],
+      "respuesta": 1,
+      "explicacion": "La integridad garantiza que la información permanezca exacta y no sea modificada de forma indebida, incluso por errores accidentales."
+    },
+    {
+      "pregunta": "Un bufete calcula una huella digital única de cada archivo de evidencia y conserva esas huellas por separado para comprobar posteriormente que los archivos no han sido modificados. ¿Qué mecanismo técnico está utilizando?",
+      "opciones": [
+        "Cifrado simétrico",
+        "Hashing criptográfico",
+        "RAID",
+        "Certificados digitales"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un hash criptográfico cambia si cambia el contenido del archivo, por lo que comparar hashes permite detectar alteraciones y verificar la integridad."
+    },
+    {
+      "pregunta": "Un empleado recibe una llamada de alguien que se hace pasar por soporte técnico y solicita sus credenciales. El empleado reconoce el intento de ingeniería social, se niega a entregarlas y lo comunica a seguridad. ¿Qué principio se protege principalmente?",
+      "opciones": [
+        "Mínimo privilegio",
+        "Confidencialidad mediante concienciación y vigilancia",
+        "Integridad mediante revisión de logs",
+        "Disponibilidad mediante soporte redundante"
+      ],
+      "respuesta": 1,
+      "explicacion": "Negarse a revelar credenciales evita su divulgación a una persona no autorizada, protegiendo directamente la confidencialidad."
+    },
+    {
+      "pregunta": "Se descubre que informes financieros históricos han sido modificados de forma no autorizada. La base de datos sigue disponible, pero ya no se puede confiar en la exactitud de los registros. ¿Qué principio se ha vulnerado principalmente?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 1,
+      "explicacion": "La modificación no autorizada destruye la exactitud y fiabilidad de los datos, lo que constituye una vulneración directa de la integridad."
+    },
+    {
+      "pregunta": "Una persona que afirma ser un auditor fiscal llama a RR. HH. y exige números de la Seguridad Social y salarios de empleados. ¿Qué principio está más directamente amenazado y cuál es la mejor respuesta inmediata?",
+      "opciones": [
+        "Confidencialidad; verificar la identidad del llamante mediante un número oficial e independiente antes de compartir datos",
+        "Integridad; actualizar inmediatamente los expedientes con la petición",
+        "Disponibilidad; subir los archivos a una carpeta pública en la nube",
+        "No repudio; exigir únicamente un correo firmado digitalmente"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los datos personales y salariales son confidenciales. Ante un posible vishing debe verificarse la identidad mediante un canal independiente antes de revelar información."
+    },
+    {
+      "pregunta": "Una farmacéutica descubre que varias fórmulas de medicamentos fueron modificadas sin autorización. Los datos siguen accesibles, pero ya no se puede confiar en su exactitud. ¿Qué pilar de la tríada CIA se ha comprometido?",
+      "opciones": [
+        "Confidentiality",
+        "Integrity",
+        "Availability",
+        "Non-repudiation"
+      ],
+      "respuesta": 1,
+      "explicacion": "Integrity exige que los datos permanezcan exactos, completos y libres de modificaciones no autorizadas."
+    },
+    {
+      "pregunta": "El consejo de una organización sanitaria realiza revisiones y auditorías periódicas para verificar que los controles de seguridad implantados realmente son efectivos y que se cumplen las obligaciones de protección. ¿Qué concepto describe esta actividad de verificación?",
+      "opciones": [
+        "Due care mediante la implantación de los controles necesarios",
+        "Due diligence mediante la verificación de que políticas y controles son efectivos",
+        "Accountability mediante la asignación de propietarios de activos",
+        "Business Impact Analysis"
+      ],
+      "respuesta": 1,
+      "explicacion": "Due diligence consiste en investigar, revisar y verificar de forma continuada que las medidas de due care y los controles de seguridad están funcionando correctamente."
+    },
+    {
+      "pregunta": "Un profesional de ciberseguridad descubre una vulnerabilidad crítica y considera explotarla para obtener un beneficio personal antes de informar a la empresa. ¿Qué canon del Código Ético de (ISC)2 vulnera más directamente?",
+      "opciones": [
+        "Proteger a la sociedad, el bien común, la confianza pública necesaria y la infraestructura",
+        "Prestar un servicio diligente y competente a principales y empleadores",
+        "Actuar de forma honorable, honesta, justa, responsable y legal",
+        "Promover y proteger la profesión manteniendo los estándares más altos"
+      ],
+      "respuesta": 2,
+      "explicacion": "Utilizar una vulnerabilidad para beneficio personal es incompatible con la obligación de actuar de forma honorable, honesta, responsable y legal."
+    },
+    {
+      "pregunta": "Un fallo de software hace que una base de datos registre números de lote incorrectos. El sistema sigue disponible y no existe divulgación no autorizada, pero los registros ya no reflejan la realidad. ¿Qué pilar de la tríada CIA se ha comprometido?",
+      "opciones": [
+        "Confidentiality",
+        "Availability",
+        "Integrity",
+        "Non-repudiation"
+      ],
+      "respuesta": 2,
+      "explicacion": "La información incorrecta o inconsistente representa una pérdida de integridad, aunque el servicio continúe disponible y los datos sigan siendo confidenciales."
+    },
+    {
+      "pregunta": "Un desarrollador modifica producción directamente, evitando el proceso de revisión y vulnerando la separación de funciones. ¿Qué mecanismo debe implantar el CISO para impedir cambios directos no autorizados y mantener la accountability?",
+      "opciones": [
+        "Un SIEM que registre todas las acciones administrativas",
+        "Formación obligatoria sobre procedimientos de despliegue",
+        "Restringir la escritura en producción a pipelines automatizados que exijan aprobación independiente de un compañero",
+        "MFA para los desarrolladores en staging y testing"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un pipeline con aprobación independiente aplica técnicamente la separación de funciones y evita que un desarrollador pueda modificar producción unilateralmente."
+    },
+    {
+      "pregunta": "Un desarrollador publica un binario de software y quiere que los usuarios puedan comprobar que una copia descargada desde un mirror no ha sido alterada ni corrompida. ¿Qué concepto está aplicando?",
+      "opciones": [
+        "Confidencialidad mediante AES",
+        "Disponibilidad del mirror",
+        "Integridad mediante un hash criptográfico del archivo",
+        "No repudio mediante un contrato digital"
+      ],
+      "respuesta": 2,
+      "explicacion": "Publicar un hash, como SHA-256, permite comparar la huella del archivo descargado con la original y verificar su integridad."
+    },
+    {
+      "pregunta": "Una base de datos sanitaria queda expuesta públicamente sin contraseña durante varias horas, permitiendo que cualquiera pueda consultar datos de pacientes. No se modifica información y el servidor continúa funcionando. ¿Qué componente de la tríada CIA se ha comprometido?",
+      "opciones": [
+        "Integrity",
+        "Availability",
+        "Confidentiality",
+        "Non-repudiation"
+      ],
+      "respuesta": 2,
+      "explicacion": "La exposición de información privada a personas no autorizadas constituye una vulneración directa de la confidencialidad."
+    },
+    {
+      "pregunta": "Un profesional descubre una vulnerabilidad crítica en un sistema médico legacy sin soporte del fabricante y conectado a la red interna. Según el Código Ético de (ISC)2, ¿cuál debe ser su primer paso?",
+      "opciones": [
+        "Publicar inmediatamente la vulnerabilidad en un foro",
+        "Informar a la dirección interna y a las partes responsables para que puedan gestionar el riesgo",
+        "Apagar el sistema sin autorización",
+        "Ignorar la vulnerabilidad porque el producto ya no tiene soporte"
+      ],
+      "respuesta": 1,
+      "explicacion": "La notificación interna permite que la organización evalúe el riesgo y aplique controles compensatorios sin aumentar innecesariamente la exposición ni afectar de forma irresponsable a los servicios."
+    },
+    {
+      "pregunta": "Una farmacéutica quiere garantizar que los resultados de ensayos clínicos permanezcan exactos, completos y fiables durante todo su ciclo de vida y detectar modificaciones no autorizadas. ¿Qué control responde directamente a este objetivo?",
+      "opciones": [
+        "Firmas digitales y algoritmos de hashing para garantizar la integridad",
+        "AES-256 para proteger la confidencialidad de las identidades",
+        "Un clúster de alta disponibilidad",
+        "Acuerdos NDA para todos los empleados"
+      ],
+      "respuesta": 0,
+      "explicacion": "Hashing y firmas digitales permiten detectar alteraciones y verificar la autenticidad de los datos, protegiendo su integridad."
+    },
+    {
+      "pregunta": "Una empresa quiere que los permisos sobre código fuente estén determinados estrictamente por la clasificación de sensibilidad de cada archivo y por el nivel formal de habilitación de seguridad del desarrollador. ¿Qué modelo encaja mejor?",
+      "opciones": [
+        "Mandatory Access Control",
+        "Role-Based Access Control",
+        "Discretionary Access Control",
+        "Rule-Based Access Control"
+      ],
+      "respuesta": 0,
+      "explicacion": "MAC utiliza etiquetas de seguridad en los objetos y niveles de autorización en los sujetos, aplicados por una autoridad central."
+    },
+    {
+      "pregunta": "Una farmacéutica envía datos cifrados por Internet y quiere detectar si un atacante modifica los paquetes durante la transmisión. ¿Qué control debe añadir?",
+      "opciones": [
+        "Aumentar la longitud de la clave de cifrado de 128 a 256 bits",
+        "Firmas digitales y hashing criptográfico",
+        "Una segunda línea de fibra físicamente independiente",
+        "MFA para todos los investigadores"
+      ],
+      "respuesta": 1,
+      "explicacion": "El hashing permite detectar cambios en los datos y las firmas digitales aportan integridad, autenticidad y propiedades de no repudio."
+    },
+    {
+      "pregunta": "Un alto directivo solicita desactivar temporalmente MFA, aunque ello viola la política de seguridad. Según el Código Ético de ISC2, ¿qué principio debe tener prioridad en la decisión del administrador?",
+      "opciones": [
+        "Seguir las instrucciones del directivo para no perjudicar las operaciones",
+        "Proteger a la sociedad, el bien común, la confianza pública necesaria y la infraestructura",
+        "Registrar el bypass y esperar a la auditoría trimestral",
+        "Sustituir MFA por una contraseña estática menos segura"
+      ],
+      "respuesta": 1,
+      "explicacion": "El primer canon de ISC2 prioriza la protección de la sociedad, el bien común, la confianza y la infraestructura por encima de presiones jerárquicas o conveniencias operativas."
+    },
+    {
+      "pregunta": "Un investigador encuentra registros con marcas de tiempo imposibles en una base de datos de ensayos clínicos. Los registros siguen disponibles, pero su exactitud y calidad están en duda. ¿Qué principio se ha comprometido?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 1,
+      "explicacion": "La integridad exige que los datos sean exactos, completos y fiables. Los timestamps incorrectos indican una pérdida de esa propiedad."
+    },
+    {
+      "pregunta": "Durante una auditoría se descubre que los desarrolladores tienen acceso administrativo completo a producción, por lo que una misma persona puede desarrollar y desplegar cambios sin controles independientes. ¿Qué principio se vulnera?",
+      "opciones": [
+        "Confidencialidad de los datos",
+        "Separación de funciones",
+        "No repudio de las acciones",
+        "Disponibilidad de los servicios"
+      ],
+      "respuesta": 1,
+      "explicacion": "La separación de funciones divide tareas sensibles entre personas o roles diferentes para reducir fraude, errores y cambios no autorizados."
+    },
+    {
+      "pregunta": "Una base de datos con nombres, correos y contraseñas sin hash es filtrada públicamente. Las transacciones permanecen intactas y los servidores no sufren interrupciones. ¿Qué componente de la tríada CIA se ha comprometido principalmente?",
+      "opciones": [
+        "Confidentiality",
+        "Integrity",
+        "Availability",
+        "Non-repudiation"
+      ],
+      "respuesta": 0,
+      "explicacion": "La divulgación de datos privados a terceros no autorizados constituye una pérdida de confidencialidad."
+    }
+  ]
+}
