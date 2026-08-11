@@ -1,0 +1,1651 @@
+{
+  "titulo": "Fundamentos de ciberseguridad e ISC2",
+  "procedencia": "Test proporcionado por el usuario, basado en conceptos de ISC2 y fundamentos de ciberseguridad",
+  "descripcion": "Batería de preguntas sobre gestión de riesgos, controles de seguridad, respuesta a incidentes, continuidad de negocio, redes, criptografía, control de acceso, cloud y operaciones de seguridad.",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué afirmación describe correctamente la secuencia de fases de ISC2 en el ciclo de vida de los datos?",
+      "opciones": [
+        "Almacenar, Crear, Usar, Compartir, Archivar y Destruir",
+        "Usar, Almacenar, Crear, Compartir, Archivar y Destruir",
+        "Destruir, Almacenar, Usar, Compartir, Archivar y Crear",
+        "Crear, Almacenar, Usar, Compartir, Archivar y Destruir"
+      ],
+      "respuesta": 3,
+      "explicacion": "La secuencia correcta comienza con la creación de los datos, seguida de su almacenamiento, uso, compartición, archivado y, finalmente, destrucción segura."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes es una respuesta al riesgo apropiada cuando el riesgo identificado supera la tolerancia al riesgo de la organización?",
+      "opciones": [
+        "Mitigación del riesgo",
+        "Aceptación del riesgo",
+        "Transferencia del riesgo",
+        "Evitación del riesgo"
+      ],
+      "respuesta": 3,
+      "explicacion": "La evitación elimina la actividad o proceso que origina un riesgo que la organización no está dispuesta a tolerar."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes es una respuesta al riesgo apropiada cuando el riesgo identificado se encuentra dentro de la tolerancia al riesgo de la organización?",
+      "opciones": [
+        "Mitigación del riesgo",
+        "Aceptación del riesgo",
+        "Transferencia del riesgo",
+        "Evitación del riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "La aceptación del riesgo es adecuada cuando su nivel se encuentra dentro de los límites que la organización está dispuesta a asumir."
+    },
+    {
+      "pregunta": "¿Qué respuesta al riesgo implica adoptar medidas para prevenir o reducir la probabilidad o el impacto?",
+      "opciones": [
+        "Mitigación del riesgo",
+        "Aceptación del riesgo",
+        "Transferencia del riesgo",
+        "Evitación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La mitigación aplica controles para reducir la probabilidad de materialización del riesgo o disminuir su impacto."
+    },
+    {
+      "pregunta": "¿Qué respuesta al riesgo consiste en trasladarlo a otra parte que asumirá el impacto financiero del daño?",
+      "opciones": [
+        "Mitigación del riesgo",
+        "Aceptación del riesgo",
+        "Transferencia del riesgo",
+        "Evitación del riesgo"
+      ],
+      "respuesta": 2,
+      "explicacion": "La transferencia desplaza parte del impacto financiero del riesgo a un tercero, por ejemplo mediante seguros o contratos."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de la evaluación de riesgos [IR, AR, Eval]?",
+      "opciones": [
+        "Priorizar por nivel de riesgo y utilizar el resultado para informar las decisiones de respuesta al riesgo",
+        "Identificar eventos de amenaza que podrían ser producidos por esas fuentes",
+        "Comunicar los resultados de la evaluación de riesgos a las partes interesadas designadas",
+        "Mitigar el riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La evaluación permite determinar y priorizar los niveles de riesgo para fundamentar posteriores decisiones de tratamiento."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones no representa un tipo de control según la clasificación indicada?",
+      "opciones": [
+        "Control físico",
+        "Control técnico",
+        "Control administrativo",
+        "Control preventivo"
+      ],
+      "respuesta": 3,
+      "explicacion": "Físico, técnico y administrativo son categorías de implementación; preventivo describe principalmente una función del control."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones no es uno de los cánones de ISC2?",
+      "opciones": [
+        "Proteger a la sociedad, el bien común, la confianza pública necesaria y las infraestructuras.",
+        "Actuar de manera honorable, honesta, justa, responsable y legal.",
+        "Prestar un servicio diligente y competente a los principales.",
+        "Exige que cumplamos, y parezca que cumplimos, los más altos estándares éticos de comportamiento."
+      ],
+      "respuesta": 3,
+      "explicacion": "La última afirmación corresponde al preámbulo ético y no a uno de los cánones enumerados."
+    },
+    {
+      "pregunta": "¿Qué factores deben considerarse principalmente al decidir implementar un control?",
+      "opciones": [
+        "Coste del control frente al impacto",
+        "Confidencialidad frente a integridad",
+        "Eliminar el riesgo",
+        "Análisis coste-beneficio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Debe evaluarse si el coste del control está justificado por la reducción del impacto o del riesgo que proporciona."
+    },
+    {
+      "pregunta": "¿Qué tipo de control se introduce en una organización para dirigir el comportamiento de los empleados?",
+      "opciones": [
+        "Controles administrativos",
+        "Controles físicos",
+        "Controles técnicos",
+        "Controles preventivos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los controles administrativos utilizan políticas, procedimientos, formación y normas para orientar el comportamiento."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de un Business Continuity Plan en una empresa?",
+      "opciones": [
+        "Proporcionar procedimientos para mantener las operaciones de misión o negocio mientras se recupera de una interrupción significativa.",
+        "Proporcionar procedimientos para distribuir comunicaciones internas y externas.",
+        "Proporcionar procedimientos para mitigar y corregir un ciberataque.",
+        "Proporcionar procedimientos para trasladar las operaciones de los sistemas de información a una ubicación alternativa."
+      ],
+      "respuesta": 0,
+      "explicacion": "El BCP busca mantener las funciones empresariales esenciales durante la interrupción y mientras se ejecuta la recuperación."
+    },
+    {
+      "pregunta": "En una auditoría en la que se revisan múltiples documentos, ¿cuál de ellos no es obligatorio?",
+      "opciones": ["Política", "Procedimiento", "Estándar", "Guía"],
+      "respuesta": 3,
+      "explicacion": "Las guías contienen recomendaciones y, a diferencia de políticas, procedimientos y estándares, normalmente no son obligatorias."
+    },
+    {
+      "pregunta": "¿En qué etapa del proceso de gestión de incidentes deben adquirirse, preservarse, protegerse y documentarse las evidencias?",
+      "opciones": [
+        "Detección y análisis",
+        "Preparación",
+        "Contención, erradicación y recuperación",
+        "Actividad posterior al incidente"
+      ],
+      "respuesta": 2,
+      "explicacion": "Durante la contención, erradicación y recuperación debe preservarse adecuadamente la evidencia para investigaciones o procedimientos legales posteriores."
+    },
+    {
+      "pregunta": "¿En qué etapa del proceso de gestión de incidentes se determina si realmente ha ocurrido un incidente?",
+      "opciones": [
+        "Detección y análisis",
+        "Preparación",
+        "Contención, erradicación y recuperación",
+        "Actividad posterior al incidente"
+      ],
+      "respuesta": 0,
+      "explicacion": "La fase de detección y análisis examina alertas y anomalías para confirmar si existe un incidente."
+    },
+    {
+      "pregunta": "¿Qué fase del proceso de respuesta a incidentes permite mejorar las medidas de seguridad y el proceso de gestión de incidentes?",
+      "opciones": [
+        "Detección y análisis",
+        "Preparación",
+        "Contención, erradicación y recuperación",
+        "Actividad posterior al incidente"
+      ],
+      "respuesta": 3,
+      "explicacion": "La actividad posterior al incidente permite documentar lecciones aprendidas y mejorar controles y procedimientos."
+    },
+    {
+      "pregunta": "¿Qué tipo de control de acceso deja parte del control a discreción del propietario del objeto o de otra persona autorizada para controlar su acceso?",
+      "opciones": ["DAC", "NDAC", "MAC", "RBAC"],
+      "respuesta": 0,
+      "explicacion": "DAC permite al propietario de un recurso conceder o revocar permisos sobre dicho recurso."
+    },
+    {
+      "pregunta": "¿Qué sistema de control de acceso aplica la política de seguridad mediante etiquetas de seguridad?",
+      "opciones": ["DAC", "NDAC", "MAC", "RBAC"],
+      "respuesta": 2,
+      "explicacion": "MAC utiliza clasificaciones y etiquetas de seguridad de sujetos y objetos para tomar decisiones de acceso."
+    },
+    {
+      "pregunta": "¿Qué principio describe una estrategia de seguridad de la información que integra personas, tecnología y capacidades operativas para establecer múltiples barreras?",
+      "opciones": [
+        "Separación de funciones",
+        "Principio de mínimo privilegio",
+        "Defense in Depth",
+        "Función privilegiada"
+      ],
+      "respuesta": 2,
+      "explicacion": "Defense in Depth aplica múltiples capas de controles para que la seguridad no dependa de una única barrera."
+    },
+    {
+      "pregunta": "¿Qué principio establece que cada tarea, proceso o usuario debe disponer únicamente de los derechos mínimos necesarios para realizar su función?",
+      "opciones": [
+        "Separación de funciones",
+        "Principio de mínimo privilegio",
+        "Defense in Depth",
+        "Función privilegiada"
+      ],
+      "respuesta": 1,
+      "explicacion": "El principio de mínimo privilegio limita los permisos a los estrictamente necesarios para realizar las funciones asignadas."
+    },
+    {
+      "pregunta": "¿Qué protocolo debe utilizarse para administrar remotamente un firewall de forma segura?",
+      "opciones": ["Telnet", "FTP", "SSH", "HTTP"],
+      "respuesta": 2,
+      "explicacion": "SSH cifra la comunicación y permite administrar dispositivos remotos sin exponer credenciales y comandos en texto claro."
+    },
+    {
+      "pregunta": "¿Qué solución supervisa las características y los eventos de un único host para detectar actividad sospechosa?",
+      "opciones": ["HIDS", "NIDS", "SIEM", "Antivirus"],
+      "respuesta": 0,
+      "explicacion": "Un HIDS supervisa eventos y cambios que ocurren dentro de un host individual."
+    },
+    {
+      "pregunta": "¿Qué solución supervisa el tráfico de determinados segmentos o dispositivos de red y analiza la actividad de protocolos para identificar comportamientos sospechosos?",
+      "opciones": ["HIDS", "NIDS", "SIEM", "Antivirus"],
+      "respuesta": 1,
+      "explicacion": "Un NIDS analiza tráfico de red para detectar patrones, eventos o comportamientos potencialmente maliciosos."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes soluciones no se utiliza principalmente para identificar amenazas?",
+      "opciones": ["IDS", "SIEM", "NIDS", "NIPS"],
+      "respuesta": 3,
+      "explicacion": "Según el planteamiento del test, un NIPS está orientado principalmente a prevenir o bloquear amenazas, aunque también puede detectarlas."
+    },
+    {
+      "pregunta": "¿Qué tipo de criptografía utiliza la misma clave secreta para realizar una operación y, cuando procede, revertir sus efectos?",
+      "opciones": ["Simétrica", "Asimétrica", "Hash", "Firma digital"],
+      "respuesta": 0,
+      "explicacion": "La criptografía simétrica utiliza una misma clave secreta compartida para cifrar y descifrar."
+    },
+    {
+      "pregunta": "¿Qué proceso establece y mantiene un marco y una estructura de gestión para asegurar que las estrategias de seguridad de la información estén alineadas con los objetivos de negocio, las leyes, las políticas y los controles internos?",
+      "opciones": [
+        "Gestión de riesgos",
+        "Gestión del cumplimiento",
+        "Security Governance",
+        "Evaluación de riesgos"
+      ],
+      "respuesta": 2,
+      "explicacion": "Security Governance alinea la seguridad con los objetivos de negocio, asigna responsabilidades y establece supervisión y gestión del riesgo."
+    },
+    {
+      "pregunta": "¿Cuál sería el control físico más eficaz para impedir accesos no autorizados a un centro de datos?",
+      "opciones": [
+        "Mantrap configurado con biometría",
+        "Solo Mantrap",
+        "Instalar tailgating con biometría",
+        "Instalar tailgating"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un mantrap combinado con autenticación biométrica proporciona varias barreras de acceso y reduce el riesgo de tailgating."
+    },
+    {
+      "pregunta": "Una empresa quiere proteger su nombre de marca y goodwill porque otra compañía ha utilizado esa marca para vender productos y servicios. ¿Qué acción es la más importante?",
+      "opciones": [
+        "Solicitar una patente",
+        "Registrar una marca comercial",
+        "Registrar copyright",
+        "Registrar un secreto comercial"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las marcas comerciales protegen nombres, logotipos y otros identificadores utilizados para distinguir productos y servicios."
+    },
+    {
+      "pregunta": "Una empresa sanitaria de Estados Unidos recopila y procesa datos de salud. ¿Con qué regulación principal debe cumplir?",
+      "opciones": ["HIPAA", "PCI DSS", "FEDRAMP", "ISO 27001"],
+      "respuesta": 0,
+      "explicacion": "HIPAA establece requisitos de privacidad y seguridad aplicables a determinada información sanitaria protegida en Estados Unidos."
+    },
+    {
+      "pregunta": "Una empresa certificada en PCI DSS migra su infraestructura a un proveedor cloud bajo IaaS. ¿Quién mantiene la responsabilidad sobre la acreditación o cumplimiento de PCI DSS?",
+      "opciones": [
+        "Proveedor cloud",
+        "Cliente cloud",
+        "Data Subject",
+        "Regulador"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cliente cloud continúa siendo responsable de asegurar el cumplimiento de sus obligaciones PCI DSS dentro del modelo de responsabilidad compartida."
+    },
+    {
+      "pregunta": "Antes de migrar aplicaciones o datos a un entorno cloud, ¿cuál es el requisito más crítico que debe revisarse?",
+      "opciones": [
+        "Las leyes o regulaciones aplicables y las obligaciones relevantes tanto del cliente como del proveedor",
+        "Las leyes o regulaciones aplicables y las obligaciones relevantes impuestas al cliente",
+        "Las leyes o regulaciones aplicables y las obligaciones relevantes impuestas al proveedor",
+        "Qué certificación es más apropiada según la categoría del servicio cloud y los requisitos regionales e industriales del cliente"
+      ],
+      "respuesta": 0,
+      "explicacion": "Es necesario identificar las obligaciones legales y regulatorias de ambas partes para comprender correctamente la responsabilidad compartida."
+    },
+    {
+      "pregunta": "Una organización necesita una solución que supervise su entorno en busca de actividad maliciosa y notifique las actividades sospechosas a los administradores. ¿Cuál es la más adecuada?",
+      "opciones": [
+        "IDS [Intrusion Detection System]",
+        "IPS [Intrusion Prevention System]",
+        "Firewall",
+        "DLP [Data Loss Prevention]"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un IDS está diseñado para detectar actividad potencialmente maliciosa y generar alertas para los administradores."
+    },
+    {
+      "pregunta": "¿Cuál es la ubicación ideal de un firewall perimetral para proteger una organización frente a amenazas externas?",
+      "opciones": [
+        "Dentro de la red interna, protegiendo frente a amenazas internas",
+        "Entre los routers de la organización e Internet",
+        "Directamente en el dispositivo de cada usuario final",
+        "Dentro de la granja de servidores para proteger servidores críticos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Situarlo entre la red de la organización e Internet permite controlar el tráfico entrante y saliente en el perímetro."
+    },
+    {
+      "pregunta": "¿Qué documento define mejor las expectativas de una organización sobre la calidad del servicio proporcionado por un proveedor?",
+      "opciones": [
+        "SLA [Service Level Agreement]",
+        "MOU [Memorandum of Understanding]",
+        "Política",
+        "Clasificación de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un SLA establece niveles de servicio, métricas, responsabilidades y compromisos entre cliente y proveedor."
+    },
+    {
+      "pregunta": "Se ha detectado tráfico malicioso desde la red interna hacia un puerto no autorizado de un servidor de aplicaciones. ¿Qué control de seguridad de red debería considerarse?",
+      "opciones": [
+        "ACLs [Access Control Lists en el firewall]",
+        "HIPS [Host Intrusion Prevention System]",
+        "NAT [Network Address Translation]",
+        "Filtrado MAC"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las ACLs permiten autorizar o bloquear tráfico según direcciones, protocolos y puertos."
+    },
+    {
+      "pregunta": "¿Qué afirmación es verdadera sobre un Disaster Recovery Plan?",
+      "opciones": [
+        "Establece procedimientos para abordar ciberataques contra los sistemas de información de una organización",
+        "Documenta un conjunto predeterminado de instrucciones o procedimientos que describe cómo se mantendrán los procesos de misión o negocio durante y después de una interrupción significativa",
+        "Es el proceso de analizar las funciones operativas y el efecto que una interrupción podría tener sobre ellas",
+        "Es un plan escrito para recuperar uno o más sistemas de información en una instalación alternativa tras un fallo grave de hardware, software o destrucción de instalaciones"
+      ],
+      "respuesta": 1,
+      "explicacion": "Según la respuesta identificada en el test original, el plan documenta procedimientos predeterminados para mantener los procesos de misión o negocio durante y después de una interrupción."
+    },
+    {
+      "pregunta": "En el marco de seguridad de una organización, ¿qué documento contiene elementos que no son obligatorios?",
+      "opciones": ["Política", "Estándares", "Guía", "Procedimiento"],
+      "respuesta": 2,
+      "explicacion": "Las guías proporcionan recomendaciones y buenas prácticas, por lo que normalmente no tienen carácter obligatorio."
+    },
+    {
+      "pregunta": "¿Qué propiedad no proporcionan las firmas digitales?",
+      "opciones": [
+        "Integridad",
+        "No repudio",
+        "Confidencialidad",
+        "Autenticación"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las firmas digitales proporcionan autenticidad, integridad y no repudio, pero la confidencialidad requiere cifrado."
+    },
+    {
+      "pregunta": "Varios sistemas críticos se han vuelto inaccesibles, muestran mensajes exigiendo una acción para recuperar el acceso y sus datos están cifrados. ¿Qué ataque es el más probable?",
+      "opciones": [
+        "Phishing",
+        "Denial-of-Service",
+        "Ransomware",
+        "MitM [Man-in-the-Middle]"
+      ],
+      "respuesta": 2,
+      "explicacion": "El ransomware cifra información o sistemas y exige normalmente un rescate para recuperar el acceso."
+    },
+    {
+      "pregunta": "¿Cuál es la mejor métrica para medir la eficacia de la formación de concienciación en seguridad según el test?",
+      "opciones": [
+        "Aumento de los informes de incidentes",
+        "Aumento de las infracciones de seguridad",
+        "Disminución de los informes de incidentes",
+        "Número de solicitudes de contraseñas"
+      ],
+      "respuesta": 2,
+      "explicacion": "Según el planteamiento original, una disminución de incidentes reportados se interpreta como una reducción de incidentes derivada de una mayor concienciación."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de la formación de concienciación en seguridad?",
+      "opciones": [
+        "Informar a los usuarios de los últimos ataques",
+        "Cumplir requisitos regulatorios",
+        "Cumplir requisitos de políticas",
+        "Informar a los empleados de sus responsabilidades de seguridad de la información"
+      ],
+      "respuesta": 3,
+      "explicacion": "La concienciación busca que los empleados conozcan y comprendan sus responsabilidades relacionadas con la seguridad de la información."
+    },
+    {
+      "pregunta": "¿Qué acción aborda mejor la necesidad de comunicar cómo una organización trata los datos personales?",
+      "opciones": [
+        "Implementar cifrado fuerte para todos los datos de usuarios almacenados en los servidores",
+        "Realizar una evaluación exhaustiva de riesgos de seguridad sobre la nueva función de localización",
+        "Actualizar los términos de servicio incluyendo detalles de la recopilación de ubicación",
+        "Desarrollar una política de privacidad completa que describa la recopilación, uso y almacenamiento de datos de ubicación"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una política de privacidad comunica directamente las prácticas de recopilación, utilización, almacenamiento y tratamiento de datos personales."
+    },
+    {
+      "pregunta": "Una universidad quiere establecer qué usos de la red son aceptables o inaceptables, incluidas restricciones sobre intercambio de archivos. ¿Qué política debe utilizar?",
+      "opciones": [
+        "Política de Seguridad de la Información",
+        "Disaster Recovery Plan",
+        "Acceptable Use Policy",
+        "Data Handling Policy"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una Acceptable Use Policy define las conductas y usos permitidos y prohibidos de los recursos tecnológicos de una organización."
+    },
+    {
+      "pregunta": "Una empresa exige instalar un antivirus concreto y activar el análisis en tiempo real en cientos de equipos. ¿Qué función es la más útil para lograrlo?",
+      "opciones": [
+        "Patch Management",
+        "Configuration Management",
+        "Change Management",
+        "Incident Management"
+      ],
+      "respuesta": 1,
+      "explicacion": "Configuration Management permite establecer, mantener y verificar configuraciones uniformes en grandes cantidades de sistemas."
+    },
+    {
+      "pregunta": "El CEO recibe un correo dirigido específicamente a él que suplanta al departamento legal y solicita información urgente sobre una transferencia bancaria. ¿Qué tipo de phishing es?",
+      "opciones": ["Smishing", "Whaling", "Spear Phishing", "Pharming"],
+      "respuesta": 1,
+      "explicacion": "Whaling es phishing dirigido específicamente a ejecutivos u otros objetivos de alto nivel."
+    },
+    {
+      "pregunta": "Según el modelo OSI, ¿en qué capa se encapsulan los datos en un paquete?",
+      "opciones": [
+        "Capa 7 [Application]",
+        "Capa 4 [Transport]",
+        "Capa 3 [Network]",
+        "Capa 2 [Data Link]"
+      ],
+      "respuesta": 2,
+      "explicacion": "En la capa Network, o capa 3, la unidad de datos se denomina paquete."
+    },
+    {
+      "pregunta": "Según el modelo OSI, ¿qué capa garantiza que la información intercambiada con sus pares esté libre de errores según el test?",
+      "opciones": [
+        "Capa 7 [Application]",
+        "Capa 4 [Transport]",
+        "Capa 3 [Network]",
+        "Capa 2 [Data Link]"
+      ],
+      "respuesta": 1,
+      "explicacion": "La capa Transport proporciona mecanismos de entrega fiable, control de flujo y tratamiento de errores extremo a extremo."
+    },
+    {
+      "pregunta": "Según el modelo OSI, ¿qué capa gestiona la transferencia de datos entre aplicaciones, el control de flujo y la detección y corrección de errores?",
+      "opciones": [
+        "Capa 7 [Application]",
+        "Capa 4 [Transport]",
+        "Capa 3 [Network]",
+        "Capa 2 [Data Link]"
+      ],
+      "respuesta": 1,
+      "explicacion": "La capa Transport gestiona la comunicación extremo a extremo entre aplicaciones y funciones de fiabilidad y control de flujo."
+    },
+    {
+      "pregunta": "Según el modelo OSI, ¿qué capa se encarga del cifrado y de la codificación o representación de la información?",
+      "opciones": [
+        "Capa 7 [Application]",
+        "Capa 4 [Transport]",
+        "Capa 3 [Network]",
+        "Capa 6 [Presentation]"
+      ],
+      "respuesta": 3,
+      "explicacion": "La capa Presentation se asocia con traducción de formatos, codificación, compresión y cifrado."
+    },
+    {
+      "pregunta": "¿A qué categoría de puertos pertenece el puerto 1123?",
+      "opciones": [
+        "Puertos well-known",
+        "Puertos registrados",
+        "Puertos dinámicos",
+        "Puertos efímeros"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los puertos registrados abarcan el rango 1024-49151, por lo que 1123 pertenece a esa categoría."
+    },
+    {
+      "pregunta": "¿En qué capa del modelo OSI operan DNS, SMTP y HTTP?",
+      "opciones": ["Application", "Physical", "Network", "Transport"],
+      "respuesta": 0,
+      "explicacion": "DNS, SMTP y HTTP son protocolos asociados a la capa Application del modelo OSI."
+    },
+    {
+      "pregunta": "¿Cuál es la función principal del puerto 53?",
+      "opciones": [
+        "Facilitar operaciones SFTP dentro de la red [20121]",
+        "Permitir comunicaciones HTTPS para navegación web [443]",
+        "Realizar resolución DNS y mapear nombres de dominio a direcciones IP",
+        "Servir como canal seguro para conexiones RDP [3389]"
+      ],
+      "respuesta": 2,
+      "explicacion": "El puerto 53 se utiliza principalmente por DNS para consultas y respuestas de resolución de nombres."
+    },
+    {
+      "pregunta": "Los usuarios escriben la dirección correcta de una web pero son redirigidos a sitios diferentes debido a manipulación de DNS. ¿Qué medida sería la más eficaz para prevenir incidentes similares?",
+      "opciones": ["DNSSEC", "HTTPS", "IPSec", "TLS/SSL"],
+      "respuesta": 0,
+      "explicacion": "DNSSEC permite validar criptográficamente respuestas DNS y ayuda a proteger frente a suplantación o manipulación de dichas respuestas."
+    },
+    {
+      "pregunta": "¿Qué protocolo debería utilizarse para configurar y solucionar problemas de servicios críticos de red mediante una conexión segura?",
+      "opciones": ["SMTPS", "SSH", "HTTP", "FTP"],
+      "respuesta": 1,
+      "explicacion": "SSH proporciona administración remota cifrada y autenticada de servidores y dispositivos de red."
+    },
+    {
+      "pregunta": "Una organización necesita proteger las transmisiones por Internet frente a manipulación, escucha y ataques Man-in-the-Middle. ¿Qué protocolo debería implementar?",
+      "opciones": ["FTP", "SMTP", "SSL/TLS", "IMAP"],
+      "respuesta": 2,
+      "explicacion": "SSL/TLS protege los datos en tránsito mediante cifrado y mecanismos de autenticación e integridad."
+    },
+    {
+      "pregunta": "Los atacantes utilizan rainbow tables para obtener contraseñas a partir de hashes. ¿Qué técnica hace que contraseñas idénticas no produzcan el mismo hash?",
+      "opciones": [
+        "Aplicar cifrado simétrico a los valores hash",
+        "Añadir salt a las contraseñas antes de aplicar el hash",
+        "Utilizar funciones hash más largas y complejas",
+        "Aplicar algoritmos hash como SHA o MD5"
+      ],
+      "respuesta": 1,
+      "explicacion": "El salting añade un valor único antes del cálculo del hash, haciendo que contraseñas iguales generen hashes diferentes."
+    },
+    {
+      "pregunta": "¿En qué situación se utiliza principalmente la segmentación de red para mejorar la seguridad?",
+      "opciones": [
+        "Para aumentar el ancho de banda total disponible para todos los dispositivos",
+        "Para aislar datos sensibles y sistemas críticos del resto de la red, limitando el acceso y reduciendo el impacto potencial de una brecha",
+        "Para actualizar simultáneamente el software de todos los dispositivos",
+        "Para gestionar el tráfico y reducir la congestión en determinados segmentos"
+      ],
+      "respuesta": 1,
+      "explicacion": "La segmentación limita el movimiento y acceso entre zonas, aislando recursos sensibles y reduciendo el alcance potencial de una intrusión."
+    },
+    {
+      "pregunta": "¿Qué protocolo utiliza principalmente la utilidad ping para enviar Echo Request y recibir Echo Reply?",
+      "opciones": ["HTTP", "TCP", "ICMP", "DNS"],
+      "respuesta": 2,
+      "explicacion": "Ping utiliza mensajes ICMP Echo Request y Echo Reply para comprobar conectividad."
+    },
+    {
+      "pregunta": "¿Cuál es una ventaja clave de implementar un modelo de seguridad Zero Trust?",
+      "opciones": [
+        "Reducir la necesidad de monitorización y logging",
+        "Eliminar la necesidad de controles de acceso",
+        "Verificar continuamente a cada usuario y dispositivo independientemente de su ubicación",
+        "Simplificar la arquitectura eliminando la segmentación"
+      ],
+      "respuesta": 2,
+      "explicacion": "Zero Trust aplica el principio de no confiar implícitamente y verificar continuamente usuarios, dispositivos y solicitudes de acceso."
+    },
+    {
+      "pregunta": "En cloud el mismo hardware físico puede ser reutilizado por distintos clientes conforme se crean y destruyen máquinas virtuales. ¿Qué aspecto de seguridad de los datos se ve principalmente afectado?",
+      "opciones": [
+        "Confidencialidad de los datos",
+        "Integridad de los datos",
+        "Disponibilidad de los datos",
+        "Autenticidad de los datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La remanencia de datos podría permitir que información residual de un cliente fuese accesible para otro, afectando a la confidencialidad."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de realizar copias de seguridad de datos almacenados electrónicamente en un HDD?",
+      "opciones": [
+        "Confidencialidad de los datos",
+        "Integridad de los datos",
+        "Disponibilidad de los datos",
+        "Autenticidad de los datos"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los backups permiten recuperar la información después de pérdidas, fallos o corrupción, reforzando su disponibilidad."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de la separación de funciones, SoD, en una organización según el test?",
+      "opciones": [
+        "Confidencialidad de los datos",
+        "Integridad de los datos",
+        "Disponibilidad de los datos",
+        "Autenticidad de los datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "SoD divide responsabilidades para reducir errores y fraude, contribuyendo a preservar la integridad de procesos y datos."
+    },
+    {
+      "pregunta": "¿Qué pretende descubrir principalmente la política de vacaciones obligatorias como medida de seguridad?",
+      "opciones": [
+        "Fraude cometido por un administrador de red",
+        "Vulnerabilidades del sistema",
+        "Cumplimiento regulatorio",
+        "Vulnerabilidades de software en código de proveedores"
+      ],
+      "respuesta": 0,
+      "explicacion": "La ausencia obligatoria permite que otros revisen las funciones del empleado y puede revelar irregularidades o fraudes ocultos."
+    },
+    {
+      "pregunta": "Los profesionales de seguridad con certificación (ISC)² deben servir en primer lugar a:",
+      "opciones": [
+        "La empresa",
+        "Un cliente satisfecho",
+        "La humanidad",
+        "Un buen asesor de seguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El Código de Ética de (ISC)² prioriza la protección de la sociedad, el bien común y la confianza pública."
+    },
+    {
+      "pregunta": "¿Qué respuesta al riesgo se utiliza para detener o eliminar la actividad o tecnología que origina el riesgo?",
+      "opciones": [
+        "Evitación del riesgo",
+        "Transferencia del riesgo",
+        "Aceptación del riesgo",
+        "Mitigación del riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "La evitación elimina la fuente del riesgo abandonando la actividad o tecnología que lo genera."
+    },
+    {
+      "pregunta": "¿Cuál es la respuesta al riesgo más viable cuando el coste del antimalware supera el daño probable ocasionado por los virus?",
+      "opciones": [
+        "Aceptación del riesgo",
+        "Transferencia del riesgo",
+        "Evitación del riesgo",
+        "Tolerancia al riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Si el coste del tratamiento supera razonablemente la pérdida esperada, la organización puede decidir aceptar el riesgo."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe la identificación?",
+      "opciones": [
+        "Proceso de declarar una identidad y hacer que sea confirmada",
+        "Proceso de validar que la identidad afirmada por un usuario o entidad es conocida por el sistema",
+        "Proceso de conceder o denegar solicitudes específicas",
+        "Proceso por el que el remitente niega su acción"
+      ],
+      "respuesta": 0,
+      "explicacion": "Según la respuesta del test, la identificación comienza cuando una entidad declara quién es antes de que su identidad sea validada."
+    },
+    {
+      "pregunta": "La dirección determina que una desviación del 55 % en presupuesto o calendario de proyectos es aceptable. ¿Qué concepto ilustra?",
+      "opciones": [
+        "Aceptación del riesgo",
+        "Transferencia del riesgo",
+        "Mitigación del riesgo",
+        "Tolerancia al riesgo"
+      ],
+      "respuesta": 3,
+      "explicacion": "La tolerancia al riesgo define el nivel de variación o exposición que una organización está dispuesta a admitir."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes acciones constituye evitación del riesgo?",
+      "opciones": [
+        "Instalar antivirus",
+        "Contratar un seguro",
+        "Abandonar el proceso que genera el riesgo",
+        "No realizar ninguna acción contra el riesgo"
+      ],
+      "respuesta": 2,
+      "explicacion": "Eliminar el proceso que origina el riesgo evita completamente la exposición asociada a esa actividad."
+    },
+    {
+      "pregunta": "Un responsable de riesgos recomienda firewalls y antimalware para proteger los sistemas. ¿Qué respuesta al riesgo representa?",
+      "opciones": [
+        "Transferencia del riesgo",
+        "Mitigación del riesgo",
+        "Aceptación del riesgo",
+        "Evitación del riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los controles reducen la probabilidad o el impacto de las amenazas, por lo que constituyen mitigación."
+    },
+    {
+      "pregunta": "¿Cuál es una forma de implementar un control técnico para mitigar la pérdida de datos en caso de robo de un dispositivo móvil?",
+      "opciones": [
+        "Cifrado de disco",
+        "Política de cifrado",
+        "Unidad de estado sólido",
+        "Política de seguridad móvil"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado de disco protege técnicamente la información almacenada para que no pueda leerse sin la clave adecuada."
+    },
+    {
+      "pregunta": "Firewalls, lectores electrónicos de credenciales y listas de control de acceso son, según el test, ejemplos de qué tipo de control?",
+      "opciones": [
+        "Control técnico",
+        "Control administrativo",
+        "Control físico",
+        "Control genérico"
+      ],
+      "respuesta": 0,
+      "explicacion": "Según la clasificación indicada en el test, estos mecanismos utilizan tecnología para aplicar restricciones de seguridad."
+    },
+    {
+      "pregunta": "¿Qué controles se implementan mediante mecanismos tangibles como muros, vallas, guardias y cerraduras?",
+      "opciones": [
+        "Control técnico",
+        "Control administrativo",
+        "Control físico",
+        "Control genérico"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los controles físicos utilizan medidas tangibles para proteger instalaciones, personas y equipos."
+    },
+    {
+      "pregunta": "¿Qué controles se implementan mediante políticas y procedimientos dentro de una organización?",
+      "opciones": [
+        "Control técnico",
+        "Control administrativo",
+        "Control físico",
+        "Control genérico"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los controles administrativos establecen reglas, procedimientos y prácticas organizativas."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones no es un canon de ISC2?",
+      "opciones": [
+        "Proteger a la sociedad, el bien común, la confianza pública necesaria y la infraestructura.",
+        "Actuar de manera honorable, honesta, justa, responsable y legal.",
+        "Prestar un servicio diligente y competente a los principales.",
+        "Proporcionar a la profesión un buen trabajo."
+      ],
+      "respuesta": 3,
+      "explicacion": "La última frase no forma parte de los cánones oficiales indicados por ISC2."
+    },
+    {
+      "pregunta": "¿Qué documento identifica los principios y reglas que gobiernan la protección de los sistemas de información y los datos de una organización?",
+      "opciones": ["Política", "Procedimiento", "Guía", "Estándar"],
+      "respuesta": 0,
+      "explicacion": "Una política establece principios, objetivos y reglas generales que orientan la seguridad de la organización."
+    },
+    {
+      "pregunta": "¿Qué documento proporciona dirección estratégica para la seguridad y asigna recursos para su implementación dentro de una organización?",
+      "opciones": ["Política", "Procedimiento", "Guía", "Estándar"],
+      "respuesta": 0,
+      "explicacion": "Las políticas establecen dirección, objetivos, responsabilidades y respaldo organizativo para las iniciativas de seguridad."
+    },
+    {
+      "pregunta": "¿Qué documento sirve como especificación para implementar una política y establece requisitos obligatorios?",
+      "opciones": ["Política", "Procedimiento", "Guía", "Estándar"],
+      "respuesta": 3,
+      "explicacion": "Un estándar define requisitos concretos y obligatorios necesarios para aplicar las políticas."
+    },
+    {
+      "pregunta": "Al considerar MFA, ¿qué factor tendría la menor prioridad para una empresa?",
+      "opciones": [
+        "Throughput, es decir, velocidad de funcionamiento",
+        "Aceptabilidad",
+        "Precisión",
+        "Competidores"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los competidores no afectan directamente a las características operativas y de seguridad necesarias para implementar MFA."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes elementos es imprescindible para una buena toma de decisiones en una empresa?",
+      "opciones": [
+        "Buen gobierno",
+        "Roles y responsabilidades eficaces",
+        "Políticas eficaces",
+        "Auditoría externa"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un buen gobierno proporciona el marco de responsabilidad, supervisión y toma de decisiones en el que se integran los demás elementos."
+    },
+    {
+      "pregunta": "¿Cuál es el factor más importante al finalizar la estrategia de recuperación de una organización?",
+      "opciones": [
+        "Realizar un BIA y priorizar los requisitos",
+        "Finalizar los recursos",
+        "Revisar los requisitos de negocio",
+        "Revisar los requisitos regulatorios"
+      ],
+      "respuesta": 0,
+      "explicacion": "El BIA identifica funciones críticas e impactos, proporcionando la base para priorizar estrategias y recursos de recuperación."
+    },
+    {
+      "pregunta": "Un usuario recibe una solicitud externa sobre un próximo lanzamiento y dispone de una hoja de especificaciones marcada como confidencial. ¿Qué debería hacer a continuación?",
+      "opciones": [
+        "Llamar al help desk o al equipo de respuesta a incidentes para saber cómo proceder.",
+        "Responder al solicitante para obtener sus datos de contacto y después llamarle.",
+        "Rechazar la solicitud.",
+        "Informar al departamento y detener el producto."
+      ],
+      "respuesta": 0,
+      "explicacion": "Debe escalar la situación al equipo adecuado antes de revelar información confidencial o interactuar con una solicitud potencialmente maliciosa."
+    },
+    {
+      "pregunta": "¿Qué proceso debe iniciarse inmediatamente después de descubrir una brecha de seguridad en una base de datos?",
+      "opciones": [
+        "Risk Management",
+        "Configuration Management",
+        "Change Management",
+        "Incident Management"
+      ],
+      "respuesta": 3,
+      "explicacion": "Incident Management permite validar, contener, analizar, erradicar y recuperar frente a una brecha de seguridad."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal del equipo de gestión de incidentes?",
+      "opciones": [
+        "Reducir el impacto y restaurar los servicios",
+        "Recopilar y analizar información",
+        "Definir roles y responsabilidades del personal de IR para cada tipo de incidente",
+        "Realizar pruebas y ejercicios del plan de IR"
+      ],
+      "respuesta": 0,
+      "explicacion": "Durante un incidente, la prioridad es limitar sus consecuencias y restaurar los servicios afectados."
+    },
+    {
+      "pregunta": "Un equipo de seguridad recibe un ticket indicando que un sistema está infectado por un virus grave. ¿Cuál debe ser el primer paso?",
+      "opciones": [
+        "Encontrar la causa raíz del incidente",
+        "Informar a la alta dirección",
+        "Confirmar y validar todos los detalles asociados al ticket",
+        "Desconectar el sistema afectado de la red de producción"
+      ],
+      "respuesta": 2,
+      "explicacion": "Antes de determinar las acciones de respuesta, debe validarse la información y confirmar que el incidente y sus detalles son correctos."
+    },
+    {
+      "pregunta": "¿En qué etapa de gestión de incidentes se realizan acciones como retirar un sistema de la red, actualizar el firewall para reducir el impacto y poner un sistema en cuarentena?",
+      "opciones": [
+        "Mitigación",
+        "Reporting",
+        "Remediation",
+        "Lecciones aprendidas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Son acciones dirigidas a contener el incidente y reducir inmediatamente su impacto."
+    },
+    {
+      "pregunta": "¿Cuál es el parámetro más importante para categorizar y priorizar un incidente?",
+      "opciones": [
+        "Impacto y criticidad",
+        "Confidencialidad e integridad",
+        "Sensibilidad y disponibilidad",
+        "Autenticidad y visibilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "El impacto y la criticidad permiten determinar qué incidentes requieren atención y recursos con mayor prioridad."
+    },
+    {
+      "pregunta": "Una organización recibe un ticket sobre una posible brecha de datos y contrata asistencia externa de respuesta y forense. ¿Cuál es el primer paso?",
+      "opciones": [
+        "Retirar el sistema de la red",
+        "Informar al cliente sobre la brecha",
+        "Validar y confirmar primero el incidente",
+        "Informar a la alta dirección"
+      ],
+      "respuesta": 2,
+      "explicacion": "Es necesario confirmar la existencia, alcance y naturaleza del incidente antes de ejecutar el resto de acciones."
+    },
+    {
+      "pregunta": "Tras una interrupción de producción, ¿qué documento contiene información detallada sobre el orden en que deben restaurarse los sistemas?",
+      "opciones": [
+        "Planificación de sucesión",
+        "Disaster Recovery Plan",
+        "Plan de seguridad de la información",
+        "Plan de Change Management"
+      ],
+      "respuesta": 1,
+      "explicacion": "El Disaster Recovery Plan establece prioridades, procedimientos y secuencias para recuperar sistemas tras una interrupción."
+    },
+    {
+      "pregunta": "Un administrador compra dos dispositivos que actuarán como failover uno del otro. ¿Qué concepto representa principalmente?",
+      "opciones": [
+        "Autenticación",
+        "Integridad",
+        "Confidencialidad",
+        "Disponibilidad"
+      ],
+      "respuesta": 3,
+      "explicacion": "La redundancia mediante failover busca mantener el servicio disponible cuando falla uno de los dispositivos."
+    },
+    {
+      "pregunta": "Un profesional acaba de completar el Business Impact Analysis, BIA. ¿Cuál debería ser el siguiente paso?",
+      "opciones": [
+        "Preparar la política y publicarla en la web",
+        "Seleccionar y formar el equipo",
+        "Preparar y seleccionar la estrategia de recuperación",
+        "Probar el plan"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los resultados del BIA permiten seleccionar estrategias de recuperación adecuadas a la criticidad y requisitos identificados."
+    },
+    {
+      "pregunta": "¿Qué proceso proporciona principalmente la justificación del Business Continuity Plan y de sus requisitos?",
+      "opciones": [
+        "BIA [Business Impact Analysis]",
+        "Change Management",
+        "Configuration Management",
+        "Release Management"
+      ],
+      "respuesta": 0,
+      "explicacion": "El BIA identifica procesos críticos, impactos y requisitos de recuperación que fundamentan el BCP."
+    },
+    {
+      "pregunta": "¿Qué tipo de sitio es la estrategia de mitigación de riesgos de TI más cara y extensa?",
+      "opciones": ["Mirror Site", "Hot Site", "Warm Site", "Cold Site"],
+      "respuesta": 0,
+      "explicacion": "Un Mirror Site mantiene una réplica muy completa y sincronizada del entorno principal, lo que requiere una elevada inversión."
+    },
+    {
+      "pregunta": "¿Cuál es la afirmación correcta sobre la diferencia principal entre un Mirror Site y un Hot Site según el test?",
+      "opciones": [
+        "Configuración idéntica, pero con diferencias en los datos",
+        "Misma configuración y mismos datos",
+        "El Hot Site es active-active y el Mirror Site es active-passive",
+        "El Hot Site no tiene servidores y el Mirror Site solo tiene servidores activos sin datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Según la explicación original, el Mirror Site mantiene una réplica y sincronización más completa, mientras que un Hot Site puede no disponer de datos actualizados en tiempo real."
+    },
+    {
+      "pregunta": "¿Qué tipo de sitio requiere el mayor tiempo de recuperación del negocio?",
+      "opciones": ["Mobile Site", "Hot Site", "Warm Site", "Cold Site"],
+      "respuesta": 3,
+      "explicacion": "Un Cold Site ofrece principalmente infraestructura básica y requiere instalar sistemas y restaurar datos antes de operar."
+    },
+    {
+      "pregunta": "¿Qué definición corresponde a MTD [Maximum Tolerable Downtime]?",
+      "opciones": [
+        "Cantidad de tiempo durante la que un proceso de misión o negocio puede estar interrumpido sin causar un daño significativo a la misión de la organización.",
+        "Tiempo total durante el que los componentes de un sistema de información pueden permanecer en recuperación antes de afectar negativamente a los procesos de negocio.",
+        "Punto temporal al que deben recuperarse los datos tras una interrupción.",
+        "Cantidad de tiempo durante la que un proceso puede estar interrumpido causando un daño significativo a la misión."
+      ],
+      "respuesta": 0,
+      "explicacion": "MTD es el máximo periodo de indisponibilidad que puede tolerarse antes de provocar consecuencias inaceptables o significativas."
+    },
+    {
+      "pregunta": "¿Qué afirmación describe correctamente la relación entre MTD y RTO?",
+      "opciones": [
+        "El RTO normalmente debe ser menor que el MTD",
+        "El RTO normalmente debe ser mayor que el MTD",
+        "El RTO está más relacionado con el RPO",
+        "El RTO puede superar el límite establecido por el MTD"
+      ],
+      "respuesta": 0,
+      "explicacion": "El objetivo de recuperación debe lograrse antes de alcanzar el máximo tiempo de interrupción tolerable."
+    },
+    {
+      "pregunta": "¿Qué proceso es la primera fuente para determinar estrategias de resiliencia y planificación de contingencias?",
+      "opciones": [
+        "BIA",
+        "Estrategia de recuperación",
+        "Soluciones de contingencia",
+        "Política de BCP"
+      ],
+      "respuesta": 0,
+      "explicacion": "El BIA determina qué funciones son críticas y cuáles son las consecuencias de una interrupción, orientando las estrategias posteriores."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso tiene una funcionalidad de usuario muy limitada, requiere mucha administración, es costoso y poco amigable para el usuario?",
+      "opciones": ["MAC", "DAC", "RBAC", "RUBAC"],
+      "respuesta": 0,
+      "explicacion": "MAC aplica políticas centralizadas y estrictas que limitan la discreción de los usuarios y requieren una administración rigurosa."
+    },
+    {
+      "pregunta": "¿Qué modelo simplifica la administración del acceso gestionando los permisos según los roles laborales de los usuarios?",
+      "opciones": ["MAC", "DAC", "RBAC", "RUBAC"],
+      "respuesta": 2,
+      "explicacion": "RBAC asigna permisos a roles y posteriormente asigna usuarios a esos roles."
+    },
+    {
+      "pregunta": "¿Qué tipo de control de acceso se utiliza principalmente en entornos de alta seguridad?",
+      "opciones": ["MAC", "DAC", "RBAC", "RuBAC"],
+      "respuesta": 0,
+      "explicacion": "MAC aplica controles centralizados basados en clasificaciones y autorizaciones, adecuados para entornos con requisitos estrictos."
+    },
+    {
+      "pregunta": "¿Qué tipo de cuenta representa un objetivo de alto valor y requiere mayor protección?",
+      "opciones": [
+        "Cuenta privilegiada",
+        "Cuenta de usuario",
+        "Cuenta de servicio",
+        "Cuenta de archivo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las cuentas privilegiadas poseen permisos elevados capaces de realizar operaciones críticas, por lo que son objetivos especialmente valiosos."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo último de una separación de funciones adecuada?",
+      "opciones": [
+        "Impedir que los empleados divulguen información sensible",
+        "Garantizar que existan controles de acceso",
+        "Garantizar que ningún individuo pueda comprometer por sí solo un sistema",
+        "Garantizar que los registros de auditoría no sean manipulados"
+      ],
+      "respuesta": 2,
+      "explicacion": "SoD distribuye funciones críticas para impedir que una sola persona controle todos los pasos necesarios para abusar de un proceso o sistema."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de control administrativo?",
+      "opciones": [
+        "Cifrado",
+        "Separación de funciones",
+        "Cámara física",
+        "Configuración del firewall"
+      ],
+      "respuesta": 1,
+      "explicacion": "La separación de funciones es una medida organizativa que distribuye responsabilidades para reducir fraude y errores."
+    },
+    {
+      "pregunta": "¿Cuál es la característica más importante de un sistema de identificación biométrica según el test?",
+      "opciones": [
+        "Autorización",
+        "Requisitos de almacenamiento",
+        "Precisión",
+        "Fiabilidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "La precisión determina la capacidad del sistema biométrico para identificar o verificar correctamente a una persona."
+    },
+    {
+      "pregunta": "¿Qué enfoque diseña edificios y espacios utilizando características pasivas para reducir la probabilidad de actividad delictiva?",
+      "opciones": [
+        "CPTED [Crime Prevention Through Environmental Design]",
+        "Perímetro de seguridad",
+        "Privacy by Design",
+        "DMZ"
+      ],
+      "respuesta": 0,
+      "explicacion": "CPTED utiliza el diseño del entorno, la vigilancia natural y el control de accesos para disuadir actividades delictivas."
+    },
+    {
+      "pregunta": "¿Qué tipo de control es implementado y ejecutado principalmente por sistemas de información mediante mecanismos incluidos en firmware o software?",
+      "opciones": [
+        "Control técnico",
+        "Control administrativo",
+        "Control físico",
+        "Control de servicio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los controles técnicos se implementan mediante mecanismos de hardware, firmware y software."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes no es un ejemplo de control administrativo?",
+      "opciones": [
+        "Controles de personal",
+        "Acceptable Use Policy",
+        "Formación de concienciación en seguridad",
+        "Lector de credenciales"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un lector de credenciales es un mecanismo tecnológico o físico de control de acceso, no una política o procedimiento administrativo."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes no es un ejemplo de control físico?",
+      "opciones": [
+        "Cableado físico",
+        "Lector de credenciales",
+        "Contratación de un guardia",
+        "Firewall"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un firewall es un control técnico orientado a gestionar y filtrar comunicaciones de red."
+    },
+    {
+      "pregunta": "Un empleado lleva 15 días de vacaciones, no se reincorpora y no existe comunicación posterior con RR. HH. ¿Qué práctica debería aplicar la empresa?",
+      "opciones": [
+        "Deshabilitar la cuenta",
+        "Eliminar la cuenta",
+        "Llamarle para comprobar por qué no se incorpora",
+        "Modificar la política"
+      ],
+      "respuesta": 0,
+      "explicacion": "Deshabilitar temporalmente la cuenta reduce el riesgo de accesos no autorizados mientras se aclara la situación."
+    },
+    {
+      "pregunta": "¿Qué capa proporciona servicios para garantizar que aplicaciones pares utilicen un formato común de representación de datos?",
+      "opciones": ["Presentation", "Application", "Transport", "Session"],
+      "respuesta": 0,
+      "explicacion": "La capa Presentation se encarga de transformar y representar los datos en formatos comprensibles por las aplicaciones."
+    },
+    {
+      "pregunta": "¿En qué capa del modelo OSI funciona un Web Application Firewall, WAF?",
+      "opciones": ["Session", "Presentation", "Application", "Transport"],
+      "respuesta": 2,
+      "explicacion": "Un WAF inspecciona tráfico HTTP/HTTPS y lógica de aplicaciones web, por lo que opera en la capa Application."
+    },
+    {
+      "pregunta": "¿En qué ataque el atacante envía rápidamente muchas solicitudes de conexión pero ignora las respuestas devueltas por el servidor?",
+      "opciones": ["SYN flood", "Smurf Attack", "Ping of Death", "ICMP Flood"],
+      "respuesta": 0,
+      "explicacion": "Un SYN flood envía numerosos SYN y deja incompleto el establecimiento de conexiones TCP, consumiendo recursos del servidor."
+    },
+    {
+      "pregunta": "Se envían paquetes ICMP a la dirección de broadcast de una red con la dirección de origen falsificada para que las respuestas lleguen a una víctima. ¿Qué ataque es?",
+      "opciones": ["SYN flood", "Smurf Attack", "Ping of Death", "ICMP Flood"],
+      "respuesta": 1,
+      "explicacion": "Un Smurf Attack utiliza solicitudes ICMP a broadcast con origen falsificado para amplificar el tráfico dirigido hacia la víctima."
+    },
+    {
+      "pregunta": "¿Cuál es el método de autenticación menos seguro de los siguientes porque envía las credenciales en texto claro?",
+      "opciones": [
+        "PAP [Password Authentication Protocol]",
+        "CHAP [Challenge-Handshake Authentication Protocol]",
+        "EAP [Extensible Authentication Protocol]",
+        "RADIUS [Remote Authentication Dial-In User Service]"
+      ],
+      "respuesta": 0,
+      "explicacion": "PAP transmite las credenciales sin protegerlas mediante un mecanismo challenge-response."
+    },
+    {
+      "pregunta": "¿Qué elemento utiliza CHAP en su mecanismo challenge-response para que cada intercambio sea distinto?",
+      "opciones": ["NONCE", "TOKEN", "TICKET", "Contraseña cifrada"],
+      "respuesta": 0,
+      "explicacion": "Un nonce es un valor utilizado una sola vez que ayuda a evitar la reutilización de respuestas de autenticación."
+    },
+    {
+      "pregunta": "Un dispositivo de capa 3 del modelo OSI utiliza cuál de los siguientes protocolos para determinar una ruta hacia otra red?",
+      "opciones": [
+        "TCP [Transmission Control Protocol]",
+        "SIP [Session Initiation Protocol]",
+        "RIP [Routing Information Protocol]",
+        "HTTP [Hyper Text Transfer Protocol]"
+      ],
+      "respuesta": 2,
+      "explicacion": "RIP es un protocolo de routing utilizado para intercambiar información de rutas entre dispositivos de capa 3."
+    },
+    {
+      "pregunta": "Según el modelo OSI, ¿qué capa gestiona la transferencia de datos entre aplicaciones, el control de flujo y la detección y corrección de errores?",
+      "opciones": ["Application", "Data Link", "Network", "Transport"],
+      "respuesta": 3,
+      "explicacion": "La capa Transport proporciona comunicación extremo a extremo y funciones de control de flujo y fiabilidad."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe mejor el principio de mínimo privilegio?",
+      "opciones": [
+        "Garantizar que los usuarios tengan acceso a todos los recursos",
+        "Limitar el acceso de los usuarios al mínimo necesario para realizar sus funciones",
+        "Conceder acceso total a los administradores",
+        "Permitir acceso temporal a los usuarios para cualquier tarea"
+      ],
+      "respuesta": 1,
+      "explicacion": "El mínimo privilegio concede únicamente los permisos necesarios para cumplir las funciones asignadas."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de implementar políticas de seguridad en una organización?",
+      "opciones": [
+        "Garantizar el cumplimiento legal",
+        "Crear un marco para controles y procedimientos de seguridad",
+        "Imponer contraseñas robustas",
+        "Formar a los empleados en ciberseguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las políticas proporcionan el marco general que define objetivos, responsabilidades y requisitos para los controles y procedimientos."
+    },
+    {
+      "pregunta": "¿Qué principio de seguridad garantiza que los datos no puedan modificarse sin autorización?",
+      "opciones": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "Autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La integridad protege la exactitud y completitud de la información frente a modificaciones no autorizadas."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de control de seguridad físico?",
+      "opciones": [
+        "Firewalls",
+        "Cifrado",
+        "Guardias de seguridad",
+        "Software antivirus"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los guardias de seguridad son controles físicos destinados a proteger instalaciones y recursos frente a accesos no autorizados."
+    },
+    {
+      "pregunta": "¿Qué describe mejor el concepto de Defense in Depth?",
+      "opciones": [
+        "Utilizar una única medida de seguridad para proteger activos",
+        "Implementar múltiples capas de controles de seguridad",
+        "Aplicar seguridad únicamente en el perímetro",
+        "Depender de la formación de usuarios para la seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Defense in Depth combina diversas capas de protección para que el fallo de un control no implique el fallo total de la seguridad."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de la planificación de continuidad de negocio?",
+      "opciones": [
+        "Restaurar las operaciones normales después de un desastre",
+        "Identificar amenazas potenciales",
+        "Desarrollar procedimientos de respuesta a incidentes",
+        "Garantizar la disponibilidad continua de funciones empresariales críticas"
+      ],
+      "respuesta": 3,
+      "explicacion": "La continuidad de negocio pretende mantener las funciones esenciales durante y después de una interrupción."
+    },
+    {
+      "pregunta": "¿Qué fase de un Disaster Recovery Plan implica la restauración de las operaciones normales?",
+      "opciones": [
+        "Response",
+        "Recovery",
+        "Mitigation",
+        "Business Impact Analysis [BIA]"
+      ],
+      "respuesta": 1,
+      "explicacion": "La fase Recovery restaura sistemas, servicios y operaciones después de controlar los efectos inmediatos del incidente."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de realizar un Business Impact Analysis, BIA?",
+      "opciones": [
+        "Evaluar la postura de seguridad de la organización",
+        "Determinar el impacto de las interrupciones sobre las operaciones de negocio",
+        "Identificar amenazas potenciales de seguridad",
+        "Desarrollar políticas de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "El BIA analiza las consecuencias que la interrupción de funciones y procesos podría tener sobre el negocio."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un componente principal de un Incident Response Plan?",
+      "opciones": [
+        "Evaluación de riesgos",
+        "Procedimientos de comunicación",
+        "Desarrollo de políticas de seguridad",
+        "Medidas de seguridad física"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los procedimientos de comunicación permiten coordinar al equipo y comunicar información relevante a las partes interesadas durante un incidente."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de las pruebas de Disaster Recovery?",
+      "opciones": [
+        "Garantizar cumplimiento regulatorio",
+        "Validar la eficacia del Disaster Recovery Plan",
+        "Formar a los empleados sobre políticas de seguridad",
+        "Identificar amenazas potenciales"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las pruebas verifican que los procedimientos de recuperación funcionan y pueden alcanzar los objetivos previstos."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso se basa en la clasificación de la información y los niveles de autorización de los usuarios?",
+      "opciones": [
+        "RBAC [Role-Based Access Control]",
+        "DAC [Discretionary Access Control]",
+        "MAC [Mandatory Access Control]",
+        "ABAC [Attribute-Based Access Control]"
+      ],
+      "respuesta": 2,
+      "explicacion": "MAC compara clasificaciones de objetos y autorizaciones o clearances de sujetos para decidir el acceso."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal del principio de separación de funciones?",
+      "opciones": [
+        "Reducir el riesgo de errores y fraude",
+        "Aplicar políticas de contraseñas robustas",
+        "Limitar el acceso a información sensible",
+        "Garantizar la disponibilidad de los datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Separar responsabilidades impide que una sola persona controle todas las etapas de una operación crítica, reduciendo errores y fraude."
+    },
+    {
+      "pregunta": "¿Qué modelo de control de acceso permite a los propietarios de los datos decidir quién puede acceder a sus recursos?",
+      "opciones": [
+        "RBAC [Role-Based Access Control]",
+        "DAC [Discretionary Access Control]",
+        "MAC [Mandatory Access Control]",
+        "ABAC [Attribute-Based Access Control]"
+      ],
+      "respuesta": 1,
+      "explicacion": "DAC concede al propietario de un recurso capacidad discrecional para asignar permisos."
+    },
+    {
+      "pregunta": "¿Cuál es un ejemplo de control de acceso preventivo?",
+      "opciones": [
+        "Registros de auditoría",
+        "Formación en seguridad",
+        "Intrusion Detection Systems",
+        "Firewalls"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un firewall puede impedir conexiones no autorizadas antes de que alcancen los recursos protegidos."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor el principio de mínimo privilegio?",
+      "opciones": [
+        "Proporcionar a los usuarios derechos de acceso mínimos",
+        "Permitir acceso temporal a recursos",
+        "Rotar periódicamente los roles de usuario",
+        "Implementar mecanismos de autenticación fuerte"
+      ],
+      "respuesta": 0,
+      "explicacion": "El principio limita los permisos de cada usuario o proceso a los mínimos necesarios."
+    },
+    {
+      "pregunta": "¿Cuál es la principal ventaja de Single Sign-On, SSO?",
+      "opciones": [
+        "Requiere múltiples contraseñas para aumentar la seguridad",
+        "Simplifica la autenticación permitiendo acceder a múltiples aplicaciones con un único conjunto de credenciales",
+        "Proporciona un nivel superior de cifrado de datos",
+        "Garantiza que los usuarios tengan derechos mínimos"
+      ],
+      "respuesta": 1,
+      "explicacion": "SSO permite autenticarse una vez y utilizar esa sesión para acceder a varios sistemas o aplicaciones integrados."
+    },
+    {
+      "pregunta": "¿Qué dispositivo se utiliza principalmente para filtrar y supervisar tráfico de red entrante y saliente según reglas de seguridad predefinidas?",
+      "opciones": ["Router", "Switch", "Firewall", "Hub"],
+      "respuesta": 2,
+      "explicacion": "Un firewall permite o bloquea tráfico según reglas definidas por la política de seguridad."
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de una Virtual Private Network, VPN?",
+      "opciones": [
+        "Aumentar la velocidad de Internet",
+        "Proporcionar acceso remoto seguro a una red",
+        "Monitorizar el tráfico de red",
+        "Detectar malware"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una VPN establece un canal protegido, normalmente cifrado, para acceder remotamente a recursos de una red."
+    },
+    {
+      "pregunta": "¿Cuál es un método habitual para prevenir o mitigar ataques DDoS?",
+      "opciones": [
+        "Implementar contraseñas robustas",
+        "Utilizar IDS",
+        "Utilizar firewalls de red",
+        "Aplicar rate limiting y análisis de tráfico"
+      ],
+      "respuesta": 3,
+      "explicacion": "El rate limiting y el análisis de patrones permiten controlar volúmenes anómalos y limitar el impacto del tráfico DDoS."
+    },
+    {
+      "pregunta": "¿Qué ataque implica interceptar y posiblemente modificar la comunicación entre dos partes sin que estas sean conscientes?",
+      "opciones": [
+        "Phishing",
+        "Man-in-the-Middle [MitM]",
+        "Denial of Service [DoS]",
+        "SQL Injection"
+      ],
+      "respuesta": 1,
+      "explicacion": "En un MitM el atacante se sitúa entre las partes y puede observar o modificar las comunicaciones que retransmite."
+    },
+    {
+      "pregunta": "¿Qué medida de seguridad se utiliza para detectar accesos o actividades no autorizadas en una red privada según el test?",
+      "opciones": [
+        "Software antivirus",
+        "Network Intrusion Detection System [NIDS]",
+        "Web proxy",
+        "Software Data Loss Prevention [DLP]"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un NIDS supervisa el tráfico de la red y genera alertas ante comportamientos compatibles con intrusiones o amenazas."
+    },
+    {
+      "pregunta": "¿Cuál es el objetivo principal de Security Operations dentro de una organización?",
+      "opciones": [
+        "Garantizar cumplimiento legal",
+        "Detectar, responder y recuperarse de incidentes de seguridad",
+        "Desarrollar políticas de seguridad",
+        "Realizar formación en seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Security Operations se centra en monitorizar amenazas e incidentes y coordinar su detección, respuesta y recuperación."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes es una actividad clave de Security Operations para mantener la integridad de los sistemas según el test?",
+      "opciones": [
+        "Implementar controles de acceso",
+        "Realizar backups periódicos",
+        "Realizar auditorías de seguridad",
+        "Monitorizar el tráfico de red"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las auditorías permiten revisar controles, configuraciones y prácticas para comprobar su integridad y cumplimiento."
+    },
+    {
+      "pregunta": "¿Qué tipo de sistema está diseñado para detectar y responder automáticamente a posibles amenazas de seguridad según el test?",
+      "opciones": [
+        "Software antivirus",
+        "SIEM [Security Information and Event Management]",
+        "DLP [Data Loss Prevention]",
+        "PKI [Public Key Infrastructure]"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un SIEM centraliza y correlaciona eventos de múltiples fuentes para identificar amenazas y facilitar respuestas automatizadas o coordinadas."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor un incidente de seguridad?",
+      "opciones": [
+        "Un intento de comprometer la seguridad de un sistema",
+        "Una brecha de red exitosa",
+        "Cualquier evento que amenace la seguridad de un sistema de información",
+        "Un informe sobre un correo de phishing"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un incidente abarca eventos que amenazan o comprometen la confidencialidad, integridad o disponibilidad de sistemas o información."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de un Security Operations Center, SOC?",
+      "opciones": [
+        "Proporcionar soporte técnico a usuarios finales",
+        "Gestionar y monitorizar amenazas e incidentes de seguridad",
+        "Desarrollar políticas de seguridad",
+        "Realizar formación de seguridad para empleados"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un SOC centraliza actividades de monitorización, detección, análisis y respuesta frente a amenazas e incidentes."
+    },
+    {
+      "pregunta": "¿Qué proceso implica identificar, evaluar y mitigar riesgos para los sistemas de información de una organización?",
+      "opciones": [
+        "Vulnerability scanning",
+        "Incident response",
+        "Risk Management",
+        "Penetration testing"
+      ],
+      "respuesta": 2,
+      "explicacion": "Risk Management engloba la identificación, análisis, evaluación y tratamiento de riesgos."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe correctamente Software as a Service, SaaS?",
+      "opciones": [
+        "Capacidad para que los clientes utilicen las aplicaciones del proveedor que se ejecutan sobre una infraestructura cloud y accedan a ellas desde distintos dispositivos mediante interfaces como un navegador web o una interfaz de programa.",
+        "Capacidad para que el proveedor utilice las aplicaciones del cliente que se ejecutan sobre una infraestructura cloud.",
+        "Capacidad para que el proveedor utilice aplicaciones reguladas ejecutándose sobre una infraestructura cloud.",
+        "Capacidad para que los clientes desplieguen aplicaciones propias sobre la infraestructura cloud utilizando lenguajes, bibliotecas, servicios y herramientas compatibles con el proveedor."
+      ],
+      "respuesta": 0,
+      "explicacion": "En SaaS el proveedor ejecuta y administra las aplicaciones, mientras el cliente las consume a través de la red."
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe correctamente Infrastructure as a Service, IaaS?",
+      "opciones": [
+        "Capacidad para que los clientes utilicen recursos fundamentales del proveedor, como procesamiento, almacenamiento y redes, para desplegar y ejecutar sistemas operativos, aplicaciones y otro software.",
+        "Capacidad para que los clientes desplieguen sus aplicaciones utilizando lenguajes, bibliotecas, servicios y herramientas soportadas por el proveedor.",
+        "Capacidad para que los clientes utilicen aplicaciones del proveedor mediante un navegador o interfaz de programa.",
+        "Capacidad para que el proveedor utilice los recursos de procesamiento, almacenamiento y red del cliente."
+      ],
+      "respuesta": 0,
+      "explicacion": "IaaS proporciona recursos informáticos virtualizados sobre los que el cliente puede desplegar y gestionar sistemas operativos y aplicaciones."
+    },
+    {
+      "pregunta": "¿Qué tipo de despliegue cloud requiere especialmente estándares de datos, portabilidad e integración?",
+      "opciones": [
+        "Hybrid Cloud",
+        "Public Cloud",
+        "Private Cloud",
+        "Community Cloud"
+      ],
+      "respuesta": 0,
+      "explicacion": "Hybrid Cloud combina distintos entornos y requiere interoperabilidad y portabilidad para integrar datos y cargas entre ellos."
+    },
+    {
+      "pregunta": "Una empresa utiliza varias plataformas SaaS e IaaS. ¿Qué solución es la más adecuada para proporcionar monitorización y visibilidad sobre esas plataformas cloud?",
+      "opciones": [
+        "SIEM",
+        "CASB [Cloud Access Security Broker]",
+        "Firewall",
+        "Vulnerability scanner"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un CASB proporciona visibilidad y aplicación de políticas de seguridad sobre el uso de servicios y recursos cloud."
+    },
+    {
+      "pregunta": "¿Qué ataque ocurre cuando un atacante responde con la dirección MAC de su propia máquina para asociarla con la dirección IP de un servidor legítimo?",
+      "opciones": [
+        "Session hijacking",
+        "IP spoofing",
+        "Evil twin",
+        "ARP poisoning"
+      ],
+      "respuesta": 3,
+      "explicacion": "ARP poisoning falsifica asociaciones IP-MAC para redirigir tráfico hacia el dispositivo del atacante."
+    },
+    {
+      "pregunta": "¿Qué ataque intercepta y retransmite las comunicaciones entre dos partes sin que ninguna sea consciente de la interceptación o posible modificación?",
+      "opciones": [
+        "Spear phishing",
+        "Man-in-the-Middle",
+        "URL hijacking",
+        "Transitive access"
+      ],
+      "respuesta": 1,
+      "explicacion": "En un Man-in-the-Middle el atacante se interpone entre las partes, retransmitiendo y potencialmente modificando los mensajes."
+    },
+    {
+      "pregunta": "¿Qué ataque puede explotar especialmente una vulnerabilidad provocada por usuarios sin formación?",
+      "opciones": [
+        "Correo de spear phishing con un archivo adjunto",
+        "DNS Poisoning",
+        "Man-in-the-Middle",
+        "Secuestro del dominio web de un banco"
+      ],
+      "respuesta": 0,
+      "explicacion": "El spear phishing explota principalmente el comportamiento del usuario mediante mensajes dirigidos que intentan inducirle a abrir contenido malicioso."
+    },
+    {
+      "pregunta": "¿Qué ataque consiste en cifrar los datos de una organización y exigir un pago para restaurar el acceso?",
+      "opciones": [
+        "Ataque DoS",
+        "Ataque de ransomware",
+        "Ataque de sniffing",
+        "Ataque de monitorización"
+      ],
+      "respuesta": 1,
+      "explicacion": "El ransomware cifra datos o sistemas y exige normalmente un rescate a cambio de restaurar el acceso."
+    },
+    {
+      "pregunta": "¿Qué criptosistema utiliza la clave pública del destinatario para cifrar y la clave privada del destinatario para descifrar?",
+      "opciones": [
+        "Cifrado de clave pública o cifrado simétrico",
+        "Cifrado de clave pública o cifrado asimétrico",
+        "Cifrado de clave compartida o cifrado simétrico",
+        "Cifrado de clave compartida o cifrado asimétrico"
+      ],
+      "respuesta": 1,
+      "explicacion": "La criptografía asimétrica utiliza un par de claves relacionadas: una pública y otra privada."
+    },
+    {
+      "pregunta": "¿Cuál es un problema principal del cifrado de clave simétrica?",
+      "opciones": [
+        "Es más lento que el cifrado asimétrico",
+        "Los algoritmos se mantienen como estándares propietarios",
+        "Compartir de forma segura la clave secreta",
+        "El factor de trabajo no está relacionado con el tamaño de la clave"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las partes deben intercambiar la clave secreta de forma segura; si esa clave se compromete, también lo hace la comunicación."
+    },
+    {
+      "pregunta": "¿Qué clave se utiliza para crear una firma digital?",
+      "opciones": [
+        "Clave privada del receptor",
+        "Clave pública del emisor",
+        "Clave privada del emisor",
+        "Clave pública del receptor"
+      ],
+      "respuesta": 2,
+      "explicacion": "El emisor crea la firma con su clave privada y los receptores pueden verificarla utilizando la clave pública correspondiente."
+    },
+    {
+      "pregunta": "Prabh envía a Rakesh un mensaje cifrado utilizando un algoritmo simétrico. ¿Qué clave debe utilizar para cifrarlo?",
+      "opciones": [
+        "Clave pública de Prabh",
+        "Clave privada de Prabh",
+        "Clave pública de Rakesh",
+        "Clave secreta compartida"
+      ],
+      "respuesta": 3,
+      "explicacion": "En criptografía simétrica ambas partes utilizan una misma clave secreta compartida."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes se considera un algoritmo hash más seguro según las opciones disponibles?",
+      "opciones": ["MD5", "SHA", "AES", "RSA"],
+      "respuesta": 1,
+      "explicacion": "SHA pertenece a una familia de algoritmos hash, mientras que MD5 presenta vulnerabilidades conocidas y AES y RSA no son funciones hash."
+    },
+    {
+      "pregunta": "Desde la perspectiva de seguridad de la información, ¿qué debe hacerse con información que ya no respalda el propósito principal del negocio?",
+      "opciones": [
+        "Protegerla dentro de la evaluación de riesgos",
+        "Revisarla según la política de retención",
+        "Revisarla según la política de acceso",
+        "Revisarla según la política de clasificación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La política de retención determina cuánto tiempo debe conservarse la información y cuándo puede eliminarse de forma segura."
+    },
+    {
+      "pregunta": "La creación de una cultura organizativa que priorice la seguridad de la información comienza por:",
+      "opciones": [
+        "Implementar controles más fuertes",
+        "Realizar formación periódica de concienciación",
+        "Monitorizar activamente las operaciones",
+        "Obtener el respaldo de la dirección ejecutiva"
+      ],
+      "respuesta": 3,
+      "explicacion": "El respaldo ejecutivo proporciona autoridad, recursos y prioridad organizativa a las iniciativas de seguridad."
+    },
+    {
+      "pregunta": "¿Cuál es la medida más eficaz para mitigar ataques de phishing en una empresa según el test?",
+      "opciones": [
+        "Instalar antivirus",
+        "Instalar MFA",
+        "Mejorar la concienciación de los usuarios",
+        "Cifrado"
+      ],
+      "respuesta": 2,
+      "explicacion": "La concienciación ayuda a los usuarios a identificar y evitar mensajes, enlaces y solicitudes fraudulentas."
+    },
+    {
+      "pregunta": "¿Qué medida es la más eficaz para prevenir la introducción de modificaciones de código que puedan comprometer una aplicación crítica de negocio?",
+      "opciones": [
+        "Change Management",
+        "Patch Management",
+        "Incident Management",
+        "Release Management"
+      ],
+      "respuesta": 0,
+      "explicacion": "Change Management exige que los cambios sean solicitados, evaluados, autorizados, probados y documentados antes de introducirse."
+    },
+    {
+      "pregunta": "¿Qué es lo más importante que debe considerarse al proteger los activos?",
+      "opciones": [
+        "Valor y riesgo",
+        "Seguridad y riesgo",
+        "Mercado y reputación",
+        "Vulnerabilidades frente a riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "El valor del activo y los riesgos asociados permiten priorizar el nivel de protección adecuado."
+    },
+    {
+      "pregunta": "¿Qué elemento es el más crítico para Patch Management, Configuration Management y Risk Management dentro de la postura general de seguridad de una empresa?",
+      "opciones": [
+        "Inventarios",
+        "Incident Management",
+        "Identidad y acceso",
+        "Autenticación fuerte"
+      ],
+      "respuesta": 0,
+      "explicacion": "Sin un inventario fiable no es posible saber qué activos deben parchearse, configurarse, protegerse o incluirse en las evaluaciones de riesgo."
+    },
+    {
+      "pregunta": "¿Cuál es la práctica más eficaz para mantener la integridad de los sistemas en toda la organización dentro de un entorno dinámico?",
+      "opciones": [
+        "Change Management",
+        "Incident Management",
+        "Patch Management",
+        "Release Management"
+      ],
+      "respuesta": 0,
+      "explicacion": "Change Management controla y documenta las modificaciones para evitar cambios no autorizados o no evaluados que afecten a la integridad del sistema."
+    }
+  ]
+}
