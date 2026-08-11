@@ -1,0 +1,1077 @@
+{
+  "titulo": "Batería de fundamentos de ciberseguridad #2",
+  "procedencia": "Banco de preguntas de evaluación en inglés proporcionado por el usuario, con contenidos de principios de seguridad, continuidad de negocio, recuperación ante desastres, respuesta a incidentes, control de acceso, seguridad de redes y operaciones de seguridad.",
+  "descripcion": "Batería de 100 preguntas de opción múltiple sobre fundamentos y prácticas de ciberseguridad.",
+  "preguntas": [
+    {
+      "pregunta": "Un portátil de un consultor que contiene contratos de clientes es robado de un coche. Como el disco estaba completamente cifrado, el ladrón no puede leer ningún archivo. ¿Qué propiedad de la tríada CIA preservó el cifrado?",
+      "opciones": [
+        "Disponibilidad",
+        "Integridad",
+        "Confidencialidad",
+        "Utilidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El cifrado impidió que una parte no autorizada leyera los datos, preservando la confidencialidad."
+    },
+    {
+      "pregunta": "Un equipo de operaciones almacena configuraciones de routers en un repositorio con control de versiones que registra cada cambio y marca cualquier diferencia entre el dispositivo en ejecución y la copia aprobada. ¿Qué propiedad de seguridad protege principalmente esta práctica?",
+      "opciones": [
+        "No repudio",
+        "Portabilidad",
+        "Confidencialidad",
+        "Integridad"
+      ],
+      "respuesta": 3,
+      "explicacion": "Detectar y controlar cambios no autorizados o accidentales protege la integridad de las configuraciones."
+    },
+    {
+      "pregunta": "La plataforma de reservas de una aerolínea está diseñada con servidores en clúster, doble alimentación eléctrica y conmutación por error automática para que el fallo de un componente no interrumpa la venta de billetes. ¿Qué objetivo de seguridad apoyan principalmente estas medidas?",
+      "opciones": [
+        "Disponibilidad",
+        "No repudio",
+        "Confidencialidad",
+        "Autenticación"
+      ],
+      "respuesta": 0,
+      "explicacion": "La redundancia y la conmutación por error mantienen el servicio accesible cuando falla un componente, protegiendo la disponibilidad."
+    },
+    {
+      "pregunta": "Un servicio de urgencias se queja de que un nuevo proceso de inicio de sesión de quince pasos retrasa a los médicos al acceder a historiales clínicos en momentos críticos. Seguridad acuerda simplificar la autenticación en los puestos clínicos manteniendo protegidos los registros. ¿Qué ilustra esta situación?",
+      "opciones": [
+        "Los controles de seguridad nunca afectan a las operaciones",
+        "La necesidad de equilibrar los controles de confidencialidad con los requisitos de disponibilidad según el contexto del negocio",
+        "Los médicos deberían compartir una sola cuenta",
+        "La integridad siempre tiene prioridad sobre la seguridad del paciente"
+      ],
+      "respuesta": 1,
+      "explicacion": "La seguridad debe equilibrar confidencialidad y disponibilidad según el contexto; en urgencias, el acceso rápido puede ser crítico."
+    },
+    {
+      "pregunta": "Un cliente niega haber realizado una operación bursátil en línea. La correduría presenta registros de la transacción firmados criptográficamente en el momento de la orden con las credenciales del cliente, y la reclamación se desestima. ¿Qué propiedad del diseño de registro impidió la falsa negación?",
+      "opciones": [
+        "Elasticidad",
+        "Redundancia",
+        "No repudio",
+        "Disponibilidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El no repudio aporta evidencia que impide que una parte niegue de forma creíble una acción que realizó."
+    },
+    {
+      "pregunta": "A una nueva empleada le indican que su dirección de correo electrónico será su ID de usuario en los sistemas de la empresa. En términos de control de acceso, ¿qué función cumple la dirección de correo durante el inicio de sesión?",
+      "opciones": [
+        "Cifra su sesión",
+        "Autoriza su acceso a archivos",
+        "La autentica",
+        "La identifica al declarar quién afirma ser"
+      ],
+      "respuesta": 3,
+      "explicacion": "El ID de usuario identifica al sujeto; la autenticación posterior demuestra que esa identidad es auténtica."
+    },
+    {
+      "pregunta": "Una aplicación móvil para registrar rutas de carrera solicita la lista de contactos, el calendario y el historial preciso de ubicación, aunque solo necesita la ubicación para prestar el servicio. Un revisor de privacidad se opone. ¿Qué principio de privacidad está infringiendo la aplicación?",
+      "opciones": [
+        "Minimización de datos, recopilando solo lo necesario para la finalidad declarada",
+        "Defensa en profundidad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La minimización de datos exige recopilar únicamente la información necesaria para la finalidad declarada."
+    },
+    {
+      "pregunta": "El contratista de facturación de un hospital de Estados Unidos recibirá registros de tratamiento y pago de pacientes para procesar reclamaciones. ¿Qué categoría de información regulada está implicada y exige salvaguardas específicas bajo la normativa sanitaria?",
+      "opciones": [
+        "Inteligencia de fuentes abiertas",
+        "Información de salud protegida",
+        "Telemetría de marketing",
+        "Datos de dominio público"
+      ],
+      "respuesta": 1,
+      "explicacion": "La información sanitaria identificable relacionada con atención o pagos es información de salud protegida y está regulada por HIPAA en Estados Unidos."
+    },
+    {
+      "pregunta": "Un responsable de seguridad explica a los directivos que una vulnerabilidad de un sistema no constituye, por sí sola, un riesgo; debe existir algo más. ¿Qué combinación produce correctamente un riesgo?",
+      "opciones": [
+        "Una vulnerabilidad por sí sola",
+        "Un activo sin debilidades",
+        "Una amenaza con capacidad de explotar una vulnerabilidad y causar un impacto adverso potencial",
+        "Dos firewalls en serie"
+      ],
+      "respuesta": 2,
+      "explicacion": "El riesgo surge cuando una amenaza puede explotar una vulnerabilidad y producir un impacto, considerando además su probabilidad."
+    },
+    {
+      "pregunta": "El registro de riesgos de un centro de datos costero incluye los huracanes como preocupación importante. En terminología de gestión de riesgos, ¿cómo se clasifica MEJOR un huracán?",
+      "opciones": [
+        "Una amenaza interna",
+        "Un control correctivo",
+        "Una vulnerabilidad",
+        "Una amenaza natural"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un huracán es un evento ambiental capaz de causar daño, por lo que se clasifica como amenaza natural."
+    },
+    {
+      "pregunta": "La propietaria de una pequeña empresa califica cada riesgo identificado como alto, medio o bajo en probabilidad e impacto usando juicio experto, y luego los representa en una matriz de colores para priorizarlos. ¿Qué tipo de evaluación de riesgos está realizando?",
+      "opciones": [
+        "Evaluación cualitativa",
+        "Prueba de penetración",
+        "Evaluación cuantitativa",
+        "Prueba de regresión"
+      ],
+      "respuesta": 0,
+      "explicacion": "El uso de categorías descriptivas y juicio experto, en lugar de valores monetarios, corresponde a una evaluación cualitativa."
+    },
+    {
+      "pregunta": "Para justificar un presupuesto de seguridad, un analista expresa cada riesgo importante como una pérdida monetaria anual esperada, multiplicando la frecuencia estimada del evento por el coste estimado por evento. ¿Qué tipo de evaluación de riesgos es?",
+      "opciones": ["Anecdótica", "Cuantitativa", "Física", "Cualitativa"],
+      "respuesta": 1,
+      "explicacion": "Expresar el riesgo con valores numéricos y monetarios basados en frecuencia y pérdida es una evaluación cuantitativa."
+    },
+    {
+      "pregunta": "En lugar de crear su propio sistema de pago con tarjeta, una tienda en línea contrata a un procesador de pagos consolidado que asume la gestión de los datos de tarjeta bajo su propio programa de cumplimiento. Desde la perspectiva de la tienda, ¿qué tratamiento del riesgo representa principalmente este contrato?",
+      "opciones": [
+        "Evitación del riesgo dejando de vender productos",
+        "Amplificación del riesgo",
+        "Transferencia del riesgo mediante el traslado contractual de responsabilidades de gestión",
+        "Aceptación del riesgo de filtraciones de tarjetas"
+      ],
+      "respuesta": 2,
+      "explicacion": "Contratar a un tercero para asumir parte de la actividad y sus responsabilidades transfiere parte del riesgo."
+    },
+    {
+      "pregunta": "Después de implantar MFA y monitorización estricta, una organización reconoce que sigue existiendo cierta posibilidad de compromiso de cuentas. ¿Cómo se denomina el riesgo que permanece después de aplicar controles?",
+      "opciones": [
+        "Riesgo inherente",
+        "Riesgo cero",
+        "Riesgo transferido",
+        "Riesgo residual"
+      ],
+      "respuesta": 3,
+      "explicacion": "El riesgo residual es el que permanece después de aplicar medidas de mitigación."
+    },
+    {
+      "pregunta": "Un responsable de seguridad mantiene un documento vivo que enumera cada riesgo identificado, su propietario, probabilidad e impacto evaluados, tratamiento elegido y estado actual. ¿Cómo se llama este documento?",
+      "opciones": [
+        "Registro de riesgos",
+        "Diagrama de red",
+        "Ticket de incidente",
+        "Catálogo de servicios"
+      ],
+      "respuesta": 0,
+      "explicacion": "El registro de riesgos centraliza los riesgos identificados, sus responsables, valoraciones, tratamientos y estado."
+    },
+    {
+      "pregunta": "El presupuesto solo permite tratar un riesgo este trimestre. El registro muestra: una amenaza muy probable con impacto grave, una improbable con impacto grave, una muy probable con impacto insignificante y una improbable con impacto insignificante. ¿Cuál debe abordarse PRIMERO?",
+      "opciones": [
+        "La muy probable y de impacto insignificante",
+        "La muy probable y de impacto grave",
+        "La que sea más barata de corregir",
+        "La improbable y de impacto insignificante"
+      ],
+      "respuesta": 1,
+      "explicacion": "La prioridad se determina combinando probabilidad e impacto; un riesgo muy probable y grave tiene la mayor prioridad."
+    },
+    {
+      "pregunta": "Un centro de distribución instala una valla perimetral de tres metros alrededor del recinto para mantener a personas no autorizadas alejadas de camiones y mercancías. En la clasificación de controles, ¿cómo se describe MEJOR la valla?",
+      "opciones": [
+        "Un control administrativo y correctivo",
+        "Un control técnico y detectivo",
+        "Un control físico que disuade y previene la entrada no autorizada",
+        "Un control lógico de acceso"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una valla es un control físico con función principalmente disuasoria y preventiva frente a accesos no autorizados."
+    },
+    {
+      "pregunta": "Antes de contratar para puestos con acceso a datos financieros de clientes, una empresa realiza comprobaciones de antecedentes penales y referencias. ¿Cómo se clasifica MEJOR este control?",
+      "opciones": [
+        "Técnico y detectivo",
+        "Físico y correctivo",
+        "Criptográfico",
+        "Administrativo y preventivo"
+      ],
+      "respuesta": 3,
+      "explicacion": "La verificación de antecedentes es un proceso administrativo cuyo objetivo es prevenir que personas inadecuadas obtengan acceso sensible."
+    },
+    {
+      "pregunta": "Un almacén instala detectores de movimiento que activan una alarma sonora y avisan al puesto de vigilancia cuando hay movimiento fuera del horario laboral. En términos de función de control, ¿qué tipo son principalmente?",
+      "opciones": ["Detectivo", "Preventivo", "Compensatorio", "Correctivo"],
+      "respuesta": 0,
+      "explicacion": "Los detectores identifican una posible intrusión y generan una alerta, por lo que cumplen una función detectiva."
+    },
+    {
+      "pregunta": "Un software de protección de endpoints identifica un archivo malicioso en una estación de trabajo, detiene el proceso asociado y mueve el archivo a cuarentena, devolviendo el equipo a un estado seguro. ¿Cómo se describe MEJOR la acción de cuarentena?",
+      "opciones": ["Disuasoria", "Correctiva", "Directiva", "Física"],
+      "respuesta": 1,
+      "explicacion": "La cuarentena neutraliza una amenaza ya presente y ayuda a restaurar el sistema a un estado seguro, por lo que es correctiva."
+    },
+    {
+      "pregunta": "Las pantallas de inicio de sesión de una empresa muestran un aviso indicando que los sistemas son solo para uso autorizado, que la actividad se monitoriza y que las infracciones pueden ser perseguidas. ¿Qué función de control cumple principalmente este aviso?",
+      "opciones": ["Recuperación", "Correctiva", "Disuasoria", "Criptográfica"],
+      "respuesta": 2,
+      "explicacion": "El aviso busca desalentar el uso indebido al comunicar la monitorización y las posibles consecuencias."
+    },
+    {
+      "pregunta": "Una consultora de seguridad certificada recibe presiones de su gerente para declarar aprobada una auditoría cuando aún quedan hallazgos sin resolver, porque una renovación lucrativa depende de ello. Según el Código de Ética de ISC2, ¿qué debe hacer?",
+      "opciones": [
+        "Eliminar los hallazgos de los papeles de trabajo",
+        "Firmar la aprobación para preservar la relación con el cliente",
+        "Pedir a un colega junior que firme en su lugar",
+        "Negarse a tergiversar los resultados e informar con honestidad, aunque tenga un coste comercial"
+      ],
+      "respuesta": 3,
+      "explicacion": "El Código de Ética de ISC2 exige actuar con honestidad y responsabilidad; falsear resultados viola esas obligaciones."
+    },
+    {
+      "pregunta": "Durante una disputa, un jefe de proyecto afirma que el Código de Ética de ISC2 es solo una recomendación para las personas certificadas. ¿Cuál es la caracterización correcta de su aplicabilidad?",
+      "opciones": [
+        "Su cumplimiento es una condición obligatoria de la certificación y las infracciones pueden llevar a la revocación de la credencial",
+        "Solo se aplica a los miembros de la junta de ISC2",
+        "Solo se aplica al trabajar para clientes gubernamentales",
+        "Caducó en 2020"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los miembros y titulares de certificaciones de ISC2 deben cumplir el Código de Ética, y las infracciones pueden conllevar sanciones."
+    },
+    {
+      "pregunta": "Una política empresarial exige cifrado fuerte para los datos de pago almacenados. Un documento asociado impone el algoritmo exacto aprobado, la longitud mínima de clave y los modos de cifrado certificados que todos los equipos deben implementar. ¿Qué tipo de documento es?",
+      "opciones": [
+        "Una anécdota",
+        "Un estándar",
+        "Una directriz",
+        "Una declaración de misión"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un estándar convierte la política en requisitos técnicos específicos y obligatorios para una implementación uniforme."
+    },
+    {
+      "pregunta": "La oficina de seguridad publica un documento con prácticas recomendadas para proteger oficinas domésticas, indicando que los equipos pueden adaptar las sugerencias a sus circunstancias y que seguirlas es recomendable pero no obligatorio. ¿Qué tipo de documento es?",
+      "opciones": [
+        "Un estándar",
+        "Un reglamento",
+        "Una directriz",
+        "Una política"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una directriz ofrece recomendaciones flexibles y no obligatorias, a diferencia de políticas, estándares o reglamentos."
+    },
+    {
+      "pregunta": "Tras una demanda por una brecha de seguridad, una empresa demuestra que había implantado salvaguardas aceptadas por el sector, mantenía políticas, formaba al personal y actuaba con rapidez ante problemas conocidos. ¿Qué concepto de gobierno describe este nivel demostrado de conducta protectora razonable?",
+      "opciones": [
+        "Seguridad por oscuridad",
+        "Elasticidad",
+        "Negación plausible",
+        "Diligencia debida (due care)"
+      ],
+      "respuesta": 3,
+      "explicacion": "La diligencia debida describe el nivel de esfuerzo protector razonable que una organización debe aplicar y poder demostrar."
+    },
+    {
+      "pregunta": "Un equipo de monitorización observa cuatro elementos durante la noche: una actualización rutinaria de firmas antivirus, un usuario que escribe mal su contraseña una vez, un reinicio programado y un servidor cuyos archivos están siendo cifrados activamente por un proceso desconocido. ¿Qué observación debe declararse incidente de seguridad?",
+      "opciones": [
+        "El servidor cuyos archivos están siendo cifrados por un proceso desconocido",
+        "La actualización de firmas",
+        "El reinicio programado",
+        "El único error al escribir la contraseña"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado no autorizado activo amenaza directamente la integridad y disponibilidad de los datos y constituye un incidente."
+    },
+    {
+      "pregunta": "Los respondedores confirman que un gusano se está propagando por los servidores de archivos. Un ingeniero quiere empezar a reconstruir equipos de inmediato, pero el responsable del incidente insiste en detener primero la propagación. ¿Por qué la contención precede a la erradicación en la respuesta a incidentes?",
+      "opciones": [
+        "Porque los auditores exigen orden alfabético",
+        "Porque eliminar malware mientras el incidente sigue propagándose permite reinfecciones y más daños; primero hay que estabilizar la situación",
+        "Porque reconstruir siempre es innecesario",
+        "Porque la contención es más barata que las copias de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "La contención estabiliza el entorno e impide que la amenaza siga propagándose mientras se procede a erradicarla."
+    },
+    {
+      "pregunta": "Dos semanas después de resolver un incidente grave, el equipo de respuesta se reúne para revisar la cronología, identificar qué funcionó y qué falló, y asignar acciones de mejora para actualizar el plan. ¿Cómo se llama esta actividad y cuál es su propósito?",
+      "opciones": [
+        "Una prueba de penetración",
+        "Una audiencia disciplinaria para asignar culpas",
+        "Una revisión de lecciones aprendidas, destinada a mejorar la prevención y respuesta futuras",
+        "Una retrospectiva de marketing"
+      ],
+      "respuesta": 2,
+      "explicacion": "La revisión de lecciones aprendidas analiza la respuesta para mejorar controles, detección, procedimientos y el plan de respuesta."
+    },
+    {
+      "pregunta": "Durante una brecha muy publicitada, varios empleados bienintencionados empiezan a responder preguntas de periodistas con detalles contradictorios, aumentando la confusión y la exposición legal. ¿Qué elemento de un plan maduro de respuesta a incidentes evita este problema?",
+      "opciones": [
+        "Permitir que cualquier empleado hable libremente con la prensa",
+        "Negar por completo la brecha",
+        "Apagar el sistema telefónico de la empresa",
+        "Un plan de comunicaciones que designe portavoces autorizados y canales aprobados para declaraciones externas"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un plan de comunicaciones define quién puede hablar externamente y por qué canales, evitando mensajes contradictorios o no autorizados."
+    },
+    {
+      "pregunta": "Un directivo pregunta por qué la empresa invierte en continuidad de negocio si ya tiene seguro. ¿Qué afirmación describe MEJOR el propósito de un plan de continuidad de negocio?",
+      "opciones": [
+        "Permite que la organización mantenga operativas, al menos parcialmente, sus funciones más críticas durante y después de una interrupción",
+        "Solo trata de evacuar edificios",
+        "Sustituye la necesidad de copias de seguridad",
+        "Garantiza que nunca ocurrirá un desastre"
+      ],
+      "respuesta": 0,
+      "explicacion": "La continuidad de negocio busca mantener las funciones esenciales durante y después de una interrupción."
+    },
+    {
+      "pregunta": "Un análisis de impacto en el negocio (BIA) completado clasifica el procesamiento de pedidos y las nóminas como las funciones más críticas en tiempo, con ventanas tolerables de interrupción mucho menores que otros departamentos. ¿Cómo debe influir este resultado en la planificación de continuidad y recuperación?",
+      "opciones": [
+        "Los resultados del BIA deben mantenerse en secreto frente a los planificadores",
+        "Las estrategias y recursos de recuperación deben priorizar las funciones más críticas en tiempo identificadas",
+        "Todos los sistemas deben restaurarse por orden alfabético",
+        "Los sistemas menos importantes deben recuperarse primero como práctica"
+      ],
+      "respuesta": 1,
+      "explicacion": "El BIA identifica qué funciones deben recuperarse antes y en qué plazos, por lo que guía la priorización de recursos y secuencias."
+    },
+    {
+      "pregunta": "Un coordinador de continuidad reúne a responsables de departamento en una sala y recorre verbalmente un escenario simulado de inundación paso a paso, comprobando que cada persona conoce su función, sin tocar sistemas de producción. ¿Qué tipo de ejercicio es?",
+      "opciones": [
+        "Una prueba de interrupción total",
+        "Una prueba de penetración",
+        "Un ejercicio de mesa (tabletop)",
+        "Una prueba paralela"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un tabletop es un ejercicio de discusión que valida funciones y decisiones sin afectar a los sistemas de producción."
+    },
+    {
+      "pregunta": "Una empresa elige una instalación alternativa que ya dispone de racks, servidores y equipos de red, pero cuyos sistemas no contienen datos actuales; tras un desastre, el personal restauraría copias recientes y levantaría los servicios en uno o dos días. ¿Qué tipo de sitio de recuperación es?",
+      "opciones": [
+        "Sitio frío",
+        "Sitio caliente",
+        "Sitio espejo",
+        "Sitio templado"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un sitio templado dispone de infraestructura y hardware, pero requiere restaurar datos y completar la puesta en marcha."
+    },
+    {
+      "pregunta": "Tras un fallo de servidor, los administradores descubren que meses de copias nocturnas habían generado silenciosamente archivos inutilizables, dejando nada que restaurar. ¿Qué práctica habría descubierto este problema antes del desastre?",
+      "opciones": [
+        "Realizar restauraciones de prueba periódicas para verificar que las copias son recuperables",
+        "Aumentar la frecuencia de las copias",
+        "Desactivar las notificaciones de backup",
+        "Guardar más copias de los mismos backups corruptos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las restauraciones de prueba verifican que las copias pueden recuperarse realmente y que el proceso funciona antes de una emergencia."
+    },
+    {
+      "pregunta": "El consejo pregunta por qué el equipo de recuperación ante desastres nunca ha cambiado simplemente toda la empresa al sitio de recuperación durante una jornada laboral para demostrar que el plan funciona. ¿Cuál es el compromiso aceptado de una prueba de interrupción total?",
+      "opciones": [
+        "Solo prueba el sistema de nóminas",
+        "Ofrece la validación más realista, pero implica riesgo real de interrupción del negocio, por lo que requiere planificación cuidadosa y aprobación de la dirección",
+        "Es el tipo de prueba menos realista",
+        "No implica ningún riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "La interrupción total valida el plan con máxima fidelidad, pero puede causar una caída real si algo falla."
+    },
+    {
+      "pregunta": "Después de que una ingeniera se autentique correctamente en el repositorio de código, el sistema consulta sus permisos y le permite leer el proyecto principal, pero le bloquea el código de integración de nóminas. ¿Qué paso del control de acceso toma estas decisiones de permitir y bloquear?",
+      "opciones": [
+        "Identificación",
+        "Autenticación",
+        "Autorización",
+        "Cifrado"
+      ],
+      "respuesta": 2,
+      "explicacion": "La autorización determina qué acciones y recursos están permitidos para una identidad ya autenticada."
+    },
+    {
+      "pregunta": "Un portal de contabilidad exige una contraseña y luego un código de seis dígitos generado por una aplicación autenticadora en el smartphone registrado del empleado. ¿Qué categoría de factor satisface el código generado por la aplicación?",
+      "opciones": [
+        "Algo que sabes",
+        "Algún lugar donde estás",
+        "Algo que eres",
+        "Algo que tienes"
+      ],
+      "respuesta": 3,
+      "explicacion": "El código demuestra posesión del dispositivo registrado, por lo que corresponde al factor 'algo que tienes'."
+    },
+    {
+      "pregunta": "Un banco estudia sustituir contraseñas por autenticación mediante huella dactilar y pregunta por el riesgo distintivo de las credenciales biométricas. ¿Qué preocupación es exclusiva de la biometría frente a las contraseñas?",
+      "opciones": [
+        "Pueden cambiarse fácilmente cuando se comprometen",
+        "Si se roban los datos biométricos, la característica subyacente no puede reemitirse ni restablecerse como una contraseña",
+        "Son un factor de conocimiento",
+        "No pueden usarse para autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una característica biométrica comprometida no puede reemplazarse o restablecerse como una contraseña."
+    },
+    {
+      "pregunta": "Un equipo de seguridad evalúa esquemas de inicio de sesión y quiere autenticación multifactor real. ¿Cuál de las siguientes combinaciones cumple el requisito?",
+      "opciones": [
+        "Una tarjeta inteligente y un PIN memorizado",
+        "Una contraseña y la respuesta a una pregunta secreta",
+        "Una contraseña y un PIN memorizado",
+        "Dos contraseñas diferentes"
+      ],
+      "respuesta": 0,
+      "explicacion": "La tarjeta inteligente es algo que tienes y el PIN es algo que sabes; son dos categorías de factor distintas."
+    },
+    {
+      "pregunta": "Cada semana, un analista de seguridad revisa los registros de actividad de todas las cuentas de administradores de dominio y compara cada acción privilegiada con tickets de cambio aprobados. ¿Qué principios de seguridad apoya directamente esta revisión?",
+      "opciones": [
+        "Compresión y deduplicación",
+        "Responsabilidad y disuasión del uso indebido de privilegios",
+        "Disponibilidad y elasticidad",
+        "Anonimato de los administradores"
+      ],
+      "respuesta": 1,
+      "explicacion": "La revisión vincula acciones privilegiadas con responsables concretos y disuade el uso indebido al saber que las acciones serán auditadas."
+    },
+    {
+      "pregunta": "Para una migración de datos de fin de semana, se conceden a un analista de base de datos derechos elevados temporales, que se revocan automáticamente el lunes por la mañana al finalizar la tarea. ¿Qué principio ejemplifica esta concesión limitada en el tiempo?",
+      "opciones": [
+        "Punto único de fallo",
+        "Separación de funciones",
+        "Mínimo privilegio aplicado dinámicamente, concediendo acceso elevado solo mientras es realmente necesario",
+        "Seguridad por oscuridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El mínimo privilegio exige mantener solo los permisos necesarios durante el tiempo estrictamente necesario."
+    },
+    {
+      "pregunta": "Una analista gubernamental posee una habilitación Secret, pero se le niega acceso a un informe clasificado Secret de un programa en el que no participa. Su colega explica que la habilitación por sí sola no basta. ¿Qué requisito adicional gobierna su acceso?",
+      "opciones": [
+        "Una petición más insistente al help desk",
+        "Una contraseña más larga",
+        "Antigüedad en el departamento",
+        "Necesidad de saber, es decir, que sus funciones requieran realmente esa información concreta"
+      ],
+      "respuesta": 3,
+      "explicacion": "En entornos clasificados se exige tanto una habilitación suficiente como necesidad de saber."
+    },
+    {
+      "pregunta": "Una empresa de software prohíbe que los desarrolladores desplieguen su propio código a producción; solo el equipo de ingeniería de releases puede promover compilaciones tras una revisión independiente. ¿Qué principio aplica y contra qué riesgo?",
+      "opciones": [
+        "Separación de funciones, reduciendo el riesgo de que una sola persona introduzca y oculte cambios maliciosos o defectuosos",
+        "Mínimo privilegio, reduciendo la reutilización de contraseñas",
+        "Redundancia, evitando fallos de hardware",
+        "Minimización de datos, reduciendo costes de almacenamiento"
+      ],
+      "respuesta": 0,
+      "explicacion": "Separar desarrollo y despliegue evita que una sola persona pueda introducir y ocultar cambios sin una revisión independiente."
+    },
+    {
+      "pregunta": "Un banco exige que los empleados de sucursal roten periódicamente por distintos puestos y tomen vacaciones obligatorias de varios días consecutivos cada año. Más allá del desarrollo profesional, ¿qué propósito de seguridad cumplen estas prácticas?",
+      "opciones": [
+        "Eliminan la necesidad de auditorías",
+        "Aumentan la probabilidad de que fraudes o irregularidades ocultos salgan a la luz cuando otra persona realiza las funciones",
+        "Garantizan ascensos",
+        "Reducen el coste eléctrico"
+      ],
+      "respuesta": 1,
+      "explicacion": "La rotación y las vacaciones obligatorias permiten que otras personas asuman las tareas y descubran fraudes que requerían control continuo del mismo puesto."
+    },
+    {
+      "pregunta": "Para sus administradores de dominio, una empresa exige MFA con token hardware, graba cada sesión privilegiada y enruta todos los inicios de sesión administrativos a través de una pasarela monitorizada. Los usuarios normales tienen requisitos más ligeros. ¿Por qué está justificado este trato más estricto?",
+      "opciones": [
+        "Los administradores son personas menos fiables",
+        "Los reguladores prohíben a los administradores usar contraseñas",
+        "Las cuentas privilegiadas pueden causar daños mucho mayores si se comprometen o se usan indebidamente, por lo que requieren controles proporcionalmente más fuertes",
+        "Reduce costes de licencias"
+      ],
+      "respuesta": 2,
+      "explicacion": "El compromiso de una cuenta privilegiada tiene un impacto potencial mucho mayor, por lo que el enfoque basado en riesgo exige controles más fuertes."
+    },
+    {
+      "pregunta": "El gerente de una nueva analista presenta una solicitud de acceso especificando los sistemas que requiere su función; cada propietario de sistema la aprueba antes de que el equipo de identidades otorgue los permisos. ¿Qué práctica del ciclo de vida representa este flujo?",
+      "opciones": [
+        "Desaprovisionamiento",
+        "Password spraying",
+        "Ataque de escalada de privilegios",
+        "Aprovisionamiento con autorización documentada de los aprobadores adecuados"
+      ],
+      "respuesta": 3,
+      "explicacion": "Conceder acceso inicial según necesidades del puesto y con aprobaciones documentadas es un proceso de aprovisionamiento."
+    },
+    {
+      "pregunta": "Dos veces al año, cada gerente recibe un informe con los permisos de sistemas de su personal y debe confirmar o revocar cada uno. En el último ciclo se eliminaron decenas de permisos obsoletos de proyectos antiguos. ¿Cómo se llama este proceso?",
+      "opciones": [
+        "Revisión y recertificación de accesos",
+        "Prueba de penetración",
+        "Balanceo de carga",
+        "Onboarding"
+      ],
+      "respuesta": 0,
+      "explicacion": "La recertificación periódica confirma que cada permiso sigue siendo necesario y elimina accesos obsoletos o acumulados."
+    },
+    {
+      "pregunta": "Una barrera giratoria a la altura de la cintura, similar a las de una estación de metro, admite exactamente a una persona por cada lectura de credencial. ¿Cuál es el propósito principal de seguridad de este torno?",
+      "opciones": [
+        "Contar las calorías quemadas por los empleados",
+        "Imponer una entrada de una persona por autenticación y dificultar el tailgating",
+        "Cifrar los datos de la credencial",
+        "Sustituir las salidas de emergencia"
+      ],
+      "respuesta": 1,
+      "explicacion": "El torno vincula cada entrada física a una autenticación y dificulta que otra persona se cuele aprovechando la credencial ajena."
+    },
+    {
+      "pregunta": "En la entrada de un campus de investigación, un agente uniformado compara la foto de la credencial de cada persona con su rostro antes de permitir el acceso. En términos de control, ¿qué aporta el agente que un lector de credenciales por sí solo no puede aportar?",
+      "opciones": [
+        "Mayor velocidad que cualquier lector",
+        "Eliminación de todas las amenazas internas",
+        "Verificación preventiva con juicio humano de que quien presenta la credencial es su titular legítimo",
+        "Intercambio criptográfico de claves"
+      ],
+      "respuesta": 2,
+      "explicacion": "La comprobación visual añade juicio humano y puede detectar credenciales robadas o prestadas que un lector aceptaría."
+    },
+    {
+      "pregunta": "En una oficina diáfana por la que pasan visitantes con frecuencia, la empresa proporciona cables de acero con cerradura para anclar los portátiles a los escritorios. ¿Qué riesgo abordan principalmente estos dispositivos?",
+      "opciones": [
+        "Phishing",
+        "Reutilización de contraseñas",
+        "Inyección SQL",
+        "Robo físico oportunista de equipos"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los cables de seguridad dificultan el robo físico rápido de dispositivos portátiles en zonas accesibles."
+    },
+    {
+      "pregunta": "Una revisión de instalaciones recomienda iluminación exterior intensa y uniforme en aparcamientos y accesos al edificio. Desde el punto de vista de la seguridad, ¿qué consigue una iluminación adecuada?",
+      "opciones": [
+        "Disuade a intrusos y mejora la eficacia de cámaras y vigilantes al eliminar zonas de ocultación",
+        "Sustituye la necesidad de cerraduras",
+        "Cifra las grabaciones de CCTV",
+        "Reduce la dirección del seguro del edificio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una buena iluminación reduce lugares de ocultación, mejora la vigilancia y aumenta la percepción de riesgo del intruso."
+    },
+    {
+      "pregunta": "Seguridad descubre que herramientas baratas pueden clonar las credenciales de proximidad usadas en las puertas de la oficina. Como mejora inmediata, añade teclados PIN para que la entrada requiera tanto la credencial como un código personal. ¿Qué ha conseguido este cambio?",
+      "opciones": [
+        "Ha convertido el acceso físico en autenticación de dos factores, por lo que una credencial clonada ya no basta",
+        "Ha hecho que las puertas se abran más rápido",
+        "Ha eliminado el sistema de credenciales",
+        "Ha eliminado la necesidad de registros de acceso"
+      ],
+      "respuesta": 0,
+      "explicacion": "La credencial aporta un factor de posesión y el PIN un factor de conocimiento, por lo que una credencial clonada por sí sola no permite entrar."
+    },
+    {
+      "pregunta": "Un arquitecto que diseña una nueva sede sitúa recepción frente a la única entrada de visitantes, usa vegetación baja para conservar líneas de visión y canaliza el tránsito peatonal junto a zonas atendidas por personal. ¿Qué enfoque de seguridad refleja esto?",
+      "opciones": [
+        "Control de acceso lógico",
+        "Prevención del delito mediante diseño ambiental, configurando el entorno físico para disuadir y exponer conductas no autorizadas",
+        "Segmentación de red",
+        "Seguridad por oscuridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "El diseño del entorno para favorecer vigilancia natural, visibilidad y control del movimiento corresponde a CPTED."
+    },
+    {
+      "pregunta": "En una plataforma colaborativa donde cada usuario puede compartir sus archivos con cualquiera, un empleado concede accidentalmente acceso a una carpeta sensible a un contratista particular. ¿Qué debilidad inherente del modelo de control de acceso discrecional ilustra este incidente?",
+      "opciones": [
+        "Los propietarios nunca pueden compartir archivos",
+        "Las decisiones de acceso dependen del criterio de cada propietario, por lo que los errores y el exceso de compartición se propagan con facilidad",
+        "Exige habilitaciones de seguridad para cada archivo",
+        "Impide por completo la colaboración"
+      ],
+      "respuesta": 1,
+      "explicacion": "En DAC, los propietarios deciden a quién conceden acceso, por lo que errores individuales pueden exponer información sensible."
+    },
+    {
+      "pregunta": "Un sistema de una agencia de inteligencia asigna etiquetas de clasificación a documentos y habilitaciones a usuarios, y el sistema operativo aplica las decisiones de acceso sin que autores ni supervisores puedan anularlas. Solo la función de administración de seguridad puede modificar las etiquetas. ¿Qué modelo es y cuál es su rasgo distintivo?",
+      "opciones": [
+        "Control de acceso basado en roles, cuyo rasgo distintivo son las funciones laborales",
+        "Control de acceso discrecional, cuyo rasgo distintivo es la decisión del propietario",
+        "Control de acceso obligatorio, cuyo rasgo distintivo son decisiones centralizadas basadas en etiquetas y fuera de la discreción del usuario",
+        "Control basado en contraseñas, cuyo rasgo distintivo es el secreto"
+      ],
+      "respuesta": 2,
+      "explicacion": "El control de acceso obligatorio (MAC) usa etiquetas y habilitaciones aplicadas centralmente, sin que el usuario pueda anular la política."
+    },
+    {
+      "pregunta": "Una cadena minorista con 40.000 empleados y alta rotación estacional tiene dificultades para conceder rápidamente el acceso correcto. Un consultor recomienda definir paquetes de permisos para cajero, supervisor y gerente, y asignar a cada trabajador uno de esos paquetes. ¿Por qué encaja el control de acceso basado en roles en este entorno?",
+      "opciones": [
+        "Exige configurar manualmente los permisos de cada persona",
+        "Permite que cada cajero conceda acceso a otros",
+        "Usa etiquetas de clasificación militar",
+        "Escala de forma eficiente, porque los puestos numerosos y bien definidos pueden aprovisionarse de forma coherente asignando un rol en lugar de permisos individuales"
+      ],
+      "respuesta": 3,
+      "explicacion": "RBAC facilita asignar permisos predefinidos por función laboral, lo que escala bien en organizaciones con muchos puestos estandarizados."
+    },
+    {
+      "pregunta": "Durante una revisión, un auditor elogia un diseño en el que un portátil robado aún requiere credenciales VPN, la VPN exige MFA, las aplicaciones sensibles requieren autorización independiente y el disco está cifrado. Si falla un control, permanecen otros. ¿Qué principio se está aplicando?",
+      "opciones": [
+        "Defensa en profundidad mediante controles independientes y en capas",
+        "Aceptación del riesgo",
+        "Seguridad por oscuridad",
+        "Inicio de sesión único"
+      ],
+      "respuesta": 0,
+      "explicacion": "La defensa en profundidad combina varias capas independientes para que el fallo de una no exponga por sí solo el activo."
+    },
+    {
+      "pregunta": "Cuando un mensaje de correo desciende por la pila de protocolos del host emisor, cada capa sucesiva envuelve los datos con su propia información de cabecera antes de pasarlos hacia abajo para la transmisión. ¿Cómo se llama este proceso?",
+      "opciones": [
+        "Desmagnetización",
+        "Encapsulación",
+        "Normalización",
+        "Desfragmentación"
+      ],
+      "respuesta": 1,
+      "explicacion": "La encapsulación consiste en que cada capa añade su cabecera, y a veces tráiler, a los datos recibidos de la capa superior."
+    },
+    {
+      "pregunta": "Un técnico junior clasifica protocolos por capa OSI y duda con HTTP, SMTP y DNS. ¿En qué capa operan principalmente los tres?",
+      "opciones": [
+        "Capa 3, Red",
+        "Capa 1, Física",
+        "Capa 7, Aplicación",
+        "Capa 4, Transporte"
+      ],
+      "respuesta": 2,
+      "explicacion": "HTTP, SMTP y DNS son protocolos de capa de aplicación, correspondiente a la capa 7 del modelo OSI."
+    },
+    {
+      "pregunta": "Una captura de paquetes de una estación de trabajo al abrir una conexión con un servidor web muestra tres paquetes iniciales antes de que fluya ningún dato. En orden, ¿cuáles son los tres pasos del handshake TCP?",
+      "opciones": [
+        "ACK, SYN, RST",
+        "SYN, SYN-ACK, ACK",
+        "FIN, FIN-ACK, FIN",
+        "GET, POST, PUT"
+      ],
+      "respuesta": 1,
+      "explicacion": "TCP establece la conexión con el handshake de tres vías SYN, SYN-ACK y ACK."
+    },
+    {
+      "pregunta": "Un escaneo de vulnerabilidades del rango IP público de una empresa encuentra el puerto TCP 3389 abierto directamente a Internet en un servidor financiero. ¿Por qué exige atención urgente?",
+      "opciones": [
+        "El tráfico RDP no puede transportar credenciales",
+        "Los puertos abiertos siempre son inofensivos",
+        "El puerto 3389 solo transporta tráfico de impresora",
+        "El puerto 3389 corresponde a Remote Desktop Protocol, objetivo frecuente de ataques de fuerza bruta y exploits, y no debería exponerse directamente a Internet"
+      ],
+      "respuesta": 3,
+      "explicacion": "TCP 3389 corresponde a RDP y su exposición directa a Internet amplía mucho la superficie de ataque."
+    },
+    {
+      "pregunta": "Durante una incidencia, un ingeniero observa que ha fallado un servicio que usa UDP 53 y, justo después, los usuarios informan de que no pueden abrir sitios web por nombre aunque las conexiones directas por IP funcionan. ¿Qué servicio ha fallado?",
+      "opciones": ["DNS", "NTP", "SMTP", "DHCP"],
+      "respuesta": 0,
+      "explicacion": "DNS usa principalmente el puerto 53 y resuelve nombres a direcciones IP; si falla, el acceso por nombre deja de funcionar."
+    },
+    {
+      "pregunta": "Una oficina doméstica tiene una docena de dispositivos que comparten una única dirección IP pública suministrada por el ISP, mientras el router reescribe direcciones al pasar el tráfico. ¿Qué mecanismo permite compartirla y qué efecto secundario de seguridad tiene?",
+      "opciones": [
+        "DNS, que cifra todo el tráfico",
+        "Traducción de direcciones de red (NAT), que además oculta el direccionamiento interno a observadores externos",
+        "RAID, que replica paquetes",
+        "Emparejamiento Bluetooth"
+      ],
+      "respuesta": 1,
+      "explicacion": "NAT permite que múltiples direcciones privadas compartan una o pocas direcciones públicas y oculta la topología interna de forma incidental."
+    },
+    {
+      "pregunta": "Una desarrolladora prueba un servicio en su propio equipo y le indica que se conecte a 127.0.0.1. ¿Adónde irá ese tráfico?",
+      "opciones": [
+        "A un host aleatorio de Internet",
+        "A la puerta de enlace predeterminada",
+        "De vuelta a su propio equipo mediante la interfaz de loopback",
+        "A los servidores raíz de DNS"
+      ],
+      "respuesta": 2,
+      "explicacion": "127.0.0.1 pertenece al espacio de loopback y el tráfico permanece dentro del propio host."
+    },
+    {
+      "pregunta": "Dos edificios de oficinas tienen redes internas distintas con rangos de direcciones diferentes, y la empresa necesita que el tráfico circule entre ellas y hacia Internet. ¿Qué dispositivo está específicamente diseñado para conectar redes separadas y reenviar tráfico entre ellas?",
+      "opciones": [
+        "Un repetidor",
+        "Un hub",
+        "Un teclado inalámbrico",
+        "Un router"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un router conecta redes diferentes y toma decisiones de encaminamiento en la capa de red."
+    },
+    {
+      "pregunta": "Un firewall perimetral moderno permite tráfico de retorno para conexiones iniciadas por usuarios internos y bloquea paquetes entrantes no solicitados porque recuerda las sesiones activas en una tabla de conexiones. ¿Cómo se llama esta capacidad?",
+      "opciones": [
+        "Inspección con estado (stateful inspection)",
+        "Wardriving",
+        "Port mirroring",
+        "Filtrado sin estado"
+      ],
+      "respuesta": 0,
+      "explicacion": "La inspección con estado mantiene información sobre conexiones activas y decide teniendo en cuenta el contexto de la sesión."
+    },
+    {
+      "pregunta": "Un sistema de detección de intrusiones que compara el tráfico con una base de datos de patrones de ataques conocidos tiene un punto ciego inherente. ¿Qué amenaza es la que MENOS puede detectar?",
+      "opciones": [
+        "Un gusano muy conocido de hace cinco años",
+        "Una técnica de ataque completamente nueva sin firma existente",
+        "Tráfico que coincide con una regla existente",
+        "Un exploit documentado incluido en su base de patrones"
+      ],
+      "respuesta": 1,
+      "explicacion": "La detección basada en firmas solo reconoce patrones conocidos, por lo que las técnicas nuevas o de día cero pueden pasar inadvertidas."
+    },
+    {
+      "pregunta": "Un colegio dirige todas las solicitudes web de los alumnos a través de un servidor intermediario que bloquea categorías prohibidas, almacena en caché páginas populares, registra los sitios visitados por cada cuenta y oculta las direcciones de los dispositivos a los sitios externos. ¿Qué es este intermediario?",
+      "opciones": [
+        "Un servidor de impresión",
+        "Un servidor de tiempo",
+        "Un servidor proxy",
+        "Un servidor DHCP"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un proxy media entre clientes e Internet y puede filtrar contenido, almacenar en caché, registrar actividad y ocultar direcciones internas."
+    },
+    {
+      "pregunta": "Un ataque satura un sitio web desde un único servidor potente alquilado por el atacante; otro satura el mismo sitio simultáneamente desde cincuenta mil cámaras y routers secuestrados en todo el mundo. ¿Qué distingue al segundo ataque del primero?",
+      "opciones": [
+        "El segundo solo afecta a impresoras",
+        "El segundo no es un ataque de denegación de servicio",
+        "El primero siempre es más eficaz",
+        "El segundo es distribuido, usa muchas fuentes comprometidas, es mucho más difícil de bloquear por origen y puede generar mayor volumen"
+      ],
+      "respuesta": 3,
+      "explicacion": "El segundo es un DDoS, porque usa muchas fuentes comprometidas para generar tráfico distribuido y dificultar la mitigación."
+    },
+    {
+      "pregunta": "En una LAN corporativa, la máquina de un atacante se anuncia falsamente como la puerta de enlace de red, haciendo que el tráfico de sus compañeros pase por su portátil antes de llegar a la puerta de enlace real, donde lo inspecciona discretamente. ¿Qué tipo de ataque es?",
+      "opciones": [
+        "Un ataque on-path realizado mediante suplantación de la puerta de enlace en la red local",
+        "Un ejercicio de mesa",
+        "Un ataque de diccionario contra contraseñas",
+        "Dumpster diving"
+      ],
+      "respuesta": 0,
+      "explicacion": "El atacante se sitúa en la ruta de comunicación de las víctimas, lo que constituye un ataque on-path o man-in-the-middle."
+    },
+    {
+      "pregunta": "Un empleado descarga lo que parece ser un conversor PDF gratuito; convierte archivos correctamente, pero instala silenciosamente una puerta trasera de acceso remoto. ¿Qué categoría de malware es?",
+      "opciones": [
+        "Adware",
+        "Un troyano",
+        "Un grabador de macros",
+        "Un gusano"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un troyano se presenta como software legítimo o útil mientras instala una carga maliciosa."
+    },
+    {
+      "pregunta": "Durante la noche, código malicioso se propaga por sí solo de servidor en servidor a través de la red de una empresa, explotando un servicio de compartición de archivos sin parchear y sin que ningún usuario abra archivos ni pulse enlaces. ¿Qué tipo de malware se comporta así?",
+      "opciones": [
+        "Notas de ransomware",
+        "Un troyano, que requiere que un usuario lo instale",
+        "Un gusano, que se autorreplica por redes sin interacción del usuario",
+        "Un correo de phishing"
+      ],
+      "respuesta": 2,
+      "explicacion": "La autorreplicación y propagación automática por red sin interacción humana son características de un gusano."
+    },
+    {
+      "pregunta": "Los analistas forenses determinan que un grupo bien financiado mantuvo acceso oculto dentro de un contratista de defensa durante dos años, avanzando lentamente, robando diseños en pequeñas cantidades y adaptándose cada vez que cambiaban las defensas. ¿Qué clasificación de amenaza encaja?",
+      "opciones": [
+        "Un script kiddie",
+        "Un fallo aleatorio de hardware",
+        "Adware",
+        "Una amenaza persistente avanzada (APT)"
+      ],
+      "respuesta": 3,
+      "explicacion": "Las APT son campañas prolongadas, sigilosas, adaptativas y con recursos significativos, orientadas a mantener acceso persistente."
+    },
+    {
+      "pregunta": "Después de que una máquina virtual comprometida permitiera a los atacantes alcanzar decenas de cargas de trabajo vecinas, un equipo cloud implanta políticas para que cada carga solo pueda comunicarse con los pares específicos que necesita su función. ¿Cómo se llama este enfoque de aislamiento granular?",
+      "opciones": [
+        "Microsegmentación",
+        "Overclocking",
+        "Broadcasting",
+        "Escaneo de puertos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La microsegmentación aplica políticas de red muy granulares por carga de trabajo y limita el movimiento lateral."
+    },
+    {
+      "pregunta": "Un arquitecto de red revisa un diseño propuesto que coloca el servidor de base de datos de clientes en el mismo segmento perimetral protegido que el servidor web público, por comodidad. ¿Por qué debe rechazarse?",
+      "opciones": [
+        "Los servidores web no pueden comunicarse con bases de datos a través de segmentos",
+        "El perímetro protegido o DMZ es una zona semiconfiable expuesta a ataques; los almacenes de datos sensibles deben estar en la red interna protegida tras controles adicionales",
+        "DMZ significa zona de gestión de bases de datos",
+        "Las bases de datos funcionan más rápido en una DMZ"
+      ],
+      "respuesta": 1,
+      "explicacion": "La DMZ aloja servicios expuestos a Internet y debe contener compromisos; una base de datos sensible requiere una zona interna con controles adicionales."
+    },
+    {
+      "pregunta": "El portátil de un auditor visitante, sin parches desde hace meses, se conecta a una toma de red de la oficina. Instantes después solo puede acceder a una red restringida de remediación con servidores de actualización y a nada más. ¿Qué control produjo este resultado y sobre qué base?",
+      "opciones": [
+        "El servidor DHCP se quedó sin direcciones",
+        "Un balanceador de carga lo redirigió por rendimiento",
+        "Control de acceso a red (NAC), que evaluó el cumplimiento del dispositivo y lo puso en cuarentena hasta su remediación",
+        "Spanning Tree Protocol bloqueó un bucle"
+      ],
+      "respuesta": 2,
+      "explicacion": "NAC evalúa la postura de seguridad del dispositivo y puede aislar equipos no conformes en una red de remediación."
+    },
+    {
+      "pregunta": "Durante un debate de arquitectura de seguridad se hacen cuatro afirmaciones sobre zero trust. ¿Cuál refleja realmente sus principios?",
+      "opciones": [
+        "Los dispositivos de la LAN de la sede deben omitir la autenticación porque el firewall perimetral ya los filtró",
+        "Los usuarios VPN deben recibir confianza permanente tras su primer inicio de sesión",
+        "Zero trust significa eliminar todos los controles de seguridad",
+        "Cada solicitud de acceso debe autenticarse y autorizarse según identidad, estado del dispositivo y contexto, independientemente de la ubicación de red"
+      ],
+      "respuesta": 3,
+      "explicacion": "Zero trust elimina la confianza implícita basada en ubicación y exige verificación continua de identidad, dispositivo y contexto."
+    },
+    {
+      "pregunta": "La temperatura de una sala de servidores sube bruscamente un fin de semana cuando falla la refrigeración dedicada, y varias máquinas se apagan o sufren daños. ¿Qué categoría de control de instalaciones falló y qué objetivo de seguridad resultó afectado?",
+      "opciones": [
+        "Controles ambientales, afectando a la disponibilidad",
+        "Controles criptográficos, afectando a la confidencialidad",
+        "Registro, afectando a la responsabilidad",
+        "Formación de concienciación, afectando a la ética"
+      ],
+      "respuesta": 0,
+      "explicacion": "La climatización es un control ambiental y su fallo causó indisponibilidad y daños en los equipos."
+    },
+    {
+      "pregunta": "Una empleada que viaja se conecta al Wi-Fi de un hotel e inmediatamente establece un túnel cifrado hacia la pasarela corporativa antes de trabajar; todo su tráfico circula después por ese túnel. ¿Qué protección principal ha obtenido en la red no confiable?",
+      "opciones": [
+        "La batería del portátil dura más",
+        "Su tráfico queda protegido frente a escucha e interceptación local entre el portátil y la pasarela corporativa",
+        "La red del hotel se vuelve confiable",
+        "Sus archivos se respaldan automáticamente"
+      ],
+      "respuesta": 1,
+      "explicacion": "La VPN cifra el tráfico a través de la red no confiable y reduce el riesgo de escucha o manipulación local en tránsito."
+    },
+    {
+      "pregunta": "Una startup alquila máquinas virtuales, volúmenes de almacenamiento y capacidad de red a un proveedor cloud, y después instala y administra sus propios sistemas operativos y aplicaciones. En este modelo de servicio, ¿quién es responsable de aplicar parches a esos sistemas operativos?",
+      "opciones": [
+        "El proveedor cloud, porque posee el hardware",
+        "El proveedor de servicios de Internet",
+        "La startup, porque en Infrastructure as a Service el cliente gestiona el sistema operativo y todo lo que está por encima",
+        "Nadie, porque los sistemas cloud se parchean solos"
+      ],
+      "respuesta": 2,
+      "explicacion": "En IaaS, el proveedor gestiona la infraestructura subyacente y el cliente es responsable del sistema operativo invitado, middleware y aplicaciones."
+    },
+    {
+      "pregunta": "Antes de contratar a un proveedor cloud, una empresa negocia un documento que compromete al proveedor a un 99,9 % de disponibilidad, tiempos definidos de respuesta de soporte y créditos económicos si no se cumplen los objetivos. ¿Qué documento es?",
+      "opciones": [
+        "Una política de uso aceptable",
+        "Un estándar de contraseñas",
+        "Un análisis de impacto en el negocio",
+        "Un acuerdo de nivel de servicio (SLA)"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un SLA define compromisos medibles del servicio, como disponibilidad, tiempos de respuesta y compensaciones por incumplimiento."
+    },
+    {
+      "pregunta": "Un bufete clasifica sus archivos como públicos, internos, confidenciales o privilegiados, y su estándar de tratamiento asigna reglas de almacenamiento, transmisión y compartición progresivamente más estrictas a cada nivel. ¿Cuál es el propósito fundamental de vincular etiquetas y reglas de tratamiento?",
+      "opciones": [
+        "Garantizar que el esfuerzo y coste de protección sean proporcionales a la sensibilidad y valor de la información",
+        "Reducir el número de formatos de archivo",
+        "Hacer que todos los documentos sean igual de difíciles de acceder",
+        "Eliminar la necesidad de cifrado"
+      ],
+      "respuesta": 0,
+      "explicacion": "La clasificación permite aplicar controles proporcionales a la sensibilidad de los datos y asignar los recursos de seguridad de forma racional."
+    },
+    {
+      "pregunta": "Al finalizar un proyecto, su responsable imprime el informe final confidencial. Según el estándar de tratamiento de datos, cada página lleva una marca visible CONFIDENCIAL en la cabecera. ¿Qué propósito cumple este etiquetado?",
+      "opciones": [
+        "Hace imposible fotocopiar el documento",
+        "Informa a cualquiera que lo maneje de su sensibilidad para que aplique las reglas de tratamiento requeridas",
+        "Cifra el texto impreso",
+        "Sirve como decoración profesional"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las etiquetas comunican la clasificación para que las personas y sistemas apliquen las reglas correctas de manejo, almacenamiento y eliminación."
+    },
+    {
+      "pregunta": "Surge una disputa sobre quién debe decidir el nivel de clasificación de un nuevo conjunto de datos de analítica de clientes y quién debe configurar el almacenamiento y las copias de seguridad que lo protegen. Según los roles estándar de gobierno de datos, ¿cómo se dividen estas responsabilidades?",
+      "opciones": [
+        "La clasificación se decide por votación pública",
+        "El becario más reciente decide ambas",
+        "El propietario de los datos determina la clasificación y requisitos; el custodio de datos implementa la protección técnica correspondiente",
+        "El custodio clasifica y el propietario hace las copias de seguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El propietario de los datos define clasificación y requisitos, mientras el custodio implementa y opera los controles técnicos."
+    },
+    {
+      "pregunta": "Los registros financieros de hace siete años ya no se usan en las operaciones diarias, pero la ley exige conservarlos tres años más. La empresa los mueve a almacenamiento seguro y económico de largo plazo, manteniendo la posibilidad de recuperarlos cuando sea necesario. ¿En qué fase del ciclo de vida de los datos están?",
+      "opciones": ["Uso", "Destrucción", "Creación", "Archivo"],
+      "respuesta": 3,
+      "explicacion": "Los datos retenidos por cumplimiento o referencia ocasional, pero fuera del uso activo, están en la fase de archivo."
+    },
+    {
+      "pregunta": "Un hospital quiere reutilizar cabinas de almacenamiento que antes contenían historiales de pacientes para un proyecto de baja sensibilidad y necesita sanitizarlas para que los datos antiguos sean irrecuperables incluso con técnicas de laboratorio, manteniendo el hardware utilizable. ¿Qué enfoque de sanitización encaja?",
+      "opciones": [
+        "Purga, usando técnicas como borrado criptográfico o sobrescritura avanzada que impidan incluso la recuperación de laboratorio y conserven el medio",
+        "Eliminación simple de archivos",
+        "Renombrar las carpetas",
+        "Trituración física de las cabinas"
+      ],
+      "respuesta": 0,
+      "explicacion": "La purga busca impedir recuperación avanzada manteniendo el soporte reutilizable, a diferencia de la destrucción física."
+    },
+    {
+      "pregunta": "Cada semana un mensajero transporta cintas de backup a una bóveda externa. La dirección teme que una caja de cintas se pierda o sea robada durante el traslado. ¿Qué control neutraliza más directamente ese escenario?",
+      "opciones": [
+        "Hacer copias con menos frecuencia",
+        "Cifrar los datos de backup antes de que las cintas salgan del edificio, de modo que un soporte perdido sea ilegible",
+        "Etiquetar las cintas con el logotipo de la empresa",
+        "Usar un mensajero más rápido"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado evita que la pérdida física del soporte se convierta directamente en una divulgación de datos."
+    },
+    {
+      "pregunta": "Un desarrollador propone almacenar contraseñas de usuarios cifradas con una clave que posee la aplicación, pero un revisor de seguridad exige almacenar solo hashes unidireccionales con salt. ¿Por qué se prefiere el hashing para almacenar contraseñas?",
+      "opciones": [
+        "Los hashes pueden revertirse por los administradores cuando los usuarios olvidan la contraseña",
+        "La verificación solo requiere comparar hashes y una función unidireccional evita que una base de datos robada revele directamente las contraseñas",
+        "El hashing comprime la base de datos",
+        "El cifrado es ilegal"
+      ],
+      "respuesta": 1,
+      "explicacion": "La autenticación no necesita recuperar la contraseña original; un hash con salt reduce el impacto de una filtración y dificulta ataques de adivinación."
+    },
+    {
+      "pregunta": "Una herramienta de monitorización de integridad de archivos guarda un digest criptográfico de cada archivo crítico del sistema y lo recalcula cada noche. Una mañana marca un archivo de configuración central cuyo digest actual difiere del baseline. ¿Qué indica esta diferencia?",
+      "opciones": [
+        "El algoritmo hash caducó",
+        "El archivo fue necesariamente comprimido",
+        "El archivo cambió de alguna forma desde el baseline y debe investigarse como posible modificación no autorizada",
+        "Nada, porque los hashes cambian aleatoriamente"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los hashes son deterministas; un digest distinto indica que cambió el contenido del archivo y requiere investigación."
+    },
+    {
+      "pregunta": "Un ingeniero publica accidentalmente una clave privada en un repositorio público de código. El certificado asociado se usa para firmar las actualizaciones de software de la empresa. ¿Cuál es el peligro inmediato y qué debe hacer la empresa?",
+      "opciones": [
+        "No hay peligro, porque las claves privadas son públicas",
+        "La clave se vuelve más fuerte al exponerse",
+        "Solo hay que sustituir la clave pública correspondiente",
+        "Los atacantes podrían firmar software malicioso que los clientes confiarían como genuino, por lo que la clave debe revocarse y sustituirse inmediatamente"
+      ],
+      "respuesta": 3,
+      "explicacion": "Quien posea la clave privada de firma puede generar firmas válidas; por eso la clave comprometida debe revocarse y reemplazarse."
+    },
+    {
+      "pregunta": "Por separado, un inicio de sesión fallido en el registro VPN, una nueva cuenta de administrador en el directorio y una gran transferencia saliente en el firewall parecen eventos menores. Una plataforma ingiere las tres fuentes y las correlaciona en una sola alerta de alta prioridad que describe una posible cadena de intrusión. ¿Qué capacidad ilustra esto?",
+      "opciones": [
+        "Correlación SIEM que revela patrones de ataque que los silos de registros aislados podrían pasar por alto",
+        "Balanceo de carga",
+        "Cola de impresión",
+        "Desfragmentación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un SIEM agrega y correlaciona eventos de múltiples fuentes para detectar cadenas de ataque que no son evidentes en un único registro."
+    },
+    {
+      "pregunta": "Una analista de operaciones de seguridad dedica parte de cada mañana a revisar las alertas y registros perimetrales del día anterior procedentes del firewall y de los sistemas IDS que observan el tráfico que entra en la red. ¿Qué disciplina de monitorización practica?",
+      "opciones": [
+        "Auditoría de impresoras",
+        "Monitorización de ingreso (ingress), examinando el tráfico entrante en el perímetro en busca de actividad hostil",
+        "Monitorización solo de egreso",
+        "Patrulla física"
+      ],
+      "respuesta": 1,
+      "explicacion": "La monitorización ingress analiza el tráfico entrante en los controles perimetrales para detectar actividad hostil."
+    },
+    {
+      "pregunta": "Después de que un empleado interno copiara una base de datos de clientes a una memoria USB, la empresa despliega software de endpoint que bloquea la escritura de archivos marcados como confidenciales en medios extraíbles y registra cada intento. ¿Qué clase de control protege ahora ese canal?",
+      "opciones": [
+        "Un hub",
+        "Desfragmentación de disco",
+        "Data Loss Prevention (DLP) aplicando políticas sobre medios extraíbles",
+        "Un salvapantallas"
+      ],
+      "respuesta": 2,
+      "explicacion": "DLP controla y registra el movimiento de datos sensibles hacia canales como dispositivos USB para prevenir exfiltración."
+    },
+    {
+      "pregunta": "Un escaneo automatizado semanal compara la configuración de cada servidor con el baseline de hardening aprobado y abre un ticket por cada desviación. Esta semana marca un servidor cuyo servicio de registro remoto fue reactivado fuera del control de cambios. ¿Qué práctica está actuando?",
+      "opciones": [
+        "Pruebas de carga",
+        "Ingeniería social",
+        "Planificación de capacidad",
+        "Monitorización de configuración que detecta desviaciones respecto del baseline de seguridad para investigar y remediar"
+      ],
+      "respuesta": 3,
+      "explicacion": "La monitorización de configuración compara el estado real con un baseline aprobado y detecta drift o cambios no autorizados."
+    },
+    {
+      "pregunta": "Un cambio propuesto en un router entra en el proceso de la empresa: el solicitante documenta el cambio y el plan de reversión, un comité revisa el impacto, se concede aprobación, se prueba y programa el cambio, después se implementa y verifica, manteniendo registros de todo el proceso. ¿Cuál es el valor de seguridad de esta disciplina?",
+      "opciones": [
+        "Garantiza que los cambios se evalúen por riesgo, se autoricen, sean reversibles y trazables, evitando modificaciones no autorizadas o desestabilizadoras",
+        "Sustituye la necesidad de copias de seguridad",
+        "Solo importa para cambios cosméticos",
+        "Ralentiza el trabajo sin aportar beneficio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión formal de cambios aporta evaluación de riesgo, autorización, rollback probado y trazabilidad."
+    },
+    {
+      "pregunta": "A las dos de la madrugada, una vulnerabilidad crítica está siendo explotada activamente y el equipo de firewall debe aplicar una regla de bloqueo urgente sin esperar al comité semanal. ¿Cómo lo gestiona un proceso maduro de cambios?",
+      "opciones": [
+        "Los cambios de emergencia deben ocultarse de los registros",
+        "Los cambios de emergencia pueden acelerarse con aprobación abreviada, pero deben documentarse y revisarse formalmente después",
+        "El cambio debe esperar a la siguiente reunión programada",
+        "Todo el proceso queda suspendido permanentemente durante emergencias"
+      ],
+      "respuesta": 1,
+      "explicacion": "La gestión madura define una vía de emergencia que acelera la autorización sin eliminar la documentación ni la revisión posterior."
+    },
+    {
+      "pregunta": "Una empresa reescribe su estándar de contraseñas. ¿Qué conjunto de requisitos refleja MEJOR las recomendaciones modernas?",
+      "opciones": [
+        "Usar una única contraseña fuerte para todos los sistemas",
+        "Usar la palabra password con números añadidos",
+        "Exigir una frase de contraseña única y suficientemente larga por cuenta, bloquear contraseñas conocidas como comprometidas y combinar las contraseñas con MFA",
+        "Exigir cambiar las contraseñas a diario y anotarlas en papeles sobre el escritorio"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las recomendaciones modernas priorizan longitud, unicidad, bloqueo de contraseñas comprometidas y MFA, evitando rotaciones arbitrariamente frecuentes."
+    },
+    {
+      "pregunta": "El sitio web de un minorista publica una página que describe qué información personal recopila de los compradores, por qué la recopila, cuánto tiempo la conserva y con quién la comparte. ¿Qué documento es y quién es su audiencia?",
+      "opciones": [
+        "Un memorando de entendimiento para proveedores",
+        "Una guía de configuración BIOS",
+        "Un estándar interno de firewall para ingenieros",
+        "Una política de privacidad dirigida a clientes y titulares de datos cuya información procesa la empresa"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una política de privacidad informa a los titulares de los datos sobre las prácticas de recopilación, uso, retención y compartición."
+    },
+    {
+      "pregunta": "Una empleada recibe una llamada de alguien que afirma ser técnico de TI y dice necesitar urgentemente su contraseña para evitar que se elimine su buzón. La formación de la empresa le enseñó la respuesta correcta. ¿Qué debe hacer?",
+      "opciones": [
+        "Negarse a revelar la contraseña, finalizar la llamada y reportarla, verificando cualquier problema real mediante el número oficial del help desk",
+        "Dar la contraseña porque el buzón es importante",
+        "Negociar compartir solo la mitad de la contraseña",
+        "Publicar la petición en redes sociales para pedir consejo"
+      ],
+      "respuesta": 0,
+      "explicacion": "El personal legítimo de TI no necesita la contraseña del usuario; debe rechazarse la petición, verificar por canales oficiales y reportar el intento."
+    }
+  ]
+}
