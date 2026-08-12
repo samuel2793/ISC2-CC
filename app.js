@@ -220,6 +220,55 @@ function parseInline(value, basePath, options = {}) {
   return html;
 }
 
+function readHtmlAttribute(html, tag, attribute) {
+  const tagMatch = html.match(new RegExp(`<${tag}\\b[^>]*>`, "i"));
+  if (!tagMatch) return "";
+
+  const attributeMatch = tagMatch[0].match(new RegExp(`${attribute}\\s*=\\s*(["'])(.*?)\\1`, "i"));
+  return attributeMatch ? attributeMatch[2] : "";
+}
+
+function readTagAttribute(tagHtml, attribute) {
+  const attributeMatch = tagHtml.match(new RegExp(`${attribute}\\s*=\\s*(["'])(.*?)\\1`, "i"));
+  return attributeMatch ? attributeMatch[2] : "";
+}
+
+function readHtmlTags(html, tag) {
+  return html.match(new RegExp(`<${tag}\\b[^>]*>`, "gi")) || [];
+}
+
+function renderVideoBlock(html, basePath, options = {}) {
+  const src = readHtmlAttribute(html, "source", "src");
+  if (!src) return `<p>${parseInline(html, basePath, options)}</p>`;
+
+  const resolvedSrc = options.resolveMediaSrc
+    ? options.resolveMediaSrc(src)
+    : siteUrl(`${basePath}/${src}`);
+
+  if (options.xhtml) {
+    return `<p><a href="${resolvedSrc}">Ver video</a></p>`;
+  }
+
+  const type = readHtmlAttribute(html, "source", "type") || "video/mp4";
+  const tracks = readHtmlTags(html, "track")
+    .map((trackHtml) => {
+      const trackSrc = readTagAttribute(trackHtml, "src");
+      if (!trackSrc) return "";
+
+      const kind = readTagAttribute(trackHtml, "kind") || "subtitles";
+      const srclang = readTagAttribute(trackHtml, "srclang") || "es";
+      const label = readTagAttribute(trackHtml, "label") || srclang;
+      const isDefault = /\sdefault(?:\s|>|=)/i.test(trackHtml) ? " default" : "";
+      return `\n  <track src="${siteUrl(`${basePath}/${trackSrc}`)}" kind="${escapeHtml(kind)}" srclang="${escapeHtml(srclang)}" label="${escapeHtml(label)}"${isDefault}>`;
+    })
+    .join("");
+
+  return `<video class="lesson-video" controls preload="metadata">
+  <source src="${resolvedSrc}" type="${escapeHtml(type)}">${tracks}
+  Tu navegador no soporta la reproduccion de video.
+</video>`;
+}
+
 function renderMarkdown(markdown, basePath, options = {}) {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const blocks = [];
@@ -231,6 +280,21 @@ function renderMarkdown(markdown, basePath, options = {}) {
 
     if (!trimmed) {
       index += 1;
+      continue;
+    }
+
+    if (/^<video\b/i.test(trimmed)) {
+      const videoLines = [trimmed];
+      index += 1;
+      while (index < lines.length && !/<\/video>/i.test(lines[index])) {
+        videoLines.push(lines[index].trim());
+        index += 1;
+      }
+      if (index < lines.length) {
+        videoLines.push(lines[index].trim());
+        index += 1;
+      }
+      blocks.push(renderVideoBlock(videoLines.join("\n"), basePath, options));
       continue;
     }
 
@@ -269,7 +333,7 @@ function renderMarkdown(markdown, basePath, options = {}) {
     index += 1;
     while (index < lines.length) {
       const next = lines[index].trim();
-      if (!next || next.startsWith("#") || next.startsWith("- ") || next.startsWith("![")) {
+      if (!next || next.startsWith("#") || next.startsWith("- ") || next.startsWith("![") || /^<video\b/i.test(next)) {
         break;
       }
       paragraph.push(next);
