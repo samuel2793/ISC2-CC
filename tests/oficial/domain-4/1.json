@@ -1,0 +1,179 @@
+{
+  "titulo": "Arquitectura de red, infraestructura segura y computación en la nube",
+  "procedencia": "Test original proporcionado por el usuario",
+  "descripcion": "Batería de preguntas sobre arquitectura de red, segmentación, seguridad de infraestructura, puertos y servicios, redundancia y modelos de computación en la nube.",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué dispositivo de red se utiliza habitualmente para conectar redes?",
+      "opciones": ["Endpoint", "Router", "Servidor", "Switch"],
+      "respuesta": 1,
+      "explicacion": "Los routers se utilizan para conectar redes entre sí."
+    },
+    {
+      "pregunta": "¿Qué dispositivo de red se utiliza habitualmente para filtrar tráfico?",
+      "opciones": ["Endpoint", "Ethernet", "Firewall", "Servidor"],
+      "respuesta": 2,
+      "explicacion": "Los firewalls se utilizan para filtrar el tráfico de red según reglas de seguridad."
+    },
+    {
+      "pregunta": "¿Qué conecta todos los dispositivos situados detrás del firewall en una red de una pequeña empresa?",
+      "opciones": ["Punto de acceso", "Router", "Switch", "Red inalámbrica"],
+      "respuesta": 2,
+      "explicacion": "En una red de pequeña empresa, los dispositivos situados detrás del firewall suelen conectarse mediante el switch de red."
+    },
+    {
+      "pregunta": "¿Cuál es una posible desventaja asociada a la libertad que proporciona una red inalámbrica?",
+      "opciones": [
+        "Vulnerabilidades adicionales",
+        "Mayor control de acceso físico",
+        "Alcance de señal limitado",
+        "Menor coste de despliegue"
+      ],
+      "respuesta": 0,
+      "explicacion": "La conectividad inalámbrica aporta flexibilidad, pero también introduce vulnerabilidades adicionales debido a la transmisión por radio y a la ausencia de un medio físico confinado."
+    },
+    {
+      "pregunta": "¿Contra qué ayuda a proteger la microsegmentación?",
+      "opciones": [
+        "Amenazas persistentes avanzadas",
+        "Paradigmas de diseño centrados en la infraestructura",
+        "Conjuntos de herramientas polimórficas",
+        "Modelos de seguridad tradicionales"
+      ],
+      "respuesta": 0,
+      "explicacion": "La microsegmentación ayuda a limitar el movimiento lateral y puede reducir el impacto de amenazas persistentes avanzadas."
+    },
+    {
+      "pregunta": "¿Qué principio fundamental de ciberseguridad ayuda a aplicar la microsegmentación en distintas partes de una organización?",
+      "opciones": [
+        "Redundancia de datos",
+        "Mínimo privilegio",
+        "Aislamiento físico",
+        "Complejidad de las reglas"
+      ],
+      "respuesta": 1,
+      "explicacion": "La microsegmentación aplica el principio de mínimo privilegio al dividir la red en segmentos más pequeños y controlar estrictamente la comunicación y el acceso entre ellos."
+    },
+    {
+      "pregunta": "¿Cuál es la función de los conmutadores de transferencia o transformadores en un sistema de alimentación redundante?",
+      "opciones": [
+        "Controlar la velocidad de los generadores",
+        "Convertir la energía solar en electricidad",
+        "Permitir una transición fluida entre fuentes de alimentación",
+        "Minimizar el consumo de energía"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los conmutadores de transferencia o transformadores facilitan una transición fluida entre distintas fuentes de alimentación dentro de un sistema redundante."
+    },
+    {
+      "pregunta": "En un escenario que requiere redundancia completa, ¿qué deberían tener los dispositivos en cuanto a fuentes de alimentación?",
+      "opciones": [
+        "Una fuente de alimentación conectada a una única fuente eléctrica",
+        "Una fuente de alimentación conectada a un generador",
+        "Una única fuente de alimentación",
+        "Dos fuentes de alimentación conectadas a fuentes eléctricas diferentes"
+      ],
+      "respuesta": 3,
+      "explicacion": "La redundancia completa de alimentación requiere dos fuentes de alimentación conectadas a fuentes eléctricas diferentes para evitar un único punto de fallo."
+    },
+    {
+      "pregunta": "¿Qué término describe una parte de la red de una organización que se comunica directamente con el exterior y que normalmente tiene más controles y restricciones de seguridad que el resto del entorno interno de TI?",
+      "opciones": [
+        "Zona desmilitarizada (DMZ)",
+        "National Institute of Standards and Technology (NIST)",
+        "Red de área local virtual (VLAN)",
+        "Red privada virtual (VPN)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una zona desmilitarizada (DMZ) es una parte de la red que se comunica directamente con el exterior y dispone de controles y restricciones de seguridad adicionales."
+    },
+    {
+      "pregunta": "¿Cuál es una posible alternativa a las costosas conexiones dedicadas punto a punto?",
+      "opciones": [
+        "Protocolos de seguridad costosos",
+        "VPN de gateway a gateway",
+        "VPN que siempre están cifradas",
+        "VPN con conexiones de red no confiables"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las organizaciones pueden utilizar VPN de gateway a gateway como alternativa a conexiones dedicadas punto a punto más costosas."
+    },
+    {
+      "pregunta": "¿Cómo funciona un Web Application Firewall (WAF) en una red?",
+      "opciones": [
+        "Cifra los datos entre el servidor web y la red interna",
+        "Supervisa todo el tráfico procedente del exterior en busca de comportamiento malicioso antes de pasar las solicitudes al servidor web",
+        "Separa la información de pacientes de la información de facturación",
+        "Utiliza switches seguros para controlar el tráfico"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un WAF inspecciona el tráfico dirigido a una aplicación web y detecta comportamiento malicioso antes de permitir que las solicitudes lleguen al servidor web."
+    },
+    {
+      "pregunta": "¿Qué es la monitorización de red o sniffing?",
+      "opciones": [
+        "Un método para resistir ataques con paquetes sobredimensionados",
+        "La monitorización de patrones de tráfico para obtener información sobre una red",
+        "El acto de prevenir ataques DDoS",
+        "El acto de proteger una red"
+      ],
+      "respuesta": 1,
+      "explicacion": "La monitorización de red o sniffing consiste en observar el tráfico y sus patrones para obtener información sobre una red."
+    },
+    {
+      "pregunta": "¿Cuál es el propósito del three-way handshake en redes?",
+      "opciones": [
+        "Cifrar la comunicación",
+        "Establecer una conexión física",
+        "Encaminar el tráfico de red",
+        "Sincronizar y confirmar solicitudes"
+      ],
+      "respuesta": 3,
+      "explicacion": "El three-way handshake permite sincronizar y confirmar solicitudes para establecer una conexión entre dos dispositivos."
+    },
+    {
+      "pregunta": "¿Qué es el resource pooling en el contexto de la computación en la nube?",
+      "opciones": [
+        "Limitar la flexibilidad de las instalaciones basadas en la nube",
+        "Externalizar recursos a un centro de datos externo",
+        "Restringir el acceso a los recursos",
+        "Compartir servidores físicos con otras organizaciones"
+      ],
+      "respuesta": 3,
+      "explicacion": "El resource pooling permite compartir recursos de infraestructura entre distintos clientes u organizaciones mediante un conjunto común de recursos físicos o virtuales."
+    },
+    {
+      "pregunta": "¿En qué modelo de servicio en la nube el proveedor gestiona completamente la infraestructura, el sistema operativo y las aplicaciones de software, mientras que el cliente solo es responsable de gestionar y mantener la propiedad de sus datos?",
+      "opciones": [
+        "Desktop as a Service (DaaS)",
+        "Infrastructure as a Service (IaaS)",
+        "Platform as a Service (PaaS)",
+        "Software as a Service (SaaS)"
+      ],
+      "respuesta": 3,
+      "explicacion": "En Software as a Service (SaaS), el proveedor administra la infraestructura, el sistema operativo y las aplicaciones, mientras que el cliente utiliza el servicio y mantiene el control sobre sus datos."
+    },
+    {
+      "pregunta": "¿Cuál es uno de los servicios ofrecidos por muchos MSP en el que se supervisan firewalls y otras herramientas de seguridad para aportar experiencia en el triaje de eventos?",
+      "opciones": [
+        "Servicio de triaje de incidentes",
+        "Managed Detection and Response (MDR)",
+        "Servicio de firewall gestionado",
+        "Servicio de aplicación de parches de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Managed Detection and Response (MDR) permite que un proveedor supervise firewalls y otras herramientas de seguridad y aporte experiencia especializada para detectar, analizar y realizar el triaje de eventos."
+    },
+    {
+      "pregunta": "¿Qué modelo de computación en la nube proporciona infraestructura virtual escalable, como servidores y almacenamiento, sin requerir la instalación de hardware local?",
+      "opciones": [
+        "Nube híbrida",
+        "Infrastructure as a Service (IaaS)",
+        "Platform as a Service (PaaS)",
+        "Software as a Service (SaaS)"
+      ],
+      "respuesta": 1,
+      "explicacion": "Infrastructure as a Service (IaaS) proporciona recursos de infraestructura como servidores, almacenamiento y redes bajo demanda, sin que la organización tenga que instalar el hardware físicamente en sus propias instalaciones."
+    }
+  ]
+}
