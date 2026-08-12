@@ -1,0 +1,1092 @@
+{
+  "titulo": "ISC2 Certified in Cybersecurity (CC) - Examen de práctica 1",
+  "procedencia": "CertPreps - ISC2 CC Practice Exam 1 (2026)",
+  "descripcion": "Examen de práctica para la certificación ISC2 Certified in Cybersecurity (CC), con preguntas sobre seguridad de aplicaciones, redundancia, gestión de riesgos, controles de seguridad, redes y control de acceso.",
+  "preguntas": [
+    {
+      "pregunta": "Un analista de ciberseguridad detecta picos inusuales en las consultas a una base de datos procedentes de una aplicación web. Para mitigar el problema, necesita implementar un mecanismo que evite ataques de inyección SQL. ¿Qué solución de capa de aplicación sería la más eficaz?",
+      "opciones": [
+        "Implementar validación de entradas y consultas parametrizadas.",
+        "Configurar un firewall para bloquear el tráfico SQL entrante.",
+        "Supervisar direcciones IP sospechosas mediante un sistema SIEM.",
+        "Utilizar un servidor proxy para filtrar las solicitudes de la aplicación."
+      ],
+      "respuesta": 0,
+      "explicacion": "La validación de entradas y las consultas parametrizadas evitan que los datos proporcionados por el usuario modifiquen la estructura de las consultas SQL, por lo que son defensas directas y eficaces frente a la inyección SQL."
+    },
+    {
+      "pregunta": "Una institución financiera aloja aplicaciones críticas en su centro de datos local. Para garantizar un servicio ininterrumpido durante un fallo de hardware, el equipo de TI quiere implementar una solución que permita una conmutación por error transparente entre servidores. ¿Qué solución de redundancia debería desplegar?",
+      "opciones": [
+        "RAID 5 para redundancia de discos.",
+        "Balanceo de carga con conmutación por error activo-pasivo.",
+        "Fuentes de alimentación intercambiables en caliente.",
+        "Doble alimentación eléctrica desde la red de suministro."
+      ],
+      "respuesta": 1,
+      "explicacion": "El esquema activo-pasivo permite que un servidor de respaldo tome el control si falla el servidor principal, manteniendo la disponibilidad de la aplicación. Las demás opciones aportan redundancia de discos o alimentación, pero no conmutación por error entre servidores."
+    },
+    {
+      "pregunta": "Una organización opera en varios países con distintos requisitos legales para la conservación de datos de clientes. ¿Cómo debería gestionar sus políticas de retención de datos?",
+      "opciones": [
+        "Conservar todos los datos de clientes conforme al requisito de retención más estricto de todas las regiones.",
+        "Personalizar las políticas de retención según los requisitos legales de cada región donde se recopilan los datos.",
+        "Almacenar los datos de clientes indefinidamente para evitar cualquier posible incumplimiento de las leyes regionales.",
+        "Adoptar una única política global de retención basada en el requisito medio de todas las regiones."
+      ],
+      "respuesta": 1,
+      "explicacion": "Las políticas de retención deben adaptarse a los requisitos legales aplicables en cada jurisdicción. Esto permite cumplir las obligaciones locales sin conservar datos innecesariamente ni aumentar el riesgo y los costes de almacenamiento."
+    },
+    {
+      "pregunta": "Una empresa ha identificado varios riesgos, incluidos posibles ciberataques, filtraciones de datos y fallos de sistemas. Debido a que dispone de recursos limitados para mitigarlos, debe decidir en qué riesgos centrarse. ¿Cuál debería ser la consideración principal al priorizarlos?",
+      "opciones": [
+        "Los recursos financieros disponibles para la mitigación.",
+        "La probabilidad de ocurrencia y el impacto potencial de cada riesgo.",
+        "La gravedad de los riesgos únicamente para las partes interesadas internas.",
+        "La urgencia inmediata de abordar problemas de relaciones públicas."
+      ],
+      "respuesta": 1,
+      "explicacion": "La priorización de riesgos debe basarse principalmente en la combinación de probabilidad e impacto. Esto permite identificar los riesgos con mayor exposición y dirigir los recursos de mitigación hacia ellos."
+    },
+    {
+      "pregunta": "Un equipo de ciberseguridad implementa segmentación de red para aislar sistemas sensibles y reducir el impacto de posibles brechas. ¿Cómo contribuye esta medida preventiva a la seguridad general?",
+      "opciones": [
+        "Evita ataques de phishing bloqueando correos electrónicos maliciosos.",
+        "Reduce la superficie de ataque al limitar el movimiento lateral.",
+        "Mejora las políticas de contraseñas en toda la organización.",
+        "Garantiza que todo el tráfico esté cifrado durante la transmisión."
+      ],
+      "respuesta": 1,
+      "explicacion": "La segmentación de red limita la capacidad de un atacante para desplazarse lateralmente entre sistemas y ayuda a contener una intrusión, reduciendo la superficie de ataque y el impacto potencial de una brecha."
+    },
+    {
+      "pregunta": "Una empresa de software trabaja en un proyecto con una agencia gubernamental y ha recibido datos clasificados para integrarlos en su sistema. La política de manejo de datos establece restricciones sobre ubicaciones de almacenamiento y permisos de acceso. Durante una auditoría se descubre que un desarrollador junior tiene acceso al repositorio de datos clasificados. ¿Qué debería hacer la empresa para corregir esta infracción?",
+      "opciones": [
+        "Restringir inmediatamente el acceso del desarrollador junior a los datos clasificados.",
+        "Formar al desarrollador junior sobre las políticas de manejo de datos para evitar futuras infracciones.",
+        "Informar a la agencia gubernamental de la infracción de acceso para mantener la transparencia.",
+        "Escalar el problema a la alta dirección para que decida las medidas correctivas apropiadas."
+      ],
+      "respuesta": 0,
+      "explicacion": "La prioridad es eliminar inmediatamente el acceso no autorizado para reducir la exposición de los datos y aplicar el principio de mínimo privilegio. La formación, notificación o escalado pueden realizarse posteriormente según los procedimientos aplicables."
+    },
+    {
+      "pregunta": "Una empresa decide implementar un programa de formación y concienciación en seguridad para sus empleados con el objetivo de reducir el riesgo de ataques de ingeniería social. ¿Qué tipo de control de seguridad es?",
+      "opciones": [
+        "Control técnico.",
+        "Control administrativo.",
+        "Control físico.",
+        "Control detectivo."
+      ],
+      "respuesta": 1,
+      "explicacion": "La formación y concienciación en seguridad constituye un control administrativo porque se basa en políticas, procedimientos y educación del personal para reducir los riesgos asociados al comportamiento humano."
+    },
+    {
+      "pregunta": "Un administrador de TI observa que los paquetes de datos procedentes del equipo de un usuario no llegan al servidor de destino debido a problemas con el direccionamiento lógico. ¿Qué capa del modelo TCP/IP debería investigar para resolver el problema?",
+      "opciones": [
+        "Capa de Aplicación.",
+        "Capa de Transporte.",
+        "Capa de Internet.",
+        "Capa de Interfaz de Red."
+      ],
+      "respuesta": 2,
+      "explicacion": "La Capa de Internet del modelo TCP/IP se encarga del direccionamiento lógico y del encaminamiento mediante direcciones IP. Los problemas de configuración IP, subredes o rutas deben investigarse en esta capa."
+    },
+    {
+      "pregunta": "Un atacante intenta modificar archivos críticos de configuración de un servidor. La modificación es detectada inmediatamente por una herramienta de monitorización que registra el evento y envía una alerta al equipo de seguridad. ¿Cuál es la finalidad principal de la herramienta en este contexto?",
+      "opciones": [
+        "Bloquear modificaciones no autorizadas.",
+        "Monitorizar y alertar sobre actividades sospechosas.",
+        "Impedir el acceso al servidor.",
+        "Realizar una evaluación de vulnerabilidades."
+      ],
+      "respuesta": 1,
+      "explicacion": "La función descrita corresponde a un HIDS, que detecta y registra actividades sospechosas en un host y genera alertas. Su función principal es detectar, no bloquear directamente las modificaciones."
+    },
+    {
+      "pregunta": "Una empresa implementa un sistema de control de acceso obligatorio (MAC) para sus datos de investigación. Cada archivo recibe una clasificación y los usuarios tienen niveles de autorización. Un becario con autorización 'Pública' intenta descargar accidentalmente un archivo 'Confidencial', pero el acceso se deniega automáticamente. ¿Qué medida debería implementarse para reforzar el sistema MAC frente a estos intentos no autorizados?",
+      "opciones": [
+        "Control de acceso basado en roles para redefinir los permisos de los becarios.",
+        "Registros de auditoría para realizar seguimiento de todos los intentos de acceso denegados.",
+        "Pruebas de penetración para detectar vulnerabilidades en el sistema de clasificación.",
+        "Alertas automáticas activadas por intentos de acceso a datos restringidos."
+      ],
+      "respuesta": 3,
+      "explicacion": "MAC ya impide el acceso cuando el nivel de autorización es insuficiente. Las alertas automáticas permiten detectar en tiempo real los intentos de acceso a información restringida y facilitan una respuesta rápida."
+    },
+    {
+      "pregunta": "Un administrador de seguridad quiere validar si las líneas base actuales de los sistemas están abordando eficazmente las amenazas de seguridad emergentes. ¿Cuál es el mejor método para evaluar la adecuación de estas líneas base?",
+      "opciones": [
+        "Realizar una prueba de penetración contra los sistemas utilizando las configuraciones de línea base.",
+        "Comparar las configuraciones de línea base con los estándares y benchmarks de seguridad más recientes.",
+        "Realizar análisis de vulnerabilidades y ajustar las configuraciones para corregir los problemas detectados.",
+        "Actualizar periódicamente las configuraciones de línea base basándose en las recomendaciones del equipo de TI."
+      ],
+      "respuesta": 1,
+      "explicacion": "Comparar las líneas base con benchmarks y estándares de seguridad actualizados permite determinar sistemáticamente si siguen siendo adecuadas frente a amenazas emergentes. Las pruebas y escaneos identifican problemas concretos, pero no evalúan por sí solos la cobertura general de la línea base."
+    },
+    {
+      "pregunta": "Una empresa ha desplegado guardias de seguridad para supervisar los puntos de acceso de una instalación de alta seguridad. ¿Cuál de las siguientes es la consideración más crítica al asignar guardias a funciones de control de acceso?",
+      "opciones": [
+        "Los guardias deben rotarse con frecuencia para evitar la complacencia",
+        "Los guardias deben tener acceso sin restricciones a todas las áreas de la instalación",
+        "Los guardias deben mantener siempre el mismo horario de turno para garantizar la consistencia",
+        "Los guardias deben realizar múltiples tareas para maximizar la eficiencia"
+      ],
+      "respuesta": 0,
+      "explicacion": "La rotación frecuente ayuda a evitar la complacencia y la pérdida de vigilancia que puede producirse cuando un guardia permanece demasiado tiempo en el mismo puesto."
+    },
+    {
+      "pregunta": "Un administrador de red detecta un escaneo no autorizado procedente de una dirección IP externa. El escaneo intenta sondear una amplia variedad de puertos del firewall de la organización para identificar puertos abiertos. ¿Qué tipo de actividad de escaneo está realizando probablemente el atacante?",
+      "opciones": [
+        "Escaneo de fingerprinting del sistema operativo",
+        "Escaneo SYN",
+        "Escaneo de conexión completa",
+        "Escaneo horizontal"
+      ],
+      "respuesta": 3,
+      "explicacion": "Según el test original, un escaneo horizontal implica sondear un rango de puertos para identificar servicios abiertos."
+    },
+    {
+      "pregunta": "Una institución financiera necesita garantizar la transmisión segura de datos sensibles de clientes entre sus sucursales. Decide utilizar cifrado simétrico, pero existen preocupaciones sobre la gestión de claves. ¿Qué práctica aborda mejor este problema?",
+      "opciones": [
+        "Utilizar una única clave simétrica para todas las sucursales para minimizar la complejidad",
+        "Rotar regularmente las claves simétricas y distribuirlas de forma segura mediante un mecanismo previamente compartido",
+        "Cifrar las claves simétricas con cifrado asimétrico y compartirlas abiertamente por correo electrónico",
+        "Utilizar cifrado simétrico con una clave fija almacenada en una base de datos cifrada accesible para todas las sucursales"
+      ],
+      "respuesta": 1,
+      "explicacion": "La rotación periódica de claves y su distribución mediante mecanismos seguros reduce el impacto de una posible exposición y mejora la seguridad de la gestión de claves."
+    },
+    {
+      "pregunta": "Una empresa multinacional audita sus prácticas de clasificación de datos y descubre que muchos empleados no saben cómo clasificar o manejar correctamente la información. ¿Cuál es la medida más efectiva para abordar el problema?",
+      "opciones": [
+        "Aumentar la frecuencia de las auditorías de clasificación para detectar incumplimientos",
+        "Implantar un sistema centralizado que asigne automáticamente niveles de clasificación a todos los datos",
+        "Proporcionar formación completa a los empleados sobre la política de clasificación de datos y su aplicación práctica",
+        "Eliminar la clasificación de datos para simplificar los procesos de tratamiento de información"
+      ],
+      "respuesta": 2,
+      "explicacion": "La formación aborda directamente la falta de conocimiento y permite que los empleados comprendan la política y sepan aplicarla correctamente."
+    },
+    {
+      "pregunta": "Una empresa de comercio electrónico sufre una interrupción repentina durante un importante evento de ventas. La investigación revela que fue causada por una cantidad abrumadora de solicitudes HTTP procedentes de miles de direcciones IP distintas. ¿Qué tipo de ataque describe este escenario?",
+      "opciones": [
+        "Ataque de inyección SQL",
+        "Ataque de denegación de servicio distribuido (DDoS)",
+        "Ataque de Cross-Site Scripting (XSS)",
+        "Ataque de phishing"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un ataque DDoS utiliza múltiples sistemas distribuidos para generar suficiente tráfico como para degradar o impedir la disponibilidad de un servicio."
+    },
+    {
+      "pregunta": "La DMZ de una empresa aloja un servidor web que se comunica con clientes externos mediante HTTPS. Durante una auditoría se recomienda supervisar y registrar todo el tráfico entrante y saliente de la DMZ para detectar actividades sospechosas. ¿Cuál es la mejor herramienta para conseguirlo?",
+      "opciones": [
+        "Network Intrusion Detection System (NIDS)",
+        "Analizador de paquetes",
+        "Firewall de aplicaciones",
+        "Host-based Intrusion Prevention System (HIPS)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un NIDS supervisa y analiza el tráfico de red de la DMZ y puede detectar patrones sospechosos y generar alertas."
+    },
+    {
+      "pregunta": "Una organización utiliza una solución PaaS para alojar una arquitectura de microservicios. Durante una revisión de seguridad se detecta que varios endpoints sensibles de API están expuestos sin autenticación. ¿Cómo debe abordar la organización esta vulnerabilidad?",
+      "opciones": [
+        "Implementar segmentación de red para aislar los endpoints de API",
+        "Configurar el entorno PaaS para exigir autenticación y control de acceso",
+        "Solicitar al proveedor PaaS que cifre todo el tráfico de API de forma predeterminada",
+        "Trasladar los endpoints de API a un servidor on-premises para disponer de mayor control"
+      ],
+      "respuesta": 1,
+      "explicacion": "La vulnerabilidad es la ausencia de autenticación y autorización, por lo que debe corregirse aplicando directamente estos controles en el entorno PaaS."
+    },
+    {
+      "pregunta": "Durante una revisión de seguridad, una organización identifica que los intentos fallidos de inicio de sesión en sistemas críticos no se están registrando. ¿Cuál es la mejor acción para corregir esta deficiencia de logging y monitorización?",
+      "opciones": [
+        "Habilitar el registro de intentos fallidos de inicio de sesión e implementar alertas en tiempo real para patrones sospechosos",
+        "Ignorar los intentos fallidos y registrar únicamente los inicios de sesión correctos",
+        "Configurar informes periódicos sobre la actividad de inicio de sesión sin habilitar registros en tiempo real",
+        "Limitar el registro únicamente a las cuentas administrativas para reducir el volumen de logs"
+      ],
+      "respuesta": 0,
+      "explicacion": "Registrar los intentos fallidos y generar alertas permite detectar rápidamente ataques de fuerza bruta y otros intentos de acceso no autorizado."
+    },
+    {
+      "pregunta": "La infraestructura de red de una empresa incluye switches redundantes para evitar interrupciones ante fallos de hardware. Sin embargo, durante una incidencia reciente la redundancia no se activó debido a errores de configuración. ¿Qué protocolo debe utilizarse para cambiar automáticamente a la ruta de respaldo en estos escenarios?",
+      "opciones": [
+        "Dynamic Host Configuration Protocol (DHCP)",
+        "Spanning Tree Protocol (STP)",
+        "Border Gateway Protocol (BGP)",
+        "Simple Network Management Protocol (SNMP)"
+      ],
+      "respuesta": 1,
+      "explicacion": "STP evita bucles de capa 2 y permite disponer de rutas redundantes que pueden activarse cuando falla una ruta principal."
+    },
+    {
+      "pregunta": "Una empresa adopta el estándar ISO/IEC 27001 para gestionar su marco de seguridad de la información. ¿Cuál de las siguientes acciones demuestra mejor el cumplimiento de este estándar?",
+      "opciones": [
+        "Realizar regularmente pruebas de penetración para identificar vulnerabilidades",
+        "Documentar e implementar un Information Security Management System (ISMS)",
+        "Exigir que todos los empleados realicen formación anual de ciberseguridad",
+        "Implementar firewalls e Intrusion Detection Systems (IDS)"
+      ],
+      "respuesta": 1,
+      "explicacion": "ISO/IEC 27001 se centra en establecer, mantener y mejorar un ISMS basado en la gestión sistemática de los riesgos de seguridad de la información."
+    },
+    {
+      "pregunta": "Una empresa utiliza un sistema SaaS de gestión de relaciones con clientes (CRM) para almacenar datos sensibles. Durante una revisión descubre que el proveedor SaaS no le permite gestionar sus propias claves de cifrado. ¿Qué debe hacer para conseguir un mayor control sobre sus datos?",
+      "opciones": [
+        "Utilizar una solución CRM on-premises en lugar de SaaS",
+        "Implementar una solución bring-your-own-key (BYOK) con el proveedor SaaS",
+        "Cifrar los datos sensibles antes de cargarlos en la plataforma SaaS",
+        "Solicitar al proveedor SaaS que utilice algoritmos de cifrado más robustos"
+      ],
+      "respuesta": 1,
+      "explicacion": "BYOK permite que la organización mantenga mayor control sobre las claves empleadas para proteger sus datos dentro del servicio SaaS."
+    },
+    {
+      "pregunta": "Durante un incidente de ciberseguridad, un atacante logra superar el firewall perimetral pero no consigue exfiltrar datos debido a otros controles de seguridad existentes. ¿Qué principio de defensa en profundidad demuestra mejor este escenario?",
+      "opciones": [
+        "Failover y redundancia",
+        "Seguridad por oscuridad",
+        "Seguridad por capas",
+        "Principio de mínimo privilegio"
+      ],
+      "respuesta": 2,
+      "explicacion": "La seguridad por capas utiliza múltiples controles independientes, de forma que la vulneración de una capa no implica necesariamente el compromiso completo del sistema."
+    },
+    {
+      "pregunta": "Una empresa está diseñando su centro de datos on-premises para mantener las operaciones durante un corte eléctrico. El equipo necesita una solución que suministre energía temporal mientras arrancan los generadores de respaldo. ¿Qué componente es el más adecuado?",
+      "opciones": [
+        "Protector contra sobretensiones",
+        "Uninterruptible Power Supply (UPS)",
+        "Automatic Transfer Switch (ATS)",
+        "Power Distribution Unit (PDU)"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un UPS suministra energía temporal inmediatamente después de un fallo eléctrico y cubre el intervalo hasta que entra en funcionamiento el generador."
+    },
+    {
+      "pregunta": "Una organización ha implementado un proceso de gestión de parches para corregir vulnerabilidades en sistemas operativos y aplicaciones. ¿Qué enfoque garantiza mejor que los parches se apliquen eficazmente minimizando las interrupciones en producción?",
+      "opciones": [
+        "Desplegar todos los parches inmediatamente después de su publicación",
+        "Probar los parches en un entorno de staging antes de desplegarlos en producción",
+        "Aplicar únicamente los parches críticos y aplazar el resto hasta el mantenimiento programado",
+        "Basarse exclusivamente en las notas del proveedor para decidir si los parches deben aplicarse inmediatamente"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las pruebas en staging permiten comprobar compatibilidad, estabilidad y posibles efectos adversos antes de modificar los sistemas de producción."
+    },
+    {
+      "pregunta": "Durante una revisión de seguridad, un escaneo de vulnerabilidades detecta varias aplicaciones obsoletas que necesitan parches. Para cumplir las políticas de seguridad, ¿qué debe hacer primero el equipo de TI antes de aplicar los parches?",
+      "opciones": [
+        "Evaluar el nivel de riesgo de cada vulnerabilidad y priorizar los parches críticos",
+        "Programar inmediatamente una parada para aplicar todos los parches",
+        "Habilitar las actualizaciones automáticas de todas las aplicaciones",
+        "Desplegar los parches en un subconjunto de sistemas de producción y supervisar posibles problemas"
+      ],
+      "respuesta": 0,
+      "explicacion": "La evaluación de riesgos permite priorizar las vulnerabilidades más graves y asignar los recursos de parcheo de acuerdo con su impacto y probabilidad."
+    },
+    {
+      "pregunta": "Un responsable de TI negocia con un proveedor la prestación de servicios de seguridad gestionados. Ambas partes quieren redactar un documento que describa responsabilidades y compromisos mutuos, pero que sea flexible y no jurídicamente vinculante. ¿Qué documento deben utilizar?",
+      "opciones": [
+        "Acuerdo contractual",
+        "Memorandum of Understanding (MOU)",
+        "Service Level Agreement (SLA)",
+        "Statement of Work (SOW)"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un MOU permite documentar intenciones, responsabilidades y compromisos entre las partes manteniendo generalmente un carácter más flexible y no vinculante."
+    },
+    {
+      "pregunta": "Un equipo de ciberseguridad observa un fuerte aumento del tráfico de red procedente de una botnet, que consume el ancho de banda de la organización e impide que los usuarios legítimos accedan a los servicios. ¿Qué método de ataque DDoS se está utilizando con mayor probabilidad?",
+      "opciones": [
+        "Ataque de amplificación",
+        "Ataque de inyección de malware",
+        "Ataque de IP spoofing",
+        "Ataque de credential stuffing"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un ataque de amplificación aprovecha determinados protocolos o servicios para generar un volumen de tráfico hacia la víctima considerablemente mayor que el iniciado por el atacante."
+    },
+    {
+      "pregunta": "Un administrador configura un Intrusion Detection System (IDS) para supervisar tráfico entrante buscando patrones que coincidan con firmas conocidas de ataques. Durante las pruebas, el IDS detecta correctamente un intento de inyección SQL. ¿Qué tipo de IDS se está utilizando?",
+      "opciones": [
+        "Host-based IDS (HIDS)",
+        "Network-based IDS (NIDS)",
+        "IDS basado en firmas",
+        "IDS basado en anomalías"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un IDS basado en firmas compara la actividad observada con patrones previamente conocidos de ataques, como determinadas firmas de inyección SQL."
+    },
+    {
+      "pregunta": "Un administrador de nóminas prepara los datos de nómina y además puede iniciar los pagos salariales a través del sistema financiero de la organización. Una auditoría identifica un conflicto de segregación de funciones. ¿Qué solución lo resolvería de forma más efectiva?",
+      "opciones": [
+        "Exigir que un directivo revise y apruebe todos los pagos antes de que el administrador los inicie",
+        "Asignar a otra persona la revisión y aprobación de los pagos preparados por el administrador de nóminas",
+        "Utilizar sistemas automatizados para comparar los datos de nómina con los registros de pago después de realizar los pagos",
+        "Establecer que el administrador solo pueda preparar la nómina en presencia de un supervisor"
+      ],
+      "respuesta": 1,
+      "explicacion": "La segregación de funciones requiere separar responsabilidades incompatibles para evitar que una única persona controle todo el proceso de preparación y autorización del pago."
+    },
+    {
+      "pregunta": "Una pequeña empresa introduce un programa de formación en concienciación de seguridad tras varios incidentes de exposición accidental de datos por parte de empleados. ¿Qué métrica clave debe supervisar para evaluar la eficacia de la formación?",
+      "opciones": [
+        "El número de correos electrónicos de phishing simulado identificados correctamente por los empleados",
+        "El aumento de las sanciones impuestas a empleados por incumplimientos de políticas",
+        "La reducción del número de herramientas de ciberseguridad necesarias en la organización",
+        "La velocidad de recuperación de sistemas después de un incidente de ciberseguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las simulaciones de phishing permiten medir directamente si los empleados aplican los conocimientos adquiridos para reconocer amenazas."
+    },
+    {
+      "pregunta": "Un SLA de servicios cloud incluye requisitos de seguridad y cumplimiento que obligan al proveedor a mantener cifrados los datos en tránsito y en reposo. Si una auditoría revela que este requisito no se cumple, ¿en qué cláusula debe apoyarse la organización para abordar el problema?",
+      "opciones": [
+        "Garantía de disponibilidad del servicio",
+        "Política de retención de datos",
+        "Cláusula de notificación y remediación de brechas",
+        "Tiempo de respuesta del soporte técnico"
+      ],
+      "respuesta": 2,
+      "explicacion": "La cláusula de notificación y remediación establece las acciones y responsabilidades aplicables cuando el proveedor incumple requisitos de seguridad o cumplimiento."
+    },
+    {
+      "pregunta": "Una organización utiliza una base de datos para gestionar registros de empleados. Una auditoría descubre que varios registros fueron modificados sin autorización, causando errores en el procesamiento de nóminas. ¿Qué medida debe priorizar para abordar el problema y garantizar la integridad?",
+      "opciones": [
+        "Cifrar las copias de seguridad de la base de datos",
+        "Implementar hashing de datos",
+        "Reforzar la autenticación de usuarios",
+        "Habilitar la replicación de la base de datos"
+      ],
+      "respuesta": 1,
+      "explicacion": "El hashing permite detectar modificaciones en los datos al comparar los valores hash esperados con los obtenidos posteriormente."
+    },
+    {
+      "pregunta": "Durante un brote de malware, el equipo de respuesta a incidentes despliega rápidamente firmas antivirus actualizadas por toda la red para neutralizar la amenaza. ¿Cómo se alinea esta acción con el propósito de la respuesta a incidentes?",
+      "opciones": [
+        "Garantiza el cumplimiento de los requisitos del seguro de ciberseguridad",
+        "Erradica el software malicioso para restaurar las operaciones normales",
+        "Identifica las vulnerabilidades que provocaron el brote",
+        "Transfiere la responsabilidad a proveedores de software externos"
+      ],
+      "respuesta": 1,
+      "explicacion": "El despliegue de firmas actualizadas contribuye a la fase de erradicación, eliminando o neutralizando el malware para permitir la recuperación de las operaciones."
+    },
+    {
+      "pregunta": "Una empresa utiliza un sistema de control de acceso mediante tarjetas de proximidad. ¿Cuál de las siguientes opciones supone una mejora de seguridad respecto al sistema básico?",
+      "opciones": [
+        "Cambiar a un sistema de lectura de códigos de barras",
+        "Exigir autenticación de dos factores combinando las tarjetas con biometría",
+        "Reducir el número de lectores de tarjetas para minimizar la exposición",
+        "Aumentar la frecuencia de caducidad de las tarjetas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Combinar la tarjeta con un factor biométrico añade una segunda forma de verificación y reduce el riesgo asociado a tarjetas perdidas, robadas o copiadas."
+    },
+    {
+      "pregunta": "El plan de respuesta a incidentes de una empresa enfatiza la realización periódica de ejercicios tabletop y simulaciones para comprobar los procedimientos. ¿Qué componente de un plan de respuesta a incidentes representa esta práctica?",
+      "opciones": [
+        "Clasificación y triaje de incidentes",
+        "Formación y pruebas continuas",
+        "Directrices de notificación de incidentes",
+        "Integración de inteligencia de amenazas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los ejercicios tabletop y las simulaciones forman parte de la formación y las pruebas continuas destinadas a preparar al equipo e identificar deficiencias en el plan."
+    },
+    {
+      "pregunta": "Un analista de ciberseguridad debe garantizar que todo el tráfico entre dos sistemas esté cifrado para impedir accesos no autorizados durante la transmisión. Según el test, ¿en qué capa del modelo TCP/IP deben implementarse mecanismos como TLS o SSL?",
+      "opciones": [
+        "Capa de transporte",
+        "Capa de aplicación",
+        "Capa de Internet",
+        "Capa de interfaz de red"
+      ],
+      "respuesta": 0,
+      "explicacion": "Según el planteamiento del test, TLS y SSL proporcionan protección del tráfico asociada a la capa de transporte."
+    },
+    {
+      "pregunta": "Una empresa despliega software antivirus después de detectar varios casos de código malicioso que modifica archivos legítimos y se propaga mediante unidades USB. ¿Qué tipo de malware está intentando combatir específicamente?",
+      "opciones": ["Gusano", "Virus", "Keylogger", "Botnet"],
+      "respuesta": 1,
+      "explicacion": "Un virus infecta archivos legítimos y puede propagarse mediante soportes extraíbles y otras acciones del usuario."
+    },
+    {
+      "pregunta": "Un ingeniero de seguridad está diseñando una red con una DMZ para alojar servicios expuestos a Internet. Para garantizar que la DMZ quede correctamente aislada, ¿qué diseño de red debe utilizar?",
+      "opciones": [
+        "Colocar todos los servidores públicos y privados en la misma subred y utilizar firewalls para restringir el tráfico",
+        "Utilizar subredes separadas para la DMZ y la red interna, con firewalls controlando el flujo de tráfico",
+        "Desplegar un único firewall con reglas diferentes para tráfico interno y externo",
+        "Implementar segmentación mediante VLAN para proporcionar aislamiento lógico sin utilizar firewalls"
+      ],
+      "respuesta": 1,
+      "explicacion": "Separar la DMZ de la red interna mediante subredes distintas y controlar las comunicaciones con firewalls limita la exposición y aplica una separación efectiva entre zonas de confianza."
+    },
+    {
+      "pregunta": "Durante una disputa legal, una organización necesita demostrar que una determinada transacción financiera fue autorizada por un cliente. El sistema utiliza certificados digitales y registra cada transacción con un hash único y la firma digital del cliente. ¿Qué elemento garantiza el no repudio?",
+      "opciones": [
+        "Los datos de la transacción cifrados",
+        "El uso de la firma digital del cliente",
+        "El almacenamiento seguro de los registros de transacciones",
+        "El control de acceso basado en roles para los usuarios del sistema"
+      ],
+      "respuesta": 1,
+      "explicacion": "La firma digital proporciona evidencia criptográfica verificable que vincula al firmante con la transacción y permite demostrar su autorización."
+    },
+    {
+      "pregunta": "Un analista de ciberseguridad debe proteger documentos sensibles almacenados en una plataforma cloud mediante cifrado asimétrico, de forma que solo el personal autorizado pueda descifrarlos. ¿Qué clave debe utilizarse para cifrar los documentos?",
+      "opciones": [
+        "La clave privada del administrador cloud",
+        "La clave pública del personal autorizado",
+        "La clave privada del analista de ciberseguridad",
+        "Una clave simétrica compartida generada por la plataforma cloud"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los datos se cifran con la clave pública del destinatario para que únicamente quien posea la clave privada correspondiente pueda descifrarlos."
+    },
+    {
+      "pregunta": "Un equipo de TI debe desplegar nuevos sistemas en un entorno cloud y decide utilizar baselines reforzadas para mantener la seguridad y el cumplimiento. ¿Qué enfoque garantiza mejor que todos los nuevos despliegues utilicen esas configuraciones?",
+      "opciones": [
+        "Formar a todos los administradores para configurar manualmente cada sistema según la baseline",
+        "Crear plantillas de máquinas virtuales preconfiguradas con la baseline y utilizarlas en los despliegues",
+        "Realizar auditorías periódicas de los sistemas desplegados para detectar y corregir desviaciones",
+        "Utilizar herramientas de monitorización de terceros para detectar cambios de configuración después del despliegue"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las plantillas preconfiguradas permiten aplicar de forma consistente y preventiva la baseline desde el momento del despliegue."
+    },
+    {
+      "pregunta": "Un responsable de TI debe justificar ante la dirección el presupuesto destinado a un programa de formación en concienciación de seguridad. ¿Qué argumento destaca mejor la importancia de dicha formación?",
+      "opciones": [
+        "La formación en seguridad sustituye la necesidad de soluciones técnicas costosas",
+        "Los empleados son una primera línea de defensa frente a ciberataques y la formación les permite actuar eficazmente",
+        "Los requisitos normativos son la única razón para implantar programas de formación",
+        "La formación reduce la carga del departamento de TI mediante la automatización de la detección de amenazas"
+      ],
+      "respuesta": 1,
+      "explicacion": "La formación reduce el riesgo asociado al factor humano al ayudar a los empleados a reconocer amenazas y responder correctamente ante ellas."
+    },
+    {
+      "pregunta": "Un jefe de proyecto crea una carpeta compartida utilizando control de acceso discrecional (DAC) y concede permisos de lectura y escritura a varios miembros del equipo. Posteriormente, uno de ellos concede acceso a un consultor externo sin informar al jefe de proyecto. ¿Cuál es la principal preocupación relacionada con DAC en este escenario?",
+      "opciones": [
+        "El consultor dispone ahora de acceso administrativo no autorizado al sistema",
+        "El jefe de proyecto no puede impedir que determinados usuarios con permisos deleguen acceso a otros",
+        "Los derechos de acceso del miembro del equipo se revocan al añadir al consultor",
+        "El consultor externo obtiene acceso a recursos de la empresa no relacionados"
+      ],
+      "respuesta": 1,
+      "explicacion": "En DAC, determinados usuarios pueden disponer de capacidad para delegar permisos sobre un recurso, lo que puede provocar una propagación del acceso difícil de controlar centralmente."
+    },
+    {
+      "pregunta": "Un atacante observa los patrones de consumo eléctrico de un procesador criptográfico mientras realiza operaciones de descifrado. Analizando esos patrones consigue determinar la clave privada empleada. ¿Qué tipo de ataque se describe?",
+      "opciones": [
+        "Ingeniería social",
+        "Ataque de canal lateral",
+        "Caballo de Troya",
+        "Inyección de malware"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un ataque de canal lateral obtiene información sensible mediante características físicas indirectas de la implementación, como consumo eléctrico, tiempos de ejecución o emisiones electromagnéticas."
+    },
+    {
+      "pregunta": "Una organización está desplegando dispositivos de Internet of Things (IoT) para la automatización de edificios, incluidos sistemas de control de HVAC e iluminación. Para reducir el riesgo de que estos dispositivos sean explotados como punto de pivote para ataques laterales, el equipo de seguridad debe implementar segmentación. ¿Cuál es el mejor enfoque?",
+      "opciones": [
+        "Asignar los dispositivos IoT a una VLAN dedicada y restringir la comunicación a los sistemas necesarios mediante ACLs",
+        "Colocar los dispositivos IoT en la misma red que las estaciones de trabajo de los usuarios y confiar en el software antivirus para su protección",
+        "Configurar Network Address Translation (NAT) para los dispositivos IoT con el fin de ocultar sus direcciones IP",
+        "Utilizar una topología de red plana para simplificar la comunicación entre los dispositivos IoT y los sistemas críticos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una VLAN dedicada con ACLs aísla el tráfico IoT de la red principal y limita las comunicaciones permitidas, reduciendo el riesgo de movimiento lateral."
+    },
+    {
+      "pregunta": "Una institución financiera utiliza una VPN para proporcionar acceso remoto seguro a sus sistemas internos. Durante una revisión de seguridad se identifica que las conexiones VPN podrían ser vulnerables al secuestro de sesión. ¿Qué medida debería implementar la institución para mitigar este riesgo?",
+      "opciones": [
+        "Utilizar autenticación de dos factores (2FA) para el acceso VPN",
+        "Desplegar algoritmos de cifrado más robustos para la VPN",
+        "Configurar direcciones IP estáticas para los usuarios remotos",
+        "Habilitar split tunneling para las conexiones VPN"
+      ],
+      "respuesta": 0,
+      "explicacion": "La autenticación de dos factores (2FA) añade una segunda prueba de identidad y dificulta que un atacante aproveche credenciales comprometidas para acceder a una sesión VPN."
+    },
+    {
+      "pregunta": "Un analista de seguridad descubre que un atacante está midiendo las emisiones electromagnéticas de un dispositivo hardware para extraer claves criptográficas. ¿Qué tipo de ataque está realizando?",
+      "opciones": [
+        "Ataque de canal lateral",
+        "Inyección SQL",
+        "Ataque de phishing",
+        "Ataque de denegación de servicio (DoS)"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los ataques de canal lateral aprovechan información física generada por un sistema, como emisiones electromagnéticas, consumo eléctrico o tiempos de ejecución, para obtener información sensible."
+    },
+    {
+      "pregunta": "Una empresa mediana de desarrollo de software intenta identificar riesgos relacionados con la seguridad de su producto. El equipo analiza el código fuente, consulta a expertos externos y revisa los comentarios de clientes en busca de problemas de seguridad. ¿Qué describe mejor este enfoque de identificación de riesgos?",
+      "opciones": [
+        "Un enfoque reactivo que espera a que se notifiquen incidentes de seguridad",
+        "Un enfoque proactivo que utiliza recursos internos y externos para identificar riesgos",
+        "Un proceso limitado exclusivamente a la identificación técnica de riesgos",
+        "Un enfoque pasivo basado únicamente en los comentarios de los clientes"
+      ],
+      "respuesta": 1,
+      "explicacion": "La organización está buscando activamente riesgos antes de que se produzcan incidentes y combina fuentes internas y externas, por lo que se trata de un enfoque proactivo."
+    },
+    {
+      "pregunta": "Un analista de seguridad utiliza una herramienta de escaneo para identificar debilidades conocidas en los sistemas de la organización y compara los resultados con una base de datos de vulnerabilidades. ¿Qué tipo de escaneo se está realizando?",
+      "opciones": [
+        "Escaneo de vulnerabilidades",
+        "Escaneo de puertos",
+        "Escaneo de mapeo de red",
+        "Escaneo heurístico"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un escaneo de vulnerabilidades compara sistemas y configuraciones con información sobre vulnerabilidades conocidas para detectar posibles fallos explotables."
+    },
+    {
+      "pregunta": "Un administrador de sistemas debe configurar las políticas de contraseñas de Active Directory de acuerdo con buenas prácticas de seguridad. La política exige una longitud mínima de 12 caracteres, pero una auditoría revela que no aplica complejidad. ¿Qué debería hacer el administrador?",
+      "opciones": [
+        "Habilitar el bloqueo de cuenta después de tres intentos de inicio de sesión fallidos",
+        "Implementar un historial de contraseñas para impedir la reutilización de contraseñas recientes",
+        "Exigir el uso de mayúsculas, minúsculas, números y caracteres especiales en las contraseñas",
+        "Reducir la longitud mínima de la contraseña a ocho caracteres para facilitar el cumplimiento"
+      ],
+      "respuesta": 2,
+      "explicacion": "La opción indicada añade requisitos de complejidad a la longitud mínima ya configurada, dificultando ataques de adivinación y fuerza bruta."
+    },
+    {
+      "pregunta": "Durante un evento de seguridad, un IDS detecta un aumento de tráfico procedente de una dirección IP interna y lo marca como una posible amenaza. La investigación revela que la actividad correspondía a una operación legítima de copia de seguridad. ¿Qué tipo de situación representa?",
+      "opciones": [
+        "Falso negativo",
+        "Falso positivo",
+        "Detección de zero-day",
+        "Error de correlación de logs"
+      ],
+      "respuesta": 1,
+      "explicacion": "Es un falso positivo porque el IDS identificó como maliciosa una actividad que en realidad era legítima."
+    },
+    {
+      "pregunta": "Una organización experimenta frecuentes problemas de rendimiento WiFi debido a interferencias de redes vecinas. Para minimizar las interferencias, ¿qué canal debería utilizar según el test en una red de 2,4 GHz?",
+      "opciones": ["Canal 1", "Canal 6", "Canal 11", "Canal 8"],
+      "respuesta": 1,
+      "explicacion": "El canal 6 es uno de los canales no solapados habituales de la banda de 2,4 GHz, junto con los canales 1 y 11. El test identifica específicamente el canal 6 como respuesta correcta."
+    },
+    {
+      "pregunta": "Un equipo de desarrollo propone una actualización importante de la plataforma de comercio electrónico de la empresa que incluye cambios tanto en la interfaz front-end como en el procesamiento de pagos back-end. Según la política de gestión de cambios, ¿cuál es el paso más crítico para garantizar que la actualización pueda revertirse si provoca problemas?",
+      "opciones": [
+        "Documentar todos los cambios realizados durante la actualización",
+        "Realizar una revisión posterior a la implementación para identificar problemas",
+        "Crear un plan de rollback completo antes de la implementación",
+        "Desplegar la actualización fuera del horario laboral habitual"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un plan de rollback definido antes del despliegue permite restaurar rápidamente el estado anterior si la actualización falla o causa inestabilidad."
+    },
+    {
+      "pregunta": "Una empresa necesita garantizar una comunicación segura entre su aplicación web y sus usuarios. La aplicación utiliza HTTPS para transmitir datos. Según el modelo OSI utilizado en el test, ¿qué capa es principalmente responsable del cifrado de los datos transmitidos?",
+      "opciones": [
+        "Capa de presentación",
+        "Capa de aplicación",
+        "Capa de transporte",
+        "Capa de red"
+      ],
+      "respuesta": 0,
+      "explicacion": "En la correspondencia conceptual del modelo OSI empleada por el test, las funciones de cifrado y descifrado se asocian con la capa de presentación."
+    },
+    {
+      "pregunta": "Una organización militar utiliza un modelo Mandatory Access Control (MAC) para proteger información sensible. Un oficial con autorización 'Top Secret' comparte un documento clasificado como 'Top Secret' con un oficial que solo dispone de autorización 'Confidential'. Este último no puede acceder al documento. ¿Qué principio de MAC se demuestra?",
+      "opciones": [
+        "Principio de necesidad de conocer",
+        "Aplicación de acceso discrecional",
+        "Control de acceso basado en retículas",
+        "Aplicación de etiquetas de seguridad"
+      ],
+      "respuesta": 3,
+      "explicacion": "MAC aplica etiquetas de clasificación y niveles de autorización. Una etiqueta 'Top Secret' impide el acceso a un usuario cuya autorización solo alcanza el nivel 'Confidential'."
+    },
+    {
+      "pregunta": "Para prevenir ataques de fuerza bruta contra cuentas de usuario, una empresa configura una política de bloqueo de cuentas que las deshabilita temporalmente después de múltiples intentos de inicio de sesión fallidos. ¿Qué aspecto de la prevención aborda esta política?",
+      "opciones": [
+        "Detección de amenazas",
+        "Evitación del riesgo",
+        "Mitigación del acceso no autorizado",
+        "Respuesta a incidentes"
+      ],
+      "respuesta": 2,
+      "explicacion": "El bloqueo de cuentas reduce la eficacia de los intentos repetidos de autenticación y, por tanto, mitiga el riesgo de acceso no autorizado mediante fuerza bruta."
+    },
+    {
+      "pregunta": "Una gran institución financiera identifica un riesgo significativo de ciberataques que podrían interrumpir sus servicios online. No puede mitigarlo completamente debido al elevado coste de las medidas preventivas y decide contratar un seguro de ciberseguridad para cubrir posibles pérdidas. ¿Qué estrategia de tratamiento del riesgo representa?",
+      "opciones": [
+        "Mitigación del riesgo",
+        "Evitación del riesgo",
+        "Transferencia del riesgo",
+        "Aceptación del riesgo"
+      ],
+      "respuesta": 2,
+      "explicacion": "La contratación de un seguro transfiere a un tercero parte del impacto financiero asociado al riesgo, por lo que constituye una transferencia del riesgo."
+    },
+    {
+      "pregunta": "Una instalación utiliza diseño ambiental para controlar el acceso mediante la creación de un único punto de entrada para todo el personal. ¿Cuál es el principal beneficio de este enfoque?",
+      "opciones": [
+        "Reduce el coste del personal de seguridad al limitar las áreas que debe vigilar",
+        "Garantiza que ninguna persona no autorizada pueda acceder a la instalación durante el horario laboral",
+        "Simplifica la supervisión e identificación del personal que entra y sale de la instalación",
+        "Mejora el atractivo estético de la instalación al reducir el número de puntos de acceso visibles"
+      ],
+      "respuesta": 2,
+      "explicacion": "Centralizar el acceso en un único punto facilita supervisar, registrar e identificar a las personas que entran y salen."
+    },
+    {
+      "pregunta": "Un técnico de redes observa que un servidor de archivos de la red corporativa está recibiendo una cantidad excesiva de paquetes ICMP que afectan a su rendimiento. ¿Qué tipo de ataque es más probable y cuál es la mejor acción inmediata?",
+      "opciones": [
+        "SYN Flood; bloquear la dirección IP del atacante",
+        "DNS Spoofing; reconfigurar los ajustes DNS",
+        "Ping Flood; limitar el tráfico ICMP mediante listas de control de acceso (ACLs)",
+        "Man-in-the-Middle; desplegar TLS para proteger la comunicación"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un Ping Flood utiliza grandes volúmenes de paquetes ICMP para consumir recursos. Limitar el tráfico ICMP mediante ACLs puede mitigar inmediatamente este tráfico."
+    },
+    {
+      "pregunta": "Una organización utiliza un esquema de clasificación de datos con etiquetas como 'Público', 'Confidencial' y 'Restringido'. Un miembro del equipo prepara un documento para distribución externa, pero observa que está etiquetado como 'Confidencial'. ¿Cuál es la mejor acción antes de compartirlo externamente?",
+      "opciones": [
+        "Cambiar la etiqueta a 'Público' sin revisar el contenido para permitir su distribución",
+        "Compartir el documento después de confirmar que los destinatarios externos son de confianza",
+        "Solicitar autorización para rebajar la clasificación después de evaluar si el contenido cumple los criterios para su distribución externa",
+        "Cifrar el documento y compartirlo externamente sin modificar la etiqueta"
+      ],
+      "respuesta": 2,
+      "explicacion": "La reclasificación debe realizarse mediante el proceso autorizado y después de comprobar que el contenido puede divulgarse externamente."
+    },
+    {
+      "pregunta": "Una organización sanitaria quiere mejorar el proceso de autenticación utilizado para acceder a historiales de pacientes y considera utilizar biometría, como lectores de huellas dactilares. ¿Qué posible inconveniente debería abordar para garantizar una implementación eficaz?",
+      "opciones": [
+        "Altos requisitos de almacenamiento para las plantillas biométricas",
+        "Riesgo de que el usuario olvide la credencial biométrica",
+        "Dificultad para integrar biometría con cifrado",
+        "Eficacia limitada si los datos biométricos se ven comprometidos"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los datos biométricos no pueden cambiarse fácilmente como una contraseña. Si una plantilla biométrica se compromete, su sustitución es limitada, por lo que debe protegerse especialmente."
+    },
+    {
+      "pregunta": "Un empleado utiliza 'Welcome123!' como contraseña porque cumple los requisitos mínimos de la organización, pero una auditoría de seguridad la identifica como débil. ¿Qué debería enfatizar la formación de concienciación para evitar este tipo de contraseñas?",
+      "opciones": [
+        "Evitar palabras de diccionario y utilizar caracteres especiales para crear contraseñas más únicas",
+        "Utilizar contraseñas cortas combinadas con cambios frecuentes",
+        "Utilizar frases comunes fáciles de recordar para evitar tener que escribir las contraseñas",
+        "Compartir las contraseñas únicamente con personal autorizado para garantizar la continuidad en caso de ausencia"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las palabras comunes y patrones previsibles siguen siendo vulnerables aunque incluyan números o símbolos. La formación debe fomentar credenciales menos predecibles y únicas."
+    },
+    {
+      "pregunta": "Durante una auditoría interna se detecta que los empleados hacen clic en correos de phishing, generando posibles brechas. Como profesional de seguridad, debes mejorar su concienciación. ¿Qué acción se alinea mejor con el propósito de la formación de seguridad?",
+      "opciones": [
+        "Implementar filtros de correo más estrictos para reducir los mensajes de phishing",
+        "Enseñar a los empleados mediante sesiones interactivas a reconocer y reportar intentos de phishing",
+        "Obligar a los empleados a cambiar sus contraseñas cada 30 días",
+        "Asignar al personal de IT la supervisión manual del tráfico de correo y el marcado de mensajes sospechosos"
+      ],
+      "respuesta": 1,
+      "explicacion": "La formación de concienciación busca que los usuarios sean capaces de reconocer, evitar y reportar amenazas como el phishing."
+    },
+    {
+      "pregunta": "El plan de recuperación ante desastres de una empresa contempla el uso de hot sites y cold sites para garantizar la continuidad operativa. Tras un incidente grave, el hot site se activa inmediatamente y el cold site se prepara para un uso prolongado. ¿Qué componente clave del plan se está aplicando?",
+      "opciones": [
+        "Estrategia de copia de seguridad de datos",
+        "Disposición de sitios alternativos",
+        "Evaluación de riesgos",
+        "Procedimientos de respuesta a emergencias"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los hot sites y cold sites son instalaciones alternativas utilizadas para recuperar o mantener las operaciones después de una interrupción."
+    },
+    {
+      "pregunta": "El sistema de control de acceso físico de una empresa genera logs de cada intento de entrada y de su resultado, ya sea correcto o fallido. ¿Cuál es la mejor práctica para proteger estos logs frente a acceso no autorizado o manipulación?",
+      "opciones": [
+        "Cifrar los logs y almacenarlos en un dispositivo write-once, read-many (WORM)",
+        "Guardar los logs sin cifrar para facilitar el acceso durante las investigaciones",
+        "Guardar los logs en un servidor de archivos compartido con controles de acceso para personal autorizado",
+        "Realizar periódicamente copias de los logs en discos duros externos desconectados de la red"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado protege la confidencialidad y el almacenamiento WORM impide modificar los registros una vez escritos, reforzando su integridad."
+    },
+    {
+      "pregunta": "Un administrador asigna permisos sobre una carpeta compartida con documentos confidenciales aplicando el principio de mínimo privilegio. Los empleados solo pueden leer archivos. Posteriormente, un empleado solicita acceso de escritura para actualizar información concreta del proyecto. ¿Qué acción se ajusta mejor al mínimo privilegio?",
+      "opciones": [
+        "Conceder al empleado acceso de escritura a todas las carpetas compartidas",
+        "Conceder acceso de escritura únicamente al archivo específico que necesita actualizar",
+        "Asignar al empleado un rol de administrador con acceso sin restricciones",
+        "Mantener exclusivamente el acceso de lectura e indicarle que envíe los cambios a un supervisor"
+      ],
+      "respuesta": 1,
+      "explicacion": "El mínimo privilegio exige conceder únicamente los permisos necesarios para realizar la tarea, limitando el acceso de escritura al recurso concreto requerido."
+    },
+    {
+      "pregunta": "El sistema CCTV de una empresa graba vídeo continuamente, pero dispone de almacenamiento limitado y elimina automáticamente las grabaciones más antiguas para dejar espacio a las nuevas. ¿Cuál es el riesgo más significativo de esta configuración?",
+      "opciones": [
+        "Podría perderse evidencia de incidentes de seguridad debido a la sobrescritura de datos",
+        "Las grabaciones podrían almacenarse a baja resolución y reducir su utilidad",
+        "El sistema podría requerir mantenimiento frecuente para gestionar la capacidad de almacenamiento",
+        "Las cámaras CCTV podrían perder eficacia con el tiempo debido al desgaste"
+      ],
+      "respuesta": 0,
+      "explicacion": "La sobrescritura automática puede eliminar grabaciones importantes antes de que sean revisadas o preservadas como evidencia."
+    },
+    {
+      "pregunta": "Una empresa implementa firmas digitales para garantizar la integridad y autenticidad de documentos empresariales críticos. ¿Cómo se aplica la criptografía asimétrica en este contexto?",
+      "opciones": [
+        "El documento se cifra con la clave pública del destinatario y este lo descifra con su clave privada",
+        "El documento se firma con la clave privada del remitente y el destinatario verifica la firma con la clave pública del remitente",
+        "El documento se cifra con la clave pública del remitente y el destinatario lo descifra con su propia clave privada",
+        "El documento se firma con la clave privada del destinatario y el remitente lo verifica con la clave pública del destinatario"
+      ],
+      "respuesta": 1,
+      "explicacion": "En una firma digital, el firmante utiliza su clave privada y los demás verifican la firma mediante la clave pública correspondiente, proporcionando autenticidad e integridad."
+    },
+    {
+      "pregunta": "Una organización necesita eliminar de forma segura discos duros obsoletos que contienen datos sensibles para impedir su recuperación no autorizada. ¿Qué enfoque logra mejor este objetivo?",
+      "opciones": [
+        "Realizar un formateo rápido de los discos antes de desecharlos",
+        "Destruir físicamente los discos mediante trituración o métodos de degaussing",
+        "Eliminar manualmente todos los archivos y reinstalar el sistema operativo",
+        "Cifrar los discos y desecharlos sin realizar ninguna acción adicional"
+      ],
+      "respuesta": 1,
+      "explicacion": "La destrucción física o el degaussing hacen que los datos almacenados resulten irrecuperables y son métodos adecuados para soportes que van a ser retirados definitivamente."
+    },
+    {
+      "pregunta": "Una empresa introduce un programa de concienciación en seguridad para abordar los riesgos de los ataques de ingeniería social. Para medir su eficacia, envía correos de phishing simulados a los empleados y registra sus respuestas. ¿Cuál es la razón principal de este enfoque?",
+      "opciones": [
+        "Evaluar la capacidad de los empleados para recordar las políticas de la empresa",
+        "Evaluar las configuraciones técnicas de los sistemas de filtrado de correo",
+        "Comprobar la aplicación en situaciones reales de los conocimientos adquiridos durante la formación",
+        "Garantizar el cumplimiento de las regulaciones de ciberseguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las simulaciones permiten medir si los empleados aplican correctamente en situaciones prácticas lo aprendido durante la formación."
+    },
+    {
+      "pregunta": "Un administrador está configurando una red IPv6 y necesita asignar a un servidor una dirección que solo permita comunicación dentro del enlace local. ¿Qué tipo de dirección IPv6 debería utilizar?",
+      "opciones": [
+        "Global Unicast Address",
+        "Link-Local Address",
+        "Unique Local Address",
+        "Multicast Address"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las direcciones Link-Local, normalmente dentro de FE80::/10, permiten comunicación en el enlace local y no son reenviadas por routers hacia otros enlaces."
+    },
+    {
+      "pregunta": "Un ingeniero de redes debe mejorar la fiabilidad de un centro de datos situado en una región con frecuentes cortes eléctricos y tormentas con rayos. ¿Qué control ambiental es el más eficaz para protegerlo frente a estos riesgos?",
+      "opciones": [
+        "Protectores contra sobretensiones y un generador de emergencia",
+        "Pararrayos y sistemas de alimentación ininterrumpida (UPS)",
+        "Acondicionadores de energía y sistemas de refrigeración redundantes",
+        "Sistemas de puesta a tierra y mejoras de HVAC"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los pararrayos ofrecen protección específica frente a descargas atmosféricas y los UPS proporcionan alimentación inmediata durante interrupciones del suministro."
+    },
+    {
+      "pregunta": "Un atacante envía un correo haciéndose pasar por el departamento de RR. HH. de la empresa y pide a los empleados que hagan clic en un enlace para confirmar sus datos personales debido a una actualización de nóminas. ¿Qué elemento de ingeniería social explota y cómo deberían actuar los empleados?",
+      "opciones": [
+        "Explotación de la urgencia; los empleados deben actuar rápidamente ante todas las solicitudes oficiales para evitar penalizaciones",
+        "Explotación de la autoridad; los empleados deben verificar la identidad del remitente antes de actuar",
+        "Explotación de la confianza; los empleados deben evitar cualquier enlace recibido por correo independientemente de la identidad del remitente",
+        "Explotación de la curiosidad; los empleados deben reportar los correos sospechosos a IT antes de actuar"
+      ],
+      "respuesta": 1,
+      "explicacion": "El atacante se hace pasar por un departamento interno con autoridad. Verificar la identidad del remitente antes de responder reduce la eficacia de esta técnica."
+    },
+    {
+      "pregunta": "Una organización despliega una actualización de software en su sistema Customer Relationship Management (CRM). Después de implementarla, los usuarios informan de fallos frecuentes que afectan gravemente a las operaciones. Según la política de gestión de cambios, ¿qué debería haberse hecho para prevenir el problema?",
+      "opciones": [
+        "Revertir inmediatamente los cambios para restaurar la estabilidad",
+        "Realizar pruebas exhaustivas en un entorno de staging antes del despliegue",
+        "Informar a los usuarios finales de la posibilidad de interrupciones durante la actualización",
+        "Aplicar la actualización de forma incremental en distintos departamentos"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las pruebas en un entorno de staging permiten identificar fallos e incompatibilidades antes de introducir los cambios en producción."
+    },
+    {
+      "pregunta": "Una organización diseña su estrategia de seguridad de red según el principio de defense in depth y quiere implementar medidas en múltiples niveles. ¿Qué combinación representa mejor este enfoque?",
+      "opciones": [
+        "Desplegar un firewall, instalar software antivirus y realizar formación de concienciación en seguridad",
+        "Implementar un único Intrusion Detection System (IDS) avanzado",
+        "Utilizar únicamente autenticación multifactor para las cuentas de usuario",
+        "Confiar en software de protección de endpoints y contraseñas robustas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Defense in depth combina controles en distintas capas. Firewall, antivirus y formación cubren respectivamente la red, los endpoints y el factor humano."
+    },
+    {
+      "pregunta": "¿Qué medida de seguridad física es más probable que se utilice junto con un sistema de control de acceso basado en tarjetas identificativas para reducir el riesgo de acceso no autorizado?",
+      "opciones": [
+        "Cámaras CCTV supervisando las entradas",
+        "Guardias de seguridad verificando las tarjetas en la entrada",
+        "Alertas automáticas por correo cuando fallen intentos de acceso",
+        "Sensores de detección de tailgating"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los sensores de tailgating detectan cuando una persona intenta entrar siguiendo a otra que sí se ha autenticado, complementando directamente el control mediante tarjeta."
+    },
+    {
+      "pregunta": "Un administrador de red detecta que algunos empleados utilizan dispositivos no autorizados para conectarse a la red WiFi corporativa. Según el test, ¿qué mecanismo de seguridad debería habilitar?",
+      "opciones": [
+        "Deshabilitar la difusión del SSID",
+        "Habilitar el filtrado por direcciones MAC",
+        "Utilizar una dirección IP estática para cada dispositivo",
+        "Implementar una red WiFi para invitados"
+      ],
+      "respuesta": 1,
+      "explicacion": "El filtrado MAC permite definir qué direcciones MAC están autorizadas a conectarse a la red y es el mecanismo identificado por el test para restringir dispositivos."
+    },
+    {
+      "pregunta": "Una empresa diseña la distribución de un nuevo centro de datos y quiere utilizar diseño ambiental para reforzar la seguridad física. ¿Qué enfoque sería el mejor para disuadir a personal no autorizado de intentar acceder a las instalaciones?",
+      "opciones": [
+        "Instalar vallas altas con señales de advertencia claramente visibles alrededor del perímetro",
+        "Diseñar la entrada con grandes ventanas de cristal para mejorar la visibilidad",
+        "Utilizar un paisajismo mínimo para mantener un aspecto limpio y abierto",
+        "Situar el centro de datos cerca de zonas públicas con mucho tránsito para desalentar las intrusiones"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las vallas altas y las señales visibles proporcionan una barrera física y un efecto disuasorio claro frente a intentos de acceso no autorizado."
+    },
+    {
+      "pregunta": "Un equipo de desarrollo utiliza Platform as a Service (PaaS) para desplegar aplicaciones web. Para proteger datos sensibles de clientes almacenados en la base de datos de la aplicación, ¿quién es principalmente responsable de implementar el cifrado de esa base de datos según el modelo planteado en el test?",
+      "opciones": [
+        "El proveedor PaaS, como parte de la plataforma subyacente",
+        "El equipo de desarrollo, ya que gestiona la aplicación y sus datos",
+        "Tanto el proveedor como el equipo, porque el cifrado es una responsabilidad compartida",
+        "Un consultor externo contratado para revisar las políticas de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "En el modelo descrito, el proveedor gestiona la infraestructura y la plataforma, mientras que el cliente mantiene la responsabilidad sobre la seguridad de su aplicación y sus datos."
+    },
+    {
+      "pregunta": "Una empresa minorista experimenta un fuerte aumento del tráfico online durante las ventas navideñas y utiliza su cloud híbrida para escalar dinámicamente recursos en la cloud pública. ¿Qué debería garantizar para mantener la seguridad durante el escalado?",
+      "opciones": [
+        "Utilizar cifrado para todo el tráfico entre la cloud privada y la pública",
+        "Desplegar direcciones IP estáticas para todos los recursos de la cloud pública",
+        "Permitir acceso sin restricciones a los recursos de la cloud pública para evitar cuellos de botella",
+        "Deshabilitar el logging durante las operaciones de escalado para mejorar el rendimiento"
+      ],
+      "respuesta": 0,
+      "explicacion": "Cifrar las comunicaciones entre los entornos privado y público protege la confidencialidad e integridad de los datos durante las operaciones de escalado."
+    },
+    {
+      "pregunta": "Un administrador configura un dispositivo de seguridad para supervisar todo el tráfico que atraviesa la puerta de enlace principal de la organización. El dispositivo identifica patrones anómalos compatibles con un ataque Distributed Denial-of-Service (DDoS) y genera una alerta. ¿Qué tipo de herramienta se describe?",
+      "opciones": [
+        "Host-based Intrusion Detection System (HIDS)",
+        "Network Intrusion Detection System (NIDS)",
+        "Firewall",
+        "Analizador de paquetes"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un NIDS supervisa tráfico a nivel de red y genera alertas al identificar patrones compatibles con amenazas o intrusiones."
+    },
+    {
+      "pregunta": "Una red empresarial on-premises utiliza un servidor centralizado para almacenar datos sensibles. Para impedir que dispositivos no autorizados de la red interna accedan a ellos, el equipo de seguridad quiere validar los dispositivos y aplicar políticas antes de conceder acceso a la red. ¿Qué solución debería desplegar?",
+      "opciones": [
+        "Network Access Control (NAC)",
+        "Virtual Private Network (VPN)",
+        "Firewall con estado",
+        "Intrusion Prevention System (IPS)"
+      ],
+      "respuesta": 0,
+      "explicacion": "NAC valida dispositivos y puede comprobar su cumplimiento de políticas de seguridad antes de permitirles acceder a la red."
+    },
+    {
+      "pregunta": "Un administrador configura un Intrusion Prevention System (IPS) para supervisar el tráfico entrante en busca de ataques de inyección SQL. Durante una prueba de penetración, el IPS bloquea una consulta maliciosa antes de que llegue al servidor de base de datos. ¿Cuál es la función principal del IPS en este escenario?",
+      "opciones": [
+        "Detectar actividad maliciosa",
+        "Bloquear tráfico malicioso",
+        "Supervisar el rendimiento de la red",
+        "Registrar eventos de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un IPS opera de forma activa y puede impedir que el tráfico identificado como malicioso alcance su destino; en este caso bloquea la inyección SQL."
+    },
+    {
+      "pregunta": "Un administrador de IT identifica un programa sospechoso instalado en el sistema de un usuario después de que este abriera un archivo adjunto de correo que aparentaba ser una factura. El programa creó una puerta trasera para atacantes y deshabilitó el antivirus. ¿Cuál es la mejor clasificación para este malware?",
+      "opciones": ["Virus", "Troyano", "Gusano", "Spyware"],
+      "respuesta": 1,
+      "explicacion": "Un troyano se presenta como contenido legítimo para conseguir que el usuario lo ejecute y posteriormente puede instalar puertas traseras o desactivar controles de seguridad."
+    },
+    {
+      "pregunta": "86. Una organización con un sólido plan de respuesta a incidentes logra contener rápidamente un ataque de ransomware, limitando los daños financieros y operativos. ¿Qué demuestra este escenario sobre la importancia de la respuesta a incidentes?",
+      "opciones": [
+        "Garantiza que la organización pueda evitar por completo las brechas de seguridad.",
+        "Ayuda a la organización a recuperar eficazmente sus capacidades operativas.",
+        "Garantiza la prevención completa de la pérdida de datos en cualquier incidente.",
+        "Elimina la necesidad de contar con un seguro de ciberseguridad."
+      ],
+      "respuesta": 1,
+      "explicacion": "La respuesta a incidentes permite mitigar el impacto de un incidente de seguridad y restaurar las capacidades operativas de forma eficiente, reduciendo las interrupciones y las pérdidas financieras. No garantiza evitar todas las brechas ni toda pérdida de datos, y complementa otras medidas de gestión de riesgos."
+    },
+    {
+      "pregunta": "87. Una organización está implementando segmentación de red para aislar sistemas sensibles que contienen datos financieros de clientes del resto de la red corporativa. ¿Qué enfoque es más eficaz para conseguir este nivel de aislamiento permitiendo al mismo tiempo una comunicación controlada con el resto de la red?",
+      "opciones": [
+        "Desplegar redes físicas separadas para los sistemas sensibles.",
+        "Configurar Virtual LANs (VLANs) con listas de control de acceso (ACLs).",
+        "Implementar traducción de direcciones de red (NAT) para los sistemas sensibles.",
+        "Utilizar una topología de red plana con reglas de firewall reforzadas."
+      ],
+      "respuesta": 1,
+      "explicacion": "Las VLANs permiten separar lógicamente los segmentos de red y las ACLs controlan qué tráfico puede circular entre ellos. Esta combinación proporciona aislamiento granular y comunicación controlada sin el coste y la rigidez de mantener redes físicas completamente separadas."
+    },
+    {
+      "pregunta": "88. Una organización está considerando adoptar una plataforma SaaS para su sistema de RR. HH. El equipo de TI está preocupado por mantener el cumplimiento de las normativas de protección de datos. ¿Qué característica debería priorizar la organización al seleccionar un proveedor SaaS?",
+      "opciones": [
+        "El cumplimiento del proveedor con las certificaciones y estándares pertinentes.",
+        "Compatibilidad integrada con autenticación multifactor (MFA).",
+        "La posibilidad de personalizar la interfaz SaaS con la imagen corporativa interna.",
+        "La integración con la infraestructura de red existente de la organización."
+      ],
+      "respuesta": 0,
+      "explicacion": "El cumplimiento del proveedor con certificaciones y estándares relevantes proporciona garantías de que aplica controles alineados con requisitos legales y sectoriales de protección de datos, como GDPR o HIPAA. MFA mejora la seguridad, pero por sí sola no demuestra cumplimiento normativo."
+    },
+    {
+      "pregunta": "89. Una empresa implementa una VPN site-to-site para conectar dos oficinas geográficamente separadas. Después del despliegue, los usuarios informan de un rendimiento lento de las aplicaciones al acceder a recursos a través de la VPN. ¿Qué factor es el más probable causante del problema?",
+      "opciones": [
+        "Una solidez de cifrado insuficiente.",
+        "Latencia de red y ancho de banda limitado.",
+        "Una configuración incorrecta del cliente VPN.",
+        "Rangos de direcciones IP superpuestos entre las sedes."
+      ],
+      "respuesta": 1,
+      "explicacion": "Las VPN site-to-site dependen de la conectividad subyacente entre las sedes. Una latencia elevada o un ancho de banda insuficiente pueden degradar directamente el rendimiento de las aplicaciones. Los rangos IP superpuestos suelen provocar problemas de encaminamiento o conectividad, no simplemente lentitud."
+    },
+    {
+      "pregunta": "90. La Política de Uso Aceptable (AUP) de una organización permite un uso personal limitado de los recursos de Internet durante el horario laboral. Se observa que un empleado pasa más de una hora diaria en plataformas de redes sociales utilizando la red de la empresa. ¿Cómo debería abordar la organización este comportamiento de acuerdo con la AUP?",
+      "opciones": [
+        "Bloquear todos los sitios web de redes sociales en la red de la empresa.",
+        "Emitir una advertencia formal al empleado y documentar la infracción.",
+        "Supervisar el uso de Internet del empleado durante una semana adicional para confirmar el comportamiento.",
+        "Actualizar la AUP para prohibir todo uso personal de los recursos de Internet durante el horario laboral."
+      ],
+      "respuesta": 1,
+      "explicacion": "Una advertencia formal y documentada permite hacer cumplir la AUP frente a una infracción concreta y ofrece al empleado la oportunidad de corregir su comportamiento. Bloquear las redes sociales para todos o cambiar la política completa sería una medida desproporcionada."
+    },
+    {
+      "pregunta": "91. Un equipo financiero utiliza una aplicación financiera propietaria y el departamento de TI debe configurar los roles de usuario. Existen tres tipos de roles: viewer, editor y admin. Solo los editores deben poder modificar registros financieros, mientras que los administradores pueden gestionar la configuración de la aplicación. Se incorpora un nuevo empleado que necesita modificar registros financieros. ¿Qué configuración aplica mejor el principio de mínimo privilegio?",
+      "opciones": [
+        "Asignar al nuevo empleado el rol de admin.",
+        "Asignar al nuevo empleado el rol de editor.",
+        "Conceder al nuevo empleado los roles de viewer y editor.",
+        "Permitir que el nuevo empleado utilice temporalmente credenciales de admin compartidas."
+      ],
+      "respuesta": 1,
+      "explicacion": "El principio de mínimo privilegio exige conceder únicamente los permisos necesarios para realizar la función requerida. El rol de editor permite modificar registros financieros sin otorgar los privilegios adicionales de administración."
+    },
+    {
+      "pregunta": "92. Una empresa ha implementado NAC para impedir que endpoints comprometidos accedan a la red corporativa. Después del despliegue inicial, TI descubre que los dispositivos se conectan a la red pero eluden las comprobaciones de cumplimiento. ¿Cuál es la causa más probable?",
+      "opciones": [
+        "El sistema NAC está funcionando en modo de monitorización en lugar de modo de aplicación o enforcement.",
+        "La solución NAC no está integrada con los servicios de directorio de la organización.",
+        "Los dispositivos se conectan mediante túneles VPN seguros.",
+        "El sistema NAC está configurado para supervisar únicamente tráfico norte-sur."
+      ],
+      "respuesta": 0,
+      "explicacion": "En modo de monitorización, una solución NAC puede detectar y registrar incumplimientos sin bloquear activamente los dispositivos no conformes. Para impedir su acceso debe operar en modo de enforcement y aplicar las políticas de cumplimiento."
+    },
+    {
+      "pregunta": "93. Una empresa sufre un corte eléctrico en su centro de datos principal durante el horario laboral. El equipo de TI ejecuta el plan de continuidad de negocio y mantiene los servicios críticos operativos activando un sitio secundario. ¿Cuál es el objetivo principal de este esfuerzo de continuidad de negocio?",
+      "opciones": [
+        "Restaurar las operaciones hasta un nivel aceptable predefinido después de una interrupción.",
+        "Reducir la probabilidad de futuras interrupciones mediante medidas proactivas.",
+        "Garantizar que la organización cumpla sus requisitos regulatorios.",
+        "Proteger la reputación de la organización evitando publicidad negativa."
+      ],
+      "respuesta": 0,
+      "explicacion": "La continuidad de negocio busca mantener o restaurar las operaciones críticas a un nivel aceptable tras una interrupción. La activación de un sitio secundario permite minimizar el tiempo de inactividad y preservar los servicios esenciales."
+    },
+    {
+      "pregunta": "94. Una empresa de servicios financieros debe cumplir una normativa que exige conservar los registros de transacciones durante un mínimo de siete años. ¿Qué enfoque debería implementar para cumplir este requisito?",
+      "opciones": [
+        "Almacenar todos los registros de transacciones indefinidamente para garantizar que no se pierda ninguno.",
+        "Utilizar una política automatizada de retención de datos que archive de forma segura los registros durante siete años y los elimine posteriormente.",
+        "Cifrar los registros y eliminarlos cuando dejen de utilizarse activamente en el negocio.",
+        "Almacenar los registros en un servidor local sin cifrado para facilitar un acceso y una administración más rápidos."
+      ],
+      "respuesta": 1,
+      "explicacion": "Una política automatizada de retención permite conservar los registros de forma segura durante el periodo exigido y eliminarlos posteriormente conforme a la política. Esto facilita el cumplimiento y evita tanto la eliminación prematura como una retención indefinida innecesaria."
+    },
+    {
+      "pregunta": "95. Se solicita a un responsable de marketing que facilite sus credenciales a un proveedor externo para un proyecto que utiliza software de terceros. La Política de Uso Aceptable (AUP) de la organización prohíbe compartir credenciales bajo cualquier circunstancia. ¿Cómo debería proceder para cumplir la AUP?",
+      "opciones": [
+        "Compartir sus credenciales con el proveedor y cambiar posteriormente la contraseña.",
+        "Solicitar al departamento de TI una excepción temporal a la AUP.",
+        "Crear una cuenta separada para el proveedor con permisos limitados.",
+        "Negarse a proporcionar las credenciales y escalar la solicitud al departamento de TI."
+      ],
+      "respuesta": 3,
+      "explicacion": "Debe negarse a compartir las credenciales y trasladar la solicitud a TI. De este modo se respeta la AUP y TI puede proporcionar un mecanismo de acceso autorizado y seguro, como una cuenta específica para terceros con permisos apropiados."
+    },
+    {
+      "pregunta": "96. Una empresa de servicios financieros procesa datos de clientes mediante varios equipos. ¿Cuál es la forma más eficaz de garantizar que cada equipo acceda únicamente a los datos necesarios para realizar sus tareas?",
+      "opciones": [
+        "Implementar controles de acceso basados en el principio de mínimo privilegio y en acceso basado en roles.",
+        "Permitir acceso sin restricciones a todos los datos de clientes para facilitar la colaboración entre equipos.",
+        "Cifrar todos los datos de clientes y proporcionar las claves de descifrado a todos los miembros de los equipos.",
+        "Asignar a un único administrador el control de acceso a todos los datos de clientes sin delegar permisos."
+      ],
+      "respuesta": 0,
+      "explicacion": "El mínimo privilegio combinado con control de acceso basado en roles permite que cada equipo acceda exclusivamente a los datos necesarios para sus responsabilidades. Esto reduce la exposición innecesaria de información y limita el impacto de posibles abusos o compromisos."
+    },
+    {
+      "pregunta": "97. Una instalación utiliza CCTV para supervisar su aparcamiento y una de las cámaras ha sufrido problemas técnicos, por lo que sus grabaciones no han estado disponibles durante varios días. ¿Cuál sería la forma más eficaz de evitar que este problema afecte a las operaciones de seguridad en el futuro?",
+      "opciones": [
+        "Configurar alertas automatizadas para notificar al personal cuando una cámara quede fuera de servicio.",
+        "Esperar a reparar la cámara durante el siguiente mantenimiento programado.",
+        "Desactivar la cámara cuando presente problemas técnicos para evitar confusiones.",
+        "Eliminar completamente la cámara del sistema de vigilancia."
+      ],
+      "respuesta": 0,
+      "explicacion": "Las alertas automatizadas permiten detectar inmediatamente que una cámara ha quedado fuera de servicio y posibilitan una respuesta rápida. Esto reduce el tiempo durante el que una zona puede permanecer sin supervisión."
+    },
+    {
+      "pregunta": "98. Una organización sanitaria sigue un plan de recuperación ante desastres que incluye un cold site. Después de que un desastre natural dañe su centro de datos principal, la organización comienza a instalar los sistemas en el cold site para reanudar las operaciones. ¿Qué ilustra este escenario sobre el propósito de la recuperación ante desastres?",
+      "opciones": [
+        "Facilita una conmutación inmediata a un sitio secundario completamente operativo.",
+        "Garantiza la detección rápida de vulnerabilidades de los sistemas después del desastre.",
+        "Proporciona un enfoque estructurado para restaurar las operaciones críticas.",
+        "Minimiza las pérdidas financieras a largo plazo causadas por las interrupciones."
+      ],
+      "respuesta": 2,
+      "explicacion": "La recuperación ante desastres proporciona procedimientos estructurados para restaurar sistemas y operaciones críticas después de una interrupción. Un cold site requiere instalar y configurar sistemas antes de operar, por lo que no ofrece la conmutación inmediata propia de un hot site."
+    },
+    {
+      "pregunta": "99. Una organización realiza anualmente pruebas de su plan de continuidad de negocio para comprobar su preparación ante posibles desastres. La prueba identifica deficiencias que podrían retrasar la reanudación de las operaciones críticas y el plan se actualiza posteriormente. ¿Qué demuestra esta actividad sobre la importancia de la continuidad de negocio?",
+      "opciones": [
+        "Ayuda a mejorar la capacidad de la organización para prevenir desastres.",
+        "Garantiza el cumplimiento continuo de los requisitos regulatorios.",
+        "Refuerza la capacidad de la organización para recuperarse rápidamente de las interrupciones.",
+        "Reduce el coste de implementar estrategias de resiliencia."
+      ],
+      "respuesta": 2,
+      "explicacion": "Las pruebas periódicas permiten detectar deficiencias y mejorar el plan antes de una interrupción real. Esto refuerza la preparación y la capacidad de restaurar rápidamente las operaciones críticas cuando se produzca un incidente."
+    },
+    {
+      "pregunta": "100. Una empresa está implementando un nuevo programa de ciberseguridad y necesita priorizar sus riesgos. El proceso de gestión de riesgos incluye identificar, evaluar, tratar y monitorizar los riesgos. ¿Cuál de las siguientes opciones describe mejor el propósito de la fase de evaluación o assessment de la gestión de riesgos?",
+      "opciones": [
+        "Evaluar la relación coste-eficacia de las opciones de tratamiento de riesgos.",
+        "Determinar el impacto potencial y la probabilidad de los riesgos identificados.",
+        "Crear la política de gestión de riesgos de la organización.",
+        "Ejecutar los planes de tratamiento de riesgos en toda la organización."
+      ],
+      "respuesta": 1,
+      "explicacion": "La fase de evaluación determina la probabilidad de que se materialice cada riesgo y el impacto que tendría sobre la organización. Estos factores permiten estimar su nivel de riesgo y priorizarlo antes de seleccionar y ejecutar medidas de tratamiento."
+    }
+  ]
+}
