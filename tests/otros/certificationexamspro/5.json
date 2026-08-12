@@ -1,0 +1,101 @@
+{
+  "titulo": "Batería de seguridad de la información y seguridad cloud #5",
+  "procedencia": "Test proporcionado por el usuario",
+  "descripcion": "Cuestionario sobre controles de seguridad, recuperación ante desastres, seguridad cloud, protección frente a amenazas, ética profesional y control de acceso.",
+  "preguntas": [
+    {
+      "pregunta": "Durante la etapa de análisis de una respuesta a incidentes, ¿cuál es el objetivo principal de realizar un examen forense?",
+      "opciones": [
+        "Contener las amenazas activas utilizando la telemetría de Cloud Logging y Security Command Center",
+        "Registrar las lecciones aprendidas tras el incidente y crear un plan de respuesta a incidentes revisado",
+        "Preservar y recopilar datos probatorios manteniendo una cadena de custodia documentada para posibles acciones legales",
+        "Atribuir la intrusión a un actor de amenazas y determinar sus motivaciones"
+      ],
+      "respuesta": 2,
+      "explicacion": "El análisis forense busca preservar y recopilar evidencias de manera íntegra y documentada, manteniendo la cadena de custodia para que puedan utilizarse en investigaciones o procedimientos legales."
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de un control de acceso detectivo en un escenario de seguridad de un campus corporativo?",
+      "opciones": [
+        "Un firewall que bloquea tráfico no autorizado y evita intrusiones de red",
+        "Un conserje en el vestíbulo que verifica las identificaciones de los visitantes antes de permitir el acceso",
+        "Autenticación de dos factores requerida al iniciar sesión",
+        "Una alarma con detector de movimiento que avisa al personal de seguridad de una posible intrusión"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un control detectivo identifica o alerta sobre un evento de seguridad que está ocurriendo o ya ha ocurrido. Una alarma por movimiento detecta una posible intrusión y notifica al personal de seguridad."
+    },
+    {
+      "pregunta": "Una agencia sanitaria provincial utiliza etiquetas como Público, Restringido, Confidencial y Altamente Confidencial para sus registros y solicita al personal que asigne la etiqueta correcta al almacenar información en sus sistemas. ¿Qué criterio principal se utiliza para decidir cómo se etiqueta un registro?",
+      "opciones": ["Jurisdicción", "Propiedad", "Criticidad", "Sensibilidad"],
+      "respuesta": 3,
+      "explicacion": "Las categorías como Público, Restringido o Confidencial representan principalmente el nivel de sensibilidad de la información y el grado de protección que requiere."
+    },
+    {
+      "pregunta": "¿Qué define a un hipervisor de Tipo 1 en relación con el hardware físico?",
+      "opciones": [
+        "Un hipervisor alojado que se ejecuta sobre un sistema operativo anfitrión",
+        "Un hipervisor bare metal que se ejecuta directamente sobre el hardware físico",
+        "Un runtime de contenedores que utiliza el kernel del sistema anfitrión para aislar aplicaciones"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un hipervisor de Tipo 1, también denominado bare metal, se ejecuta directamente sobre el hardware físico sin necesitar un sistema operativo anfitrión."
+    },
+    {
+      "pregunta": "¿Por qué publica el CyberTrust Consortium un Código de Ética profesional para los profesionales de seguridad?",
+      "opciones": [
+        "Google Cloud Identity and Access Management",
+        "Ofrecer orientación para resolver conflictos de interés",
+        "Hacer cumplir leyes y regulaciones",
+        "Definir estándares profesionales de conducta para los profesionales de seguridad de la información"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un código de ética profesional establece los principios y estándares de conducta que deben seguir los profesionales de seguridad de la información en el ejercicio de sus funciones."
+    },
+    {
+      "pregunta": "¿Qué método agrupa registros similares mediante etiquetas coherentes para que puedan encontrarse y compararse rápidamente más adelante?",
+      "opciones": ["Hashing", "Etiquetado", "Metadatos", "Indexación"],
+      "respuesta": 1,
+      "explicacion": "El etiquetado asigna identificadores o categorías coherentes a registros relacionados, facilitando posteriormente su búsqueda, agrupación y comparación."
+    },
+    {
+      "pregunta": "¿Qué protocolo de cifrado de transporte proporciona la seguridad más sólida con la menor latencia para conexiones de clientes en una nube compartida?",
+      "opciones": ["TLS 1.2", "TLS 1.3", "SSL 3.0"],
+      "respuesta": 1,
+      "explicacion": "TLS 1.3 elimina algoritmos criptográficos obsoletos y reduce el número de intercambios necesarios durante el establecimiento de la conexión, ofreciendo mayor seguridad y menor latencia que TLS 1.2 y SSL 3.0."
+    },
+    {
+      "pregunta": "Una startup de streaming está convirtiendo su aplicación monolítica en microservicios contenerizados en la nube. ¿Cuál es el principal beneficio que proporcionará este cambio de arquitectura?",
+      "opciones": [
+        "Anthos",
+        "Escalado independiente y mayor flexibilidad operativa",
+        "Mayor rendimiento de red",
+        "Gestión centralizada de servicios"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los microservicios pueden desplegarse, actualizarse y escalarse de forma independiente, lo que proporciona mayor flexibilidad operativa que una arquitectura monolítica."
+    },
+    {
+      "pregunta": "Un ingeniero de fiabilidad de sitios de una startup de pagos de tamaño medio dejó referencias de configuración del host dentro de archivos de código fuente. Un atacante localizó esas entradas de configuración en el repositorio y las utilizó para eludir la validación adecuada y obtener acceso a la aplicación. ¿Qué tipo de vulnerabilidad es esta?",
+      "opciones": [
+        "Server-Side Request Forgery",
+        "Cross-Site Scripting",
+        "Referencia a entidad externa XML",
+        "Broken Access Control"
+      ],
+      "respuesta": 2,
+      "explicacion": "Según la respuesta identificada en el test original, se trata de una vulnerabilidad XML External Entity (XXE), relacionada con el procesamiento inseguro de referencias o entidades externas en contenido XML."
+    },
+    {
+      "pregunta": "¿Cómo funciona la protección persistente en una herramienta de gestión de derechos sobre los datos?",
+      "opciones": [
+        "El cifrado únicamente en reposo no proporciona protección persistente",
+        "La protección queda vinculada al archivo, de modo que los datos permanecen seguros independientemente de dónde se trasladen",
+        "Los derechos de acceso pueden modificarse después de compartir un documento",
+        "Pueden asociarse a los archivos controles de acceso con límite de tiempo o fecha de expiración"
+      ],
+      "respuesta": 1,
+      "explicacion": "La protección persistente acompaña al propio archivo o dato, manteniendo las restricciones de seguridad incluso cuando este se copia, comparte o traslada a otra ubicación."
+    }
+  ]
+}
