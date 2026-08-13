@@ -413,7 +413,7 @@
 
       .test-topbar {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-columns: 1fr;
         gap: 22px;
         align-items: start;
         border: 1px solid #d8e0e8;
@@ -428,7 +428,7 @@
       .test-heading {
         display: grid;
         gap: 10px;
-        max-width: 660px;
+        max-width: 760px;
       }
 
       .test-kicker {
@@ -453,7 +453,7 @@
       .test-selector {
         display: grid;
         gap: 12px;
-        justify-items: end;
+        justify-items: stretch;
         align-self: stretch;
       }
 
@@ -466,13 +466,8 @@
         text-transform: uppercase;
       }
 
-      .battery-picker-wrap {
-        position: relative;
-        width: min(400px, 100%);
-      }
-
       .test-domain-select {
-        width: min(400px, 100%);
+        width: min(520px, 100%);
         min-height: 46px;
         border: 1px solid #acc0cb;
         border-radius: 8px;
@@ -488,298 +483,113 @@
         outline: 3px solid rgba(23, 107, 135, 0.16);
       }
 
-      .battery-picker-trigger {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 14px;
-        width: 100%;
-        min-height: 52px;
-        border: 1px solid #acc0cb;
-        border-radius: 8px;
-        background: linear-gradient(180deg, #ffffff 0%, #f9fcfe 100%);
-        color: var(--text);
-        cursor: pointer;
-        font-weight: 700;
-        padding: 0 18px;
-        text-align: left;
-        box-shadow: 0 10px 24px rgba(23, 107, 135, 0.08);
-      }
-
-      .battery-picker-trigger:hover,
-      .battery-picker-trigger:focus-visible {
-        border-color: var(--accent);
-        box-shadow: 0 14px 28px rgba(23, 107, 135, 0.12);
-        outline: none;
-      }
-
-      .battery-picker-summary {
-        min-width: 0;
-      }
-
-      .battery-picker-caption {
-        display: block;
-        color: var(--muted);
-        font-size: 0.72rem;
-        font-weight: 800;
-        text-transform: uppercase;
-      }
-
-      .battery-picker-value {
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .battery-picker-chevron {
-        flex: 0 0 auto;
-        color: var(--accent-strong);
-        font-size: 1rem;
-      }
-
-      .battery-picker-popover {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: calc(100% + 10px);
-        z-index: 20;
-        width: min(520px, 90vw);
-        border: 1px solid #c8d4dc;
-        border-radius: 8px;
-        background: #ffffff;
-        box-shadow: 0 30px 70px rgba(20, 44, 66, 0.18);
-        padding: 16px;
-      }
-
-      .battery-picker-popover.open {
-        display: grid;
-        gap: 12px;
-      }
-
-      .battery-picker-head {
-        display: grid;
-        gap: 10px;
-      }
-
-      .battery-picker-headline {
-        color: var(--text);
-        font-size: 0.95rem;
-        font-weight: 800;
-      }
-
-      .battery-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .battery-origin-controls {
+      .origin-picker {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
+        width: min(520px, 100%);
       }
 
-      .battery-origin-card {
+      .origin-toggle {
         display: grid;
-        gap: 10px;
-        border: 1px solid #dbe5ec;
-        border-radius: 8px;
-        background: #f8fbfd;
-        padding: 12px;
-      }
-
-      .battery-origin-title {
-        display: block;
-        margin: 0;
-        color: var(--text);
-        font-size: 0.92rem;
-        font-weight: 800;
-      }
-
-      .battery-origin-meta {
-        display: block;
-        margin: 3px 0 0;
-        color: var(--muted);
-        font-size: 0.82rem;
-        line-height: 1.35;
-      }
-
-      .battery-origin-actions,
-      .battery-origin-summary-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .battery-toggle {
-        min-height: 34px;
-        border: 1px solid #c0cdd7;
-        border-radius: 999px;
-        background: #ffffff;
-        color: var(--accent-strong);
-        cursor: pointer;
-        font-size: 0.84rem;
-        font-weight: 800;
-        padding: 0 14px;
-      }
-
-      .battery-toggle:hover,
-      .battery-toggle:focus-visible {
-        border-color: var(--accent);
-        outline: none;
-      }
-
-      .battery-picker {
-        display: grid;
-        gap: 12px;
-        max-height: 360px;
-        overflow-y: auto;
-        border: 1px solid #e1e7ed;
-        border-radius: 8px;
-        background: #f8fbfd;
-        padding: 10px;
-      }
-
-      .battery-origin-section {
-        border: 1px solid #dbe5ec;
-        border-radius: 8px;
-        background: #ffffff;
-      }
-
-      .battery-origin-summary {
-        display: flex;
+        grid-template-columns: auto minmax(0, 1fr) auto;
         gap: 12px;
         align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        list-style: none;
-        padding: 12px;
-      }
-
-      .battery-origin-summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .battery-origin-summary::before {
-        content: "▸";
-        color: var(--accent-strong);
-        font-size: 0.9rem;
-        font-weight: 800;
-      }
-
-      .battery-origin-section[open] .battery-origin-summary::before {
-        content: "▾";
-      }
-
-      .battery-origin-summary > span:first-child {
-        min-width: 0;
-        flex: 1 1 auto;
-      }
-
-      .battery-origin-groups {
-        display: grid;
-        gap: 10px;
-        border-top: 1px solid #e3e9ef;
-        background: #f8fbfd;
-        padding: 10px;
-      }
-
-      .battery-group {
-        display: grid;
-        gap: 10px;
-        border: 1px solid #dbe5ec;
+        min-height: 74px;
+        border: 1px solid #c9d6df;
         border-radius: 8px;
         background: #ffffff;
-        padding: 12px;
-      }
-
-      .battery-group-header {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: start;
-        justify-content: space-between;
-      }
-
-      .battery-group-title {
-        margin: 0;
         color: var(--text);
-        font-size: 0.92rem;
-        font-weight: 800;
-      }
-
-      .battery-group-meta {
-        margin: 3px 0 0;
-        color: var(--muted);
-        font-size: 0.82rem;
-      }
-
-      .battery-group-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .battery-group-toggle {
-        min-height: 30px;
-        border: 1px solid #c7d3db;
-        border-radius: 999px;
-        background: #f7fafc;
-        color: var(--accent-strong);
         cursor: pointer;
-        font-size: 0.78rem;
-        font-weight: 800;
-        padding: 0 10px;
-      }
-
-      .battery-group-toggle:hover,
-      .battery-group-toggle:focus-visible {
-        border-color: var(--accent);
-        background: #ffffff;
-        outline: none;
-      }
-
-      .battery-group-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-      }
-
-      .battery-option {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        gap: 12px;
-        align-items: start;
-        border: 1px solid #dde5ec;
-        border-radius: 8px;
-        background: #ffffff;
         padding: 12px;
-        transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+        text-transform: none;
+        transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
       }
 
-      .battery-option:hover {
-        border-color: #96b8c8;
-        box-shadow: 0 10px 20px rgba(23, 107, 135, 0.08);
+      .origin-toggle:hover {
+        border-color: var(--accent);
+        box-shadow: 0 12px 24px rgba(23, 107, 135, 0.1);
         transform: translateY(-1px);
       }
 
-      .battery-option input {
-        margin-top: 4px;
+      .origin-toggle.active {
+        border-color: var(--accent);
+        background: linear-gradient(180deg, #eef8fb 0%, #ffffff 100%);
       }
 
-      .battery-option-title {
-        display: block;
-        overflow-wrap: anywhere;
+      .origin-toggle input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .origin-toggle-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #c4d5df;
+        border-radius: 8px;
+        background: #f3f8fb;
+        color: var(--accent-strong);
+        font-size: 1.15rem;
         font-weight: 800;
+        line-height: 1;
       }
 
-      .battery-option-meta {
+      .origin-toggle-copy {
+        min-width: 0;
+      }
+
+      .origin-toggle-title {
+        display: block;
+        color: var(--text);
+        font-size: 0.94rem;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .origin-toggle-meta {
         display: block;
         color: var(--muted);
-        font-size: 0.9rem;
+        font-size: 0.82rem;
+        font-weight: 700;
         line-height: 1.35;
         margin-top: 3px;
+      }
+
+      .origin-toggle-check {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        border: 1px solid #b7c8d2;
+        border-radius: 999px;
+        background: #ffffff;
+      }
+
+      .origin-toggle-check::after {
+        content: "";
+        display: none;
+        width: 10px;
+        height: 10px;
+        border-radius: inherit;
+        background: var(--accent);
+      }
+
+      .origin-toggle.active .origin-toggle-check::after {
+        display: block;
+      }
+
+      .origin-toggle:focus-within {
+        border-color: var(--accent);
+        outline: 3px solid rgba(23, 107, 135, 0.16);
+      }
+
+      .hidden-battery-picker {
+        display: none;
       }
 
       .test-dashboard {
@@ -1189,20 +999,13 @@
           justify-items: stretch;
         }
 
-        .battery-picker-wrap {
-          width: 100%;
-        }
-
         .test-domain-select {
           width: 100%;
         }
 
-        .battery-origin-controls {
-          grid-template-columns: 1fr;
-        }
-
-        .battery-group-list {
-          grid-template-columns: 1fr;
+        .origin-picker {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          width: 100%;
         }
 
         .test-dashboard {
@@ -1246,6 +1049,11 @@
           gap: 8px;
           margin: -12px -12px 12px;
           padding: 10px 12px;
+        }
+
+        #epubButton,
+        #printButton {
+          display: none;
         }
 
         .search {
@@ -1329,27 +1137,12 @@
           line-height: 1.05;
         }
 
-        .battery-picker-trigger {
-          min-height: 48px;
-          padding: 0 12px;
+        .origin-picker {
+          grid-template-columns: 1fr;
         }
 
-        .battery-picker-popover {
-          position: fixed;
-          top: 112px;
-          right: 12px;
-          left: 12px;
-          width: auto;
-          max-height: calc(100vh - 136px);
-          overflow-y: auto;
-        }
-
-        .battery-origin-summary {
-          align-items: start;
-        }
-
-        .battery-origin-summary-actions {
-          flex: 0 0 100%;
+        .origin-toggle {
+          min-height: 66px;
         }
 
         .test-progress {
@@ -1358,12 +1151,6 @@
 
         .test-dashboard {
           grid-template-columns: 1fr;
-        }
-
-        .battery-picker-popover {
-          left: 12px;
-          right: 12px;
-          width: auto;
         }
 
         .option-item {

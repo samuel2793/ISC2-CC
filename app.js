@@ -186,6 +186,7 @@ let activeLessons = [];
 let testBatteries = [];
 let currentTestRun = null;
 let testPopoverOutsideHandler = null;
+let testDomainResizeHandler = null;
 const textEncoder = new TextEncoder();
 const baseUrl = new URL(".", document.baseURI);
 const OFFICIAL_PASSING_SCORE = 700;
@@ -197,9 +198,16 @@ const TEST_ORIGIN_LABELS = {
   github: "GitHub",
   otros: "Otros"
 };
+const TEST_ORIGIN_ICONS = {
+  oficial: "🛡️",
+  udemy: "🎓",
+  github: "⌘",
+  otros: "⋯"
+};
 const TEST_DOMAIN_OPTIONS = DOMAINS.map((domain, index) => ({
   id: domain.id,
   number: index + 1,
+  shortLabel: domain.number,
   label: `${domain.number}: ${domain.title}`
 }));
 
@@ -736,19 +744,15 @@ function renderTestHome(errorMessage = "") {
       origins.set(originId, {
         id: originId,
         title: TEST_ORIGIN_LABELS[originId] || originId,
+        icon: TEST_ORIGIN_ICONS[originId] || TEST_ORIGIN_ICONS.otros,
         items: [],
-        questions: 0,
-        groups: new Map()
+        questions: 0
       });
     }
 
     const origin = origins.get(originId);
-    const groupId = battery.grupo?.id || `${originId}-sin-grupo`;
-    const groupTitle = battery.grupo?.titulo || "Sin grupo";
     origin.items.push({ battery, index });
     origin.questions += battery.preguntas.length;
-    if (!origin.groups.has(groupId)) origin.groups.set(groupId, { title: groupTitle, items: [] });
-    origin.groups.get(groupId).items.push({ battery, index });
     return origins;
   }, new Map());
   const orderedOrigins = [
@@ -756,60 +760,21 @@ function renderTestHome(errorMessage = "") {
     ...[...groupedByOrigin.values()].filter((origin) => !TEST_ORIGIN_ORDER.includes(origin.id))
   ];
   const originControls = orderedOrigins.map((origin) => `
-    <section class="battery-origin-card" data-origin="${escapeHtml(origin.id)}">
-      <div>
-        <p class="battery-origin-title">${escapeHtml(origin.title)}</p>
-        <p class="battery-origin-meta">
-          <span data-origin-selected="${escapeHtml(origin.id)}">${origin.items.length}</span>/${origin.items.length} baterias · ${origin.questions} preguntas
-        </p>
-      </div>
-      <div class="battery-origin-actions">
-        <button class="battery-group-toggle" type="button" data-origin-action="select" data-origin-id="${escapeHtml(origin.id)}">Todo</button>
-        <button class="battery-group-toggle" type="button" data-origin-action="clear" data-origin-id="${escapeHtml(origin.id)}">Nada</button>
-      </div>
-    </section>
+    <label class="origin-toggle" data-origin="${escapeHtml(origin.id)}">
+      <input type="checkbox" name="testOriginOption" value="${escapeHtml(origin.id)}" checked>
+      <span class="origin-toggle-icon" aria-hidden="true">${escapeHtml(origin.icon)}</span>
+      <span class="origin-toggle-copy">
+        <span class="origin-toggle-title">${escapeHtml(origin.title)}</span>
+        <span class="origin-toggle-meta">${origin.items.length} baterias · ${origin.questions} preguntas</span>
+      </span>
+      <span class="origin-toggle-check" aria-hidden="true"></span>
+    </label>
   `).join("");
-  const options = orderedOrigins.map((origin, originIndex) => `
-    <details class="battery-origin-section" data-origin="${escapeHtml(origin.id)}" ${originIndex === 0 ? "open" : ""}>
-      <summary class="battery-origin-summary">
-        <span>
-          <span class="battery-origin-title">${escapeHtml(origin.title)}</span>
-          <span class="battery-origin-meta">${origin.items.length} baterias · ${origin.questions} preguntas</span>
-        </span>
-        <span class="battery-origin-summary-actions">
-          <button class="battery-group-toggle" type="button" data-origin-action="select" data-origin-id="${escapeHtml(origin.id)}">Marcar origen</button>
-          <button class="battery-group-toggle" type="button" data-origin-action="clear" data-origin-id="${escapeHtml(origin.id)}">Desmarcar origen</button>
-        </span>
-      </summary>
-      <div class="battery-origin-groups">
-        ${[...origin.groups.entries()].map(([groupId, group]) => `
-          <section class="battery-group" data-group="${escapeHtml(groupId)}">
-            <div class="battery-group-header">
-              <div>
-                <p class="battery-group-title">${escapeHtml(group.title)}</p>
-                <p class="battery-group-meta">${group.items.length} baterias</p>
-              </div>
-              <div class="battery-group-actions">
-                <button class="battery-group-toggle" type="button" data-group-action="select" data-group-id="${escapeHtml(groupId)}">Marcar grupo</button>
-                <button class="battery-group-toggle" type="button" data-group-action="clear" data-group-id="${escapeHtml(groupId)}">Desmarcar grupo</button>
-              </div>
-            </div>
-            <div class="battery-group-list">
-              ${group.items.map(({ battery, index }) => `
-                <label class="battery-option">
-                  <input type="checkbox" name="testBatteryOption" value="${index}" checked data-origin-id="${escapeHtml(origin.id)}" data-group-id="${escapeHtml(groupId)}">
-                  <span>
-                    <span class="battery-option-title">${escapeHtml(battery.titulo)}</span>
-                    <span class="battery-option-meta">${battery.preguntas.length} preguntas</span>
-                  </span>
-                </label>
-              `).join("")}
-            </div>
-          </section>
-        `).join("")}
-      </div>
-    </details>
-  `).join("");
+  const hiddenBatteryInputs = orderedOrigins.flatMap((origin) => (
+    origin.items.map(({ index }) => (
+      `<input type="checkbox" name="testBatteryOption" value="${index}" checked hidden data-origin-id="${escapeHtml(origin.id)}">`
+    ))
+  )).join("");
 
   content.innerHTML = `
     <div class="test-panel">
@@ -825,41 +790,15 @@ function renderTestHome(errorMessage = "") {
             <label class="field-label">
               Dominio
               <select id="testDomainFilter" class="test-domain-select">
-                <option value="">Todos los dominios</option>
-                ${TEST_DOMAIN_OPTIONS.map((domain) => `
-                  <option value="${domain.id}">${escapeHtml(domain.label)}</option>
-                `).join("")}
               </select>
             </label>
 
             <label class="field-label">
-              Baterias activas
-              <div class="battery-picker-wrap">
-                <button id="testBatteryTrigger" class="battery-picker-trigger" type="button" aria-haspopup="dialog" aria-expanded="false">
-                  <span class="battery-picker-summary">
-                    <span class="battery-picker-caption">Seleccion actual</span>
-                    <span id="testBatteryTriggerValue" class="battery-picker-value">Todas las baterias</span>
-                  </span>
-                  <span class="battery-picker-chevron">▾</span>
-                </button>
-
-                <div id="testBatteryPopover" class="battery-picker-popover" role="dialog" aria-label="Seleccion de baterias">
-                  <div class="battery-picker-head">
-                    <span class="battery-picker-headline">Selecciona las baterias a combinar</span>
-                    <p class="test-meta">Puedes mezclar varias fuentes en una sola sesion. Las preguntas se barajan al iniciar.</p>
-                    <div class="battery-origin-controls">
-                      ${originControls || '<p class="test-meta">No hay origenes cargados.</p>'}
-                    </div>
-                    <div class="battery-actions">
-                      <button id="selectAllBatteriesButton" class="battery-toggle" type="button">Marcar todas</button>
-                      <button id="clearAllBatteriesButton" class="battery-toggle" type="button">Desmarcar todas</button>
-                    </div>
-                  </div>
-                  <div id="testBatteryPicker" class="battery-picker">
-                    ${options || '<p class="test-meta">No hay baterias cargadas.</p>'}
-                  </div>
-                </div>
+              Origenes activos
+              <div id="testOriginPicker" class="origin-picker">
+                ${originControls || '<p class="test-meta">No hay origenes cargados.</p>'}
               </div>
+              <div id="testBatteryPicker" class="hidden-battery-picker" aria-hidden="true">${hiddenBatteryInputs}</div>
             </label>
           </div>
         </section>
@@ -892,111 +831,84 @@ function renderTestHome(errorMessage = "") {
     </div>
   `;
 
-  const picker = document.querySelector("#testBatteryPicker");
-  const trigger = document.querySelector("#testBatteryTrigger");
-  const triggerValue = document.querySelector("#testBatteryTriggerValue");
-  const popover = document.querySelector("#testBatteryPopover");
-  const selectAllButton = document.querySelector("#selectAllBatteriesButton");
-  const clearAllButton = document.querySelector("#clearAllBatteriesButton");
+  const originPicker = document.querySelector("#testOriginPicker");
   const domainFilter = document.querySelector("#testDomainFilter");
 
   if (testPopoverOutsideHandler) {
     document.removeEventListener("click", testPopoverOutsideHandler);
     testPopoverOutsideHandler = null;
   }
-
-  function updateTriggerLabel() {
-    const selected = selectedBatteries();
-    if (!triggerValue) return;
-    updateOriginCounts();
-    if (!selected.length) {
-      triggerValue.textContent = "Ninguna bateria";
-      return;
-    }
-    if (selected.length === testBatteries.length) {
-      triggerValue.textContent = `Todas las baterias (${selected.length})`;
-      return;
-    }
-    if (selected.length === 1) {
-      triggerValue.textContent = selected[0].titulo;
-      return;
-    }
-    const selectedOrigins = TEST_ORIGIN_ORDER
-      .filter((origin) => selected.some((battery) => battery.origen === origin))
-      .map((origin) => TEST_ORIGIN_LABELS[origin]);
-    triggerValue.textContent = selectedOrigins.length
-      ? `${selected.length} baterias: ${selectedOrigins.join(", ")}`
-      : `${selected.length} baterias seleccionadas`;
+  if (testDomainResizeHandler) {
+    window.removeEventListener("resize", testDomainResizeHandler);
+    testDomainResizeHandler = null;
   }
 
-  function updateOriginCounts() {
-    orderedOrigins.forEach((origin) => {
-      const selectedInOrigin = batteryInputs().filter((input) => input.dataset.originId === origin.id && input.checked).length;
-      document.querySelectorAll(`[data-origin-selected="${origin.id}"]`).forEach((item) => {
-        item.textContent = selectedInOrigin;
+  function originInputs() {
+    return [...document.querySelectorAll('input[name="testOriginOption"]')];
+  }
+
+  function syncBatterySelectionsFromOrigins() {
+    const selectedOrigins = new Set(originInputs().filter((input) => input.checked).map((input) => input.value));
+    batteryInputs().forEach((input) => {
+      input.checked = selectedOrigins.has(input.dataset.originId);
+    });
+  }
+
+  function selectedDomainCounts() {
+    const selected = selectedBatteries();
+    const counts = TEST_DOMAIN_OPTIONS.reduce((acc, domain) => {
+      acc[domain.id] = 0;
+      return acc;
+    }, {});
+
+    selected.forEach((battery) => {
+      battery.preguntas.forEach((question) => {
+        if (counts[question.dominio] !== undefined) counts[question.dominio] += 1;
       });
     });
+
+    return counts;
   }
 
-  function closePopover() {
-    popover?.classList.remove("open");
-    trigger?.setAttribute("aria-expanded", "false");
+  function updateDomainOptions() {
+    if (!domainFilter) return;
+
+    const selectedValue = selectedTestDomain();
+    const counts = selectedDomainCounts();
+    const totalSelectedQuestions = Object.values(counts).reduce((sum, count) => sum + count, 0);
+    const useCompactLabels = window.matchMedia("(max-width: 560px)").matches;
+
+    domainFilter.innerHTML = `
+      <option value="">Todos los dominios (${totalSelectedQuestions})</option>
+      ${TEST_DOMAIN_OPTIONS.map((domain) => `
+        <option value="${domain.id}">${escapeHtml(useCompactLabels ? domain.shortLabel : domain.label)} (${counts[domain.id] || 0})</option>
+      `).join("")}
+    `;
+    domainFilter.value = selectedValue;
   }
 
-  function togglePopover() {
-    if (!popover || !trigger) return;
-    const opening = !popover.classList.contains("open");
-    popover.classList.toggle("open", opening);
-    trigger.setAttribute("aria-expanded", opening ? "true" : "false");
+  function updateOriginCards() {
+    originInputs().forEach((input) => {
+      input.closest(".origin-toggle")?.classList.toggle("active", input.checked);
+    });
   }
 
-  picker?.addEventListener("change", () => {
-    updateTriggerLabel();
+  function applyOriginSelectionChange() {
+    syncBatterySelectionsFromOrigins();
+    updateOriginCards();
+    updateDomainOptions();
     startSelectedBatteries();
-  });
+  }
+
+  originPicker?.addEventListener("change", applyOriginSelectionChange);
   domainFilter?.addEventListener("change", startSelectedBatteries);
-  trigger?.addEventListener("click", togglePopover);
-  trigger?.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closePopover();
-  });
-  selectAllButton?.addEventListener("click", () => {
-    setAllBatterySelections(true);
-    updateTriggerLabel();
-  });
-  clearAllButton?.addEventListener("click", () => {
-    setAllBatterySelections(false);
-    updateTriggerLabel();
-  });
-  popover?.querySelectorAll("[data-origin-action]").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      const originId = button.getAttribute("data-origin-id");
-      const checked = button.getAttribute("data-origin-action") === "select";
-      setBatterySelectionsByOrigin(originId, checked);
-      updateTriggerLabel();
-    });
-  });
-  popover?.querySelectorAll("[data-group-action]").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      const groupId = button.getAttribute("data-group-id");
-      const checked = button.getAttribute("data-group-action") === "select";
-      setBatterySelectionsByGroup(groupId, checked);
-      updateTriggerLabel();
-    });
-  });
-  testPopoverOutsideHandler = (event) => {
-    if (!popover || !trigger) return;
-    if (!popover.classList.contains("open")) return;
-    if (popover.contains(event.target) || trigger.contains(event.target)) return;
-    closePopover();
-  };
-  document.addEventListener("click", testPopoverOutsideHandler);
+  testDomainResizeHandler = updateDomainOptions;
+  window.addEventListener("resize", testDomainResizeHandler);
 
   if (testBatteries.length) {
-    updateTriggerLabel();
+    syncBatterySelectionsFromOrigins();
+    updateOriginCards();
+    updateDomainOptions();
     startSelectedBatteries();
   }
 }
