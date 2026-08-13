@@ -12,7 +12,8 @@
         "Utiliza malware para interrumpir el funcionamiento del sistema"
       ],
       "respuesta": 1,
-      "explicacion": "Un exploit de día cero aprovecha una vulnerabilidad desconocida para el fabricante y que todavía no dispone de un parche."
+      "explicacion": "Un exploit de día cero aprovecha una vulnerabilidad desconocida para el fabricante y que todavía no dispone de un parche.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes situaciones demuestra mejor el principio de mínimo privilegio en el control de acceso?",
@@ -23,7 +24,8 @@
         "Utilizar una sola cuenta para varios usuarios de un departamento"
       ],
       "respuesta": 2,
-      "explicacion": "El mínimo privilegio limita los permisos a los estrictamente necesarios y solo durante el tiempo requerido."
+      "explicacion": "El mínimo privilegio limita los permisos a los estrictamente necesarios y solo durante el tiempo requerido.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué medida de seguridad es esencial para detectar intentos de acceso no autorizado a una sala física de servidores?",
@@ -34,7 +36,8 @@
         "Configurar reglas de firewall"
       ],
       "respuesta": 2,
-      "explicacion": "Las cámaras permiten supervisar y registrar físicamente a las personas que intentan acceder a la sala."
+      "explicacion": "Las cámaras permiten supervisar y registrar físicamente a las personas que intentan acceder a la sala.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cómo puede una organización garantizar eficazmente que solo los dispositivos autorizados se conecten a su red interna?",
@@ -45,7 +48,8 @@
         "Actualizando periódicamente el firmware de todo el hardware de red"
       ],
       "respuesta": 1,
-      "explicacion": "NAC autentica y comprueba los dispositivos antes de permitirles conectarse, aplicando las políticas de acceso definidas."
+      "explicacion": "NAC autentica y comprueba los dispositivos antes de permitirles conectarse, aplicando las políticas de acceso definidas.",
+      "dominio": 3
     },
     {
       "pregunta": "Una organización evalúa distintos modelos de control de acceso. ¿Qué modelo utiliza etiquetas de seguridad para restringir el acceso a objetos según el nivel de autorización del usuario?",
@@ -56,13 +60,20 @@
         "Attribute-Based Access Control (ABAC)"
       ],
       "respuesta": 2,
-      "explicacion": "MAC aplica clasificaciones y niveles de autorización establecidos centralmente para determinar el acceso."
+      "explicacion": "MAC aplica clasificaciones y niveles de autorización establecidos centralmente para determinar el acceso.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué tipo de malware se caracteriza por propagarse de forma independiente sin interacción humana?",
-      "opciones": ["Troyano", "Gusano", "Ransomware", "Spyware"],
+      "opciones": [
+        "Troyano",
+        "Gusano",
+        "Ransomware",
+        "Spyware"
+      ],
       "respuesta": 1,
-      "explicacion": "Un gusano se autorreplica y se propaga automáticamente por redes explotando vulnerabilidades."
+      "explicacion": "Un gusano se autorreplica y se propaga automáticamente por redes explotando vulnerabilidades.",
+      "dominio": 3
     },
     {
       "pregunta": "Un ingeniero de soporte externo accede al entorno de producción mediante una herramienta de gestión de accesos privilegiados. ¿Qué configuración garantiza mejor que su acceso caduque correctamente?",
@@ -73,7 +84,8 @@
         "Asignarlo al mismo grupo que los administradores internos para simplificar los permisos"
       ],
       "respuesta": 1,
-      "explicacion": "JIT concede privilegios únicamente durante la ventana autorizada y los retira automáticamente al finalizar."
+      "explicacion": "JIT concede privilegios únicamente durante la ventana autorizada y los retira automáticamente al finalizar.",
+      "dominio": 5
     },
     {
       "pregunta": "Un departamento solicita cuentas compartidas para un grupo rotatorio de becarios. Desde la perspectiva de la verificación de identidad, ¿cuál es la principal preocupación?",
@@ -84,7 +96,8 @@
         "Los becarios no pueden someterse a verificación de identidad porque son personal temporal"
       ],
       "respuesta": 0,
-      "explicacion": "Una cuenta compartida rompe la vinculación entre una identidad individual verificada y las acciones realizadas."
+      "explicacion": "Una cuenta compartida rompe la vinculación entre una identidad individual verificada y las acciones realizadas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones describe mejor una arquitectura de red Zero Trust?",
@@ -95,7 +108,8 @@
         "Una arquitectura que solo confía en usuarios y dispositivos con el mismo nivel de autorización"
       ],
       "respuesta": 1,
-      "explicacion": "Zero Trust elimina la confianza implícita y exige verificar continuamente cada identidad, dispositivo y solicitud de acceso."
+      "explicacion": "Zero Trust elimina la confianza implícita y exige verificar continuamente cada identidad, dispositivo y solicitud de acceso.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué principio de seguridad garantiza que los datos solo sean accesibles para quienes tienen autorización?",
@@ -106,7 +120,8 @@
         "Autenticación"
       ],
       "respuesta": 2,
-      "explicacion": "La confidencialidad evita que la información sea consultada o divulgada a personas no autorizadas."
+      "explicacion": "La confidencialidad evita que la información sea consultada o divulgada a personas no autorizadas.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál de las siguientes es la oferta de servicios gestionados MÁS eficaz para una pequeña empresa?",
@@ -117,7 +132,8 @@
         "Actualizaciones del software antivirus"
       ],
       "respuesta": 2,
-      "explicacion": "La copia de seguridad en la nube ofrece una protección escalable y externa frente a pérdida de datos y facilita la continuidad del negocio."
+      "explicacion": "La copia de seguridad en la nube ofrece una protección escalable y externa frente a pérdida de datos y facilita la continuidad del negocio.",
+      "dominio": 4
     },
     {
       "pregunta": "La nueva política de seguridad de una organización exige cifrar los datos críticos en reposo. ¿Qué tipo de cifrado debería implantarse?",
@@ -128,7 +144,8 @@
         "Esteganografía"
       ],
       "respuesta": 0,
-      "explicacion": "El cifrado simétrico es rápido y eficiente para proteger grandes volúmenes de datos almacenados."
+      "explicacion": "El cifrado simétrico es rápido y eficiente para proteger grandes volúmenes de datos almacenados.",
+      "dominio": 4
     },
     {
       "pregunta": "Un administrador quiere proteger la red inalámbrica mediante WPA3. ¿Qué ventaja ofrece WPA3 frente a WPA2?",
@@ -139,7 +156,8 @@
         "Proporciona mayor protección frente a intentos de adivinación de contraseñas sin conexión"
       ],
       "respuesta": 3,
-      "explicacion": "WPA3 utiliza SAE, que dificulta los ataques de diccionario sin conexión incluso si se captura el intercambio de autenticación."
+      "explicacion": "WPA3 utiliza SAE, que dificulta los ataques de diccionario sin conexión incluso si se captura el intercambio de autenticación.",
+      "dominio": 1
     },
     {
       "pregunta": "Cuando alguien utiliza una identificación falsa, ¿contra qué tipo de factor de autenticación está atacando?",
@@ -150,7 +168,8 @@
         "Algo que haces"
       ],
       "respuesta": 1,
-      "explicacion": "Una identificación física representa un factor de posesión, es decir, algo que el usuario tiene."
+      "explicacion": "Una identificación física representa un factor de posesión, es decir, algo que el usuario tiene.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué ataque redirige el tráfico de un sitio web hacia otro fraudulento sin que el usuario lo sepa, normalmente mediante cambios maliciosos en DNS?",
@@ -161,7 +180,8 @@
         "Man-in-the-Middle (MitM)"
       ],
       "respuesta": 1,
-      "explicacion": "El pharming manipula la resolución DNS para redirigir a los usuarios desde sitios legítimos hacia sitios fraudulentos."
+      "explicacion": "El pharming manipula la resolución DNS para redirigir a los usuarios desde sitios legítimos hacia sitios fraudulentos.",
+      "dominio": 5
     },
     {
       "pregunta": "Un analista de soporte debe mejorar la seguridad de acceso a un portal remoto sin entregar nuevos tokens físicos. ¿Qué cambio añade realmente un segundo factor de autenticación?",
@@ -172,7 +192,8 @@
         "Aumentar la duración del bloqueo tras varios intentos fallidos"
       ],
       "respuesta": 1,
-      "explicacion": "El código de una aplicación registrada añade un factor de posesión distinto de la contraseña, que es un factor de conocimiento."
+      "explicacion": "El código de una aplicación registrada añade un factor de posesión distinto de la contraseña, que es un factor de conocimiento.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es la principal ventaja de implementar Mandatory Access Control (MAC) en lugar de Discretionary Access Control (DAC) en un entorno de alta seguridad?",
@@ -183,7 +204,8 @@
         "Administración y configuración más sencillas"
       ],
       "respuesta": 2,
-      "explicacion": "MAC aplica políticas centralizadas basadas en clasificaciones y autorizaciones, reduciendo la discrecionalidad del usuario."
+      "explicacion": "MAC aplica políticas centralizadas basadas en clasificaciones y autorizaciones, reduciendo la discrecionalidad del usuario.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa está preocupada por los ataques de phishing contra sus empleados. ¿Qué acción ayudaría mejor a mitigar esta amenaza?",
@@ -194,7 +216,8 @@
         "Desplegar software de protección de endpoints"
       ],
       "respuesta": 0,
-      "explicacion": "La formación enseña a los usuarios a reconocer, evitar y denunciar los intentos de phishing que superan los controles técnicos."
+      "explicacion": "La formación enseña a los usuarios a reconocer, evitar y denunciar los intentos de phishing que superan los controles técnicos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el MAYOR beneficio de implementar una política de rotación de puestos?",
@@ -205,7 +228,8 @@
         "Aumentar la productividad"
       ],
       "respuesta": 2,
-      "explicacion": "La rotación reduce la concentración de control, facilita la detección de fraude y permite que otras personas revisen las actividades del puesto."
+      "explicacion": "La rotación reduce la concentración de control, facilita la detección de fraude y permite que otras personas revisen las actividades del puesto.",
+      "dominio": 5
     },
     {
       "pregunta": "Durante una auditoría se identificaron sistemas operativos y programas obsoletos. ¿Qué debería implantarse para mitigar mejor el riesgo asociado?",
@@ -216,7 +240,8 @@
         "Desplegar un honeypot para detectar intrusiones"
       ],
       "respuesta": 2,
-      "explicacion": "La gestión de parches corrige de forma sistemática las vulnerabilidades conocidas del software obsoleto."
+      "explicacion": "La gestión de parches corrige de forma sistemática las vulnerabilidades conocidas del software obsoleto.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué práctica de seguridad permite verificar identidades de usuario entre sistemas diferentes mediante una solución de Single Sign-On (SSO)?",
@@ -227,7 +252,8 @@
         "Sincronización de contraseñas"
       ],
       "respuesta": 0,
-      "explicacion": "La federación establece confianza entre distintos dominios de identidad y permite utilizar una misma identidad mediante SSO."
+      "explicacion": "La federación establece confianza entre distintos dominios de identidad y permite utilizar una misma identidad mediante SSO.",
+      "dominio": 3
     },
     {
       "pregunta": "Si los empleados utilizan indebidamente sus privilegios de acceso con frecuencia, ¿qué estrategia es más eficaz para mitigar el riesgo?",
@@ -238,7 +264,8 @@
         "Aumentar el número de cuentas de usuario privilegiadas"
       ],
       "respuesta": 2,
-      "explicacion": "Los controles estrictos, como mínimo privilegio y RBAC, limitan directamente los recursos y acciones disponibles para cada usuario."
+      "explicacion": "Los controles estrictos, como mínimo privilegio y RBAC, limitan directamente los recursos y acciones disponibles para cada usuario.",
+      "dominio": 4
     },
     {
       "pregunta": "ThorTeaches.com está implantando un nuevo sistema de seguridad informática. ¿Cuál de las siguientes opciones NO es un paso clave del proceso de revisión y aprobación de cambios?",
@@ -249,7 +276,8 @@
         "Revisar los cambios propuestos"
       ],
       "respuesta": 2,
-      "explicacion": "Aplicar cambios sin revisión, evaluación ni aprobación contradice los objetivos del proceso de gestión de cambios."
+      "explicacion": "Aplicar cambios sin revisión, evaluación ni aprobación contradice los objetivos del proceso de gestión de cambios.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es la forma MÁS eficaz de proteger la privacidad en una organización?",
@@ -260,7 +288,8 @@
         "Desarrollar e implementar una política integral de privacidad"
       ],
       "respuesta": 3,
-      "explicacion": "Una política integral define cómo deben recopilarse, utilizarse, protegerse y conservarse los datos personales."
+      "explicacion": "Una política integral define cómo deben recopilarse, utilizarse, protegerse y conservarse los datos personales.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones no es un mecanismo habitual de control de acceso?",
@@ -271,7 +300,8 @@
         "Software de detección de malware"
       ],
       "respuesta": 3,
-      "explicacion": "El software antimalware detecta y elimina código malicioso, pero no administra quién puede acceder a los recursos."
+      "explicacion": "El software antimalware detecta y elimina código malicioso, pero no administra quién puede acceder a los recursos.",
+      "dominio": 4
     },
     {
       "pregunta": "Una organización cifra un contrato confidencial y le aplica una firma digital antes de transmitirlo. ¿Qué combinación de propiedades de seguridad proporciona?",
@@ -282,7 +312,8 @@
         "Disponibilidad y gestión de parches"
       ],
       "respuesta": 1,
-      "explicacion": "El cifrado aporta confidencialidad y la firma digital aporta integridad, autenticación del firmante y no repudio."
+      "explicacion": "El cifrado aporta confidencialidad y la firma digital aporta integridad, autenticación del firmante y no repudio.",
+      "dominio": 3
     },
     {
       "pregunta": "ThorTeaches.com ha sufrido brechas causadas por cambios de software no aprobados. ¿Cómo puede garantizarse que los cambios se documenten y revisen correctamente?",
@@ -293,7 +324,8 @@
         "Realizando auditorías de seguridad periódicas del software"
       ],
       "respuesta": 1,
-      "explicacion": "La gestión de cambios formaliza la solicitud, documentación, evaluación, aprobación e implantación de cada modificación."
+      "explicacion": "La gestión de cambios formaliza la solicitud, documentación, evaluación, aprobación e implantación de cada modificación.",
+      "dominio": 2
     },
     {
       "pregunta": "Un contratista terminó su trabajo el viernes, pero su cuenta VPN continúa habilitada el lunes. ¿Cuál es la acción inmediata más adecuada?",
@@ -304,7 +336,8 @@
         "Cambiar la clave precompartida de la puerta de enlace VPN"
       ],
       "respuesta": 0,
-      "explicacion": "La cuenta debe deshabilitarse de inmediato y deben revocarse las credenciales activas para cerrar todos los accesos existentes."
+      "explicacion": "La cuenta debe deshabilitarse de inmediato y deben revocarse las credenciales activas para cerrar todos los accesos existentes.",
+      "dominio": 5
     },
     {
       "pregunta": "Tras una brecha causada por un empleado que exfiltró datos para obtener beneficio económico, ¿qué debería incluir el código ético de la empresa?",
@@ -315,7 +348,8 @@
         "Los empleados deben informar a la dirección de cualquier posible infracción o conducta indebida"
       ],
       "respuesta": 3,
-      "explicacion": "La obligación de comunicar infracciones favorece la transparencia, la responsabilidad y la detección temprana de conductas indebidas."
+      "explicacion": "La obligación de comunicar infracciones favorece la transparencia, la responsabilidad y la detección temprana de conductas indebidas.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización ha sufrido una brecha de datos debida a un ataque de phishing. ¿Qué acción sería más eficaz para prevenir incidentes similares?",
@@ -326,7 +360,8 @@
         "Proporcionar formación de concienciación en seguridad a los empleados"
       ],
       "respuesta": 3,
-      "explicacion": "La formación aborda directamente el componente humano del phishing y mejora la capacidad de reconocer mensajes fraudulentos."
+      "explicacion": "La formación aborda directamente el componente humano del phishing y mejora la capacidad de reconocer mensajes fraudulentos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la función principal de una Demilitarized Zone (DMZ)?",
@@ -337,7 +372,8 @@
         "Impedir por sí sola todo acceso no autorizado a la red interna"
       ],
       "respuesta": 1,
-      "explicacion": "Una DMZ aísla los servicios expuestos de la red interna y añade una zona intermedia de seguridad."
+      "explicacion": "Una DMZ aísla los servicios expuestos de la red interna y añade una zona intermedia de seguridad.",
+      "dominio": 2
     },
     {
       "pregunta": "Una entidad financiera planea expandirse a mercados internacionales. ¿Qué paso inicial debe realizar para abordar posibles desafíos legales y regulatorios?",
@@ -348,7 +384,8 @@
         "Implementar un sistema global de supervisión de seguridad"
       ],
       "respuesta": 1,
-      "explicacion": "Antes de diseñar controles, la organización debe identificar las leyes de privacidad, protección de datos y ciberseguridad aplicables."
+      "explicacion": "Antes de diseñar controles, la organización debe identificar las leyes de privacidad, protección de datos y ciberseguridad aplicables.",
+      "dominio": 4
     },
     {
       "pregunta": "Un administrador configura una red para impedir accesos no autorizados. ¿Qué medida debe priorizar para controlar el acceso a sistemas y aplicaciones críticos?",
@@ -359,7 +396,8 @@
         "Aplicar requisitos de complejidad de contraseñas"
       ],
       "respuesta": 2,
-      "explicacion": "La autenticación robusta, especialmente con MFA, verifica directamente la identidad antes de conceder acceso."
+      "explicacion": "La autenticación robusta, especialmente con MFA, verifica directamente la identidad antes de conceder acceso.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es la definición MÁS precisa de un verdadero positivo en seguridad?",
@@ -370,7 +408,8 @@
         "Un sistema de seguridad identifica incorrectamente una amenaza como benigna"
       ],
       "respuesta": 0,
-      "explicacion": "Un verdadero positivo se produce cuando el control detecta correctamente un evento que sí representa una amenaza."
+      "explicacion": "Un verdadero positivo se produce cuando el control detecta correctamente un evento que sí representa una amenaza.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es un método habitual para mitigar el riesgo de amenazas internas en una organización?",
@@ -381,7 +420,8 @@
         "Realizar pruebas externas de penetración con frecuencia"
       ],
       "respuesta": 0,
-      "explicacion": "La formación mejora el cumplimiento de políticas y ayuda a reconocer o comunicar conductas internas sospechosas."
+      "explicacion": "La formación mejora el cumplimiento de políticas y ayuda a reconocer o comunicar conductas internas sospechosas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la forma más eficaz de protegerse frente a ataques de phishing?",
@@ -392,7 +432,8 @@
         "Realizar evaluaciones periódicas de vulnerabilidades"
       ],
       "respuesta": 1,
-      "explicacion": "La concienciación permite detectar engaños de ingeniería social incluso cuando superan los filtros técnicos."
+      "explicacion": "La concienciación permite detectar engaños de ingeniería social incluso cuando superan los filtros técnicos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Dónde buscarías una guía paso a paso para reforzar la seguridad de servidores?",
@@ -403,7 +444,8 @@
         "En un diagrama de red"
       ],
       "respuesta": 1,
-      "explicacion": "Una guía de configuración contiene los ajustes técnicos y procedimientos concretos necesarios para el hardening."
+      "explicacion": "Una guía de configuración contiene los ajustes técnicos y procedimientos concretos necesarios para el hardening.",
+      "dominio": 1
     },
     {
       "pregunta": "Un equipo diseña el acceso a una aplicación financiera con datos salariales sensibles. ¿Qué control aplica más directamente la identidad como perímetro de seguridad?",
@@ -414,7 +456,8 @@
         "Un Web Application Firewall que bloquee ataques de inyección"
       ],
       "respuesta": 2,
-      "explicacion": "MFA verifica de forma robusta la identidad y el acceso basado en roles limita las acciones autorizadas para esa identidad."
+      "explicacion": "MFA verifica de forma robusta la identidad y el acceso basado en roles limita las acciones autorizadas para esa identidad.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa está planificando su estrategia de Disaster Recovery. ¿Cuál debe ser el primer paso?",
@@ -425,7 +468,8 @@
         "Probar los procedimientos de recuperación"
       ],
       "respuesta": 0,
-      "explicacion": "El BIA identifica funciones críticas, impactos y prioridades, proporcionando la base de la estrategia de recuperación."
+      "explicacion": "El BIA identifica funciones críticas, impactos y prioridades, proporcionando la base de la estrategia de recuperación.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es la principal diferencia entre las medidas de seguridad de una nube pública y una nube privada?",
@@ -436,7 +480,8 @@
         "Las nubes privadas utilizan seguridad de terceros y las públicas protocolos internos"
       ],
       "respuesta": 1,
-      "explicacion": "En la nube pública se aplica un modelo de responsabilidad compartida; en la privada, la organización controla y protege toda la infraestructura."
+      "explicacion": "En la nube pública se aplica un modelo de responsabilidad compartida; en la privada, la organización controla y protege toda la infraestructura.",
+      "dominio": 3
     },
     {
       "pregunta": "Una normativa exige conservar durante tres años las conversaciones de soporte. Un agente es despedido por infringir políticas. ¿Qué acción cumple mejor los requisitos de seguridad y cumplimiento?",
@@ -447,7 +492,8 @@
         "Cifrar las conversaciones y eliminar las claves de cifrado"
       ],
       "respuesta": 1,
-      "explicacion": "La baja exige retirar el acceso, mientras que la normativa obliga a conservar los registros durante el periodo establecido."
+      "explicacion": "La baja exige retirar el acceso, mientras que la normativa obliga a conservar los registros durante el periodo establecido.",
+      "dominio": 3
     },
     {
       "pregunta": "Un atacante obtiene acceso a la cuenta de un usuario al predecir su identificador de sesión. ¿Qué tipo de ataque es?",
@@ -458,7 +504,8 @@
         "Ataque de fuerza bruta"
       ],
       "respuesta": 0,
-      "explicacion": "El secuestro de sesión utiliza un identificador o token de sesión robado o predecible para suplantar al usuario."
+      "explicacion": "El secuestro de sesión utiliza un identificador o token de sesión robado o predecible para suplantar al usuario.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa implementa un proceso de conciliación de tres elementos para las compras. ¿Qué responsabilidades deben mantenerse separadas?",
@@ -469,7 +516,8 @@
         "El mantenimiento del plan contable y la ejecución del informe de cierre mensual"
       ],
       "respuesta": 0,
-      "explicacion": "Separar la confirmación de recepción y la autorización del pago evita que una sola persona valide y pague una operación ficticia."
+      "explicacion": "Separar la confirmación de recepción y la autorización del pago evita que una sola persona valide y pague una operación ficticia.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa quiere reforzar la seguridad de sus sistemas ICS/SCADA. ¿Cuál es el mejor primer paso?",
@@ -480,7 +528,8 @@
         "Instalar firewalls en todos los puntos de entrada de la red ICS"
       ],
       "respuesta": 0,
-      "explicacion": "La evaluación de riesgos identifica primero amenazas, vulnerabilidades e impactos para priorizar controles adecuados."
+      "explicacion": "La evaluación de riesgos identifica primero amenazas, vulnerabilidades e impactos para priorizar controles adecuados.",
+      "dominio": 5
     },
     {
       "pregunta": "Un analista debe reforzar la seguridad del acceso remoto. ¿Qué método debe priorizar para conseguir una autenticación fuerte?",
@@ -491,7 +540,8 @@
         "Exigir cambios de contraseña cada 30 días"
       ],
       "respuesta": 2,
-      "explicacion": "MFA exige varias categorías de verificación y reduce el riesgo asociado al compromiso de una contraseña."
+      "explicacion": "MFA exige varias categorías de verificación y reduce el riesgo asociado al compromiso de una contraseña.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Cuál es el objetivo principal de utilizar una Demilitarized Zone (DMZ) en la arquitectura de red?",
@@ -502,7 +552,8 @@
         "Separar tráfico por motivos de Quality of Service (QoS)"
       ],
       "respuesta": 1,
-      "explicacion": "La DMZ permite publicar servicios externos sin exponer directamente la red interna."
+      "explicacion": "La DMZ permite publicar servicios externos sin exponer directamente la red interna.",
+      "dominio": 3
     },
     {
       "pregunta": "Un administrador solicita poder aprobar cambios de reglas de firewall y desplegarlos en producción. ¿Qué enfoque aplica mejor la Separation of Duties (SoD)?",
@@ -513,7 +564,8 @@
         "Utilizar una cuenta privilegiada compartida por todo el equipo"
       ],
       "respuesta": 1,
-      "explicacion": "La SoD exige que ninguna persona controle por sí sola la aprobación y la ejecución de una operación de alto riesgo."
+      "explicacion": "La SoD exige que ninguna persona controle por sí sola la aprobación y la ejecución de una operación de alto riesgo.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización quiere proteger sus comunicaciones internas frente a escuchas. ¿Qué tecnología es la más apropiada?",
@@ -524,7 +576,8 @@
         "Demilitarized Zone (DMZ)"
       ],
       "respuesta": 0,
-      "explicacion": "Una VPN crea un túnel cifrado que protege el tráfico frente a interceptación y escucha."
+      "explicacion": "Una VPN crea un túnel cifrado que protege el tráfico frente a interceptación y escucha.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa necesita restringir el acceso a registros financieros sensibles almacenados en un servidor compartido. ¿Qué opción garantiza mejor que solo accedan los empleados autorizados?",
@@ -535,7 +588,8 @@
         "Desplegar un Intrusion Detection System"
       ],
       "respuesta": 1,
-      "explicacion": "RBAC asigna permisos sobre los registros según las funciones laborales y la necesidad de acceso de cada empleado."
+      "explicacion": "RBAC asigna permisos sobre los registros según las funciones laborales y la necesidad de acceso de cada empleado.",
+      "dominio": 4
     },
     {
       "pregunta": "Un auditor pregunta por qué una excepción de política para un sistema operativo no soportado sigue abierta seis meses después. ¿Qué evidencia demuestra mejor que está gobernada correctamente?",
@@ -546,7 +600,8 @@
         "Un diagrama de la topología de red del sistema"
       ],
       "respuesta": 1,
-      "explicacion": "Las excepciones deben estar limitadas en el tiempo, revisarse periódicamente y cerrarse o volver a aprobarse expresamente."
+      "explicacion": "Las excepciones deben estar limitadas en el tiempo, revisarse periódicamente y cerrarse o volver a aprobarse expresamente.",
+      "dominio": 5
     },
     {
       "pregunta": "Un propietario coloca un gran cartel que dice 'Cuidado con el perro', aunque no se observan otras medidas de seguridad. ¿Qué tipo de control representa mejor?",
@@ -557,7 +612,8 @@
         "Control preventivo"
       ],
       "respuesta": 2,
-      "explicacion": "El cartel intenta desanimar al intruso, pero no impide físicamente que entre."
+      "explicacion": "El cartel intenta desanimar al intruso, pero no impide físicamente que entre.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué opción describe mejor el proceso de determinar los controles de acceso adecuados para un sistema?",
@@ -568,7 +624,8 @@
         "Cumplimiento de seguridad"
       ],
       "respuesta": 0,
-      "explicacion": "El análisis de riesgos evalúa amenazas, vulnerabilidades, probabilidad e impacto para seleccionar controles proporcionales."
+      "explicacion": "El análisis de riesgos evalúa amenazas, vulnerabilidades, probabilidad e impacto para seleccionar controles proporcionales.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el control de detección MÁS eficaz para identificar accesos no autorizados a los registros financieros de una empresa?",
@@ -579,7 +636,8 @@
         "Firewalls"
       ],
       "respuesta": 0,
-      "explicacion": "Los registros de acceso muestran directamente qué identidad accedió a los datos, cuándo y desde qué origen."
+      "explicacion": "Los registros de acceso muestran directamente qué identidad accedió a los datos, cuándo y desde qué origen.",
+      "dominio": 3
     },
     {
       "pregunta": "Un técnico debe crear una cuenta temporal para un visitante que permanecerá un día. ¿Qué práctica se ajusta mejor a la gestión del ciclo de vida de identidades?",
@@ -590,7 +648,8 @@
         "Crear la cuenta sin registro de actividad para proteger su privacidad"
       ],
       "respuesta": 0,
-      "explicacion": "Las identidades temporales deben tener permisos mínimos, finalidad concreta y una caducidad automática."
+      "explicacion": "Las identidades temporales deben tener permisos mínimos, finalidad concreta y una caducidad automática.",
+      "dominio": 2
     },
     {
       "pregunta": "Una entidad financiera quiere proteger datos y secretos comerciales extremadamente sensibles. ¿Qué modelo de control de acceso debería considerar?",
@@ -601,7 +660,8 @@
         "Attribute-Based Access Control (ABAC)"
       ],
       "respuesta": 1,
-      "explicacion": "MAC ofrece controles estrictos basados en niveles de autorización y clasificación de los datos."
+      "explicacion": "MAC ofrece controles estrictos basados en niveles de autorización y clasificación de los datos.",
+      "dominio": 4
     },
     {
       "pregunta": "Una organización ha sufrido una brecha por políticas de contraseñas insuficientes. ¿Qué medida mejora la seguridad sin causar una interrupción significativa a los usuarios?",
@@ -612,19 +672,32 @@
         "Bloquear la cuenta después de tres intentos fallidos"
       ],
       "respuesta": 2,
-      "explicacion": "Los requisitos de complejidad aumentan la resistencia frente a adivinación y fuerza bruta con un cambio operativo relativamente limitado."
+      "explicacion": "Los requisitos de complejidad aumentan la resistencia frente a adivinación y fuerza bruta con un cambio operativo relativamente limitado.",
+      "dominio": 5
     },
     {
       "pregunta": "Un analista selecciona métodos criptográficos para correos sensibles. ¿Qué estándar proporciona confidencialidad y capacidad de firma digital?",
-      "opciones": ["AES", "RSA", "SHA-256", "TLS"],
+      "opciones": [
+        "AES",
+        "RSA",
+        "SHA-256",
+        "TLS"
+      ],
       "respuesta": 1,
-      "explicacion": "RSA es un algoritmo asimétrico que puede utilizarse tanto para cifrar como para crear y verificar firmas digitales."
+      "explicacion": "RSA es un algoritmo asimétrico que puede utilizarse tanto para cifrar como para crear y verificar firmas digitales.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es el método MÁS seguro para conectar dispositivos en una PAN (Personal Area Network)?",
-      "opciones": ["Bluetooth", "Wi-Fi", "Infrarrojos", "Ethernet cableado"],
+      "opciones": [
+        "Bluetooth",
+        "Wi-Fi",
+        "Infrarrojos",
+        "Ethernet cableado"
+      ],
       "respuesta": 3,
-      "explicacion": "Una conexión cableada exige normalmente acceso físico para interceptarla y reduce la exposición propia de los medios inalámbricos."
+      "explicacion": "Una conexión cableada exige normalmente acceso físico para interceptarla y reduce la exposición propia de los medios inalámbricos.",
+      "dominio": 3
     },
     {
       "pregunta": "En un análisis de riesgos, ¿qué constituye el riesgo residual?",
@@ -635,7 +708,8 @@
         "El riesgo restante tras mitigar todas las vulnerabilidades"
       ],
       "respuesta": 0,
-      "explicacion": "El riesgo residual es la exposición que continúa existiendo después de aplicar los controles y medidas de mitigación."
+      "explicacion": "El riesgo residual es la exposición que continúa existiendo después de aplicar los controles y medidas de mitigación.",
+      "dominio": 4
     },
     {
       "pregunta": "Durante una auditoría se descubre que se transmite información sensible por la red sin protección. ¿Qué tecnología mitiga mejor este riesgo?",
@@ -646,7 +720,8 @@
         "Aislamiento del hipervisor"
       ],
       "respuesta": 1,
-      "explicacion": "SSL/TLS cifra la información en tránsito y la protege frente a interceptaciones y modificaciones."
+      "explicacion": "SSL/TLS cifra la información en tránsito y la protege frente a interceptaciones y modificaciones.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tecnología debe implantarse para garantizar una comunicación segura entre empleados remotos y la red corporativa?",
@@ -657,13 +732,20 @@
         "Un Intrusion Prevention System (IPS) para detectar amenazas remotas"
       ],
       "respuesta": 0,
-      "explicacion": "Una VPN cifra el tráfico entre el usuario remoto y la organización a través de redes no confiables."
+      "explicacion": "Una VPN cifra el tráfico entre el usuario remoto y la organización a través de redes no confiables.",
+      "dominio": 5
     },
     {
       "pregunta": "¿En qué fase del proceso de Disaster Recovery (DR) suele ser PEOR la comunicación?",
-      "opciones": ["Planificación", "Pruebas", "Activación", "Mantenimiento"],
+      "opciones": [
+        "Planificación",
+        "Pruebas",
+        "Activación",
+        "Mantenimiento"
+      ],
       "respuesta": 2,
-      "explicacion": "Durante la activación existe una situación real de crisis, con presión y desorganización que pueden deteriorar la comunicación."
+      "explicacion": "Durante la activación existe una situación real de crisis, con presión y desorganización que pueden deteriorar la comunicación.",
+      "dominio": 3
     },
     {
       "pregunta": "Un equipo detecta tráfico que indica una posible conexión desde la red interna hacia un servidor de command-and-control (C&C). ¿Cuál debe ser el primer paso?",
@@ -674,7 +756,8 @@
         "Bloquear por geolocalización todos los hosts externos"
       ],
       "respuesta": 0,
-      "explicacion": "El aislamiento contiene el incidente, detiene la comunicación con el servidor C&C y limita la propagación o exfiltración."
+      "explicacion": "El aislamiento contiene el incidente, detiene la comunicación con el servidor C&C y limita la propagación o exfiltración.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la función principal del principio de confidencialidad en seguridad de la información?",
@@ -685,7 +768,8 @@
         "Garantizar la autenticidad de la información"
       ],
       "respuesta": 2,
-      "explicacion": "La confidencialidad garantiza que la información sensible solo sea revelada a sujetos autorizados."
+      "explicacion": "La confidencialidad garantiza que la información sensible solo sea revelada a sujetos autorizados.",
+      "dominio": 4
     },
     {
       "pregunta": "Una auditoría descubre que se envían datos sensibles mediante correo sin cifrar. ¿Qué acción inmediata mejora su confidencialidad en tránsito?",
@@ -696,7 +780,8 @@
         "Deshabilitar los archivos adjuntos que contengan datos sensibles"
       ],
       "respuesta": 0,
-      "explicacion": "El cifrado del correo protege directamente el contenido durante su transmisión y responde al hallazgo identificado."
+      "explicacion": "El cifrado del correo protege directamente el contenido durante su transmisión y responde al hallazgo identificado.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es una ventaja principal de utilizar una VPN para conectar a trabajadores remotos?",
@@ -707,7 +792,8 @@
         "Simplifica todas las configuraciones de red"
       ],
       "respuesta": 1,
-      "explicacion": "El túnel cifrado de una VPN protege la confidencialidad y la integridad de los datos transmitidos."
+      "explicacion": "El túnel cifrado de una VPN protege la confidencialidad y la integridad de los datos transmitidos.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa implementa un Network-based Intrusion Detection System (NIDS). ¿Cuál debe ser la prioridad para maximizar su eficacia?",
@@ -718,7 +804,8 @@
         "Desplegarlo en múltiples segmentos de red"
       ],
       "respuesta": 1,
-      "explicacion": "Las firmas actualizadas permiten que el NIDS reconozca amenazas nuevas y variantes recientemente identificadas."
+      "explicacion": "Las firmas actualizadas permiten que el NIDS reconozca amenazas nuevas y variantes recientemente identificadas.",
+      "dominio": 5
     },
     {
       "pregunta": "La dirección solo acepta una alteración operativa mínima y quiere decisiones de seguridad conservadoras. ¿Qué elemento de gobierno establece directamente los límites para gestionar riesgos?",
@@ -729,7 +816,8 @@
         "Ticket de gestión de cambios"
       ],
       "respuesta": 0,
-      "explicacion": "El apetito de riesgo define cuánto riesgo está dispuesta a aceptar la organización y condiciona las decisiones de tratamiento."
+      "explicacion": "El apetito de riesgo define cuánto riesgo está dispuesta a aceptar la organización y condiciona las decisiones de tratamiento.",
+      "dominio": 5
     },
     {
       "pregunta": "Como responsable de seguridad de ThorTeaches.com, ¿cuál es la forma más eficaz de impedir la entrada no autorizada al edificio?",
@@ -740,7 +828,8 @@
         "Realizar auditorías periódicas de seguridad"
       ],
       "respuesta": 2,
-      "explicacion": "Cerrar físicamente los puntos de entrada constituye un control preventivo directo contra el acceso al edificio."
+      "explicacion": "Cerrar físicamente los puntos de entrada constituye un control preventivo directo contra el acceso al edificio.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es la consideración MÁS importante al implementar un firewall multihomed?",
@@ -751,7 +840,8 @@
         "El coste del firewall"
       ],
       "respuesta": 2,
-      "explicacion": "Un firewall multihomed conecta varias redes y debe separar y controlar eficazmente el tráfico entre sus distintas zonas."
+      "explicacion": "Un firewall multihomed conecta varias redes y debe separar y controlar eficazmente el tráfico entre sus distintas zonas.",
+      "dominio": 5
     },
     {
       "pregunta": "Un responsable propone vacaciones obligatorias, pero permitirá que los empleados preaprueben operaciones antes de ausentarse. ¿Cuál es el principal riesgo para detectar infracciones de Separation of Duties (SoD)?",
@@ -762,7 +852,8 @@
         "Inutiliza los registros de auditoría porque las aprobaciones dejan de tener marca temporal"
       ],
       "respuesta": 1,
-      "explicacion": "Las preaprobaciones evitan el traspaso real de tareas que permitiría a otra persona detectar irregularidades durante la ausencia."
+      "explicacion": "Las preaprobaciones evitan el traspaso real de tareas que permitiría a otra persona detectar irregularidades durante la ausencia.",
+      "dominio": 3
     },
     {
       "pregunta": "Un analista recibe alertas de múltiples intentos de inicio de sesión fallidos desde varias direcciones IP. ¿Qué acción inmediata debe tomar?",
@@ -773,7 +864,8 @@
         "Habilitar CAPTCHA en todas las páginas de inicio de sesión"
       ],
       "respuesta": 0,
-      "explicacion": "Bloquear los orígenes detiene de inmediato los intentos identificados mientras se investiga y se aplican controles adicionales."
+      "explicacion": "Bloquear los orígenes detiene de inmediato los intentos identificados mientras se investiga y se aplican controles adicionales.",
+      "dominio": 3
     },
     {
       "pregunta": "Al implementar medidas de seguridad para datos en la nube, ¿qué opción debería considerarse EN ÚLTIMO LUGAR?",
@@ -784,7 +876,8 @@
         "Implementar estrategias de copia de seguridad y recuperación"
       ],
       "respuesta": 2,
-      "explicacion": "Las evaluaciones periódicas deben realizarse después de implantar los controles para comprobar su eficacia y detectar deficiencias."
+      "explicacion": "Las evaluaciones periódicas deben realizarse después de implantar los controles para comprobar su eficacia y detectar deficiencias.",
+      "dominio": 3
     },
     {
       "pregunta": "Un usuario remoto tiene dificultades para conectarse de forma segura a la red corporativa. ¿Cuál es la causa más probable?",
@@ -795,7 +888,8 @@
         "Antivirus desactualizado en el dispositivo del usuario"
       ],
       "respuesta": 1,
-      "explicacion": "Una regla de firewall incorrecta puede bloquear directamente el tráfico legítimo necesario para la conexión remota."
+      "explicacion": "Una regla de firewall incorrecta puede bloquear directamente el tráfico legítimo necesario para la conexión remota.",
+      "dominio": 3
     },
     {
       "pregunta": "Dos organizaciones mantienen un rack de hardware en el centro de datos de la otra, completamente segmentado del resto de la red. ¿Cómo se denomina este acuerdo?",
@@ -806,7 +900,8 @@
         "Sitio por suscripción"
       ],
       "respuesta": 0,
-      "explicacion": "Un acuerdo recíproco permite que dos organizaciones se proporcionen mutuamente capacidad de recuperación ante desastres."
+      "explicacion": "Un acuerdo recíproco permite que dos organizaciones se proporcionen mutuamente capacidad de recuperación ante desastres.",
+      "dominio": 5
     },
     {
       "pregunta": "Un empleado de RR. HH. intenta enviar por correo números de la Seguridad Social de diez empleados tras recibir un mensaje de phishing. ¿Cómo respondería un sistema DLP correctamente configurado?",
@@ -817,7 +912,8 @@
         "No podría detectar números de la Seguridad Social en archivos adjuntos"
       ],
       "respuesta": 1,
-      "explicacion": "DLP puede inspeccionar contenidos sensibles, bloquear su salida tanto en el endpoint como en la red y generar alertas."
+      "explicacion": "DLP puede inspeccionar contenidos sensibles, bloquear su salida tanto en el endpoint como en la red y generar alertas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es el PRIMER paso de un proceso de copia de seguridad completa?",
@@ -828,7 +924,8 @@
         "Realizar una restauración de prueba"
       ],
       "respuesta": 0,
-      "explicacion": "Según el proceso indicado, primero debe iniciarse la herramienta que gestionará la selección, copia y verificación de los datos."
+      "explicacion": "Según el proceso indicado, primero debe iniciarse la herramienta que gestionará la selección, copia y verificación de los datos.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa teme accesos no autorizados a datos sensibles almacenados en la nube. ¿Cuál es la mejor acción inmediata?",
@@ -839,7 +936,8 @@
         "Realizar copias de seguridad periódicas de los datos"
       ],
       "respuesta": 2,
-      "explicacion": "El cifrado en reposo impide que los datos sean legibles sin la clave adecuada, incluso si se obtiene acceso al almacenamiento."
+      "explicacion": "El cifrado en reposo impide que los datos sean legibles sin la clave adecuada, incluso si se obtiene acceso al almacenamiento.",
+      "dominio": 2
     },
     {
       "pregunta": "Un usuario con autorización Secret intenta abrir un archivo Top Secret y el sistema lo bloquea. ¿Qué propiedad de Bell-LaPadula se aplica?",
@@ -850,7 +948,8 @@
         "Invocation Property"
       ],
       "respuesta": 0,
-      "explicacion": "La Simple Security Property aplica la regla de no leer hacia arriba, impidiendo acceder a información de clasificación superior."
+      "explicacion": "La Simple Security Property aplica la regla de no leer hacia arriba, impidiendo acceder a información de clasificación superior.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué control de seguridad está diseñado para detectar y posiblemente reaccionar ante amenazas, pero no necesariamente impedirlas?",
@@ -861,7 +960,8 @@
         "Access Control List (ACL)"
       ],
       "respuesta": 2,
-      "explicacion": "Un IDS supervisa actividades y genera alertas, pero normalmente no bloquea directamente el tráfico detectado."
+      "explicacion": "Un IDS supervisa actividades y genera alertas, pero normalmente no bloquea directamente el tráfico detectado.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cómo puede una empresa garantizar la transmisión segura de datos a través de una red no protegida?",
@@ -872,13 +972,20 @@
         "Utilizar un tercero de confianza para verificar la autenticidad"
       ],
       "respuesta": 1,
-      "explicacion": "Una VPN crea un túnel cifrado integral sobre la red no confiable y protege el tráfico frente a interceptaciones."
+      "explicacion": "Una VPN crea un túnel cifrado integral sobre la red no confiable y protege el tráfico frente a interceptaciones.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización quiere que sus empleados accedan de forma segura a recursos internos a través de Internet. ¿Qué tecnología debe implementar?",
-      "opciones": ["VPN", "Proxy web", "Firewall", "SIEM"],
+      "opciones": [
+        "VPN",
+        "Proxy web",
+        "Firewall",
+        "SIEM"
+      ],
       "respuesta": 0,
-      "explicacion": "Una VPN proporciona acceso remoto mediante un túnel cifrado hacia la red interna."
+      "explicacion": "Una VPN proporciona acceso remoto mediante un túnel cifrado hacia la red interna.",
+      "dominio": 4
     },
     {
       "pregunta": "Al diseñar una arquitectura de red segura, ¿qué opción ayuda a impedir accesos externos no autorizados a los recursos internos?",
@@ -889,7 +996,8 @@
         "Configurar una Demilitarized Zone (DMZ)"
       ],
       "respuesta": 1,
-      "explicacion": "Las ACL permiten o deniegan tráfico según direcciones, puertos y protocolos, aplicando restricciones preventivas."
+      "explicacion": "Las ACL permiten o deniegan tráfico según direcciones, puertos y protocolos, aplicando restricciones preventivas.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué medida es más importante para impedir el acceso no autorizado a zonas sensibles de un centro de datos?",
@@ -900,7 +1008,8 @@
         "Realizar inventarios periódicos del hardware"
       ],
       "respuesta": 0,
-      "explicacion": "La biometría verifica físicamente la identidad antes de permitir la entrada y actúa como control preventivo."
+      "explicacion": "La biometría verifica físicamente la identidad antes de permitir la entrada y actúa como control preventivo.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa sufre ataques frecuentes de phishing dirigidos a cuentas de correo. ¿Qué estrategia reduce mejor el riesgo de éxito?",
@@ -911,7 +1020,8 @@
         "Implementar una política de contraseñas"
       ],
       "respuesta": 0,
-      "explicacion": "La formación continua ayuda a reconocer los engaños que pueden superar los filtros automáticos."
+      "explicacion": "La formación continua ayuda a reconocer los engaños que pueden superar los filtros automáticos.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Cuál es la forma MÁS eficaz de evitar que un dispositivo IoT participe en un ataque DDoS?",
@@ -922,7 +1032,8 @@
         "Implementar un honeypot en el dispositivo"
       ],
       "respuesta": 0,
-      "explicacion": "Las actualizaciones corrigen vulnerabilidades conocidas que podrían permitir incorporar el dispositivo a una botnet."
+      "explicacion": "Las actualizaciones corrigen vulnerabilidades conocidas que podrían permitir incorporar el dispositivo a una botnet.",
+      "dominio": 2
     },
     {
       "pregunta": "Una aplicación financiera permite sesiones simultáneas desde varios dispositivos. ¿Qué enfoque reduce el uso compartido de cuentas y facilita detectar actividad sospechosa sin bloquear viajes legítimos?",
@@ -933,7 +1044,8 @@
         "Exigir un cambio semanal de contraseña"
       ],
       "respuesta": 0,
-      "explicacion": "La verificación reforzada confirma la identidad ante un comportamiento de riesgo y las alertas proporcionan visibilidad sin impedir el uso legítimo."
+      "explicacion": "La verificación reforzada confirma la identidad ante un comportamiento de riesgo y las alertas proporcionan visibilidad sin impedir el uso legítimo.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué mecanismo puede proteger los datos frente a su captura durante la transmisión por una red?",
@@ -944,7 +1056,8 @@
         "Utilizar segmentación de red para aislar paquetes"
       ],
       "respuesta": 1,
-      "explicacion": "Una VPN cifra el tráfico en tránsito, de modo que los datos interceptados no puedan interpretarse sin la clave."
+      "explicacion": "Una VPN cifra el tráfico en tránsito, de modo que los datos interceptados no puedan interpretarse sin la clave.",
+      "dominio": 2
     },
     {
       "pregunta": "John solo puede acceder a la red desde su domicilio o su puesto de trabajo. Durante sus vacaciones intenta iniciar sesión y se le deniega el acceso. ¿Qué representa esta situación?",
@@ -955,7 +1068,8 @@
         "Integridad"
       ],
       "respuesta": 0,
-      "explicacion": "Una política de control de acceso puede restringir las solicitudes según atributos contextuales como la ubicación."
+      "explicacion": "Una política de control de acceso puede restringir las solicitudes según atributos contextuales como la ubicación.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es el objetivo principal de utilizar Multi-Factor Authentication (MFA) para proteger cuentas de usuario?",
@@ -966,7 +1080,8 @@
         "Aumentar la seguridad del proceso de autenticación"
       ],
       "respuesta": 3,
-      "explicacion": "MFA exige dos o más tipos independientes de prueba, dificultando el acceso aunque uno de ellos sea comprometido."
+      "explicacion": "MFA exige dos o más tipos independientes de prueba, dificultando el acceso aunque uno de ellos sea comprometido.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el mejor ejemplo de aplicación del principio de mínimo privilegio?",
@@ -977,7 +1092,8 @@
         "Permitir acceso sin restricciones a todos los archivos del departamento"
       ],
       "respuesta": 1,
-      "explicacion": "El mínimo privilegio concede exclusivamente los permisos necesarios para realizar las tareas asignadas."
+      "explicacion": "El mínimo privilegio concede exclusivamente los permisos necesarios para realizar las tareas asignadas.",
+      "dominio": 3
     },
     {
       "pregunta": "Un desarrollador necesita ejecutar una corrección puntual de datos en producción mediante acceso Just-in-Time (JIT). ¿Qué debe ocurrir antes de conceder los permisos elevados?",
@@ -988,7 +1104,8 @@
         "El desarrollador instala actualizaciones de protección en su equipo"
       ],
       "respuesta": 1,
-      "explicacion": "JIT requiere autorización previa vinculada a una necesidad, un alcance y una duración concretos."
+      "explicacion": "JIT requiere autorización previa vinculada a una necesidad, un alcance y una duración concretos.",
+      "dominio": 4
     },
     {
       "pregunta": "Una nueva normativa exige cifrar determinados datos de clientes en reposo. ¿Qué secuencia refleja mejor la cooperación entre gobierno, riesgo y cumplimiento (GRC)?",
@@ -999,7 +1116,8 @@
         "Gobierno emite una declaración general, cumplimiento la aplica y riesgo queda excluido"
       ],
       "respuesta": 0,
-      "explicacion": "La obligación debe identificarse, evaluarse en términos de riesgo, aprobarse mediante gobierno y convertirse después en procedimientos y controles."
+      "explicacion": "La obligación debe identificarse, evaluarse en términos de riesgo, aprobarse mediante gobierno y convertirse después en procedimientos y controles.",
+      "dominio": 3
     },
     {
       "pregunta": "Se han detectado puntos de acceso no autorizados conectados por empleados a la red corporativa. ¿Qué estrategia mitiga mejor este riesgo?",
@@ -1010,7 +1128,8 @@
         "Exigir VPN para todas las conexiones remotas"
       ],
       "respuesta": 2,
-      "explicacion": "La seguridad de puertos impide que dispositivos no autorizados, como puntos de acceso rogue, se conecten a los switches."
+      "explicacion": "La seguridad de puertos impide que dispositivos no autorizados, como puntos de acceso rogue, se conecten a los switches.",
+      "dominio": 5
     },
     {
       "pregunta": "Un ingeniero explica que detener un ataque en cualquiera de sus etapas puede impedir que alcance fases posteriores, como command-and-control o robo de datos. ¿Qué modelo describe?",
@@ -1021,7 +1140,8 @@
         "Zero Trust Architecture"
       ],
       "respuesta": 0,
-      "explicacion": "Cyber Kill Chain representa el ataque como una secuencia de fases y plantea que romper un eslabón puede interrumpir toda la operación."
+      "explicacion": "Cyber Kill Chain representa el ataque como una secuencia de fases y plantea que romper un eslabón puede interrumpir toda la operación.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes es la forma MENOS eficaz de prevenir ataques de phishing?",
@@ -1032,7 +1152,8 @@
         "Limitarse a ignorar los correos sospechosos y no abrir enlaces ni adjuntos"
       ],
       "respuesta": 3,
-      "explicacion": "Depender únicamente de que el usuario ignore mensajes sospechosos no ofrece una defensa suficiente frente a campañas convincentes."
+      "explicacion": "Depender únicamente de que el usuario ignore mensajes sospechosos no ofrece una defensa suficiente frente a campañas convincentes.",
+      "dominio": 5
     },
     {
       "pregunta": "¿En qué orden se clasifican los sitios de recuperación desde el coste más alto hasta el más bajo?",
@@ -1043,7 +1164,8 @@
         "Redundante > caliente > templado > frío"
       ],
       "respuesta": 3,
-      "explicacion": "Un sitio redundante mantiene la máxima preparación, seguido del caliente, el templado y finalmente el frío."
+      "explicacion": "Un sitio redundante mantiene la máxima preparación, seguido del caliente, el templado y finalmente el frío.",
+      "dominio": 5
     },
     {
       "pregunta": "En el modelo TCP/IP, ¿de qué capa son unidades de datos de protocolo (PDU) los paquetes?",
@@ -1054,7 +1176,8 @@
         "Aplicación"
       ],
       "respuesta": 1,
-      "explicacion": "La capa de Internet o interredes utiliza paquetes IP para direccionar y enrutar datos entre redes."
+      "explicacion": "La capa de Internet o interredes utiliza paquetes IP para direccionar y enrutar datos entre redes.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Cuál es una ventaja clave de un Host-based Intrusion Prevention System (HIPS) frente a un Network-based Intrusion Prevention System (NIPS)?",
@@ -1065,7 +1188,8 @@
         "Un HIPS siempre es más fácil de administrar"
       ],
       "respuesta": 2,
-      "explicacion": "Al ejecutarse en el propio host, HIPS puede observar y bloquear procesos y actividades locales que podrían no ser visibles para NIPS."
+      "explicacion": "Al ejecutarse en el propio host, HIPS puede observar y bloquear procesos y actividades locales que podrían no ser visibles para NIPS.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál es el PRIMER paso de un Disaster Recovery Plan (DRP)?",
@@ -1076,7 +1200,8 @@
         "Desarrollar un plan de pruebas"
       ],
       "respuesta": 2,
-      "explicacion": "Primero deben identificarse las funciones críticas para determinar qué sistemas y procesos deben recuperarse con mayor prioridad."
+      "explicacion": "Primero deben identificarse las funciones críticas para determinar qué sistemas y procesos deben recuperarse con mayor prioridad.",
+      "dominio": 3
     }
   ]
 }

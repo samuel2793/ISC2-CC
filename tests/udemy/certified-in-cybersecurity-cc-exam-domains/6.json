@@ -12,7 +12,8 @@
         "Autenticación"
       ],
       "respuesta": 1,
-      "explicacion": "Las firmas digitales proporcionan autenticación del origen, integridad y no repudio, pero no cifran el contenido ni garantizan su confidencialidad."
+      "explicacion": "Las firmas digitales proporcionan autenticación del origen, integridad y no repudio, pero no cifran el contenido ni garantizan su confidencialidad.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es la forma más eficiente y efectiva de probar un plan de continuidad de negocio?",
@@ -23,7 +24,8 @@
         "Revisiones"
       ],
       "respuesta": 0,
-      "explicacion": "Las simulaciones reproducen de forma práctica los procedimientos de continuidad y permiten evaluar su funcionamiento en condiciones cercanas a un incidente real."
+      "explicacion": "Las simulaciones reproducen de forma práctica los procedimientos de continuidad y permiten evaluar su funcionamiento en condiciones cercanas a un incidente real.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Cuál tiene como objetivo PRINCIPAL identificar y priorizar los procesos empresariales críticos?",
@@ -34,7 +36,8 @@
         "Plan de Recuperación ante Desastres"
       ],
       "respuesta": 1,
-      "explicacion": "El Análisis de Impacto en el Negocio (BIA) determina la criticidad de las actividades empresariales y de los recursos asociados."
+      "explicacion": "El Análisis de Impacto en el Negocio (BIA) determina la criticidad de las actividades empresariales y de los recursos asociados.",
+      "dominio": 2
     },
     {
       "pregunta": "El conjunto predeterminado de instrucciones o procedimientos para mantener las operaciones empresariales después de un desastre se conoce habitualmente como:",
@@ -45,7 +48,8 @@
         "Plan de Recuperación ante Desastres"
       ],
       "respuesta": 0,
-      "explicacion": "El Plan de Continuidad de Negocio (BCP) establece cómo se mantendrán los procesos esenciales durante y después de una interrupción significativa."
+      "explicacion": "El Plan de Continuidad de Negocio (BCP) establece cómo se mantendrán los procesos esenciales durante y después de una interrupción significativa.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Cuál es el objetivo PRINCIPAL de un Plan de Recuperación ante Desastres?",
@@ -56,13 +60,20 @@
         "Definir un procedimiento seguro de evacuación para el personal"
       ],
       "respuesta": 0,
-      "explicacion": "El Plan de Recuperación ante Desastres (DRP) busca restaurar los sistemas y las operaciones al último estado fiable conocido."
+      "explicacion": "El Plan de Recuperación ante Desastres (DRP) busca restaurar los sistemas y las operaciones al último estado fiable conocido.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un posible modelo para un Equipo de Respuesta a Incidentes (IRT)?",
-      "opciones": ["Aprovechado", "Dedicado", "Híbrido", "Preexistente"],
+      "opciones": [
+        "Aprovechado",
+        "Dedicado",
+        "Híbrido",
+        "Preexistente"
+      ],
       "respuesta": 3,
-      "explicacion": "Los modelos aceptados incluyen equipos aprovechados, dedicados e híbridos; «preexistente» no constituye un modelo formal de IRT."
+      "explicacion": "Los modelos aceptados incluyen equipos aprovechados, dedicados e híbridos; «preexistente» no constituye un modelo formal de IRT.",
+      "dominio": 2
     },
     {
       "pregunta": "Tras un terremoto que interrumpe las operaciones, ¿qué documento contiene los procedimientos necesarios para devolver el negocio a su funcionamiento normal?",
@@ -73,7 +84,8 @@
         "El Plan de Recuperación ante Desastres"
       ],
       "respuesta": 3,
-      "explicacion": "El Plan de Recuperación ante Desastres contiene los procedimientos para restaurar los sistemas y recuperar la operación normal."
+      "explicacion": "El Plan de Recuperación ante Desastres contiene los procedimientos para restaurar los sistemas y recuperar la operación normal.",
+      "dominio": 2
     },
     {
       "pregunta": "En caso de desastre, ¿cuál debe ser el objetivo PRINCIPAL? (★)",
@@ -84,7 +96,8 @@
         "Garantizar la continuidad de los sistemas críticos"
       ],
       "respuesta": 0,
-      "explicacion": "La protección de la vida y la seguridad de las personas siempre tiene prioridad sobre los sistemas, los datos y la continuidad operativa."
+      "explicacion": "La protección de la vida y la seguridad de las personas siempre tiene prioridad sobre los sistemas, los datos y la continuidad operativa.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué concepto describe una estrategia de seguridad de la información que integra personas, tecnología y operaciones para establecer controles en múltiples capas de la organización?",
@@ -95,7 +108,8 @@
         "Cuentas privilegiadas"
       ],
       "respuesta": 0,
-      "explicacion": "La defensa en profundidad combina varias capas de controles para que el fallo de una medida no comprometa por completo la seguridad."
+      "explicacion": "La defensa en profundidad combina varias capas de controles para que el fallo de una medida no comprometa por completo la seguridad.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué principio de seguridad establece que un usuario solo debe disponer de los permisos necesarios para ejecutar una tarea?",
@@ -106,7 +120,8 @@
         "Cuentas privilegiadas"
       ],
       "respuesta": 2,
-      "explicacion": "El principio de mínimo privilegio limita los permisos de cada sujeto a los estrictamente necesarios para realizar sus funciones."
+      "explicacion": "El principio de mínimo privilegio limita los permisos de cada sujeto a los estrictamente necesarios para realizar sus funciones.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál de los siguientes principios tiene como objetivo principal la detección del fraude?",
@@ -117,7 +132,8 @@
         "Cuentas privilegiadas"
       ],
       "respuesta": 0,
-      "explicacion": "La separación de funciones exige la intervención de varias personas, lo que dificulta que una sola cometa y oculte errores o fraudes."
+      "explicacion": "La separación de funciones exige la intervención de varias personas, lo que dificulta que una sola cometa y oculte errores o fraudes.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué tipo de usuario tiene MENOS probabilidades de disponer de una cuenta privilegiada?",
@@ -128,25 +144,44 @@
         "Personal de soporte técnico"
       ],
       "respuesta": 0,
-      "explicacion": "Los trabajadores externos normalmente no deben recibir cuentas privilegiadas debido al mayor riesgo de uso indebido."
+      "explicacion": "Los trabajadores externos normalmente no deben recibir cuentas privilegiadas debido al mayor riesgo de uso indebido.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué control de acceso es más eficaz para proteger una puerta contra accesos no autorizados?",
-      "opciones": ["Vallas", "Barreras", "Torniquetes", "Cerraduras"],
+      "opciones": [
+        "Vallas",
+        "Barreras",
+        "Torniquetes",
+        "Cerraduras"
+      ],
       "respuesta": 3,
-      "explicacion": "Una cerradura impide directamente abrir la puerta y restringe su uso a quien posea el mecanismo de autorización correspondiente."
+      "explicacion": "Una cerradura impide directamente abrir la puerta y restringe su uso a quien posea el mecanismo de autorización correspondiente.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué control de acceso físico sería MÁS eficaz contra el tailgating?",
-      "opciones": ["Vallas", "Barreras", "Torniquetes", "Cerraduras"],
+      "opciones": [
+        "Vallas",
+        "Barreras",
+        "Torniquetes",
+        "Cerraduras"
+      ],
       "respuesta": 2,
-      "explicacion": "Los torniquetes permiten el paso de una sola persona por cada autorización, reduciendo el riesgo de que otra entre detrás sin acreditarse."
+      "explicacion": "Los torniquetes permiten el paso de una sola persona por cada autorización, reduciendo el riesgo de que otra entre detrás sin acreditarse.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál de los siguientes es un control de detección?",
-      "opciones": ["Sensores de humo", "Firewalls", "Bolardos", "Torniquetes"],
+      "opciones": [
+        "Sensores de humo",
+        "Firewalls",
+        "Bolardos",
+        "Torniquetes"
+      ],
       "respuesta": 0,
-      "explicacion": "Los sensores de humo detectan cambios ambientales asociados a un incendio y generan una alerta."
+      "explicacion": "Los sensores de humo detectan cambios ambientales asociados a un incendio y generan una alerta.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál de los siguientes es un ejemplo de 2FA?",
@@ -157,37 +192,68 @@
         "Llaves"
       ],
       "respuesta": 0,
-      "explicacion": "Una OTP suele combinarse con una contraseña principal, utilizando dos factores distintos: algo que se posee y algo que se conoce."
+      "explicacion": "Una OTP suele combinarse con una contraseña principal, utilizando dos factores distintos: algo que se posee y algo que se conoce.",
+      "dominio": 3
     },
     {
       "pregunta": "El modelo de control de acceso Bell-LaPadula es una forma de: (★)",
-      "opciones": ["MAC", "DAC", "ABAC", "RBAC"],
+      "opciones": [
+        "MAC",
+        "DAC",
+        "ABAC",
+        "RBAC"
+      ],
       "respuesta": 0,
-      "explicacion": "Bell-LaPadula aplica niveles obligatorios de seguridad que los usuarios no pueden modificar, por lo que es un modelo MAC."
+      "explicacion": "Bell-LaPadula aplica niveles obligatorios de seguridad que los usuarios no pueden modificar, por lo que es un modelo MAC.",
+      "dominio": 3
     },
     {
       "pregunta": "¿En cuál de los siguientes modelos de control de acceso puede el creador de un objeto delegar permisos?",
-      "opciones": ["MAC", "DAC", "ABAC", "RBAC"],
+      "opciones": [
+        "MAC",
+        "DAC",
+        "ABAC",
+        "RBAC"
+      ],
       "respuesta": 1,
-      "explicacion": "En DAC, el propietario o creador del recurso decide quién puede acceder y puede delegar permisos a otros usuarios."
+      "explicacion": "En DAC, el propietario o creador del recurso decide quién puede acceder y puede delegar permisos a otros usuarios.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué modelo de control de acceso puede conceder acceso a un objeto basándose en reglas complejas?",
-      "opciones": ["MAC", "DAC", "ABAC", "RBAC"],
+      "opciones": [
+        "MAC",
+        "DAC",
+        "ABAC",
+        "RBAC"
+      ],
       "respuesta": 2,
-      "explicacion": "ABAC evalúa atributos del usuario, del recurso y del entorno mediante políticas capaces de expresar reglas complejas."
+      "explicacion": "ABAC evalúa atributos del usuario, del recurso y del entorno mediante políticas capaces de expresar reglas complejas.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué modelo de control de acceso determina el acceso a un objeto según el rol del sujeto en la organización?",
-      "opciones": ["RBAC", "MAC", "DAC", "ABAC"],
+      "opciones": [
+        "RBAC",
+        "MAC",
+        "DAC",
+        "ABAC"
+      ],
       "respuesta": 0,
-      "explicacion": "RBAC asigna permisos a roles organizativos y concede a cada usuario los permisos asociados a su rol."
+      "explicacion": "RBAC asigna permisos a roles organizativos y concede a cada usuario los permisos asociados a su rol.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuántas capas tiene el modelo OSI?",
-      "opciones": ["4", "6", "5", "7"],
+      "opciones": [
+        "4",
+        "6",
+        "5",
+        "7"
+      ],
       "respuesta": 3,
-      "explicacion": "El modelo OSI tiene siete capas: física, enlace de datos, red, transporte, sesión, presentación y aplicación."
+      "explicacion": "El modelo OSI tiene siete capas: física, enlace de datos, red, transporte, sesión, presentación y aplicación.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuáles son los tres paquetes utilizados en el establecimiento de una conexión TCP? (★)",
@@ -198,25 +264,44 @@
         "Discover → Offer → Request"
       ],
       "respuesta": 0,
-      "explicacion": "TCP establece la conexión mediante un saludo de tres vías compuesto por SYN, SYN/ACK y ACK."
+      "explicacion": "TCP establece la conexión mediante un saludo de tres vías compuesto por SYN, SYN/ACK y ACK.",
+      "dominio": 4
     },
     {
       "pregunta": "Si no existe una restricción de tiempo, ¿qué protocolo debe utilizarse para establecer una conexión fiable entre dos dispositivos?",
-      "opciones": ["TCP", "DHCP", "SNMP", "UDP"],
+      "opciones": [
+        "TCP",
+        "DHCP",
+        "SNMP",
+        "UDP"
+      ],
       "respuesta": 0,
-      "explicacion": "TCP proporciona entrega fiable, ordenada y verificada, aunque introduce más sobrecarga que UDP."
+      "explicacion": "TCP proporciona entrega fiable, ordenada y verificada, aunque introduce más sobrecarga que UDP.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué protocolo utiliza un saludo de tres vías para establecer una conexión fiable?",
-      "opciones": ["TCP", "SMTP", "SNMP", "UDP"],
+      "opciones": [
+        "TCP",
+        "SMTP",
+        "SNMP",
+        "UDP"
+      ],
       "respuesta": 0,
-      "explicacion": "TCP utiliza la secuencia SYN, SYN-ACK y ACK para sincronizar los extremos antes de transmitir datos."
+      "explicacion": "TCP utiliza la secuencia SYN, SYN-ACK y ACK para sincronizar los extremos antes de transmitir datos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué puerto se utiliza para proteger las comunicaciones web mediante HTTPS?",
-      "opciones": ["25", "69", "443", "80"],
+      "opciones": [
+        "25",
+        "69",
+        "443",
+        "80"
+      ],
       "respuesta": 2,
-      "explicacion": "HTTPS utiliza normalmente el puerto TCP 443 para transmitir tráfico web protegido mediante TLS."
+      "explicacion": "HTTPS utiliza normalmente el puerto TCP 443 para transmitir tráfico web protegido mediante TLS.",
+      "dominio": 4
     },
     {
       "pregunta": "La dirección 8be2:4382:8d84:7ce2:ec0f:3908:d29a:903a es una:",
@@ -227,7 +312,8 @@
         "Dirección web"
       ],
       "respuesta": 1,
-      "explicacion": "Una dirección IPv6 contiene 128 bits y suele representarse mediante ocho grupos de valores hexadecimales."
+      "explicacion": "Una dirección IPv6 contiene 128 bits y suele representarse mediante ocho grupos de valores hexadecimales.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes es una dirección IP pública?",
@@ -238,19 +324,32 @@
         "13.16.123.1"
       ],
       "respuesta": 3,
-      "explicacion": "13.16.123.1 no pertenece a los rangos privados 10.0.0.0/8, 172.16.0.0/12 ni 192.168.0.0/16."
+      "explicacion": "13.16.123.1 no pertenece a los rangos privados 10.0.0.0/8, 172.16.0.0/12 ni 192.168.0.0/16.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué dispositivos serían más eficaces para detectar una intrusión en una red?",
-      "opciones": ["Firewalls", "Routers", "NIDS", "HIDS"],
+      "opciones": [
+        "Firewalls",
+        "Routers",
+        "NIDS",
+        "HIDS"
+      ],
       "respuesta": 2,
-      "explicacion": "Un NIDS analiza el tráfico de toda la red en busca de firmas, anomalías y patrones asociados a intrusiones."
+      "explicacion": "Un NIDS analiza el tráfico de toda la red en busca de firmas, anomalías y patrones asociados a intrusiones.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué sistemas tienen como objetivo PRINCIPAL recopilar y analizar eventos de seguridad?",
-      "opciones": ["Firewalls", "Routers", "Hubs", "SIEM"],
+      "opciones": [
+        "Firewalls",
+        "Routers",
+        "Hubs",
+        "SIEM"
+      ],
       "respuesta": 3,
-      "explicacion": "Un SIEM centraliza registros y eventos de múltiples fuentes para correlacionarlos y generar información de seguridad procesable."
+      "explicacion": "Un SIEM centraliza registros y eventos de múltiples fuentes para correlacionarlos y generar información de seguridad procesable.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué significa SIEM?",
@@ -261,31 +360,56 @@
         "Security Information and Event Management"
       ],
       "respuesta": 3,
-      "explicacion": "SIEM significa Security Information and Event Management y se refiere a la centralización, correlación y análisis de información y eventos de seguridad."
+      "explicacion": "SIEM significa Security Information and Event Management y se refiere a la centralización, correlación y análisis de información y eventos de seguridad.",
+      "dominio": 5
     },
     {
       "pregunta": "Los correos maliciosos dirigidos contra ejecutivos de una empresa son un ejemplo de:",
-      "opciones": ["Phishing", "Whaling", "Rootkits", "Troyanos"],
+      "opciones": [
+        "Phishing",
+        "Whaling",
+        "Rootkits",
+        "Troyanos"
+      ],
       "respuesta": 1,
-      "explicacion": "El whaling es una modalidad de phishing dirigida específicamente a altos cargos y personas con capacidad de decisión."
+      "explicacion": "El whaling es una modalidad de phishing dirigida específicamente a altos cargos y personas con capacidad de decisión.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de los siguientes ataques aprovecha una validación deficiente de las entradas en sitios web?",
-      "opciones": ["Phishing", "Cross-Site Scripting", "Rootkits", "Troyanos"],
+      "opciones": [
+        "Phishing",
+        "Cross-Site Scripting",
+        "Rootkits",
+        "Troyanos"
+      ],
       "respuesta": 1,
-      "explicacion": "XSS aprovecha entradas no validadas o no escapadas para inyectar scripts que se ejecutan en el navegador de otros usuarios."
+      "explicacion": "XSS aprovecha entradas no validadas o no escapadas para inyectar scripts que se ejecutan en el navegador de otros usuarios.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tipo de ataque incorpora una carga maliciosa dentro de un software aparentemente legítimo o de confianza?",
-      "opciones": ["Phishing", "Cross-Site Scripting", "Rootkits", "Troyanos"],
+      "opciones": [
+        "Phishing",
+        "Cross-Site Scripting",
+        "Rootkits",
+        "Troyanos"
+      ],
       "respuesta": 3,
-      "explicacion": "Un troyano se presenta como software legítimo, pero contiene funciones maliciosas ocultas."
+      "explicacion": "Un troyano se presenta como software legítimo, pero contiene funciones maliciosas ocultas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tipo de ataque permite con mayor eficacia mantener acceso privilegiado, como root en Unix/Linux, mientras oculta su presencia?",
-      "opciones": ["Phishing", "Cross-Site Scripting", "Rootkits", "Troyanos"],
+      "opciones": [
+        "Phishing",
+        "Cross-Site Scripting",
+        "Rootkits",
+        "Troyanos"
+      ],
       "respuesta": 2,
-      "explicacion": "Un rootkit está diseñado para mantener acceso de máximo privilegio y ocultar procesos, archivos y actividades maliciosas."
+      "explicacion": "Un rootkit está diseñado para mantener acceso de máximo privilegio y ocultar procesos, archivos y actividades maliciosas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes propiedades NO está garantizada por las firmas digitales?",
@@ -296,7 +420,8 @@
         "Autenticación"
       ],
       "respuesta": 1,
-      "explicacion": "Una firma digital garantiza autenticidad, integridad y no repudio, pero no impide que terceros conozcan el contenido firmado."
+      "explicacion": "Una firma digital garantiza autenticidad, integridad y no repudio, pero no impide que terceros conozcan el contenido firmado.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes áreas está especialmente relacionada con la PII?",
@@ -307,7 +432,8 @@
         "Integridad"
       ],
       "respuesta": 1,
-      "explicacion": "La información de identificación personal (PII) requiere especialmente confidencialidad para evitar su divulgación a personas no autorizadas."
+      "explicacion": "La información de identificación personal (PII) requiere especialmente confidencialidad para evitar su divulgación a personas no autorizadas.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál es la propiedad más distintiva de la información de salud protegida (PHI)?",
@@ -318,7 +444,8 @@
         "No repudio"
       ],
       "respuesta": 1,
-      "explicacion": "La PHI debe mantenerse confidencial y accesible únicamente para las personas autorizadas que necesiten tratarla."
+      "explicacion": "La PHI debe mantenerse confidencial y accesible únicamente para las personas autorizadas que necesiten tratarla.",
+      "dominio": 1
     },
     {
       "pregunta": "La sensibilidad es una medida de:",
@@ -329,7 +456,8 @@
         "La urgencia y protección asignadas a la información por su propietario"
       ],
       "respuesta": 0,
-      "explicacion": "La sensibilidad representa la importancia que el propietario atribuye a la información y el nivel de protección que necesita."
+      "explicacion": "La sensibilidad representa la importancia que el propietario atribuye a la información y el nivel de protección que necesita.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué concepto de ciberseguridad garantiza que la información sea accesible únicamente para quienes están autorizados?",
@@ -340,7 +468,8 @@
         "Accesibilidad"
       ],
       "respuesta": 2,
-      "explicacion": "La confidencialidad evita que la información se divulgue o quede disponible para personas o sistemas no autorizados."
+      "explicacion": "La confidencialidad evita que la información se divulgue o quede disponible para personas o sistemas no autorizados.",
+      "dominio": 1
     },
     {
       "pregunta": "El proceso de verificar o demostrar la identidad de un usuario se conoce como:",
@@ -351,13 +480,20 @@
         "Integridad"
       ],
       "respuesta": 1,
-      "explicacion": "La autenticación verifica la identidad declarada de un usuario, proceso o dispositivo antes de conceder acceso."
+      "explicacion": "La autenticación verifica la identidad declarada de un usuario, proceso o dispositivo antes de conceder acceso.",
+      "dominio": 1
     },
     {
       "pregunta": "La magnitud del daño esperado como consecuencia de la divulgación, modificación, destrucción o pérdida no autorizada de información se conoce como:",
-      "opciones": ["Impacto", "Probabilidad", "Amenaza", "Vulnerabilidad"],
+      "opciones": [
+        "Impacto",
+        "Probabilidad",
+        "Amenaza",
+        "Vulnerabilidad"
+      ],
       "respuesta": 0,
-      "explicacion": "El impacto expresa la gravedad de las consecuencias que tendría la materialización de un incidente."
+      "explicacion": "El impacto expresa la gravedad de las consecuencias que tendría la materialización de un incidente.",
+      "dominio": 1
     },
     {
       "pregunta": "La gestión de riesgos es:",
@@ -368,7 +504,8 @@
         "La creación de un equipo de respuesta a incidentes"
       ],
       "respuesta": 0,
-      "explicacion": "La gestión de riesgos comprende identificar los riesgos, analizarlos y priorizar las acciones necesarias para tratarlos."
+      "explicacion": "La gestión de riesgos comprende identificar los riesgos, analizarlos y priorizar las acciones necesarias para tratarlos.",
+      "dominio": 1
     },
     {
       "pregunta": "Una entidad que actúa para explotar las vulnerabilidades de los sistemas de una organización objetivo es un:",
@@ -379,13 +516,20 @@
         "Amenaza"
       ],
       "respuesta": 0,
-      "explicacion": "Un actor de amenaza es la persona o el grupo que inicia o ejecuta acciones destinadas a explotar vulnerabilidades."
+      "explicacion": "Un actor de amenaza es la persona o el grupo que inicia o ejecuta acciones destinadas a explotar vulnerabilidades.",
+      "dominio": 1
     },
     {
       "pregunta": "Una debilidad o fallo explotable en un sistema o componente es una:",
-      "opciones": ["Vulnerabilidad", "Amenaza", "Riesgo", "Error de software"],
+      "opciones": [
+        "Vulnerabilidad",
+        "Amenaza",
+        "Riesgo",
+        "Error de software"
+      ],
       "respuesta": 0,
-      "explicacion": "Una vulnerabilidad es una debilidad técnica, organizativa o procedimental que puede ser aprovechada por una amenaza."
+      "explicacion": "Una vulnerabilidad es una debilidad técnica, organizativa o procedimental que puede ser aprovechada por una amenaza.",
+      "dominio": 1
     },
     {
       "pregunta": "En relación con la gestión de riesgos, ¿cuál de las siguientes opciones debe priorizarse?",
@@ -396,7 +540,8 @@
         "Probabilidad de ocurrencia baja e impacto potencial bajo"
       ],
       "respuesta": 0,
-      "explicacion": "Los riesgos de impacto elevado pueden causar consecuencias graves aunque su probabilidad o frecuencia sea reducida."
+      "explicacion": "Los riesgos de impacto elevado pueden causar consecuencias graves aunque su probabilidad o frecuencia sea reducida.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un ejemplo de control de seguridad físico?",
@@ -407,7 +552,8 @@
         "Cerraduras electrónicas con control remoto"
       ],
       "respuesta": 2,
-      "explicacion": "Un firewall es un control técnico que filtra tráfico de red, no un control destinado a proteger físicamente instalaciones."
+      "explicacion": "Un firewall es un control técnico que filtra tráfico de red, no un control destinado a proteger físicamente instalaciones.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál de los siguientes es un ejemplo de control de seguridad técnico?",
@@ -418,7 +564,8 @@
         "Torniquetes"
       ],
       "respuesta": 0,
-      "explicacion": "Las listas de control de acceso (ACL) aplican reglas técnicas para determinar qué sujetos pueden utilizar determinados recursos."
+      "explicacion": "Las listas de control de acceso (ACL) aplican reglas técnicas para determinar qué sujetos pueden utilizar determinados recursos.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de los siguientes es un ejemplo de control de seguridad administrativo?",
@@ -429,7 +576,8 @@
         "Señales de prohibido el paso"
       ],
       "respuesta": 1,
-      "explicacion": "Las políticas de uso aceptable establecen normas y responsabilidades organizativas para el uso de sistemas y recursos."
+      "explicacion": "Las políticas de uso aceptable establecen normas y responsabilidades organizativas para el uso de sistemas y recursos.",
+      "dominio": 1
     },
     {
       "pregunta": "La implantación de controles de seguridad es una forma de:",
@@ -440,7 +588,8 @@
         "Transferencia del riesgo"
       ],
       "respuesta": 2,
-      "explicacion": "La mitigación reduce la probabilidad o el impacto de un riesgo mediante salvaguardas y controles."
+      "explicacion": "La mitigación reduce la probabilidad o el impacto de un riesgo mediante salvaguardas y controles.",
+      "dominio": 1
     },
     {
       "pregunta": "Cuando una empresa contrata un seguro para gestionar un riesgo, ¿qué técnica está aplicando?",
@@ -451,7 +600,8 @@
         "Tolerancia al riesgo"
       ],
       "respuesta": 0,
-      "explicacion": "El seguro transfiere a un tercero parte de las consecuencias financieras asociadas a la materialización del riesgo."
+      "explicacion": "El seguro transfiere a un tercero parte de las consecuencias financieras asociadas a la materialización del riesgo.",
+      "dominio": 1
     },
     {
       "pregunta": "Una salvaguarda de seguridad equivale a un:",
@@ -462,7 +612,8 @@
         "Control de seguridad física personal"
       ],
       "respuesta": 1,
-      "explicacion": "Una salvaguarda o control de seguridad es una medida utilizada para eliminar o reducir los riesgos que afectan a un sistema."
+      "explicacion": "Una salvaguarda o control de seguridad es una medida utilizada para eliminar o reducir los riesgos que afectan a un sistema.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un tipo de control de seguridad?",
@@ -473,7 +624,8 @@
         "Controles de almacenamiento"
       ],
       "respuesta": 3,
-      "explicacion": "Los controles pueden ser específicos del sistema, comunes o híbridos; «controles de almacenamiento» no es una categoría de este modelo."
+      "explicacion": "Los controles pueden ser específicos del sistema, comunes o híbridos; «controles de almacenamiento» no es una categoría de este modelo.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué tipo de control de seguridad es un lector biométrico que permite acceder al edificio del centro de datos?",
@@ -484,19 +636,32 @@
         "Control de autorización"
       ],
       "respuesta": 0,
-      "explicacion": "El lector regula el acceso físico a una instalación, por lo que se clasifica como control físico."
+      "explicacion": "El lector regula el acceso físico a una instalación, por lo que se clasifica como control físico.",
+      "dominio": 3
     },
     {
       "pregunta": "Los pasos detallados para completar tareas que respaldan políticas departamentales u organizativas suelen documentarse en:",
-      "opciones": ["Procedimientos", "Políticas", "Regulaciones", "Estándares"],
+      "opciones": [
+        "Procedimientos",
+        "Políticas",
+        "Regulaciones",
+        "Estándares"
+      ],
       "respuesta": 0,
-      "explicacion": "Los procedimientos describen paso a paso cómo ejecutar tareas concretas de acuerdo con las políticas aplicables."
+      "explicacion": "Los procedimientos describen paso a paso cómo ejecutar tareas concretas de acuerdo con las políticas aplicables.",
+      "dominio": 1
     },
     {
       "pregunta": "Los gobiernos pueden imponer sanciones económicas como consecuencia del incumplimiento de una:",
-      "opciones": ["Regulación", "Norma", "Política", "Procedimiento"],
+      "opciones": [
+        "Regulación",
+        "Norma",
+        "Política",
+        "Procedimiento"
+      ],
       "respuesta": 0,
-      "explicacion": "Las regulaciones son requisitos legales emitidos por autoridades públicas y su incumplimiento puede dar lugar a sanciones."
+      "explicacion": "Las regulaciones son requisitos legales emitidos por autoridades públicas y su incumplimiento puede dar lugar a sanciones.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de los siguientes documentos contiene elementos que NO son obligatorios?",
@@ -507,7 +672,8 @@
         "Regulaciones"
       ],
       "respuesta": 0,
-      "explicacion": "Las directrices contienen recomendaciones y buenas prácticas, pero normalmente no imponen requisitos obligatorios."
+      "explicacion": "Las directrices contienen recomendaciones y buenas prácticas, pero normalmente no imponen requisitos obligatorios.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un canon ético de ISC2?",
@@ -518,7 +684,8 @@
         "Promover y proteger la profesión"
       ],
       "respuesta": 2,
-      "explicacion": "El canon correcto exige prestar un servicio diligente y competente a los principales, no un servicio «activo y cualificado»."
+      "explicacion": "El canon correcto exige prestar un servicio diligente y competente a los principales, no un servicio «activo y cualificado».",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de los siguientes cánones aparece en el código ético de ISC2?",
@@ -529,7 +696,8 @@
         "Promover y promocionar la profesión"
       ],
       "respuesta": 1,
-      "explicacion": "«Prestar un servicio diligente y competente a los principales» reproduce correctamente uno de los cánones de ISC2."
+      "explicacion": "«Prestar un servicio diligente y competente a los principales» reproduce correctamente uno de los cánones de ISC2.",
+      "dominio": 1
     },
     {
       "pregunta": "Según el canon «Prestar un servicio diligente y competente a los principales», los profesionales de ISC2 deben:",
@@ -540,7 +708,8 @@
         "Promover la comprensión y aceptación de medidas prudentes de seguridad de la información"
       ],
       "respuesta": 1,
-      "explicacion": "Evitar conflictos de interés preserva la independencia, integridad y confianza necesarias para prestar un servicio profesional."
+      "explicacion": "Evitar conflictos de interés preserva la independencia, integridad y confianza necesarias para prestar un servicio profesional.",
+      "dominio": 1
     },
     {
       "pregunta": "En terminología de incidentes, Zero Day significa:",
@@ -551,7 +720,8 @@
         "Una vulnerabilidad del sistema previamente desconocida"
       ],
       "respuesta": 3,
-      "explicacion": "Una vulnerabilidad de día cero es desconocida o no dispone todavía de una corrección o defensa ampliamente disponible."
+      "explicacion": "Una vulnerabilidad de día cero es desconocida o no dispone todavía de una corrección o defensa ampliamente disponible.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuáles son los componentes de un plan de respuesta a incidentes?",
@@ -562,7 +732,8 @@
         "Preparación → Detección y análisis → Erradicación → Recuperación → Contención → Actividad posterior al incidente"
       ],
       "respuesta": 0,
-      "explicacion": "El ciclo habitual comprende preparación, detección y análisis, contención con erradicación y recuperación, y actividades posteriores al incidente."
+      "explicacion": "El ciclo habitual comprende preparación, detección y análisis, contención con erradicación y recuperación, y actividades posteriores al incidente.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Cuál de los siguientes tiene MENOS probabilidades de formar parte de un Equipo de Respuesta a Incidentes (IRT)?",
@@ -573,7 +744,8 @@
         "Recursos humanos"
       ],
       "respuesta": 3,
-      "explicacion": "Un IRT suele incluir dirección, seguridad, personal técnico, legal y comunicaciones; recursos humanos es menos habitual en su composición básica."
+      "explicacion": "Un IRT suele incluir dirección, seguridad, personal técnico, legal y comunicaciones; recursos humanos es menos habitual en su composición básica.",
+      "dominio": 2
     },
     {
       "pregunta": "¿En qué fase de un plan de respuesta a incidentes se priorizan las respuestas?",
@@ -584,7 +756,8 @@
         "Actividad posterior al incidente"
       ],
       "respuesta": 1,
-      "explicacion": "Durante la detección y el análisis se determina la gravedad, el alcance y el impacto del incidente para asignarle una prioridad."
+      "explicacion": "Durante la detección y el análisis se determina la gravedad, el alcance y el impacto del incidente para asignarle una prioridad.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué tipo de ataque tiene como objetivo PRINCIPAL controlar el sistema desde el exterior?",
@@ -595,7 +768,8 @@
         "Troyanos"
       ],
       "respuesta": 0,
-      "explicacion": "Una puerta trasera escucha órdenes externas y permite ejecutar acciones remotas en el sistema comprometido."
+      "explicacion": "Una puerta trasera escucha órdenes externas y permite ejecutar acciones remotas en el sistema comprometido.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de ataque intenta engañar al usuario para que revele información personal mediante un mensaje fraudulento?",
@@ -606,7 +780,8 @@
         "Troyanos"
       ],
       "respuesta": 0,
-      "explicacion": "El phishing utiliza comunicaciones fraudulentas que suplantan a entidades legítimas para obtener datos sensibles."
+      "explicacion": "El phishing utiliza comunicaciones fraudulentas que suplantan a entidades legítimas para obtener datos sensibles.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tipo de ataque tiene como objetivo PRINCIPAL hacer que un recurso sea inaccesible para sus usuarios legítimos?",
@@ -617,7 +792,8 @@
         "Troyanos"
       ],
       "respuesta": 2,
-      "explicacion": "Un ataque de denegación de servicio (DoS) agota o satura los recursos para impedir que las solicitudes legítimas sean atendidas."
+      "explicacion": "Un ataque de denegación de servicio (DoS) agota o satura los recursos para impedir que las solicitudes legítimas sean atendidas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de ataque tiene como objetivo PRINCIPAL cifrar dispositivos y datos y exigir después un rescate por la clave de descifrado?",
@@ -628,7 +804,8 @@
         "Troyanos"
       ],
       "respuesta": 2,
-      "explicacion": "El ransomware cifra archivos o sistemas y exige un pago a cambio de proporcionar una supuesta clave de recuperación."
+      "explicacion": "El ransomware cifra archivos o sistemas y exige un pago a cambio de proporcionar una supuesta clave de recuperación.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tipo de ataque intenta obtener información observando el consumo eléctrico de un dispositivo? (★)",
@@ -639,7 +816,8 @@
         "Troyanos"
       ],
       "respuesta": 0,
-      "explicacion": "Los ataques de canal lateral deducen información secreta a partir de señales físicas como consumo eléctrico, emisiones electromagnéticas o sonido."
+      "explicacion": "Los ataques de canal lateral deducen información secreta a partir de señales físicas como consumo eléctrico, emisiones electromagnéticas o sonido.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es una consecuencia de un ataque de denegación de servicio?",
@@ -650,19 +828,32 @@
         "Aumento de la disponibilidad de los recursos"
       ],
       "respuesta": 2,
-      "explicacion": "La sobrecarga de solicitudes consume capacidad de procesamiento, memoria, ancho de banda u otros recursos hasta degradar o interrumpir el servicio."
+      "explicacion": "La sobrecarga de solicitudes consume capacidad de procesamiento, memoria, ancho de banda u otros recursos hasta degradar o interrumpir el servicio.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes no es un protocolo de la capa 3 del modelo OSI?",
-      "opciones": ["IP", "ICMP", "IGMP", "SNMP"],
+      "opciones": [
+        "IP",
+        "ICMP",
+        "IGMP",
+        "SNMP"
+      ],
       "respuesta": 3,
-      "explicacion": "SNMP es un protocolo de la capa de aplicación, mientras que IP, ICMP e IGMP operan en la capa de red."
+      "explicacion": "SNMP es un protocolo de la capa de aplicación, mientras que IP, ICMP e IGMP operan en la capa de red.",
+      "dominio": 4
     },
     {
       "pregunta": "El protocolo SMTP opera en la capa OSI:",
-      "opciones": ["3", "7", "23", "25"],
+      "opciones": [
+        "3",
+        "7",
+        "23",
+        "25"
+      ],
       "respuesta": 1,
-      "explicacion": "SMTP es un protocolo de la capa 7 o capa de aplicación; el número 25 corresponde a uno de sus puertos, no a una capa OSI."
+      "explicacion": "SMTP es un protocolo de la capa 7 o capa de aplicación; el número 25 corresponde a uno de sus puertos, no a una capa OSI.",
+      "dominio": 4
     },
     {
       "pregunta": "Para saber si se permiten tabletas personales en la oficina, ¿qué política sería conveniente consultar?",
@@ -673,43 +864,80 @@
         "Política de gestión de cambios"
       ],
       "respuesta": 0,
-      "explicacion": "La política BYOD establece las condiciones para utilizar dispositivos personales en actividades y redes corporativas."
+      "explicacion": "La política BYOD establece las condiciones para utilizar dispositivos personales en actividades y redes corporativas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿En qué red debe situarse un servidor web que acepta solicitudes de clientes externos?",
-      "opciones": ["Intranet", "Red interna", "DMZ", "VPN"],
+      "opciones": [
+        "Intranet",
+        "Red interna",
+        "DMZ",
+        "VPN"
+      ],
       "respuesta": 2,
-      "explicacion": "La DMZ aloja servicios expuestos a Internet y los separa de la red interna mediante controles de seguridad."
+      "explicacion": "La DMZ aloja servicios expuestos a Internet y los separa de la red interna mediante controles de seguridad.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál sería la mejor opción si un administrador necesita controlar el acceso a una red?",
-      "opciones": ["NAC", "HIDS", "IDS", "SIEM"],
+      "opciones": [
+        "NAC",
+        "HIDS",
+        "IDS",
+        "SIEM"
+      ],
       "respuesta": 0,
-      "explicacion": "NAC verifica la identidad y el estado de cumplimiento de los dispositivos antes de permitirles acceder a los recursos de red."
+      "explicacion": "NAC verifica la identidad y el estado de cumplimiento de los dispositivos antes de permitirles acceder a los recursos de red.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué dispositivo se utiliza para conectar una LAN a Internet?",
-      "opciones": ["Router", "Firewall", "SIEM", "HIDS"],
+      "opciones": [
+        "Router",
+        "Firewall",
+        "SIEM",
+        "HIDS"
+      ],
       "respuesta": 0,
-      "explicacion": "Un router dirige paquetes entre redes distintas y puede actuar como puerta de enlace entre una LAN e Internet."
+      "explicacion": "Un router dirige paquetes entre redes distintas y puede actuar como puerta de enlace entre una LAN e Internet.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de dispositivo inspecciona la información de las cabeceras de los paquetes para permitir o denegar tráfico de red?",
-      "opciones": ["Firewalls", "Routers", "Hubs", "Switches"],
+      "opciones": [
+        "Firewalls",
+        "Routers",
+        "Hubs",
+        "Switches"
+      ],
       "respuesta": 0,
-      "explicacion": "Los firewalls comparan cabeceras, estados y otros datos del tráfico con reglas para decidir si permiten o bloquean cada comunicación."
+      "explicacion": "Los firewalls comparan cabeceras, estados y otros datos del tráfico con reglas para decidir si permiten o bloquean cada comunicación.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué modelo de nube permite acceder a recursos informáticos fundamentales? (★)",
-      "opciones": ["IaaS", "PaaS", "FaaS", "SaaS"],
+      "opciones": [
+        "IaaS",
+        "PaaS",
+        "FaaS",
+        "SaaS"
+      ],
       "respuesta": 0,
-      "explicacion": "IaaS proporciona capacidad de procesamiento, almacenamiento y red virtualizados sobre los que el cliente despliega sistemas y aplicaciones."
+      "explicacion": "IaaS proporciona capacidad de procesamiento, almacenamiento y red virtualizados sobre los que el cliente despliega sistemas y aplicaciones.",
+      "dominio": 4
     },
     {
       "pregunta": "¿En qué modelo de nube tiene el cliente MENOS responsabilidad sobre la infraestructura? (★)",
-      "opciones": ["IaaS", "PaaS", "FaaS", "SaaS"],
+      "opciones": [
+        "IaaS",
+        "PaaS",
+        "FaaS",
+        "SaaS"
+      ],
       "respuesta": 3,
-      "explicacion": "En SaaS, el proveedor gestiona la aplicación y prácticamente toda la infraestructura subyacente."
+      "explicacion": "En SaaS, el proveedor gestiona la aplicación y prácticamente toda la infraestructura subyacente.",
+      "dominio": 4
     },
     {
       "pregunta": "El modelo de despliegue en la nube en el que una empresa mantiene recursos locales y recursos en la nube se conoce como:",
@@ -720,7 +948,8 @@
         "Nube privada"
       ],
       "respuesta": 0,
-      "explicacion": "Una nube híbrida integra infraestructura local o privada con servicios de nube pública."
+      "explicacion": "Una nube híbrida integra infraestructura local o privada con servicios de nube pública.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué modelo de despliegue en la nube es adecuado para empresas con necesidades y preocupaciones similares?",
@@ -731,19 +960,32 @@
         "Nube privada"
       ],
       "respuesta": 1,
-      "explicacion": "Una nube comunitaria comparte infraestructura entre organizaciones con requisitos tecnológicos, operativos o regulatorios comunes."
+      "explicacion": "Una nube comunitaria comparte infraestructura entre organizaciones con requisitos tecnológicos, operativos o regulatorios comunes.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de estas herramientas se utiliza habitualmente para descifrar contraseñas? (★)",
-      "opciones": ["John the Ripper", "Wireshark", "Nslookup", "Burp Suite"],
+      "opciones": [
+        "John the Ripper",
+        "Wireshark",
+        "Nslookup",
+        "Burp Suite"
+      ],
       "respuesta": 0,
-      "explicacion": "John the Ripper es una herramienta de auditoría y recuperación de contraseñas que prueba hashes mediante diferentes técnicas."
+      "explicacion": "John the Ripper es una herramienta de auditoría y recuperación de contraseñas que prueba hashes mediante diferentes técnicas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué herramienta se utiliza habitualmente para capturar y analizar tráfico de red? (★)",
-      "opciones": ["John the Ripper", "Wireshark", "Nslookup", "Burp Suite"],
+      "opciones": [
+        "John the Ripper",
+        "Wireshark",
+        "Nslookup",
+        "Burp Suite"
+      ],
       "respuesta": 1,
-      "explicacion": "Wireshark captura paquetes y permite analizar protocolos, cabeceras y contenido del tráfico de red."
+      "explicacion": "Wireshark captura paquetes y permite analizar protocolos, cabeceras y contenido del tráfico de red.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tipo de clave puede utilizarse tanto para cifrar como para descifrar el mismo mensaje?",
@@ -754,19 +996,32 @@
         "Una clave asimétrica"
       ],
       "respuesta": 0,
-      "explicacion": "La criptografía simétrica utiliza la misma clave secreta para las operaciones de cifrado y descifrado."
+      "explicacion": "La criptografía simétrica utiliza la misma clave secreta para las operaciones de cifrado y descifrado.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes NO es una característica de una función hash criptográfica?",
-      "opciones": ["Útil", "Única", "Determinista", "Reversible"],
+      "opciones": [
+        "Útil",
+        "Única",
+        "Determinista",
+        "Reversible"
+      ],
       "respuesta": 3,
-      "explicacion": "Una función hash criptográfica debe ser unidireccional, por lo que no debe ser posible recuperar la entrada original a partir del hash."
+      "explicacion": "Una función hash criptográfica debe ser unidireccional, por lo que no debe ser posible recuperar la entrada original a partir del hash.",
+      "dominio": 5
     },
     {
       "pregunta": "La última fase del ciclo de seguridad de los datos es:",
-      "opciones": ["Copia de seguridad", "Archivado", "Destrucción", "Cifrado"],
+      "opciones": [
+        "Copia de seguridad",
+        "Archivado",
+        "Destrucción",
+        "Cifrado"
+      ],
       "respuesta": 2,
-      "explicacion": "La destrucción elimina los datos de forma que no puedan recuperarse cuando dejan de ser necesarios."
+      "explicacion": "La destrucción elimina los datos de forma que no puedan recuperarse cuando dejan de ser necesarios.",
+      "dominio": 5
     },
     {
       "pregunta": "Según ISC2, ¿cuáles son las seis fases del tratamiento de datos?",
@@ -777,13 +1032,20 @@
         "Crear → Compartir → Almacenar → Usar → Archivar → Destruir"
       ],
       "respuesta": 0,
-      "explicacion": "El ciclo de vida definido comprende creación, almacenamiento, uso, compartición, archivado y destrucción."
+      "explicacion": "El ciclo de vida definido comprende creación, almacenamiento, uso, compartición, archivado y destrucción.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuántas etiquetas de clasificación de datos se consideran manejables?",
-      "opciones": ["1-2", "1", "2-3", "Más de 4"],
+      "opciones": [
+        "1-2",
+        "1",
+        "2-3",
+        "Más de 4"
+      ],
       "respuesta": 2,
-      "explicacion": "Dos o tres niveles suelen proporcionar suficiente diferenciación sin introducir una complejidad excesiva de gestión."
+      "explicacion": "Dos o tres niveles suelen proporcionar suficiente diferenciación sin introducir una complejidad excesiva de gestión.",
+      "dominio": 5
     },
     {
       "pregunta": "Los sistemas de registro y supervisión son esenciales para:",
@@ -794,7 +1056,8 @@
         "Identificar sistemas con rendimiento ineficiente, prevenir compromisos y registrar cómo se utilizan los sistemas"
       ],
       "respuesta": 0,
-      "explicacion": "Los registros permiten detectar anomalías y compromisos, diagnosticar problemas de rendimiento y conservar evidencias del uso del sistema."
+      "explicacion": "Los registros permiten detectar anomalías y compromisos, diagnosticar problemas de rendimiento y conservar evidencias del uso del sistema.",
+      "dominio": 5
     },
     {
       "pregunta": "Un dispositivo que no cumple la línea base de seguridad debe ser:",
@@ -805,7 +1068,8 @@
         "Colocado en una DMZ hasta que pueda revisarse y actualizarse"
       ],
       "respuesta": 0,
-      "explicacion": "El dispositivo debe quedar sin acceso o aislado hasta corregir su configuración y verificar que cumple la línea base."
+      "explicacion": "El dispositivo debe quedar sin acceso o aislado hasta corregir su configuración y verificar que cumple la línea base.",
+      "dominio": 5
     },
     {
       "pregunta": "Una buena práctica de gestión de parches consiste en:",
@@ -816,7 +1080,8 @@
         "Aplicar los parches según la reputación del proveedor"
       ],
       "respuesta": 1,
-      "explicacion": "Los parches deben validarse en un entorno de pruebas para detectar incompatibilidades o efectos adversos antes de desplegarlos en producción."
+      "explicacion": "Los parches deben validarse en un entorno de pruebas para detectar incompatibilidades o efectos adversos antes de desplegarlos en producción.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es una forma eficaz de reforzar un sistema?",
@@ -827,13 +1092,20 @@
         "Crear una DMZ para los servicios de aplicaciones web"
       ],
       "respuesta": 1,
-      "explicacion": "Aplicar parches elimina vulnerabilidades conocidas y reduce las vías disponibles para un ataque."
+      "explicacion": "Aplicar parches elimina vulnerabilidades conocidas y reduce las vías disponibles para un ataque.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un componente de la gestión de cambios?",
-      "opciones": ["RFC", "Aprobación", "Reversión", "Gobernanza"],
+      "opciones": [
+        "RFC",
+        "Aprobación",
+        "Reversión",
+        "Gobernanza"
+      ],
       "respuesta": 3,
-      "explicacion": "Las actividades básicas incluyen la solicitud de cambio, su aprobación y un plan de reversión; la gobernanza es un concepto más amplio."
+      "explicacion": "Las actividades básicas incluyen la solicitud de cambio, su aprobación y un plan de reversión; la gobernanza es un concepto más amplio.",
+      "dominio": 5
     },
     {
       "pregunta": "El proceso que garantiza que los cambios en los sistemas no afecten negativamente a las operaciones empresariales se conoce como:",
@@ -844,7 +1116,8 @@
         "Gestión de inventario"
       ],
       "respuesta": 0,
-      "explicacion": "La gestión de cambios evalúa, autoriza, prueba e implementa modificaciones de forma controlada para reducir interrupciones."
+      "explicacion": "La gestión de cambios evalúa, autoriza, prueba e implementa modificaciones de forma controlada para reducir interrupciones.",
+      "dominio": 5
     },
     {
       "pregunta": "En gestión de cambios, ¿qué componente aborda los procedimientos necesarios para deshacer una modificación?",
@@ -855,19 +1128,32 @@
         "Desastre y recuperación"
       ],
       "respuesta": 0,
-      "explicacion": "El plan de reversión o rollback define cómo restaurar el estado anterior si el cambio falla o provoca efectos no deseados."
+      "explicacion": "El plan de reversión o rollback define cómo restaurar el estado anterior si el cambio falla o provoca efectos no deseados.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué regulación aborda la protección de datos y la privacidad en Europa?",
-      "opciones": ["GDPR", "SOX", "HIPAA", "FISMA"],
+      "opciones": [
+        "GDPR",
+        "SOX",
+        "HIPAA",
+        "FISMA"
+      ],
       "respuesta": 0,
-      "explicacion": "El Reglamento General de Protección de Datos (GDPR) regula la protección y el tratamiento de datos personales en la Unión Europea."
+      "explicacion": "El Reglamento General de Protección de Datos (GDPR) regula la protección y el tratamiento de datos personales en la Unión Europea.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de los siguientes es un procedimiento de una política de tratamiento de datos?",
-      "opciones": ["Recopilar", "Destruir", "Transformar", "Codificar"],
+      "opciones": [
+        "Recopilar",
+        "Destruir",
+        "Transformar",
+        "Codificar"
+      ],
       "respuesta": 1,
-      "explicacion": "La destrucción es una fase formal del ciclo de tratamiento de datos y debe impedir que la información eliminada pueda recuperarse."
+      "explicacion": "La destrucción es una fase formal del ciclo de tratamiento de datos y debe impedir que la información eliminada pueda recuperarse.",
+      "dominio": 5
     },
     {
       "pregunta": "¿En cuál de estas actividades se utilizan PRINCIPALMENTE los carteles de seguridad? (★)",
@@ -878,13 +1164,20 @@
         "Planes de continuidad de negocio"
       ],
       "respuesta": 0,
-      "explicacion": "Los carteles refuerzan mensajes, políticas y buenas prácticas dentro de los programas de concienciación sobre seguridad."
+      "explicacion": "Los carteles refuerzan mensajes, políticas y buenas prácticas dentro de los programas de concienciación sobre seguridad.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes NO es una modalidad de aprendizaje utilizada en concienciación sobre seguridad?",
-      "opciones": ["Educación", "Formación", "Concienciación", "Tutorial"],
+      "opciones": [
+        "Educación",
+        "Formación",
+        "Concienciación",
+        "Tutorial"
+      ],
       "respuesta": 3,
-      "explicacion": "El modelo distingue educación, formación y concienciación; un tutorial no constituye una categoría independiente dentro de esta clasificación."
+      "explicacion": "El modelo distingue educación, formación y concienciación; un tutorial no constituye una categoría independiente dentro de esta clasificación.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un elemento de la gestión de configuración de seguridad de sistemas?",
@@ -895,13 +1188,20 @@
         "Registros de auditoría"
       ],
       "respuesta": 3,
-      "explicacion": "Los elementos principales son inventarios, líneas base, actualizaciones y parches; los registros de auditoría son evidencias generadas por procesos de verificación."
+      "explicacion": "Los elementos principales son inventarios, líneas base, actualizaciones y parches; los registros de auditoría son evidencias generadas por procesos de verificación.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes NO es una técnica de ingeniería social? (★)",
-      "opciones": ["Baiting", "Pretexting", "Quid pro quo", "Segregación"],
+      "opciones": [
+        "Baiting",
+        "Pretexting",
+        "Quid pro quo",
+        "Segregación"
+      ],
       "respuesta": 3,
-      "explicacion": "La segregación o separación de funciones es un control administrativo, mientras que baiting, pretexting y quid pro quo son técnicas de ingeniería social."
+      "explicacion": "La segregación o separación de funciones es un control administrativo, mientras que baiting, pretexting y quid pro quo son técnicas de ingeniería social.",
+      "dominio": 5
     }
   ]
 }

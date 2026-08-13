@@ -12,7 +12,8 @@
         "Privacidad"
       ],
       "respuesta": 0,
-      "explicacion": "La integridad garantiza que los datos permanezcan exactos y sin alteraciones no autorizadas. La confidencialidad protege el secreto, la disponibilidad asegura el acceso y la privacidad se refiere al control de los datos personales."
+      "explicacion": "La integridad garantiza que los datos permanezcan exactos y sin alteraciones no autorizadas. La confidencialidad protege el secreto, la disponibilidad asegura el acceso y la privacidad se refiere al control de los datos personales.",
+      "dominio": 1
     },
     {
       "pregunta": "Un sistema que garantiza que el personal autorizado pueda acceder a los registros siempre que sea necesario respalda qué objetivo?",
@@ -23,7 +24,8 @@
         "Confidencialidad"
       ],
       "respuesta": 1,
-      "explicacion": "La disponibilidad garantiza que los recursos sean accesibles cuando se necesitan. La integridad se refiere a la exactitud, la confidencialidad al secreto y el no repudio a impedir la negación de una acción."
+      "explicacion": "La disponibilidad garantiza que los recursos sean accesibles cuando se necesitan. La integridad se refiere a la exactitud, la confidencialidad al secreto y el no repudio a impedir la negación de una acción.",
+      "dominio": 1
     },
     {
       "pregunta": "Un código de un solo uso generado por un token de hardware representa qué categoría de factor de autenticación?",
@@ -34,7 +36,8 @@
         "Algo que sabes"
       ],
       "respuesta": 2,
-      "explicacion": "Un token de hardware corresponde al factor algo que tienes. Una contraseña es algo que sabes, un dato biométrico es algo que eres y la ubicación representa algún lugar en el que estás."
+      "explicacion": "Un token de hardware corresponde al factor algo que tienes. Una contraseña es algo que sabes, un dato biométrico es algo que eres y la ubicación representa algún lugar en el que estás.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Por qué utilizar dos contraseñas no se considera autenticación multifactor?",
@@ -45,7 +48,8 @@
         "Ambas pertenecen al mismo tipo de factor: algo que sabes"
       ],
       "respuesta": 3,
-      "explicacion": "Dos contraseñas pertenecen al mismo factor de conocimiento, por lo que no añaden un segundo tipo de factor. MFA requiere dos o más tipos de factores diferentes."
+      "explicacion": "Dos contraseñas pertenecen al mismo factor de conocimiento, por lo que no añaden un segundo tipo de factor. MFA requiere dos o más tipos de factores diferentes.",
+      "dominio": 3
     },
     {
       "pregunta": "La prueba de que un usuario concreto realizó una acción, impidiendo que posteriormente pueda negarla, se denomina:",
@@ -56,7 +60,8 @@
         "Autorización"
       ],
       "respuesta": 0,
-      "explicacion": "El no repudio proporciona evidencias de una acción para impedir que su autor pueda negarla posteriormente."
+      "explicacion": "El no repudio proporciona evidencias de una acción para impedir que su autor pueda negarla posteriormente.",
+      "dominio": 1
     },
     {
       "pregunta": "¿En qué se diferencia la confidencialidad de la privacidad?",
@@ -67,7 +72,8 @@
         "Son conceptos idénticos"
       ],
       "respuesta": 1,
-      "explicacion": "La confidencialidad protege la información frente al acceso no autorizado de forma general, mientras que la privacidad se centra específicamente en el control de las personas sobre sus datos personales."
+      "explicacion": "La confidencialidad protege la información frente al acceso no autorizado de forma general, mientras que la privacidad se centra específicamente en el control de las personas sobre sus datos personales.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué consigue el proceso de autenticación?",
@@ -78,7 +84,8 @@
         "Decide qué archivos puede abrir un usuario"
       ],
       "respuesta": 2,
-      "explicacion": "La autenticación verifica la identidad declarada. La autorización determina los permisos y el accounting registra las acciones realizadas."
+      "explicacion": "La autenticación verifica la identidad declarada. La autorización determina los permisos y el accounting registra las acciones realizadas.",
+      "dominio": 3
     },
     {
       "pregunta": "Una organización señala que un modelo de IA comprometido podría producir resultados manipulados. ¿Qué pilar de la CIA se ve principalmente amenazado?",
@@ -89,13 +96,20 @@
         "Integridad"
       ],
       "respuesta": 3,
-      "explicacion": "Los resultados manipulados o no fiables afectan principalmente a la integridad, ya que comprometen la exactitud y fiabilidad de la información."
+      "explicacion": "Los resultados manipulados o no fiables afectan principalmente a la integridad, ya que comprometen la exactitud y fiabilidad de la información.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa instala controles adicionales para reducir la probabilidad y el impacto de una amenaza. ¿Qué tratamiento del riesgo está aplicando?",
-      "opciones": ["Mitigación", "Aceptación", "Transferencia", "Evitación"],
+      "opciones": [
+        "Mitigación",
+        "Aceptación",
+        "Transferencia",
+        "Evitación"
+      ],
       "respuesta": 0,
-      "explicacion": "La mitigación consiste en implantar controles que reduzcan la probabilidad o el impacto de un riesgo."
+      "explicacion": "La mitigación consiste en implantar controles que reduzcan la probabilidad o el impacto de un riesgo.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué combinación de factores se utiliza habitualmente para expresar el nivel de un riesgo?",
@@ -106,7 +120,8 @@
         "Velocidad y tamaño"
       ],
       "respuesta": 1,
-      "explicacion": "El nivel de riesgo suele determinarse combinando la probabilidad de que ocurra un evento y el impacto que produciría."
+      "explicacion": "El nivel de riesgo suele determinarse combinando la probabilidad de que ocurra un evento y el impacto que produciría.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Por qué la identificación de activos es uno de los primeros pasos en la gestión de riesgos?",
@@ -117,7 +132,8 @@
         "Para eliminar registros obsoletos"
       ],
       "respuesta": 2,
-      "explicacion": "Identificar los activos permite determinar qué debe protegerse y cuál es su valor, lo que sirve de base para evaluar y priorizar los riesgos."
+      "explicacion": "Identificar los activos permite determinar qué debe protegerse y cuál es su valor, lo que sirve de base para evaluar y priorizar los riesgos.",
+      "dominio": 1
     },
     {
       "pregunta": "La cantidad y el tipo de riesgo que una organización está preparada para asumir o conservar constituye su:",
@@ -128,13 +144,20 @@
         "Tolerancia al riesgo"
       ],
       "respuesta": 3,
-      "explicacion": "La tolerancia al riesgo representa el nivel o tipo de riesgo que una organización está dispuesta a aceptar o conservar."
+      "explicacion": "La tolerancia al riesgo representa el nivel o tipo de riesgo que una organización está dispuesta a aceptar o conservar.",
+      "dominio": 1
     },
     {
       "pregunta": "Un minorista decide asumir un riesgo de bajo impacto porque tratarlo costaría más que el propio riesgo. ¿Qué tratamiento está aplicando?",
-      "opciones": ["Aceptación", "Evitación", "Transferencia", "Mitigación"],
+      "opciones": [
+        "Aceptación",
+        "Evitación",
+        "Transferencia",
+        "Mitigación"
+      ],
       "respuesta": 0,
-      "explicacion": "Aceptar un riesgo significa convivir con él cuando, por ejemplo, el coste de reducirlo supera el beneficio esperado."
+      "explicacion": "Aceptar un riesgo significa convivir con él cuando, por ejemplo, el coste de reducirlo supera el beneficio esperado.",
+      "dominio": 1
     },
     {
       "pregunta": "El primer paso de un proceso básico de gestión de riesgos es:",
@@ -145,7 +168,8 @@
         "Contratar un seguro"
       ],
       "respuesta": 1,
-      "explicacion": "Los riesgos deben identificarse antes de poder evaluarlos y decidir cómo tratarlos."
+      "explicacion": "Los riesgos deben identificarse antes de poder evaluarlos y decidir cómo tratarlos.",
+      "dominio": 1
     },
     {
       "pregunta": "El software de cifrado que protege archivos almacenados se clasifica mejor como qué tipo de control?",
@@ -156,7 +180,8 @@
         "Control físico"
       ],
       "respuesta": 2,
-      "explicacion": "El cifrado mediante software utiliza tecnología para proteger los datos, por lo que es un control técnico."
+      "explicacion": "El cifrado mediante software utiliza tecnología para proteger los datos, por lo que es un control técnico.",
+      "dominio": 1
     },
     {
       "pregunta": "Una comprobación de antecedentes obligatoria antes de una contratación es un ejemplo de qué tipo de control?",
@@ -167,7 +192,8 @@
         "Control administrativo"
       ],
       "respuesta": 3,
-      "explicacion": "Una comprobación de antecedentes forma parte de políticas y procesos organizativos, por lo que es un control administrativo."
+      "explicacion": "Una comprobación de antecedentes forma parte de políticas y procesos organizativos, por lo que es un control administrativo.",
+      "dominio": 1
     },
     {
       "pregunta": "Una valla perimetral alrededor de una instalación es un ejemplo de qué tipo de control?",
@@ -178,7 +204,8 @@
         "Control de detección"
       ],
       "respuesta": 0,
-      "explicacion": "Una valla es una barrera tangible destinada a impedir o dificultar el acceso, por lo que constituye un control físico."
+      "explicacion": "Una valla es una barrera tangible destinada a impedir o dificultar el acceso, por lo que constituye un control físico.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Por qué las organizaciones combinan controles técnicos, administrativos y físicos?",
@@ -189,7 +216,8 @@
         "Solo los controles físicos funcionan realmente"
       ],
       "respuesta": 1,
-      "explicacion": "La combinación de controles proporciona defensa en profundidad, de modo que las debilidades de un control puedan quedar cubiertas por otros."
+      "explicacion": "La combinación de controles proporciona defensa en profundidad, de modo que las debilidades de un control puedan quedar cubiertas por otros.",
+      "dominio": 1
     },
     {
       "pregunta": "El canon de ISC2 que exige a los miembros actuar de forma honorable, honesta, justa, responsable y legal es:",
@@ -200,7 +228,8 @@
         "El primer canon"
       ],
       "respuesta": 2,
-      "explicacion": "El segundo canon del Código de Ética de ISC2 exige actuar de forma honorable, honesta, justa, responsable y legal."
+      "explicacion": "El segundo canon del Código de Ética de ISC2 exige actuar de forma honorable, honesta, justa, responsable y legal.",
+      "dominio": 1
     },
     {
       "pregunta": "Según el Código de Ética de ISC2, ¿a quién dirige el tercer canon un servicio diligente y competente?",
@@ -211,7 +240,8 @@
         "Principales"
       ],
       "respuesta": 3,
-      "explicacion": "El tercer canon exige prestar un servicio diligente y competente a los principales, como empleadores y clientes."
+      "explicacion": "El tercer canon exige prestar un servicio diligente y competente a los principales, como empleadores y clientes.",
+      "dominio": 1
     },
     {
       "pregunta": "Un miembro debe elegir entre la petición de un cliente y el bien público. ¿Cómo orienta esta situación el Código de Ética?",
@@ -222,7 +252,8 @@
         "Solo importan los contratos escritos"
       ],
       "respuesta": 0,
-      "explicacion": "El primer canon exige proteger a la sociedad y tiene prioridad cuando existe conflicto con otros deberes."
+      "explicacion": "El primer canon exige proteger a la sociedad y tiene prioridad cuando existe conflicto con otros deberes.",
+      "dominio": 1
     },
     {
       "pregunta": "Un documento que ofrece recomendaciones y buenas prácticas no obligatorias es:",
@@ -233,7 +264,8 @@
         "Una política"
       ],
       "respuesta": 1,
-      "explicacion": "Una directriz proporciona recomendaciones no obligatorias. Un estándar contiene requisitos obligatorios y una política establece la intención de la dirección."
+      "explicacion": "Una directriz proporciona recomendaciones no obligatorias. Un estándar contiene requisitos obligatorios y una política establece la intención de la dirección.",
+      "dominio": 1
     },
     {
       "pregunta": "Los requisitos externos impuestos por gobiernos u organismos sectoriales se conocen como:",
@@ -244,7 +276,8 @@
         "Procedimientos internos"
       ],
       "respuesta": 2,
-      "explicacion": "Las regulaciones y leyes son requisitos externos de obligado cumplimiento."
+      "explicacion": "Las regulaciones y leyes son requisitos externos de obligado cumplimiento.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué secuencia ordena los documentos de gobierno desde la intención de más alto nivel hasta los pasos más detallados?",
@@ -255,7 +288,8 @@
         "Política, estándar, procedimiento"
       ],
       "respuesta": 3,
-      "explicacion": "Las políticas establecen la intención, los estándares definen requisitos específicos y los procedimientos detallan los pasos para ejecutarlos."
+      "explicacion": "Las políticas establecen la intención, los estándares definen requisitos específicos y los procedimientos detallan los pasos para ejecutarlos.",
+      "dominio": 1
     },
     {
       "pregunta": "Dentro del gobierno de seguridad, ¿cuál es la función principal de una política de seguridad?",
@@ -266,7 +300,8 @@
         "Cifrar archivos individuales"
       ],
       "respuesta": 0,
-      "explicacion": "Una política de seguridad comunica la intención, objetivos y expectativas generales de la dirección respecto a la seguridad."
+      "explicacion": "Una política de seguridad comunica la intención, objetivos y expectativas generales de la dirección respecto a la seguridad.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa exige que las decisiones de IA que afectan a clientes sean explicables y estén libres de sesgos injustos. ¿Qué principio orienta esta norma?",
@@ -277,7 +312,8 @@
         "Supervisión del acceso físico"
       ],
       "respuesta": 1,
-      "explicacion": "Exigir decisiones explicables y sin sesgos injustos refleja los principios de transparencia y equidad en el uso de IA."
+      "explicacion": "Exigir decisiones explicables y sin sesgos injustos refleja los principios de transparencia y equidad en el uso de IA.",
+      "dominio": 1
     },
     {
       "pregunta": "El análisis que identifica las funciones críticas de una organización y el impacto de su interrupción es:",
@@ -288,7 +324,8 @@
         "Prueba de penetración"
       ],
       "respuesta": 2,
-      "explicacion": "El Business Impact Analysis (BIA) identifica las funciones críticas y evalúa el impacto que tendría su interrupción para priorizar la recuperación."
+      "explicacion": "El Business Impact Analysis (BIA) identifica las funciones críticas y evalúa el impacto que tendría su interrupción para priorizar la recuperación.",
+      "dominio": 2
     },
     {
       "pregunta": "Un sitio alternativo que proporciona espacio y energía, pero poco o ningún equipo preparado y que tarda más en activarse, es:",
@@ -299,7 +336,8 @@
         "Un cold site"
       ],
       "respuesta": 3,
-      "explicacion": "Un cold site proporciona principalmente espacio e infraestructura básica, pero requiere instalar y configurar equipos, por lo que es el que más tarda en ponerse en funcionamiento."
+      "explicacion": "Un cold site proporciona principalmente espacio e infraestructura básica, pero requiere instalar y configurar equipos, por lo que es el que más tarda en ponerse en funcionamiento.",
+      "dominio": 2
     },
     {
       "pregunta": "El tiempo objetivo dentro del cual debe restaurarse un sistema después de una interrupción es el:",
@@ -310,7 +348,8 @@
         "Annual Loss Expectancy"
       ],
       "respuesta": 0,
-      "explicacion": "El RTO establece el tiempo objetivo máximo para restaurar un sistema o servicio después de una interrupción."
+      "explicacion": "El RTO establece el tiempo objetivo máximo para restaurar un sistema o servicio después de una interrupción.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Cuál es el objetivo principal de la fase de contención en la respuesta a incidentes?",
@@ -321,7 +360,8 @@
         "Asignar la culpa a un usuario"
       ],
       "respuesta": 1,
-      "explicacion": "La contención busca evitar que el incidente continúe propagándose y reducir el daño mientras se prepara su erradicación."
+      "explicacion": "La contención busca evitar que el incidente continúe propagándose y reducir el daño mientras se prepara su erradicación.",
+      "dominio": 2
     },
     {
       "pregunta": "La actividad de respuesta a incidentes que documenta lo sucedido y cómo mejorar para la próxima vez es:",
@@ -332,7 +372,8 @@
         "Detección"
       ],
       "respuesta": 2,
-      "explicacion": "La fase de lecciones aprendidas revisa el incidente para identificar mejoras en procedimientos, controles y respuesta futura."
+      "explicacion": "La fase de lecciones aprendidas revisa el incidente para identificar mejoras en procedimientos, controles y respuesta futura.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Por qué es importante probar un plan de continuidad de negocio o recuperación ante desastres?",
@@ -343,7 +384,8 @@
         "Permite descubrir deficiencias antes de un desastre real"
       ],
       "respuesta": 3,
-      "explicacion": "Las pruebas permiten detectar carencias y problemas del plan antes de que sea necesario utilizarlo durante una emergencia real."
+      "explicacion": "Las pruebas permiten detectar carencias y problemas del plan antes de que sea necesario utilizarlo durante una emergencia real.",
+      "dominio": 2
     },
     {
       "pregunta": "Un incidente que provoca acceso no autorizado confirmado a datos se denomina:",
@@ -354,7 +396,8 @@
         "Un incidente solo ocurre después de una brecha"
       ],
       "respuesta": 0,
-      "explicacion": "Una brecha de seguridad es un incidente en el que se confirma acceso no autorizado a datos o pérdida de información."
+      "explicacion": "Una brecha de seguridad es un incidente en el que se confirma acceso no autorizado a datos o pérdida de información.",
+      "dominio": 2
     },
     {
       "pregunta": "Una organización mantiene preparadas listas de contacto del personal clave y procedimientos de comunicación para una interrupción. ¿A qué componente del plan corresponde?",
@@ -365,7 +408,8 @@
         "Un diagrama de red"
       ],
       "respuesta": 1,
-      "explicacion": "Las listas de contactos y procedimientos de comunicación forman parte de la planificación de comunicaciones de continuidad de negocio."
+      "explicacion": "Las listas de contactos y procedimientos de comunicación forman parte de la planificación de comunicaciones de continuidad de negocio.",
+      "dominio": 2
     },
     {
       "pregunta": "Un equipo de seguridad realiza un recorrido basado en discusión del plan de respuesta a incidentes sin actuar sobre sistemas reales. ¿Qué tipo de prueba es?",
@@ -376,7 +420,8 @@
         "Una prueba completa de failover"
       ],
       "respuesta": 2,
-      "explicacion": "Un ejercicio tabletop es una simulación basada en discusión en la que los participantes recorren escenarios y procedimientos sin intervenir sobre sistemas reales."
+      "explicacion": "Un ejercicio tabletop es una simulación basada en discusión en la que los participantes recorren escenarios y procedimientos sin intervenir sobre sistemas reales.",
+      "dominio": 2
     },
     {
       "pregunta": "Una herramienta de supervisión basada en IA avisa al equipo de un posible incidente antes de lo que lo haría una revisión manual. ¿Qué beneficio demuestra?",
@@ -387,7 +432,8 @@
         "Detección temprana más rápida de incidentes"
       ],
       "respuesta": 3,
-      "explicacion": "Las herramientas basadas en IA pueden acelerar la identificación de patrones sospechosos y mejorar la detección temprana, aunque no eliminan falsos positivos ni garantizan la prevención."
+      "explicacion": "Las herramientas basadas en IA pueden acelerar la identificación de patrones sospechosos y mejorar la detección temprana, aunque no eliminan falsos positivos ni garantizan la prevención.",
+      "dominio": 4
     },
     {
       "pregunta": "Un espacio pequeño con dos puertas entrelazadas que permite controlar el paso de una persona cada vez es:",
@@ -398,7 +444,8 @@
         "Una red privada virtual"
       ],
       "respuesta": 0,
-      "explicacion": "Un mantrap utiliza dos puertas interbloqueadas para controlar el acceso físico de una persona cada vez."
+      "explicacion": "Un mantrap utiliza dos puertas interbloqueadas para controlar el acceso físico de una persona cada vez.",
+      "dominio": 3
     },
     {
       "pregunta": "Como control físico, ¿cuál es la función principal de un sistema de alarma?",
@@ -409,7 +456,8 @@
         "Asignar roles de usuario en la red corporativa"
       ],
       "respuesta": 1,
-      "explicacion": "Un sistema de alarma detecta o señala accesos e intrusiones y alerta al personal para que pueda responder."
+      "explicacion": "Un sistema de alarma detecta o señala accesos e intrusiones y alerta al personal para que pueda responder.",
+      "dominio": 3
     },
     {
       "pregunta": "Para impedir que vehículos no autorizados se aproximen a la entrada de un edificio, una organización instala:",
@@ -420,7 +468,8 @@
         "Una regla de firewall"
       ],
       "respuesta": 2,
-      "explicacion": "Los bolardos son barreras físicas diseñadas para impedir o limitar el acceso de vehículos."
+      "explicacion": "Los bolardos son barreras físicas diseñadas para impedir o limitar el acceso de vehículos.",
+      "dominio": 3
     },
     {
       "pregunta": "Un empleado mantiene abierta una puerta segura para un desconocido que lleva cajas. ¿Qué riesgo genera?",
@@ -431,7 +480,8 @@
         "Acceso físico no autorizado mediante tailgating"
       ],
       "respuesta": 3,
-      "explicacion": "Permitir que una persona no verificada entre aprovechando el acceso de otra constituye tailgating y puede provocar acceso físico no autorizado."
+      "explicacion": "Permitir que una persona no verificada entre aprovechando el acceso de otra constituye tailgating y puede provocar acceso físico no autorizado.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué control utiliza iluminación, líneas de visión despejadas y paisajismo para disuadir a intrusos?",
@@ -442,7 +492,8 @@
         "Segmentación de red"
       ],
       "respuesta": 0,
-      "explicacion": "El diseño ambiental utiliza elementos como iluminación, visibilidad y disposición física para disuadir y dificultar actividades no autorizadas."
+      "explicacion": "El diseño ambiental utiliza elementos como iluminación, visibilidad y disposición física para disuadir y dificultar actividades no autorizadas.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Por qué son valiosos los registros de entrada y salida como controles de seguridad física?",
@@ -453,7 +504,8 @@
         "Asignan permisos de red a todos los visitantes"
       ],
       "respuesta": 1,
-      "explicacion": "Los registros de acceso permiten saber quién entró o salió de un área y cuándo, facilitando la supervisión y las investigaciones."
+      "explicacion": "Los registros de acceso permiten saber quién entró o salió de un área y cuándo, facilitando la supervisión y las investigaciones.",
+      "dominio": 3
     },
     {
       "pregunta": "Un centro de datos utiliza un guardia de seguridad para comprobar identificaciones en la puerta. ¿Qué categoría de control representa el guardia?",
@@ -464,7 +516,8 @@
         "Control técnico"
       ],
       "respuesta": 2,
-      "explicacion": "Un guardia que controla el acceso a una instalación constituye un control físico."
+      "explicacion": "Un guardia que controla el acceso a una instalación constituye un control físico.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué tipo de sensor puede detectar movimiento para apoyar la supervisión de intrusiones físicas?",
@@ -475,7 +528,8 @@
         "Un sensor de movimiento"
       ],
       "respuesta": 3,
-      "explicacion": "Un sensor de movimiento detecta desplazamientos físicos y puede utilizarse para identificar posibles intrusiones."
+      "explicacion": "Un sensor de movimiento detecta desplazamientos físicos y puede utilizarse para identificar posibles intrusiones.",
+      "dominio": 3
     },
     {
       "pregunta": "El modelo de control de acceso considerado no discrecional, porque los usuarios no pueden modificar sus reglas, es:",
@@ -486,7 +540,8 @@
         "Rule-Based Access Control"
       ],
       "respuesta": 0,
-      "explicacion": "MAC aplica etiquetas y reglas impuestas por el sistema que los usuarios no pueden modificar libremente, por lo que es un modelo no discrecional."
+      "explicacion": "MAC aplica etiquetas y reglas impuestas por el sistema que los usuarios no pueden modificar libremente, por lo que es un modelo no discrecional.",
+      "dominio": 3
     },
     {
       "pregunta": "En Discretionary Access Control (DAC), ¿quién decide quién puede acceder a un recurso?",
@@ -497,7 +552,8 @@
         "Un regulador gubernamental"
       ],
       "respuesta": 1,
-      "explicacion": "En DAC, el propietario del recurso tiene capacidad para decidir quién puede acceder a él."
+      "explicacion": "En DAC, el propietario del recurso tiene capacidad para decidir quién puede acceder a él.",
+      "dominio": 3
     },
     {
       "pregunta": "Conceder derechos según condiciones como la hora del día o la ubicación describe qué enfoque de control de acceso?",
@@ -508,7 +564,8 @@
         "Discretionary Access Control"
       ],
       "respuesta": 2,
-      "explicacion": "Rule-Based Access Control concede o deniega acceso de acuerdo con reglas y condiciones predefinidas, como horario o ubicación."
+      "explicacion": "Rule-Based Access Control concede o deniega acceso de acuerdo con reglas y condiciones predefinidas, como horario o ubicación.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es el principal beneficio de aplicar el principio de mínimo privilegio a las cuentas de usuario?",
@@ -519,7 +576,8 @@
         "Limita el daño que puede causar una cuenta comprometida"
       ],
       "respuesta": 3,
-      "explicacion": "El mínimo privilegio limita los permisos al mínimo necesario, reduciendo el alcance y daño potencial de una cuenta comprometida."
+      "explicacion": "El mínimo privilegio limita los permisos al mínimo necesario, reduciendo el alcance y daño potencial de una cuenta comprometida.",
+      "dominio": 3
     },
     {
       "pregunta": "Una organización exige que dos empleados aprueben un pago para que ninguno pueda actuar por sí solo. ¿Qué principio aplica?",
@@ -530,7 +588,8 @@
         "Disponibilidad"
       ],
       "respuesta": 0,
-      "explicacion": "La separación de funciones divide una actividad sensible entre varias personas para evitar que una sola pueda completarla de forma independiente."
+      "explicacion": "La separación de funciones divide una actividad sensible entre varias personas para evitar que una sola pueda completarla de forma independiente.",
+      "dominio": 3
     },
     {
       "pregunta": "El elemento de accounting dentro de AAA consiste en:",
@@ -541,13 +600,20 @@
         "Conceder derechos de acceso a un usuario"
       ],
       "respuesta": 1,
-      "explicacion": "Accounting registra y permite auditar las acciones de los usuarios. Authentication verifica la identidad y Authorization concede permisos."
+      "explicacion": "Accounting registra y permite auditar las acciones de los usuarios. Authentication verifica la identidad y Authorization concede permisos.",
+      "dominio": 3
     },
     {
       "pregunta": "Cuando se incorpora un nuevo empleado, ¿qué actividad de gestión de accesos crea sus cuentas iniciales y le concede permisos?",
-      "opciones": ["Escalation", "Auditing", "Provisioning", "De-provisioning"],
+      "opciones": [
+        "Escalation",
+        "Auditing",
+        "Provisioning",
+        "De-provisioning"
+      ],
       "respuesta": 2,
-      "explicacion": "Provisioning es el proceso de crear cuentas y asignar los permisos iniciales necesarios a un usuario."
+      "explicacion": "Provisioning es el proceso de crear cuentas y asignar los permisos iniciales necesarios a un usuario.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cómo complementa el principio de need to know al principio de mínimo privilegio?",
@@ -558,7 +624,8 @@
         "Need to know restringe el acceso a la información específica necesaria para una tarea"
       ],
       "respuesta": 3,
-      "explicacion": "Need to know limita el acceso a la información concreta necesaria para realizar una tarea, complementando el mínimo privilegio."
+      "explicacion": "Need to know limita el acceso a la información concreta necesaria para realizar una tarea, complementando el mínimo privilegio.",
+      "dominio": 3
     },
     {
       "pregunta": "Un empleado de finanzas recibe acceso únicamente al sistema contable necesario para su función y a nada más. ¿Qué principio sigue?",
@@ -569,7 +636,8 @@
         "Redundancia"
       ],
       "respuesta": 0,
-      "explicacion": "Conceder únicamente los permisos necesarios para desempeñar una función aplica el principio de mínimo privilegio."
+      "explicacion": "Conceder únicamente los permisos necesarios para desempeñar una función aplica el principio de mínimo privilegio.",
+      "dominio": 3
     },
     {
       "pregunta": "Cuando un empleado deja la organización, la acción que debe realizarse inmediatamente es:",
@@ -580,7 +648,8 @@
         "Compartir su contraseña con el equipo"
       ],
       "respuesta": 1,
-      "explicacion": "El acceso de un empleado que deja la organización debe revocarse inmediatamente mediante de-provisioning para impedir usos no autorizados."
+      "explicacion": "El acceso de un empleado que deja la organización debe revocarse inmediatamente mediante de-provisioning para impedir usos no autorizados.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Por qué cada script automatizado debería utilizar su propia cuenta de servicio gestionada en lugar de un inicio de sesión de administrador compartido?",
@@ -591,7 +660,8 @@
         "Los inicios de sesión compartidos siempre son más seguros"
       ],
       "respuesta": 2,
-      "explicacion": "Las cuentas de servicio dedicadas permiten asignar solo los permisos necesarios y atribuir claramente las acciones automatizadas a una identidad concreta."
+      "explicacion": "Las cuentas de servicio dedicadas permiten asignar solo los permisos necesarios y atribuir claramente las acciones automatizadas a una identidad concreta.",
+      "dominio": 3
     },
     {
       "pregunta": "Un sistema de acceso utiliza machine learning para señalar un inicio de sesión a una hora inusual desde un dispositivo desconocido. ¿Qué capacidad representa?",
@@ -602,7 +672,8 @@
         "Detección de inicios de sesión anómalos"
       ],
       "respuesta": 3,
-      "explicacion": "Detectar patrones de acceso fuera del comportamiento habitual corresponde a la detección de inicios de sesión anómalos."
+      "explicacion": "Detectar patrones de acceso fuera del comportamiento habitual corresponde a la detección de inicios de sesión anómalos.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué concepto garantiza que solo se conceda acceso a un usuario después de verificar su identidad?",
@@ -613,7 +684,8 @@
         "El accounting debe realizarse antes de la autenticación"
       ],
       "respuesta": 0,
-      "explicacion": "Primero se autentica la identidad del usuario y después se aplica la autorización para determinar qué recursos puede utilizar."
+      "explicacion": "Primero se autentica la identidad del usuario y después se aplica la autorización para determinar qué recursos puede utilizar.",
+      "dominio": 3
     },
     {
       "pregunta": "En control de acceso, ¿qué opción identifica mejor un objeto?",
@@ -624,19 +696,32 @@
         "El cable de red utilizado"
       ],
       "respuesta": 1,
-      "explicacion": "El objeto es el recurso sobre el que se realiza una acción, como un archivo o una base de datos. El usuario activo es el sujeto."
+      "explicacion": "El objeto es el recurso sobre el que se realiza una acción, como un archivo o una base de datos. El usuario activo es el sujeto.",
+      "dominio": 3
     },
     {
       "pregunta": "La navegación web estándar sin cifrar mediante HTTP utiliza qué puerto bien conocido?",
-      "opciones": ["25", "22", "80", "443"],
+      "opciones": [
+        "25",
+        "22",
+        "80",
+        "443"
+      ],
       "respuesta": 2,
-      "explicacion": "HTTP utiliza normalmente el puerto 80. HTTPS utiliza el 443, SMTP el 25 y SSH el 22."
+      "explicacion": "HTTP utiliza normalmente el puerto 80. HTTPS utiliza el 443, SMTP el 25 y SSH el 22.",
+      "dominio": 4
     },
     {
       "pregunta": "El protocolo que asigna automáticamente direcciones IP a los dispositivos que se conectan a una red es:",
-      "opciones": ["DNS", "HTTP", "SMTP", "DHCP"],
+      "opciones": [
+        "DNS",
+        "HTTP",
+        "SMTP",
+        "DHCP"
+      ],
       "respuesta": 3,
-      "explicacion": "DHCP asigna automáticamente parámetros de red, incluidas direcciones IP, a los dispositivos."
+      "explicacion": "DHCP asigna automáticamente parámetros de red, incluidas direcciones IP, a los dispositivos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿En qué capa del modelo OSI operan las direcciones IP?",
@@ -647,7 +732,8 @@
         "Capa de enlace de datos"
       ],
       "respuesta": 0,
-      "explicacion": "El direccionamiento IP pertenece a la capa 3, la capa de red, del modelo OSI."
+      "explicacion": "El direccionamiento IP pertenece a la capa 3, la capa de red, del modelo OSI.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la principal ventaja de IPv6 frente a IPv4?",
@@ -658,13 +744,20 @@
         "No necesita routing"
       ],
       "respuesta": 1,
-      "explicacion": "IPv6 utiliza direcciones de 128 bits, proporcionando un espacio de direcciones muchísimo mayor que IPv4."
+      "explicacion": "IPv6 utiliza direcciones de 128 bits, proporcionando un espacio de direcciones muchísimo mayor que IPv4.",
+      "dominio": 4
     },
     {
       "pregunta": "El protocolo utilizado para enviar correo electrónico entre servidores de correo es:",
-      "opciones": ["DNS", "DHCP", "SMTP", "SSH"],
+      "opciones": [
+        "DNS",
+        "DHCP",
+        "SMTP",
+        "SSH"
+      ],
       "respuesta": 2,
-      "explicacion": "SMTP se utiliza para el envío y transferencia de correo electrónico entre servidores."
+      "explicacion": "SMTP se utiliza para el envío y transferencia de correo electrónico entre servidores.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué afirmación sobre la seguridad WiFi es correcta?",
@@ -675,7 +768,8 @@
         "Las redes inalámbricas deben utilizar cifrado fuerte como WPA3"
       ],
       "respuesta": 3,
-      "explicacion": "El tráfico inalámbrico puede ser interceptado, por lo que deben emplearse mecanismos de cifrado robustos como WPA3."
+      "explicacion": "El tráfico inalámbrico puede ser interceptado, por lo que deben emplearse mecanismos de cifrado robustos como WPA3.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la función principal de un número de puerto en redes?",
@@ -686,19 +780,32 @@
         "Sustituir la dirección IP"
       ],
       "respuesta": 0,
-      "explicacion": "El número de puerto identifica el servicio o aplicación de destino dentro de un host."
+      "explicacion": "El número de puerto identifica el servicio o aplicación de destino dentro de un host.",
+      "dominio": 4
     },
     {
       "pregunta": "El malware que cifra los archivos de una víctima y exige un pago por la clave de descifrado es:",
-      "opciones": ["Adware", "Ransomware", "Un worm", "Spyware"],
+      "opciones": [
+        "Adware",
+        "Ransomware",
+        "Un worm",
+        "Spyware"
+      ],
       "respuesta": 1,
-      "explicacion": "El ransomware cifra datos o sistemas y exige un pago, normalmente a cambio de una supuesta clave de recuperación."
+      "explicacion": "El ransomware cifra datos o sistemas y exige un pago, normalmente a cambio de una supuesta clave de recuperación.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué malware recopila secretamente información sobre la actividad de un usuario sin su consentimiento?",
-      "opciones": ["Un worm", "Un Trojan", "Spyware", "Ransomware"],
+      "opciones": [
+        "Un worm",
+        "Un Trojan",
+        "Spyware",
+        "Ransomware"
+      ],
       "respuesta": 2,
-      "explicacion": "El spyware está diseñado para recopilar de forma oculta información sobre usuarios, dispositivos o actividad."
+      "explicacion": "El spyware está diseñado para recopilar de forma oculta información sobre usuarios, dispositivos o actividad.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué ataque explota características físicas como el consumo eléctrico o los tiempos de ejecución en lugar de vulnerabilidades de software?",
@@ -709,7 +816,8 @@
         "Ataque de canal lateral"
       ],
       "respuesta": 3,
-      "explicacion": "Los ataques de canal lateral obtienen información explotando características físicas de la implementación, como tiempos, consumo eléctrico o emisiones."
+      "explicacion": "Los ataques de canal lateral obtienen información explotando características físicas de la implementación, como tiempos, consumo eléctrico o emisiones.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué supervisa específicamente un Network Intrusion Detection System (NIDS)?",
@@ -720,7 +828,8 @@
         "Almacena copias de seguridad cifradas"
       ],
       "respuesta": 0,
-      "explicacion": "Un NIDS analiza el tráfico de red para detectar patrones sospechosos o maliciosos y generar alertas."
+      "explicacion": "Un NIDS analiza el tráfico de red para detectar patrones sospechosos o maliciosos y generar alertas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué control preventivo bloquea automáticamente tráfico malicioso conocido mientras atraviesa la red?",
@@ -731,7 +840,8 @@
         "Un honeypot"
       ],
       "respuesta": 1,
-      "explicacion": "Un IPS funciona en línea y puede bloquear tráfico malicioso. Un IDS normalmente detecta y alerta sin bloquear de forma directa."
+      "explicacion": "Un IPS funciona en línea y puede bloquear tráfico malicioso. Un IDS normalmente detecta y alerta sin bloquear de forma directa.",
+      "dominio": 4
     },
     {
       "pregunta": "Un usuario ejecuta un análisis antivirus completo después de sospechar una infección. ¿Cuál es el objetivo principal del análisis?",
@@ -742,7 +852,8 @@
         "Asignar una nueva dirección IP"
       ],
       "respuesta": 2,
-      "explicacion": "Un análisis antivirus busca indicios de malware conocido y, cuando es posible, lo elimina o pone en cuarentena."
+      "explicacion": "Un análisis antivirus busca indicios de malware conocido y, cuando es posible, lo elimina o pone en cuarentena.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué característica diferencia un virus de un worm?",
@@ -753,7 +864,8 @@
         "Un virus necesita un archivo huésped y acción del usuario; un worm se propaga por sí solo"
       ],
       "respuesta": 3,
-      "explicacion": "Un virus suele depender de un archivo huésped y de alguna acción para propagarse, mientras que un worm puede autopropagarse a través de sistemas o redes."
+      "explicacion": "Un virus suele depender de un archivo huésped y de alguna acción para propagarse, mientras que un worm puede autopropagarse a través de sistemas o redes.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué combinación de controles proporciona tanto detección como prevención de amenazas de red?",
@@ -764,7 +876,8 @@
         "Una copia de seguridad y una hoja de cálculo"
       ],
       "respuesta": 0,
-      "explicacion": "El IDS proporciona detección y alertas, mientras que el IPS puede bloquear tráfico malicioso, combinando capacidades de detección y prevención."
+      "explicacion": "El IDS proporciona detección y alertas, mientras que el IPS puede bloquear tráfico malicioso, combinando capacidades de detección y prevención.",
+      "dominio": 4
     },
     {
       "pregunta": "Una herramienta de seguridad anuncia una IA que aprende los patrones normales de tráfico y señala desviaciones. ¿Qué beneficio describe?",
@@ -775,7 +888,8 @@
         "Eliminación de todos los logs"
       ],
       "respuesta": 1,
-      "explicacion": "Aprender un patrón normal y detectar desviaciones corresponde a la detección de anomalías de comportamiento."
+      "explicacion": "Aprender un patrón normal y detectar desviaciones corresponde a la detección de anomalías de comportamiento.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Por qué configuraría un administrador una Virtual Local Area Network (VLAN)?",
@@ -786,7 +900,8 @@
         "Para proporcionar un túnel remoto cifrado"
       ],
       "respuesta": 2,
-      "explicacion": "Una VLAN permite segmentar lógicamente una infraestructura de red, separando grupos de dispositivos aunque compartan infraestructura física."
+      "explicacion": "Una VLAN permite segmentar lógicamente una infraestructura de red, separando grupos de dispositivos aunque compartan infraestructura física.",
+      "dominio": 4
     },
     {
       "pregunta": "El modelo cloud que proporciona una plataforma para que los clientes desarrollen y desplieguen sus propias aplicaciones es:",
@@ -797,7 +912,8 @@
         "Platform as a Service (PaaS)"
       ],
       "respuesta": 3,
-      "explicacion": "PaaS proporciona una plataforma gestionada para desarrollar, ejecutar y desplegar aplicaciones. SaaS proporciona aplicaciones terminadas e IaaS proporciona infraestructura."
+      "explicacion": "PaaS proporciona una plataforma gestionada para desarrollar, ejecutar y desplegar aplicaciones. SaaS proporciona aplicaciones terminadas e IaaS proporciona infraestructura.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué enfoque divide una red en zonas muy pequeñas para limitar estrictamente el movimiento lateral?",
@@ -808,7 +924,8 @@
         "Desactivar todos los firewalls"
       ],
       "respuesta": 0,
-      "explicacion": "La microsegmentación divide la red en segmentos pequeños y aplica controles específicos para limitar el movimiento lateral."
+      "explicacion": "La microsegmentación divide la red en segmentos pequeños y aplica controles específicos para limitar el movimiento lateral.",
+      "dominio": 4
     },
     {
       "pregunta": "En un centro de datos, ¿para qué se instalan principalmente los sistemas de supresión de incendios?",
@@ -819,7 +936,8 @@
         "Para asignar roles de red a cada servidor"
       ],
       "respuesta": 1,
-      "explicacion": "Los sistemas de supresión de incendios están destinados a detectar, controlar o extinguir incendios y proteger tanto a las personas como a los equipos."
+      "explicacion": "Los sistemas de supresión de incendios están destinados a detectar, controlar o extinguir incendios y proteger tanto a las personas como a los equipos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué acuerdo documenta el entendimiento mutuo entre dos partes, a menudo sin obligaciones legales estrictas?",
@@ -830,7 +948,8 @@
         "Una regla de firewall"
       ],
       "respuesta": 2,
-      "explicacion": "Un MOU documenta el entendimiento y las expectativas entre dos partes y puede no tener el mismo grado de obligatoriedad jurídica que un contrato."
+      "explicacion": "Un MOU documenta el entendimiento y las expectativas entre dos partes y puede no tener el mismo grado de obligatoriedad jurídica que un contrato.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué describe correctamente a un Managed Service Provider (MSP) en entornos cloud?",
@@ -841,7 +960,8 @@
         "Un tercero que gestiona servicios de TI para un cliente"
       ],
       "respuesta": 3,
-      "explicacion": "Un MSP es una organización externa que presta y administra determinados servicios de TI para un cliente."
+      "explicacion": "Un MSP es una organización externa que presta y administra determinados servicios de TI para un cliente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Por qué se incorpora redundancia a la infraestructura de red?",
@@ -852,7 +972,8 @@
         "Para compartir contraseñas entre dispositivos"
       ],
       "respuesta": 0,
-      "explicacion": "La redundancia permite que otro componente asuma una función si se produce un fallo, mejorando la disponibilidad."
+      "explicacion": "La redundancia permite que otro componente asuma una función si se produce un fallo, mejorando la disponibilidad.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa configura NAC para admitir únicamente dispositivos que cumplan requisitos de seguridad antes de unirse a la red. ¿Qué objetivo persigue?",
@@ -863,7 +984,8 @@
         "Asignar roles a empleados"
       ],
       "respuesta": 1,
-      "explicacion": "Network Access Control (NAC) verifica y controla qué dispositivos pueden acceder a una red, pudiendo exigir determinadas condiciones de seguridad."
+      "explicacion": "Network Access Control (NAC) verifica y controla qué dispositivos pueden acceder a una red, pudiendo exigir determinadas condiciones de seguridad.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué propiedad hace que el cifrado simétrico sea rápido, pero requiera compartir la clave de forma segura?",
@@ -874,7 +996,8 @@
         "Cada parte utiliza una clave pública diferente"
       ],
       "respuesta": 2,
-      "explicacion": "El cifrado simétrico utiliza una misma clave secreta para cifrar y descifrar, por lo que esa clave debe distribuirse de forma segura."
+      "explicacion": "El cifrado simétrico utiliza una misma clave secreta para cifrar y descifrar, por lo que esa clave debe distribuirse de forma segura.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué se consigue al añadir un salt único a una contraseña antes de aplicar hashing?",
@@ -885,7 +1008,8 @@
         "Protege frente a ataques con hashes precalculados"
       ],
       "respuesta": 3,
-      "explicacion": "Un salt hace que contraseñas iguales puedan producir hashes diferentes y dificulta ataques con tablas precalculadas, como rainbow tables."
+      "explicacion": "Un salt hace que contraseñas iguales puedan producir hashes diferentes y dificulta ataques con tablas precalculadas, como rainbow tables.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué estado de los datos describe información que está siendo procesada activamente en memoria?",
@@ -896,7 +1020,8 @@
         "Datos archivados"
       ],
       "respuesta": 0,
-      "explicacion": "Los datos en uso son aquellos que están siendo procesados activamente, normalmente en memoria. Los datos en reposo están almacenados y los datos en tránsito se están transmitiendo."
+      "explicacion": "Los datos en uso son aquellos que están siendo procesados activamente, normalmente en memoria. Los datos en reposo están almacenados y los datos en tránsito se están transmitiendo.",
+      "dominio": 5
     },
     {
       "pregunta": "Después de clasificar los datos, ¿por qué se etiquetan?",
@@ -907,7 +1032,8 @@
         "Para eliminarlos después de un día"
       ],
       "respuesta": 1,
-      "explicacion": "El etiquetado identifica la clasificación o sensibilidad de los datos para que puedan aplicarse los controles y procedimientos de tratamiento adecuados."
+      "explicacion": "El etiquetado identifica la clasificación o sensibilidad de los datos para que puedan aplicarse los controles y procedimientos de tratamiento adecuados.",
+      "dominio": 5
     },
     {
       "pregunta": "La confidencialidad de los datos mientras se desplazan por una red se protege mediante:",
@@ -918,7 +1044,8 @@
         "Publicarlos abiertamente"
       ],
       "respuesta": 2,
-      "explicacion": "El cifrado de datos en tránsito protege su contenido frente a interceptaciones no autorizadas durante la transmisión."
+      "explicacion": "El cifrado de datos en tránsito protege su contenido frente a interceptaciones no autorizadas durante la transmisión.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Por qué establece una organización una política de retención de datos?",
@@ -929,7 +1056,8 @@
         "Para definir cuánto tiempo se conservan los datos antes de su eliminación segura"
       ],
       "respuesta": 3,
-      "explicacion": "Una política de retención establece durante cuánto tiempo deben conservarse distintos tipos de datos y cuándo deben eliminarse de forma segura."
+      "explicacion": "Una política de retención establece durante cuánto tiempo deben conservarse distintos tipos de datos y cuándo deben eliminarse de forma segura.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué acción de hardening reduce el riesgo asociado a las cuentas incluidas por defecto en los equipos?",
@@ -940,7 +1068,8 @@
         "Desactivar toda autenticación"
       ],
       "respuesta": 0,
-      "explicacion": "Cambiar las credenciales predeterminadas elimina una debilidad conocida que los atacantes pueden explotar fácilmente."
+      "explicacion": "Cambiar las credenciales predeterminadas elimina una debilidad conocida que los atacantes pueden explotar fácilmente.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Por qué es importante la gestión de configuración para mantener líneas base seguras?",
@@ -951,7 +1080,8 @@
         "Elimina la necesidad de actualizaciones"
       ],
       "respuesta": 1,
-      "explicacion": "La gestión de configuración mantiene los sistemas alineados con una línea base aprobada y proporciona control y trazabilidad sobre los cambios."
+      "explicacion": "La gestión de configuración mantiene los sistemas alineados con una línea base aprobada y proporciona control y trazabilidad sobre los cambios.",
+      "dominio": 5
     },
     {
       "pregunta": "Un administrador desactiva un servicio de red no utilizado en un servidor. ¿Cómo mejora esto la seguridad?",
@@ -962,7 +1092,8 @@
         "Aumenta el número de puertos abiertos"
       ],
       "respuesta": 2,
-      "explicacion": "Eliminar servicios innecesarios reduce el número de componentes y puntos de entrada que podrían ser explotados, disminuyendo la superficie de ataque."
+      "explicacion": "Eliminar servicios innecesarios reduce el número de componentes y puntos de entrada que podrían ser explotados, disminuyendo la superficie de ataque.",
+      "dominio": 5
     },
     {
       "pregunta": "El elemento de política que define los pasos para solicitar, aprobar y documentar cambios en sistemas es:",
@@ -973,7 +1104,8 @@
         "Política de gestión de cambios"
       ],
       "respuesta": 3,
-      "explicacion": "La política de gestión de cambios establece cómo deben solicitarse, evaluarse, aprobarse, documentarse y aplicarse las modificaciones."
+      "explicacion": "La política de gestión de cambios establece cómo deben solicitarse, evaluarse, aprobarse, documentarse y aplicarse las modificaciones.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué política establece que los empleados no deben utilizar el correo corporativo para enviar mensajes de acoso?",
@@ -984,7 +1116,8 @@
         "Política de gestión de cambios"
       ],
       "respuesta": 0,
-      "explicacion": "La política de uso aceptable establece las normas de utilización apropiada de los sistemas, servicios y recursos de una organización."
+      "explicacion": "La política de uso aceptable establece las normas de utilización apropiada de los sistemas, servicios y recursos de una organización.",
+      "dominio": 5
     },
     {
       "pregunta": "El área de políticas que regula cómo los dispositivos personales se conectan a los sistemas y almacenan datos de la empresa es:",
@@ -995,7 +1128,8 @@
         "Política de subnetting"
       ],
       "respuesta": 1,
-      "explicacion": "Una política BYOD establece requisitos y restricciones para el uso de dispositivos personales con recursos y datos corporativos."
+      "explicacion": "Una política BYOD establece requisitos y restricciones para el uso de dispositivos personales con recursos y datos corporativos.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Por qué una política de gestión de cambios debe exigir documentación y aprobación antes de realizar modificaciones?",
@@ -1006,7 +1140,8 @@
         "Para realizar cambios lo más rápido posible sin revisión"
       ],
       "respuesta": 2,
-      "explicacion": "La documentación y aprobación ayudan a prevenir errores, mantienen la trazabilidad y permiten revertir cambios de forma controlada si aparecen problemas."
+      "explicacion": "La documentación y aprobación ayudan a prevenir errores, mantienen la trazabilidad y permiten revertir cambios de forma controlada si aparecen problemas.",
+      "dominio": 5
     },
     {
       "pregunta": "La política que define reglas como longitud mínima y cambio periódico de las credenciales de usuario es:",
@@ -1017,13 +1152,20 @@
         "Política de contraseñas"
       ],
       "respuesta": 3,
-      "explicacion": "La política de contraseñas establece requisitos para las credenciales, como longitud, complejidad, reutilización o frecuencia de cambio."
+      "explicacion": "La política de contraseñas establece requisitos para las credenciales, como longitud, complejidad, reutilización o frecuencia de cambio.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué técnica de ingeniería social utiliza una llamada telefónica para engañar a una víctima y conseguir que revele información?",
-      "opciones": ["Vishing", "Smishing", "Tailgating", "Hashing"],
+      "opciones": [
+        "Vishing",
+        "Smishing",
+        "Tailgating",
+        "Hashing"
+      ],
       "respuesta": 0,
-      "explicacion": "El vishing es phishing realizado mediante comunicaciones de voz, habitualmente llamadas telefónicas."
+      "explicacion": "El vishing es phishing realizado mediante comunicaciones de voz, habitualmente llamadas telefónicas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Por qué se considera a menudo al factor humano la primera línea de defensa?",
@@ -1034,7 +1176,8 @@
         "La tecnología por sí sola detiene de forma fiable todos los ataques posibles"
       ],
       "respuesta": 1,
-      "explicacion": "Los usuarios correctamente formados pueden identificar intentos de ingeniería social y otras amenazas que pueden superar o eludir controles técnicos."
+      "explicacion": "Los usuarios correctamente formados pueden identificar intentos de ingeniería social y otras amenazas que pueden superar o eludir controles técnicos.",
+      "dominio": 5
     },
     {
       "pregunta": "Un mensaje de texto afirma proceder de un banco y pide al usuario que pulse un enlace e inicie sesión. ¿Qué ataque es?",
@@ -1045,7 +1188,8 @@
         "Vishing"
       ],
       "respuesta": 2,
-      "explicacion": "El smishing es phishing realizado mediante SMS o mensajes de texto con el objetivo de engañar a la víctima y obtener información o provocar una acción."
+      "explicacion": "El smishing es phishing realizado mediante SMS o mensajes de texto con el objetivo de engañar a la víctima y obtener información o provocar una acción.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Por qué deben evitar los empleados pegar datos confidenciales en servicios públicos de chat con IA?",
@@ -1056,7 +1200,8 @@
         "Los datos pueden conservarse o quedar expuestos fuera del control de la empresa"
       ],
       "respuesta": 3,
-      "explicacion": "La información introducida en servicios públicos de IA puede quedar almacenada, procesada o expuesta fuera de los controles de la organización, generando riesgo de fuga de datos."
+      "explicacion": "La información introducida en servicios públicos de IA puede quedar almacenada, procesada o expuesta fuera de los controles de la organización, generando riesgo de fuga de datos.",
+      "dominio": 5
     }
   ]
 }

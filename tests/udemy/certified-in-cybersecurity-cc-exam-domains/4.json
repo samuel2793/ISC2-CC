@@ -12,7 +12,8 @@
         "Una herramienta para gestionar y controlar el tráfico de red y proteger una red"
       ],
       "respuesta": 0,
-      "explicacion": "Una red de área local (LAN) suele cubrir una zona limitada, como una planta o un edificio."
+      "explicacion": "Una red de área local (LAN) suele cubrir una zona limitada, como una planta o un edificio.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones es un ejemplo de dirección MAC? (★)",
@@ -23,25 +24,44 @@
         "0051021f58"
       ],
       "respuesta": 0,
-      "explicacion": "Una dirección MAC tiene 48 bits y suele representarse como seis grupos hexadecimales de 8 bits."
+      "explicacion": "Una dirección MAC tiene 48 bits y suele representarse como seis grupos hexadecimales de 8 bits.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de estas capas NO forma parte del modelo TCP/IP?",
-      "opciones": ["Aplicación", "Transporte", "Internet", "Física"],
+      "opciones": [
+        "Aplicación",
+        "Transporte",
+        "Internet",
+        "Física"
+      ],
       "respuesta": 3,
-      "explicacion": "El modelo TCP/IP incluye las capas Aplicación, Transporte, Internet e Interfaz de red; la capa Física pertenece al modelo OSI."
+      "explicacion": "El modelo TCP/IP incluye las capas Aplicación, Transporte, Internet e Interfaz de red; la capa Física pertenece al modelo OSI.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de estas máscaras de subred permite 30 hosts utilizables? (★)",
-      "opciones": ["/27", "/26", "/30", "/29"],
+      "opciones": [
+        "/27",
+        "/26",
+        "/30",
+        "/29"
+      ],
       "respuesta": 0,
-      "explicacion": "Una subred /27 deja 5 bits para hosts y proporciona 2^5 − 2 = 30 direcciones de host utilizables."
+      "explicacion": "Una subred /27 deja 5 bits para hosts y proporciona 2^5 − 2 = 30 direcciones de host utilizables.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de estos dispositivos tiene como objetivo PRINCIPAL determinar la ruta más eficiente para que el tráfico fluya por la red?",
-      "opciones": ["Routers", "Hubs", "Firewalls", "Switches"],
+      "opciones": [
+        "Routers",
+        "Hubs",
+        "Firewalls",
+        "Switches"
+      ],
       "respuesta": 0,
-      "explicacion": "Un router consulta su tabla de enrutamiento para seleccionar la mejor ruta hacia la red de destino."
+      "explicacion": "Un router consulta su tabla de enrutamiento para seleccionar la mejor ruta hacia la red de destino.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de estas direcciones se reserva habitualmente para difusión?",
@@ -52,13 +72,20 @@
         "192.255.121.14"
       ],
       "respuesta": 0,
-      "explicacion": "En una subred IPv4 /24, la dirección terminada en 255 es la dirección de broadcast."
+      "explicacion": "En una subred IPv4 /24, la dirección terminada en 255 es la dirección de broadcast.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué número de puerto corresponde al Simple Mail Transfer Protocol (SMTP)?",
-      "opciones": ["22", "161", "25", "69"],
+      "opciones": [
+        "22",
+        "161",
+        "25",
+        "69"
+      ],
       "respuesta": 2,
-      "explicacion": "SMTP utiliza tradicionalmente el puerto TCP 25 para la transferencia de correo electrónico entre servidores."
+      "explicacion": "SMTP utiliza tradicionalmente el puerto TCP 25 para la transferencia de correo electrónico entre servidores.",
+      "dominio": 4
     },
     {
       "pregunta": "¿En qué capa del modelo OSI funcionan TCP y UDP?",
@@ -69,13 +96,20 @@
         "Capa de aplicación"
       ],
       "respuesta": 0,
-      "explicacion": "TCP y UDP son protocolos de la capa 4, la capa de transporte del modelo OSI."
+      "explicacion": "TCP y UDP son protocolos de la capa 4, la capa de transporte del modelo OSI.",
+      "dominio": 4
     },
     {
       "pregunta": "Una organización quiere reforzar sus controles de acceso de detección. ¿Qué herramienta debería implementar?",
-      "opciones": ["IDS", "Copias de seguridad", "Parches", "Cifrado"],
+      "opciones": [
+        "IDS",
+        "Copias de seguridad",
+        "Parches",
+        "Cifrado"
+      ],
       "respuesta": 0,
-      "explicacion": "Un IDS supervisa redes o sistemas para detectar actividad maliciosa o infracciones de políticas."
+      "explicacion": "Un IDS supervisa redes o sistemas para detectar actividad maliciosa o infracciones de políticas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes capas NO pertenece a la arquitectura TCP/IP?",
@@ -86,7 +120,8 @@
         "Capa de aplicación"
       ],
       "respuesta": 2,
-      "explicacion": "La arquitectura TCP/IP no define una capa independiente denominada Enlace de datos; esas funciones se integran en la capa de interfaz de red."
+      "explicacion": "La arquitectura TCP/IP no define una capa independiente denominada Enlace de datos; esas funciones se integran en la capa de interfaz de red.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes es una dirección IP pública válida?",
@@ -97,7 +132,8 @@
         "12.123.23.23"
       ],
       "respuesta": 3,
-      "explicacion": "12.123.23.23 tiene octetos válidos y no pertenece a un rango IPv4 privado."
+      "explicacion": "12.123.23.23 tiene octetos válidos y no pertenece a un rango IPv4 privado.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué puerto suele supervisar un IDS para identificar tráfico FTP sin cifrar?",
@@ -108,7 +144,8 @@
         "Puertos TCP 21 y UDP 21"
       ],
       "respuesta": 0,
-      "explicacion": "FTP utiliza normalmente el puerto TCP 21 para el canal de control, por lo que es un indicador habitual de FTP sin cifrar."
+      "explicacion": "FTP utiliza normalmente el puerto TCP 21 para el canal de control, por lo que es un indicador habitual de FTP sin cifrar.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué capa del modelo OSI es responsable de la transmisión de datos de extremo a extremo entre dos hosts?",
@@ -119,7 +156,8 @@
         "La capa de presentación"
       ],
       "respuesta": 0,
-      "explicacion": "La capa de transporte proporciona comunicación de extremo a extremo mediante protocolos como TCP y UDP."
+      "explicacion": "La capa de transporte proporciona comunicación de extremo a extremo mediante protocolos como TCP y UDP.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de estas herramientas sería la MEJOR para impedir la exfiltración no autorizada de datos desde una red corporativa? (★)",
@@ -130,13 +168,20 @@
         "Full Disk Encryption (FDE)"
       ],
       "respuesta": 0,
-      "explicacion": "DLP identifica, supervisa y bloquea transferencias no autorizadas de datos sensibles en uso, en tránsito o en reposo."
+      "explicacion": "DLP identifica, supervisa y bloquea transferencias no autorizadas de datos sensibles en uso, en tránsito o en reposo.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tecnología es la MEJOR para la autenticación basada en puerto, de modo que los clientes de red se autentiquen antes de usarla?",
-      "opciones": ["802.11g", "802.3", "802.15.1", "802.1X"],
+      "opciones": [
+        "802.11g",
+        "802.3",
+        "802.15.1",
+        "802.1X"
+      ],
       "respuesta": 3,
-      "explicacion": "IEEE 802.1X proporciona control de acceso a la red basado en puertos y exige autenticación antes de conceder acceso."
+      "explicacion": "IEEE 802.1X proporciona control de acceso a la red basado en puertos y exige autenticación antes de conceder acceso.",
+      "dominio": 4
     },
     {
       "pregunta": "¿A qué capa del modelo OSI pertenece una dirección MAC?",
@@ -147,7 +192,8 @@
         "Capa de enlace de datos"
       ],
       "respuesta": 3,
-      "explicacion": "Las direcciones MAC se utilizan en la capa 2, la capa de enlace de datos del modelo OSI."
+      "explicacion": "Las direcciones MAC se utilizan en la capa 2, la capa de enlace de datos del modelo OSI.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tres capas del modelo OSI corresponden a la capa de Aplicación del modelo TCP/IP?",
@@ -158,7 +204,8 @@
         "No existe una correspondencia directa porque el modelo TCP se creó antes que el modelo OSI"
       ],
       "respuesta": 2,
-      "explicacion": "La capa de Aplicación de TCP/IP agrupa las funciones de Aplicación, Presentación y Sesión del modelo OSI."
+      "explicacion": "La capa de Aplicación de TCP/IP agrupa las funciones de Aplicación, Presentación y Sesión del modelo OSI.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones describe mejor el concepto de red?",
@@ -169,7 +216,8 @@
         "Un solo ordenador que intercambia datos consigo mismo"
       ],
       "respuesta": 1,
-      "explicacion": "Una red conecta varios dispositivos para que puedan comunicarse y compartir información o recursos."
+      "explicacion": "Una red conecta varios dispositivos para que puedan comunicarse y compartir información o recursos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué función desempeña un hub en una red?",
@@ -180,13 +228,20 @@
         "Proporcionar información a otros ordenadores de la red"
       ],
       "respuesta": 2,
-      "explicacion": "Un hub sirve como punto de conexión común y reenvía los datos recibidos a todos sus puertos."
+      "explicacion": "Un hub sirve como punto de conexión común y reenvía los datos recibidos a todos sus puertos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué dispositivo determina la ruta más eficiente para el flujo de tráfico en una red?",
-      "opciones": ["Hub", "Switch", "Router", "Firewall"],
+      "opciones": [
+        "Hub",
+        "Switch",
+        "Router",
+        "Firewall"
+      ],
       "respuesta": 2,
-      "explicacion": "Un router analiza la topología y sus rutas para reenviar los paquetes por el camino más adecuado."
+      "explicacion": "Un router analiza la topología y sus rutas para reenviar los paquetes por el camino más adecuado.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué es un endpoint en una red?",
@@ -197,7 +252,8 @@
         "El inicio y el final de un enlace de comunicaciones de red"
       ],
       "respuesta": 0,
-      "explicacion": "Un endpoint es un extremo de una comunicación de red, como un cliente o un servidor."
+      "explicacion": "Un endpoint es un extremo de una comunicación de red, como un cliente o un servidor.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones describe mejor Ethernet?",
@@ -208,7 +264,8 @@
         "Un estándar que define conexiones entre equipos de red"
       ],
       "respuesta": 1,
-      "explicacion": "Ethernet define tecnologías y reglas para la transmisión de datos mediante conexiones cableadas, especialmente en LAN."
+      "explicacion": "Ethernet define tecnologías y reglas para la transmisión de datos mediante conexiones cableadas, especialmente en LAN.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué es una red de área local (LAN)?",
@@ -219,7 +276,8 @@
         "Una red que conecta dos ordenadores"
       ],
       "respuesta": 1,
-      "explicacion": "Una LAN conecta dispositivos dentro de un área geográfica limitada, como una planta, oficina o edificio."
+      "explicacion": "Una LAN conecta dispositivos dentro de un área geográfica limitada, como una planta, oficina o edificio.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones describe mejor un servidor?",
@@ -230,7 +288,8 @@
         "Un estándar que define conexiones cableadas entre dispositivos de red"
       ],
       "respuesta": 0,
-      "explicacion": "Un servidor gestiona recursos y presta datos o servicios a otros equipos, denominados clientes."
+      "explicacion": "Un servidor gestiona recursos y presta datos o servicios a otros equipos, denominados clientes.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el objetivo PRINCIPAL de un firewall en una red?",
@@ -241,7 +300,8 @@
         "Proporcionar información a otros ordenadores de la red"
       ],
       "respuesta": 1,
-      "explicacion": "Un firewall permite o bloquea tráfico entrante y saliente conforme a reglas de seguridad predefinidas."
+      "explicacion": "Un firewall permite o bloquea tráfico entrante y saliente conforme a reglas de seguridad predefinidas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué son los puertos bien conocidos?",
@@ -252,7 +312,8 @@
         "Puertos 80, 443 y 65431"
       ],
       "respuesta": 0,
-      "explicacion": "IANA reserva el rango 0–1023 para puertos bien conocidos utilizados por servicios y protocolos estándar."
+      "explicacion": "IANA reserva el rango 0–1023 para puertos bien conocidos utilizados por servicios y protocolos estándar.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la mejor forma abreviada de la dirección IPv6 2003:0ab8:0000:0000:0000:eeee:0000:0001?",
@@ -263,7 +324,8 @@
         "2003:ab8::eeee:0:1"
       ],
       "respuesta": 3,
-      "explicacion": "En IPv6 pueden eliminarse ceros iniciales y sustituirse una sola secuencia continua de grupos nulos por ::."
+      "explicacion": "En IPv6 pueden eliminarse ceros iniciales y sustituirse una sola secuencia continua de grupos nulos por ::.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué información puede obtenerse mediante el comando ping?",
@@ -274,7 +336,8 @@
         "La dirección del Domain Name Service (DNS) del sistema remoto"
       ],
       "respuesta": 0,
-      "explicacion": "ping envía solicitudes ICMP Echo para comprobar si un host responde y medir el tiempo de ida y vuelta."
+      "explicacion": "ping envía solicitudes ICMP Echo para comprobar si un host responde y medir el tiempo de ida y vuelta.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué rango corresponde a los puertos dinámicos o privados?",
@@ -285,13 +348,20 @@
         "Puertos 80, 443 y 8080"
       ],
       "respuesta": 2,
-      "explicacion": "IANA define el rango 49152–65535 como puertos dinámicos o privados, usados habitualmente como puertos efímeros."
+      "explicacion": "IANA define el rango 49152–65535 como puertos dinámicos o privados, usados habitualmente como puertos efímeros.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuáles son los dos protocolos PRINCIPALES de la capa de transporte?",
-      "opciones": ["HTTPS y TCP", "ICMP e IMAP", "TCP e ICMP", "TCP y UDP"],
+      "opciones": [
+        "HTTPS y TCP",
+        "ICMP e IMAP",
+        "TCP e ICMP",
+        "TCP y UDP"
+      ],
       "respuesta": 3,
-      "explicacion": "TCP y UDP son los principales protocolos de transporte de la suite TCP/IP."
+      "explicacion": "TCP y UDP son los principales protocolos de transporte de la suite TCP/IP.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué ataque consiste en interceptar y posiblemente alterar la comunicación entre dos personas sin que estas lo sepan?",
@@ -302,7 +372,8 @@
         "Ataque de fragmentación"
       ],
       "respuesta": 1,
-      "explicacion": "En un ataque man-in-the-middle, el atacante se sitúa entre las partes para observar o modificar la comunicación."
+      "explicacion": "En un ataque man-in-the-middle, el atacante se sitúa entre las partes para observar o modificar la comunicación.",
+      "dominio": 4
     },
     {
       "pregunta": "El MEJOR método de defensa para detener un ataque de repetición es: (★)",
@@ -313,13 +384,20 @@
         "Usar autenticación por contraseña"
       ],
       "respuesta": 1,
-      "explicacion": "IPSec incorpora números de secuencia y mecanismos antirrepetición que permiten rechazar paquetes capturados y reenviados."
+      "explicacion": "IPSec incorpora números de secuencia y mecanismos antirrepetición que permiten rechazar paquetes capturados y reenviados.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes elementos NO suele instalarse como resultado de una infección?",
-      "opciones": ["Bomba lógica", "Keylogger", "Troyano", "Backdoor"],
+      "opciones": [
+        "Bomba lógica",
+        "Keylogger",
+        "Troyano",
+        "Backdoor"
+      ],
       "respuesta": 0,
-      "explicacion": "Una bomba lógica suele ser insertada deliberadamente por alguien con acceso al sistema y se activa al cumplirse una condición."
+      "explicacion": "Una bomba lógica suele ser insertada deliberadamente por alguien con acceso al sistema y se activa al cumplirse una condición.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de estos NO es un ataque contra una red IP?",
@@ -330,37 +408,68 @@
         "Ataque de canal lateral"
       ],
       "respuesta": 3,
-      "explicacion": "Un ataque de canal lateral obtiene información de características físicas de una implementación, no del tráfico de una red IP."
+      "explicacion": "Un ataque de canal lateral obtiene información de características físicas de una implementación, no del tráfico de una red IP.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué ataque tiene como objetivo PRINCIPAL acceder a un sistema objetivo mediante una identidad falsificada?",
-      "opciones": ["Spoofing", "DDoS", "Amplificación", "Ransomware"],
+      "opciones": [
+        "Spoofing",
+        "DDoS",
+        "Amplificación",
+        "Ransomware"
+      ],
       "respuesta": 0,
-      "explicacion": "El spoofing suplanta una identidad, dirección o entidad de confianza para engañar al sistema y obtener acceso."
+      "explicacion": "El spoofing suplanta una identidad, dirección o entidad de confianza para engañar al sistema y obtener acceso.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué ataque cifra la información de una organización y después exige un pago por el código de descifrado?",
-      "opciones": ["Ransomware", "DDoS", "Spoofing", "Phishing"],
+      "opciones": [
+        "Ransomware",
+        "DDoS",
+        "Spoofing",
+        "Phishing"
+      ],
       "respuesta": 0,
-      "explicacion": "El ransomware cifra o bloquea datos y exige un rescate a cambio de restaurar el acceso."
+      "explicacion": "El ransomware cifra o bloquea datos y exige un rescate a cambio de restaurar el acceso.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de estos NO es un tipo de malware?",
-      "opciones": ["Spoofing", "Troyano", "Rootkit", "Gusano"],
+      "opciones": [
+        "Spoofing",
+        "Troyano",
+        "Rootkit",
+        "Gusano"
+      ],
       "respuesta": 0,
-      "explicacion": "El spoofing es una técnica de suplantación; los troyanos, rootkits y gusanos sí son tipos de malware."
+      "explicacion": "El spoofing es una técnica de suplantación; los troyanos, rootkits y gusanos sí son tipos de malware.",
+      "dominio": 5
     },
     {
       "pregunta": "Un alto ejecutivo de una organización recibe un correo malicioso que intenta engañarlo. ¿Qué ataque está utilizando el autor?",
-      "opciones": ["Whaling", "Spear phishing", "Phishing", "DDoS"],
+      "opciones": [
+        "Whaling",
+        "Spear phishing",
+        "Phishing",
+        "DDoS"
+      ],
       "respuesta": 0,
-      "explicacion": "El whaling es una modalidad de spear phishing dirigida específicamente a ejecutivos o personas de gran influencia."
+      "explicacion": "El whaling es una modalidad de spear phishing dirigida específicamente a ejecutivos o personas de gran influencia.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización necesita una herramienta de seguridad de red que detecte actividad maliciosa y actúe ante ella. ¿Cuál satisface MEJOR esa necesidad?",
-      "opciones": ["IPS", "IDS", "Firewall", "Router"],
+      "opciones": [
+        "IPS",
+        "IDS",
+        "Firewall",
+        "Router"
+      ],
       "respuesta": 0,
-      "explicacion": "Un IPS detecta actividad maliciosa en tiempo real y puede bloquear paquetes, conexiones o direcciones sospechosas."
+      "explicacion": "Un IPS detecta actividad maliciosa en tiempo real y puede bloquear paquetes, conexiones o direcciones sospechosas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de estas NO es una forma eficaz de proteger una organización frente a ciberdelincuentes?",
@@ -371,19 +480,32 @@
         "Usar firewalls"
       ],
       "respuesta": 2,
-      "explicacion": "Un antimalware desactualizado carece de firmas y mejoras recientes, por lo que no protege eficazmente frente a amenazas nuevas."
+      "explicacion": "Un antimalware desactualizado carece de firmas y mejoras recientes, por lo que no protege eficazmente frente a amenazas nuevas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de malware se autorreplica sin necesidad de intervención humana?",
-      "opciones": ["Gusano", "Troyano", "Virus", "Rootkits"],
+      "opciones": [
+        "Gusano",
+        "Troyano",
+        "Virus",
+        "Rootkits"
+      ],
       "respuesta": 0,
-      "explicacion": "Un gusano explota vulnerabilidades para replicarse y propagarse automáticamente entre sistemas."
+      "explicacion": "Un gusano explota vulnerabilidades para replicarse y propagarse automáticamente entre sistemas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué término designa amenazas con una sofisticación técnica y operativa inusualmente alta que pueden prolongarse durante meses o años?",
-      "opciones": ["Rootkit", "APT", "Ping of death", "Canal lateral"],
+      "opciones": [
+        "Rootkit",
+        "APT",
+        "Ping of death",
+        "Canal lateral"
+      ],
       "respuesta": 1,
-      "explicacion": "Una Advanced Persistent Threat (APT) es una campaña sofisticada, dirigida y persistente que busca permanecer oculta durante largos periodos."
+      "explicacion": "Una Advanced Persistent Threat (APT) es una campaña sofisticada, dirigida y persistente que busca permanecer oculta durante largos periodos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de ataque tiene como objetivo PRINCIPAL consumir todos los recursos disponibles y hacer inaccesible un servicio para sus usuarios legítimos?",
@@ -394,13 +516,20 @@
         "Troyanos"
       ],
       "respuesta": 2,
-      "explicacion": "Un ataque DoS sobrecarga recursos como ancho de banda, CPU o memoria para impedir que el servicio atienda solicitudes legítimas."
+      "explicacion": "Un ataque DoS sobrecarga recursos como ancho de banda, CPU o memoria para impedir que el servicio atienda solicitudes legítimas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué ataques aprovechan una validación de entradas inadecuada en sitios web?",
-      "opciones": ["Phishing", "Cross-Site Scripting", "Rootkits", "Troyanos"],
+      "opciones": [
+        "Phishing",
+        "Cross-Site Scripting",
+        "Rootkits",
+        "Troyanos"
+      ],
       "respuesta": 1,
-      "explicacion": "XSS introduce scripts maliciosos en entradas que la aplicación web no valida o neutraliza correctamente."
+      "explicacion": "XSS introduce scripts maliciosos en entradas que la aplicación web no valida o neutraliza correctamente.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué es una vulnerabilidad zero-day?",
@@ -411,7 +540,8 @@
         "Un ataque a una base de datos que introduce la fecha 00/00/0000 para explotar fallos de lógica de negocio"
       ],
       "respuesta": 1,
-      "explicacion": "Una vulnerabilidad zero-day es un fallo desconocido o aún sin corregir que puede ser explotado antes de que exista un parche."
+      "explicacion": "Una vulnerabilidad zero-day es un fallo desconocido o aún sin corregir que puede ser explotado antes de que exista un parche.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tipo de ataque es un Distributed Denial of Service (DDoS)?",
@@ -422,13 +552,20 @@
         "Un ataque que intenta desviar usuarios legítimos a sitios maliciosos mediante URL o enlaces de correo"
       ],
       "respuesta": 2,
-      "explicacion": "Un DDoS coordina muchos sistemas comprometidos para inundar un objetivo y negar el servicio a usuarios legítimos."
+      "explicacion": "Un DDoS coordina muchos sistemas comprometidos para inundar un objetivo y negar el servicio a usuarios legítimos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de malware toma como rehén los datos de un usuario y exige un rescate para liberarlos?",
-      "opciones": ["Troyano", "DoS", "Virus", "Ransomware"],
+      "opciones": [
+        "Troyano",
+        "DoS",
+        "Virus",
+        "Ransomware"
+      ],
       "respuesta": 3,
-      "explicacion": "El ransomware bloquea o cifra los datos y exige un pago para recuperar el acceso."
+      "explicacion": "El ransomware bloquea o cifra los datos y exige un pago para recuperar el acceso.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué es un ataque de canal lateral?",
@@ -439,7 +576,8 @@
         "Un ataque que implica numerosos sistemas secundarios desprevenidos"
       ],
       "respuesta": 2,
-      "explicacion": "Un ataque de canal lateral deduce información sensible a partir de señales físicas como consumo eléctrico, tiempos o emisiones electromagnéticas."
+      "explicacion": "Un ataque de canal lateral deduce información sensible a partir de señales físicas como consumo eléctrico, tiempos o emisiones electromagnéticas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es el objetivo PRINCIPAL de un ataque de spoofing?",
@@ -450,7 +588,8 @@
         "Redirigir usuarios a sitios web maliciosos"
       ],
       "respuesta": 1,
-      "explicacion": "El spoofing suplanta a un usuario o dispositivo legítimo para engañar los controles y obtener acceso."
+      "explicacion": "El spoofing suplanta a un usuario o dispositivo legítimo para engañar los controles y obtener acceso.",
+      "dominio": 4
     },
     {
       "pregunta": "Una avalancha de conexiones entrantes desde distintas ubicaciones del mundo sugiere ¿qué tipo de ataque?",
@@ -461,13 +600,20 @@
         "Un ataque Smurf"
       ],
       "respuesta": 1,
-      "explicacion": "Un DDoS genera tráfico desde numerosos equipos distribuidos para saturar el objetivo."
+      "explicacion": "Un DDoS genera tráfico desde numerosos equipos distribuidos para saturar el objetivo.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué solución de seguridad puede impedir el acceso no autorizado a la red interna?",
-      "opciones": ["NAT", "SIEM", "NAC", "VLAN"],
+      "opciones": [
+        "NAT",
+        "SIEM",
+        "NAC",
+        "VLAN"
+      ],
       "respuesta": 2,
-      "explicacion": "Network Access Control (NAC) aplica políticas de autenticación y cumplimiento antes de permitir que usuarios o dispositivos entren en la red."
+      "explicacion": "Network Access Control (NAC) aplica políticas de autenticación y cumplimiento antes de permitir que usuarios o dispositivos entren en la red.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de ataque es un ataque APT?",
@@ -478,7 +624,8 @@
         "Ataque Denial-of-Service"
       ],
       "respuesta": 0,
-      "explicacion": "APT significa Advanced Persistent Threat y describe una intrusión dirigida que busca mantener acceso oculto durante un periodo prolongado."
+      "explicacion": "APT significa Advanced Persistent Threat y describe una intrusión dirigida que busca mantener acceso oculto durante un periodo prolongado.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué ataque consiste en interceptar la conexión entre un usuario y un sitio web legítimo?",
@@ -489,7 +636,8 @@
         "Advanced Persistent Threat"
       ],
       "respuesta": 0,
-      "explicacion": "Un ataque man-in-the-middle intercepta la comunicación y puede leerla, modificarla o redirigirla."
+      "explicacion": "Un ataque man-in-the-middle intercepta la comunicación y puede leerla, modificarla o redirigirla.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el objetivo principal de un ataque Advanced Persistent Threat (APT)?",
@@ -500,7 +648,8 @@
         "Explotar vulnerabilidades de aplicaciones web para obtener beneficio económico"
       ],
       "respuesta": 2,
-      "explicacion": "Una APT busca infiltrarse de forma persistente y sigilosa para acceder a información sensible durante un periodo prolongado."
+      "explicacion": "Una APT busca infiltrarse de forma persistente y sigilosa para acceder a información sensible durante un periodo prolongado.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes situaciones NO se considera una amenaza interna?",
@@ -511,7 +660,8 @@
         "Un hacker externo vulnera el firewall de la empresa"
       ],
       "respuesta": 3,
-      "explicacion": "Una amenaza interna procede de personas o terceros con acceso autorizado; un hacker externo se origina fuera de la organización."
+      "explicacion": "Una amenaza interna procede de personas o terceros con acceso autorizado; un hacker externo se origina fuera de la organización.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué ataque intenta desviar usuarios legítimos a sitios web maliciosos abusando de URL o hipervínculos en correos electrónicos?",
@@ -522,7 +672,8 @@
         "Troyano"
       ],
       "respuesta": 2,
-      "explicacion": "El phishing suplanta una fuente de confianza y utiliza enlaces fraudulentos para conducir a la víctima a sitios maliciosos."
+      "explicacion": "El phishing suplanta una fuente de confianza y utiliza enlaces fraudulentos para conducir a la víctima a sitios maliciosos.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es el propósito PRINCIPAL de un firewall?",
@@ -533,7 +684,8 @@
         "Detener o bloquear ataques"
       ],
       "respuesta": 3,
-      "explicacion": "Un firewall aplica reglas para bloquear tráfico no autorizado o malicioso entre redes."
+      "explicacion": "Un firewall aplica reglas para bloquear tráfico no autorizado o malicioso entre redes.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el propósito PRINCIPAL de un sistema de detección y prevención de intrusiones?",
@@ -544,13 +696,20 @@
         "Detener código malicioso"
       ],
       "respuesta": 1,
-      "explicacion": "Un IDPS supervisa la actividad para identificar ataques y puede responder bloqueándolos en tiempo real."
+      "explicacion": "Un IDPS supervisa la actividad para identificar ataques y puede responder bloqueándolos en tiempo real.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de malware está diseñado para replicarse y propagarse a otros dispositivos sin intervención del usuario?",
-      "opciones": ["Virus", "Troyano", "Gusano", "Ransomware"],
+      "opciones": [
+        "Virus",
+        "Troyano",
+        "Gusano",
+        "Ransomware"
+      ],
       "respuesta": 2,
-      "explicacion": "Un gusano se propaga automáticamente explotando redes o vulnerabilidades sin requerir una acción adicional del usuario."
+      "explicacion": "Un gusano se propaga automáticamente explotando redes o vulnerabilidades sin requerir una acción adicional del usuario.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué ataque utiliza una lista de hashes precalculados para encontrar un valor que coincida con el hash de la contraseña de un usuario? (★)",
@@ -561,7 +720,8 @@
         "Ataque de spoofing"
       ],
       "respuesta": 2,
-      "explicacion": "Una rainbow table contiene hashes precalculados que permiten buscar rápidamente posibles contraseñas correspondientes."
+      "explicacion": "Una rainbow table contiene hashes precalculados que permiten buscar rápidamente posibles contraseñas correspondientes.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué ataque de red consiste en crear un correo malicioso que parece proceder de una fuente legítima para engañar al destinatario y lograr que revele información sensible o descargue malware?",
@@ -572,7 +732,8 @@
         "Ataque Cross-Site Scripting"
       ],
       "respuesta": 0,
-      "explicacion": "El spear phishing utiliza mensajes personalizados que aparentan proceder de una fuente de confianza para engañar a un objetivo concreto."
+      "explicacion": "El spear phishing utiliza mensajes personalizados que aparentan proceder de una fuente de confianza para engañar a un objetivo concreto.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué ataque de red consiste en interceptar y posiblemente alterar la comunicación entre dos partes sin que estas lo sepan?",
@@ -583,13 +744,20 @@
         "Ataque de phishing"
       ],
       "respuesta": 0,
-      "explicacion": "En un ataque on-path, también llamado man-in-the-middle, el atacante se sitúa en la ruta de comunicación para observarla o modificarla."
+      "explicacion": "En un ataque on-path, también llamado man-in-the-middle, el atacante se sitúa en la ruta de comunicación para observarla o modificarla.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué herramienta de seguridad estaría en mejor posición para detectar comportamiento malicioso en un dispositivo, como un ordenador personal?",
-      "opciones": ["NIDS", "Firewall", "HIDS", "DLP"],
+      "opciones": [
+        "NIDS",
+        "Firewall",
+        "HIDS",
+        "DLP"
+      ],
       "respuesta": 2,
-      "explicacion": "Un Host-based Intrusion Detection System (HIDS) supervisa eventos y actividad de un host concreto."
+      "explicacion": "Un Host-based Intrusion Detection System (HIDS) supervisa eventos y actividad de un host concreto.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué ataque de red consiste en enviar datos maliciosos especialmente preparados a una aplicación o sistema para que se bloquee o deje de responder? (★)",
@@ -600,7 +768,8 @@
         "Ataque SQL Injection"
       ],
       "respuesta": 0,
-      "explicacion": "Un buffer overflow introduce más datos de los que admite un búfer y puede provocar fallos, corrupción de memoria o ejecución de código."
+      "explicacion": "Un buffer overflow introduce más datos de los que admite un búfer y puede provocar fallos, corrupción de memoria o ejecución de código.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un ejemplo de ataque de ciberseguridad?",
@@ -611,7 +780,8 @@
         "Brecha de datos"
       ],
       "respuesta": 3,
-      "explicacion": "Una brecha de datos es normalmente el resultado o impacto de un ataque exitoso, no una técnica de ataque en sí misma."
+      "explicacion": "Una brecha de datos es normalmente el resultado o impacto de un ataque exitoso, no una técnica de ataque en sí misma.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un tipo de ataque que pueda utilizarse para obtener acceso a la red de una organización?",
@@ -622,13 +792,20 @@
         "Rainbow table"
       ],
       "respuesta": 2,
-      "explicacion": "Un ataque DoS busca interrumpir la disponibilidad del servicio, no obtener acceso a la red."
+      "explicacion": "Un ataque DoS busca interrumpir la disponibilidad del servicio, no obtener acceso a la red.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de malware se disfraza de software benigno pero contiene una carga maliciosa?",
-      "opciones": ["Gusano", "Troyano", "Virus", "Spyware"],
+      "opciones": [
+        "Gusano",
+        "Troyano",
+        "Virus",
+        "Spyware"
+      ],
       "respuesta": 1,
-      "explicacion": "Un troyano aparenta ser un programa legítimo para inducir al usuario a ejecutarlo y activar su carga maliciosa."
+      "explicacion": "Un troyano aparenta ser un programa legítimo para inducir al usuario a ejecutarlo y activar su carga maliciosa.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de los siguientes NO es un indicador habitual de un ataque de canal lateral?",
@@ -639,7 +816,8 @@
         "Análisis de paquetes"
       ],
       "respuesta": 3,
-      "explicacion": "El análisis de paquetes examina tráfico de red, mientras que los canales laterales explotan señales físicas o de implementación."
+      "explicacion": "El análisis de paquetes examina tráfico de red, mientras que los canales laterales explotan señales físicas o de implementación.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué significan las siglas APT?",
@@ -650,7 +828,8 @@
         "Advanced Protocol Tracking"
       ],
       "respuesta": 0,
-      "explicacion": "APT significa Advanced Persistent Threat, una amenaza dirigida, sofisticada y persistente."
+      "explicacion": "APT significa Advanced Persistent Threat, una amenaza dirigida, sofisticada y persistente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el objetivo PRINCIPAL de un ataque de spoofing?",
@@ -661,7 +840,8 @@
         "Insertar un programa en un sistema para alterar datos"
       ],
       "respuesta": 0,
-      "explicacion": "El spoofing suplanta una identidad, dirección o entidad legítima para engañar al objetivo y obtener acceso."
+      "explicacion": "El spoofing suplanta una identidad, dirección o entidad legítima para engañar al objetivo y obtener acceso.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones define el phishing?",
@@ -672,7 +852,8 @@
         "Un ataque que inserta un programa en un sistema para alterar datos"
       ],
       "respuesta": 1,
-      "explicacion": "El phishing utiliza comunicaciones fraudulentas y enlaces engañosos para dirigir a las víctimas a sitios maliciosos o robar información."
+      "explicacion": "El phishing utiliza comunicaciones fraudulentas y enlaces engañosos para dirigir a las víctimas a sitios maliciosos o robar información.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué es el ransomware?",
@@ -683,7 +864,8 @@
         "Un programa que detecta si un ordenador está infectado por un virus"
       ],
       "respuesta": 0,
-      "explicacion": "El ransomware cifra o bloquea datos y exige un pago para restablecer el acceso."
+      "explicacion": "El ransomware cifra o bloquea datos y exige un pago para restablecer el acceso.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cómo suele entrar el ransomware en un sistema?",
@@ -694,7 +876,8 @@
         "Instalado mediante correos de phishing o al visitar un sitio web infectado"
       ],
       "respuesta": 3,
-      "explicacion": "El ransomware suele distribuirse mediante enlaces o adjuntos de phishing y sitios web comprometidos."
+      "explicacion": "El ransomware suele distribuirse mediante enlaces o adjuntos de phishing y sitios web comprometidos.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes afirmaciones es VERDADERA sobre Denial of Service (DoS)?",
@@ -705,13 +888,20 @@
         "Es un ataque utilizado para impedir el cifrado"
       ],
       "respuesta": 1,
-      "explicacion": "Un DoS intenta hacer que un sistema o recurso deje de estar disponible para sus usuarios legítimos."
+      "explicacion": "Un DoS intenta hacer que un sistema o recurso deje de estar disponible para sus usuarios legítimos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de malware se autorreplica sin necesidad de interacción del usuario?",
-      "opciones": ["Gusano", "Troyano", "Virus", "Spyware"],
+      "opciones": [
+        "Gusano",
+        "Troyano",
+        "Virus",
+        "Spyware"
+      ],
       "respuesta": 0,
-      "explicacion": "Un gusano puede propagarse automáticamente a otros sistemas una vez que compromete un equipo."
+      "explicacion": "Un gusano puede propagarse automáticamente a otros sistemas una vez que compromete un equipo.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es el objetivo PRINCIPAL de un ataque Denial of Service (DoS)?",
@@ -722,7 +912,8 @@
         "Desviar usuarios a sitios web maliciosos"
       ],
       "respuesta": 2,
-      "explicacion": "Un DoS busca degradar o interrumpir un servicio para que los usuarios legítimos no puedan utilizarlo."
+      "explicacion": "Un DoS busca degradar o interrumpir un servicio para que los usuarios legítimos no puedan utilizarlo.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes afirmaciones es VERDADERA sobre el ransomware?",
@@ -733,7 +924,8 @@
         "Cifra los datos de la víctima y exige un pago para descifrarlos"
       ],
       "respuesta": 3,
-      "explicacion": "El ransomware cifra o bloquea los datos y exige un rescate, sin garantizar que el atacante entregue una clave válida."
+      "explicacion": "El ransomware cifra o bloquea los datos y exige un rescate, sin garantizar que el atacante entregue una clave válida.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es la diferencia PRINCIPAL entre un Intrusion Detection System (IDS) y un Intrusion Prevention System (IPS)?",
@@ -744,19 +936,32 @@
         "El IPS puede bloquear tráfico de red y el IDS no"
       ],
       "respuesta": 3,
-      "explicacion": "Un IDS detecta y genera alertas, mientras que un IPS puede intervenir activamente y bloquear tráfico malicioso."
+      "explicacion": "Un IDS detecta y genera alertas, mientras que un IPS puede intervenir activamente y bloquear tráfico malicioso.",
+      "dominio": 4
     },
     {
       "pregunta": "Las soluciones antimalware modernas detectan más que virus. ¿Cuál de las siguientes amenazas NO suele ser detectada por un antimalware convencional?",
-      "opciones": ["Ransomware", "Spyware", "Rootkits", "APT"],
+      "opciones": [
+        "Ransomware",
+        "Spyware",
+        "Rootkits",
+        "APT"
+      ],
       "respuesta": 3,
-      "explicacion": "Una APT es una campaña compleja y persistente que suele requerir capacidades de detección y análisis más amplias que un antimalware convencional."
+      "explicacion": "Una APT es una campaña compleja y persistente que suele requerir capacidades de detección y análisis más amplias que un antimalware convencional.",
+      "dominio": 5
     },
     {
       "pregunta": "¿En qué capa del modelo OSI NO controla el tráfico un firewall?",
-      "opciones": ["Capa 1", "Capa 3", "Capa 7", "Capa 2"],
+      "opciones": [
+        "Capa 1",
+        "Capa 3",
+        "Capa 7",
+        "Capa 2"
+      ],
       "respuesta": 0,
-      "explicacion": "Los firewalls no operan sobre la transmisión física de bits de la capa 1; aplican controles en capas superiores."
+      "explicacion": "Los firewalls no operan sobre la transmisión física de bits de la capa 1; aplican controles en capas superiores.",
+      "dominio": 4
     },
     {
       "pregunta": "Los registros de auditoría muestran que un empleado bancario accedió a cuentas de clientes y transfirió fondos a una cuenta personal. ¿Cómo se describe esta acción?",
@@ -767,7 +972,8 @@
         "Brecha de datos"
       ],
       "respuesta": 0,
-      "explicacion": "El empleado utilizó indebidamente su acceso autorizado, lo que constituye una amenaza interna."
+      "explicacion": "El empleado utilizó indebidamente su acceso autorizado, lo que constituye una amenaza interna.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué ataque es probable cuando un hacker intercepta y redirige tráfico suplantando la dirección IP de un servidor corporativo?",
@@ -778,7 +984,8 @@
         "Spyware"
       ],
       "respuesta": 0,
-      "explicacion": "En un ataque on-path, el atacante se coloca en la ruta de comunicación para interceptar y redirigir el tráfico."
+      "explicacion": "En un ataque on-path, el atacante se coloca en la ruta de comunicación para interceptar y redirigir el tráfico.",
+      "dominio": 4
     },
     {
       "pregunta": "Un analista júnior ha detectado ransomware en los servidores y ha activado el equipo de respuesta a incidentes. ¿Cuál es la siguiente MEJOR acción? (★)",
@@ -789,13 +996,20 @@
         "Actualizar el antivirus de todos los servidores"
       ],
       "respuesta": 1,
-      "explicacion": "La prioridad inmediata es contener el incidente aislando los sistemas infectados para impedir la propagación."
+      "explicacion": "La prioridad inmediata es contener el incidente aislando los sistemas infectados para impedir la propagación.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué solución utilizaría probablemente un analista de ciberseguridad para supervisar el tráfico de Internet y alertar sobre actividad inusual?",
-      "opciones": ["SOAR", "NIDS", "HIDS", "NIPS"],
+      "opciones": [
+        "SOAR",
+        "NIDS",
+        "HIDS",
+        "NIPS"
+      ],
       "respuesta": 1,
-      "explicacion": "Un NIDS analiza el tráfico de red y genera alertas cuando detecta patrones sospechosos o conocidos."
+      "explicacion": "Un NIDS analiza el tráfico de red y genera alertas cuando detecta patrones sospechosos o conocidos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué herramienta tiene MÁS probabilidades de detectar una vulnerabilidad XSS?",
@@ -806,7 +1020,8 @@
         "Escáner de vulnerabilidades de aplicaciones web"
       ],
       "respuesta": 3,
-      "explicacion": "Un escáner de aplicaciones web prueba entradas y respuestas en ejecución para identificar fallos como Cross-Site Scripting."
+      "explicacion": "Un escáner de aplicaciones web prueba entradas y respuestas en ejecución para identificar fallos como Cross-Site Scripting.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de estas afirmaciones sobre las implicaciones de seguridad de IPv6 NO es verdadera? (★)",
@@ -817,7 +1032,8 @@
         "El tráfico IPv6 puede eludir controles de seguridad existentes"
       ],
       "respuesta": 2,
-      "explicacion": "IPv6 no depende de NAT como mecanismo normal de direccionamiento, por lo que no existe una implementación NAT de IPv6 que pueda calificarse así."
+      "explicacion": "IPv6 no depende de NAT como mecanismo normal de direccionamiento, por lo que no existe una implementación NAT de IPv6 que pueda calificarse así.",
+      "dominio": 4
     },
     {
       "pregunta": "En un modelo BYOD, ¿qué tecnología es la más adecuada para mantener separados los datos y aplicaciones corporativos de los personales?",
@@ -828,7 +1044,8 @@
         "Contenedorización"
       ],
       "respuesta": 3,
-      "explicacion": "La contenedorización crea un entorno aislado para las aplicaciones y los datos corporativos dentro del dispositivo personal."
+      "explicacion": "La contenedorización crea un entorno aislado para las aplicaciones y los datos corporativos dentro del dispositivo personal.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de estas afirmaciones es VERDADERA sobre el cybersquatting? (★)",
@@ -839,7 +1056,8 @@
         "Es una práctica poco ética, pero todo el mundo la realiza"
       ],
       "respuesta": 2,
-      "explicacion": "El cybersquatting registra dominios vinculados a marcas ajenas con intención especulativa o abusiva y puede infringir leyes de protección de marcas."
+      "explicacion": "El cybersquatting registra dominios vinculados a marcas ajenas con intención especulativa o abusiva y puede infringir leyes de protección de marcas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué significa redundancia en el contexto de la ciberseguridad?",
@@ -850,13 +1068,20 @@
         "Diseñar sistemas únicamente con los componentes imprescindibles"
       ],
       "respuesta": 0,
-      "explicacion": "La redundancia incorpora componentes o rutas de respaldo para mantener la disponibilidad cuando falla el elemento principal."
+      "explicacion": "La redundancia incorpora componentes o rutas de respaldo para mantener la disponibilidad cuando falla el elemento principal.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué documento está MÁS directamente relacionado con lo que puede hacerse con un sistema o con su información?",
-      "opciones": ["MOU", "MOA", "SLA", "NDA"],
+      "opciones": [
+        "MOU",
+        "MOA",
+        "SLA",
+        "NDA"
+      ],
       "respuesta": 0,
-      "explicacion": "Un Memorandum of Understanding (MOU) puede definir los términos de colaboración y las restricciones de uso de sistemas o información."
+      "explicacion": "Un Memorandum of Understanding (MOU) puede definir los términos de colaboración y las restricciones de uso de sistemas o información.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de las siguientes NO es una característica de una implementación con un MSP?",
@@ -867,25 +1092,44 @@
         "Gestionar la infraestructura interna de la empresa"
       ],
       "respuesta": 0,
-      "explicacion": "Un Managed Service Provider gestiona servicios técnicos, pero normalmente no toma las decisiones estratégicas principales del cliente."
+      "explicacion": "Un Managed Service Provider gestiona servicios técnicos, pero normalmente no toma las decisiones estratégicas principales del cliente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué método se utiliza HABITUALMENTE para localizar hosts activos en una red?",
-      "opciones": ["Ping sweep", "Geolocalización", "Wireshark", "Traceroute"],
+      "opciones": [
+        "Ping sweep",
+        "Geolocalización",
+        "Wireshark",
+        "Traceroute"
+      ],
       "respuesta": 0,
-      "explicacion": "Un ping sweep envía solicitudes ICMP a un rango de direcciones y registra qué hosts responden."
+      "explicacion": "Un ping sweep envía solicitudes ICMP a un rango de direcciones y registra qué hosts responden.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué modelo de despliegue en la nube combina almacenamiento de nube pública y privada?",
-      "opciones": ["Híbrida", "Pública", "Privada", "Comunitaria"],
+      "opciones": [
+        "Híbrida",
+        "Pública",
+        "Privada",
+        "Comunitaria"
+      ],
       "respuesta": 0,
-      "explicacion": "Una nube híbrida combina recursos de nube privada y pública según las necesidades de seguridad, capacidad o coste."
+      "explicacion": "Una nube híbrida combina recursos de nube privada y pública según las necesidades de seguridad, capacidad o coste.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tecnología permite comunicaciones punto a punto a través de una red no confiable?",
-      "opciones": ["VPN", "VLAN", "Firewall", "Router"],
+      "opciones": [
+        "VPN",
+        "VLAN",
+        "Firewall",
+        "Router"
+      ],
       "respuesta": 0,
-      "explicacion": "Una VPN crea un túnel cifrado entre puntos para proteger la confidencialidad e integridad del tráfico sobre Internet."
+      "explicacion": "Una VPN crea un túnel cifrado entre puntos para proteger la confidencialidad e integridad del tráfico sobre Internet.",
+      "dominio": 4
     },
     {
       "pregunta": "Una organización utiliza un enfoque por capas al diseñar su arquitectura de seguridad. ¿Qué enfoque está aplicando?",
@@ -896,7 +1140,8 @@
         "Network Access Control"
       ],
       "respuesta": 0,
-      "explicacion": "La defensa en profundidad combina múltiples controles para que otras capas sigan protegiendo si una de ellas falla."
+      "explicacion": "La defensa en profundidad combina múltiples controles para que otras capas sigan protegiendo si una de ellas falla.",
+      "dominio": 4
     },
     {
       "pregunta": "¿A qué se refiere el término data remanence?",
@@ -907,7 +1152,8 @@
         "Todos los datos de un sistema"
       ],
       "respuesta": 2,
-      "explicacion": "Data remanence es la información residual que puede permanecer recuperable en un soporte tras borrar o formatear datos."
+      "explicacion": "Data remanence es la información residual que puede permanecer recuperable en un soporte tras borrar o formatear datos.",
+      "dominio": 5
     },
     {
       "pregunta": "Un Memorandum of Understanding (MOU) o Memorandum of Agreement (MOA) es:",
@@ -918,7 +1164,8 @@
         "Un acuerdo formal entre dos o más partes que establece los términos de su relación de trabajo"
       ],
       "respuesta": 3,
-      "explicacion": "Un MOU o MOA documenta el entendimiento, las funciones y las responsabilidades acordadas entre las partes."
+      "explicacion": "Un MOU o MOA documenta el entendimiento, las funciones y las responsabilidades acordadas entre las partes.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es un objetivo PRINCIPAL de una Virtual Local Area Network (VLAN)?",
@@ -929,7 +1176,8 @@
         "Proporcionar acceso seguro a un MSP"
       ],
       "respuesta": 1,
-      "explicacion": "Una VLAN divide lógicamente una red física en dominios de broadcast separados para organizar y aislar el tráfico."
+      "explicacion": "Una VLAN divide lógicamente una red física en dominios de broadcast separados para organizar y aislar el tráfico.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el propósito principal de un Service-Level Agreement (SLA)?",
@@ -940,7 +1188,8 @@
         "Proporcionar acceso seguro a un proveedor cloud"
       ],
       "respuesta": 2,
-      "explicacion": "Un SLA especifica los servicios, niveles de rendimiento, responsabilidades y compromisos entre proveedor y cliente."
+      "explicacion": "Un SLA especifica los servicios, niveles de rendimiento, responsabilidades y compromisos entre proveedor y cliente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el objetivo PRINCIPAL de una Virtual Private Network (VPN)?",
@@ -951,7 +1200,8 @@
         "Proporcionar acceso virtual privado a dispositivos de red"
       ],
       "respuesta": 0,
-      "explicacion": "Una VPN cifra la comunicación y crea un túnel seguro para acceder a una red a través de una infraestructura no confiable."
+      "explicacion": "Una VPN cifra la comunicación y crea un túnel seguro para acceder a una red a través de una infraestructura no confiable.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué servicio cloud proporciona a la organización el mayor nivel de flexibilidad y personalización?",
@@ -962,7 +1212,8 @@
         "On-premises"
       ],
       "respuesta": 0,
-      "explicacion": "IaaS entrega recursos virtualizados y permite a la organización administrar y personalizar sistemas operativos, aplicaciones y middleware."
+      "explicacion": "IaaS entrega recursos virtualizados y permite a la organización administrar y personalizar sistemas operativos, aplicaciones y middleware.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la diferencia entre Network Access Control (NAC) y una Virtual Private Network (VPN)?",
@@ -973,43 +1224,80 @@
         "NAC controla el acceso a la red según una política, mientras que VPN crea una conexión segura"
       ],
       "respuesta": 3,
-      "explicacion": "NAC decide qué usuarios o dispositivos pueden acceder según políticas; una VPN establece un canal cifrado hacia otra red."
+      "explicacion": "NAC decide qué usuarios o dispositivos pueden acceder según políticas; una VPN establece un canal cifrado hacia otra red.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la mejor tecnología para aplicar configuraciones de seguridad uniformes a varios dispositivos móviles de una organización? (★)",
-      "opciones": ["MDM", "IPS", "IDS", "SIEM"],
+      "opciones": [
+        "MDM",
+        "IPS",
+        "IDS",
+        "SIEM"
+      ],
       "respuesta": 0,
-      "explicacion": "Mobile Device Management (MDM) permite imponer políticas, configurar, supervisar, bloquear o borrar de forma remota dispositivos móviles."
+      "explicacion": "Mobile Device Management (MDM) permite imponer políticas, configurar, supervisar, bloquear o borrar de forma remota dispositivos móviles.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es la mejor tecnología para detectar almacenamiento no autorizado de datos sensibles en discos duros? (★)",
-      "opciones": ["IDS", "IPS", "DLP", "TLS"],
+      "opciones": [
+        "IDS",
+        "IPS",
+        "DLP",
+        "TLS"
+      ],
       "respuesta": 2,
-      "explicacion": "DLP identifica y supervisa datos sensibles en reposo y puede detectar o impedir su almacenamiento no autorizado."
+      "explicacion": "DLP identifica y supervisa datos sensibles en reposo y puede detectar o impedir su almacenamiento no autorizado.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cómo se llama la herramienta de red que modifica y mapea las direcciones de origen de las solicitudes de clientes para proporcionar anonimato? (★)",
-      "opciones": ["Gateway", "Proxy", "Router", "Firewall"],
+      "opciones": [
+        "Gateway",
+        "Proxy",
+        "Router",
+        "Firewall"
+      ],
       "respuesta": 1,
-      "explicacion": "Un proxy actúa como intermediario, realiza las solicitudes en nombre del cliente y oculta su dirección IP de origen."
+      "explicacion": "Un proxy actúa como intermediario, realiza las solicitudes en nombre del cliente y oculta su dirección IP de origen.",
+      "dominio": 4
     },
     {
       "pregunta": "¿En qué categoría de servicios cloud se incluye un servicio de correo electrónico listo para usar?",
-      "opciones": ["SaaS", "IaaS", "On-premises", "PaaS"],
+      "opciones": [
+        "SaaS",
+        "IaaS",
+        "On-premises",
+        "PaaS"
+      ],
       "respuesta": 0,
-      "explicacion": "SaaS proporciona aplicaciones completas accesibles por Internet sin que el usuario administre la infraestructura subyacente."
+      "explicacion": "SaaS proporciona aplicaciones completas accesibles por Internet sin que el usuario administre la infraestructura subyacente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué modelo cloud asigna la MAYOR responsabilidad al proveedor?",
-      "opciones": ["On-premises", "IaaS", "PaaS", "SaaS"],
+      "opciones": [
+        "On-premises",
+        "IaaS",
+        "PaaS",
+        "SaaS"
+      ],
       "respuesta": 3,
-      "explicacion": "En SaaS, el proveedor administra la aplicación y prácticamente toda la infraestructura tecnológica subyacente."
+      "explicacion": "En SaaS, el proveedor administra la aplicación y prácticamente toda la infraestructura tecnológica subyacente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tecnología prioriza el tráfico de red crítico sobre la navegación web y las redes sociales? (★)",
-      "opciones": ["VLAN", "QoS", "VPN", "TLS"],
+      "opciones": [
+        "VLAN",
+        "QoS",
+        "VPN",
+        "TLS"
+      ],
       "respuesta": 1,
-      "explicacion": "Quality of Service (QoS) clasifica y prioriza tráfico para reservar recursos a servicios críticos como VoIP o videoconferencia."
+      "explicacion": "Quality of Service (QoS) clasifica y prioriza tráfico para reservar recursos a servicios críticos como VoIP o videoconferencia.",
+      "dominio": 4
     },
     {
       "pregunta": "La defensa en profundidad es una estrategia que:",
@@ -1020,7 +1308,8 @@
         "Se centra en la respuesta a incidentes en lugar de la prevención"
       ],
       "respuesta": 2,
-      "explicacion": "La defensa en profundidad combina controles físicos, técnicos y administrativos para evitar depender de una única barrera."
+      "explicacion": "La defensa en profundidad combina controles físicos, técnicos y administrativos para evitar depender de una única barrera.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué modelo de cloud computing permite que clientes que no conocen la identidad de los demás compartan infraestructura?",
@@ -1031,7 +1320,8 @@
         "Nube compartida"
       ],
       "respuesta": 0,
-      "explicacion": "En una nube pública, el proveedor ofrece infraestructura multiinquilino a distintos clientes a través de servicios compartidos."
+      "explicacion": "En una nube pública, el proveedor ofrece infraestructura multiinquilino a distintos clientes a través de servicios compartidos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el documento MÁS formal entre un proveedor de servicios y un cliente que establece expectativas sobre parámetros de rendimiento?",
@@ -1042,7 +1332,8 @@
         "Statement of Work (SOW)"
       ],
       "respuesta": 0,
-      "explicacion": "Un SLA fija niveles medibles como disponibilidad, fiabilidad, tiempos de respuesta y consecuencias por incumplimiento."
+      "explicacion": "Un SLA fija niveles medibles como disponibilidad, fiabilidad, tiempos de respuesta y consecuencias por incumplimiento.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué dispositivo de seguridad de red es PRINCIPALMENTE responsable de supervisar tráfico y detectar amenazas potenciales mediante reglas o firmas predefinidas?",
@@ -1053,7 +1344,8 @@
         "Proxy Server"
       ],
       "respuesta": 1,
-      "explicacion": "Un IDS analiza el tráfico para identificar patrones maliciosos y generar alertas, sin bloquearlo necesariamente."
+      "explicacion": "Un IDS analiza el tráfico para identificar patrones maliciosos y generar alertas, sin bloquearlo necesariamente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué dispositivo filtra el tráfico entrante y saliente según reglas predefinidas para impedir accesos no autorizados hacia o desde una red protegida?",
@@ -1064,7 +1356,8 @@
         "Proxy Server"
       ],
       "respuesta": 0,
-      "explicacion": "Un firewall aplica reglas basadas en direcciones, puertos, protocolos o aplicaciones para permitir o denegar conexiones."
+      "explicacion": "Un firewall aplica reglas basadas en direcciones, puertos, protocolos o aplicaciones para permitir o denegar conexiones.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tecnología permite a usuarios remotos conectarse de forma segura a una red privada a través de Internet cifrando sus comunicaciones?",
@@ -1075,7 +1368,8 @@
         "Proxy Server"
       ],
       "respuesta": 2,
-      "explicacion": "Una VPN autentica al usuario y establece un túnel cifrado entre el dispositivo remoto y la red privada."
+      "explicacion": "Una VPN autentica al usuario y establece un túnel cifrado entre el dispositivo remoto y la red privada.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuáles son las dos opciones principales para un centro de datos?",
@@ -1086,7 +1380,8 @@
         "Arrendado o alquilado"
       ],
       "respuesta": 0,
-      "explicacion": "Una organización puede operar su propio centro de datos o externalizar su alojamiento y gestión a un tercero."
+      "explicacion": "Una organización puede operar su propio centro de datos o externalizar su alojamiento y gestión a un tercero.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el rango de temperatura recomendado para optimizar la disponibilidad y la vida útil del hardware de un centro de datos?",
@@ -1097,19 +1392,32 @@
         "60 °F a 75 °F (16 °C a 24 °C)"
       ],
       "respuesta": 1,
-      "explicacion": "El rango recomendado es aproximadamente de 18 °C a 27 °C para limitar el sobrecalentamiento y mantener una operación eficiente."
+      "explicacion": "El rango recomendado es aproximadamente de 18 °C a 27 °C para limitar el sobrecalentamiento y mantener una operación eficiente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuántos sensores de temperatura se recomiendan para un rack de un centro de datos?",
-      "opciones": ["Uno", "Dos", "Tres", "Cuatro"],
+      "opciones": [
+        "Uno",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
       "respuesta": 2,
-      "explicacion": "Se recomiendan tres sensores, situados en la parte superior, central e inferior del rack."
+      "explicacion": "Se recomiendan tres sensores, situados en la parte superior, central e inferior del rack.",
+      "dominio": 4
     },
     {
       "pregunta": "En un centro de datos, ¿cuál NO es un problema típico relacionado con el flujo de aire?",
-      "opciones": ["Refrigeración", "Polvo", "Gases nocivos", "Ruido"],
+      "opciones": [
+        "Refrigeración",
+        "Polvo",
+        "Gases nocivos",
+        "Ruido"
+      ],
       "respuesta": 3,
-      "explicacion": "El ruido suele proceder del funcionamiento de los equipos, mientras que refrigeración, polvo y contaminantes sí están directamente vinculados al flujo de aire."
+      "explicacion": "El ruido suele proceder del funcionamiento de los equipos, mientras que refrigeración, polvo y contaminantes sí están directamente vinculados al flujo de aire.",
+      "dominio": 4
     },
     {
       "pregunta": "Para supervisar posibles peligros, ¿qué elemento NO debería integrarse en el entorno de control del edificio?",
@@ -1120,7 +1428,8 @@
         "Cerraduras inteligentes"
       ],
       "respuesta": 3,
-      "explicacion": "Alarmas, detectores de fugas y supervisión de HVAC detectan riesgos ambientales; las cerraduras inteligentes son controles de acceso físico."
+      "explicacion": "Alarmas, detectores de fugas y supervisión de HVAC detectan riesgos ambientales; las cerraduras inteligentes son controles de acceso físico.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué significa redundancia en el diseño de sistemas?",
@@ -1131,7 +1440,8 @@
         "Uso de componentes complejos para garantizar la seguridad"
       ],
       "respuesta": 0,
-      "explicacion": "La redundancia añade componentes de respaldo capaces de asumir la función cuando falla el componente principal."
+      "explicacion": "La redundancia añade componentes de respaldo capaces de asumir la función cuando falla el componente principal.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es una definición de cloud computing?",
@@ -1142,7 +1452,8 @@
         "Un conjunto de recursos informáticos utilizado únicamente para analizar datos"
       ],
       "respuesta": 0,
-      "explicacion": "Cloud computing proporciona por red recursos como procesamiento, almacenamiento y aplicaciones bajo demanda y como servicio."
+      "explicacion": "Cloud computing proporciona por red recursos como procesamiento, almacenamiento y aplicaciones bajo demanda y como servicio.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué son los recursos basados en la nube?",
@@ -1153,7 +1464,8 @@
         "Cualquier recurso al que una organización accede mediante ordenadores personales"
       ],
       "respuesta": 0,
-      "explicacion": "Son recursos de procesamiento, almacenamiento, aplicaciones u otros servicios consumidos mediante una plataforma cloud."
+      "explicacion": "Son recursos de procesamiento, almacenamiento, aplicaciones u otros servicios consumidos mediante una plataforma cloud.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuáles son los cuatro modelos de entrega cloud?",
@@ -1164,7 +1476,8 @@
         "Pública, privada, híbrida y gubernamental"
       ],
       "respuesta": 0,
-      "explicacion": "Según el material de origen, los modelos son nube pública, privada, híbrida y compartida."
+      "explicacion": "Según el material de origen, los modelos son nube pública, privada, híbrida y compartida.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué ofrece SaaS a los consumidores?",
@@ -1175,7 +1488,8 @@
         "Acceso a componentes de seguridad"
       ],
       "respuesta": 1,
-      "explicacion": "Software as a Service ofrece aplicaciones completas alojadas por un proveedor y accesibles por Internet."
+      "explicacion": "Software as a Service ofrece aplicaciones completas alojadas por un proveedor y accesibles por Internet.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes elementos normalmente NO se proporciona de forma redundante en los centros de datos?",
@@ -1186,7 +1500,8 @@
         "Conectividad de red"
       ],
       "respuesta": 0,
-      "explicacion": "El suministro eléctrico, la refrigeración y la conectividad suelen disponer de respaldo; el flujo de aire no suele duplicarse como sistema independiente."
+      "explicacion": "El suministro eléctrico, la refrigeración y la conectividad suelen disponer de respaldo; el flujo de aire no suele duplicarse como sistema independiente.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué medida ayudaría a una organización a proteger un servidor crítico para la red ante un apagón inminente?",
@@ -1197,7 +1512,8 @@
         "Contratar un seguro de ciberseguridad"
       ],
       "respuesta": 2,
-      "explicacion": "Las fuentes de alimentación redundantes permiten mantener el servidor operativo si falla una fuente o alimentación principal."
+      "explicacion": "Las fuentes de alimentación redundantes permiten mantener el servidor operativo si falla una fuente o alimentación principal.",
+      "dominio": 4
     },
     {
       "pregunta": "En un centro de datos, ¿para qué carga deben dimensionarse los generadores de respaldo?",
@@ -1208,7 +1524,8 @@
         "La red y la infraestructura de soporte"
       ],
       "respuesta": 0,
-      "explicacion": "Los generadores deben alimentar todos los sistemas críticos y la infraestructura necesaria para mantenerlos operativos."
+      "explicacion": "Los generadores deben alimentar todos los sistemas críticos y la infraestructura necesaria para mantenerlos operativos.",
+      "dominio": 4
     },
     {
       "pregunta": "Hasta que los generadores arranquen y se estabilicen, ¿qué carga deben poder soportar las baterías de respaldo?",
@@ -1219,7 +1536,8 @@
         "La carga crítica"
       ],
       "respuesta": 3,
-      "explicacion": "El UPS debe mantener la carga crítica durante el intervalo entre la pérdida de suministro y la estabilización de los generadores."
+      "explicacion": "El UPS debe mantener la carga crítica durante el intervalo entre la pérdida de suministro y la estabilización de los generadores.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué sistema de extinción de incendios es más adecuado para equipos electrónicos, pero puede ser tóxico para las personas? (★)",
@@ -1230,7 +1548,8 @@
         "Basado en productos químicos secos"
       ],
       "respuesta": 1,
-      "explicacion": "Los agentes gaseosos extinguen incendios sin mojar ni dejar residuos en la electrónica, pero ciertas concentraciones pueden ser peligrosas para las personas."
+      "explicacion": "Los agentes gaseosos extinguen incendios sin mojar ni dejar residuos en la electrónica, pero ciertas concentraciones pueden ser peligrosas para las personas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué modelo cloud requiere MENOS administración y soporte por parte de la organización?",
@@ -1241,7 +1560,8 @@
         "Software Defined Networking (SDN)"
       ],
       "respuesta": 0,
-      "explicacion": "En SaaS, el proveedor administra la aplicación y la infraestructura, por lo que el cliente asume la menor carga operativa."
+      "explicacion": "En SaaS, el proveedor administra la aplicación y la infraestructura, por lo que el cliente asume la menor carga operativa.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué modelo cloud permite a las organizaciones integrar sus redes on-premises existentes?",
@@ -1252,7 +1572,8 @@
         "Nube privada"
       ],
       "respuesta": 2,
-      "explicacion": "Una nube híbrida conecta recursos locales o privados con servicios de nube pública."
+      "explicacion": "Una nube híbrida conecta recursos locales o privados con servicios de nube pública.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones describe MEJOR una solución que aplica políticas a los dispositivos que intentan acceder a recursos de red?",
@@ -1263,7 +1584,8 @@
         "Requisitos de historial de contraseñas"
       ],
       "respuesta": 2,
-      "explicacion": "NAC comprueba identidad, estado y cumplimiento del dispositivo antes de permitir, limitar o denegar el acceso."
+      "explicacion": "NAC comprueba identidad, estado y cumplimiento del dispositivo antes de permitir, limitar o denegar el acceso.",
+      "dominio": 4
     },
     {
       "pregunta": "Dos organizaciones sanitarias planean colaborar en un proyecto. ¿Qué documento puede formalizar este acuerdo de colaboración?",
@@ -1274,7 +1596,8 @@
         "Non-Disclosure Agreement (NDA)"
       ],
       "respuesta": 0,
-      "explicacion": "Un MOU documenta los objetivos, responsabilidades y términos generales de colaboración entre las organizaciones."
+      "explicacion": "Un MOU documenta los objetivos, responsabilidades y términos generales de colaboración entre las organizaciones.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué atributo de cloud computing es crítico para gestionar cargas de trabajo variables?",
@@ -1285,7 +1608,8 @@
         "Disponibilidad"
       ],
       "respuesta": 0,
-      "explicacion": "La elasticidad permite aumentar o reducir recursos dinámicamente según cambie la demanda."
+      "explicacion": "La elasticidad permite aumentar o reducir recursos dinámicamente según cambie la demanda.",
+      "dominio": 4
     },
     {
       "pregunta": "En un almacenamiento cloud unificado, ¿qué solución permite separar el acceso a historias clínicas y datos administrativos sin mover los servidores a redes distintas?",
@@ -1296,7 +1620,8 @@
         "Una zona zero trust"
       ],
       "respuesta": 2,
-      "explicacion": "Las VLAN separan lógicamente el tráfico y aplican aislamiento entre categorías de datos sin cambiar la infraestructura física."
+      "explicacion": "Las VLAN separan lógicamente el tráfico y aplican aislamiento entre categorías de datos sin cambiar la infraestructura física.",
+      "dominio": 4
     }
   ]
 }

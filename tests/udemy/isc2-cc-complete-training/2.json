@@ -12,7 +12,8 @@
         "Exigir autenticación biométrica"
       ],
       "respuesta": 2,
-      "explicacion": "Los requisitos de complejidad no impiden que una contraseña compleja sea compartida entre varios usuarios, por lo que son menos eficaces para evitar cuentas compartidas."
+      "explicacion": "Los requisitos de complejidad no impiden que una contraseña compleja sea compartida entre varios usuarios, por lo que son menos eficaces para evitar cuentas compartidas.",
+      "dominio": 3
     },
     {
       "pregunta": "Cuando una empresa recopila información de identificación personal (PII), ¿qué política es necesaria?",
@@ -23,7 +24,8 @@
         "Política de uso aceptable"
       ],
       "respuesta": 2,
-      "explicacion": "Una Política de privacidad establece cómo se recopila, almacena, procesa y protege la PII. GDPR es una regulación, no una política interna."
+      "explicacion": "Una Política de privacidad establece cómo se recopila, almacena, procesa y protege la PII. GDPR es una regulación, no una política interna.",
+      "dominio": 1
     },
     {
       "pregunta": "En el contexto de la ciberseguridad, ¿qué significa redundancia?",
@@ -34,13 +36,20 @@
         "Diseñar sistemas con componentes duplicados para disponer de un respaldo si se produce un fallo"
       ],
       "respuesta": 3,
-      "explicacion": "La redundancia consiste en disponer de componentes duplicados o alternativos que permitan mantener el servicio cuando falla un componente principal."
+      "explicacion": "La redundancia consiste en disponer de componentes duplicados o alternativos que permitan mantener el servicio cuando falla un componente principal.",
+      "dominio": 4
     },
     {
       "pregunta": "Un alto ejecutivo de una organización recibe un correo malicioso que intenta engañarlo. ¿Qué tipo de ataque se está utilizando?",
-      "opciones": ["DDoS", "Whaling", "Phishing", "Spear phishing"],
+      "opciones": [
+        "DDoS",
+        "Whaling",
+        "Phishing",
+        "Spear phishing"
+      ],
       "respuesta": 1,
-      "explicacion": "El whaling es una modalidad de spear phishing dirigida específicamente a altos ejecutivos u otras personas con gran influencia dentro de una organización."
+      "explicacion": "El whaling es una modalidad de spear phishing dirigida específicamente a altos ejecutivos u otras personas con gran influencia dentro de una organización.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué tipo de copia de seguridad captura únicamente los cambios realizados desde la última copia de seguridad completa?",
@@ -51,13 +60,20 @@
         "Copia de seguridad completa"
       ],
       "respuesta": 0,
-      "explicacion": "Una copia diferencial almacena todos los cambios realizados desde la última copia de seguridad completa."
+      "explicacion": "Una copia diferencial almacena todos los cambios realizados desde la última copia de seguridad completa.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué tipo de documento suele ser el menos formal?",
-      "opciones": ["Estándares", "Directrices", "Políticas", "Regulaciones"],
+      "opciones": [
+        "Estándares",
+        "Directrices",
+        "Políticas",
+        "Regulaciones"
+      ],
       "respuesta": 1,
-      "explicacion": "Las directrices suelen contener recomendaciones y orientaciones, por lo que generalmente son menos formales y vinculantes que políticas, estándares o regulaciones."
+      "explicacion": "Las directrices suelen contener recomendaciones y orientaciones, por lo que generalmente son menos formales y vinculantes que políticas, estándares o regulaciones.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué ejercicio consiste en simular un incidente paso a paso para validar los procedimientos de respuesta?",
@@ -68,7 +84,8 @@
         "Ejercicio de checklist"
       ],
       "respuesta": 1,
-      "explicacion": "Un walk-through o recorrido paso a paso revisa secuencialmente las acciones y procedimientos previstos para comprobar que la respuesta definida es adecuada."
+      "explicacion": "Un walk-through o recorrido paso a paso revisa secuencialmente las acciones y procedimientos previstos para comprobar que la respuesta definida es adecuada.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué actividad es obligatoria al analizar riesgos?",
@@ -79,7 +96,8 @@
         "Seleccionar los controles apropiados"
       ],
       "respuesta": 2,
-      "explicacion": "El análisis de riesgos requiere estimar la probabilidad de que los riesgos identificados se materialicen, normalmente junto con su impacto."
+      "explicacion": "El análisis de riesgos requiere estimar la probabilidad de que los riesgos identificados se materialicen, normalmente junto con su impacto.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de las siguientes no se considera una buena práctica en la gestión de accesos?",
@@ -90,7 +108,8 @@
         "Solicitar una justificación al aumentar permisos"
       ],
       "respuesta": 0,
-      "explicacion": "El modelo tradicional de 'confiar, pero verificar' está siendo sustituido por enfoques Zero Trust, mientras que las demás opciones se alinean con buenas prácticas de gestión de privilegios."
+      "explicacion": "El modelo tradicional de 'confiar, pero verificar' está siendo sustituido por enfoques Zero Trust, mientras que las demás opciones se alinean con buenas prácticas de gestión de privilegios.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué tipo de ataque tiene como objetivo principal agotar los recursos disponibles y hacer que los servicios de una organización sean inaccesibles para los usuarios legítimos?",
@@ -101,7 +120,8 @@
         "Phishing"
       ],
       "respuesta": 2,
-      "explicacion": "Un ataque de denegación de servicio (DoS) intenta comprometer la disponibilidad de un sistema saturando sus recursos o servicios."
+      "explicacion": "Un ataque de denegación de servicio (DoS) intenta comprometer la disponibilidad de un sistema saturando sus recursos o servicios.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes no es una función propia de un sistema SIEM (Security Information and Event Management)?",
@@ -112,7 +132,8 @@
         "Retención de logs"
       ],
       "respuesta": 0,
-      "explicacion": "Según la respuesta indicada en el test, la auditoría de logs no se considera una función específica del SIEM, mientras que estos sistemas centralizan, retienen y analizan registros."
+      "explicacion": "Según la respuesta indicada en el test, la auditoría de logs no se considera una función específica del SIEM, mientras que estos sistemas centralizan, retienen y analizan registros.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál es el objetivo principal de una Política de Gestión de Cambios?",
@@ -123,13 +144,20 @@
         "Garantizar que los cambios en los sistemas se realicen sin afectar negativamente a las operaciones del negocio"
       ],
       "respuesta": 3,
-      "explicacion": "La gestión de cambios busca implantar modificaciones de forma controlada, obteniendo sus beneficios y minimizando interrupciones o efectos negativos sobre el negocio."
+      "explicacion": "La gestión de cambios busca implantar modificaciones de forma controlada, obteniendo sus beneficios y minimizando interrupciones o efectos negativos sobre el negocio.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué modelo de despliegue cloud combina recursos de nube pública y nube privada?",
-      "opciones": ["Community", "Private", "Hybrid", "Public"],
+      "opciones": [
+        "Community",
+        "Private",
+        "Hybrid",
+        "Public"
+      ],
       "respuesta": 2,
-      "explicacion": "Una nube híbrida combina infraestructura o servicios de nube privada y pública dentro de una misma estrategia de despliegue."
+      "explicacion": "Una nube híbrida combina infraestructura o servicios de nube privada y pública dentro de una misma estrategia de despliegue.",
+      "dominio": 4
     },
     {
       "pregunta": "Cuando se contrata a un consultor de seguridad para diseñar políticas de seguridad relacionadas con PHI, ¿qué significa PHI?",
@@ -140,13 +168,20 @@
         "Protected Health Information"
       ],
       "respuesta": 3,
-      "explicacion": "PHI significa Protected Health Information, es decir, información sanitaria protegida sujeta a requisitos específicos de privacidad y seguridad."
+      "explicacion": "PHI significa Protected Health Information, es decir, información sanitaria protegida sujeta a requisitos específicos de privacidad y seguridad.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué tipo de control de seguridad no corresponde al uso de cámaras CCTV?",
-      "opciones": ["Correctivo", "Disuasorio", "Preventivo", "Detectivo"],
+      "opciones": [
+        "Correctivo",
+        "Disuasorio",
+        "Preventivo",
+        "Detectivo"
+      ],
       "respuesta": 0,
-      "explicacion": "Las cámaras CCTV pueden actuar como controles disuasorios o detectivos, pero no reparan ni restauran sistemas después de un incidente, por lo que no son controles correctivos."
+      "explicacion": "Las cámaras CCTV pueden actuar como controles disuasorios o detectivos, pero no reparan ni restauran sistemas después de un incidente, por lo que no son controles correctivos.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es un error común al implementar políticas de retención de registros?",
@@ -157,7 +192,8 @@
         "Aplicar periodos de retención más cortos a la información"
       ],
       "respuesta": 2,
-      "explicacion": "Conservar indiscriminadamente la información durante el periodo máximo puede incrementar costes, riesgos y obligaciones sin una necesidad real."
+      "explicacion": "Conservar indiscriminadamente la información durante el periodo máximo puede incrementar costes, riesgos y obligaciones sin una necesidad real.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de las siguientes no es una característica del cloud computing?",
@@ -168,13 +204,20 @@
         "Elasticidad rápida"
       ],
       "respuesta": 0,
-      "explicacion": "El cloud computing utiliza un modelo de responsabilidad compartida; el cliente continúa teniendo responsabilidades de seguridad y gestión según el servicio contratado."
+      "explicacion": "El cloud computing utiliza un modelo de responsabilidad compartida; el cliente continúa teniendo responsabilidades de seguridad y gestión según el servicio contratado.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué herramienta satisface mejor la necesidad de una organización de detectar y actuar sobre actividad maliciosa en la red?",
-      "opciones": ["Router", "IPS", "IDS", "Firewall"],
+      "opciones": [
+        "Router",
+        "IPS",
+        "IDS",
+        "Firewall"
+      ],
       "respuesta": 1,
-      "explicacion": "Un IPS monitoriza el tráfico para detectar actividad maliciosa y, además, puede actuar automáticamente para bloquearla o prevenirla."
+      "explicacion": "Un IPS monitoriza el tráfico para detectar actividad maliciosa y, además, puede actuar automáticamente para bloquearla o prevenirla.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué herramienta tiene más probabilidades de detectar una vulnerabilidad Cross-Site Scripting (XSS)?",
@@ -185,19 +228,32 @@
         "Escáner de vulnerabilidades de aplicaciones web"
       ],
       "respuesta": 3,
-      "explicacion": "Un escáner de vulnerabilidades web está diseñado específicamente para identificar problemas en aplicaciones web, incluidos fallos que permiten XSS."
+      "explicacion": "Un escáner de vulnerabilidades web está diseñado específicamente para identificar problemas en aplicaciones web, incluidos fallos que permiten XSS.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué medida de control de acceso físico es menos eficaz para impedir que personas no autorizadas accedan a un centro de datos?",
-      "opciones": ["Torniquetes", "Barreras", "Vallas", "Bolardos"],
+      "opciones": [
+        "Torniquetes",
+        "Barreras",
+        "Vallas",
+        "Bolardos"
+      ],
       "respuesta": 3,
-      "explicacion": "Los bolardos están diseñados principalmente para impedir el paso de vehículos y ofrecen poca protección frente al acceso a pie de personas."
+      "explicacion": "Los bolardos están diseñados principalmente para impedir el paso de vehículos y ofrecen poca protección frente al acceso a pie de personas.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál de los siguientes no es un tipo de malware?",
-      "opciones": ["Troyano", "Gusano", "Spoofing", "Rootkit"],
+      "opciones": [
+        "Troyano",
+        "Gusano",
+        "Spoofing",
+        "Rootkit"
+      ],
       "respuesta": 2,
-      "explicacion": "El spoofing es una técnica de suplantación de identidad o falsificación, no una categoría de software malicioso."
+      "explicacion": "El spoofing es una técnica de suplantación de identidad o falsificación, no una categoría de software malicioso.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué principio de seguridad establece que los usuarios solo deben recibir los permisos necesarios para realizar sus tareas?",
@@ -208,7 +264,8 @@
         "Defensa en profundidad"
       ],
       "respuesta": 2,
-      "explicacion": "El principio de mínimo privilegio establece que cada sujeto debe disponer únicamente de los permisos imprescindibles para desempeñar sus funciones."
+      "explicacion": "El principio de mínimo privilegio establece que cada sujeto debe disponer únicamente de los permisos imprescindibles para desempeñar sus funciones.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Dónde reside un IDS basado en host?",
@@ -219,7 +276,8 @@
         "En bastion hosts"
       ],
       "respuesta": 0,
-      "explicacion": "Un HIDS se instala directamente en el host o endpoint que debe supervisar, por lo que debe residir en los sistemas críticos que se quieran monitorizar."
+      "explicacion": "Un HIDS se instala directamente en el host o endpoint que debe supervisar, por lo que debe residir en los sistemas críticos que se quieran monitorizar.",
+      "dominio": 4
     },
     {
       "pregunta": "El hecho de que un IDS basado en red revise la carga útil y las cabeceras de los paquetes permite realizar ¿cuál de las siguientes acciones?",
@@ -230,7 +288,8 @@
         "Detectar todos los ataques de adivinación de contraseñas"
       ],
       "respuesta": 0,
-      "explicacion": "El análisis de cabeceras y tráfico permite a un NIDS identificar patrones y comportamientos asociados a ataques de red, incluidos determinados ataques DoS."
+      "explicacion": "El análisis de cabeceras y tráfico permite a un NIDS identificar patrones y comportamientos asociados a ataques de red, incluidos determinados ataques DoS.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál se considera el mayor inconveniente de los sistemas de detección de intrusiones basados en host (HIDS)?",
@@ -241,7 +300,8 @@
         "Tienen mayor visibilidad y control que los NIDS"
       ],
       "respuesta": 0,
-      "explicacion": "Un HIDS consume recursos y se integra estrechamente con el sistema que supervisa, por lo que puede afectar al rendimiento y resultar invasivo para el host."
+      "explicacion": "Un HIDS consume recursos y se integra estrechamente con el sistema que supervisa, por lo que puede afectar al rendimiento y resultar invasivo para el host.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes es un IDS que recopila datos y define un perfil de uso 'normal' para la red o el host?",
@@ -252,7 +312,8 @@
         "IDS basado en anomalías inferenciales"
       ],
       "respuesta": 0,
-      "explicacion": "Un IDS basado en anomalías estadísticas establece una línea base del comportamiento normal y detecta desviaciones respecto de ese perfil."
+      "explicacion": "Un IDS basado en anomalías estadísticas establece una línea base del comportamiento normal y detecta desviaciones respecto de ese perfil.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué enfoque de IDS se basa en una base de datos de ataques conocidos?",
@@ -263,7 +324,8 @@
         "Detección de intrusiones basada en red"
       ],
       "respuesta": 0,
-      "explicacion": "Los IDS basados en firmas comparan la actividad observada con patrones o firmas previamente conocidas de ataques."
+      "explicacion": "Los IDS basados en firmas comparan la actividad observada con patrones o firmas previamente conocidas de ataques.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Por qué los IDS basados en detección de anomalías suelen generar un gran número de falsos positivos?",
@@ -274,13 +336,20 @@
         "Porque los patrones normales de comportamiento de usuarios y sistemas pueden variar considerablemente"
       ],
       "respuesta": 3,
-      "explicacion": "Un comportamiento legítimo pero poco habitual puede desviarse de la línea base y ser identificado erróneamente como actividad maliciosa."
+      "explicacion": "Un comportamiento legítimo pero poco habitual puede desviarse de la línea base y ser identificado erróneamente como actividad maliciosa.",
+      "dominio": 4
     },
     {
       "pregunta": "Tim configura dispositivos de red y un sniffer conectado al mismo switch que los firewalls puede descifrar las credenciales utilizadas durante la administración. ¿Qué debería utilizar Tim para impedir que alguien pueda escuchar la comunicación?",
-      "opciones": ["SSH", "SFTP", "SCP", "RSH"],
+      "opciones": [
+        "SSH",
+        "SFTP",
+        "SCP",
+        "RSH"
+      ],
       "respuesta": 0,
-      "explicacion": "SSH cifra la sesión de administración remota, protegiendo tanto las credenciales como los comandos frente a la interceptación del tráfico."
+      "explicacion": "SSH cifra la sesión de administración remota, protegiendo tanto las credenciales como los comandos frente a la interceptación del tráfico.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes es una respuesta razonable de un IDS al detectar paquetes IP en los que la dirección IP y el puerto de origen son iguales a la dirección IP y el puerto de destino?",
@@ -291,7 +360,8 @@
         "Traducir la dirección de origen y reenviar el paquete"
       ],
       "respuesta": 1,
-      "explicacion": "Ese tráfico presenta características anómalas compatibles con tráfico malicioso, por lo que registrar la información relevante y descartar los paquetes es la respuesta indicada por el test."
+      "explicacion": "Ese tráfico presenta características anómalas compatibles con tráfico malicioso, por lo que registrar la información relevante y descartar los paquetes es la respuesta indicada por el test.",
+      "dominio": 4
     },
     {
       "pregunta": "Durante un penetration test necesitas utilizar un sistema comprometido para atacar otros sistemas de la red y evitar restricciones como firewalls. ¿Qué método utilizarías?",
@@ -302,13 +372,20 @@
         "Método Grey Box"
       ],
       "respuesta": 1,
-      "explicacion": "El pivoting consiste en utilizar un sistema previamente comprometido como punto intermedio para alcanzar otros sistemas o segmentos de red."
+      "explicacion": "El pivoting consiste en utilizar un sistema previamente comprometido como punto intermedio para alcanzar otros sistemas o segmentos de red.",
+      "dominio": 4
     },
     {
       "pregunta": "Al referirse a las estructuras de datos mediante el término Protocol Data Unit (PDU), ¿cuál es el nombre correcto de una unidad de datos TCP en la capa de transporte?",
-      "opciones": ["Segmento TCP", "Datagrama TCP", "Trama TCP", "Paquete TCP"],
+      "opciones": [
+        "Segmento TCP",
+        "Datagrama TCP",
+        "Trama TCP",
+        "Paquete TCP"
+      ],
       "respuesta": 0,
-      "explicacion": "La PDU asociada a TCP en la capa de transporte se denomina segmento."
+      "explicacion": "La PDU asociada a TCP en la capa de transporte se denomina segmento.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué términos adicionales se utilizan para describir respectivamente los IDS basados en conocimiento y los IDS basados en comportamiento?",
@@ -319,7 +396,8 @@
         "IDS basado en firmas e IDS basado en anomalías de movimiento, respectivamente"
       ],
       "respuesta": 0,
-      "explicacion": "Los IDS basados en conocimiento se asocian con la detección por firmas, mientras que los basados en comportamiento se relacionan con la detección de anomalías."
+      "explicacion": "Los IDS basados en conocimiento se asocian con la detección por firmas, mientras que los basados en comportamiento se relacionan con la detección de anomalías.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el enfoque principal de la norma ISO 27002?",
@@ -330,7 +408,8 @@
         "Seguridad de aplicaciones"
       ],
       "respuesta": 1,
-      "explicacion": "ISO 27002 proporciona directrices para seleccionar e implementar controles de seguridad de la información dentro del contexto de un ISMS."
+      "explicacion": "ISO 27002 proporciona directrices para seleccionar e implementar controles de seguridad de la información dentro del contexto de un ISMS.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué departamento de una empresa normalmente no participa directamente en un Disaster Recovery Plan (DRP)?",
@@ -341,7 +420,8 @@
         "IT"
       ],
       "respuesta": 1,
-      "explicacion": "Según el test, el departamento financiero suele tener una participación menos directa en el DRP que IT, dirección ejecutiva o relaciones públicas."
+      "explicacion": "Según el test, el departamento financiero suele tener una participación menos directa en el DRP que IT, dirección ejecutiva o relaciones públicas.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué dirección IP se reserva habitualmente para broadcast en una red como la mostrada?",
@@ -352,7 +432,8 @@
         "192.229.121.255"
       ],
       "respuesta": 3,
-      "explicacion": "En una red IPv4 /24, la dirección terminada en .255 es la dirección de broadcast y la terminada en .0 identifica la red."
+      "explicacion": "En una red IPv4 /24, la dirección terminada en .255 es la dirección de broadcast y la terminada en .0 identifica la red.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué afirmación es correcta sobre el cybersquatting?",
@@ -363,13 +444,20 @@
         "Es una práctica legal"
       ],
       "respuesta": 2,
-      "explicacion": "El cybersquatting consiste en registrar dominios relacionados con marcas ajenas de mala fe para obtener beneficio y puede constituir una práctica ilegal conforme a la legislación aplicable."
+      "explicacion": "El cybersquatting consiste en registrar dominios relacionados con marcas ajenas de mala fe para obtener beneficio y puede constituir una práctica ilegal conforme a la legislación aplicable.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué modelo de servicio cloud ofrece el entorno más adecuado para clientes que quieren instalar su propio sistema operativo?",
-      "opciones": ["SaaS", "SLA", "IaaS", "PaaS"],
+      "opciones": [
+        "SaaS",
+        "SLA",
+        "IaaS",
+        "PaaS"
+      ],
       "respuesta": 2,
-      "explicacion": "IaaS proporciona al cliente control sobre recursos virtualizados, incluido normalmente el sistema operativo de las máquinas virtuales."
+      "explicacion": "IaaS proporciona al cliente control sobre recursos virtualizados, incluido normalmente el sistema operativo de las máquinas virtuales.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones representa ejemplos de Personally Identifiable Information (PII)?",
@@ -380,7 +468,8 @@
         "Factores de identidad"
       ],
       "respuesta": 1,
-      "explicacion": "Atributos personales como nombre, edad o ubicación pueden estar asociados a la identidad de una persona y constituir PII."
+      "explicacion": "Atributos personales como nombre, edad o ubicación pueden estar asociados a la identidad de una persona y constituir PII.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué tipo de control de acceso se considera detectivo?",
@@ -391,7 +480,8 @@
         "Firewalls"
       ],
       "respuesta": 1,
-      "explicacion": "Los sensores de movimiento detectan actividad o presencia y generan información o alertas sobre posibles accesos, por lo que son controles detectivos."
+      "explicacion": "Los sensores de movimiento detectan actividad o presencia y generan información o alertas sobre posibles accesos, por lo que son controles detectivos.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué afirmación sobre las implicaciones de seguridad de IPv6 no es verdadera?",
@@ -402,19 +492,32 @@
         "Los servicios de reputación para IPv6 pueden no estar suficientemente maduros o ser útiles"
       ],
       "respuesta": 1,
-      "explicacion": "IPv6 no depende de NAT como IPv4 debido a su enorme espacio de direcciones, por lo que afirmar que su implementación de NAT es insegura no representa correctamente una característica propia de IPv6."
+      "explicacion": "IPv6 no depende de NAT como IPv4 debido a su enorme espacio de direcciones, por lo que afirmar que su implementación de NAT es insegura no representa correctamente una característica propia de IPv6.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué máscara de subred permite disponer de 30 hosts utilizables?",
-      "opciones": ["/26", "/30", "/27", "/29"],
+      "opciones": [
+        "/26",
+        "/30",
+        "/27",
+        "/29"
+      ],
       "respuesta": 2,
-      "explicacion": "Una subred /27 dispone de 32 direcciones totales; descontando la dirección de red y la de broadcast quedan 30 direcciones utilizables para hosts."
+      "explicacion": "Una subred /27 dispone de 32 direcciones totales; descontando la dirección de red y la de broadcast quedan 30 direcciones utilizables para hosts.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué número de puerto corresponde al Simple Mail Transfer Protocol (SMTP)?",
-      "opciones": ["161", "69", "25", "22"],
+      "opciones": [
+        "161",
+        "69",
+        "25",
+        "22"
+      ],
       "respuesta": 2,
-      "explicacion": "SMTP utiliza tradicionalmente el puerto TCP 25 para la transferencia de correo entre servidores."
+      "explicacion": "SMTP utiliza tradicionalmente el puerto TCP 25 para la transferencia de correo entre servidores.",
+      "dominio": 4
     },
     {
       "pregunta": "¿En qué capa del modelo OSI funcionan TCP y UDP?",
@@ -425,13 +528,20 @@
         "Capa física"
       ],
       "respuesta": 0,
-      "explicacion": "TCP y UDP son protocolos de la capa de transporte del modelo OSI."
+      "explicacion": "TCP y UDP son protocolos de la capa de transporte del modelo OSI.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tecnología permite establecer comunicación punto a punto a través de una red no confiable?",
-      "opciones": ["VLAN", "Firewall", "Router", "VPN"],
+      "opciones": [
+        "VLAN",
+        "Firewall",
+        "Router",
+        "VPN"
+      ],
       "respuesta": 3,
-      "explicacion": "Una VPN crea un túnel protegido sobre una red no confiable, permitiendo comunicaciones seguras entre endpoints."
+      "explicacion": "Una VPN crea un túnel protegido sobre una red no confiable, permitiendo comunicaciones seguras entre endpoints.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes es un ejemplo de control de seguridad correctivo?",
@@ -442,7 +552,8 @@
         "Cifrado"
       ],
       "respuesta": 0,
-      "explicacion": "Los parches corrigen vulnerabilidades o defectos identificados y permiten devolver un sistema a un estado más seguro."
+      "explicacion": "Los parches corrigen vulnerabilidades o defectos identificados y permiten devolver un sistema a un estado más seguro.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué significa el término LAN?",
@@ -453,13 +564,20 @@
         "Una conexión de larga distancia entre redes geográficamente separadas"
       ],
       "respuesta": 1,
-      "explicacion": "LAN significa Local Area Network y describe una red que cubre un área geográfica limitada, como un edificio u oficina."
+      "explicacion": "LAN significa Local Area Network y describe una red que cubre un área geográfica limitada, como un edificio u oficina.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes puede tener consecuencias financieras considerables para una organización en caso de incumplimiento?",
-      "opciones": ["Políticas", "Regulaciones", "Directrices", "Estándares"],
+      "opciones": [
+        "Políticas",
+        "Regulaciones",
+        "Directrices",
+        "Estándares"
+      ],
       "respuesta": 1,
-      "explicacion": "Las regulaciones son exigencias legales y su incumplimiento puede dar lugar a sanciones y multas económicas."
+      "explicacion": "Las regulaciones son exigencias legales y su incumplimiento puede dar lugar a sanciones y multas económicas.",
+      "dominio": 1
     },
     {
       "pregunta": "En un escenario con una política DAC, ¿qué tarea puede realizar un sujeto con autoridad de acceso sobre la información?",
@@ -470,19 +588,32 @@
         "Modificar la información"
       ],
       "respuesta": 0,
-      "explicacion": "En Discretionary Access Control (DAC), el propietario o un sujeto autorizado puede establecer o modificar permisos y otros atributos de seguridad asociados al objeto."
+      "explicacion": "En Discretionary Access Control (DAC), el propietario o un sujeto autorizado puede establecer o modificar permisos y otros atributos de seguridad asociados al objeto.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué tipo de ataque explota una validación de entrada inadecuada en sitios web?",
-      "opciones": ["Phishing", "Troyanos", "Cross-Site Scripting", "Rootkits"],
+      "opciones": [
+        "Phishing",
+        "Troyanos",
+        "Cross-Site Scripting",
+        "Rootkits"
+      ],
       "respuesta": 2,
-      "explicacion": "Cross-Site Scripting (XSS) puede aprovechar una validación o codificación insuficiente de entradas para introducir scripts maliciosos en una aplicación web."
+      "explicacion": "Cross-Site Scripting (XSS) puede aprovechar una validación o codificación insuficiente de entradas para introducir scripts maliciosos en una aplicación web.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué método se utiliza habitualmente para identificar hosts activos en una red?",
-      "opciones": ["Geolocalización", "Traceroute", "Ping sweep", "Wireshark"],
+      "opciones": [
+        "Geolocalización",
+        "Traceroute",
+        "Ping sweep",
+        "Wireshark"
+      ],
       "respuesta": 2,
-      "explicacion": "Un ping sweep envía solicitudes ICMP a un rango de direcciones IP para determinar qué sistemas responden y se encuentran activos."
+      "explicacion": "Un ping sweep envía solicitudes ICMP a un rango de direcciones IP para determinar qué sistemas responden y se encuentran activos.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de ataque intenta engañar a los usuarios para que revelen información personal mediante correos electrónicos fraudulentos?",
@@ -493,7 +624,8 @@
         "Phishing"
       ],
       "respuesta": 3,
-      "explicacion": "El phishing emplea mensajes o correos fraudulentos para engañar a las víctimas y conseguir credenciales u otra información sensible."
+      "explicacion": "El phishing emplea mensajes o correos fraudulentos para engañar a las víctimas y conseguir credenciales u otra información sensible.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué elemento puede incluirse en un documento SLA?",
@@ -504,7 +636,8 @@
         "Un plan para preparar a la organización para la continuidad de las funciones críticas del negocio"
       ],
       "respuesta": 0,
-      "explicacion": "Un SLA puede establecer obligaciones contractuales relacionadas con la gestión de los datos, incluida su propiedad, conservación o destrucción al finalizar el servicio."
+      "explicacion": "Un SLA puede establecer obligaciones contractuales relacionadas con la gestión de los datos, incluida su propiedad, conservación o destrucción al finalizar el servicio.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes no puede considerarse un control de seguridad correctivo?",
@@ -515,7 +648,8 @@
         "Bolardos"
       ],
       "respuesta": 3,
-      "explicacion": "Los bolardos son controles físicos principalmente preventivos o disuasorios y no corrigen las consecuencias de un incidente."
+      "explicacion": "Los bolardos son controles físicos principalmente preventivos o disuasorios y no corrigen las consecuencias de un incidente.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de las siguientes no es una forma eficaz de proteger una organización frente a ciberdelincuentes?",
@@ -526,7 +660,8 @@
         "Utilizar sistemas de detección y prevención de intrusiones"
       ],
       "respuesta": 2,
-      "explicacion": "Un antimalware desactualizado puede no detectar amenazas recientes, por lo que debe mantenerse actualizado con nuevas versiones y definiciones."
+      "explicacion": "Un antimalware desactualizado puede no detectar amenazas recientes, por lo que debe mantenerse actualizado con nuevas versiones y definiciones.",
+      "dominio": 5
     },
     {
       "pregunta": "Dentro de un equipo de Incident Response, ¿qué rol actúa como enlace principal con la alta dirección?",
@@ -537,7 +672,8 @@
         "Experto técnico"
       ],
       "respuesta": 2,
-      "explicacion": "Los representantes de management actúan como enlace entre el equipo operativo de respuesta ante incidentes y la alta dirección."
+      "explicacion": "Los representantes de management actúan como enlace entre el equipo operativo de respuesta ante incidentes y la alta dirección.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué tipo de credencial no se utiliza como factor en Multi-Factor Authentication (MFA)?",
@@ -548,7 +684,8 @@
         "Algo en lo que confías"
       ],
       "respuesta": 3,
-      "explicacion": "Los factores clásicos de autenticación incluyen algo que sabes, algo que tienes y algo que eres. 'Algo en lo que confías' no es uno de estos factores."
+      "explicacion": "Los factores clásicos de autenticación incluyen algo que sabes, algo que tienes y algo que eres. 'Algo en lo que confías' no es uno de estos factores.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál de las siguientes es un ejemplo de dirección MAC?",
@@ -559,7 +696,8 @@
         "2111:db9:1333:4455:5555:6666:7777:8888"
       ],
       "respuesta": 0,
-      "explicacion": "Una dirección MAC estándar contiene 48 bits representados normalmente como seis grupos de dos dígitos hexadecimales."
+      "explicacion": "Una dirección MAC estándar contiene 48 bits representados normalmente como seis grupos de dos dígitos hexadecimales.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cómo se clasifican los datos almacenados en un dispositivo de almacenamiento portátil que se transporta por una oficina?",
@@ -570,7 +708,8 @@
         "Datos en uso"
       ],
       "respuesta": 1,
-      "explicacion": "Mientras la información permanece almacenada en un dispositivo, aunque físicamente se transporte el dispositivo, se considera data at rest o datos en reposo."
+      "explicacion": "Mientras la información permanece almacenada en un dispositivo, aunque físicamente se transporte el dispositivo, se considera data at rest o datos en reposo.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué técnica garantiza la propiedad de no repudio?",
@@ -581,7 +720,8 @@
         "Firmas digitales"
       ],
       "respuesta": 3,
-      "explicacion": "Las firmas digitales vinculan criptográficamente un mensaje con su firmante y permiten demostrar su autoría e integridad, proporcionando no repudio."
+      "explicacion": "Las firmas digitales vinculan criptográficamente un mensaje con su firmante y permiten demostrar su autoría e integridad, proporcionando no repudio.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué enfoque de seguridad se utiliza cuando una organización diseña su arquitectura de seguridad en capas?",
@@ -592,7 +732,8 @@
         "Network Access Control"
       ],
       "respuesta": 1,
-      "explicacion": "La defensa en profundidad utiliza múltiples capas independientes de controles de seguridad para reducir la posibilidad de que un único fallo comprometa todo el sistema."
+      "explicacion": "La defensa en profundidad utiliza múltiples capas independientes de controles de seguridad para reducir la posibilidad de que un único fallo comprometa todo el sistema.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué tecnología tiene más probabilidades de reducir el espacio de almacenamiento necesario para grabaciones de vídeo?",
@@ -603,7 +744,8 @@
         "Cámaras infrarrojas"
       ],
       "respuesta": 0,
-      "explicacion": "La detección de movimiento permite grabar únicamente cuando se detecta actividad, reduciendo la cantidad de vídeo almacenado."
+      "explicacion": "La detección de movimiento permite grabar únicamente cuando se detecta actividad, reduciendo la cantidad de vídeo almacenado.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué componente de la tríada CIA se ve principalmente comprometido en un ataque Distributed Denial of Service (DDoS)?",
@@ -614,7 +756,8 @@
         "Confidencialidad"
       ],
       "respuesta": 1,
-      "explicacion": "Un DDoS intenta hacer que un servicio o sistema deje de estar disponible para los usuarios legítimos, por lo que afecta principalmente a la disponibilidad."
+      "explicacion": "Un DDoS intenta hacer que un servicio o sistema deje de estar disponible para los usuarios legítimos, por lo que afecta principalmente a la disponibilidad.",
+      "dominio": 1
     },
     {
       "pregunta": "Un cartel que recuerda a los usuarios buenas prácticas de gestión de contraseñas es un ejemplo de ¿qué tipo de actividad de aprendizaje?",
@@ -625,7 +768,8 @@
         "Formación"
       ],
       "respuesta": 0,
-      "explicacion": "Los carteles y campañas breves están orientados a mantener la seguridad presente en la mente de los usuarios y constituyen actividades de concienciación."
+      "explicacion": "Los carteles y campañas breves están orientados a mantener la seguridad presente en la mente de los usuarios y constituyen actividades de concienciación.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de los siguientes pares no constituye Multi-Factor Authentication (MFA)?",
@@ -636,25 +780,44 @@
         "PIN y tarjeta de crédito"
       ],
       "respuesta": 2,
-      "explicacion": "Un nombre de usuario identifica al usuario y una contraseña constituye un único factor de conocimiento; esta combinación no aporta múltiples factores de autenticación."
+      "explicacion": "Un nombre de usuario identifica al usuario y una contraseña constituye un único factor de conocimiento; esta combinación no aporta múltiples factores de autenticación.",
+      "dominio": 3
     },
     {
       "pregunta": "Si una organización quiere reforzar sus controles detectivos de acceso, ¿qué herramienta debería implementar?",
-      "opciones": ["Parches", "Cifrado", "IDS", "Copias de seguridad"],
+      "opciones": [
+        "Parches",
+        "Cifrado",
+        "IDS",
+        "Copias de seguridad"
+      ],
       "respuesta": 2,
-      "explicacion": "Un IDS supervisa sistemas o tráfico para detectar actividad sospechosa y generar alertas, por lo que constituye un control detectivo."
+      "explicacion": "Un IDS supervisa sistemas o tráfico para detectar actividad sospechosa y generar alertas, por lo que constituye un control detectivo.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es la Protocol Data Unit (PDU) de los datos en la capa de interfaz LAN o WAN del modelo TCP/IP?",
-      "opciones": ["Datos", "Segmento", "Paquete", "Trama y bits"],
+      "opciones": [
+        "Datos",
+        "Segmento",
+        "Paquete",
+        "Trama y bits"
+      ],
       "respuesta": 3,
-      "explicacion": "En la capa de acceso o interfaz de red del modelo TCP/IP, los datos se manejan como tramas para su transmisión por el medio físico."
+      "explicacion": "En la capa de acceso o interfaz de red del modelo TCP/IP, los datos se manejan como tramas para su transmisión por el medio físico.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es la Protocol Data Unit (PDU) de la capa de transporte en el modelo TCP/IP?",
-      "opciones": ["Datos", "Segmento", "Paquete", "Trama"],
+      "opciones": [
+        "Datos",
+        "Segmento",
+        "Paquete",
+        "Trama"
+      ],
       "respuesta": 1,
-      "explicacion": "La PDU de TCP en la capa de transporte se denomina segmento."
+      "explicacion": "La PDU de TCP en la capa de transporte se denomina segmento.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de firewall proporciona el mayor grado y granularidad de control?",
@@ -665,7 +828,8 @@
         "Circuit gateway"
       ],
       "respuesta": 2,
-      "explicacion": "Un application gateway o firewall de nivel de aplicación puede inspeccionar y aplicar políticas sobre protocolos y operaciones específicas de las aplicaciones, ofreciendo mayor granularidad."
+      "explicacion": "Un application gateway o firewall de nivel de aplicación puede inspeccionar y aplicar políticas sobre protocolos y operaciones específicas de las aplicaciones, ofreciendo mayor granularidad.",
+      "dominio": 4
     },
     {
       "pregunta": "Todos los hosts de una red IP tienen un identificador lógico denominado:",
@@ -676,13 +840,20 @@
         "Dirección de datagrama"
       ],
       "respuesta": 0,
-      "explicacion": "Una dirección IP es el identificador lógico utilizado para identificar y enrutar hosts dentro de redes basadas en IP."
+      "explicacion": "Una dirección IP es el identificador lógico utilizado para identificar y enrutar hosts dentro de redes basadas en IP.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes es una Wide Area Network originalmente financiada por el Department of Defense y que utiliza TCP/IP para el intercambio de datos?",
-      "opciones": ["Internet", "Intranet", "Extranet", "Ethernet"],
+      "opciones": [
+        "Internet",
+        "Intranet",
+        "Extranet",
+        "Ethernet"
+      ],
       "respuesta": 0,
-      "explicacion": "Internet evolucionó a partir de redes financiadas por el Department of Defense de Estados Unidos y utiliza la familia de protocolos TCP/IP."
+      "explicacion": "Internet evolucionó a partir de redes financiadas por el Department of Defense de Estados Unidos y utiliza la familia de protocolos TCP/IP.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de los siguientes es el tipo más sencillo de firewall?",
@@ -693,7 +864,8 @@
         "Application gateway"
       ],
       "respuesta": 1,
-      "explicacion": "Un firewall de filtrado de paquetes aplica reglas básicas sobre campos como direcciones IP, protocolos y puertos, por lo que es uno de los tipos de firewall más simples."
+      "explicacion": "Un firewall de filtrado de paquetes aplica reglas básicas sobre campos como direcciones IP, protocolos y puertos, por lo que es uno de los tipos de firewall más simples.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál de las siguientes es la mayor preocupación relacionada con la seguridad de los firewalls?",
@@ -704,7 +876,8 @@
         "Ataques Distributed Denial of Service (DDoS)"
       ],
       "respuesta": 1,
-      "explicacion": "Las reglas complejas y una gestión deficiente pueden provocar errores de configuración que abran accesos no deseados o dejen tráfico peligroso sin bloquear."
+      "explicacion": "Las reglas complejas y una gestión deficiente pueden provocar errores de configuración que abran accesos no deseados o dejen tráfico peligroso sin bloquear.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué método de acceso múltiple utiliza una Wireless Local Area Network 802.11?",
@@ -715,13 +888,20 @@
         "Intercambio RTS/CTS de 802.11"
       ],
       "respuesta": 0,
-      "explicacion": "IEEE 802.11 utiliza CSMA/CA, Carrier Sense Multiple Access with Collision Avoidance, para coordinar el acceso al medio inalámbrico."
+      "explicacion": "IEEE 802.11 utiliza CSMA/CA, Carrier Sense Multiple Access with Collision Avoidance, para coordinar el acceso al medio inalámbrico.",
+      "dominio": 4
     },
     {
       "pregunta": "¿En qué capa del modelo OSI se sitúa tradicionalmente SSL?",
-      "opciones": ["Aplicación", "Sesión", "Presentación", "Red"],
+      "opciones": [
+        "Aplicación",
+        "Sesión",
+        "Presentación",
+        "Red"
+      ],
       "respuesta": 2,
-      "explicacion": "En una correspondencia tradicional con el modelo OSI, SSL/TLS suele asociarse con la capa de presentación por sus funciones de cifrado y transformación de los datos."
+      "explicacion": "En una correspondencia tradicional con el modelo OSI, SSL/TLS suele asociarse con la capa de presentación por sus funciones de cifrado y transformación de los datos.",
+      "dominio": 4
     }
   ]
 }

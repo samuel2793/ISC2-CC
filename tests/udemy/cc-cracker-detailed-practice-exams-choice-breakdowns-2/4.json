@@ -12,7 +12,8 @@
         "No repudio"
       ],
       "respuesta": 0,
-      "explicacion": "Impedir que datos sensibles lleguen a personas o soportes no autorizados protege principalmente la confidencialidad."
+      "explicacion": "Impedir que datos sensibles lleguen a personas o soportes no autorizados protege principalmente la confidencialidad.",
+      "dominio": 5
     },
     {
       "pregunta": "Una aplicación web exige que los usuarios resuelvan un CAPTCHA para demostrar que son humanos antes de enviar un formulario. Esto protege la aplicación frente a ataques automatizados de bots que podrían provocar la caída del servidor. ¿Qué principio se está protegiendo?",
@@ -23,7 +24,8 @@
         "Autenticación"
       ],
       "respuesta": 2,
-      "explicacion": "Bloquear automatizaciones que podrían agotar los recursos del servidor ayuda a mantener la disponibilidad del servicio."
+      "explicacion": "Bloquear automatizaciones que podrían agotar los recursos del servidor ayuda a mantener la disponibilidad del servicio.",
+      "dominio": 1
     },
     {
       "pregunta": "Un responsable implanta un proceso estricto de control de cambios. Antes de desplegar código en el servidor web de producción, debe ser revisado por pares y aprobado por dos desarrolladores sénior. Este proceso garantiza principalmente:",
@@ -34,7 +36,8 @@
         "Autorización"
       ],
       "respuesta": 1,
-      "explicacion": "El control de cambios reduce modificaciones no autorizadas o incorrectas y protege la integridad del sistema."
+      "explicacion": "El control de cambios reduce modificaciones no autorizadas o incorrectas y protege la integridad del sistema.",
+      "dominio": 1
     },
     {
       "pregunta": "Un usuario afirma que nunca aprobó una transferencia bancaria de 5.000 $. El banco aporta la firma digital del usuario y la marca temporal exacta de la transacción procedente de un registro inmutable. Esto demuestra:",
@@ -45,7 +48,8 @@
         "Contabilidad"
       ],
       "respuesta": 2,
-      "explicacion": "La firma digital y el registro inmutable permiten demostrar que la acción fue realizada por el firmante, proporcionando no repudio."
+      "explicacion": "La firma digital y el registro inmutable permiten demostrar que la acción fue realizada por el firmante, proporcionando no repudio.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de los siguientes elementos se considera una vulnerabilidad en el contexto de la gestión de riesgos?",
@@ -56,7 +60,8 @@
         "La pérdida financiera causada por una brecha"
       ],
       "respuesta": 2,
-      "explicacion": "Una vulnerabilidad es una debilidad susceptible de ser explotada, como un sistema operativo sin actualizar."
+      "explicacion": "Una vulnerabilidad es una debilidad susceptible de ser explotada, como un sistema operativo sin actualizar.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización está calculando la Annualized Loss Expectancy (ALE) de su sala de servidores. ¿Qué dos valores deben multiplicarse para obtener la ALE?",
@@ -67,13 +72,20 @@
         "Riesgo e impacto"
       ],
       "respuesta": 1,
-      "explicacion": "La fórmula es ALE = SLE × ARO, es decir, pérdida por incidente multiplicada por su frecuencia anual esperada."
+      "explicacion": "La fórmula es ALE = SLE × ARO, es decir, pérdida por incidente multiplicada por su frecuencia anual esperada.",
+      "dominio": 1
     },
     {
       "pregunta": "Durante una evaluación de riesgos, un analista calcula que una inundación causaría 100.000 $ en daños a una instalación. Se espera una inundación una vez cada 20 años. ¿Cuál es la ALE?",
-      "opciones": ["5.000 $", "10.000 $", "100.000 $", "2.000.000 $"],
+      "opciones": [
+        "5.000 $",
+        "10.000 $",
+        "100.000 $",
+        "2.000.000 $"
+      ],
       "respuesta": 0,
-      "explicacion": "La ARO es 1/20 = 0,05. Por tanto, ALE = 100.000 × 0,05 = 5.000 $ al año."
+      "explicacion": "La ARO es 1/20 = 0,05. Por tanto, ALE = 100.000 × 0,05 = 5.000 $ al año.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa descubre un fallo de seguridad menor en su directorio interno de empleados. Comprar e implantar el parche cuesta 15.000 $, mientras que la pérdida potencial si se explota el fallo se estima en 500 $. La dirección decide no corregirlo. Esto es:",
@@ -84,19 +96,32 @@
         "Aceptación del riesgo"
       ],
       "respuesta": 3,
-      "explicacion": "La organización reconoce el riesgo y decide asumirlo porque el coste del control supera ampliamente la pérdida potencial."
+      "explicacion": "La organización reconoce el riesgo y decide asumirlo porque el coste del control supera ampliamente la pérdida potencial.",
+      "dominio": 1
     },
     {
       "pregunta": "Un documento corporativo exige que todos los portátiles de los empleados tengan los discos duros cifrados con AES-256. Este documento es un:",
-      "opciones": ["Política", "Procedimiento", "Estándar", "Directriz"],
+      "opciones": [
+        "Política",
+        "Procedimiento",
+        "Estándar",
+        "Directriz"
+      ],
       "respuesta": 2,
-      "explicacion": "Un estándar establece requisitos técnicos específicos y obligatorios, como utilizar AES-256."
+      "explicacion": "Un estándar establece requisitos técnicos específicos y obligatorios, como utilizar AES-256.",
+      "dominio": 1
     },
     {
       "pregunta": "Un documento muy detallado que proporciona un recorrido de 15 pasos para retirar de servicio y borrar correctamente un servidor antiguo es un ejemplo de:",
-      "opciones": ["Política", "Procedimiento", "Estándar", "Directriz"],
+      "opciones": [
+        "Política",
+        "Procedimiento",
+        "Estándar",
+        "Directriz"
+      ],
       "respuesta": 1,
-      "explicacion": "Un procedimiento describe instrucciones concretas y secuenciales para realizar una tarea."
+      "explicacion": "Un procedimiento describe instrucciones concretas y secuenciales para realizar una tarea.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué tipo de control supone instalar un lector de tarjetas que impide automáticamente abrir una puerta salvo que se presente una tarjeta autorizada?",
@@ -107,7 +132,8 @@
         "Control físico disuasorio"
       ],
       "respuesta": 0,
-      "explicacion": "El lector actúa sobre el acceso físico y evita la entrada antes de que se produzca, por lo que es preventivo y físico."
+      "explicacion": "El lector actúa sobre el acceso físico y evita la entrada antes de que se produzca, por lo que es preventivo y físico.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa utiliza una herramienta de monitorización de registros que envía un correo al equipo de seguridad cuando detecta que un usuario intenta acceder a archivos restringidos. ¿Qué tipo de control es?",
@@ -118,7 +144,8 @@
         "Control administrativo disuasorio"
       ],
       "respuesta": 1,
-      "explicacion": "La herramienta detecta y alerta sobre una actividad, pero no la bloquea, por lo que es un control técnico detectivo."
+      "explicacion": "La herramienta detecta y alerta sobre una actividad, pero no la bloquea, por lo que es un control técnico detectivo.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de los siguientes se considera un control administrativo?",
@@ -129,7 +156,8 @@
         "Un armario de servidores cerrado con llave"
       ],
       "respuesta": 2,
-      "explicacion": "Las políticas y normas organizativas, como una AUP, son controles administrativos."
+      "explicacion": "Las políticas y normas organizativas, como una AUP, son controles administrativos.",
+      "dominio": 1
     },
     {
       "pregunta": "Un empleado pierde un portátil corporativo que contiene datos de clientes sin cifrar. La empresa es demandada por no haber seguido las prácticas estándar del sector para proteger los datos. La responsabilidad se debe a una falta de:",
@@ -140,7 +168,8 @@
         "Defense in Depth"
       ],
       "respuesta": 1,
-      "explicacion": "Due Care implica aplicar medidas razonables de protección; no cifrar datos sensibles puede constituir negligencia."
+      "explicacion": "Due Care implica aplicar medidas razonables de protección; no cifrar datos sensibles puede constituir negligencia.",
+      "dominio": 1
     },
     {
       "pregunta": "Antes de desplegar una nueva aplicación, el equipo de seguridad dedica tres semanas a probar el código e investigar posibles vulnerabilidades. Este proceso se denomina:",
@@ -151,7 +180,8 @@
         "Evitación del riesgo"
       ],
       "respuesta": 0,
-      "explicacion": "Due Diligence consiste en investigar, evaluar y comprender los riesgos antes de tomar una decisión o actuar."
+      "explicacion": "Due Diligence consiste en investigar, evaluar y comprender los riesgos antes de tomar una decisión o actuar.",
+      "dominio": 1
     },
     {
       "pregunta": "Según el Código Ético de ISC2, ¿qué debe hacer un profesional si se le pide implantar un sistema que sabe que es fundamentalmente inseguro y pone en riesgo al público?",
@@ -162,7 +192,8 @@
         "Dimitir inmediatamente sin dar explicaciones."
       ],
       "respuesta": 1,
-      "explicacion": "El primer canon de ISC2 prioriza la protección de la sociedad, el bien común y la confianza pública frente a intereses del empleador."
+      "explicacion": "El primer canon de ISC2 prioriza la protección de la sociedad, el bien común y la confianza pública frente a intereses del empleador.",
+      "dominio": 1
     },
     {
       "pregunta": "Un administrador de TI utiliza sus privilegios elevados para consultar por curiosidad los salarios confidenciales de otros empleados. ¿Qué canon de ISC2 vulnera?",
@@ -173,7 +204,8 @@
         "Promover y proteger la profesión"
       ],
       "respuesta": 1,
-      "explicacion": "Usar privilegios para acceder sin justificación a información confidencial incumple el deber de actuar de forma honorable, responsable y legal."
+      "explicacion": "Usar privilegios para acceder sin justificación a información confidencial incumple el deber de actuar de forma honorable, responsable y legal.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué principio de seguridad aplica una empresa cuando despliega simultáneamente firewalls perimetrales, segmentación interna de red, antivirus en endpoints y autenticación multifactor (MFA)?",
@@ -184,7 +216,8 @@
         "Denegación implícita"
       ],
       "respuesta": 2,
-      "explicacion": "Defense in Depth utiliza varias capas de controles independientes para reducir la dependencia de una única defensa."
+      "explicacion": "Defense in Depth utiliza varias capas de controles independientes para reducir la dependencia de una única defensa.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización contrata una póliza de seguro amplia para cubrir los costes de posibles ataques de ransomware. ¿Qué estrategia de tratamiento del riesgo representa?",
@@ -195,7 +228,8 @@
         "Transferencia del riesgo"
       ],
       "respuesta": 3,
-      "explicacion": "El seguro transfiere parte del impacto financiero del riesgo a un tercero."
+      "explicacion": "El seguro transfiere parte del impacto financiero del riesgo a un tercero.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Cuál de las siguientes opciones describe un análisis cualitativo de riesgos?",
@@ -206,13 +240,20 @@
         "Basarse exclusivamente en fórmulas matemáticas."
       ],
       "respuesta": 2,
-      "explicacion": "El análisis cualitativo clasifica riesgos mediante categorías, escalas o mapas de calor en lugar de cuantificarlos directamente en dinero."
+      "explicacion": "El análisis cualitativo clasifica riesgos mediante categorías, escalas o mapas de calor en lugar de cuantificarlos directamente en dinero.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué protocolo mantiene sincronizados los relojes de los sistemas de una red, algo importante para que las marcas temporales de los logs sean precisas?",
-      "opciones": ["NTP", "SNMP", "ARP", "FTP"],
+      "opciones": [
+        "NTP",
+        "SNMP",
+        "ARP",
+        "FTP"
+      ],
       "respuesta": 0,
-      "explicacion": "NTP se utiliza para sincronizar la hora entre sistemas conectados a una red."
+      "explicacion": "NTP se utiliza para sincronizar la hora entre sistemas conectados a una red.",
+      "dominio": 4
     },
     {
       "pregunta": "Durante un Business Impact Analysis (BIA), ¿qué métrica define la cantidad máxima absoluta de tiempo que una empresa puede sobrevivir sin una función crítica antes de que la interrupción resulte inaceptable?",
@@ -223,7 +264,8 @@
         "Work Recovery Time (WRT)"
       ],
       "respuesta": 2,
-      "explicacion": "El MTD representa el tiempo máximo tolerable de interrupción antes de que las consecuencias para el negocio sean inaceptables."
+      "explicacion": "El MTD representa el tiempo máximo tolerable de interrupción antes de que las consecuencias para el negocio sean inaceptables.",
+      "dominio": 2
     },
     {
       "pregunta": "Durante un BIA, el equipo determina que debe realizar copias de seguridad incrementales de la base de datos cada hora porque no puede permitirse perder más de 60 minutos de datos. Esta métrica es:",
@@ -234,7 +276,8 @@
         "Mean Time Between Failures (MTBF)"
       ],
       "respuesta": 0,
-      "explicacion": "El RPO expresa la cantidad máxima de datos que se puede perder, medida habitualmente como un intervalo de tiempo."
+      "explicacion": "El RPO expresa la cantidad máxima de datos que se puede perder, medida habitualmente como un intervalo de tiempo.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué prueba de recuperación ante desastres reúne a responsables de departamento en una sala para discutir verbalmente cómo responderían a un hipotético ataque de ransomware?",
@@ -245,7 +288,8 @@
         "Full Interruption Test"
       ],
       "respuesta": 1,
-      "explicacion": "Un Tabletop Exercise consiste en revisar verbalmente un escenario y las respuestas previstas sin afectar a los sistemas reales."
+      "explicacion": "Un Tabletop Exercise consiste en revisar verbalmente un escenario y las respuestas previstas sin afectar a los sistemas reales.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué prueba de recuperación ante desastres conlleva el MAYOR riesgo de provocar accidentalmente una interrupción real del negocio?",
@@ -256,19 +300,32 @@
         "Full Interruption Test"
       ],
       "respuesta": 3,
-      "explicacion": "Un Full Interruption Test detiene o sustituye realmente los sistemas principales, por lo que es la prueba con mayor riesgo operativo."
+      "explicacion": "Un Full Interruption Test detiene o sustituye realmente los sistemas principales, por lo que es la prueba con mayor riesgo operativo.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa dispone de un centro de datos de respaldo con alimentación eléctrica, refrigeración y racks vacíos, pero necesitaría semanas para adquirir hardware y cargar los datos tras un desastre. Se trata de un:",
-      "opciones": ["Hot Site", "Warm Site", "Cold Site", "Cloud Site"],
+      "opciones": [
+        "Hot Site",
+        "Warm Site",
+        "Cold Site",
+        "Cloud Site"
+      ],
       "respuesta": 2,
-      "explicacion": "Un Cold Site proporciona principalmente instalaciones físicas básicas, pero requiere instalar equipos y restaurar datos antes de operar."
+      "explicacion": "Un Cold Site proporciona principalmente instalaciones físicas básicas, pero requiere instalar equipos y restaurar datos antes de operar.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué protocolo resuelve una dirección IP a una dirección MAC de hardware dentro de una red local?",
-      "opciones": ["DNS", "ARP", "DHCP", "ICMP"],
+      "opciones": [
+        "DNS",
+        "ARP",
+        "DHCP",
+        "ICMP"
+      ],
       "respuesta": 1,
-      "explicacion": "ARP permite obtener la dirección MAC asociada a una dirección IPv4 en la red local."
+      "explicacion": "ARP permite obtener la dirección MAC asociada a una dirección IPv4 en la red local.",
+      "dominio": 4
     },
     {
       "pregunta": "Un atacante falsifica respuestas ARP para asociar su propia dirección MAC con la IP de la puerta de enlace e interceptar tráfico. Esto es:",
@@ -279,7 +336,8 @@
         "SYN flooding"
       ],
       "respuesta": 0,
-      "explicacion": "ARP poisoning utiliza mensajes ARP falsificados para alterar las asociaciones IP-MAC y puede facilitar ataques MITM."
+      "explicacion": "ARP poisoning utiliza mensajes ARP falsificados para alterar las asociaciones IP-MAC y puede facilitar ataques MITM.",
+      "dominio": 4
     },
     {
       "pregunta": "Una métrica muestra que el equipo de TI cerró correctamente el 95 % de los tickets del helpdesk dentro de su SLA durante el mes pasado. Esta métrica histórica es un:",
@@ -290,7 +348,8 @@
         "Business Impact Analysis (BIA)"
       ],
       "respuesta": 1,
-      "explicacion": "Un KPI mide el rendimiento alcanzado frente a objetivos o niveles de servicio establecidos."
+      "explicacion": "Un KPI mide el rendimiento alcanzado frente a objetivos o niveles de servicio establecidos.",
+      "dominio": 1
     },
     {
       "pregunta": "Una alerta de un panel se vuelve roja porque el número de intentos fallidos de inicio de sesión en el firewall ha aumentado un 400 % durante la última hora, indicando una alta probabilidad de intento de intrusión. Esta métrica es un:",
@@ -301,25 +360,44 @@
         "Recovery Time Objective (RTO)"
       ],
       "respuesta": 0,
-      "explicacion": "Un KRI proporciona una señal de advertencia sobre un aumento potencial del nivel de riesgo."
+      "explicacion": "Un KRI proporciona una señal de advertencia sobre un aumento potencial del nivel de riesgo.",
+      "dominio": 1
     },
     {
       "pregunta": "Un cifrador por bloques cifra los datos en bloques de tamaño fijo. ¿Qué algoritmo es un cifrador por bloques moderno?",
-      "opciones": ["RC4", "AES", "MD5", "Diffie-Hellman"],
+      "opciones": [
+        "RC4",
+        "AES",
+        "MD5",
+        "Diffie-Hellman"
+      ],
       "respuesta": 1,
-      "explicacion": "AES es un algoritmo de cifrado simétrico por bloques; RC4 es de flujo, MD5 es hash y Diffie-Hellman es intercambio de claves."
+      "explicacion": "AES es un algoritmo de cifrado simétrico por bloques; RC4 es de flujo, MD5 es hash y Diffie-Hellman es intercambio de claves.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Cuál de los siguientes es un algoritmo ASIMÉTRICO utilizado para intercambio seguro de claves y firmas digitales?",
-      "opciones": ["AES", "RSA", "3DES", "RC4"],
+      "opciones": [
+        "AES",
+        "RSA",
+        "3DES",
+        "RC4"
+      ],
       "respuesta": 1,
-      "explicacion": "RSA utiliza un par de claves pública y privada y puede emplearse para operaciones criptográficas asimétricas y firmas digitales."
+      "explicacion": "RSA utiliza un par de claves pública y privada y puede emplearse para operaciones criptográficas asimétricas y firmas digitales.",
+      "dominio": 5
     },
     {
       "pregunta": "Calcular el hash de un mensaje y cifrar ese hash con la clave privada del remitente produce una:",
-      "opciones": ["Certificado", "Firma digital", "Salt", "Clave de sesión"],
+      "opciones": [
+        "Certificado",
+        "Firma digital",
+        "Salt",
+        "Clave de sesión"
+      ],
       "respuesta": 1,
-      "explicacion": "Una firma digital se genera firmando criptográficamente un resumen del mensaje con la clave privada del firmante."
+      "explicacion": "Una firma digital se genera firmando criptográficamente un resumen del mensaje con la clave privada del firmante.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué modelo estricto de control de acceso se utiliza ampliamente en entornos militares y emplea etiquetas rígidas de clasificación, como «Top Secret», que los usuarios no pueden modificar?",
@@ -330,7 +408,8 @@
         "Attribute-Based Access Control (ABAC)"
       ],
       "respuesta": 2,
-      "explicacion": "MAC aplica etiquetas y niveles de seguridad definidos centralmente que los usuarios u propietarios no pueden alterar libremente."
+      "explicacion": "MAC aplica etiquetas y niveles de seguridad definidos centralmente que los usuarios u propietarios no pueden alterar libremente.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué modelo de control de acceso agrupa permisos según puestos o funciones laborales, por ejemplo «HR Manager», permitiendo que los usuarios hereden automáticamente los permisos al ser asignados a ese grupo?",
@@ -341,13 +420,20 @@
         "Attribute-Based Access Control (ABAC)"
       ],
       "respuesta": 1,
-      "explicacion": "RBAC asigna permisos a roles y posteriormente asigna usuarios a esos roles."
+      "explicacion": "RBAC asigna permisos a roles y posteriormente asigna usuarios a esos roles.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué protocolo de seguridad de transporte sustituyó a SSL para proteger tráfico web y de correo electrónico?",
-      "opciones": ["TLS", "WEP", "Telnet", "SNMP"],
+      "opciones": [
+        "TLS",
+        "WEP",
+        "Telnet",
+        "SNMP"
+      ],
       "respuesta": 0,
-      "explicacion": "TLS es el sucesor moderno de SSL para proteger comunicaciones mediante cifrado y autenticación."
+      "explicacion": "TLS es el sucesor moderno de SSL para proteger comunicaciones mediante cifrado y autenticación.",
+      "dominio": 5
     },
     {
       "pregunta": "Un certificado wildcard emitido para *.example.com es útil porque:",
@@ -358,7 +444,8 @@
         "Sustituye a la clave privada"
       ],
       "respuesta": 1,
-      "explicacion": "Un certificado wildcard puede cubrir múltiples subdominios bajo el dominio especificado por el comodín."
+      "explicacion": "Un certificado wildcard puede cubrir múltiples subdominios bajo el dominio especificado por el comodín.",
+      "dominio": 5
     },
     {
       "pregunta": "Un escaneo de huella dactilar es un ejemplo de qué tipo de factor de autenticación?",
@@ -369,7 +456,8 @@
         "Algún lugar en el que estás"
       ],
       "respuesta": 2,
-      "explicacion": "Una huella dactilar es un factor biométrico basado en una característica inherente de la persona."
+      "explicacion": "Una huella dactilar es un factor biométrico basado en una característica inherente de la persona.",
+      "dominio": 3
     },
     {
       "pregunta": "Una YubiKey física insertada en un puerto USB es un ejemplo de qué tipo de factor de autenticación?",
@@ -380,7 +468,8 @@
         "Algún lugar en el que estás"
       ],
       "respuesta": 1,
-      "explicacion": "Una YubiKey es un objeto físico en posesión del usuario, por lo que pertenece a la categoría «algo que tienes»."
+      "explicacion": "Una YubiKey es un objeto físico en posesión del usuario, por lo que pertenece a la categoría «algo que tienes».",
+      "dominio": 3
     },
     {
       "pregunta": "Un usuario se autentica utilizando una contraseña memorizada y la respuesta a una pregunta de seguridad, como «¿Cuál es el apellido de soltera de tu madre?». ¿Es esto Multi-Factor Authentication (MFA)?",
@@ -391,7 +480,8 @@
         "No, porque MFA exige un escaneo biométrico."
       ],
       "respuesta": 2,
-      "explicacion": "MFA requiere factores pertenecientes a categorías distintas; una contraseña y una pregunta de seguridad son ambos factores de conocimiento."
+      "explicacion": "MFA requiere factores pertenecientes a categorías distintas; una contraseña y una pregunta de seguridad son ambos factores de conocimiento.",
+      "dominio": 3
     },
     {
       "pregunta": "Un atacante introduce SQL malicioso en un formulario de inicio de sesión para extraer la tabla de usuarios. Este ataque es:",
@@ -402,7 +492,8 @@
         "Phishing"
       ],
       "respuesta": 1,
-      "explicacion": "SQL injection introduce instrucciones SQL manipuladas a través de entradas de la aplicación para alterar consultas a la base de datos."
+      "explicacion": "SQL injection introduce instrucciones SQL manipuladas a través de entradas de la aplicación para alterar consultas a la base de datos.",
+      "dominio": 5
     },
     {
       "pregunta": "Un atacante inyecta un script malicioso que se ejecuta en los navegadores de otros usuarios cuando visualizan una página. Esto es:",
@@ -413,7 +504,8 @@
         "Pharming"
       ],
       "respuesta": 1,
-      "explicacion": "XSS permite inyectar código de script que posteriormente se ejecuta en el navegador de otras víctimas."
+      "explicacion": "XSS permite inyectar código de script que posteriormente se ejecuta en el navegador de otras víctimas.",
+      "dominio": 5
     },
     {
       "pregunta": "Engañar al navegador de un usuario ya autenticado para que envíe una acción no deseada a un sitio de confianza es:",
@@ -424,7 +516,8 @@
         "Replay"
       ],
       "respuesta": 0,
-      "explicacion": "CSRF aprovecha la sesión autenticada de la víctima para ejecutar acciones que esta no pretendía realizar."
+      "explicacion": "CSRF aprovecha la sesión autenticada de la víctima para ejecutar acciones que esta no pretendía realizar.",
+      "dominio": 5
     },
     {
       "pregunta": "Enviar más datos de los que puede contener un buffer de memoria para sobrescribir memoria adyacente y ejecutar código es un:",
@@ -435,13 +528,20 @@
         "Tailgating"
       ],
       "respuesta": 0,
-      "explicacion": "Un buffer overflow ocurre cuando se exceden los límites de un buffer y pueden sobrescribirse regiones de memoria adyacentes."
+      "explicacion": "Un buffer overflow ocurre cuando se exceden los límites de un buffer y pueden sobrescribirse regiones de memoria adyacentes.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué concepto permite que un empleado de la Empresa A acceda a un portal compartido alojado por la Empresa B utilizando sus credenciales originales de la Empresa A?",
-      "opciones": ["SSO", "Federación de identidades", "Provisioning", "RBAC"],
+      "opciones": [
+        "SSO",
+        "Federación de identidades",
+        "Provisioning",
+        "RBAC"
+      ],
       "respuesta": 1,
-      "explicacion": "La federación de identidades establece relaciones de confianza para autenticar usuarios entre organizaciones o dominios distintos."
+      "explicacion": "La federación de identidades establece relaciones de confianza para autenticar usuarios entre organizaciones o dominios distintos.",
+      "dominio": 3
     },
     {
       "pregunta": "Un ataque que explota una vulnerabilidad que el proveedor todavía desconoce y para la que no existe parche disponible es un:",
@@ -452,25 +552,44 @@
         "Dictionary attack"
       ],
       "respuesta": 0,
-      "explicacion": "Una vulnerabilidad zero-day es desconocida o no dispone todavía de una corrección del proveedor cuando comienza a explotarse."
+      "explicacion": "Una vulnerabilidad zero-day es desconocida o no dispone todavía de una corrección del proveedor cuando comienza a explotarse.",
+      "dominio": 5
     },
     {
       "pregunta": "El acceso se concede SOLO si los datos son absolutamente necesarios para una tarea concreta, independientemente del elevado nivel de autorización de seguridad del usuario. Esto se conoce como:",
-      "opciones": ["Need to Know", "MAC", "DAC", "Denegación implícita"],
+      "opciones": [
+        "Need to Know",
+        "MAC",
+        "DAC",
+        "Denegación implícita"
+      ],
       "respuesta": 0,
-      "explicacion": "Need to Know limita el acceso a la información necesaria para desempeñar una función concreta, incluso si el usuario posee una autorización elevada."
+      "explicacion": "Need to Know limita el acceso a la información necesaria para desempeñar una función concreta, incluso si el usuario posee una autorización elevada.",
+      "dominio": 3
     },
     {
       "pregunta": "Una red de ordenadores comprometidos y controlados por un atacante para lanzar ataques coordinados es una:",
-      "opciones": ["Botnet", "Honeynet", "Subnet", "Intranet"],
+      "opciones": [
+        "Botnet",
+        "Honeynet",
+        "Subnet",
+        "Intranet"
+      ],
       "respuesta": 0,
-      "explicacion": "Una botnet está formada por sistemas comprometidos controlados de forma coordinada por un atacante."
+      "explicacion": "Una botnet está formada por sistemas comprometidos controlados de forma coordinada por un atacante.",
+      "dominio": 5
     },
     {
       "pregunta": "Un método oculto que evita la autenticación normal y proporciona a un atacante acceso futuro es una:",
-      "opciones": ["Backdoor", "Firewall", "Honeypot", "Salt"],
+      "opciones": [
+        "Backdoor",
+        "Firewall",
+        "Honeypot",
+        "Salt"
+      ],
       "respuesta": 0,
-      "explicacion": "Una backdoor proporciona una vía de acceso oculta que evita los mecanismos normales de autenticación o control."
+      "explicacion": "Una backdoor proporciona una vía de acceso oculta que evita los mecanismos normales de autenticación o control.",
+      "dominio": 5
     },
     {
       "pregunta": "Para evitar ataques de replay, los sistemas modernos de autenticación suelen utilizar aplicaciones móviles que generan códigos únicos de seis dígitos que cambian cada 30 segundos. ¿Cómo se denominan?",
@@ -481,7 +600,8 @@
         "Biometría"
       ],
       "respuesta": 1,
-      "explicacion": "TOTP genera contraseñas de un solo uso derivadas del tiempo y válidas únicamente durante un intervalo breve."
+      "explicacion": "TOTP genera contraseñas de un solo uso derivadas del tiempo y válidas únicamente durante un intervalo breve.",
+      "dominio": 3
     },
     {
       "pregunta": "Después de comprometer un equipo, un atacante se desplaza hacia otros sistemas de la red. Esto se denomina:",
@@ -492,7 +612,8 @@
         "Cifrado"
       ],
       "respuesta": 0,
-      "explicacion": "Lateral movement describe el desplazamiento de un atacante entre sistemas internos después de obtener un punto de acceso inicial."
+      "explicacion": "Lateral movement describe el desplazamiento de un atacante entre sistemas internos después de obtener un punto de acceso inicial.",
+      "dominio": 5
     },
     {
       "pregunta": "Un atacante explota un fallo para obtener permisos de administrador partiendo de una cuenta de usuario normal. Esto es:",
@@ -503,7 +624,8 @@
         "Tailgating"
       ],
       "respuesta": 0,
-      "explicacion": "Privilege escalation consiste en obtener permisos superiores a los originalmente concedidos."
+      "explicacion": "Privilege escalation consiste en obtener permisos superiores a los originalmente concedidos.",
+      "dominio": 5
     },
     {
       "pregunta": "Comprometer un sitio web que un grupo objetivo visita con frecuencia para infectar a sus miembros es un:",
@@ -514,25 +636,44 @@
         "Dumpster diving"
       ],
       "respuesta": 0,
-      "explicacion": "Un watering hole attack compromete un recurso web que las víctimas objetivo visitan habitualmente."
+      "explicacion": "Un watering hole attack compromete un recurso web que las víctimas objetivo visitan habitualmente.",
+      "dominio": 5
     },
     {
       "pregunta": "Dejar memorias USB infectadas en un aparcamiento esperando que los empleados las conecten es qué técnica de ingeniería social?",
-      "opciones": ["Baiting", "Pretexting", "Vishing", "Tailgating"],
+      "opciones": [
+        "Baiting",
+        "Pretexting",
+        "Vishing",
+        "Tailgating"
+      ],
       "respuesta": 0,
-      "explicacion": "Baiting utiliza un incentivo o señuelo atractivo, como una memoria USB, para inducir a la víctima a realizar una acción peligrosa."
+      "explicacion": "Baiting utiliza un incentivo o señuelo atractivo, como una memoria USB, para inducir a la víctima a realizar una acción peligrosa.",
+      "dominio": 5
     },
     {
       "pregunta": "Inundar un servidor con conexiones TCP semiabiertas para agotar sus recursos es un:",
-      "opciones": ["SYN flood", "XSS", "SQL injection", "Replay"],
+      "opciones": [
+        "SYN flood",
+        "XSS",
+        "SQL injection",
+        "Replay"
+      ],
       "respuesta": 0,
-      "explicacion": "Un SYN flood envía gran cantidad de solicitudes TCP SYN sin completar el handshake, consumiendo recursos del servidor."
+      "explicacion": "Un SYN flood envía gran cantidad de solicitudes TCP SYN sin completar el handshake, consumiendo recursos del servidor.",
+      "dominio": 4
     },
     {
       "pregunta": "Un hacker utiliza un packet sniffer en una red Wi-Fi pública y lee en texto claro las credenciales de acceso remoto de un administrador. ¿Qué protocolo inseguro se utilizó probablemente?",
-      "opciones": ["SSH", "HTTPS", "Telnet", "SFTP"],
+      "opciones": [
+        "SSH",
+        "HTTPS",
+        "Telnet",
+        "SFTP"
+      ],
       "respuesta": 2,
-      "explicacion": "Telnet transmite normalmente la sesión, incluidas las credenciales, sin cifrado, a diferencia de SSH."
+      "explicacion": "Telnet transmite normalmente la sesión, incluidas las credenciales, sin cifrado, a diferencia de SSH.",
+      "dominio": 4
     },
     {
       "pregunta": "Ofrecer un «regalo gratis» a cambio de una contraseña es qué técnica de ingeniería social?",
@@ -543,7 +684,8 @@
         "Buffer overflow"
       ],
       "respuesta": 0,
-      "explicacion": "Quid pro quo ofrece un beneficio a cambio de información o de una acción por parte de la víctima."
+      "explicacion": "Quid pro quo ofrece un beneficio a cambio de información o de una acción por parte de la víctima.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué defensa previene de forma más directa SQL injection en el código de una aplicación?",
@@ -554,7 +696,8 @@
         "Desactivar el logging"
       ],
       "respuesta": 1,
-      "explicacion": "Las consultas parametrizadas separan los datos de las instrucciones SQL y son una defensa fundamental frente a SQL injection."
+      "explicacion": "Las consultas parametrizadas separan los datos de las instrucciones SQL y son una defensa fundamental frente a SQL injection.",
+      "dominio": 5
     },
     {
       "pregunta": "Probar repetidamente palabras comunes de una lista como posibles contraseñas es un:",
@@ -565,13 +708,20 @@
         "Watering hole"
       ],
       "respuesta": 0,
-      "explicacion": "Un dictionary attack prueba contraseñas obtenidas de listas de palabras o valores habituales."
+      "explicacion": "Un dictionary attack prueba contraseñas obtenidas de listas de palabras o valores habituales.",
+      "dominio": 5
     },
     {
       "pregunta": "Un poste corto y resistente instalado para impedir que un vehículo embista la entrada de un edificio es un:",
-      "opciones": ["Torniquete", "Bollard", "Mantrap", "Turnpike"],
+      "opciones": [
+        "Torniquete",
+        "Bollard",
+        "Mantrap",
+        "Turnpike"
+      ],
       "respuesta": 1,
-      "explicacion": "Un bollard es una barrera física diseñada para impedir o dificultar el paso de vehículos."
+      "explicacion": "Un bollard es una barrera física diseñada para impedir o dificultar el paso de vehículos.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué tipo de firewall va más allá del filtrado básico por puertos y recuerda el contexto de una conexión activa, comprobando si un paquete pertenece a una sesión legítima?",
@@ -582,13 +732,20 @@
         "Proxy Firewall"
       ],
       "respuesta": 1,
-      "explicacion": "Un Stateful Inspection Firewall mantiene información sobre el estado de las conexiones y utiliza ese contexto al filtrar paquetes."
+      "explicacion": "Un Stateful Inspection Firewall mantiene información sobre el estado de las conexiones y utiliza ese contexto al filtrar paquetes.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué sistema de extinción de incendios mantiene las tuberías SECAS y solo las llena de agua cuando se activa, reduciendo el riesgo de fugas accidentales en salas de servidores?",
-      "opciones": ["Wet pipe", "Dry pipe", "Deluge open", "Wet standpipe"],
+      "opciones": [
+        "Wet pipe",
+        "Dry pipe",
+        "Deluge open",
+        "Wet standpipe"
+      ],
       "respuesta": 1,
-      "explicacion": "En un sistema dry pipe las tuberías no permanecen llenas de agua durante el funcionamiento normal."
+      "explicacion": "En un sistema dry pipe las tuberías no permanecen llenas de agua durante el funcionamiento normal.",
+      "dominio": 3
     },
     {
       "pregunta": "Un proveedor cloud ofrece un servicio en el que los clientes utilizan una aplicación CRM completamente funcional a través de Internet sin administrar servidores, almacenamiento ni actualizaciones de software subyacentes. Esto es:",
@@ -599,7 +756,8 @@
         "Desktop as a Service (DaaS)"
       ],
       "respuesta": 2,
-      "explicacion": "SaaS proporciona una aplicación completa gestionada por el proveedor y accesible directamente por el usuario."
+      "explicacion": "SaaS proporciona una aplicación completa gestionada por el proveedor y accesible directamente por el usuario.",
+      "dominio": 4
     },
     {
       "pregunta": "Una organización alquila máquinas virtuales y almacenamiento básicos en Azure. La organización es totalmente responsable de instalar Windows, aplicar parches al sistema operativo y desplegar aplicaciones. Esto es:",
@@ -610,13 +768,20 @@
         "Desktop as a Service (DaaS)"
       ],
       "respuesta": 0,
-      "explicacion": "En IaaS el proveedor ofrece infraestructura virtualizada, mientras que el cliente gestiona normalmente el sistema operativo y las aplicaciones."
+      "explicacion": "En IaaS el proveedor ofrece infraestructura virtualizada, mientras que el cliente gestiona normalmente el sistema operativo y las aplicaciones.",
+      "dominio": 4
     },
     {
       "pregunta": "Un equipo de desarrollo utiliza un servicio cloud que proporciona servidores, sistemas operativos y un entorno de base de datos preconfigurado, permitiéndoles centrarse únicamente en escribir código. Esto es:",
-      "opciones": ["IaaS", "Platform as a Service (PaaS)", "SaaS", "DaaS"],
+      "opciones": [
+        "IaaS",
+        "Platform as a Service (PaaS)",
+        "SaaS",
+        "DaaS"
+      ],
       "respuesta": 1,
-      "explicacion": "PaaS proporciona una plataforma gestionada para desarrollar y desplegar aplicaciones sin administrar la infraestructura ni el sistema operativo subyacente."
+      "explicacion": "PaaS proporciona una plataforma gestionada para desarrollar y desplegar aplicaciones sin administrar la infraestructura ni el sistema operativo subyacente.",
+      "dominio": 4
     },
     {
       "pregunta": "Un sistema de extinción de incendios con agente limpio gaseoso, como FM-200, se prefiere en centros de datos porque:",
@@ -627,7 +792,8 @@
         "Detecta intrusos"
       ],
       "respuesta": 1,
-      "explicacion": "Los agentes limpios extinguen incendios sin empapar ni dejar residuos sobre los equipos electrónicos."
+      "explicacion": "Los agentes limpios extinguen incendios sin empapar ni dejar residuos sobre los equipos electrónicos.",
+      "dominio": 3
     },
     {
       "pregunta": "Durante el Black Friday, una aplicación de comercio electrónico aprovisiona automáticamente 20 servidores web adicionales para absorber el pico de tráfico y los elimina el sábado para ahorrar costes. Esta característica cloud es:",
@@ -638,13 +804,20 @@
         "Broad Network Access"
       ],
       "respuesta": 2,
-      "explicacion": "Rapid Elasticity permite ampliar y reducir recursos rápidamente en función de la demanda."
+      "explicacion": "Rapid Elasticity permite ampliar y reducir recursos rápidamente en función de la demanda.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué sistema se encarga de mantener una temperatura y humedad adecuadas en una sala de servidores?",
-      "opciones": ["HVAC", "UPS", "CCTV", "NAC"],
+      "opciones": [
+        "HVAC",
+        "UPS",
+        "CCTV",
+        "NAC"
+      ],
       "respuesta": 0,
-      "explicacion": "HVAC controla la calefacción, ventilación, aire acondicionado y, en este contexto, las condiciones ambientales de la sala."
+      "explicacion": "HVAC controla la calefacción, ventilación, aire acondicionado y, en este contexto, las condiciones ambientales de la sala.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa aloja su base de datos de RR. HH. altamente sensible en una Private Cloud, pero utiliza AWS, una Public Cloud, para su sitio web público de marketing. Esta arquitectura es una:",
@@ -655,7 +828,8 @@
         "Hybrid Cloud"
       ],
       "respuesta": 3,
-      "explicacion": "Una Hybrid Cloud combina recursos de nube privada y pública dentro de una misma arquitectura."
+      "explicacion": "Una Hybrid Cloud combina recursos de nube privada y pública dentro de una misma arquitectura.",
+      "dominio": 4
     },
     {
       "pregunta": "Organizar los racks de servidores de forma que los pasillos de entrada de aire frío y los pasillos de expulsión de aire caliente estén separados mejora la refrigeración. Esto se denomina:",
@@ -666,19 +840,32 @@
         "Air gapping"
       ],
       "respuesta": 0,
-      "explicacion": "Hot/cold aisle containment separa los flujos de aire frío de entrada y caliente de salida para mejorar la eficiencia térmica."
+      "explicacion": "Hot/cold aisle containment separa los flujos de aire frío de entrada y caliente de salida para mejorar la eficiencia térmica.",
+      "dominio": 4
     },
     {
       "pregunta": "Un ordenador sin NINGUNA conexión de red, aislado para proteger datos altamente sensibles, está:",
-      "opciones": ["Air-gapped", "Load-balanced", "Clustered", "Federated"],
+      "opciones": [
+        "Air-gapped",
+        "Load-balanced",
+        "Clustered",
+        "Federated"
+      ],
       "respuesta": 0,
-      "explicacion": "Un sistema air-gapped se mantiene aislado de redes para reducir las vías de acceso remoto."
+      "explicacion": "Un sistema air-gapped se mantiene aislado de redes para reducir las vías de acceso remoto.",
+      "dominio": 3
     },
     {
       "pregunta": "La iluminación de seguridad alrededor del perímetro de una instalación cumple principalmente qué función de control?",
-      "opciones": ["Correctiva", "Disuasoria", "Compensatoria", "Recuperación"],
+      "opciones": [
+        "Correctiva",
+        "Disuasoria",
+        "Compensatoria",
+        "Recuperación"
+      ],
       "respuesta": 1,
-      "explicacion": "La iluminación visible puede desalentar o disuadir a posibles intrusos antes de que intenten acceder."
+      "explicacion": "La iluminación visible puede desalentar o disuadir a posibles intrusos antes de que intenten acceder.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué medida de seguridad física se considera capaz tanto de disuadir como de utilizar juicio humano para responder?",
@@ -689,13 +876,20 @@
         "Una cámara"
       ],
       "respuesta": 1,
-      "explicacion": "Un guardia puede disuadir mediante su presencia y además evaluar situaciones y responder utilizando criterio humano."
+      "explicacion": "Un guardia puede disuadir mediante su presencia y además evaluar situaciones y responder utilizando criterio humano.",
+      "dominio": 3
     },
     {
       "pregunta": "Una jaula cerrada alrededor de un rack de servidores que impide la manipulación física pertenece a qué categoría de control?",
-      "opciones": ["Administrativo", "Técnico", "Físico", "Directivo"],
+      "opciones": [
+        "Administrativo",
+        "Técnico",
+        "Físico",
+        "Directivo"
+      ],
       "respuesta": 2,
-      "explicacion": "Una barrera tangible que restringe físicamente el acceso es un control físico."
+      "explicacion": "Una barrera tangible que restringe físicamente el acceso es un control físico.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Cuál es el principal fallo de seguridad del protocolo inalámbrico WEP?",
@@ -706,7 +900,8 @@
         "Requiere un cable físico."
       ],
       "respuesta": 1,
-      "explicacion": "WEP utiliza mecanismos criptográficos obsoletos y vulnerables que permiten recuperar la clave con relativa facilidad."
+      "explicacion": "WEP utiliza mecanismos criptográficos obsoletos y vulnerables que permiten recuperar la clave con relativa facilidad.",
+      "dominio": 4
     },
     {
       "pregunta": "Situar infraestructura crítica lejos de zonas inundables y fallas geológicas aborda qué tipo de amenaza?",
@@ -717,19 +912,32 @@
         "Amenaza de phishing"
       ],
       "respuesta": 1,
-      "explicacion": "Inundaciones y terremotos son amenazas ambientales o naturales que pueden mitigarse mediante una adecuada selección de la ubicación."
+      "explicacion": "Inundaciones y terremotos son amenazas ambientales o naturales que pueden mitigarse mediante una adecuada selección de la ubicación.",
+      "dominio": 3
     },
     {
       "pregunta": "Un sistema señuelo dejado deliberadamente expuesto para atraer atacantes y estudiar sus métodos es un:",
-      "opciones": ["Honeypot", "Firewall", "Proxy", "Load balancer"],
+      "opciones": [
+        "Honeypot",
+        "Firewall",
+        "Proxy",
+        "Load balancer"
+      ],
       "respuesta": 0,
-      "explicacion": "Un honeypot es un sistema señuelo diseñado para atraer actividad maliciosa y facilitar su observación."
+      "explicacion": "Un honeypot es un sistema señuelo diseñado para atraer actividad maliciosa y facilitar su observación.",
+      "dominio": 5
     },
     {
       "pregunta": "Una red completa de sistemas señuelo utilizada para observar el comportamiento de atacantes a mayor escala es una:",
-      "opciones": ["Honeynet", "Subnet", "Botnet", "DMZ"],
+      "opciones": [
+        "Honeynet",
+        "Subnet",
+        "Botnet",
+        "DMZ"
+      ],
       "respuesta": 0,
-      "explicacion": "Una honeynet es una red compuesta por múltiples sistemas señuelo destinados a atraer y estudiar atacantes."
+      "explicacion": "Una honeynet es una red compuesta por múltiples sistemas señuelo destinados a atraer y estudiar atacantes.",
+      "dominio": 5
     },
     {
       "pregunta": "Un software de endpoint que monitoriza continuamente dispositivos, detecta amenazas y puede aislar automáticamente un equipo es:",
@@ -740,7 +948,8 @@
         "SMTP"
       ],
       "respuesta": 0,
-      "explicacion": "EDR proporciona monitorización, detección e investigación en endpoints y puede ejecutar acciones de respuesta como el aislamiento."
+      "explicacion": "EDR proporciona monitorización, detección e investigación en endpoints y puede ejecutar acciones de respuesta como el aislamiento.",
+      "dominio": 5
     },
     {
       "pregunta": "Un artefacto forense, como el hash conocido de un archivo malicioso o una dirección IP, utilizado para detectar una intrusión, es un:",
@@ -751,13 +960,20 @@
         "NDA"
       ],
       "respuesta": 0,
-      "explicacion": "Un IOC es una evidencia técnica observable asociada a una posible actividad maliciosa o compromiso."
+      "explicacion": "Un IOC es una evidencia técnica observable asociada a una posible actividad maliciosa o compromiso.",
+      "dominio": 5
     },
     {
       "pregunta": "Ejecutar un archivo sospechoso en un entorno virtual aislado para observar su comportamiento de forma segura se denomina:",
-      "opciones": ["Sandboxing", "Hardening", "Tokenización", "Hashing"],
+      "opciones": [
+        "Sandboxing",
+        "Hardening",
+        "Tokenización",
+        "Hashing"
+      ],
       "respuesta": 0,
-      "explicacion": "Sandboxing ejecuta código potencialmente peligroso en un entorno aislado para limitar su impacto y analizar su comportamiento."
+      "explicacion": "Sandboxing ejecuta código potencialmente peligroso en un entorno aislado para limitar su impacto y analizar su comportamiento.",
+      "dominio": 5
     },
     {
       "pregunta": "Permitir que se ejecuten ÚNICAMENTE aplicaciones previamente aprobadas y bloquear todas las demás se denomina:",
@@ -768,7 +984,8 @@
         "Salting"
       ],
       "respuesta": 1,
-      "explicacion": "Allowlisting adopta un enfoque de denegación por defecto y permite exclusivamente software autorizado."
+      "explicacion": "Allowlisting adopta un enfoque de denegación por defecto y permite exclusivamente software autorizado.",
+      "dominio": 5
     },
     {
       "pregunta": "Revisar logs de auditoría para reconstruir quién hizo qué durante un incidente de seguridad depende de qué propiedad?",
@@ -779,13 +996,20 @@
         "Redundancia"
       ],
       "respuesta": 1,
-      "explicacion": "Accountability permite asociar acciones concretas con identidades mediante registros y mecanismos de auditoría."
+      "explicacion": "Accountability permite asociar acciones concretas con identidades mediante registros y mecanismos de auditoría.",
+      "dominio": 5
     },
     {
       "pregunta": "Una plataforma automatizada que orquesta y ejecuta playbooks de respuesta predefinidos entre distintas herramientas de seguridad es:",
-      "opciones": ["SOAR", "SIEM", "NAC", "DLP"],
+      "opciones": [
+        "SOAR",
+        "SIEM",
+        "NAC",
+        "DLP"
+      ],
       "respuesta": 0,
-      "explicacion": "SOAR integra orquestación, automatización y ejecución de flujos de respuesta ante incidentes."
+      "explicacion": "SOAR integra orquestación, automatización y ejecución de flujos de respuesta ante incidentes.",
+      "dominio": 5
     },
     {
       "pregunta": "Mantener los logs de auditoría en un servidor independiente y protegido contra escritura para que los atacantes no puedan borrar sus huellas favorece:",
@@ -796,7 +1020,8 @@
         "Federación"
       ],
       "respuesta": 0,
-      "explicacion": "Los registros protegidos contra modificaciones preservan su integridad y su valor como evidencia."
+      "explicacion": "Los registros protegidos contra modificaciones preservan su integridad y su valor como evidencia.",
+      "dominio": 5
     },
     {
       "pregunta": "Compartir entre organizaciones información seleccionada sobre nuevas tácticas de atacantes e IOC se denomina:",
@@ -807,7 +1032,8 @@
         "Data masking"
       ],
       "respuesta": 0,
-      "explicacion": "Threat intelligence recopila, analiza y comparte información relevante sobre amenazas, actores, tácticas e indicadores."
+      "explicacion": "Threat intelligence recopila, analiza y comparte información relevante sobre amenazas, actores, tácticas e indicadores.",
+      "dominio": 5
     },
     {
       "pregunta": "Escanear periódicamente los sistemas en busca de parches ausentes y vulnerabilidades conocidas forma parte de:",
@@ -818,7 +1044,8 @@
         "Rotación de puestos"
       ],
       "respuesta": 0,
-      "explicacion": "Vulnerability management es el proceso continuo de identificar, evaluar, priorizar y corregir vulnerabilidades."
+      "explicacion": "Vulnerability management es el proceso continuo de identificar, evaluar, priorizar y corregir vulnerabilidades.",
+      "dominio": 5
     },
     {
       "pregunta": "Se utiliza una línea base de comportamiento normal para que una herramienta de monitorización pueda señalar desviaciones. Este método de detección es:",
@@ -829,31 +1056,56 @@
         "Hashing"
       ],
       "respuesta": 1,
-      "explicacion": "La detección basada en anomalías identifica comportamientos que se desvían de una línea base considerada normal."
+      "explicacion": "La detección basada en anomalías identifica comportamientos que se desvían de una línea base considerada normal.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué regulación regula la protección de los datos personales de las personas en la Unión Europea?",
-      "opciones": ["HIPAA", "GDPR", "PCI DSS", "SOX"],
+      "opciones": [
+        "HIPAA",
+        "GDPR",
+        "PCI DSS",
+        "SOX"
+      ],
       "respuesta": 1,
-      "explicacion": "GDPR es el reglamento europeo general que establece requisitos para el tratamiento y protección de datos personales."
+      "explicacion": "GDPR es el reglamento europeo general que establece requisitos para el tratamiento y protección de datos personales.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué ley de Estados Unidos protege la privacidad y seguridad de la información sanitaria de los pacientes?",
-      "opciones": ["GDPR", "HIPAA", "GLBA", "SOX"],
+      "opciones": [
+        "GDPR",
+        "HIPAA",
+        "GLBA",
+        "SOX"
+      ],
       "respuesta": 1,
-      "explicacion": "HIPAA establece requisitos de privacidad y seguridad para determinada información sanitaria protegida en Estados Unidos."
+      "explicacion": "HIPAA establece requisitos de privacidad y seguridad para determinada información sanitaria protegida en Estados Unidos.",
+      "dominio": 1
     },
     {
       "pregunta": "Toda organización que almacene o procese datos de tarjetas de pago debe cumplir qué estándar?",
-      "opciones": ["HIPAA", "PCI DSS", "FERPA", "SOX"],
+      "opciones": [
+        "HIPAA",
+        "PCI DSS",
+        "FERPA",
+        "SOX"
+      ],
       "respuesta": 1,
-      "explicacion": "PCI DSS establece requisitos de seguridad para organizaciones que almacenan, procesan o transmiten datos de tarjetas de pago."
+      "explicacion": "PCI DSS establece requisitos de seguridad para organizaciones que almacenan, procesan o transmiten datos de tarjetas de pago.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué ley estadounidense exige controles internos e información financiera precisa para las empresas cotizadas?",
-      "opciones": ["SOX (Sarbanes-Oxley)", "HIPAA", "GDPR", "PCI DSS"],
+      "opciones": [
+        "SOX (Sarbanes-Oxley)",
+        "HIPAA",
+        "GDPR",
+        "PCI DSS"
+      ],
       "respuesta": 0,
-      "explicacion": "Sarbanes-Oxley establece obligaciones relacionadas con la integridad de la información financiera y los controles internos de empresas públicas."
+      "explicacion": "Sarbanes-Oxley establece obligaciones relacionadas con la integridad de la información financiera y los controles internos de empresas públicas.",
+      "dominio": 1
     },
     {
       "pregunta": "El derecho del GDPR que permite a una persona solicitar la eliminación de sus datos personales es el derecho de:",
@@ -864,19 +1116,32 @@
         "Acceso"
       ],
       "respuesta": 1,
-      "explicacion": "El derecho de supresión permite solicitar la eliminación de datos personales cuando se cumplen las condiciones previstas por el GDPR."
+      "explicacion": "El derecho de supresión permite solicitar la eliminación de datos personales cuando se cumplen las condiciones previstas por el GDPR.",
+      "dominio": 1
     },
     {
       "pregunta": "Los datos personales, como un nombre combinado con un SSN, que permiten identificar a una persona concreta se denominan:",
-      "opciones": ["PHI", "PII", "IOC", "SLA"],
+      "opciones": [
+        "PHI",
+        "PII",
+        "IOC",
+        "SLA"
+      ],
       "respuesta": 1,
-      "explicacion": "PII es información que identifica o puede vincularse a una persona concreta."
+      "explicacion": "PII es información que identifica o puede vincularse a una persona concreta.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué estándar internacional certificable especifica requisitos para un Information Security Management System (ISMS)?",
-      "opciones": ["ISO/IEC 27001", "NIST CSF", "ITIL", "COBIT"],
+      "opciones": [
+        "ISO/IEC 27001",
+        "NIST CSF",
+        "ITIL",
+        "COBIT"
+      ],
       "respuesta": 0,
-      "explicacion": "ISO/IEC 27001 establece requisitos certificables para implantar y mantener un ISMS."
+      "explicacion": "ISO/IEC 27001 establece requisitos certificables para implantar y mantener un ISMS.",
+      "dominio": 1
     },
     {
       "pregunta": "Las cinco funciones principales Identify, Protect, Detect, Respond y Recover pertenecen a qué framework?",
@@ -887,19 +1152,32 @@
         "ITIL"
       ],
       "respuesta": 0,
-      "explicacion": "Estas funciones corresponden al modelo clásico del NIST Cybersecurity Framework utilizado para estructurar la gestión de la ciberseguridad."
+      "explicacion": "Estas funciones corresponden al modelo clásico del NIST Cybersecurity Framework utilizado para estructurar la gestión de la ciberseguridad.",
+      "dominio": 1
     },
     {
       "pregunta": "Un framework centrado específicamente en alinear el gobierno y la gestión de TI con los objetivos del negocio es:",
-      "opciones": ["COBIT", "WPA3", "Kerberos", "RAID"],
+      "opciones": [
+        "COBIT",
+        "WPA3",
+        "Kerberos",
+        "RAID"
+      ],
       "respuesta": 0,
-      "explicacion": "COBIT es un framework orientado al gobierno y la gestión de TI en alineación con los objetivos empresariales."
+      "explicacion": "COBIT es un framework orientado al gobierno y la gestión de TI en alineación con los objetivos empresariales.",
+      "dominio": 1
     },
     {
       "pregunta": "Exigir un acuerdo explícito e informado antes de recopilar los datos personales de alguien satisface el principio de privacidad de:",
-      "opciones": ["Consentimiento", "Redundancia", "Ofuscación", "No repudio"],
+      "opciones": [
+        "Consentimiento",
+        "Redundancia",
+        "Ofuscación",
+        "No repudio"
+      ],
       "respuesta": 0,
-      "explicacion": "El consentimiento supone una manifestación informada y explícita de aceptación para un tratamiento de datos determinado."
+      "explicacion": "El consentimiento supone una manifestación informada y explícita de aceptación para un tratamiento de datos determinado.",
+      "dominio": 1
     },
     {
       "pregunta": "Recopilar únicamente los datos personales mínimos necesarios para una finalidad declarada corresponde al principio de privacidad de:",
@@ -910,7 +1188,8 @@
         "Retención de datos"
       ],
       "respuesta": 0,
-      "explicacion": "La minimización de datos exige limitar la recopilación a la información necesaria para la finalidad prevista."
+      "explicacion": "La minimización de datos exige limitar la recopilación a la información necesaria para la finalidad prevista.",
+      "dominio": 1
     },
     {
       "pregunta": "Durante un penetration test, el Red Team recibe diagramas completos de red, código fuente y credenciales administrativas para acelerar el proceso. Esto se conoce como:",
@@ -921,7 +1200,8 @@
         "Dynamic Scan"
       ],
       "respuesta": 0,
-      "explicacion": "En un White Box Test el equipo de pruebas dispone de conocimiento interno amplio sobre la arquitectura, el código y las credenciales del objetivo."
+      "explicacion": "En un White Box Test el equipo de pruebas dispone de conocimiento interno amplio sobre la arquitectura, el código y las credenciales del objetivo.",
+      "dominio": 1
     }
   ]
 }

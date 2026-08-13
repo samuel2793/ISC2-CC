@@ -12,7 +12,8 @@
         "Modelado de amenazas, durante el diseño"
       ],
       "respuesta": 3,
-      "explicacion": "El modelado de amenazas analiza qué podría salir mal en un diseño y debe realizarse durante la fase de diseño, cuando todavía es posible modificarlo de forma eficiente."
+      "explicacion": "El modelado de amenazas analiza qué podría salir mal en un diseño y debe realizarse durante la fase de diseño, cuando todavía es posible modificarlo de forma eficiente.",
+      "dominio": 4
     },
     {
       "pregunta": "La factura cloud de un minorista es mucho mayor de lo previsto. La investigación descubre entornos de prueba que siguieron funcionando durante meses después de finalizar los proyectos. ¿Qué ilustra esta situación?",
@@ -23,7 +24,8 @@
         "Los entornos de prueba nunca deberían crearse en la nube"
       ],
       "respuesta": 1,
-      "explicacion": "Los recursos cloud continúan generando consumo y costes mientras permanezcan aprovisionados, aunque ya no se utilicen. La gobernanza debe incluir propiedad, etiquetado, revisión y caducidad de recursos."
+      "explicacion": "Los recursos cloud continúan generando consumo y costes mientras permanezcan aprovisionados, aunque ya no se utilicen. La gobernanza debe incluir propiedad, etiquetado, revisión y caducidad de recursos.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Por qué una organización correlaciona logs de varias fuentes diferentes en lugar de revisar cada una de forma aislada?",
@@ -34,7 +36,8 @@
         "La retención exige realizar correlación"
       ],
       "respuesta": 0,
-      "explicacion": "Los atacantes dejan evidencias distribuidas entre firewalls, sistemas de autenticación, accesos a archivos y otros componentes. La correlación permite reconstruir la secuencia completa."
+      "explicacion": "Los atacantes dejan evidencias distribuidas entre firewalls, sistemas de autenticación, accesos a archivos y otros componentes. La correlación permite reconstruir la secuencia completa.",
+      "dominio": 3
     },
     {
       "pregunta": "A un contratista se le entrega una tarjeta temporal para una instalación de dos semanas. Seis meses después, la tarjeta todavía abre el muelle de carga. ¿Qué falló?",
@@ -45,7 +48,8 @@
         "El sistema de tarjetas no debería registrar las horas de entrada"
       ],
       "respuesta": 2,
-      "explicacion": "Los accesos temporales deben expirar automáticamente de acuerdo con la duración de la necesidad empresarial, evitando depender de una revocación manual posterior."
+      "explicacion": "Los accesos temporales deben expirar automáticamente de acuerdo con la duración de la necesidad empresarial, evitando depender de una revocación manual posterior.",
+      "dominio": 5
     },
     {
       "pregunta": "Un atacante envía un mensaje que parece proceder de la cuenta interna comprometida de un compañero. ¿Por qué resulta más difícil de detectar para los destinatarios?",
@@ -56,7 +60,8 @@
         "El mensaje siempre incluirá un archivo adjunto"
       ],
       "respuesta": 2,
-      "explicacion": "Una cuenta interna realmente comprometida elimina una de las principales señales de sospecha: un remitente desconocido o externo. El contenido debe evaluarse aunque el remitente parezca legítimo."
+      "explicacion": "Una cuenta interna realmente comprometida elimina una de las principales señales de sospecha: un remitente desconocido o externo. El contenido debe evaluarse aunque el remitente parezca legítimo.",
+      "dominio": 5
     },
     {
       "pregunta": "Una política de escritorio limpio, armarios cerrados y bloqueo automático de pantalla protegen conjuntamente la información desatendida. ¿Qué tipos de controles intervienen?",
@@ -67,7 +72,8 @@
         "Solo administrativos"
       ],
       "respuesta": 0,
-      "explicacion": "La política es un control administrativo, los armarios son controles físicos y el bloqueo automático de pantalla es un control técnico."
+      "explicacion": "La política es un control administrativo, los armarios son controles físicos y el bloqueo automático de pantalla es un control técnico.",
+      "dominio": 5
     },
     {
       "pregunta": "Un miembro descubre que un compañero vende servicios de seguridad afirmando falsamente poseer una certificación. ¿Qué canon está más directamente implicado?",
@@ -78,7 +84,8 @@
         "Promover y proteger la profesión"
       ],
       "respuesta": 3,
-      "explicacion": "Afirmar falsamente poseer una certificación perjudica la credibilidad de la certificación y de la profesión en su conjunto, por lo que afecta especialmente al canon de promover y proteger la profesión."
+      "explicacion": "Afirmar falsamente poseer una certificación perjudica la credibilidad de la certificación y de la profesión en su conjunto, por lo que afecta especialmente al canon de promover y proteger la profesión.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa desarrolla su aplicación sobre una Platform as a Service (PaaS) de un proveedor. ¿Qué sigue siendo responsabilidad de la empresa?",
@@ -89,13 +96,20 @@
         "El mantenimiento del hardware de red del proveedor"
       ],
       "respuesta": 1,
-      "explicacion": "En PaaS el proveedor gestiona la infraestructura, el sistema operativo y el runtime, mientras que el cliente sigue siendo responsable de su código, sus datos y la gestión de identidades y accesos."
+      "explicacion": "En PaaS el proveedor gestiona la infraestructura, el sistema operativo y el runtime, mientras que el cliente sigue siendo responsable de su código, sus datos y la gestión de identidades y accesos.",
+      "dominio": 5
     },
     {
       "pregunta": "Una empresa no puede impedir que el personal copie archivos a dispositivos personales, por lo que registra todas esas transferencias y las revisa semanalmente. ¿Qué función de control representa?",
-      "opciones": ["Preventiva", "Detectiva", "Solo disuasoria", "Física"],
+      "opciones": [
+        "Preventiva",
+        "Detectiva",
+        "Solo disuasoria",
+        "Física"
+      ],
       "respuesta": 1,
-      "explicacion": "La transferencia no se impide; se registra y se descubre posteriormente. Por tanto, la función principal del control es detectiva."
+      "explicacion": "La transferencia no se impide; se registra y se descubre posteriormente. Por tanto, la función principal del control es detectiva.",
+      "dominio": 3
     },
     {
       "pregunta": "El consejo de administración pregunta por qué el equipo de seguridad mide la eficacia de los controles. ¿Cuál es el propósito?",
@@ -106,7 +120,8 @@
         "Determinar si los controles consiguen su objetivo"
       ],
       "respuesta": 3,
-      "explicacion": "Medir la eficacia permite determinar si un control cumple la finalidad para la que fue implantado y fundamentar decisiones sobre su mejora, sustitución o mantenimiento."
+      "explicacion": "Medir la eficacia permite determinar si un control cumple la finalidad para la que fue implantado y fundamentar decisiones sobre su mejora, sustitución o mantenimiento.",
+      "dominio": 1
     },
     {
       "pregunta": "Durante una prueba de penetración física, un tester sigue a un empleado a través de una puerta controlada por tarjeta sin presentar ninguna credencial. ¿Qué técnica está utilizando?",
@@ -117,7 +132,8 @@
         "Análisis estático"
       ],
       "respuesta": 0,
-      "explicacion": "El tailgating consiste en entrar en una zona controlada siguiendo a una persona autorizada que ya ha abierto el acceso."
+      "explicacion": "El tailgating consiste en entrar en una zona controlada siguiendo a una persona autorizada que ya ha abierto el acceso.",
+      "dominio": 2
     },
     {
       "pregunta": "Un proveedor afirma que su análisis de comportamiento puede sustituir a la autenticación multifactor (MFA). ¿Cuál es la relación correcta?",
@@ -128,7 +144,8 @@
         "Convierte factores de conocimiento en factores de posesión"
       ],
       "respuesta": 2,
-      "explicacion": "El análisis de comportamiento detecta patrones anómalos, mientras que MFA verifica la identidad durante la autenticación. Son mecanismos complementarios, no equivalentes."
+      "explicacion": "El análisis de comportamiento detecta patrones anómalos, mientras que MFA verifica la identidad durante la autenticación. Son mecanismos complementarios, no equivalentes.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Por qué una organización reevalúa periódicamente sus riesgos en lugar de confiar en una evaluación anterior?",
@@ -139,7 +156,8 @@
         "Los auditores exigen una antes de cada auditoría"
       ],
       "respuesta": 1,
-      "explicacion": "Una evaluación de riesgos refleja un momento determinado. Los activos, amenazas, operaciones empresariales y requisitos regulatorios evolucionan, por lo que debe actualizarse."
+      "explicacion": "Una evaluación de riesgos refleja un momento determinado. Los activos, amenazas, operaciones empresariales y requisitos regulatorios evolucionan, por lo que debe actualizarse.",
+      "dominio": 4
     },
     {
       "pregunta": "En un hospital, bloquear el acceso a historiales podría retrasar una atención urgente. ¿Cómo puede aplicarse en su lugar el principio de need to know?",
@@ -150,7 +168,8 @@
         "Permitir el acceso y revisar patrones inusuales"
       ],
       "respuesta": 3,
-      "explicacion": "Cuando impedir el acceso puede causar daños, puede permitirse el acceso necesario y controlar posteriormente los patrones anómalos mediante logging y revisión."
+      "explicacion": "Cuando impedir el acceso puede causar daños, puede permitirse el acceso necesario y controlar posteriormente los patrones anómalos mediante logging y revisión.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización coloca su base de datos más sensible en un segmento accesible únicamente desde dos servidores de aplicaciones concretos. ¿Qué ha limitado?",
@@ -161,7 +180,8 @@
         "La fortaleza del cifrado que protege los datos"
       ],
       "respuesta": 0,
-      "explicacion": "La segmentación limita la conectividad y, por tanto, los sistemas desde los que puede alcanzarse la base de datos. La autenticación sigue siendo un control independiente."
+      "explicacion": "La segmentación limita la conectividad y, por tanto, los sistemas desde los que puede alcanzarse la base de datos. La autenticación sigue siendo un control independiente.",
+      "dominio": 5
     },
     {
       "pregunta": "Una transferencia de archivos entre dos hosts falla repetidamente a mitad del proceso, aunque ambos hosts son alcanzables. ¿Qué capa gestiona esta entrega?",
@@ -172,7 +192,8 @@
         "Capa 1, física"
       ],
       "respuesta": 2,
-      "explicacion": "La capa de transporte gestiona la comunicación extremo a extremo entre procesos, incluyendo entrega, confirmaciones, orden y reensamblado."
+      "explicacion": "La capa de transporte gestiona la comunicación extremo a extremo entre procesos, incluyendo entrega, confirmaciones, orden y reensamblado.",
+      "dominio": 5
     },
     {
       "pregunta": "Directivos de distintos departamentos se reúnen cada mes para debatir y decidir cómo debe utilizarse la tecnología en la empresa. También crean directrices para el uso seguro de la tecnología. ¿De qué es un ejemplo?",
@@ -183,7 +204,8 @@
         "Gobierno de TI"
       ],
       "respuesta": 3,
-      "explicacion": "El gobierno de TI establece dirección, decisiones, responsabilidades y directrices para asegurar que la tecnología apoye los objetivos de la organización."
+      "explicacion": "El gobierno de TI establece dirección, decisiones, responsabilidades y directrices para asegurar que la tecnología apoye los objetivos de la organización.",
+      "dominio": 4
     },
     {
       "pregunta": "Un proveedor afirma que su herramienta de seguridad basada en IA no puede explicar por qué marca determinadas actividades. ¿Qué preocupación profesional plantea?",
@@ -194,7 +216,8 @@
         "La herramienta requiere más capacidad de almacenamiento"
       ],
       "respuesta": 0,
-      "explicacion": "La falta de explicabilidad dificulta justificar, revisar o corregir decisiones, especialmente cuando afectan al acceso, empleo u otros intereses de personas."
+      "explicacion": "La falta de explicabilidad dificulta justificar, revisar o corregir decisiones, especialmente cuando afectan al acceso, empleo u otros intereses de personas.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Por qué una organización debe registrar quién aprobó cada concesión de acceso y no limitarse a registrar que fue aprobada?",
@@ -205,7 +228,8 @@
         "Permite procesar las aprobaciones más rápidamente"
       ],
       "respuesta": 1,
-      "explicacion": "La accountability exige que cada decisión pueda atribuirse a una persona concreta, de modo que pueda revisarse y justificarse posteriormente."
+      "explicacion": "La accountability exige que cada decisión pueda atribuirse a una persona concreta, de modo que pueda revisarse y justificarse posteriormente.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización realiza copias de seguridad de los datos procesados por su servicio de IA, pero después no puede restaurar el servicio. ¿Qué se omitió probablemente?",
@@ -216,7 +240,8 @@
         "El acuerdo de servicio del proveedor"
       ],
       "respuesta": 2,
-      "explicacion": "Un servicio de IA depende también del modelo entrenado, su configuración y los datos de entrenamiento. Respaldar únicamente los datos procesados no permite reconstruirlo."
+      "explicacion": "Un servicio de IA depende también del modelo entrenado, su configuración y los datos de entrenamiento. Respaldar únicamente los datos procesados no permite reconstruirlo.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué tipo de cuenta concede a un usuario permisos elevados para acceder a áreas sensibles de un sistema de TI y suele ser especialmente objetivo de atacantes por su alto nivel de acceso?",
@@ -227,7 +252,8 @@
         "Cuenta de servicio"
       ],
       "respuesta": 2,
-      "explicacion": "Las cuentas privilegiadas disponen de derechos administrativos elevados y permiten acceder a configuraciones y recursos sensibles, por lo que son objetivos de alto valor."
+      "explicacion": "Las cuentas privilegiadas disponen de derechos administrativos elevados y permiten acceder a configuraciones y recursos sensibles, por lo que son objetivos de alto valor.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué etapa del ciclo de vida de un activo presenta el mayor riesgo de divulgación involuntaria de datos?",
@@ -238,7 +264,8 @@
         "Mantenimiento"
       ],
       "respuesta": 0,
-      "explicacion": "Durante la disposición la organización pierde el control físico del activo. Si los datos no se sanitizan previamente, pueden quedar accesibles para terceros."
+      "explicacion": "Durante la disposición la organización pierde el control físico del activo. Si los datos no se sanitizan previamente, pueden quedar accesibles para terceros.",
+      "dominio": 1
     },
     {
       "pregunta": "Un sistema heredado no puede soportar el control automatizado exigido, por lo que se añaden monitorización adicional y revisiones manuales. ¿Qué representa esto?",
@@ -249,7 +276,8 @@
         "Un control compensatorio"
       ],
       "respuesta": 3,
-      "explicacion": "Un control compensatorio proporciona una protección alternativa cuando el control requerido no puede implementarse directamente."
+      "explicacion": "Un control compensatorio proporciona una protección alternativa cuando el control requerido no puede implementarse directamente.",
+      "dominio": 5
     },
     {
       "pregunta": "El personal deja habitualmente abierta la puerta contra incendios más cercana al aparcamiento porque caminar hasta la entrada principal resulta incómodo. ¿Qué indica este comportamiento?",
@@ -260,7 +288,8 @@
         "La seguridad física debería dejarse exclusivamente al contratista de vigilancia"
       ],
       "respuesta": 1,
-      "explicacion": "Los controles que generan una fricción excesiva con las tareas habituales tienden a ser eludidos. Debe abordarse la causa del comportamiento y ofrecer una alternativa segura y utilizable."
+      "explicacion": "Los controles que generan una fricción excesiva con las tareas habituales tienden a ser eludidos. Debe abordarse la causa del comportamiento y ofrecer una alternativa segura y utilizable.",
+      "dominio": 3
     },
     {
       "pregunta": "Un proveedor publica un parche crítico. La organización lo aplica primero a un grupo de prueba, confirma que nada se rompe, después lo despliega y verifica la instalación. ¿Por qué es importante la fase de prueba?",
@@ -271,7 +300,8 @@
         "Elimina la necesidad de verificar después la instalación"
       ],
       "respuesta": 2,
-      "explicacion": "Un parche puede introducir problemas de compatibilidad o funcionamiento. Probarlo en un grupo reducido permite detectar esos efectos antes del despliegue general."
+      "explicacion": "Un parche puede introducir problemas de compatibilidad o funcionamiento. Probarlo en un grupo reducido permite detectar esos efectos antes del despliegue general.",
+      "dominio": 5
     },
     {
       "pregunta": "Durante una prueba autorizada, un profesional se da cuenta de que podría obtener pruebas útiles accediendo al sistema de un tercero que está fuera del alcance acordado. ¿Qué debe hacer?",
@@ -282,7 +312,8 @@
         "No acceder y plantearlo al cliente"
       ],
       "respuesta": 3,
-      "explicacion": "La autorización determina el alcance legal de la prueba. Un sistema de un tercero fuera del alcance no debe tocarse sin autorización expresa."
+      "explicacion": "La autorización determina el alcance legal de la prueba. Un sistema de un tercero fuera del alcance no debe tocarse sin autorización expresa.",
+      "dominio": 3
     },
     {
       "pregunta": "Un firewall controla qué tráfico puede pasar entre zonas de red. ¿Qué consigue esto?",
@@ -293,7 +324,8 @@
         "Todas las zonas pasan a tener requisitos de seguridad idénticos"
       ],
       "respuesta": 0,
-      "explicacion": "El firewall convierte cada cruce entre zonas en un punto donde se evalúan reglas y se decide si el tráfico está permitido."
+      "explicacion": "El firewall convierte cada cruce entre zonas en un punto donde se evalúan reglas y se decide si el tráfico está permitido.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué pareja de principios limita más directamente el daño derivado del compromiso de una cuenta de administrador?",
@@ -304,7 +336,8 @@
         "Elasticidad y agrupación de recursos"
       ],
       "respuesta": 1,
-      "explicacion": "El mínimo privilegio limita los permisos disponibles y la separación de funciones evita que una sola identidad pueda completar por sí misma procesos especialmente sensibles."
+      "explicacion": "El mínimo privilegio limita los permisos disponibles y la separación de funciones evita que una sola identidad pueda completar por sí misma procesos especialmente sensibles.",
+      "dominio": 2
     },
     {
       "pregunta": "El personal de un hospital inicia sesión una vez con sus credenciales del hospital y después puede acceder al portal de resultados de un laboratorio asociado sin crear cuentas separadas, gracias a una relación de confianza entre los sistemas de identidad de ambas organizaciones. ¿Cómo se denomina este mecanismo?",
@@ -315,7 +348,8 @@
         "Gestión de identidad federada"
       ],
       "respuesta": 3,
-      "explicacion": "La identidad federada permite que una organización confíe en las afirmaciones de identidad de otra, posibilitando acceso entre organizaciones sin duplicar cuentas."
+      "explicacion": "La identidad federada permite que una organización confíe en las afirmaciones de identidad de otra, posibilitando acceso entre organizaciones sin duplicar cuentas.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué situación no resolvería el principio de mínimo privilegio?",
@@ -326,7 +360,8 @@
         "Un contratista con acceso a sistemas no relacionados"
       ],
       "respuesta": 1,
-      "explicacion": "El mínimo privilegio limita el alcance de los permisos, pero no puede impedir que un usuario abuse de permisos que necesita legítimamente."
+      "explicacion": "El mínimo privilegio limita el alcance de los permisos, pero no puede impedir que un usuario abuse de permisos que necesita legítimamente.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización opera en dos países con requisitos contradictorios sobre cuánto tiempo deben conservarse determinados registros. ¿Cuál es la respuesta de gobierno adecuada?",
@@ -337,7 +372,8 @@
         "Ignorar ambos y establecer un periodo interno"
       ],
       "respuesta": 2,
-      "explicacion": "Los requisitos legales deben aplicarse según la jurisdicción correspondiente. Una regla única puede incumplir una obligación de conservación o de eliminación."
+      "explicacion": "Los requisitos legales deben aplicarse según la jurisdicción correspondiente. Una regla única puede incumplir una obligación de conservación o de eliminación.",
+      "dominio": 4
     },
     {
       "pregunta": "Un empleado es despedido con efecto inmediato. ¿Cuál es el orden correcto de actuación?",
@@ -348,7 +384,8 @@
         "Mantener el acceso hasta que se devuelva el equipo"
       ],
       "respuesta": 0,
-      "explicacion": "En una salida involuntaria, el acceso debe revocarse antes o simultáneamente a la comunicación del despido para eliminar cualquier ventana de exposición."
+      "explicacion": "En una salida involuntaria, el acceso debe revocarse antes o simultáneamente a la comunicación del despido para eliminar cualquier ventana de exposición.",
+      "dominio": 3
     },
     {
       "pregunta": "Un programa GRC mapea un único control de revisión de accesos con tres obligaciones regulatorias diferentes. ¿Qué consigue?",
@@ -359,7 +396,8 @@
         "El control deja de necesitar un propietario"
       ],
       "respuesta": 1,
-      "explicacion": "El mapeo de controles permite reutilizar una misma implementación y su evidencia para demostrar cumplimiento de varios requisitos equivalentes."
+      "explicacion": "El mapeo de controles permite reutilizar una misma implementación y su evidencia para demostrar cumplimiento de varios requisitos equivalentes.",
+      "dominio": 4
     },
     {
       "pregunta": "La red de control de una fábrica se conecta a la red corporativa para que los ingenieros puedan monitorizarla desde sus puestos. ¿Qué debe acompañar a esta conexión?",
@@ -370,7 +408,8 @@
         "Eliminar la autenticación en la red de control"
       ],
       "respuesta": 0,
-      "explicacion": "La conexión debe permitir únicamente los flujos necesarios y monitorizarlos, reduciendo las posibilidades de movimiento desde una red corporativa comprometida hacia sistemas de control."
+      "explicacion": "La conexión debe permitir únicamente los flujos necesarios y monitorizarlos, reduciendo las posibilidades de movimiento desde una red corporativa comprometida hacia sistemas de control.",
+      "dominio": 1
     },
     {
       "pregunta": "Dos empleados comparten un mismo puesto mediante job sharing. ¿Cuántas cuentas deben tener y con qué acceso?",
@@ -381,7 +420,8 @@
         "Dos cuentas, una de ellas solo de lectura"
       ],
       "respuesta": 2,
-      "explicacion": "Cada persona debe disponer de su propia identidad para conservar la trazabilidad y accountability, aunque ambas reciban los mismos permisos del rol."
+      "explicacion": "Cada persona debe disponer de su propia identidad para conservar la trazabilidad y accountability, aunque ambas reciban los mismos permisos del rol.",
+      "dominio": 4
     },
     {
       "pregunta": "Los departamentos han creado decenas de entornos cloud no registrados. ¿Qué característica de la nube ha facilitado esta situación?",
@@ -392,7 +432,8 @@
         "Autoservicio bajo demanda"
       ],
       "respuesta": 3,
-      "explicacion": "El autoservicio bajo demanda permite aprovisionar infraestructura rápidamente sin intervención de un administrador central, lo que puede generar cloud sprawl si falta gobernanza."
+      "explicacion": "El autoservicio bajo demanda permite aprovisionar infraestructura rápidamente sin intervención de un administrador central, lo que puede generar cloud sprawl si falta gobernanza.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Cuál es el problema de seguridad de un protocolo que transmite credenciales sin cifrado?",
@@ -403,7 +444,8 @@
         "Requiere mayor potencia de procesamiento"
       ],
       "respuesta": 2,
-      "explicacion": "Las credenciales transmitidas en texto claro pueden ser capturadas por un observador de la red y posteriormente reutilizadas."
+      "explicacion": "Las credenciales transmitidas en texto claro pueden ser capturadas por un observador de la red y posteriormente reutilizadas.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización concede a un contratista acceso a un único sistema y registra todas las acciones que realiza dentro de él. ¿Qué dos elementos de AAA se ilustran?",
@@ -414,13 +456,20 @@
         "Autorización y accounting"
       ],
       "respuesta": 3,
-      "explicacion": "Determinar a qué sistema puede acceder el contratista es autorización; registrar sus acciones es accounting. La autenticación determina previamente quién es."
+      "explicacion": "Determinar a qué sistema puede acceder el contratista es autorización; registrar sus acciones es accounting. La autenticación determina previamente quién es.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa ejecuta sus sistemas de producción en su propio centro de datos y utiliza capacidad de un proveedor de nube pública durante los picos estacionales, moviendo datos entre ambos entornos. ¿Qué modelo de despliegue es?",
-      "opciones": ["Híbrido", "Público", "Privado", "Comunitario"],
+      "opciones": [
+        "Híbrido",
+        "Público",
+        "Privado",
+        "Comunitario"
+      ],
       "respuesta": 0,
-      "explicacion": "Una nube híbrida combina infraestructura privada con servicios de nube pública y permite que cargas o datos se muevan entre ambos entornos."
+      "explicacion": "Una nube híbrida combina infraestructura privada con servicios de nube pública y permite que cargas o datos se muevan entre ambos entornos.",
+      "dominio": 3
     },
     {
       "pregunta": "El personal repasa en una sala de reuniones sus funciones durante una recuperación. ¿Qué se ha demostrado y qué no?",
@@ -431,7 +480,8 @@
         "Nada, porque las pruebas basadas en discusión aportan poco"
       ],
       "respuesta": 1,
-      "explicacion": "Un walkthrough permite comprobar roles, responsabilidades y coherencia del plan, pero no demuestra que los sistemas puedan restaurarse realmente."
+      "explicacion": "Un walkthrough permite comprobar roles, responsabilidades y coherencia del plan, pero no demuestra que los sistemas puedan restaurarse realmente.",
+      "dominio": 5
     },
     {
       "pregunta": "Un usuario tiene acceso a una carpeta financiera, pero no se concedió ningún permiso directamente a su cuenta. ¿Cómo pudo obtenerlo?",
@@ -442,7 +492,8 @@
         "Mediante pertenencia a un grupo que posee ese permiso"
       ],
       "respuesta": 3,
-      "explicacion": "Los permisos heredados pueden recibirse a través de la pertenencia a un grupo o rol, en lugar de mediante una asignación directa a la cuenta."
+      "explicacion": "Los permisos heredados pueden recibirse a través de la pertenencia a un grupo o rol, en lugar de mediante una asignación directa a la cuenta.",
+      "dominio": 1
     },
     {
       "pregunta": "Un equipo de operaciones de seguridad solo recibe información sobre el estado de los controles en el mismo informe trimestral que se envía al consejo. ¿Cuál es el principal problema?",
@@ -453,7 +504,8 @@
         "Operaciones no debería conocer el estado de los controles"
       ],
       "respuesta": 2,
-      "explicacion": "La frecuencia de la información debe adaptarse a la velocidad de las decisiones. Operaciones necesita datos mucho más actuales que los informes periódicos destinados al consejo."
+      "explicacion": "La frecuencia de la información debe adaptarse a la velocidad de las decisiones. Operaciones necesita datos mucho más actuales que los informes periódicos destinados al consejo.",
+      "dominio": 5
     },
     {
       "pregunta": "Un sistema evalúa el nivel de autorización, la clasificación del registro y la hora del día en cada solicitud. ¿Qué caracteriza este enfoque?",
@@ -464,7 +516,8 @@
         "Las decisiones de acceso no pueden registrarse"
       ],
       "respuesta": 1,
-      "explicacion": "La evaluación contextual toma la decisión en cada solicitud usando atributos y condiciones actuales, por lo que el resultado puede variar entre solicitudes."
+      "explicacion": "La evaluación contextual toma la decisión en cada solicitud usando atributos y condiciones actuales, por lo que el resultado puede variar entre solicitudes.",
+      "dominio": 3
     },
     {
       "pregunta": "El plan de respuesta de una organización enumera pasos técnicos pero no dice nada sobre notificar a clientes o reguladores. ¿Qué falta?",
@@ -475,7 +528,8 @@
         "El inventario de activos"
       ],
       "respuesta": 0,
-      "explicacion": "Un plan de respuesta a incidentes debe incluir comunicaciones externas y obligaciones de notificación, incluidos posibles plazos regulatorios."
+      "explicacion": "Un plan de respuesta a incidentes debe incluir comunicaciones externas y obligaciones de notificación, incluidos posibles plazos regulatorios.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización quiere reducir el riesgo inalámbrico sin bloquear el uso legítimo. ¿Qué dos controles realizan la protección principal?",
@@ -486,7 +540,8 @@
         "Autenticación y cifrado"
       ],
       "respuesta": 3,
-      "explicacion": "La autenticación controla quién puede conectarse y el cifrado protege el tráfico inalámbrico. Medidas como ocultar el SSID aportan una protección muy limitada."
+      "explicacion": "La autenticación controla quién puede conectarse y el cifrado protege el tráfico inalámbrico. Medidas como ocultar el SSID aportan una protección muy limitada.",
+      "dominio": 5
     },
     {
       "pregunta": "Un atacante introduce discretamente registros manipulados en los datos utilizados para reentrenar un filtro de spam, haciendo que clasifique determinados mensajes maliciosos como seguros. ¿Cómo se denomina este ataque?",
@@ -497,7 +552,8 @@
         "Alert fatigue"
       ],
       "respuesta": 2,
-      "explicacion": "El model poisoning manipula deliberadamente los datos de entrenamiento para alterar el comportamiento aprendido por un modelo."
+      "explicacion": "El model poisoning manipula deliberadamente los datos de entrenamiento para alterar el comportamiento aprendido por un modelo.",
+      "dominio": 4
     },
     {
       "pregunta": "El Código de Ética de ISC2 contiene cuatro cánones. ¿Qué importancia tiene el orden en el que están escritos?",
@@ -508,7 +564,8 @@
         "Indica cuáles son obligatorios y cuáles solo consultivos"
       ],
       "respuesta": 1,
-      "explicacion": "Los cánones están ordenados por precedencia, de modo que si existe un conflicto entre ellos, el canon situado antes tiene prioridad."
+      "explicacion": "Los cánones están ordenados por precedencia, de modo que si existe un conflicto entre ellos, el canon situado antes tiene prioridad.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué actividad pertenece a la fase de monitorización del ciclo de vida del riesgo?",
@@ -519,7 +576,8 @@
         "Crear la lista inicial de riesgos"
       ],
       "respuesta": 0,
-      "explicacion": "La monitorización comprueba que los tratamientos implantados continúan siendo eficaces y detecta cambios en el propio riesgo."
+      "explicacion": "La monitorización comprueba que los tratamientos implantados continúan siendo eficaces y detecta cambios en el propio riesgo.",
+      "dominio": 1
     },
     {
       "pregunta": "Un mensajero pierde un paquete de soportes de backup sin cifrar. ¿Qué pilar está más amenazado?",
@@ -530,7 +588,8 @@
         "Integridad"
       ],
       "respuesta": 0,
-      "explicacion": "Si los soportes no están cifrados y quedan en manos desconocidas, terceros podrían leer la información, afectando principalmente a la confidencialidad."
+      "explicacion": "Si los soportes no están cifrados y quedan en manos desconocidas, terceros podrían leer la información, afectando principalmente a la confidencialidad.",
+      "dominio": 2
     },
     {
       "pregunta": "¿Qué valor aporta a una organización comprender qué actores de amenazas tienen más probabilidades de atacarla?",
@@ -541,7 +600,8 @@
         "Permite orientar las defensas hacia las técnicas más probables"
       ],
       "respuesta": 3,
-      "explicacion": "Conocer los actores y técnicas más probables permite priorizar recursos y construir detecciones y defensas adaptadas a amenazas relevantes."
+      "explicacion": "Conocer los actores y técnicas más probables permite priorizar recursos y construir detecciones y defensas adaptadas a amenazas relevantes.",
+      "dominio": 5
     },
     {
       "pregunta": "Todas las capas defensivas de una organización son controles tecnológicos. ¿Qué incorporación mejoraría más el conjunto?",
@@ -552,7 +612,8 @@
         "Escaneos de vulnerabilidades más frecuentes"
       ],
       "respuesta": 2,
-      "explicacion": "La defensa en profundidad es más robusta cuando combina controles técnicos, administrativos y físicos que cubren distintas vías de ataque y modos de fallo."
+      "explicacion": "La defensa en profundidad es más robusta cuando combina controles técnicos, administrativos y físicos que cubren distintas vías de ataque y modos de fallo.",
+      "dominio": 3
     },
     {
       "pregunta": "Una organización adopta herramientas GRC pero permite que cada unidad de negocio defina su propia escala de riesgo. ¿Qué problema persiste?",
@@ -563,7 +624,8 @@
         "Los reguladores rechazarán los resultados de la herramienta"
       ],
       "respuesta": 1,
-      "explicacion": "Sin una escala de valoración común, las puntuaciones de diferentes unidades no tienen el mismo significado y no pueden compararse de forma coherente."
+      "explicacion": "Sin una escala de valoración común, las puntuaciones de diferentes unidades no tienen el mismo significado y no pueden compararse de forma coherente.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué afirmación sobre la tríada CIA es correcta?",
@@ -574,7 +636,8 @@
         "La importancia depende de la organización y del sistema"
       ],
       "respuesta": 3,
-      "explicacion": "La prioridad relativa de confidencialidad, integridad y disponibilidad depende de las necesidades y riesgos concretos del sistema y de la organización."
+      "explicacion": "La prioridad relativa de confidencialidad, integridad y disponibilidad depende de las necesidades y riesgos concretos del sistema y de la organización.",
+      "dominio": 5
     },
     {
       "pregunta": "Una unidad de negocio quiere lanzar un producto que incumpliría un requisito regulatorio, argumentando que la multa costaría menos que retrasar el lanzamiento. ¿Cómo debe responder la función GRC?",
@@ -585,7 +648,8 @@
         "Continuar y comunicar después el incumplimiento al regulador"
       ],
       "respuesta": 1,
-      "explicacion": "Una exposición regulatoria de este nivel debe escalarse a la autoridad con capacidad para asumir formalmente sus consecuencias. GRC asesora y escala, pero no sustituye a la dirección responsable."
+      "explicacion": "Una exposición regulatoria de este nivel debe escalarse a la autoridad con capacidad para asumir formalmente sus consecuencias. GRC asesora y escala, pero no sustituye a la dirección responsable.",
+      "dominio": 5
     },
     {
       "pregunta": "Dos años de informes de red team no han generado ninguna mejora en la detección. ¿Qué enfoque aborda este problema?",
@@ -596,7 +660,8 @@
         "Ampliar el alcance del próximo ejercicio"
       ],
       "respuesta": 0,
-      "explicacion": "El purple teaming hace que equipos ofensivos y defensivos colaboren para convertir técnicas y hallazgos en nuevas detecciones, ajustes y pruebas repetidas."
+      "explicacion": "El purple teaming hace que equipos ofensivos y defensivos colaboren para convertir técnicas y hallazgos en nuevas detecciones, ajustes y pruebas repetidas.",
+      "dominio": 4
     },
     {
       "pregunta": "Hay programada una revisión de accesos, pero el revisor ha abandonado la organización y no se designó sustituto. ¿Qué revela esto?",
@@ -607,7 +672,8 @@
         "Las revisiones no son necesarias para ese sistema"
       ],
       "respuesta": 2,
-      "explicacion": "Las responsabilidades deben asignarse a roles organizativos, de forma que un sucesor herede la obligación cuando cambia la persona que ocupa el puesto."
+      "explicacion": "Las responsabilidades deben asignarse a roles organizativos, de forma que un sucesor herede la obligación cuando cambia la persona que ocupa el puesto.",
+      "dominio": 2
     },
     {
       "pregunta": "Un empleado recibe una llamada de alguien que afirma ser un proveedor y solicita cambiar los datos bancarios utilizados para los pagos. ¿Qué debe hacerse?",
@@ -618,7 +684,8 @@
         "Verificar utilizando datos de contacto que ya constaban previamente"
       ],
       "respuesta": 3,
-      "explicacion": "La verificación debe realizarse por un canal de confianza obtenido antes de la solicitud, no mediante datos proporcionados por el propio solicitante."
+      "explicacion": "La verificación debe realizarse por un canal de confianza obtenido antes de la solicitud, no mediante datos proporcionados por el propio solicitante.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización define un rol para sus agentes de call center con once permisos. Dos años después contiene treinta y uno. ¿Qué ha ocurrido y qué debería haberlo evitado?",
@@ -629,7 +696,8 @@
         "Configuration drift por ausencia de baselines"
       ],
       "respuesta": 0,
-      "explicacion": "El crecimiento se ha producido en la propia definición del rol. Un propietario responsable de revisar y aprobar sus cambios debería impedir la acumulación injustificada de permisos."
+      "explicacion": "El crecimiento se ha producido en la propia definición del rol. Un propietario responsable de revisar y aprobar sus cambios debería impedir la acumulación injustificada de permisos.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué característica cloud explica más directamente que un cliente no pueda señalar un servidor físico concreto que está ejecutando su carga de trabajo?",
@@ -640,7 +708,8 @@
         "Autoservicio bajo demanda"
       ],
       "respuesta": 2,
-      "explicacion": "La agrupación de recursos permite al proveedor asignar dinámicamente infraestructura compartida entre clientes, abstrayendo la ubicación física concreta de cada carga."
+      "explicacion": "La agrupación de recursos permite al proveedor asignar dinámicamente infraestructura compartida entre clientes, abstrayendo la ubicación física concreta de cada carga.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué actividad de tratamiento de información asigna un nivel de sensibilidad a los datos cuando se crean?",
@@ -651,7 +720,8 @@
         "Enmascaramiento"
       ],
       "respuesta": 1,
-      "explicacion": "La clasificación determina el nivel de sensibilidad de la información. El etiquetado representa posteriormente esa clasificación para aplicar las reglas de manejo correspondientes."
+      "explicacion": "La clasificación determina el nivel de sensibilidad de la información. El etiquetado representa posteriormente esa clasificación para aplicar las reglas de manejo correspondientes.",
+      "dominio": 1
     },
     {
       "pregunta": "Cuando el propietario de un recurso decide quién puede acceder a él, ¿cuál es el principal compromiso?",
@@ -662,7 +732,8 @@
         "Aplicación perfecta de las reglas de clasificación"
       ],
       "respuesta": 0,
-      "explicacion": "La discreción del propietario facilita compartir recursos, pero diferentes propietarios pueden aplicar criterios distintos, reduciendo la consistencia global."
+      "explicacion": "La discreción del propietario facilita compartir recursos, pero diferentes propietarios pueden aplicar criterios distintos, reduciendo la consistencia global.",
+      "dominio": 4
     },
     {
       "pregunta": "¿Qué principio de seguridad garantiza que una persona no pueda negar la autenticidad de sus acciones?",
@@ -673,7 +744,8 @@
         "Autenticación"
       ],
       "respuesta": 2,
-      "explicacion": "El no repudio proporciona evidencia que vincula una identidad con una acción, mensaje o transacción, dificultando que posteriormente pueda negarla."
+      "explicacion": "El no repudio proporciona evidencia que vincula una identidad con una acción, mensaje o transacción, dificultando que posteriormente pueda negarla.",
+      "dominio": 1
     },
     {
       "pregunta": "Al revisar logs, un analista de seguridad observa numerosos intentos de inicio de sesión utilizando distintas palabras comunes procedentes de literatura. ¿Qué tipo de ataque se está utilizando probablemente?",
@@ -684,7 +756,8 @@
         "Phishing Attack"
       ],
       "respuesta": 1,
-      "explicacion": "Un dictionary attack prueba palabras y contraseñas procedentes de diccionarios o listas predefinidas para intentar descubrir una credencial válida."
+      "explicacion": "Un dictionary attack prueba palabras y contraseñas procedentes de diccionarios o listas predefinidas para intentar descubrir una credencial válida.",
+      "dominio": 2
     },
     {
       "pregunta": "Una organización descubre que su sistema de identidad y su sistema de RR. HH. no coinciden sobre quién trabaja actualmente en la empresa. ¿Qué principio aborda este problema?",
@@ -695,7 +768,8 @@
         "Una fuente autoritativa de la que deriven los demás sistemas"
       ],
       "respuesta": 3,
-      "explicacion": "Debe existir una única fuente autoritativa, normalmente RR. HH. para identidades de empleados, desde la que se actualicen los demás sistemas."
+      "explicacion": "Debe existir una única fuente autoritativa, normalmente RR. HH. para identidades de empleados, desde la que se actualicen los demás sistemas.",
+      "dominio": 1
     },
     {
       "pregunta": "Una agencia gubernamental solo puede utilizar servicios cloud comerciales cuando el proveedor demuestre que ningún otro tenant comparte los hosts físicos subyacentes. ¿Qué modelo de despliegue sigue siendo válido?",
@@ -706,7 +780,8 @@
         "Solo nube híbrida"
       ],
       "respuesta": 0,
-      "explicacion": "El requisito exige single tenancy en la capa física. Una nube privada puede proporcionar infraestructura dedicada a una única organización aunque sea operada por un proveedor."
+      "explicacion": "El requisito exige single tenancy en la capa física. Una nube privada puede proporcionar infraestructura dedicada a una única organización aunque sea operada por un proveedor.",
+      "dominio": 3
     },
     {
       "pregunta": "Tras una campaña para animar al personal a informar de cualquier elemento sospechoso, los mensajes reportados se triplican mientras el número de ataques reales permanece estable. ¿Cómo debe interpretarse?",
@@ -717,7 +792,8 @@
         "La formación ha impedido que el personal pueda valorar el riesgo"
       ],
       "respuesta": 1,
-      "explicacion": "El volumen de reportes mide en gran medida la vigilancia y disposición a informar, no necesariamente el número real de ataques."
+      "explicacion": "El volumen de reportes mide en gran medida la vigilancia y disposición a informar, no necesariamente el número real de ataques.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización mueve una carga de trabajo a un proveedor cloud y asume que sus obligaciones regulatorias se transfieren también al proveedor. ¿Cuál es la corrección?",
@@ -728,7 +804,8 @@
         "Las obligaciones quedan suspendidas mientras los datos estén externamente alojados"
       ],
       "respuesta": 2,
-      "explicacion": "Externalizar el procesamiento no transfiere la accountability regulatoria. La organización debe verificar que el proveedor permite cumplir sus obligaciones."
+      "explicacion": "Externalizar el procesamiento no transfiere la accountability regulatoria. La organización debe verificar que el proveedor permite cumplir sus obligaciones.",
+      "dominio": 3
     },
     {
       "pregunta": "¿Qué afirmación sobre las direcciones MAC es correcta?",
@@ -739,7 +816,8 @@
         "Identifican una interfaz dentro de un segmento"
       ],
       "respuesta": 3,
-      "explicacion": "Una dirección MAC identifica una interfaz de red a nivel de enlace de datos y es utilizada para enviar tramas dentro de un segmento local."
+      "explicacion": "Una dirección MAC identifica una interfaz de red a nivel de enlace de datos y es utilizada para enviar tramas dentro de un segmento local.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Por qué una organización controla el estado de soporte del software que utiliza y no únicamente sus números de versión?",
@@ -750,7 +828,8 @@
         "Los números de versión son inherentemente poco fiables"
       ],
       "respuesta": 2,
-      "explicacion": "Cuando un producto alcanza el fin de soporte deja de recibir correcciones de seguridad, por lo que las vulnerabilidades futuras pueden quedar sin solución."
+      "explicacion": "Cuando un producto alcanza el fin de soporte deja de recibir correcciones de seguridad, por lo que las vulnerabilidades futuras pueden quedar sin solución.",
+      "dominio": 2
     },
     {
       "pregunta": "Una organización establece que los administradores de bases de datos no pueden aprobar también cambios en la configuración de los logs de auditoría. ¿Qué se está protegiendo?",
@@ -761,7 +840,8 @@
         "El rendimiento del sistema de auditoría"
       ],
       "respuesta": 0,
-      "explicacion": "Separar a quienes administran el sistema de quienes controlan el registro de sus acciones evita que puedan modificar o eliminar la evidencia de su propia actividad."
+      "explicacion": "Separar a quienes administran el sistema de quienes controlan el registro de sus acciones evita que puedan modificar o eliminar la evidencia de su propia actividad.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización transmite grandes datasets de entrenamiento entre su plataforma de almacenamiento y su entorno de entrenamiento de modelos. ¿Qué principio debe regir esas conexiones?",
@@ -772,7 +852,8 @@
         "Enviar el tráfico por Internet pública para ganar flexibilidad"
       ],
       "respuesta": 1,
-      "explicacion": "El enfoque Zero Trust exige verificar cada conexión y limitarla a los flujos estrictamente necesarios, incluso cuando ambos extremos se encuentren dentro de la organización."
+      "explicacion": "El enfoque Zero Trust exige verificar cada conexión y limitarla a los flujos estrictamente necesarios, incluso cuando ambos extremos se encuentren dentro de la organización.",
+      "dominio": 3
     },
     {
       "pregunta": "Un responsable de registros está representando cómo los datos de clientes pasan desde su creación hasta su eliminación. ¿Qué secuencia describe el ciclo de vida de los datos?",
@@ -783,7 +864,8 @@
         "Crear, almacenar, usar, compartir, archivar, destruir"
       ],
       "respuesta": 3,
-      "explicacion": "El ciclo de vida de los datos se describe como creación, almacenamiento, uso, compartición, archivo y destrucción segura."
+      "explicacion": "El ciclo de vida de los datos se describe como creación, almacenamiento, uso, compartición, archivo y destrucción segura.",
+      "dominio": 4
     },
     {
       "pregunta": "El responsable de un nuevo empleado solicita acceso a cinco sistemas. Tres coinciden con la definición de su rol y dos no. ¿Cómo deben tratarse las dos excepciones?",
@@ -794,7 +876,8 @@
         "Tramitar ambas mediante el proceso de excepciones"
       ],
       "respuesta": 3,
-      "explicacion": "El acceso fuera del rol estándar debe justificarse y aprobarse mediante un proceso de excepciones que permita registrarlo y revisarlo posteriormente."
+      "explicacion": "El acceso fuera del rol estándar debe justificarse y aprobarse mediante un proceso de excepciones que permita registrarlo y revisarlo posteriormente.",
+      "dominio": 5
     },
     {
       "pregunta": "Una empresa quiere permitir al personal utilizar herramientas de IA sin exponer información corporativa. ¿Qué enfoque equilibra ambos objetivos?",
@@ -805,7 +888,8 @@
         "Uso sin restricciones con monitorización posterior"
       ],
       "respuesta": 0,
-      "explicacion": "Las herramientas autorizadas, acompañadas de reglas claras y controles organizativos, permiten aprovechar la IA manteniendo el uso dentro del ámbito gobernado por la empresa."
+      "explicacion": "Las herramientas autorizadas, acompañadas de reglas claras y controles organizativos, permiten aprovechar la IA manteniendo el uso dentro del ámbito gobernado por la empresa.",
+      "dominio": 5
     },
     {
       "pregunta": "Un responsable sostiene que, como la organización dispone de una autenticación de usuarios robusta, la segmentación de red es innecesaria. ¿Cuál es la respuesta más precisa?",
@@ -816,7 +900,8 @@
         "La segmentación elimina la autenticación interna"
       ],
       "respuesta": 2,
-      "explicacion": "La autenticación verifica identidades, mientras que la segmentación restringe la conectividad y el movimiento por la red. Son controles complementarios."
+      "explicacion": "La autenticación verifica identidades, mientras que la segmentación restringe la conectividad y el movimiento por la red. Son controles complementarios.",
+      "dominio": 1
     },
     {
       "pregunta": "Se genera una alerta cada vez que un usuario se autentica correctamente. Después de una semana, el equipo ignora por completo las alertas. ¿Qué salió mal?",
@@ -827,7 +912,8 @@
         "El equipo carece de formación"
       ],
       "respuesta": 1,
-      "explicacion": "Alertar sobre un evento normal y frecuente genera ruido y alert fatigue. Las alertas deben centrarse en situaciones que realmente requieran atención humana."
+      "explicacion": "Alertar sobre un evento normal y frecuente genera ruido y alert fatigue. Las alertas deben centrarse en situaciones que realmente requieran atención humana.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué asociación entre un concepto de red y su finalidad es correcta?",
@@ -838,7 +924,8 @@
         "Un router asigna direcciones a los dispositivos"
       ],
       "respuesta": 2,
-      "explicacion": "La función principal de un firewall es aplicar reglas que permiten o bloquean tráfico. Las VLAN segmentan, las VPN protegen comunicaciones y DHCP asigna direcciones."
+      "explicacion": "La función principal de un firewall es aplicar reglas que permiten o bloquean tráfico. Las VLAN segmentan, las VPN protegen comunicaciones y DHCP asigna direcciones.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué tipo de backup incluye únicamente los archivos que han cambiado desde el backup completo o incremental más reciente?",
@@ -849,7 +936,8 @@
         "Mirror Backup"
       ],
       "respuesta": 1,
-      "explicacion": "Un backup incremental copia los cambios producidos desde el backup anterior, ya sea completo o incremental. Para restaurar se necesita el full backup y todos los incrementales posteriores."
+      "explicacion": "Un backup incremental copia los cambios producidos desde el backup anterior, ya sea completo o incremental. Para restaurar se necesita el full backup y todos los incrementales posteriores.",
+      "dominio": 2
     },
     {
       "pregunta": "Un procedimiento hace referencia a una versión de software retirada hace dos años. ¿Cuál es la consecuencia práctica?",
@@ -860,7 +948,8 @@
         "El procedimiento se convierte en una directriz"
       ],
       "respuesta": 0,
-      "explicacion": "Los procedimientos describen pasos concretos. Si dependen de componentes que ya no existen, dejan de poder ejecutarse correctamente y fomentan soluciones improvisadas."
+      "explicacion": "Los procedimientos describen pasos concretos. Si dependen de componentes que ya no existen, dejan de poder ejecutarse correctamente y fomentan soluciones improvisadas.",
+      "dominio": 1
     },
     {
       "pregunta": "Una regla de firewall permite únicamente tráfico saliente por el puerto 443. ¿Qué actividad seguiría siendo posible?",
@@ -871,7 +960,8 @@
         "Navegación cifrada y cualquier otro tráfico que utilice ese puerto"
       ],
       "respuesta": 3,
-      "explicacion": "El puerto 443 se utiliza normalmente para HTTPS, pero una regla basada solo en puerto permite también cualquier otra aplicación capaz de utilizar ese mismo puerto."
+      "explicacion": "El puerto 443 se utiliza normalmente para HTTPS, pero una regla basada solo en puerto permite también cualquier otra aplicación capaz de utilizar ese mismo puerto.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué contenido es más apropiado para un informe dirigido a la alta dirección?",
@@ -882,7 +972,8 @@
         "Posición agregada, evolución y decisiones solicitadas"
       ],
       "respuesta": 3,
-      "explicacion": "La alta dirección necesita información agregada orientada a decisiones: situación actual, tendencias, riesgos y decisiones requeridas, no datos operativos sin procesar."
+      "explicacion": "La alta dirección necesita información agregada orientada a decisiones: situación actual, tendencias, riesgos y decisiones requeridas, no datos operativos sin procesar.",
+      "dominio": 3
     },
     {
       "pregunta": "Una organización quiere comprobar si su equipo de monitorización detectará una intrusión realista. ¿Qué configuración de la prueba apoya mejor ese objetivo?",
@@ -893,7 +984,8 @@
         "Permitir que el equipo de monitorización elija las técnicas"
       ],
       "respuesta": 2,
-      "explicacion": "Para medir la detección real, los defensores no deben conocer previamente el ejercicio, aunque este debe estar formalmente autorizado y existir un grupo que pueda verificarlo o detenerlo."
+      "explicacion": "Para medir la detección real, los defensores no deben conocer previamente el ejercicio, aunque este debe estar formalmente autorizado y existir un grupo que pueda verificarlo o detenerlo.",
+      "dominio": 1
     },
     {
       "pregunta": "Un responsable quiere una métrica que demuestre si el control de gestión de vulnerabilidades de la organización es realmente eficaz. ¿Cuál es la mejor?",
@@ -904,13 +996,20 @@
         "Personal asignado al equipo"
       ],
       "respuesta": 0,
-      "explicacion": "La eficacia debe medirse mediante resultados. El porcentaje de vulnerabilidades críticas remediadas dentro del plazo establecido indica si el proceso cumple su objetivo."
+      "explicacion": "La eficacia debe medirse mediante resultados. El porcentaje de vulnerabilidades críticas remediadas dentro del plazo establecido indica si el proceso cumple su objetivo.",
+      "dominio": 1
     },
     {
       "pregunta": "Los datos permanecen en memoria mientras una aplicación los procesa. ¿En qué estado se encuentran?",
-      "opciones": ["En reposo", "En uso", "En tránsito", "Archivados"],
+      "opciones": [
+        "En reposo",
+        "En uso",
+        "En tránsito",
+        "Archivados"
+      ],
       "respuesta": 1,
-      "explicacion": "Los datos que están siendo procesados activamente por una aplicación se consideran datos en uso."
+      "explicacion": "Los datos que están siendo procesados activamente por una aplicación se consideran datos en uso.",
+      "dominio": 4
     },
     {
       "pregunta": "Durante la respuesta a una intrusión, el equipo descubre que el atacante está leyendo el canal de chat interno utilizado para coordinarse. ¿Qué debe hacer?",
@@ -921,7 +1020,8 @@
         "Publicar mensajes engañosos para confundir al atacante"
       ],
       "respuesta": 0,
-      "explicacion": "La respuesta a incidentes debe disponer de comunicaciones out-of-band independientes de los sistemas potencialmente comprometidos para evitar que el atacante conozca los siguientes pasos."
+      "explicacion": "La respuesta a incidentes debe disponer de comunicaciones out-of-band independientes de los sistemas potencialmente comprometidos para evitar que el atacante conozca los siguientes pasos.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa descubre que se han expuesto datos personales. Su plan de incidentes cubre contención y recuperación, pero no contempla informar a nadie fuera de la empresa. ¿Qué obligación ha pasado por alto?",
@@ -932,7 +1032,8 @@
         "Ninguna, siempre que la exposición se contenga rápidamente"
       ],
       "respuesta": 1,
-      "explicacion": "Las normativas de protección de datos pueden exigir notificar brechas a reguladores y, en determinadas circunstancias, a las personas afectadas dentro de plazos establecidos."
+      "explicacion": "Las normativas de protección de datos pueden exigir notificar brechas a reguladores y, en determinadas circunstancias, a las personas afectadas dentro de plazos establecidos.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué factor influye más en que el personal informe de un posible problema de seguridad?",
@@ -943,7 +1044,8 @@
         "Que el equipo de seguridad esté en el mismo edificio"
       ],
       "respuesta": 2,
-      "explicacion": "Una cultura en la que los reportes se valoran y no generan consecuencias negativas para quien informa favorece que los problemas se comuniquen rápidamente."
+      "explicacion": "Una cultura en la que los reportes se valoran y no generan consecuencias negativas para quien informa favorece que los problemas se comuniquen rápidamente.",
+      "dominio": 1
     },
     {
       "pregunta": "Exigir que una segunda persona apruebe cualquier cambio en un registro maestro protege principalmente ¿qué pilar?",
@@ -954,7 +1056,8 @@
         "Integridad"
       ],
       "respuesta": 3,
-      "explicacion": "La doble aprobación busca evitar modificaciones incorrectas o no autorizadas, protegiendo la exactitud y fiabilidad de la información, es decir, su integridad."
+      "explicacion": "La doble aprobación busca evitar modificaciones incorrectas o no autorizadas, protegiendo la exactitud y fiabilidad de la información, es decir, su integridad.",
+      "dominio": 3
     },
     {
       "pregunta": "Un proveedor acepta contractualmente asumir el coste de cualquier brecha que afecte a los datos que procesa. ¿Qué ha conseguido la organización y qué no?",
@@ -965,7 +1068,8 @@
         "Ya no necesita evaluar al proveedor"
       ],
       "respuesta": 0,
-      "explicacion": "La transferencia contractual puede trasladar parte del impacto financiero, pero no elimina la responsabilidad regulatoria ni el posible daño reputacional de la organización."
+      "explicacion": "La transferencia contractual puede trasladar parte del impacto financiero, pero no elimina la responsabilidad regulatoria ni el posible daño reputacional de la organización.",
+      "dominio": 5
     },
     {
       "pregunta": "¿Qué método de prueba de disaster recovery implica apagar completamente el entorno de TI primario para comprobar la eficacia y velocidad de una recuperación a escala completa?",
@@ -976,7 +1080,8 @@
         "Full interruption test"
       ],
       "respuesta": 3,
-      "explicacion": "Una full interruption test detiene el entorno primario y obliga a operar utilizando la capacidad de recuperación, siendo la prueba más realista y también la de mayor riesgo."
+      "explicacion": "Una full interruption test detiene el entorno primario y obliga a operar utilizando la capacidad de recuperación, siendo la prueba más realista y también la de mayor riesgo.",
+      "dominio": 5
     },
     {
       "pregunta": "Una empresa mantiene las direcciones de sus clientes fuertemente cifradas y con acceso muy restringido, pero las vende a anunciantes sin informar a los clientes. ¿Qué requisito ha incumplido?",
@@ -987,7 +1092,8 @@
         "Disponibilidad, porque los datos podían utilizarse cuando se necesitaban"
       ],
       "respuesta": 1,
-      "explicacion": "La privacidad regula el uso legítimo de los datos personales y su adecuación a los fines informados o consentidos. Un dato puede mantenerse confidencial y, aun así, utilizarse de forma indebida."
+      "explicacion": "La privacidad regula el uso legítimo de los datos personales y su adecuación a los fines informados o consentidos. Un dato puede mantenerse confidencial y, aun así, utilizarse de forma indebida.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización establece que todo acceso remoto debe utilizar cifrado aprobado y, por separado, que se recomienda a los administradores revisar los logs semanalmente. ¿Qué requisito es vinculante?",
@@ -998,7 +1104,8 @@
         "La revisión de logs, porque es una práctica operativa"
       ],
       "respuesta": 2,
-      "explicacion": "El lenguaje obligatorio crea un requisito vinculante, mientras que una recomendación expresa una directriz no obligatoria."
+      "explicacion": "El lenguaje obligatorio crea un requisito vinculante, mientras que una recomendación expresa una directriz no obligatoria.",
+      "dominio": 4
     },
     {
       "pregunta": "Un riesgo es muy probable pero trivial; otro es remoto pero catastrófico. ¿Qué requiere compararlos?",
@@ -1009,7 +1116,8 @@
         "Ninguna de las dos dimensiones"
       ],
       "respuesta": 1,
-      "explicacion": "La evaluación del riesgo debe considerar conjuntamente probabilidad e impacto, ya que ninguna de las dos dimensiones por sí sola permite priorizar adecuadamente."
+      "explicacion": "La evaluación del riesgo debe considerar conjuntamente probabilidad e impacto, ya que ninguna de las dos dimensiones por sí sola permite priorizar adecuadamente.",
+      "dominio": 1
     },
     {
       "pregunta": "¿Qué actividad clasificaría un programa GRC dentro de riesgo en lugar de cumplimiento?",
@@ -1020,7 +1128,8 @@
         "Estimar la probabilidad y el impacto del fallo de un proveedor"
       ],
       "respuesta": 3,
-      "explicacion": "Estimar probabilidad e impacto forma parte del análisis de riesgos. Las demás actividades se orientan a demostrar o gestionar el cumplimiento de obligaciones externas."
+      "explicacion": "Estimar probabilidad e impacto forma parte del análisis de riesgos. Las demás actividades se orientan a demostrar o gestionar el cumplimiento de obligaciones externas.",
+      "dominio": 5
     },
     {
       "pregunta": "Un servicio no puede tolerar más de treinta segundos de indisponibilidad. ¿Qué arquitectura se necesita?",
@@ -1031,7 +1140,8 @@
         "Replicación semanal a un segundo centro de datos"
       ],
       "respuesta": 2,
-      "explicacion": "Un objetivo de recuperación de segundos requiere componentes ya operativos y conmutación automática; los procesos manuales de restauración o activación serían demasiado lentos."
+      "explicacion": "Un objetivo de recuperación de segundos requiere componentes ya operativos y conmutación automática; los procesos manuales de restauración o activación serían demasiado lentos.",
+      "dominio": 3
     },
     {
       "pregunta": "Una organización instala una cámara que registra quién entra en la sala de servidores. En términos de tipo y función del control, ¿cómo se describe mejor?",
@@ -1042,7 +1152,8 @@
         "Tipo físico, función preventiva"
       ],
       "respuesta": 0,
-      "explicacion": "La cámara actúa sobre el entorno físico y registra los accesos después o durante su realización, por lo que es un control físico principalmente detectivo."
+      "explicacion": "La cámara actúa sobre el entorno físico y registra los accesos después o durante su realización, por lo que es un control físico principalmente detectivo.",
+      "dominio": 4
     },
     {
       "pregunta": "Una organización coloca todos los sistemas que manejan datos de tarjetas de pago en un segmento de red dedicado con cruces estrictamente controlados. Además de limitar el movimiento de un atacante, ¿qué beneficio práctico aporta?",
@@ -1053,7 +1164,8 @@
         "Transfiere el cumplimiento al proveedor de red"
       ],
       "respuesta": 0,
-      "explicacion": "Una segmentación eficaz puede mantener fuera del alcance de determinados requisitos a sistemas que no almacenan, procesan, transmiten ni están conectados al entorno regulado."
+      "explicacion": "Una segmentación eficaz puede mantener fuera del alcance de determinados requisitos a sistemas que no almacenan, procesan, transmiten ni están conectados al entorno regulado.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa publica un hash junto a una descarga de software. ¿Qué permite verificar al usuario?",
@@ -1064,7 +1176,8 @@
         "Que el archivo descargado coincide con el archivo producido por el editor"
       ],
       "respuesta": 3,
-      "explicacion": "Comparar el hash calculado con el publicado permite comprobar la integridad del archivo y detectar si ha sido modificado desde que se generó el valor de referencia."
+      "explicacion": "Comparar el hash calculado con el publicado permite comprobar la integridad del archivo y detectar si ha sido modificado desde que se generó el valor de referencia.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización encuentra una carpeta cuyos permisos se concedieron directamente a quince personas en lugar de utilizar un grupo. ¿Qué dificultad crea esto durante una revisión?",
@@ -1075,7 +1188,8 @@
         "Los permisos expiran de forma impredecible"
       ],
       "respuesta": 2,
-      "explicacion": "Las concesiones directas carecen de la estructura de grupos o roles, por lo que el revisor debe analizar y justificar individualmente cada permiso."
+      "explicacion": "Las concesiones directas carecen de la estructura de grupos o roles, por lo que el revisor debe analizar y justificar individualmente cada permiso.",
+      "dominio": 2
     },
     {
       "pregunta": "En un acuerdo Software as a Service (SaaS), el proveedor opera la aplicación y la infraestructura. ¿Qué responsabilidad sigue correspondiendo al cliente?",
@@ -1086,7 +1200,8 @@
         "Proteger los sistemas operativos subyacentes"
       ],
       "respuesta": 1,
-      "explicacion": "En SaaS el proveedor gestiona la pila tecnológica, pero el cliente sigue siendo responsable de sus datos y de las decisiones sobre identidades, usuarios y permisos de acceso."
+      "explicacion": "En SaaS el proveedor gestiona la pila tecnológica, pero el cliente sigue siendo responsable de sus datos y de las decisiones sobre identidades, usuarios y permisos de acceso.",
+      "dominio": 3
     }
   ]
 }

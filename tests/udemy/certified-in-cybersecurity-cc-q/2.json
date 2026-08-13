@@ -12,7 +12,8 @@
         "Control de acceso basado en reglas configurado con permisos ilimitados de lectura y escritura"
       ],
       "respuesta": 2,
-      "explicacion": "RBAC permite agrupar permisos según la función laboral y el principio de mínimo privilegio limita el acceso a los recursos estrictamente necesarios. La expiración de la cuenta evita accesos residuales."
+      "explicacion": "RBAC permite agrupar permisos según la función laboral y el principio de mínimo privilegio limita el acceso a los recursos estrictamente necesarios. La expiración de la cuenta evita accesos residuales.",
+      "dominio": 3
     },
     {
       "pregunta": "Un laboratorio internacional de investigación quiere proteger la integridad de sus datos experimentales asignando permisos según las funciones laborales y no según la identidad individual. Solo los 'Lead Scientists' deben poder aprobar cambios y los 'Research Assistants' únicamente introducir datos sin procesar. ¿Qué modelo de control de acceso debe implementar?",
@@ -23,7 +24,8 @@
         "Control de Acceso Basado en Atributos (ABAC)"
       ],
       "respuesta": 2,
-      "explicacion": "RBAC asigna permisos a roles organizativos, como Lead Scientist o Research Assistant, y permite aplicar de forma consistente el mínimo privilegio."
+      "explicacion": "RBAC asigna permisos a roles organizativos, como Lead Scientist o Research Assistant, y permite aplicar de forma consistente el mínimo privilegio.",
+      "dominio": 3
     },
     {
       "pregunta": "Una organización exige que un empleado presente primero una tarjeta inteligente y después una huella dactilar para entrar en una sala de servidores segura. ¿Qué concepto de seguridad se aplica al exigir credenciales de dos categorías diferentes?",
@@ -34,7 +36,8 @@
         "Confianza transitiva entre el lector de tarjetas y el escáner de huellas"
       ],
       "respuesta": 0,
-      "explicacion": "La tarjeta inteligente es un factor de posesión y la huella es un factor biométrico, por lo que se utilizan dos categorías independientes de autenticación."
+      "explicacion": "La tarjeta inteligente es un factor de posesión y la huella es un factor biométrico, por lo que se utilizan dos categorías independientes de autenticación.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa aeroespacial concede a sus diseñadores acceso a carpetas de proyectos según sus asignaciones actuales. Cuando un diseñador pasa del Proyecto A al Proyecto B, el administrador revoca inmediatamente el acceso al Proyecto A para que solo conserve los permisos mínimos necesarios. Esta práctica busca reducir el posible daño de una cuenta comprometida.",
@@ -45,7 +48,8 @@
         "Configurar RBAC únicamente según el título profesional del diseñador"
       ],
       "respuesta": 0,
-      "explicacion": "El principio de mínimo privilegio exige retirar permisos que ya no son necesarios y mantener únicamente los requeridos para las tareas actuales."
+      "explicacion": "El principio de mínimo privilegio exige retirar permisos que ya no son necesarios y mantener únicamente los requeridos para las tareas actuales.",
+      "dominio": 3
     },
     {
       "pregunta": "Durante una auditoría se descubre que todos los desarrolladores de DevOps comparten una única contraseña administrativa para acceder a servidores de producción. Tras un cambio de configuración que provoca una caída, no es posible determinar qué desarrollador realizó la acción. ¿Qué componente del marco AAA está fallando directamente?",
@@ -56,7 +60,8 @@
         "Disponibilidad del entorno de producción"
       ],
       "respuesta": 0,
-      "explicacion": "Las cuentas compartidas impiden atribuir de forma inequívoca una acción a una persona concreta, destruyendo la accountability."
+      "explicacion": "Las cuentas compartidas impiden atribuir de forma inequívoca una acción a una persona concreta, destruyendo la accountability.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa incorpora temporalmente a un contratista de aseguramiento de calidad que necesita acceso a un repositorio de código durante tres semanas. Debe recibir únicamente los privilegios mínimos y su acceso debe revocarse automáticamente cuando termine el contrato. ¿Qué combinación de prácticas es la más adecuada?",
@@ -67,7 +72,8 @@
         "Permitir que otros desarrolladores compartan sus cuentas personales mediante DAC"
       ],
       "respuesta": 2,
-      "explicacion": "El mínimo privilegio restringe el acceso al repositorio necesario y la expiración automática elimina el riesgo de que quede una cuenta externa activa."
+      "explicacion": "El mínimo privilegio restringe el acceso al repositorio necesario y la expiración automática elimina el riesgo de que quede una cuenta externa activa.",
+      "dominio": 3
     },
     {
       "pregunta": "Un hospital quiere que el acceso a historiales clínicos dependa simultáneamente del rol del usuario, del equipo asistencial del paciente, de la hora y de si la conexión procede de una IP reconocida del hospital. ¿Qué modelo de control de acceso es el más apropiado?",
@@ -78,7 +84,8 @@
         "Role-Based Access Control (RBAC), basado estrictamente en el puesto del usuario"
       ],
       "respuesta": 0,
-      "explicacion": "ABAC permite tomar decisiones usando simultáneamente atributos del usuario, del recurso y del contexto, como rol, relación, hora y ubicación de red."
+      "explicacion": "ABAC permite tomar decisiones usando simultáneamente atributos del usuario, del recurso y del contexto, como rol, relación, hora y ubicación de red.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa tecnológica exige que un investigador solo pueda acceder a carpetas muy sensibles si utiliza un portátil corporativo gestionado, está conectado mediante la VPN corporativa y accede entre las 8:00 y las 18:00. Si alguna condición no se cumple, el acceso se deniega independientemente de su antigüedad. ¿Qué modelo facilita mejor esta política granular?",
@@ -89,7 +96,8 @@
         "Aplicar Discretionary Access Control (DAC) para que los propietarios de los proyectos concedan el acceso"
       ],
       "respuesta": 0,
-      "explicacion": "ABAC permite combinar atributos dinámicos como dispositivo, VPN, horario y características del recurso en una misma política."
+      "explicacion": "ABAC permite combinar atributos dinámicos como dispositivo, VPN, horario y características del recurso en una misma política.",
+      "dominio": 3
     },
     {
       "pregunta": "Un administrador ascendido a un puesto sénior de infraestructura conserva permisos administrativos de su antiguo puesto de helpdesk y acceso a carpetas de nóminas que no necesita. ¿Qué principio de control de acceso se está vulnerando?",
@@ -100,7 +108,8 @@
         "Control de acceso obligatorio"
       ],
       "respuesta": 2,
-      "explicacion": "El mínimo privilegio exige conservar únicamente los permisos necesarios para las funciones actuales del usuario."
+      "explicacion": "El mínimo privilegio exige conservar únicamente los permisos necesarios para las funciones actuales del usuario.",
+      "dominio": 3
     },
     {
       "pregunta": "Un administrador revisa registros para averiguar qué cuenta eliminó varios archivos de código fuente y a qué hora exacta ocurrió. ¿Qué parte del marco AAA está utilizando?",
@@ -111,7 +120,8 @@
         "Identification, que permite al usuario declarar una identidad"
       ],
       "respuesta": 0,
-      "explicacion": "Accounting registra las acciones realizadas después del acceso y permite construir pistas de auditoría sobre quién hizo qué y cuándo."
+      "explicacion": "Accounting registra las acciones realizadas después del acceso y permite construir pistas de auditoría sobre quién hizo qué y cuándo.",
+      "dominio": 3
     },
     {
       "pregunta": "Una multinacional quiere que los empleados de Recursos Humanos reciban permisos según funciones concretas, como procesamiento de nóminas o selección de personal, para evitar el acceso a información no relacionada. ¿Qué modelo de control de acceso lo soporta mejor?",
@@ -122,7 +132,8 @@
         "Attribute-Based Access Control, basado en atributos complejos del sujeto y del entorno"
       ],
       "respuesta": 0,
-      "explicacion": "RBAC vincula permisos a roles laborales y facilita que cada empleado disponga solo del acceso necesario para su función."
+      "explicacion": "RBAC vincula permisos a roles laborales y facilita que cada empleado disponga solo del acceso necesario para su función.",
+      "dominio": 3
     },
     {
       "pregunta": "Para acceder a una sala de servidores, un empleado debe utilizar una tarjeta inteligente y posteriormente un escaneo biométrico del iris. ¿Qué concepto de control de acceso representa esta implementación?",
@@ -133,7 +144,8 @@
         "Principio de mínimo privilegio aplicado a la lista de acceso"
       ],
       "respuesta": 2,
-      "explicacion": "La tarjeta es 'algo que tienes' y el iris es 'algo que eres', por lo que se combinan dos factores de categorías diferentes."
+      "explicacion": "La tarjeta es 'algo que tienes' y el iris es 'algo que eres', por lo que se combinan dos factores de categorías diferentes.",
+      "dominio": 3
     },
     {
       "pregunta": "Una propuesta de MFA para ingenieros remotos exige una contraseña, una pregunta de seguridad sobre la primera mascota del usuario y un PIN enviado a su correo corporativo. Según el planteamiento del test, ¿por qué esta propuesta no cumple la definición de verdadera MFA?",
@@ -144,7 +156,8 @@
         "Utiliza mensajes SMS vulnerables a SIM swapping"
       ],
       "respuesta": 2,
-      "explicacion": "La MFA requiere factores de categorías distintas; según el planteamiento original, contraseña, pregunta de seguridad y PIN no proporcionan esa diversidad de categorías."
+      "explicacion": "La MFA requiere factores de categorías distintas; según el planteamiento original, contraseña, pregunta de seguridad y PIN no proporcionan esa diversidad de categorías.",
+      "dominio": 3
     },
     {
       "pregunta": "Contratistas externos solo deben acceder a determinados servidores de desarrollo entre las 9:00 y las 17:00 de lunes a viernes, y el acceso debe quedar revocado automáticamente al vencer sus contratos. ¿Qué modelo es el más adecuado?",
@@ -155,7 +168,8 @@
         "Discretionary Access Control gestionado diariamente por los propietarios de los servidores"
       ],
       "respuesta": 2,
-      "explicacion": "ABAC puede evaluar atributos temporales y de estado, como la hora, el día y la vigencia del contrato."
+      "explicacion": "ABAC puede evaluar atributos temporales y de estado, como la hora, el día y la vigencia del contrato.",
+      "dominio": 3
     },
     {
       "pregunta": "En un laboratorio de alta seguridad, empleados legítimos son rechazados frecuentemente por el lector de huellas y deben repetir el intento o solicitar una anulación manual. ¿Qué métrica biométrica debería ajustarse?",
@@ -166,7 +180,8 @@
         "Biometric Enrollment Rate"
       ],
       "respuesta": 1,
-      "explicacion": "El FRR mide la frecuencia con la que usuarios legítimos son rechazados incorrectamente. Un FRR elevado provoca exactamente el problema descrito."
+      "explicacion": "El FRR mide la frecuencia con la que usuarios legítimos son rechazados incorrectamente. Un FRR elevado provoca exactamente el problema descrito.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa añade a la contraseña de acceso remoto un código de un solo uso enviado a un dispositivo móvil registrado para reducir el riesgo de credenciales robadas mediante phishing o keyloggers. ¿Qué concepto está implementando?",
@@ -177,7 +192,8 @@
         "Una política de complejidad de contraseñas"
       ],
       "respuesta": 1,
-      "explicacion": "La contraseña es un factor de conocimiento y el dispositivo registrado aporta un factor de posesión, formando MFA."
+      "explicacion": "La contraseña es un factor de conocimiento y el dispositivo registrado aporta un factor de posesión, formando MFA.",
+      "dominio": 3
     },
     {
       "pregunta": "Una clínica quiere que los recepcionistas puedan gestionar citas pero no ver historiales médicos, mientras que los médicos puedan ver y editar los historiales de sus pacientes. Los permisos deben aplicarse automáticamente según las funciones laborales. ¿Qué modelo es el más adecuado?",
@@ -188,7 +204,8 @@
         "Role-Based Access Control (RBAC)"
       ],
       "respuesta": 3,
-      "explicacion": "RBAC vincula permisos a funciones como médico o recepcionista, simplificando la administración y aplicando políticas coherentes."
+      "explicacion": "RBAC vincula permisos a funciones como médico o recepcionista, simplificando la administración y aplicando políticas coherentes.",
+      "dominio": 3
     },
     {
       "pregunta": "Un empleado pasa de Cuentas por Cobrar al equipo de Auditoría Interna, pero conserva acceso de escritura al sistema de facturación además de sus nuevos permisos sobre los registros de auditoría. ¿Qué concepto de control de acceso se ha vulnerado?",
@@ -199,7 +216,8 @@
         "Implementación inadecuada de RBAC para funciones administrativas"
       ],
       "respuesta": 2,
-      "explicacion": "La acumulación de permisos antiguos, conocida como privilege creep, hace que el usuario tenga más acceso del necesario y vulnera el mínimo privilegio."
+      "explicacion": "La acumulación de permisos antiguos, conocida como privilege creep, hace que el usuario tenga más acceso del necesario y vulnera el mínimo privilegio.",
+      "dominio": 3
     },
     {
       "pregunta": "Una empresa quiere que los empleados se autentiquen una sola vez ante una autoridad central y puedan acceder durante la misma sesión a todas las aplicaciones autorizadas sin volver a introducir credenciales. ¿Qué tecnología está implementando?",
@@ -210,7 +228,8 @@
         "Single Sign-On (SSO)"
       ],
       "respuesta": 3,
-      "explicacion": "SSO permite autenticarse una vez y reutilizar esa sesión de confianza para acceder a varias aplicaciones integradas."
+      "explicacion": "SSO permite autenticarse una vez y reutilizar esa sesión de confianza para acceder a varias aplicaciones integradas.",
+      "dominio": 3
     },
     {
       "pregunta": "Una política exige MFA con factores de las tres categorías: algo que sabes, algo que tienes y algo que eres. ¿Qué implementación cumple las tres?",
@@ -221,7 +240,8 @@
         "Un escaneo de retina y un reconocimiento facial"
       ],
       "respuesta": 1,
-      "explicacion": "La contraseña aporta conocimiento, el token físico posesión y la huella un factor inherente o biométrico."
+      "explicacion": "La contraseña aporta conocimiento, el token físico posesión y la huella un factor inherente o biométrico.",
+      "dominio": 3
     },
     {
       "pregunta": "Una agencia gubernamental define conjuntos de permisos para funciones como 'HR Specialist', 'Financial Auditor' e 'IT Support' y asigna a los empleados al grupo correspondiente. ¿Qué modelo de control de acceso utiliza?",
@@ -232,13 +252,20 @@
         "Attribute-Based Access Control"
       ],
       "respuesta": 2,
-      "explicacion": "RBAC asigna permisos a roles y posteriormente usuarios a esos roles, facilitando la administración a gran escala."
+      "explicacion": "RBAC asigna permisos a roles y posteriormente usuarios a esos roles, facilitando la administración a gran escala.",
+      "dominio": 3
     },
     {
       "pregunta": "Un administrador gestiona routers remotos mediante Telnet, pero una auditoría detecta que credenciales y datos de configuración viajan en texto claro. ¿Qué protocolo debe utilizarse para proteger la administración remota?",
-      "opciones": ["SNMPv2", "FTP con TLS", "Secure Shell (SSH)", "HTTP"],
+      "opciones": [
+        "SNMPv2",
+        "FTP con TLS",
+        "Secure Shell (SSH)",
+        "HTTP"
+      ],
       "respuesta": 2,
-      "explicacion": "SSH sustituye a Telnet proporcionando autenticación y cifrado del tráfico de terminal remoto."
+      "explicacion": "SSH sustituye a Telnet proporcionando autenticación y cifrado del tráfico de terminal remoto.",
+      "dominio": 4
     },
     {
       "pregunta": "Una oficina comparte infraestructura física entre Finanzas, Recursos Humanos y usuarios Wi-Fi invitados. Se quiere impedir que los invitados intercepten comunicaciones internas y reducir el tráfico broadcast. ¿Qué tecnología debe implementarse?",
@@ -249,7 +276,8 @@
         "Un hub físico para crear un único dominio de colisión"
       ],
       "respuesta": 2,
-      "explicacion": "Las VLAN dividen una infraestructura física en redes lógicas distintas, separan dominios de broadcast y permiten aislar el tráfico de invitados."
+      "explicacion": "Las VLAN dividen una infraestructura física en redes lógicas distintas, separan dominios de broadcast y permiten aislar el tráfico de invitados.",
+      "dominio": 4
     },
     {
       "pregunta": "Durante una auditoría se descubre que desarrolladores utilizan Telnet sin cifrar para administrar servidores Linux remotos, exponiendo credenciales y configuraciones en texto claro.",
@@ -260,7 +288,8 @@
         "Permitir Telnet solo desde determinadas direcciones IP"
       ],
       "respuesta": 0,
-      "explicacion": "SSH cifra tanto la autenticación como los comandos y datos de la sesión, evitando la exposición inherente a Telnet."
+      "explicacion": "SSH cifra tanto la autenticación como los comandos y datos de la sesión, evitando la exposición inherente a Telnet.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa necesita cifrar todo el tráfico entre portátiles remotos y la red corporativa cuando atraviesa Internet pública. ¿Qué tecnología debe desplegar?",
@@ -271,7 +300,8 @@
         "Un controlador Software-Defined Networking para optimización WAN"
       ],
       "respuesta": 0,
-      "explicacion": "Una VPN crea un túnel cifrado sobre una red no confiable y protege la confidencialidad e integridad de los datos en tránsito."
+      "explicacion": "Una VPN crea un túnel cifrado sobre una red no confiable y protege la confidencialidad e integridad de los datos en tránsito.",
+      "dominio": 4
     },
     {
       "pregunta": "La red Wi-Fi pública de un hospital puede comunicarse directamente con la subred de equipos MRI y servidores de pacientes. Se quiere crear dominios de broadcast separados y evitar movimientos laterales no autorizados. ¿Qué control técnico debe implementarse?",
@@ -282,7 +312,8 @@
         "VLAN con reglas de firewall"
       ],
       "respuesta": 3,
-      "explicacion": "Las VLAN proporcionan segmentación lógica y las reglas de firewall controlan qué comunicaciones pueden atravesar los distintos segmentos."
+      "explicacion": "Las VLAN proporcionan segmentación lógica y las reglas de firewall controlan qué comunicaciones pueden atravesar los distintos segmentos.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa aloja servidores web públicos y estaciones de trabajo internas. Se quiere impedir que el compromiso de un servidor web permita al atacante desplazarse fácilmente a la red interna. Los servidores públicos se colocarán en un segmento aislado entre Internet y la red privada.",
@@ -293,7 +324,8 @@
         "Usar un proxy para ocultar las IP internas"
       ],
       "respuesta": 1,
-      "explicacion": "Una DMZ aísla servicios expuestos a Internet de la red interna y crea una barrera adicional frente al movimiento lateral."
+      "explicacion": "Una DMZ aísla servicios expuestos a Internet de la red interna y crea una barrera adicional frente al movimiento lateral.",
+      "dominio": 4
     },
     {
       "pregunta": "Un controlador HVAC antiguo conectado a la red tiene una vulnerabilidad de ejecución remota y no puede actualizarse ni parchearse. ¿Qué control debe aplicarse para proteger la red corporativa?",
@@ -304,7 +336,8 @@
         "Configurar un resolvedor DNS público para supervisar sus consultas"
       ],
       "respuesta": 1,
-      "explicacion": "Cuando un dispositivo vulnerable no puede parchearse, aislarlo mediante segmentación y reglas restrictivas de firewall actúa como control compensatorio."
+      "explicacion": "Cuando un dispositivo vulnerable no puede parchearse, aislarlo mediante segmentación y reglas restrictivas de firewall actúa como control compensatorio.",
+      "dominio": 4
     },
     {
       "pregunta": "Un proveedor SaaS quiere proteger su infraestructura web frente a ataques DDoS de Capa 7 y ataques de agotamiento lento. Su firewall con estado no puede inspeccionar adecuadamente el contenido de solicitudes HTTP POST. ¿Qué dispositivo debe desplegar?",
@@ -315,7 +348,8 @@
         "Un Web Application Firewall (WAF)"
       ],
       "respuesta": 3,
-      "explicacion": "Un WAF opera en la capa de aplicación y puede inspeccionar y filtrar contenido HTTP/HTTPS para detectar ataques específicos contra aplicaciones web."
+      "explicacion": "Un WAF opera en la capa de aplicación y puede inspeccionar y filtrar contenido HTTP/HTTPS para detectar ataques específicos contra aplicaciones web.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa aloja servidores web públicos y repositorios internos de código fuente. Si un servidor web es comprometido, actualmente no hay barreras estructurales que impidan llegar directamente a la red interna. ¿Qué cambio de arquitectura es el más apropiado?",
@@ -326,7 +360,8 @@
         "Instalar un balanceador de carga"
       ],
       "respuesta": 1,
-      "explicacion": "Una DMZ crea una zona intermedia para los servicios públicos y evita que estos estén directamente conectados a los sistemas internos sensibles."
+      "explicacion": "Una DMZ crea una zona intermedia para los servicios públicos y evita que estos estén directamente conectados a los sistemas internos sensibles.",
+      "dominio": 4
     },
     {
       "pregunta": "Una organización sanitaria despliega numerosos dispositivos IoT que necesitan acceso a la red para actualizaciones, pero no deben acceder a servidores con ePHI. ¿Qué estrategia reduce mejor el riesgo de que un IoT comprometido sirva de punto de pivote?",
@@ -337,7 +372,8 @@
         "Instalar antivirus en cada dispositivo IoT"
       ],
       "respuesta": 0,
-      "explicacion": "La segmentación limita las comunicaciones de los IoT y reduce el movimiento lateral hacia sistemas que almacenan información sanitaria sensible."
+      "explicacion": "La segmentación limita las comunicaciones de los IoT y reduce el movimiento lateral hacia sistemas que almacenan información sanitaria sensible.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa de comercio electrónico quiere aislar los servidores de base de datos que almacenan tarjetas de crédito de Internet y permitir únicamente conexiones restringidas desde los servidores de aplicaciones web. ¿Qué control arquitectónico debe implementar?",
@@ -348,7 +384,8 @@
         "Un IDS para supervisar el tráfico del switch"
       ],
       "respuesta": 1,
-      "explicacion": "La segmentación con firewall permite crear una zona privada para las bases de datos y aceptar únicamente los flujos necesarios desde la capa web."
+      "explicacion": "La segmentación con firewall permite crear una zona privada para las bases de datos y aceptar únicamente los flujos necesarios desde la capa web.",
+      "dominio": 4
     },
     {
       "pregunta": "Una cadena minorista quiere aislar lógicamente cientos de sensores y controladores IoT de la red de producción para impedir que sirvan como punto de movimiento lateral hacia servidores con datos de tarjetas. ¿Qué método técnico es más eficaz?",
@@ -359,7 +396,8 @@
         "Segmentación de red mediante VLAN"
       ],
       "respuesta": 3,
-      "explicacion": "Las VLAN permiten separar lógicamente los dispositivos IoT del resto de la infraestructura y controlar el tráfico entre segmentos."
+      "explicacion": "Las VLAN permiten separar lógicamente los dispositivos IoT del resto de la infraestructura y controlar el tráfico entre segmentos.",
+      "dominio": 4
     },
     {
       "pregunta": "Un malware en un terminal de punto de venta intenta propagarse hacia la base de datos de Recursos Humanos porque ambos sistemas están en una red plana. El equipo quiere crear zonas aisladas que solo puedan comunicarse cuando una política lo permita.",
@@ -370,13 +408,20 @@
         "Activar filtrado por direcciones MAC"
       ],
       "respuesta": 2,
-      "explicacion": "La segmentación divide una red plana en zonas aisladas y permite utilizar firewalls para impedir movimientos laterales no autorizados."
+      "explicacion": "La segmentación divide una red plana en zonas aisladas y permite utilizar firewalls para impedir movimientos laterales no autorizados.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa utiliza FTP para que proveedores externos suban inventarios diarios a través de Internet. Una auditoría detecta que credenciales y datos se transmiten sin protección. ¿Qué protocolo seguro debe exigir?",
-      "opciones": ["TFTP", "HTTP", "SFTP sobre SSH", "SMTP"],
+      "opciones": [
+        "TFTP",
+        "HTTP",
+        "SFTP sobre SSH",
+        "SMTP"
+      ],
       "respuesta": 2,
-      "explicacion": "SFTP utiliza SSH para cifrar tanto la autenticación como la transferencia de datos."
+      "explicacion": "SFTP utiliza SSH para cifrar tanto la autenticación como la transferencia de datos.",
+      "dominio": 4
     },
     {
       "pregunta": "Un administrador instala un dispositivo en línea con el tráfico de red que descarta automáticamente paquetes que coinciden con patrones maliciosos conocidos. ¿Qué dispositivo está desplegando?",
@@ -387,7 +432,8 @@
         "Network tap"
       ],
       "respuesta": 1,
-      "explicacion": "Un IPS funciona en línea y puede bloquear o descartar tráfico malicioso, mientras que un IDS normalmente se limita a detectar y alertar."
+      "explicacion": "Un IPS funciona en línea y puede bloquear o descartar tráfico malicioso, mientras que un IDS normalmente se limita a detectar y alertar.",
+      "dominio": 4
     },
     {
       "pregunta": "Un banco quiere inspeccionar tráfico web entrante en la capa de aplicación para bloquear SQL injection y Cross-Site Scripting (XSS) antes de que alcancen los servidores web. ¿Qué dispositivo es el más adecuado?",
@@ -398,7 +444,8 @@
         "Web Application Firewall (WAF)"
       ],
       "respuesta": 3,
-      "explicacion": "Un WAF analiza solicitudes HTTP/HTTPS en la capa de aplicación y puede detectar y bloquear SQL injection, XSS y otros ataques web."
+      "explicacion": "Un WAF analiza solicitudes HTTP/HTTPS en la capa de aplicación y puede detectar y bloquear SQL injection, XSS y otros ataques web.",
+      "dominio": 4
     },
     {
       "pregunta": "Un servidor heredado de Recursos Humanos ejecuta una aplicación crítica que no puede parchearse. Para evitar que un atacante que comprometa una estación de trabajo pueda desplazarse hasta él, el administrador lo aísla en una zona restringida de la red. ¿Cómo se denomina esta técnica?",
@@ -409,7 +456,8 @@
         "Load Balancing"
       ],
       "respuesta": 2,
-      "explicacion": "La segmentación de red divide la infraestructura en subredes o VLAN y limita la capacidad de movimiento lateral."
+      "explicacion": "La segmentación de red divide la infraestructura en subredes o VLAN y limita la capacidad de movimiento lateral.",
+      "dominio": 4
     },
     {
       "pregunta": "Una empresa con empleados remotos quiere proteger la confidencialidad e integridad de los datos que atraviesan redes domésticas o puntos Wi-Fi públicos hasta llegar a la red corporativa. ¿Qué tecnología debe exigir?",
@@ -420,7 +468,8 @@
         "Network Access Control para usuarios invitados"
       ],
       "respuesta": 1,
-      "explicacion": "Una VPN cifra el tráfico entre el equipo remoto y la red corporativa, protegiéndolo frente a interceptación y manipulación."
+      "explicacion": "Una VPN cifra el tráfico entre el equipo remoto y la red corporativa, protegiéndolo frente a interceptación y manipulación.",
+      "dominio": 4
     },
     {
       "pregunta": "Un SIEM muestra múltiples intentos fallidos seguidos de un inicio de sesión correcto desde una IP extranjera para la cuenta de un desarrollador que está de vacaciones. Se sospecha que la cuenta se utiliza para exfiltrar código fuente. ¿Cuál es el primer paso más apropiado para contener la amenaza?",
@@ -431,7 +480,8 @@
         "Crear primero una imagen forense completa de su portátil personal"
       ],
       "respuesta": 0,
-      "explicacion": "La contención busca detener inmediatamente la actividad del atacante; deshabilitar la cuenta y cerrar las sesiones corta el acceso sin destruir activos."
+      "explicacion": "La contención busca detener inmediatamente la actividad del atacante; deshabilitar la cuenta y cerrar las sesiones corta el acceso sin destruir activos.",
+      "dominio": 5
     },
     {
       "pregunta": "Tras una campaña de phishing, un analista necesita identificar rápidamente todas las estaciones de trabajo que se conectaron a un servidor C2 malicioso buscando datos consolidados de toda la empresa. ¿Qué herramienta es la más adecuada?",
@@ -442,7 +492,8 @@
         "Un escáner de vulnerabilidades"
       ],
       "respuesta": 0,
-      "explicacion": "Un SIEM centraliza registros de múltiples fuentes y permite buscar una IP o dominio malicioso en toda la organización."
+      "explicacion": "Un SIEM centraliza registros de múltiples fuentes y permite buscar una IP o dominio malicioso en toda la organización.",
+      "dominio": 5
     },
     {
       "pregunta": "Un escáner detecta una vulnerabilidad crítica CVSS 9.8 en un servidor Apache de pruebas completamente aislado de Internet, sin datos sensibles y programado para retirarse en dos semanas. ¿Cuál es la respuesta de gestión de riesgos más apropiada?",
@@ -453,7 +504,8 @@
         "Ignorar por completo el resultado sin documentarlo"
       ],
       "respuesta": 1,
-      "explicacion": "La prioridad debe basarse en el riesgo real. El bajo nivel de exposición y la retirada próxima justifican documentar y aceptar o mitigar temporalmente el riesgo."
+      "explicacion": "La prioridad debe basarse en el riesgo real. El bajo nivel de exposición y la retirada próxima justifican documentar y aceptar o mitigar temporalmente el riesgo.",
+      "dominio": 5
     },
     {
       "pregunta": "El SOC detecta que una estación de trabajo se comunica activamente con una IP C2 conocida. Se necesita detener la propagación manteniendo la memoria del sistema disponible para análisis forense. ¿Qué acción inmediata es la más adecuada?",
@@ -464,7 +516,8 @@
         "Eliminar claves de registro maliciosas y reiniciar el switch"
       ],
       "respuesta": 0,
-      "explicacion": "El aislamiento mediante EDR corta las comunicaciones maliciosas sin apagar el equipo, preservando la memoria RAM y otros datos volátiles."
+      "explicacion": "El aislamiento mediante EDR corta las comunicaciones maliciosas sin apagar el equipo, preservando la memoria RAM y otros datos volátiles.",
+      "dominio": 1
     },
     {
       "pregunta": "Un equipo de respuesta atiende una infección de malware en una estación de nóminas que intenta comunicarse con servidores C2. Se quiere minimizar el riesgo y conservar evidencias. ¿Qué acción inmediata es la más apropiada?",
@@ -475,7 +528,8 @@
         "Apagar el equipo manteniendo pulsado el botón de encendido"
       ],
       "respuesta": 1,
-      "explicacion": "Aislar la red detiene las comunicaciones y la propagación sin destruir los datos volátiles de la memoria."
+      "explicacion": "Aislar la red detiene las comunicaciones y la propagación sin destruir los datos volátiles de la memoria.",
+      "dominio": 5
     },
     {
       "pregunta": "Una organización quiere recopilar registros de servidores cloud, bases de datos locales y estaciones de trabajo, correlacionar eventos para detectar patrones complejos y generar alertas en tiempo real. ¿Qué tecnología debe priorizar?",
@@ -486,13 +540,20 @@
         "Una herramienta DLP centrada en adjuntos de correo"
       ],
       "respuesta": 0,
-      "explicacion": "Un SIEM agrega y correlaciona registros de fuentes diversas y permite detectar incidentes que no serían visibles analizando cada sistema de forma aislada."
+      "explicacion": "Un SIEM agrega y correlaciona registros de fuentes diversas y permite detectar incidentes que no serían visibles analizando cada sistema de forma aislada.",
+      "dominio": 5
     },
     {
       "pregunta": "Tras aislar tres equipos infectados por un gusano, el equipo elimina restos de malware, claves de registro maliciosas y formatea las unidades para reinstalar el sistema desde una imagen limpia. ¿En qué fase de respuesta a incidentes se encuentra?",
-      "opciones": ["Preparation", "Eradication", "Recovery", "Lessons Learned"],
+      "opciones": [
+        "Preparation",
+        "Eradication",
+        "Recovery",
+        "Lessons Learned"
+      ],
       "respuesta": 1,
-      "explicacion": "La fase de erradicación elimina completamente la amenaza y sus mecanismos de persistencia antes de devolver los sistemas a producción."
+      "explicacion": "La fase de erradicación elimina completamente la amenaza y sus mecanismos de persistencia antes de devolver los sistemas a producción.",
+      "dominio": 5
     },
     {
       "pregunta": "Tras varios intentos SSH fallidos se produce un acceso correcto desde una IP externa desconocida. El analista quiere reconstruir las acciones y comandos realizados posteriormente por la cuenta comprometida. ¿Qué recurso ofrece la línea temporal más completa?",
@@ -503,7 +564,8 @@
         "Informes del antivirus local"
       ],
       "respuesta": 0,
-      "explicacion": "Un SIEM puede correlacionar eventos del sistema operativo, aplicaciones y red para reconstruir una secuencia detallada de actividad."
+      "explicacion": "Un SIEM puede correlacionar eventos del sistema operativo, aplicaciones y red para reconstruir una secuencia detallada de actividad.",
+      "dominio": 5
     },
     {
       "pregunta": "Un analista investiga una posible brecha recopilando información del sistema operativo, servidor web y base de datos para reconstruir la secuencia de eventos y generar una pista probatoria para el informe posterior. ¿Qué operación de seguridad realiza?",
@@ -514,7 +576,8 @@
         "Security Awareness Training"
       ],
       "respuesta": 1,
-      "explicacion": "El análisis y auditoría de logs permite reconstruir eventos históricos, identificar accesos no autorizados y documentar evidencias."
+      "explicacion": "El análisis y auditoría de logs permite reconstruir eventos históricos, identificar accesos no autorizados y documentar evidencias.",
+      "dominio": 5
     },
     {
       "pregunta": "Un SOC recibe demasiadas alertas de firewalls, antivirus, Active Directory y servidores web, cada uno en una consola separada. ¿Qué herramienta debe desplegar el CISO para agregar, correlacionar y analizar estos datos en tiempo real?",
@@ -525,7 +588,8 @@
         "Security Information and Event Management (SIEM)"
       ],
       "respuesta": 3,
-      "explicacion": "El SIEM centraliza fuentes de registro heterogéneas y utiliza correlación para detectar incidentes complejos y generar alertas."
+      "explicacion": "El SIEM centraliza fuentes de registro heterogéneas y utiliza correlación para detectar incidentes complejos y generar alertas.",
+      "dominio": 5
     },
     {
       "pregunta": "Una estación de contabilidad está infectada con ransomware que se comunica con un C2 e intenta escanear y cifrar recursos compartidos cercanos. ¿Cuál es la acción inmediata más apropiada?",
@@ -536,7 +600,8 @@
         "Aislar la estación infectada de la red local"
       ],
       "respuesta": 3,
-      "explicacion": "La prioridad inmediata es contener el ransomware y evitar su propagación lateral aislando el sistema afectado."
+      "explicacion": "La prioridad inmediata es contener el ransomware y evitar su propagación lateral aislando el sistema afectado.",
+      "dominio": 5
     },
     {
       "pregunta": "Un equipo de respuesta acaba de terminar la fase de erradicación de una infección de malware y ahora debe devolver los sistemas afectados a producción y verificar que funcionan correctamente.",
@@ -547,7 +612,8 @@
         "Realizar un escaneo de vulnerabilidades para encontrar el punto inicial"
       ],
       "respuesta": 1,
-      "explicacion": "La recuperación sigue a la erradicación y consiste en restaurar, validar y reincorporar de forma segura los sistemas al entorno productivo."
+      "explicacion": "La recuperación sigue a la erradicación y consiste en restaurar, validar y reincorporar de forma segura los sistemas al entorno productivo.",
+      "dominio": 5
     },
     {
       "pregunta": "Un administrador inicia sesión desde una ubicación desconocida a las 3:00 y comienza a comprimir grandes bases de datos. Se debe detener una posible exfiltración manteniendo el estado del sistema para análisis forense.",
@@ -558,7 +624,8 @@
         "Restablecer todas las contraseñas administrativas del dominio"
       ],
       "respuesta": 2,
-      "explicacion": "El aislamiento corta la exfiltración y mantiene el sistema encendido para preservar memoria, procesos y conexiones como evidencia."
+      "explicacion": "El aislamiento corta la exfiltración y mantiene el sistema encendido para preservar memoria, procesos y conexiones como evidencia.",
+      "dominio": 5
     },
     {
       "pregunta": "Un analista descubre una cuenta creada a las 2:00 por un administrador que no estaba de turno y observa que se está utilizando para exportar grandes cantidades de datos a almacenamiento cloud externo. ¿Qué debe hacer primero?",
@@ -569,7 +636,8 @@
         "Realizar la revisión post-incidente"
       ],
       "respuesta": 1,
-      "explicacion": "Durante una exfiltración activa, la prioridad es contener el incidente impidiendo nuevas acciones de la cuenta y bloqueando las comunicaciones sospechosas."
+      "explicacion": "Durante una exfiltración activa, la prioridad es contener el incidente impidiendo nuevas acciones de la cuenta y bloqueando las comunicaciones sospechosas.",
+      "dominio": 5
     },
     {
       "pregunta": "Un SIEM alerta de que una estación se comunica con un servidor C2. El analista desconecta inmediatamente la estación para impedir más exfiltración antes de investigar la causa. ¿En qué fase del ciclo de respuesta está actuando?",
@@ -580,7 +648,8 @@
         "Actividad post-incidente y lecciones aprendidas"
       ],
       "respuesta": 2,
-      "explicacion": "Desconectar el sistema es específicamente una acción de contención, incluida en la fase de contención, erradicación y recuperación del marco utilizado."
+      "explicacion": "Desconectar el sistema es específicamente una acción de contención, incluida en la fase de contención, erradicación y recuperación del marco utilizado.",
+      "dominio": 5
     },
     {
       "pregunta": "Durante una revisión de logs aparecen numerosos intentos de inicio de sesión fallidos fuera del horario laboral desde múltiples IP extranjeras contra varias cuentas de un portal administrativo. ¿Qué acción inmediata es la más apropiada?",
@@ -591,7 +660,8 @@
         "Documentar el evento, bloquear las IP atacantes en el firewall e iniciar el plan de respuesta a incidentes"
       ],
       "respuesta": 3,
-      "explicacion": "La acción adecuada combina documentación, contención técnica inmediata y activación formal del proceso de respuesta."
+      "explicacion": "La acción adecuada combina documentación, contención técnica inmediata y activación formal del proceso de respuesta.",
+      "dominio": 5
     },
     {
       "pregunta": "Un analista confirma una conexión saliente sospechosa desde un servidor de base de datos a una IP extranjera y sospecha una exfiltración activa. ¿Cuál debe ser su prioridad inmediata?",
@@ -602,7 +672,8 @@
         "Notificar públicamente y a los reguladores"
       ],
       "respuesta": 1,
-      "explicacion": "Una vez confirmado el incidente, la prioridad inmediata es detener o limitar la exfiltración antes de pasar a erradicación y análisis posterior."
+      "explicacion": "Una vez confirmado el incidente, la prioridad inmediata es detener o limitar la exfiltración antes de pasar a erradicación y análisis posterior.",
+      "dominio": 5
     },
     {
       "pregunta": "Una revisión semanal muestra múltiples intentos fallidos seguidos de un acceso correcto desde un país distinto al del empleado. El analista necesita determinar el alcance del posible compromiso.",
@@ -613,7 +684,8 @@
         "Enviar un aviso general de phishing a toda la empresa"
       ],
       "respuesta": 0,
-      "explicacion": "Para determinar el alcance es necesario investigar cómo se produjo el compromiso, qué acciones se realizaron y qué sistemas o datos resultaron afectados."
+      "explicacion": "Para determinar el alcance es necesario investigar cómo se produjo el compromiso, qué acciones se realizaron y qué sistemas o datos resultaron afectados.",
+      "dominio": 5
     },
     {
       "pregunta": "Tras cambios de configuración durante una ventana de mantenimiento, una nueva regla de firewall bloquea por error el acceso interno al sistema de informes. ¿Cuál es la acción inmediata más apropiada según la gestión de cambios?",
@@ -624,7 +696,8 @@
         "Completar un análisis de causa raíz antes de modificar nada"
       ],
       "respuesta": 0,
-      "explicacion": "Cuando un cambio provoca una interrupción, el procedimiento estándar es aplicar el plan de reversión para restaurar rápidamente una configuración conocida y estable."
+      "explicacion": "Cuando un cambio provoca una interrupción, el procedimiento estándar es aplicar el plan de reversión para restaurar rápidamente una configuración conocida y estable.",
+      "dominio": 5
     },
     {
       "pregunta": "Una entidad financiera debe definir la máxima pérdida de datos tolerable, medida en tiempo, para su sistema de transacciones. Este valor determinará la frecuencia de copias de seguridad y replicación. ¿Qué parámetro está definiendo?",
@@ -635,7 +708,8 @@
         "Mean Time Between Failures (MTBF)"
       ],
       "respuesta": 1,
-      "explicacion": "El RPO define cuánto tiempo de datos puede perderse como máximo y, por tanto, condiciona la frecuencia de backup o replicación."
+      "explicacion": "El RPO define cuánto tiempo de datos puede perderse como máximo y, por tanto, condiciona la frecuencia de backup o replicación.",
+      "dominio": 2
     },
     {
       "pregunta": "Un banco establece que ante un fallo de almacenamiento no puede perder más de 15 minutos de transacciones. ¿Qué parámetro representa este requisito de 15 minutos?",
@@ -646,7 +720,8 @@
         "Work Recovery Time"
       ],
       "respuesta": 1,
-      "explicacion": "El RPO expresa la cantidad máxima aceptable de pérdida de datos medida como una ventana temporal."
+      "explicacion": "El RPO expresa la cantidad máxima aceptable de pérdida de datos medida como una ventana temporal.",
+      "dominio": 2
     },
     {
       "pregunta": "Tras un incendio que destruye el hardware principal, una empresa quiere determinar la antigüedad máxima de los archivos que debe recuperar desde sus copias de seguridad para reanudar operaciones. ¿Cómo se denomina esta métrica?",
@@ -657,7 +732,8 @@
         "Work Recovery Time (WRT)"
       ],
       "respuesta": 2,
-      "explicacion": "El RPO determina hasta qué punto temporal deben recuperarse los datos y cuánta pérdida de información puede tolerarse."
+      "explicacion": "El RPO determina hasta qué punto temporal deben recuperarse los datos y cuánta pérdida de información puede tolerarse.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa quiere probar que su hot site secundario puede asumir las cargas de producción sin interrumpir las operaciones del sitio primario. ¿Qué tipo de prueba de recuperación ante desastres debe realizar?",
@@ -668,13 +744,20 @@
         "Tabletop exercise"
       ],
       "respuesta": 1,
-      "explicacion": "En una prueba paralela los sistemas del sitio secundario se ponen en funcionamiento simultáneamente sin detener el entorno primario."
+      "explicacion": "En una prueba paralela los sistemas del sitio secundario se ponen en funcionamiento simultáneamente sin detener el entorno primario.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa necesita una ubicación secundaria preconfigurada con hardware, electricidad y conectividad, pero sin una copia en vivo de los datos ni todas las aplicaciones listas hasta que se declare un desastre. ¿Qué tipo de sitio es?",
-      "opciones": ["Warm Site", "Hot Site", "Cold Site", "Mobile Site"],
+      "opciones": [
+        "Warm Site",
+        "Hot Site",
+        "Cold Site",
+        "Mobile Site"
+      ],
       "respuesta": 0,
-      "explicacion": "Un warm site dispone de infraestructura y hardware preparados, pero todavía necesita restaurar datos y completar configuraciones antes de entrar en producción."
+      "explicacion": "Un warm site dispone de infraestructura y hardware preparados, pero todavía necesita restaurar datos y completar configuraciones antes de entrar en producción.",
+      "dominio": 2
     },
     {
       "pregunta": "Durante una prueba de Disaster Recovery se descubre que las cintas de backup almacenadas fuera de las instalaciones están corruptas y no permiten restaurar la base de datos. ¿Qué práctica debe implantarse para verificar que los backups son válidos?",
@@ -685,7 +768,8 @@
         "Guardar las cintas en una cámara con temperatura controlada"
       ],
       "respuesta": 1,
-      "explicacion": "La única forma de comprobar realmente que un backup es completo y utilizable es restaurarlo periódicamente y verificar el resultado."
+      "explicacion": "La única forma de comprobar realmente que un backup es completo y utilizable es restaurarlo periódicamente y verificar el resultado.",
+      "dominio": 2
     },
     {
       "pregunta": "Un ransomware cifra los recursos compartidos de un hospital y también los backups locales montados como unidades persistentes en la misma red. ¿Qué estrategia habría evitado la pérdida de esas copias?",
@@ -696,7 +780,8 @@
         "RAID con varios discos en el servidor principal"
       ],
       "respuesta": 2,
-      "explicacion": "Las copias offline, air-gapped o inmutables no son alcanzables ni modificables por el ransomware que compromete la red de producción."
+      "explicacion": "Las copias offline, air-gapped o inmutables no son alcanzables ni modificables por el ransomware que compromete la red de producción.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa de logística necesita determinar el período máximo absoluto durante el cual un proceso crítico puede estar interrumpido antes de que la viabilidad del negocio quede gravemente amenazada. ¿Qué métrica representa este límite?",
@@ -707,7 +792,8 @@
         "Work Recovery Time"
       ],
       "respuesta": 2,
-      "explicacion": "El MTD representa el límite total de interrupción que la organización puede soportar antes de sufrir consecuencias inaceptables."
+      "explicacion": "El MTD representa el límite total de interrupción que la organización puede soportar antes de sufrir consecuencias inaceptables.",
+      "dominio": 2
     },
     {
       "pregunta": "En una BIA, un proveedor sanitario determina que puede tolerar un máximo de cuatro horas de pérdida de datos de su sistema de historiales. ¿Qué término describe específicamente este requisito?",
@@ -718,7 +804,8 @@
         "Work Recovery Time (WRT)"
       ],
       "respuesta": 1,
-      "explicacion": "El RPO establece cuánta información puede perderse, medida en tiempo desde el último punto recuperable."
+      "explicacion": "El RPO establece cuánta información puede perderse, medida en tiempo desde el último punto recuperable.",
+      "dominio": 2
     },
     {
       "pregunta": "Un portal puede permanecer inactivo como máximo seis horas, pero el equipo de recuperación fija como objetivo que vuelva a estar plenamente operativo en cuatro horas. ¿Qué parámetro debe configurarse a cuatro horas?",
@@ -729,13 +816,20 @@
         "Mean Time Between Failures (MTBF)"
       ],
       "respuesta": 0,
-      "explicacion": "El RTO es el tiempo objetivo dentro del cual el servicio debe restaurarse, mientras que el MTD es el máximo absoluto tolerable."
+      "explicacion": "El RTO es el tiempo objetivo dentro del cual el servicio debe restaurarse, mientras que el MTD es el máximo absoluto tolerable.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa necesita un sitio secundario completamente equipado, con las versiones actuales del software y una copia casi en tiempo real de los datos de producción para permitir un failover prácticamente inmediato. ¿Qué tipo de sitio es?",
-      "opciones": ["Cold Site", "Warm Site", "Hot Site", "Mobile Site"],
+      "opciones": [
+        "Cold Site",
+        "Warm Site",
+        "Hot Site",
+        "Mobile Site"
+      ],
       "respuesta": 2,
-      "explicacion": "Un hot site mantiene infraestructura operativa y datos sincronizados para conseguir tiempos de recuperación muy bajos."
+      "explicacion": "Un hot site mantiene infraestructura operativa y datos sincronizados para conseguir tiempos de recuperación muy bajos.",
+      "dominio": 2
     },
     {
       "pregunta": "Un ransomware cifra la base de datos clínica y también el NAS con backups incrementales diarios. Existe además una copia completa semanal en cinta magnética offline. ¿Cuál es la estrategia de recuperación más segura?",
@@ -746,13 +840,20 @@
         "Restaurar los incrementales mientras la amenaza sigue activa"
       ],
       "respuesta": 1,
-      "explicacion": "La cinta offline no pudo ser cifrada por el ransomware y debe utilizarse después de contener y aislar el entorno comprometido."
+      "explicacion": "La cinta offline no pudo ser cifrada por el ransomware y debe utilizarse después de contener y aislar el entorno comprometido.",
+      "dominio": 2
     },
     {
       "pregunta": "Un banco necesita un sitio secundario con hardware, electricidad y refrigeración ya instalados, pero donde sea necesario restaurar datos desde backups y completar configuraciones antes de activarlo. El objetivo es recuperarse en menos de 24 horas. ¿Qué tipo de sitio corresponde?",
-      "opciones": ["Warm Site", "Cold Site", "Hot Site", "Mobile Site"],
+      "opciones": [
+        "Warm Site",
+        "Cold Site",
+        "Hot Site",
+        "Mobile Site"
+      ],
       "respuesta": 0,
-      "explicacion": "El warm site ofrece una preparación intermedia: la infraestructura ya existe, pero aún requiere cargar datos y realizar ajustes antes de operar."
+      "explicacion": "El warm site ofrece una preparación intermedia: la infraestructura ya existe, pero aún requiere cargar datos y realizar ajustes antes de operar.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa puede tolerar como máximo cuatro horas de interrupción de su base de datos y no puede perder más de 30 minutos de datos transaccionales. ¿Qué combinación de métricas expresa estos requisitos?",
@@ -763,7 +864,8 @@
         "SLA de disponibilidad del 99,999 %"
       ],
       "respuesta": 2,
-      "explicacion": "El RTO expresa el tiempo objetivo para restaurar el servicio y el RPO la máxima ventana aceptable de pérdida de datos."
+      "explicacion": "El RTO expresa el tiempo objetivo para restaurar el servicio y el RPO la máxima ventana aceptable de pérdida de datos.",
+      "dominio": 2
     },
     {
       "pregunta": "Una base de datos falla a las 14:00 y la última copia válida es de medianoche. La dirección analiza la pérdida de datos entre el último backup y el fallo. ¿Qué métrica está evaluando?",
@@ -774,7 +876,8 @@
         "Work Recovery Time (WRT)"
       ],
       "respuesta": 0,
-      "explicacion": "El RPO se ocupa de la cantidad de datos que puede perderse, expresada normalmente como el tiempo transcurrido desde el último punto recuperable."
+      "explicacion": "El RPO se ocupa de la cantidad de datos que puede perderse, expresada normalmente como el tiempo transcurrido desde el último punto recuperable.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa no puede tolerar la pérdida de más de 30 minutos de transacciones de clientes. ¿Qué métrica debe utilizar el equipo técnico para definir la frecuencia de backups?",
@@ -785,7 +888,8 @@
         "Maximum Tolerable Downtime"
       ],
       "respuesta": 1,
-      "explicacion": "Un RPO de 30 minutos exige una estrategia de copia o replicación suficientemente frecuente para limitar la pérdida a ese intervalo."
+      "explicacion": "Un RPO de 30 minutos exige una estrategia de copia o replicación suficientemente frecuente para limitar la pérdida a ese intervalo.",
+      "dominio": 2
     },
     {
       "pregunta": "Una empresa logística puede tolerar como máximo 30 minutos de pérdida de datos de su base de seguimiento de paquetes. Esta métrica determina la frecuencia de las copias de seguridad.",
@@ -796,7 +900,8 @@
         "Recovery Point Objective"
       ],
       "respuesta": 3,
-      "explicacion": "El RPO establece el punto temporal máximo al que puede retroceder la recuperación de datos."
+      "explicacion": "El RPO establece el punto temporal máximo al que puede retroceder la recuperación de datos.",
+      "dominio": 2
     },
     {
       "pregunta": "Una cadena minorista establece un máximo de cuatro horas de pérdida de datos y exige que los sistemas vuelvan a estar operativos en un máximo de 12 horas. ¿Qué combinación de objetivos representa estos requisitos?",
@@ -807,7 +912,8 @@
         "RTO de 4 horas y WRT de 12 horas"
       ],
       "respuesta": 1,
-      "explicacion": "Las cuatro horas corresponden al máximo de datos perdidos, es decir, RPO; las 12 horas corresponden al tiempo de restauración, es decir, RTO."
+      "explicacion": "Las cuatro horas corresponden al máximo de datos perdidos, es decir, RPO; las 12 horas corresponden al tiempo de restauración, es decir, RTO.",
+      "dominio": 2
     },
     {
       "pregunta": "Un centro de datos secundario recibe replicación casi en tiempo real. La empresa no puede perder más de 15 minutos de transacciones y debe activar el sitio secundario en un máximo de dos horas. ¿Cómo se clasifican ambas métricas?",
@@ -818,7 +924,8 @@
         "RPO de 15 minutos y RTO de 2 horas"
       ],
       "respuesta": 3,
-      "explicacion": "El límite de pérdida de datos es el RPO y el plazo de restauración del servicio es el RTO."
+      "explicacion": "El límite de pérdida de datos es el RPO y el plazo de restauración del servicio es el RTO.",
+      "dominio": 2
     },
     {
       "pregunta": "Un servidor financiero mantiene un 100 % de disponibilidad y el acceso está restringido mediante biometría, pero los checksums de los informes no coinciden con los registros de la base de datos, lo que sugiere modificaciones no autorizadas. ¿Qué pilar de la tríada CIA se ha comprometido?",
@@ -829,7 +936,8 @@
         "No repudio"
       ],
       "respuesta": 1,
-      "explicacion": "La integridad garantiza que los datos permanezcan exactos y sin modificaciones no autorizadas; una discrepancia de checksum indica una alteración."
+      "explicacion": "La integridad garantiza que los datos permanezcan exactos y sin modificaciones no autorizadas; una discrepancia de checksum indica una alteración.",
+      "dominio": 1
     },
     {
       "pregunta": "Una empresa cifra con AES-256 la información de pago almacenada para que, incluso si se roba el soporte físico, los datos resulten ilegibles. ¿Qué principio de la tríada CIA aborda principalmente este control?",
@@ -840,7 +948,8 @@
         "No repudio"
       ],
       "respuesta": 2,
-      "explicacion": "El cifrado de datos en reposo busca impedir que personas no autorizadas puedan leer la información, protegiendo su confidencialidad."
+      "explicacion": "El cifrado de datos en reposo busca impedir que personas no autorizadas puedan leer la información, protegiendo su confidencialidad.",
+      "dominio": 1
     },
     {
       "pregunta": "Un usuario no autorizado modifica varias entradas de un libro mayor de transacciones. El sistema sigue operativo y los datos no se filtran, pero los saldos dejan de ser correctos. ¿Qué principio de seguridad se ha comprometido principalmente?",
@@ -851,7 +960,8 @@
         "No repudio"
       ],
       "respuesta": 1,
-      "explicacion": "La modificación no autorizada de los registros afecta a su exactitud y fiabilidad, lo que constituye una pérdida de integridad."
+      "explicacion": "La modificación no autorizada de los registros afecta a su exactitud y fiabilidad, lo que constituye una pérdida de integridad.",
+      "dominio": 1
     },
     {
       "pregunta": "Una entidad financiera exige que, una vez creado un registro de transacción, cualquier modificación o eliminación sea detectable incluso si la realiza un administrador. ¿Qué principio de la tríada CIA pretende proteger principalmente?",
@@ -862,7 +972,8 @@
         "No repudio mediante certificados digitales y PKI"
       ],
       "respuesta": 0,
-      "explicacion": "La integridad garantiza que los datos no puedan alterarse sin detección; los hashes permiten comprobar si un registro ha cambiado."
+      "explicacion": "La integridad garantiza que los datos no puedan alterarse sin detección; los hashes permiten comprobar si un registro ha cambiado.",
+      "dominio": 1
     },
     {
       "pregunta": "Un analista descubre una vulnerabilidad crítica en software propietario de su empresa y, en lugar de comunicarla internamente, comparte los detalles con un antiguo compañero que trabaja para un competidor. ¿Qué canon del Código de Ética de (ISC)² se vulnera más directamente?",
@@ -873,7 +984,8 @@
         "Proteger a la sociedad, el bien común, la confianza pública y la infraestructura"
       ],
       "respuesta": 1,
-      "explicacion": "Compartir información sensible con un competidor incumple directamente el deber profesional de prestar un servicio diligente y leal al empleador."
+      "explicacion": "Compartir información sensible con un competidor incumple directamente el deber profesional de prestar un servicio diligente y leal al empleador.",
+      "dominio": 1
     },
     {
       "pregunta": "Un analista de un contratista de defensa descubre que un compañero evita deliberadamente el sistema obligatorio de logging para acelerar un proyecto de seguridad nacional. Informarlo puede retrasar el proyecto. Según el Código de Ética de (ISC)², ¿cuál es su responsabilidad principal?",
@@ -884,7 +996,8 @@
         "Esperar a que una auditoría descubra la anomalía"
       ],
       "respuesta": 0,
-      "explicacion": "La protección de la sociedad, la confianza pública y la infraestructura tiene prioridad frente a intereses personales o de calendario."
+      "explicacion": "La protección de la sociedad, la confianza pública y la infraestructura tiene prioridad frente a intereses personales o de calendario.",
+      "dominio": 1
     },
     {
       "pregunta": "Un atacante modifica los banners de la página principal de un comercio electrónico, pero no roba datos ni interrumpe el servicio. ¿Qué pilar de la tríada CIA se ha comprometido principalmente?",
@@ -895,7 +1008,8 @@
         "Accountability"
       ],
       "respuesta": 1,
-      "explicacion": "La modificación no autorizada del contenido altera los datos originales y constituye una vulneración de integridad."
+      "explicacion": "La modificación no autorizada del contenido altera los datos originales y constituye una vulneración de integridad.",
+      "dominio": 1
     },
     {
       "pregunta": "Una organización quiere demostrar que implementa, audita, verifica y mantiene continuamente las salvaguardas que una organización razonable debería aplicar. ¿Qué término describe esta práctica continua?",
@@ -906,7 +1020,8 @@
         "Risk avoidance"
       ],
       "respuesta": 2,
-      "explicacion": "Due diligence es el proceso continuo de verificar, auditar y mantener que los controles de seguridad definidos se aplican y siguen siendo eficaces."
+      "explicacion": "Due diligence es el proceso continuo de verificar, auditar y mantener que los controles de seguridad definidos se aplican y siguen siendo eficaces.",
+      "dominio": 1
     },
     {
       "pregunta": "El hash de un parche de seguridad almacenado en el servidor de distribución no coincide con el hash de la compilación original. El servidor sigue disponible, pero existe riesgo de que el archivo haya sido modificado. ¿Qué principio se ha comprometido?",
@@ -917,7 +1032,8 @@
         "No repudio del equipo de desarrollo"
       ],
       "respuesta": 1,
-      "explicacion": "Una diferencia de hash indica que el contenido ha cambiado, lo que afecta directamente a la integridad del archivo."
+      "explicacion": "Una diferencia de hash indica que el contenido ha cambiado, lo que afecta directamente a la integridad del archivo.",
+      "dominio": 1
     },
     {
       "pregunta": "Un profesional de ciberseguridad descubre que un alto directivo utiliza un portátil personal no seguro para acceder a archivos clasificados, evitando los protocolos obligatorios. Según el Código de Ética de (ISC)², ¿qué acción debe priorizar?",
@@ -928,7 +1044,8 @@
         "Exigir un soborno para mantener la información en secreto"
       ],
       "respuesta": 1,
-      "explicacion": "El profesional debe utilizar los canales internos establecidos para informar del riesgo y proteger a la organización y a la infraestructura."
+      "explicacion": "El profesional debe utilizar los canales internos establecidos para informar del riesgo y proteger a la organización y a la infraestructura.",
+      "dominio": 1
     },
     {
       "pregunta": "Valores de tipos de interés de una base de datos financiera han sido modificados sin autorización. La base sigue disponible y los datos continúan cifrados frente a accesos no autorizados, pero los informes dejan de ser exactos. ¿Qué pilar CIA se ha vulnerado?",
@@ -939,7 +1056,8 @@
         "No repudio"
       ],
       "respuesta": 1,
-      "explicacion": "La alteración no autorizada afecta a la exactitud y confiabilidad de los datos, es decir, a su integridad."
+      "explicacion": "La alteración no autorizada afecta a la exactitud y confiabilidad de los datos, es decir, a su integridad.",
+      "dominio": 1
     },
     {
       "pregunta": "Un exempleado modifica en un 90 % los precios de varios productos de alto valor. El sitio sigue funcionando y no se han robado datos de clientes. ¿Qué pilar CIA se ha vulnerado principalmente?",
@@ -950,7 +1068,8 @@
         "Integridad"
       ],
       "respuesta": 3,
-      "explicacion": "La información de precios ha sido modificada por una persona no autorizada, comprometiendo directamente su integridad."
+      "explicacion": "La información de precios ha sido modificada por una persona no autorizada, comprometiendo directamente su integridad.",
+      "dominio": 1
     },
     {
       "pregunta": "Un profesional certificado descubre accidentalmente, fuera del alcance de una auditoría, una grave vulnerabilidad SQL injection en el servicio de un competidor de su cliente. Según el Código de Ética de (ISC)², ¿cuál es la actuación más apropiada?",
@@ -961,7 +1080,8 @@
         "Publicarla inmediatamente en redes sociales"
       ],
       "respuesta": 1,
-      "explicacion": "La divulgación responsable a la organización afectada permite corregir el riesgo y protege a la sociedad y a la infraestructura sin facilitar su explotación."
+      "explicacion": "La divulgación responsable a la organización afectada permite corregir el riesgo y protege a la sociedad y a la infraestructura sin facilitar su explotación.",
+      "dominio": 1
     },
     {
       "pregunta": "Un bufete necesita que los socios firmen contratos digitales de forma que posteriormente no puedan negar su participación y que pueda verificarse técnicamente el origen y la integridad del documento. ¿Qué tecnología debe utilizar?",
@@ -972,7 +1092,8 @@
         "Un lector biométrico para iniciar sesión"
       ],
       "respuesta": 1,
-      "explicacion": "Las firmas digitales utilizan una clave privada para firmar el hash del documento y proporcionan integridad, autenticidad y no repudio."
+      "explicacion": "Las firmas digitales utilizan una clave privada para firmar el hash del documento y proporcionan integridad, autenticidad y no repudio.",
+      "dominio": 1
     },
     {
       "pregunta": "Un empleado descubre un fallo que permite aprobar sus propios reembolsos y, en vez de informarlo, lo comparte con compañeros que lo utilizan para robar fondos. ¿Qué principio fundamental de gobernanza y conducta profesional se ha vulnerado?",
@@ -983,7 +1104,8 @@
         "Seguridad física del perímetro"
       ],
       "respuesta": 1,
-      "explicacion": "Explotar o compartir una vulnerabilidad para cometer fraude vulnera los principios éticos de integridad, legalidad y divulgación responsable."
+      "explicacion": "Explotar o compartir una vulnerabilidad para cometer fraude vulnera los principios éticos de integridad, legalidad y divulgación responsable.",
+      "dominio": 1
     },
     {
       "pregunta": "Un profesional detecta que un directivo exporta regularmente datos sensibles de clientes a una cuenta cloud personal, incumpliendo la política de uso aceptable. ¿Qué acción debe tomar conforme al Código de Ética de (ISC)²?",
@@ -994,7 +1116,8 @@
         "Solicitar un traslado para no verse involucrado"
       ],
       "respuesta": 1,
-      "explicacion": "Informar mediante los canales establecidos protege a la organización y mantiene la integridad de la profesión frente a una infracción de seguridad."
+      "explicacion": "Informar mediante los canales establecidos protege a la organización y mantiene la integridad de la profesión frente a una infracción de seguridad.",
+      "dominio": 1
     },
     {
       "pregunta": "Una auditoría bancaria descubre que registros históricos de transferencias fueron modificados y ya no son exactos para informes regulatorios. ¿Qué componente central de la tríada de seguridad de la información se ha comprometido?",
@@ -1005,7 +1128,8 @@
         "No repudio"
       ],
       "respuesta": 1,
-      "explicacion": "La integridad garantiza que los registros permanezcan exactos, consistentes y sin alteraciones no autorizadas."
+      "explicacion": "La integridad garantiza que los registros permanezcan exactos, consistentes y sin alteraciones no autorizadas.",
+      "dominio": 1
     },
     {
       "pregunta": "Un técnico descubre que un directivo utiliza herramientas SaaS no autorizadas para almacenar comentarios de clientes, incumpliendo las políticas de privacidad aunque aumenten la productividad. ¿Qué obligación debe guiar al técnico?",
@@ -1016,7 +1140,8 @@
         "Eliminar unilateralmente las cuentas SaaS sin informar a nadie"
       ],
       "respuesta": 0,
-      "explicacion": "El shadow IT que maneja datos de clientes debe notificarse por los canales de gobernanza y cumplimiento para evaluar y mitigar el riesgo."
+      "explicacion": "El shadow IT que maneja datos de clientes debe notificarse por los canales de gobernanza y cumplimiento para evaluar y mitigar el riesgo.",
+      "dominio": 1
     },
     {
       "pregunta": "Un bufete quiere impedir que terceros puedan leer comunicaciones sensibles de clientes interceptadas mientras circulan por Internet. ¿Qué principio de la tríada CIA busca proteger principalmente mediante cifrado de extremo a extremo?",
@@ -1027,7 +1152,8 @@
         "No repudio"
       ],
       "respuesta": 1,
-      "explicacion": "El objetivo principal del cifrado de extremo a extremo es que únicamente las partes autorizadas puedan leer el contenido, protegiendo la confidencialidad."
+      "explicacion": "El objetivo principal del cifrado de extremo a extremo es que únicamente las partes autorizadas puedan leer el contenido, protegiendo la confidencialidad.",
+      "dominio": 1
     },
     {
       "pregunta": "Un director de proyecto comparte credenciales administrativas internas con subcontratistas externos para evitar retrasos de onboarding. Según un código profesional que prioriza la protección de la sociedad y la integridad de la profesión, ¿qué acción es la más adecuada?",
@@ -1038,7 +1164,8 @@
         "Permitir que continúen usando las cuentas hasta completar el onboarding"
       ],
       "respuesta": 2,
-      "explicacion": "El uso compartido de credenciales administrativas debe gestionarse formalmente mediante los canales de cumplimiento o autoridad correspondientes para proteger la infraestructura y la accountability."
+      "explicacion": "El uso compartido de credenciales administrativas debe gestionarse formalmente mediante los canales de cumplimiento o autoridad correspondientes para proteger la infraestructura y la accountability.",
+      "dominio": 1
     },
     {
       "pregunta": "Un analista descubre que un compañero comparte secretamente detalles no públicos de parches con una persona externa antes de su publicación oficial. Según el Código de Ética de ISC2, ¿qué obligación principal determina su actuación?",
@@ -1049,7 +1176,8 @@
         "Esperar a que se publique el parche y comprobar si ocurre una explotación"
       ],
       "respuesta": 0,
-      "explicacion": "El primer deber es proteger a la sociedad, la confianza pública y la infraestructura, por encima de la lealtad individual o del deseo de evitar conflictos."
+      "explicacion": "El primer deber es proteger a la sociedad, la confianza pública y la infraestructura, por encima de la lealtad individual o del deseo de evitar conflictos.",
+      "dominio": 1
     }
   ]
 }
