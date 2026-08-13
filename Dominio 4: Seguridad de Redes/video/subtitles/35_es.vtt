@@ -1,0 +1,121 @@
+WEBVTT
+
+1
+00:00:06.829 --> 00:00:09.729
+Un servidor web front-end podria estar en la DMZ,
+
+2
+00:00:09.880 --> 00:00:12.319
+pero podria recuperar datos de un servidor de base de datos
+
+3
+00:00:12.329 --> 00:00:14.449
+que esta al otro lado del firewall.
+
+4
+00:00:15.529 --> 00:00:16.670
+Por ejemplo,
+
+5
+00:00:16.680 --> 00:00:20.430
+puedes tener una red donde gestionas informacion personal de tus clientes
+
+6
+00:00:20.629 --> 00:00:24.559
+y, aunque los datos esten cifrados u ofuscados mediante criptografia,
+
+7
+00:00:24.690 --> 00:00:26.350
+debes asegurarte de que la red este
+
+8
+00:00:26.360 --> 00:00:29.110
+completamente segregada del resto de la red,
+
+9
+00:00:29.120 --> 00:00:33.270
+con switches seguros a los que solo tenga acceso una persona autorizada.
+
+10
+00:00:33.860 --> 00:00:38.119
+Solo el personal autorizado puede controlar la configuracion del firewall
+
+11
+00:00:38.130 --> 00:00:41.250
+y controlar el trafico entre el servidor web y la red interna.
+
+12
+00:00:41.580 --> 00:00:42.810
+Por ejemplo,
+
+13
+00:00:42.919 --> 00:00:45.009
+en un hospital o consultorio medico,
+
+14
+00:00:45.020 --> 00:00:48.680
+tendrias una red segregada para la informacion de pacientes y facturacion,
+
+15
+00:00:48.779 --> 00:00:51.970
+y al otro lado estarian los registros medicos electronicos.
+
+16
+00:00:52.380 --> 00:00:56.470
+Si usan una aplicacion basada en web para servicios de registros medicos,
+
+17
+00:00:56.500 --> 00:01:00.040
+tendrian una zona desmilitarizada o areas segmentadas,
+
+18
+00:01:00.259 --> 00:01:02.659
+y quizas incluso detras del firewall.
+
+19
+00:01:02.680 --> 00:01:05.199
+Tendrian su propio servidor especifico para proteger
+
+20
+00:01:05.209 --> 00:01:07.800
+la informacion critica y mantenerla segregada.
+
+21
+00:01:08.870 --> 00:01:10.849
+Vale la pena senalar en este punto que,
+
+22
+00:01:10.860 --> 00:01:13.669
+aunque este curso no explorara los detalles,
+
+23
+00:01:13.680 --> 00:01:20.050
+algunas redes usan un Web Application Firewall (WAF) en lugar de una red DMZ.
+
+24
+00:01:20.419 --> 00:01:25.180
+El WAF tiene una conexion interna y una externa, como un firewall tradicional,
+
+25
+00:01:25.190 --> 00:01:27.410
+con el trafico externo filtrado por
+
+26
+00:01:27.419 --> 00:01:29.760
+el firewall tradicional o de proxima generacion.
+
+27
+00:01:29.769 --> 00:01:30.330
+Primero,
+
+28
+00:01:30.709 --> 00:01:33.410
+monitorea todo el trafico, cifrado o no,
+
+29
+00:01:33.419 --> 00:01:35.989
+desde el exterior en busca de comportamiento malicioso antes
+
+30
+00:01:36.000 --> 00:01:39.690
+de pasar comandos a un servidor web que puede ser interno a la red.

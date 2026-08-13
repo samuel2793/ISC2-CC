@@ -1,0 +1,77 @@
+WEBVTT
+
+1
+00:00:06.539 --> 00:00:08.640
+Entre el cliente y el servidor.
+
+2
+00:00:08.649 --> 00:00:11.670
+Existe un sistema para sincronizar y reconocer cualquier
+
+3
+00:00:11.680 --> 00:00:14.880
+solicitud, conocido como handshake de tres vías.
+
+4
+00:00:15.310 --> 00:00:20.719
+Este handshake se usa para establecer una conexión TCP entre dos dispositivos.
+
+5
+00:00:21.709 --> 00:00:23.879
+Aquí veremos de forma simplificada
+
+6
+00:00:23.889 --> 00:00:27.020
+cómo se establecen las comunicaciones con un servidor web.
+
+7
+00:00:27.350 --> 00:00:29.569
+Dependiendo del protocolo exacto,
+
+8
+00:00:29.620 --> 00:00:33.080
+puede haber negociación adicional de conexión.
+
+9
+00:00:34.259 --> 00:00:39.270
+Primero, el cliente envía un paquete de sincronización SYN al servidor web,
+
+10
+00:00:39.279 --> 00:00:41.709
+puerto 80 o 443.
+
+11
+00:00:41.840 --> 00:00:44.650
+Esta es una solicitud para establecer una conexión.
+
+12
+00:00:49.569 --> 00:00:54.400
+El servidor web responde al paquete SYN con un reconocimiento conocido como SYN-
+
+13
+00:00:55.009 --> 00:00:55.020
+ACK.
+
+14
+00:00:58.139 --> 00:01:01.970
+Finalmente, el cliente reconoce la conexión con un reconocimiento
+
+15
+00:01:02.409 --> 00:01:02.549
+ACK.
+
+16
+00:01:02.750 --> 00:01:02.779
+En
+
+17
+00:01:03.270 --> 00:01:04.089
+este punto,
+
+18
+00:01:04.099 --> 00:01:06.970
+la conexión básica queda establecida y el cliente y
+
+19
+00:01:06.980 --> 00:01:11.169
+el host negociarán comunicaciones seguras sobre esa conexión.

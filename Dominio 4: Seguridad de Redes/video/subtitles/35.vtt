@@ -1,0 +1,121 @@
+WEBVTT
+
+1
+00:00:06.829 --> 00:00:09.729
+a Web front end server might be in the DMZ,
+
+2
+00:00:09.880 --> 00:00:12.319
+but it might retrieve data from a database server
+
+3
+00:00:12.329 --> 00:00:14.449
+that is on the other side of the firewall.
+
+4
+00:00:15.529 --> 00:00:16.670
+For example,
+
+5
+00:00:16.680 --> 00:00:20.430
+you may have a network where you manage your client's personal information,
+
+6
+00:00:20.629 --> 00:00:24.559
+and even if the data is encrypted or obfuscated by cryptography,
+
+7
+00:00:24.690 --> 00:00:26.350
+you need to make sure the network is
+
+8
+00:00:26.360 --> 00:00:29.110
+completely segregated from the rest of the network,
+
+9
+00:00:29.120 --> 00:00:33.270
+with some secure switches that only an authorised individual has access to.
+
+10
+00:00:33.860 --> 00:00:38.119
+Only authorised personnel can control the firewall settings and control
+
+11
+00:00:38.130 --> 00:00:41.250
+the traffic between the Web server and the internal network.
+
+12
+00:00:41.580 --> 00:00:42.810
+For example,
+
+13
+00:00:42.919 --> 00:00:45.009
+in a hospital or a doctor's office,
+
+14
+00:00:45.020 --> 00:00:48.680
+you would have a segregated network for the patient information and billing,
+
+15
+00:00:48.779 --> 00:00:51.970
+and on the other side would be the electronic medical records.
+
+16
+00:00:52.380 --> 00:00:56.470
+If they are using a Web based application for medical record services,
+
+17
+00:00:56.500 --> 00:01:00.040
+they would have a demilitarised zone or segmented areas
+
+18
+00:01:00.259 --> 00:01:02.659
+and perhaps even behind the firewall.
+
+19
+00:01:02.680 --> 00:01:05.199
+They have their own specified server to protect
+
+20
+00:01:05.209 --> 00:01:07.800
+the critical information and keep it segregated.
+
+21
+00:01:08.870 --> 00:01:10.849
+It is worth noting at this point that
+
+22
+00:01:10.860 --> 00:01:13.669
+while this course will not explore the specifics,
+
+23
+00:01:13.680 --> 00:01:20.050
+some networks use a Web application firewall WAF rather than AD MZ network.
+
+24
+00:01:20.419 --> 00:01:25.180
+The WAF has an internal and an external connection, like a traditional firewall,
+
+25
+00:01:25.190 --> 00:01:27.410
+with the external traffic being filtered by
+
+26
+00:01:27.419 --> 00:01:29.760
+the traditional or next generation firewall.
+
+27
+00:01:29.769 --> 00:01:30.330
+First,
+
+28
+00:01:30.709 --> 00:01:33.410
+it monitors all traffic encrypted or not
+
+29
+00:01:33.419 --> 00:01:35.989
+from the outside for malicious behaviour before
+
+30
+00:01:36.000 --> 00:01:39.690
+passing commands to a Web server that may be internal to the network.

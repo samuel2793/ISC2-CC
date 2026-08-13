@@ -1,0 +1,77 @@
+WEBVTT
+
+1
+00:00:06.539 --> 00:00:08.640
+Between the client and server.
+
+2
+00:00:08.649 --> 00:00:11.670
+There is a system for synchronizing and acknowledging any
+
+3
+00:00:11.680 --> 00:00:14.880
+request that is known as a three way handshake.
+
+4
+00:00:15.310 --> 00:00:20.719
+This handshake is used to establish a TCP connection between two devices.
+
+5
+00:00:21.709 --> 00:00:23.879
+Here we will take a simplified look at
+
+6
+00:00:23.889 --> 00:00:27.020
+how communications are established to a web server.
+
+7
+00:00:27.350 --> 00:00:29.569
+Depending on the exact protocol.
+
+8
+00:00:29.620 --> 00:00:33.080
+There may be additional connection negotiation taking place
+
+9
+00:00:34.259 --> 00:00:39.270
+first, the client sends synchronization sin packet to the web servers.
+
+10
+00:00:39.279 --> 00:00:41.709
+Port 80 or 443.
+
+11
+00:00:41.840 --> 00:00:44.650
+This is a request to establish a connection.
+
+12
+00:00:49.569 --> 00:00:54.400
+The web server replies to the sin packet with an acknowledgment known as a sin
+
+13
+00:00:55.009 --> 00:00:55.020
+A.
+
+14
+00:00:58.139 --> 00:01:01.970
+Finally, the client acknowledges the connection with an acknowledgment
+
+15
+00:01:02.409 --> 00:01:02.549
+ac
+
+16
+00:01:02.750 --> 00:01:02.779
+at
+
+17
+00:01:03.270 --> 00:01:04.089
+this point,
+
+18
+00:01:04.099 --> 00:01:06.970
+the basic connection is established and the client and
+
+19
+00:01:06.980 --> 00:01:11.169
+host will further negotiate secure communications over that connection.

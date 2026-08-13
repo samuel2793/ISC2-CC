@@ -1,0 +1,197 @@
+WEBVTT
+
+1
+00:00:01.620 --> 00:00:06.449
+Aqui vemos un ejemplo de una alerta de intrusion detection system (IDS).
+
+2
+00:00:06.809 --> 00:00:10.840
+Se proporciona como ejemplo de como se identifican amenazas.
+
+3
+00:00:11.199 --> 00:00:15.130
+Algunos conceptos de este escenario son mas avanzados que este curso,
+
+4
+00:00:15.140 --> 00:00:18.639
+asi que no te alarmes si no entiendes todo lo que se trata aqui.
+
+5
+00:00:19.549 --> 00:00:23.950
+Empezaremos revisando los puntos principales de los datos que se nos presentan.
+
+6
+00:00:24.000 --> 00:00:25.680
+Observa que, en este ejemplo,
+
+7
+00:00:25.690 --> 00:00:30.159
+los campos de nombre de host y nombre de usuario se han eliminado para mantener el anonimato.
+
+8
+00:00:31.360 --> 00:00:37.099
+Esto nos indica que el IDS detecto el uso de un software llamado Advanced IP Scanner,
+
+9
+00:00:37.229 --> 00:00:42.099
+que puede ser usado por atacantes para enumerar o revisar la red escaneando
+
+10
+00:00:42.110 --> 00:00:46.540
+direcciones y ver que servicios se estan ejecutando en las computadoras de la red local.
+
+11
+00:00:46.860 --> 00:00:49.849
+Este software tambien es usado por administradores de red
+
+12
+00:00:49.860 --> 00:00:54.099
+o de sistemas para inventariar una red local con fines de resolucion de problemas.
+
+13
+00:00:54.490 --> 00:00:55.240
+Finalmente,
+
+14
+00:00:55.250 --> 00:00:57.709
+esta seccion superior de la pantalla de alerta nos indica
+
+15
+00:00:57.720 --> 00:01:00.409
+que el evento fue reportado por un agente de endpoint,
+
+16
+00:01:00.590 --> 00:01:06.400
+lo que significa que fue generado por una solucion host intrusion detection system (HIDS),
+
+17
+00:01:06.410 --> 00:01:09.000
+no por un network intrusion detection system
+
+18
+00:01:09.120 --> 00:01:10.379
+(NIDS).
+
+19
+00:01:11.129 --> 00:01:13.760
+Esta linea identifica el host que ejecuta
+
+20
+00:01:13.769 --> 00:01:16.309
+el proceso sospechoso como un sistema Windows.
+
+21
+00:01:17.389 --> 00:01:22.769
+La seccion de proceso identifica la hora de inicio, el nombre del proceso y el ID
+
+22
+00:01:22.860 --> 00:01:27.050
+o numero PID que se correlaciona con el proceso en el Administrador de tareas de Windows.
+
+23
+00:01:27.430 --> 00:01:29.949
+Esto puede ser util de un par de formas.
+
+24
+00:01:29.959 --> 00:01:33.730
+Primero, la hora de inicio nos indica cuanto tiempo ha estado ejecutandose el proceso.
+
+25
+00:01:34.059 --> 00:01:37.129
+El PID tambien puede dar algunas pistas, ya que numeros PID
+
+26
+00:01:37.239 --> 00:01:40.629
+mas bajos pueden indicar un proceso que empezo a ejecutarse durante la secuencia
+
+27
+00:01:40.639 --> 00:01:44.830
+de arranque, y numeros mas altos indican algo que se inicio mucho mas tarde.
+
+28
+00:01:45.650 --> 00:01:49.370
+Estas lineas nos dan detalles del archivo ejecutable,
+
+29
+00:01:49.379 --> 00:01:52.750
+incluida la ruta al propio archivo, asi como la
+
+30
+00:01:52.760 --> 00:01:56.139
+linea de comandos real usada para ejecutar el ejecutable.
+
+31
+00:01:56.489 --> 00:01:59.879
+Esto es importante contextualmente porque muestra que el programa
+
+32
+00:01:59.889 --> 00:02:03.269
+se ejecuto desde una carpeta temporal bajo el ID del usuario,
+
+33
+00:02:03.410 --> 00:02:07.839
+lo que normalmente no requiere privilegios administrativos en un sistema Windows.
+
+34
+00:02:08.350 --> 00:02:11.410
+En otras palabras, podria ejecutarlo cualquier usuario promedio.
+
+35
+00:02:11.820 --> 00:02:15.720
+La linea de comandos usada muestra contexto adicional, incluido que
+
+36
+00:02:15.729 --> 00:02:18.699
+la aplicacion se esta ejecutando como una aplicacion portable,
+
+37
+00:02:18.830 --> 00:02:23.279
+lo que significa que no tiene que estar formalmente instalada en la maquina para ejecutarse.
+
+38
+00:02:24.440 --> 00:02:25.520
+En este caso,
+
+39
+00:02:25.529 --> 00:02:28.080
+no hay suficiente contexto para saber realmente si
+
+40
+00:02:28.089 --> 00:02:30.940
+este proceso se esta usando de manera maliciosa.
+
+41
+00:02:31.399 --> 00:02:35.940
+Como muchas alertas de seguridad, esta depende de cierta interaccion humana.
+
+42
+00:02:36.169 --> 00:02:39.509
+Por tanto, debes contactar al usuario final asignado a este activo
+
+43
+00:02:39.619 --> 00:02:43.339
+para preguntar si efectivamente esta ejecutando este software
+
+44
+00:02:43.350 --> 00:02:46.149
+y si tiene una razon legitima de negocio para hacerlo.
+
+45
+00:02:46.669 --> 00:02:48.929
+Si descubres que era intencional,
+
+46
+00:02:48.979 --> 00:02:51.289
+tambien podria ser un buen momento para explicar que
+
+47
+00:02:51.300 --> 00:02:54.690
+fuiste alertado porque este software legitimo puede ser usado
+
+48
+00:02:54.699 --> 00:02:58.089
+por actores de amenaza para realizar reconocimiento en la red local
+
+49
+00:02:58.100 --> 00:03:01.169
+y determinar donde podria haber debilidades que explotar.
