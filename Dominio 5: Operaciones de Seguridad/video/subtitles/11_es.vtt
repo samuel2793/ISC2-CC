@@ -1,0 +1,89 @@
+WEBVTT
+
+1
+00:00:07.969 --> 00:00:11.939
+Debe asegurarse de contar con un proceso robusto de gestion de cambios y de
+
+2
+00:00:11.949 --> 00:00:14.600
+probar en entornos modelo antes de realizar cualquier
+
+3
+00:00:14.609 --> 00:00:17.069
+cambio en un entorno de produccion o en vivo.
+
+4
+00:00:17.520 --> 00:00:19.780
+Incluso con planificacion y pruebas extensas,
+
+5
+00:00:19.930 --> 00:00:22.420
+a veces hay consecuencias no deseadas.
+
+6
+00:00:22.549 --> 00:00:25.190
+Por eso debe asegurarse de que exista un plan de rollback.
+
+7
+00:00:25.659 --> 00:00:28.030
+Un rollback consiste en restaurar el sistema al estado
+
+8
+00:00:28.040 --> 00:00:30.209
+en que se encontraba antes de que se realizara el cambio,
+
+9
+00:00:30.219 --> 00:00:32.560
+en un punto en el que sabemos que funcionaba correctamente.
+
+10
+00:00:32.569 --> 00:00:34.909
+Antes de introducir cambios en el entorno,
+
+11
+00:00:35.439 --> 00:00:38.229
+debemos asegurarnos de revisar y probar
+
+12
+00:00:38.240 --> 00:00:41.270
+todos los parches y de poder restaurar la configuracion anterior.
+
+13
+00:00:42.349 --> 00:00:44.599
+Mantener un entorno de pruebas separado puede
+
+14
+00:00:44.610 --> 00:00:47.430
+ser un desafio logistico para muchas organizaciones;
+
+15
+00:00:47.680 --> 00:00:48.319
+por ello,
+
+16
+00:00:48.330 --> 00:00:51.509
+muchas no tienen entornos separados de produccion y pruebas
+
+17
+00:00:51.520 --> 00:00:54.419
+para validar adecuadamente todos los parches y actualizaciones del sistema.
+
+18
+00:00:55.069 --> 00:00:55.849
+En ese caso,
+
+19
+00:00:55.860 --> 00:00:58.630
+pueden depender de pruebas de terceros del proveedor para certificar una
+
+20
+00:00:58.639 --> 00:01:01.479
+nueva version de software basada en un conjunto generico de datos.
+
+21
+00:01:02.009 --> 00:01:04.919
+El plan de rollback es importante en todos los entornos,
+
+22
+00:01:05.019 --> 00:01:09.639
+pero es absolutamente critico en aquellos que no pueden probar completamente un cambio.
