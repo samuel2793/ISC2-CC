@@ -353,6 +353,10 @@ function lessonId(domainId, file) {
   return `${domainId}-${file.slice(0, 2)}`;
 }
 
+function domainFromHash(hash) {
+  return DOMAINS.find((domain) => hash === domain.id || hash.startsWith(`${domain.id}-`));
+}
+
 function renderMenu() {
   menu.innerHTML = DOMAINS.map((domain) => `
     <button class="domain-button" type="button" data-domain="${domain.id}">
@@ -394,7 +398,7 @@ async function fetchLesson(domain, file) {
   };
 }
 
-async function loadDomain(domainId, updateHash = true) {
+async function loadDomain(domainId, updateHash = true, scrollTarget = null) {
   const domain = DOMAINS.find((item) => item.id === domainId) || DOMAINS[0];
 
   activeDomain = domain;
@@ -414,6 +418,12 @@ async function loadDomain(domainId, updateHash = true) {
 
     if (updateHash) {
       history.replaceState(null, "", `#${domain.id}`);
+    }
+
+    if (scrollTarget) {
+      requestAnimationFrame(() => {
+        document.getElementById(scrollTarget)?.scrollIntoView();
+      });
     }
   } catch (error) {
     content.innerHTML = `<div class="error-state">${escapeHtml(error.message)}</div>`;
@@ -1546,16 +1556,31 @@ epubButton.addEventListener("click", downloadEpub);
 printButton.addEventListener("click", () => window.print());
 testMenuButton.addEventListener("click", () => loadTestsView());
 window.addEventListener("hashchange", () => {
-  if (location.hash.slice(1) === "tests") {
+  const hash = location.hash.slice(1);
+
+  if (hash === "tests") {
     loadTestsView(false);
-  } else {
-    loadDomain(location.hash.slice(1), false);
+    return;
   }
+
+  const domain = domainFromHash(hash);
+  if (!domain) {
+    loadDomain(DOMAINS[0].id, false);
+    return;
+  }
+
+  if (hash !== domain.id && activeDomain?.id === domain.id && document.getElementById(hash)) {
+    return;
+  }
+
+  loadDomain(domain.id, false, hash !== domain.id ? hash : null);
 });
 
 renderMenu();
-if (location.hash.slice(1) === "tests") {
+const initialHash = location.hash.slice(1);
+if (initialHash === "tests") {
   loadTestsView(false);
 } else {
-  loadDomain(location.hash.slice(1) || DOMAINS[0].id, false);
+  const initialDomain = domainFromHash(initialHash);
+  loadDomain(initialDomain?.id || DOMAINS[0].id, false, initialDomain && initialHash !== initialDomain.id ? initialHash : null);
 }
