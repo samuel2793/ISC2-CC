@@ -30,6 +30,7 @@
       body {
         margin: 0;
         min-height: 100vh;
+        overflow-x: hidden;
         background: var(--bg);
         color: var(--text);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -246,7 +247,7 @@
 
       .domain-header h1 {
         margin: 0;
-        font-size: clamp(1.8rem, 3vw, 2.75rem);
+        font-size: 2.5rem;
         line-height: 1.1;
       }
 
@@ -383,7 +384,7 @@
 
       .test-heading h1 {
         margin: 0;
-        font-size: clamp(2.2rem, 3vw, 3.2rem);
+        font-size: 3rem;
         line-height: 0.95;
       }
 
@@ -812,7 +813,7 @@
 
       .question-title {
         margin: 0 0 16px;
-        font-size: clamp(1.2rem, 1.8vw, 1.48rem);
+        font-size: 1.42rem;
         font-weight: 800;
         line-height: 1.35;
       }
@@ -923,14 +924,55 @@
         }
 
         .sidebar {
-          position: static;
+          position: sticky;
+          z-index: 10;
+          top: 0;
           height: auto;
+          max-height: 46vh;
           border-right: 0;
           border-bottom: 1px solid var(--line);
+          padding: 12px 14px;
+        }
+
+        .brand {
+          margin-bottom: 10px;
+          font-size: 1rem;
         }
 
         .domain-menu {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          display: flex;
+          gap: 8px;
+          margin: 0 -14px;
+          overflow-x: auto;
+          padding: 0 14px 4px;
+          scrollbar-width: none;
+          scroll-snap-type: x proximity;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .domain-menu::-webkit-scrollbar {
+          display: none;
+        }
+
+        .domain-button {
+          flex: 0 0 210px;
+          min-height: 48px;
+          scroll-snap-align: start;
+        }
+
+        .domain-title {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .sidebar-section {
+          margin-top: 10px;
+          padding-top: 10px;
+        }
+
+        .sidebar-action {
+          min-height: 42px;
         }
 
         .toc {
@@ -942,8 +984,13 @@
         }
 
         .toolbar {
+          grid-template-columns: minmax(0, 1fr) auto auto;
           margin: -18px -18px 18px;
           padding: 14px 18px;
+        }
+
+        .content-panel {
+          max-width: none;
         }
 
         .domain-header,
@@ -951,6 +998,22 @@
         .test-panel {
           padding-left: 20px;
           padding-right: 20px;
+        }
+
+        .domain-header h1 {
+          font-size: 2rem;
+        }
+
+        .test-heading h1 {
+          font-size: 2.25rem;
+        }
+
+        .question-title {
+          font-size: 1.28rem;
+        }
+
+        .lesson {
+          scroll-margin-top: 190px;
         }
 
         .test-topbar,
@@ -976,9 +1039,136 @@
       }
 
       @media (max-width: 560px) {
-        .domain-menu,
+        .sidebar {
+          max-height: 44vh;
+          padding: 10px 12px;
+        }
+
+        .brand {
+          margin-bottom: 8px;
+        }
+
+        .domain-menu {
+          margin: 0 -12px;
+          padding: 0 12px 4px;
+        }
+
+        .domain-button {
+          flex-basis: 176px;
+          min-height: 44px;
+          padding: 8px 10px;
+        }
+
+        .domain-number {
+          font-size: 0.68rem;
+        }
+
+        .domain-title {
+          font-size: 0.88rem;
+        }
+
+        .main {
+          padding: 12px;
+        }
+
         .toolbar {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+          margin: -12px -12px 12px;
+          padding: 10px 12px;
+        }
+
+        .search {
+          grid-column: 1 / -1;
+          min-height: 40px;
+        }
+
+        .action-button {
+          width: 100%;
+          min-height: 40px;
+          padding: 0 10px;
+        }
+
+        .content-panel {
+          border-right: 0;
+          border-left: 0;
+          border-radius: 0;
+          box-shadow: none;
+          margin: 0 -12px;
+        }
+
+        .domain-header {
+          padding-top: 22px;
+          padding-bottom: 18px;
+        }
+
+        .domain-header h1 {
+          font-size: 1.62rem;
+        }
+
+        .domain-meta {
+          font-size: 0.94rem;
+        }
+
+        .document {
+          padding-top: 4px;
+          padding-bottom: 30px;
+        }
+
+        .lesson {
+          padding-top: 20px;
+          scroll-margin-top: 178px;
+        }
+
+        .markdown h1 {
+          font-size: 1.42rem;
+        }
+
+        .markdown h2 {
+          font-size: 1.24rem;
+        }
+
+        .markdown h3 {
+          font-size: 1.08rem;
+        }
+
+        .markdown ul {
+          margin-left: 18px;
+        }
+
+        .empty-state,
+        .error-state,
+        .loading-state {
+          padding: 34px 20px;
+        }
+
+        .test-panel {
+          padding: 20px 16px 30px;
+        }
+
+        .test-topbar {
+          gap: 16px;
+          padding: 18px;
+        }
+
+        .test-heading h1 {
+          font-size: 1.9rem;
+          line-height: 1.05;
+        }
+
+        .battery-picker-trigger {
+          min-height: 48px;
+          padding: 0 12px;
+        }
+
+        .battery-picker-popover {
+          position: fixed;
+          top: 112px;
+          right: 12px;
+          left: 12px;
+          width: auto;
+          max-height: calc(100vh - 136px);
+          overflow-y: auto;
         }
 
         .test-progress {
@@ -990,18 +1180,31 @@
         }
 
         .battery-picker-popover {
-          left: 0;
-          right: auto;
-          width: min(100%, 100vw - 40px);
+          left: 12px;
+          right: 12px;
+          width: auto;
         }
 
         .option-item {
           grid-template-columns: auto auto minmax(0, 1fr);
           align-items: start;
+          padding: 12px;
         }
 
-        .action-button {
-          width: 100%;
+        .question-card {
+          padding: 18px;
+        }
+
+        .question-title {
+          font-size: 1.16rem;
+        }
+
+        .test-actions {
+          justify-content: stretch;
+        }
+
+        .test-actions .action-button {
+          flex: 1 1 150px;
         }
       }
 
