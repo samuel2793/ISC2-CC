@@ -190,6 +190,13 @@ const textEncoder = new TextEncoder();
 const baseUrl = new URL(".", document.baseURI);
 const OFFICIAL_PASSING_SCORE = 700;
 const OFFICIAL_SCORE_MAX = 1000;
+const TEST_ORIGIN_ORDER = ["oficial", "udemy", "github", "otros"];
+const TEST_ORIGIN_LABELS = {
+  oficial: "Oficial",
+  udemy: "Udemy",
+  github: "GitHub",
+  otros: "Otros"
+};
 
 function encodePath(path) {
   return path.split("/").map(encodeURIComponent).join("/");
@@ -529,7 +536,12 @@ function answerIndex(question) {
   return -1;
 }
 
-function normalizeBattery(raw, sourceName, group = null) {
+function testOriginFromPath(path) {
+  const origin = path.split("/")[1];
+  return TEST_ORIGIN_ORDER.includes(origin) ? origin : "otros";
+}
+
+function normalizeBattery(raw, sourceName, group = null, origin = "otros") {
   if (!raw || typeof raw !== "object") {
     throw new Error(`${sourceName}: la bateria no es un objeto JSON valido`);
   }
@@ -578,6 +590,7 @@ function normalizeBattery(raw, sourceName, group = null) {
     titulo: raw.titulo || sourceName.replace(/\.json$/i, ""),
     descripcion: raw.descripcion || "",
     procedencia: raw.procedencia,
+    origen: origin,
     grupo: group,
     preguntas
   };
@@ -656,7 +669,7 @@ async function loadTestBatteries() {
   const batteries = await Promise.all(entries.map(async ({ file, group }) => {
     const path = resolveTestPath(file);
     const raw = await fetchJson(path);
-    return normalizeBattery(raw, path, group);
+    return normalizeBattery(raw, path, group, testOriginFromPath(path));
   }));
 
   return batteries;
@@ -694,37 +707,85 @@ async function loadTestsView(updateHash = true) {
 
 function renderTestHome(errorMessage = "") {
   const totalQuestions = testBatteries.reduce((sum, battery) => sum + battery.preguntas.length, 0);
-  const groupedBatteries = testBatteries.reduce((groups, battery, index) => {
-    const key = battery.grupo?.id || "__sin_grupo__";
-    const title = battery.grupo?.titulo || "Sin grupo";
-    if (!groups.has(key)) groups.set(key, { title, items: [] });
-    groups.get(key).items.push({ battery, index });
-    return groups;
+  const groupedByOrigin = testBatteries.reduce((origins, battery, index) => {
+    const originId = battery.origen || "otros";
+    if (!origins.has(originId)) {
+      origins.set(originId, {
+        id: originId,
+        title: TEST_ORIGIN_LABELS[originId] || originId,
+        items: [],
+        questions: 0,
+        groups: new Map()
+      });
+    }
+
+    const origin = origins.get(originId);
+    const groupId = battery.grupo?.id || `${originId}-sin-grupo`;
+    const groupTitle = battery.grupo?.titulo || "Sin grupo";
+    origin.items.push({ battery, index });
+    origin.questions += battery.preguntas.length;
+    if (!origin.groups.has(groupId)) origin.groups.set(groupId, { title: groupTitle, items: [] });
+    origin.groups.get(groupId).items.push({ battery, index });
+    return origins;
   }, new Map());
-  const options = [...groupedBatteries.entries()].map(([groupId, group]) => `
-    <section class="battery-group" data-group="${escapeHtml(groupId)}">
-      <div class="battery-group-header">
-        <div>
-          <p class="battery-group-title">${escapeHtml(group.title)}</p>
-          <p class="battery-group-meta">${group.items.length} baterias</p>
-        </div>
-        <div class="battery-group-actions">
-          <button class="battery-group-toggle" type="button" data-group-action="select" data-group-id="${escapeHtml(groupId)}">Marcar grupo</button>
-          <button class="battery-group-toggle" type="button" data-group-action="clear" data-group-id="${escapeHtml(groupId)}">Desmarcar grupo</button>
-        </div>
+  const orderedOrigins = [
+    ...TEST_ORIGIN_ORDER.filter((origin) => groupedByOrigin.has(origin)).map((origin) => groupedByOrigin.get(origin)),
+    ...[...groupedByOrigin.values()].filter((origin) => !TEST_ORIGIN_ORDER.includes(origin.id))
+  ];
+  const originControls = orderedOrigins.map((origin) => `
+    <section class="battery-origin-card" data-origin="${escapeHtml(origin.id)}">
+      <div>
+        <p class="battery-origin-title">${escapeHtml(origin.title)}</p>
+        <p class="battery-origin-meta">
+          <span data-origin-selected="${escapeHtml(origin.id)}">${origin.items.length}</span>/${origin.items.length} baterias · ${origin.questions} preguntas
+        </p>
       </div>
-      <div class="battery-group-list">
-        ${group.items.map(({ battery, index }) => `
-          <label class="battery-option">
-            <input type="checkbox" name="testBatteryOption" value="${index}" checked data-group-id="${escapeHtml(groupId)}">
-            <span>
-              <span class="battery-option-title">${escapeHtml(battery.titulo)}</span>
-              <span class="battery-option-meta">${battery.preguntas.length} preguntas</span>
-            </span>
-          </label>
-        `).join("")}
+      <div class="battery-origin-actions">
+        <button class="battery-group-toggle" type="button" data-origin-action="select" data-origin-id="${escapeHtml(origin.id)}">Todo</button>
+        <button class="battery-group-toggle" type="button" data-origin-action="clear" data-origin-id="${escapeHtml(origin.id)}">Nada</button>
       </div>
     </section>
+  `).join("");
+  const options = orderedOrigins.map((origin, originIndex) => `
+    <details class="battery-origin-section" data-origin="${escapeHtml(origin.id)}" ${originIndex === 0 ? "open" : ""}>
+      <summary class="battery-origin-summary">
+        <span>
+          <span class="battery-origin-title">${escapeHtml(origin.title)}</span>
+          <span class="battery-origin-meta">${origin.items.length} baterias · ${origin.questions} preguntas</span>
+        </span>
+        <span class="battery-origin-summary-actions">
+          <button class="battery-group-toggle" type="button" data-origin-action="select" data-origin-id="${escapeHtml(origin.id)}">Marcar origen</button>
+          <button class="battery-group-toggle" type="button" data-origin-action="clear" data-origin-id="${escapeHtml(origin.id)}">Desmarcar origen</button>
+        </span>
+      </summary>
+      <div class="battery-origin-groups">
+        ${[...origin.groups.entries()].map(([groupId, group]) => `
+          <section class="battery-group" data-group="${escapeHtml(groupId)}">
+            <div class="battery-group-header">
+              <div>
+                <p class="battery-group-title">${escapeHtml(group.title)}</p>
+                <p class="battery-group-meta">${group.items.length} baterias</p>
+              </div>
+              <div class="battery-group-actions">
+                <button class="battery-group-toggle" type="button" data-group-action="select" data-group-id="${escapeHtml(groupId)}">Marcar grupo</button>
+                <button class="battery-group-toggle" type="button" data-group-action="clear" data-group-id="${escapeHtml(groupId)}">Desmarcar grupo</button>
+              </div>
+            </div>
+            <div class="battery-group-list">
+              ${group.items.map(({ battery, index }) => `
+                <label class="battery-option">
+                  <input type="checkbox" name="testBatteryOption" value="${index}" checked data-origin-id="${escapeHtml(origin.id)}" data-group-id="${escapeHtml(groupId)}">
+                  <span>
+                    <span class="battery-option-title">${escapeHtml(battery.titulo)}</span>
+                    <span class="battery-option-meta">${battery.preguntas.length} preguntas</span>
+                  </span>
+                </label>
+              `).join("")}
+            </div>
+          </section>
+        `).join("")}
+      </div>
+    </details>
   `).join("");
 
   content.innerHTML = `
@@ -753,6 +814,9 @@ function renderTestHome(errorMessage = "") {
                   <div class="battery-picker-head">
                     <span class="battery-picker-headline">Selecciona las baterias a combinar</span>
                     <p class="test-meta">Puedes mezclar varias fuentes en una sola sesion. Las preguntas se barajan al iniciar.</p>
+                    <div class="battery-origin-controls">
+                      ${originControls || '<p class="test-meta">No hay origenes cargados.</p>'}
+                    </div>
                     <div class="battery-actions">
                       <button id="selectAllBatteriesButton" class="battery-toggle" type="button">Marcar todas</button>
                       <button id="clearAllBatteriesButton" class="battery-toggle" type="button">Desmarcar todas</button>
@@ -771,8 +835,8 @@ function renderTestHome(errorMessage = "") {
 
         <section class="test-dashboard">
           <div class="test-stat test-stat-emphasis">
-            <span class="test-stat-value">${groupedBatteries.size}</span>
-            <span class="test-stat-label">Conjuntos cargados</span>
+            <span class="test-stat-value">${orderedOrigins.length}</span>
+            <span class="test-stat-label">Origenes cargados</span>
           </div>
           <div class="test-stat">
             <span class="test-stat-value">${testBatteries.length}</span>
@@ -810,6 +874,7 @@ function renderTestHome(errorMessage = "") {
   function updateTriggerLabel() {
     const selected = selectedBatteries();
     if (!triggerValue) return;
+    updateOriginCounts();
     if (!selected.length) {
       triggerValue.textContent = "Ninguna bateria";
       return;
@@ -822,7 +887,21 @@ function renderTestHome(errorMessage = "") {
       triggerValue.textContent = selected[0].titulo;
       return;
     }
-    triggerValue.textContent = `${selected.length} baterias seleccionadas`;
+    const selectedOrigins = TEST_ORIGIN_ORDER
+      .filter((origin) => selected.some((battery) => battery.origen === origin))
+      .map((origin) => TEST_ORIGIN_LABELS[origin]);
+    triggerValue.textContent = selectedOrigins.length
+      ? `${selected.length} baterias: ${selectedOrigins.join(", ")}`
+      : `${selected.length} baterias seleccionadas`;
+  }
+
+  function updateOriginCounts() {
+    orderedOrigins.forEach((origin) => {
+      const selectedInOrigin = batteryInputs().filter((input) => input.dataset.originId === origin.id && input.checked).length;
+      document.querySelectorAll(`[data-origin-selected="${origin.id}"]`).forEach((item) => {
+        item.textContent = selectedInOrigin;
+      });
+    });
   }
 
   function closePopover() {
@@ -853,15 +932,24 @@ function renderTestHome(errorMessage = "") {
     setAllBatterySelections(false);
     updateTriggerLabel();
   });
+  popover?.querySelectorAll("[data-origin-action]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const originId = button.getAttribute("data-origin-id");
+      const checked = button.getAttribute("data-origin-action") === "select";
+      setBatterySelectionsByOrigin(originId, checked);
+      updateTriggerLabel();
+    });
+  });
   popover?.querySelectorAll("[data-group-action]").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
       const groupId = button.getAttribute("data-group-id");
       const checked = button.getAttribute("data-group-action") === "select";
-      popover.querySelectorAll(`input[name="testBatteryOption"][data-group-id="${groupId}"]`).forEach((input) => {
-        input.checked = checked;
-      });
+      setBatterySelectionsByGroup(groupId, checked);
       updateTriggerLabel();
-      startSelectedBatteries();
     });
   });
   testPopoverOutsideHandler = (event) => {
@@ -903,8 +991,12 @@ function startBattery(battery) {
 }
 
 function selectedBatteries() {
-  const checked = [...document.querySelectorAll('input[name="testBatteryOption"]:checked')];
+  const checked = batteryInputs().filter((input) => input.checked);
   return checked.map((input) => testBatteries[Number(input.value)]).filter(Boolean);
+}
+
+function batteryInputs() {
+  return [...document.querySelectorAll('input[name="testBatteryOption"]')];
 }
 
 function combineBatteries(batteries) {
@@ -934,8 +1026,22 @@ function startSelectedBatteries() {
 }
 
 function setAllBatterySelections(checked) {
-  document.querySelectorAll('input[name="testBatteryOption"]').forEach((input) => {
+  batteryInputs().forEach((input) => {
     input.checked = checked;
+  });
+  startSelectedBatteries();
+}
+
+function setBatterySelectionsByOrigin(originId, checked) {
+  batteryInputs().forEach((input) => {
+    if (input.dataset.originId === originId) input.checked = checked;
+  });
+  startSelectedBatteries();
+}
+
+function setBatterySelectionsByGroup(groupId, checked) {
+  batteryInputs().forEach((input) => {
+    if (input.dataset.groupId === groupId) input.checked = checked;
   });
   startSelectedBatteries();
 }
