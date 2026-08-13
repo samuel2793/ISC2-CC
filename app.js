@@ -197,6 +197,11 @@ const TEST_ORIGIN_LABELS = {
   github: "GitHub",
   otros: "Otros"
 };
+const TEST_DOMAIN_OPTIONS = DOMAINS.map((domain, index) => ({
+  id: domain.id,
+  number: index + 1,
+  label: `${domain.number}: ${domain.title}`
+}));
 
 function encodePath(path) {
   return path.split("/").map(encodeURIComponent).join("/");
@@ -536,6 +541,23 @@ function answerIndex(question) {
   return -1;
 }
 
+function normalizeQuestionDomain(value) {
+  if (value === undefined || value === null || value === "") return null;
+  if (Number.isInteger(value) && value >= 1 && value <= DOMAINS.length) return `dominio-${value}`;
+  if (typeof value === "string") {
+    const normalized = value.toLowerCase().trim();
+    const numericMatch = normalized.match(/\d+/);
+    if (normalized.startsWith("dominio-")) {
+      return DOMAINS.some((domain) => domain.id === normalized) ? normalized : null;
+    }
+    if (numericMatch) {
+      const number = Number(numericMatch[0]);
+      if (number >= 1 && number <= DOMAINS.length) return `dominio-${number}`;
+    }
+  }
+  return null;
+}
+
 function testOriginFromPath(path) {
   const origin = path.split("/")[1];
   return TEST_ORIGIN_ORDER.includes(origin) ? origin : "otros";
@@ -574,7 +596,8 @@ function normalizeBattery(raw, sourceName, group = null, origin = "otros") {
       pregunta: texto,
       opciones: opciones.map(String),
       respuesta: question.respuesta ?? question.correcta,
-      explicacion: question.explicacion ? String(question.explicacion) : ""
+      explicacion: question.explicacion ? String(question.explicacion) : "",
+      dominio: normalizeQuestionDomain(question.dominio ?? question.domain ?? question.dominioId ?? question.domainId)
     };
 
     const correct = answerIndex(normalized);
@@ -800,6 +823,16 @@ function renderTestHome(errorMessage = "") {
 
           <div class="test-selector">
             <label class="field-label">
+              Dominio
+              <select id="testDomainFilter" class="test-domain-select">
+                <option value="">Todos los dominios</option>
+                ${TEST_DOMAIN_OPTIONS.map((domain) => `
+                  <option value="${domain.id}">${escapeHtml(domain.label)}</option>
+                `).join("")}
+              </select>
+            </label>
+
+            <label class="field-label">
               Baterias activas
               <div class="battery-picker-wrap">
                 <button id="testBatteryTrigger" class="battery-picker-trigger" type="button" aria-haspopup="dialog" aria-expanded="false">
@@ -865,6 +898,7 @@ function renderTestHome(errorMessage = "") {
   const popover = document.querySelector("#testBatteryPopover");
   const selectAllButton = document.querySelector("#selectAllBatteriesButton");
   const clearAllButton = document.querySelector("#clearAllBatteriesButton");
+  const domainFilter = document.querySelector("#testDomainFilter");
 
   if (testPopoverOutsideHandler) {
     document.removeEventListener("click", testPopoverOutsideHandler);
@@ -920,6 +954,7 @@ function renderTestHome(errorMessage = "") {
     updateTriggerLabel();
     startSelectedBatteries();
   });
+  domainFilter?.addEventListener("change", startSelectedBatteries);
   trigger?.addEventListener("click", togglePopover);
   trigger?.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closePopover();
@@ -999,20 +1034,34 @@ function batteryInputs() {
   return [...document.querySelectorAll('input[name="testBatteryOption"]')];
 }
 
-function combineBatteries(batteries) {
+function selectedTestDomain() {
+  const value = document.querySelector("#testDomainFilter")?.value || "";
+  return TEST_DOMAIN_OPTIONS.some((domain) => domain.id === value) ? value : "";
+}
+
+function combineBatteries(batteries, domainId = "") {
+  const questions = batteries.flatMap((battery) => battery.preguntas)
+    .filter((question) => !domainId || question.dominio === domainId);
+  const domainLabel = TEST_DOMAIN_OPTIONS.find((domain) => domain.id === domainId)?.label || "";
+
   return {
     id: batteries.map((battery) => battery.id).join("+"),
-    titulo: batteries.length === 1 ? batteries[0].titulo : `Bateria combinada (${batteries.length})`,
-    descripcion: batteries.length === 1
+    titulo: batteries.length === 1 && !domainId ? batteries[0].titulo : `Bateria combinada (${batteries.length})`,
+    descripcion: domainLabel
+      ? `Preguntas filtradas por ${domainLabel}.`
+      : batteries.length === 1
       ? batteries[0].descripcion
       : "Union de varias baterias seleccionadas.",
     procedencia: batteries.map((battery) => battery.procedencia).join(" | "),
-    preguntas: batteries.flatMap((battery) => battery.preguntas)
+    dominioFiltro: domainId || null,
+    preguntas: questions
   };
 }
 
 function startSelectedBatteries() {
   const batteries = selectedBatteries();
+  const domainId = selectedTestDomain();
+  const domainLabel = TEST_DOMAIN_OPTIONS.find((domain) => domain.id === domainId)?.label || "";
   if (!batteries.length) {
     const mount = document.querySelector("#testMount");
     if (mount) {
@@ -1022,7 +1071,17 @@ function startSelectedBatteries() {
     return;
   }
 
-  startBattery(combineBatteries(batteries));
+  const combined = combineBatteries(batteries, domainId);
+  if (!combined.preguntas.length) {
+    const mount = document.querySelector("#testMount");
+    if (mount) {
+      mount.innerHTML = `<div class="empty-state">No hay preguntas etiquetadas para ${escapeHtml(domainLabel)} en las baterias seleccionadas.</div>`;
+    }
+    currentTestRun = null;
+    return;
+  }
+
+  startBattery(combined);
 }
 
 function setAllBatterySelections(checked) {
@@ -1080,7 +1139,7 @@ function renderCurrentQuestion() {
   const isCorrect = answered && currentAnswer === correctIndex;
   const progressPercent = Math.round(((position + (answered ? 1 : 0)) / order.length) * 100);
   const score = scoreSnapshot(currentTestRun);
-  const batteryLabel = battery.procedencia || battery.titulo;
+  const questionDomainLabel = TEST_DOMAIN_OPTIONS.find((domain) => domain.id === question.dominio)?.label || "";
 
   const options = question.opciones.map((option, optionIndex) => {
     let optionClass = "";
@@ -1124,6 +1183,7 @@ function renderCurrentQuestion() {
         <article class="question-card${answered ? (isCorrect ? " correct" : " incorrect") : ""}">
           <div class="question-eyebrow">
             <span class="question-chip">Sesion activa</span>
+            ${questionDomainLabel ? `<span class="question-chip muted">${escapeHtml(questionDomainLabel)}</span>` : ""}
             ${battery.descripcion ? `<span class="question-chip muted">${escapeHtml(battery.descripcion)}</span>` : ""}
           </div>
           <p class="question-title">${escapeHtml(question.pregunta)}</p>

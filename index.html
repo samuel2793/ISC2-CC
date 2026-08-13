@@ -471,6 +471,23 @@
         width: min(400px, 100%);
       }
 
+      .test-domain-select {
+        width: min(400px, 100%);
+        min-height: 46px;
+        border: 1px solid #acc0cb;
+        border-radius: 8px;
+        background: #ffffff;
+        color: var(--text);
+        cursor: pointer;
+        font-weight: 700;
+        padding: 0 12px;
+      }
+
+      .test-domain-select:focus {
+        border-color: var(--accent);
+        outline: 3px solid rgba(23, 107, 135, 0.16);
+      }
+
       .battery-picker-trigger {
         display: flex;
         align-items: center;
@@ -1173,6 +1190,10 @@
         }
 
         .battery-picker-wrap {
+          width: 100%;
+        }
+
+        .test-domain-select {
           width: 100%;
         }
 
