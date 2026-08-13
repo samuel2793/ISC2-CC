@@ -178,6 +178,8 @@ const searchInput = document.querySelector("#searchInput");
 const epubButton = document.querySelector("#epubButton");
 const printButton = document.querySelector("#printButton");
 const testMenuButton = document.querySelector("#testMenuButton");
+const menuToggle = document.querySelector("#menuToggle");
+const menuBackdrop = document.querySelector("#menuBackdrop");
 
 let activeDomain = null;
 let activeLessons = [];
@@ -357,6 +359,16 @@ function domainFromHash(hash) {
   return DOMAINS.find((domain) => hash === domain.id || hash.startsWith(`${domain.id}-`));
 }
 
+function setMobileMenuOpen(isOpen) {
+  document.body.classList.toggle("menu-open", isOpen);
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+  menuToggle?.setAttribute("aria-label", isOpen ? "Cerrar menu" : "Abrir menu");
+}
+
+function closeMobileMenu() {
+  setMobileMenuOpen(false);
+}
+
 function renderMenu() {
   menu.innerHTML = DOMAINS.map((domain) => `
     <button class="domain-button" type="button" data-domain="${domain.id}">
@@ -369,6 +381,7 @@ function renderMenu() {
     const button = event.target.closest("[data-domain]");
     if (!button) return;
     loadDomain(button.dataset.domain);
+    closeMobileMenu();
   });
 }
 
@@ -1554,7 +1567,23 @@ async function downloadEpub() {
 searchInput.addEventListener("input", filterLessons);
 epubButton.addEventListener("click", downloadEpub);
 printButton.addEventListener("click", () => window.print());
-testMenuButton.addEventListener("click", () => loadTestsView());
+testMenuButton.addEventListener("click", () => {
+  loadTestsView();
+  closeMobileMenu();
+});
+menuToggle.addEventListener("click", () => {
+  setMobileMenuOpen(!document.body.classList.contains("menu-open"));
+});
+menuBackdrop.addEventListener("click", closeMobileMenu);
+tocList.addEventListener("click", (event) => {
+  if (event.target.closest("a")) closeMobileMenu();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMobileMenu();
+});
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 920) closeMobileMenu();
+});
 window.addEventListener("hashchange", () => {
   const hash = location.hash.slice(1);
 
