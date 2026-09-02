@@ -43,7 +43,7 @@ const DOMAINS = [
   {
     id: "dominio-2",
     number: "Dominio 2",
-    title: "Respuesta a Incidentes, Continuidad del Negocio y Recuperacion ante Desastres",
+    title: "Gobernanza de la Seguridad",
     path: "Dominio 2: Respuesta a Incidentes, Continuidad del Negocio y Recuperacion ante Desastres",
     files: [
       "01.Terminologia de incidentes.md",
@@ -58,7 +58,13 @@ const DOMAINS = [
       "10.Recuperacion ante desastres en el mundo real.md",
       "11.Componentes de un plan de continuidad del negocio.md",
       "12.Continuidad del negocio en accion.md",
-      "13.Componentes de un plan de recuperacion ante desastres.md"
+      "13.Componentes de un plan de recuperacion ante desastres.md",
+      "14.Planificacion de gobernanza riesgo y cumplimiento (GRC).md",
+      "15.Redundancia continuidad y recuperacion.md",
+      "16.Cultura liderazgo y concienciacion de seguridad.md",
+      "17.Ingenieria social phishing y proteccion de contrasenas.md",
+      "18.Metricas KRI cuadros de mando y reportes.md",
+      "19.IA aplicada a la gobernanza y resiliencia.md"
     ]
   },
   {
@@ -328,11 +334,10 @@ function renderMarkdown(markdown, basePath, options = {}) {
     const badge = trimmed.match(/^\[!BADGE:\s*(.+)\]$/i);
     if (badge) {
       const label = badge[1].trim();
-      const badgeType = /^LEGADO\b/i.test(label)
-        ? "legacy"
-        : /^NUEVO\s+2026\b/i.test(label)
-          ? "new"
-          : "info";
+      let badgeType = "info";
+      if (/^LEGADO\b/i.test(label)) badgeType = "legacy";
+      if (/^REUBICADO\s+2026\b/i.test(label)) badgeType = "moved";
+      if (/^NUEVO\s+2026\b/i.test(label)) badgeType = "new";
       blocks.push(`<span class="content-badge ${badgeType}">${parseInline(label, basePath, options)}</span>`);
       index += 1;
       continue;
