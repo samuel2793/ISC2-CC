@@ -395,6 +395,33 @@
         padding: 0.08em 0.28em;
       }
 
+      .markdown .content-badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 27px;
+        margin: 0 0 14px;
+        border: 1px solid #b7ced8;
+        border-radius: 999px;
+        background: var(--panel-soft);
+        color: var(--accent-strong);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.025em;
+        padding: 0 11px;
+      }
+
+      .markdown .content-badge.new {
+        border-color: #91c7a7;
+        background: #eefaf2;
+        color: #206342;
+      }
+
+      .markdown .content-badge.legacy {
+        border-color: #dfba70;
+        background: #fff8e8;
+        color: #76520b;
+      }
+
       .empty-state,
       .error-state,
       .loading-state {

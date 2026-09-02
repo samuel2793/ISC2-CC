@@ -32,7 +32,12 @@ const DOMAINS = [
       "25.Elementos de gobernanza.md",
       "26.Importancia de los elementos de gobernanza.md",
       "27.Codigo profesional de conducta.md",
-      "28.Ejemplo teorico Codigo de Etica.md"
+      "28.Ejemplo teorico Codigo de Etica.md",
+      "29.Autenticacion autorizacion y accounting (AAA).md",
+      "30.Ciclo de vida de la gestion del riesgo.md",
+      "31.Marcos directrices y estandares de ciberseguridad.md",
+      "32.Due care y due diligence.md",
+      "33.Principios de seguridad aplicados a la inteligencia artificial.md"
     ]
   },
   {
@@ -320,6 +325,19 @@ function renderMarkdown(markdown, basePath, options = {}) {
       continue;
     }
 
+    const badge = trimmed.match(/^\[!BADGE:\s*(.+)\]$/i);
+    if (badge) {
+      const label = badge[1].trim();
+      const badgeType = /^LEGADO\b/i.test(label)
+        ? "legacy"
+        : /^NUEVO\s+2026\b/i.test(label)
+          ? "new"
+          : "info";
+      blocks.push(`<span class="content-badge ${badgeType}">${parseInline(label, basePath, options)}</span>`);
+      index += 1;
+      continue;
+    }
+
     const image = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
     if (image) {
       const alt = escapeHtml(image[1] || "imagen");
@@ -355,7 +373,7 @@ function renderMarkdown(markdown, basePath, options = {}) {
     index += 1;
     while (index < lines.length) {
       const next = lines[index].trim();
-      if (!next || next.startsWith("#") || next.startsWith("- ") || next.startsWith("![") || /^<video\b/i.test(next)) {
+      if (!next || next.startsWith("#") || next.startsWith("- ") || next.startsWith("![") || /^\[!BADGE:/i.test(next) || /^<video\b/i.test(next)) {
         break;
       }
       paragraph.push(next);
