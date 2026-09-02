@@ -103,7 +103,7 @@ const DOMAINS = [
   {
     id: "dominio-4",
     number: "Dominio 4",
-    title: "Seguridad de Redes",
+    title: "Conceptos de Seguridad de Redes y de la Nube",
     path: "Dominio 4: Seguridad de Redes",
     files: [
       "01.Redes.md",
@@ -146,7 +146,11 @@ const DOMAINS = [
       "38.Caracteristicas de la microsegmentacion.md",
       "39.Red de area local virtual (VLAN).md",
       "40.Segmentacion con red de area local virtual (VLAN).md",
-      "41.Red privada virtual (VPN).md"
+      "41.Red privada virtual (VPN).md",
+      "42.Bluetooth sistemas embebidos ICS e IoT.md",
+      "43.Zonas de firewall y arquitectura de segmentacion.md",
+      "44.Caracteristicas y responsabilidad compartida en la nube.md",
+      "45.IA aplicada a redes y seguridad cloud.md"
     ]
   },
   {
