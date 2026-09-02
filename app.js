@@ -411,6 +411,19 @@ function titleFromFile(file) {
   return file.replace(/^\d+\./, "").replace(/\.md$/, "");
 }
 
+function lessonBadge(markdown = "") {
+  const match = markdown.match(/^\[!BADGE:\s*(.+)\]$/im);
+  if (!match) return null;
+
+  const label = match[1].trim();
+  if (/^NUEVO\s+2026\b/i.test(label)) return { text: "Nuevo", type: "new", label };
+  if (/^REUBICADO\s+2026\b/i.test(label)) return { text: "Movido", type: "moved", label };
+  if (/^LEGADO\b/i.test(label)) return { text: "Legado", type: "legacy", label };
+  if (/^AMPLIACION\b/i.test(label)) return { text: "Extra", type: "extra", label };
+  if (/^COMPARTIDO\s+2026\b/i.test(label)) return { text: "Compartido", type: "shared", label };
+  return { text: "Nota", type: "info", label };
+}
+
 function lessonId(domainId, file) {
   return `${domainId}-${file.slice(0, 2)}`;
 }
@@ -445,10 +458,24 @@ function renderMenu() {
   });
 }
 
-function renderToc(domain) {
-  tocList.innerHTML = domain.files.map((file) => `
-    <li><a href="#${lessonId(domain.id, file)}">${escapeHtml(titleFromFile(file))}</a></li>
-  `).join("");
+function renderToc(domain, lessons = []) {
+  const lessonsByFile = new Map(lessons.map((lesson) => [lesson.file, lesson]));
+
+  tocList.innerHTML = domain.files.map((file) => {
+    const badge = lessonBadge(lessonsByFile.get(file)?.markdown);
+    const badgeHtml = badge
+      ? `<span class="toc-badge ${badge.type}" title="${escapeHtml(badge.label)}">${escapeHtml(badge.text)}</span>`
+      : "";
+
+    return `
+      <li>
+        <a href="#${lessonId(domain.id, file)}">
+          <span class="toc-item-title">${escapeHtml(titleFromFile(file))}</span>
+          ${badgeHtml}
+        </a>
+      </li>
+    `;
+  }).join("");
 }
 
 function setActiveButton(domainId) {
@@ -487,6 +514,7 @@ async function loadDomain(domainId, updateHash = true, scrollTarget = null) {
   try {
     const lessons = await Promise.all(domain.files.map((file) => fetchLesson(domain, file)));
     activeLessons = lessons;
+    renderToc(domain, lessons);
     renderDomain(domain, lessons);
 
     if (updateHash) {

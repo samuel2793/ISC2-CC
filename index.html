@@ -211,13 +211,66 @@
       }
 
       .toc-list a {
-        display: block;
+        display: flex;
+        gap: 7px;
+        align-items: flex-start;
         border-radius: 6px;
         color: var(--muted);
         padding: 6px 8px;
         text-decoration: none;
         font-size: 0.9rem;
         line-height: 1.35;
+      }
+
+      .toc-item-title {
+        min-width: 0;
+        flex: 1;
+      }
+
+      .toc-badge {
+        display: inline-flex;
+        flex: none;
+        align-items: center;
+        min-height: 18px;
+        margin-top: 1px;
+        border: 1px solid #b7ced8;
+        border-radius: 999px;
+        background: var(--panel-soft);
+        color: var(--accent-strong);
+        font-size: 0.62rem;
+        font-weight: 800;
+        line-height: 1;
+        padding: 0 6px;
+      }
+
+      .toc-badge.new {
+        border-color: #91c7a7;
+        background: #eefaf2;
+        color: #206342;
+      }
+
+      .toc-badge.moved {
+        border-color: #9db4dc;
+        background: #f0f5ff;
+        color: #34558b;
+      }
+
+      .toc-badge.legacy {
+        border-color: #dfba70;
+        background: #fff8e8;
+        color: #76520b;
+      }
+
+      .toc-badge.shared {
+        border-color: #b5a2d8;
+        background: #f7f2ff;
+        color: #62468f;
+      }
+
+      .toc-badge.extra {
+        border-color: #b7ced8;
+        background: #f2f8fa;
+        color: #3d6472;
       }
 
       .toc-list a:hover,
