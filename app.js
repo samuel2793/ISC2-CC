@@ -217,15 +217,17 @@ const textEncoder = new TextEncoder();
 const baseUrl = new URL(".", document.baseURI);
 const OFFICIAL_PASSING_SCORE = 700;
 const OFFICIAL_SCORE_MAX = 1000;
-const TEST_ORIGIN_ORDER = ["oficial", "udemy", "github", "otros"];
+const TEST_ORIGIN_ORDER = ["oficial", "gpt-2026", "udemy", "github", "otros"];
 const TEST_ORIGIN_LABELS = {
   oficial: "Oficial",
+  "gpt-2026": "GPT · CC 2026",
   udemy: "Udemy",
   github: "GitHub",
   otros: "Otros"
 };
 const TEST_ORIGIN_ICONS = {
   oficial: "🛡️",
+  "gpt-2026": "✦",
   udemy: "🎓",
   github: "⌘",
   otros: "⋯"
