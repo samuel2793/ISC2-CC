@@ -156,7 +156,7 @@ const DOMAINS = [
   {
     id: "dominio-5",
     number: "Dominio 5",
-    title: "Operaciones de Seguridad",
+    title: "Operaciones de Seguridad y Respuesta a Incidentes",
     path: "Dominio 5: Operaciones de Seguridad",
     files: [
       "01.Manejo de datos.md",
@@ -185,7 +185,14 @@ const DOMAINS = [
       "24.Phishing.md",
       "25.Cifrado asimetrico.md",
       "26.Cifrado simetrico.md",
-      "27.Ingenieria social.md"
+      "27.Ingenieria social.md",
+      "28.Enmascaramiento sanitizacion y criptografia poscuantica.md",
+      "29.Triaje y priorizacion de eventos de seguridad.md",
+      "30.Actores inteligencia y frameworks de amenazas.md",
+      "31.Plan y ejercicios de respuesta a incidentes.md",
+      "32.Ciclo de vida y proteccion de activos.md",
+      "33.Pruebas de seguridad tecnicas y fisicas.md",
+      "34.IA en operaciones de seguridad y respuesta a incidentes.md"
     ]
   }
 ];
