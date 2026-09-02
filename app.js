@@ -70,7 +70,7 @@ const DOMAINS = [
   {
     id: "dominio-3",
     number: "Dominio 3",
-    title: "Conceptos de Control de Acceso",
+    title: "Conceptos de Gestion de Identidades y Accesos (IAM)",
     path: "Dominio 3: Conceptos de Control de Acceso",
     files: [
       "01.Controles de seguridad.md",
@@ -93,7 +93,11 @@ const DOMAINS = [
       "18.Control de acceso obligatorio (MAC) en el lugar de trabajo.md",
       "19.Control de acceso basado en roles.md",
       "20.Controles y riesgos.md",
-      "21.Control de acceso basado en roles (RBAC) en el lugar de trabajo.md"
+      "21.Control de acceso basado en roles (RBAC) en el lugar de trabajo.md",
+      "22.Ciclo de vida de identidades y accesos.md",
+      "23.Frameworks y herramientas de IAM.md",
+      "24.Modelos modernos de control de acceso.md",
+      "25.IA identidades automatizadas y autenticacion adaptativa.md"
     ]
   },
   {
