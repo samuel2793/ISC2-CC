@@ -262,7 +262,13 @@ const SUMMARIES = [
     file: "Resumenes y chuletas/Dominio 3 - Identidades y accesos.md",
     available: true
   },
-  { id: "resumen-dominio-4", number: "Dominio 4", title: "Redes y nube", available: false },
+  {
+    id: "resumen-dominio-4",
+    number: "Dominio 4",
+    title: "Redes y nube",
+    file: "Resumenes y chuletas/Dominio 4 - Redes y nube.md",
+    available: true
+  },
   { id: "resumen-dominio-5", number: "Dominio 5", title: "Operaciones de seguridad", available: false }
 ];
 
