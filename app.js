@@ -203,6 +203,7 @@ const content = document.querySelector("#content");
 const searchInput = document.querySelector("#searchInput");
 const epubButton = document.querySelector("#epubButton");
 const printButton = document.querySelector("#printButton");
+const summaryMenuButton = document.querySelector("#summaryMenuButton");
 const testMenuButton = document.querySelector("#testMenuButton");
 const menuToggle = document.querySelector("#menuToggle");
 const menuBackdrop = document.querySelector("#menuBackdrop");
@@ -238,6 +239,20 @@ const TEST_DOMAIN_OPTIONS = DOMAINS.map((domain, index) => ({
   shortLabel: domain.number,
   label: `${domain.number}: ${domain.title}`
 }));
+
+const SUMMARIES = [
+  {
+    id: "resumen-dominio-1",
+    number: "Dominio 1",
+    title: "Principios de Seguridad",
+    file: "Resumenes y chuletas/Dominio 1 - Principios de Seguridad.md",
+    available: true
+  },
+  { id: "resumen-dominio-2", number: "Dominio 2", title: "Gobernanza y resiliencia", available: false },
+  { id: "resumen-dominio-3", number: "Dominio 3", title: "Identidades y accesos", available: false },
+  { id: "resumen-dominio-4", number: "Dominio 4", title: "Redes y nube", available: false },
+  { id: "resumen-dominio-5", number: "Dominio 5", title: "Operaciones de seguridad", available: false }
+];
 
 function encodePath(path) {
   return path.split("/").map(encodeURIComponent).join("/");
@@ -357,6 +372,29 @@ function renderMarkdown(markdown, basePath, options = {}) {
       if (/^NUEVO\s+2026\b/i.test(label)) badgeType = "new";
       blocks.push(`<span class="content-badge ${badgeType}">${parseInline(label, basePath, options)}</span>`);
       index += 1;
+      continue;
+    }
+
+    if (trimmed.startsWith("> ")) {
+      const quoteLines = [];
+      while (index < lines.length && lines[index].trim().startsWith("> ")) {
+        quoteLines.push(lines[index].trim().slice(2));
+        index += 1;
+      }
+      blocks.push(`<blockquote>${parseInline(quoteLines.join(" "), basePath, options)}</blockquote>`);
+      continue;
+    }
+
+    if (trimmed.startsWith("|") && index + 1 < lines.length && /^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(lines[index + 1].trim())) {
+      const parseRow = (row) => row.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((cell) => cell.trim());
+      const headers = parseRow(trimmed);
+      index += 2;
+      const rows = [];
+      while (index < lines.length && lines[index].trim().startsWith("|")) {
+        rows.push(parseRow(lines[index].trim()));
+        index += 1;
+      }
+      blocks.push(`<div class="table-wrap"><table><thead><tr>${headers.map((cell) => `<th>${parseInline(cell, basePath, options)}</th>`).join("")}</tr></thead><tbody>${rows.map((row) => `<tr>${headers.map((_, cellIndex) => `<td>${parseInline(row[cellIndex] || "", basePath, options)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
       continue;
     }
 
@@ -482,6 +520,7 @@ function setActiveButton(domainId) {
   document.querySelectorAll(".domain-button").forEach((button) => {
     button.classList.toggle("active", button.dataset.domain === domainId);
   });
+  summaryMenuButton.classList.remove("active");
   testMenuButton.classList.remove("active");
 }
 
@@ -780,6 +819,7 @@ function setTestViewActive(updateHash = true) {
   document.querySelectorAll(".domain-button").forEach((button) => {
     button.classList.remove("active");
   });
+  summaryMenuButton.classList.remove("active");
   testMenuButton.classList.add("active");
   tocList.innerHTML = "";
   searchInput.value = "";
@@ -789,6 +829,82 @@ function setTestViewActive(updateHash = true) {
   if (updateHash) {
     history.replaceState(null, "", "#tests");
   }
+}
+
+function setSummaryViewActive(updateHash = true) {
+  activeDomain = null;
+  activeLessons = [];
+  document.querySelectorAll(".domain-button").forEach((button) => button.classList.remove("active"));
+  summaryMenuButton.classList.add("active");
+  testMenuButton.classList.remove("active");
+  tocList.innerHTML = "";
+  searchInput.value = "";
+  searchInput.disabled = true;
+  searchInput.placeholder = "Los resúmenes no necesitan búsqueda";
+
+  if (updateHash) history.replaceState(null, "", "#resumenes");
+}
+
+function renderSummaryHome(errorMessage = "") {
+  const cards = SUMMARIES.map((summary) => {
+    const tag = summary.available ? "Disponible" : "Próximamente";
+    const tagClass = summary.available ? "ready" : "pending";
+    const tagHtml = summary.available
+      ? `<button class="summary-card${summary.id === "resumen-dominio-1" ? " active" : ""}" type="button" data-summary="${summary.id}">`
+      : `<div class="summary-card">`;
+
+    return `${tagHtml}
+      <span class="summary-card-number">${escapeHtml(summary.number)}</span>
+      <span class="summary-card-title">${escapeHtml(summary.title)}</span>
+      <span class="summary-card-status ${tagClass}">${tag}</span>
+    ${summary.available ? "</button>" : "</div>"}`;
+  }).join("");
+
+  content.innerHTML = `
+    <div class="summary-panel">
+      <header class="summary-heading">
+        <span class="summary-kicker">Repaso rápido para el examen</span>
+        <h1>Resúmenes / chuletas</h1>
+        <p>Ideas clave, comparaciones y pistas de examen para repasar cada dominio sin volver a leer todo el temario.</p>
+      </header>
+      <div class="summary-grid">${cards}</div>
+      ${errorMessage
+        ? `<div class="error-state">${escapeHtml(errorMessage)}</div>`
+        : `<div id="summaryDocument" class="summary-document"><div class="loading-state">Cargando chuleta...</div></div>`}
+    </div>
+  `;
+
+  if (!errorMessage) {
+    document.querySelectorAll("[data-summary]").forEach((button) => {
+      button.addEventListener("click", () => loadSummary(button.dataset.summary));
+    });
+  }
+}
+
+async function loadSummary(summaryId = "resumen-dominio-1", updateHash = true) {
+  const summary = SUMMARIES.find((item) => item.id === summaryId && item.available) || SUMMARIES[0];
+  setSummaryViewActive(false);
+  renderSummaryHome();
+  document.querySelectorAll("[data-summary]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.summary === summary.id);
+  });
+
+  const mount = document.querySelector("#summaryDocument");
+  try {
+    const response = await fetch(siteUrl(summary.file));
+    if (!response.ok) throw new Error(`No se pudo cargar la chuleta (${response.status})`);
+    const markdown = await response.text();
+    mount.innerHTML = `<article class="markdown">${renderMarkdown(markdown, "Resumenes y chuletas")}</article>`;
+    if (updateHash) history.replaceState(null, "", `#${summary.id}`);
+  } catch (error) {
+    mount.innerHTML = `<div class="error-state">${escapeHtml(error.message)}</div>`;
+  }
+}
+
+async function loadSummariesView(updateHash = true) {
+  setSummaryViewActive(updateHash);
+  renderSummaryHome();
+  await loadSummary("resumen-dominio-1", false);
 }
 
 async function loadTestsView(updateHash = true) {
@@ -1713,6 +1829,10 @@ async function downloadEpub() {
 searchInput.addEventListener("input", filterLessons);
 epubButton.addEventListener("click", downloadEpub);
 printButton.addEventListener("click", () => window.print());
+summaryMenuButton.addEventListener("click", () => {
+  loadSummariesView();
+  closeMobileMenu();
+});
 testMenuButton.addEventListener("click", () => {
   loadTestsView();
   closeMobileMenu();
@@ -1738,6 +1858,11 @@ window.addEventListener("hashchange", () => {
     return;
   }
 
+  if (hash === "resumenes" || hash.startsWith("resumen-dominio-")) {
+    loadSummary(hash === "resumenes" ? "resumen-dominio-1" : hash, false);
+    return;
+  }
+
   const domain = domainFromHash(hash);
   if (!domain) {
     loadDomain(DOMAINS[0].id, false);
@@ -1755,6 +1880,8 @@ renderMenu();
 const initialHash = location.hash.slice(1);
 if (initialHash === "tests") {
   loadTestsView(false);
+} else if (initialHash === "resumenes" || initialHash.startsWith("resumen-dominio-")) {
+  loadSummariesView(false);
 } else {
   const initialDomain = domainFromHash(initialHash);
   loadDomain(initialDomain?.id || DOMAINS[0].id, false, initialDomain && initialHash !== initialDomain.id ? initialHash : null);

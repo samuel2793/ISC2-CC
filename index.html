@@ -173,6 +173,15 @@
         color: #ffffff;
       }
 
+      .sidebar-label {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
       .domain-number {
         display: block;
         font-size: 0.75rem;
@@ -418,6 +427,40 @@
         padding: 0;
       }
 
+      .markdown blockquote {
+        margin: 0 0 18px;
+        border-left: 4px solid var(--accent);
+        background: var(--panel-soft);
+        color: var(--accent-strong);
+        padding: 12px 16px;
+      }
+
+      .table-wrap {
+        margin: 0 0 20px;
+        overflow-x: auto;
+      }
+
+      .markdown table {
+        width: 100%;
+        min-width: 620px;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+      }
+
+      .markdown th,
+      .markdown td {
+        border: 1px solid var(--line);
+        padding: 10px 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .markdown th {
+        background: var(--panel-soft);
+        color: var(--accent-strong);
+        font-weight: 800;
+      }
+
       .markdown li + li {
         margin-top: 6px;
       }
@@ -486,6 +529,105 @@
       .loading-state {
         padding: 44px 34px;
         color: var(--muted);
+      }
+
+      .summary-panel {
+        padding: 30px 34px 42px;
+      }
+
+      .summary-heading {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .summary-kicker {
+        color: var(--accent-strong);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .summary-heading h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        line-height: 1.05;
+      }
+
+      .summary-heading p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      .summary-card {
+        min-height: 112px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel-soft);
+        color: var(--muted);
+        padding: 14px;
+        text-align: left;
+      }
+
+      button.summary-card {
+        cursor: pointer;
+      }
+
+      button.summary-card:hover,
+      button.summary-card:focus-visible,
+      .summary-card.active {
+        border-color: var(--accent);
+        background: #ffffff;
+        color: var(--accent-strong);
+        outline: none;
+      }
+
+      .summary-card-number {
+        display: block;
+        font-size: 0.74rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .summary-card-title {
+        display: block;
+        margin-top: 6px;
+        color: var(--text);
+        font-size: 0.92rem;
+        font-weight: 800;
+        line-height: 1.25;
+      }
+
+      .summary-card-status {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .summary-card-status.ready {
+        color: #206342;
+      }
+
+      .summary-card-status.pending {
+        color: var(--muted);
+      }
+
+      .summary-document {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      .summary-document .markdown h1 {
+        margin-top: 0;
       }
 
       .test-panel {
@@ -1055,9 +1197,14 @@
 
         .domain-header,
         .document,
-        .test-panel {
+        .test-panel,
+        .summary-panel {
           padding-left: 20px;
           padding-right: 20px;
+        }
+
+        .summary-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .domain-header h1 {
@@ -1175,6 +1322,19 @@
 
         .domain-meta {
           font-size: 0.94rem;
+        }
+
+        .summary-heading h1 {
+          font-size: 1.9rem;
+        }
+
+        .summary-panel {
+          padding-top: 22px;
+          padding-bottom: 30px;
+        }
+
+        .summary-grid {
+          grid-template-columns: 1fr;
         }
 
         .document {
@@ -1295,6 +1455,8 @@
         <h1 class="brand">ISC2 CC</h1>
         <nav id="domainMenu" class="domain-menu" aria-label="Dominios"></nav>
         <div class="sidebar-section">
+          <p class="sidebar-label">Material de estudio</p>
+          <button id="summaryMenuButton" class="sidebar-action" type="button">Resúmenes / chuletas</button>
           <button id="testMenuButton" class="sidebar-action" type="button">Tests</button>
         </div>
         <section class="toc" aria-label="Indice del dominio">
