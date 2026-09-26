@@ -269,7 +269,13 @@ const SUMMARIES = [
     file: "Resumenes y chuletas/Dominio 4 - Redes y nube.md",
     available: true
   },
-  { id: "resumen-dominio-5", number: "Dominio 5", title: "Operaciones de seguridad", available: false }
+  {
+    id: "resumen-dominio-5",
+    number: "Dominio 5",
+    title: "Operaciones de seguridad",
+    file: "Resumenes y chuletas/Dominio 5 - Operaciones de seguridad.md",
+    available: true
+  }
 ];
 
 function encodePath(path) {
