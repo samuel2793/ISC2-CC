@@ -255,7 +255,13 @@ const SUMMARIES = [
     file: "Resumenes y chuletas/Dominio 2 - Gobernanza y resiliencia.md",
     available: true
   },
-  { id: "resumen-dominio-3", number: "Dominio 3", title: "Identidades y accesos", available: false },
+  {
+    id: "resumen-dominio-3",
+    number: "Dominio 3",
+    title: "Identidades y accesos",
+    file: "Resumenes y chuletas/Dominio 3 - Identidades y accesos.md",
+    available: true
+  },
   { id: "resumen-dominio-4", number: "Dominio 4", title: "Redes y nube", available: false },
   { id: "resumen-dominio-5", number: "Dominio 5", title: "Operaciones de seguridad", available: false }
 ];
