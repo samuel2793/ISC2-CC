@@ -248,7 +248,13 @@ const SUMMARIES = [
     file: "Resumenes y chuletas/Dominio 1 - Principios de Seguridad.md",
     available: true
   },
-  { id: "resumen-dominio-2", number: "Dominio 2", title: "Gobernanza y resiliencia", available: false },
+  {
+    id: "resumen-dominio-2",
+    number: "Dominio 2",
+    title: "Gobernanza y resiliencia",
+    file: "Resumenes y chuletas/Dominio 2 - Gobernanza y resiliencia.md",
+    available: true
+  },
   { id: "resumen-dominio-3", number: "Dominio 3", title: "Identidades y accesos", available: false },
   { id: "resumen-dominio-4", number: "Dominio 4", title: "Redes y nube", available: false },
   { id: "resumen-dominio-5", number: "Dominio 5", title: "Operaciones de seguridad", available: false }
@@ -845,12 +851,12 @@ function setSummaryViewActive(updateHash = true) {
   if (updateHash) history.replaceState(null, "", "#resumenes");
 }
 
-function renderSummaryHome(errorMessage = "") {
+function renderSummaryHome(errorMessage = "", activeSummaryId = "resumen-dominio-1") {
   const cards = SUMMARIES.map((summary) => {
     const tag = summary.available ? "Disponible" : "Próximamente";
     const tagClass = summary.available ? "ready" : "pending";
     const tagHtml = summary.available
-      ? `<button class="summary-card${summary.id === "resumen-dominio-1" ? " active" : ""}" type="button" data-summary="${summary.id}">`
+      ? `<button class="summary-card${summary.id === activeSummaryId ? " active" : ""}" type="button" data-summary="${summary.id}">`
       : `<div class="summary-card">`;
 
     return `${tagHtml}
@@ -884,7 +890,7 @@ function renderSummaryHome(errorMessage = "") {
 async function loadSummary(summaryId = "resumen-dominio-1", updateHash = true) {
   const summary = SUMMARIES.find((item) => item.id === summaryId && item.available) || SUMMARIES[0];
   setSummaryViewActive(false);
-  renderSummaryHome();
+  renderSummaryHome("", summary.id);
   document.querySelectorAll("[data-summary]").forEach((button) => {
     button.classList.toggle("active", button.dataset.summary === summary.id);
   });
@@ -901,10 +907,10 @@ async function loadSummary(summaryId = "resumen-dominio-1", updateHash = true) {
   }
 }
 
-async function loadSummariesView(updateHash = true) {
+async function loadSummariesView(updateHash = true, summaryId = "resumen-dominio-1") {
   setSummaryViewActive(updateHash);
   renderSummaryHome();
-  await loadSummary("resumen-dominio-1", false);
+  await loadSummary(summaryId, false);
 }
 
 async function loadTestsView(updateHash = true) {
@@ -1859,7 +1865,7 @@ window.addEventListener("hashchange", () => {
   }
 
   if (hash === "resumenes" || hash.startsWith("resumen-dominio-")) {
-    loadSummary(hash === "resumenes" ? "resumen-dominio-1" : hash, false);
+    loadSummariesView(false, hash === "resumenes" ? "resumen-dominio-1" : hash);
     return;
   }
 
@@ -1881,7 +1887,7 @@ const initialHash = location.hash.slice(1);
 if (initialHash === "tests") {
   loadTestsView(false);
 } else if (initialHash === "resumenes" || initialHash.startsWith("resumen-dominio-")) {
-  loadSummariesView(false);
+  loadSummariesView(false, initialHash === "resumenes" ? "resumen-dominio-1" : initialHash);
 } else {
   const initialDomain = domainFromHash(initialHash);
   loadDomain(initialDomain?.id || DOMAINS[0].id, false, initialDomain && initialHash !== initialDomain.id ? initialHash : null);
