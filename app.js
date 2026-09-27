@@ -212,6 +212,8 @@ let activeDomain = null;
 let activeLessons = [];
 let testBatteries = [];
 let currentTestRun = null;
+let officialMockRun = null;
+let officialMockTimer = null;
 let testPopoverOutsideHandler = null;
 let testDomainResizeHandler = null;
 const textEncoder = new TextEncoder();
@@ -274,6 +276,14 @@ const SUMMARIES = [
     number: "Dominio 5",
     title: "Operaciones de seguridad",
     file: "Resumenes y chuletas/Dominio 5 - Operaciones de seguridad.md",
+    available: true
+  },
+  {
+    id: "resumen-simulacro-2026",
+    number: "Examen final",
+    title: "Simulacro oficial CC 2026",
+    file: "Resumenes y chuletas/Simulacro oficial CC 2026.json",
+    type: "exam",
     available: true
   }
 ];
@@ -562,6 +572,8 @@ async function fetchLesson(domain, file) {
 }
 
 async function loadDomain(domainId, updateHash = true, scrollTarget = null) {
+  stopOfficialMockTimer();
+  officialMockRun = null;
   const domain = DOMAINS.find((item) => item.id === domainId) || DOMAINS[0];
 
   activeDomain = domain;
@@ -905,7 +917,219 @@ function renderSummaryHome(errorMessage = "", activeSummaryId = "resumen-dominio
   }
 }
 
+
+function stopOfficialMockTimer() {
+  if (officialMockTimer) window.clearInterval(officialMockTimer);
+  officialMockTimer = null;
+}
+
+function formatMockTime(milliseconds) {
+  const totalSeconds = Math.max(0, Math.ceil(milliseconds / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
+
+function mockDomainName(domainId) {
+  return TEST_DOMAIN_OPTIONS.find((domain) => domain.id === domainId)?.label || domainId;
+}
+
+function renderOfficialMockIntro(battery, mount) {
+  officialMockRun = null;
+  stopOfficialMockTimer();
+  mount.innerHTML = `
+    <article class="markdown">
+      <h1>Simulacro integral CC 2026</h1>
+      <blockquote>Basado en el esquema oficial vigente desde el 1 de septiembre de 2026 y en la bater\u00EDa local de 11.406 preguntas.</blockquote>
+      <h2>Formato</h2>
+      <table>
+        <thead><tr><th>Dominio</th><th>Peso oficial</th><th>Preguntas</th></tr></thead>
+        <tbody>
+          <tr><td>1. Principios de Seguridad</td><td>24%</td><td>24</td></tr>
+          <tr><td>2. Gobernanza de la Seguridad</td><td>17,3%</td><td>17</td></tr>
+          <tr><td>3. IAM</td><td>20%</td><td>20</td></tr>
+          <tr><td>4. Redes y nube</td><td>21,3%</td><td>22</td></tr>
+          <tr><td>5. Operaciones y respuesta</td><td>17,3%</td><td>17</td></tr>
+        </tbody>
+      </table>
+      <p>El examen real es CAT: dura hasta 2 horas, presenta entre 100 y 125 \u00EDtems e incluye 25 preguntas de pretest no identificables. Este simulacro usa la longitud m\u00EDnima oficial de 100 preguntas y el redondeo entero m\u00E1s fiel de los pesos medios. No intenta fingir la adaptaci\u00F3n psicom\u00E9trica de ISC2.</p>
+      <p><a href="https://www.isc2.org/certifications/cc/cc-certification-exam-outline" target="_blank" rel="noopener noreferrer">Esquema oficial CC</a> · <a href="https://www.isc2.org/certifications/computerized-adaptive-testing" target="_blank" rel="noopener noreferrer">Funcionamiento oficial del CAT</a></p>
+      <h2>Reglas de la sesi\u00F3n</h2>
+      <ul>
+        <li>120 minutos y orden aleatorio.</li>
+        <li>Una sola respuesta por pregunta; al confirmar no se puede volver atr\u00E1s.</li>
+        <li>No hay correcci\u00F3n inmediata. Los fallos y explicaciones aparecen al finalizar.</li>
+        <li>Criterio de preparaci\u00F3n integral: al menos 80% total y 70% en cada dominio. No equivale a la puntuaci\u00F3n oficial 700/1000.</li>
+      </ul>
+      <p><button id="startOfficialMockButton" class="action-button" type="button">Comenzar simulacro</button></p>
+    </article>
+  `;
+  mount.querySelector("#startOfficialMockButton")?.addEventListener("click", () => startOfficialMock(battery, mount));
+}
+
+function startOfficialMock(battery, mount) {
+  const targetPositions = shuffle(battery.preguntas.map((_, index) => index % 4));
+  const randomizedQuestions = battery.preguntas.map((question, questionIndex) => {
+    const correctIndex = answerIndex(question);
+    const correctOption = question.opciones[correctIndex];
+    const opciones = shuffle(question.opciones.filter((_, optionIndex) => optionIndex !== correctIndex));
+    opciones.splice(targetPositions[questionIndex], 0, correctOption);
+    return { ...question, opciones, respuesta: targetPositions[questionIndex] };
+  });
+  const randomizedBattery = { ...battery, preguntas: randomizedQuestions };
+  officialMockRun = {
+    battery: randomizedBattery,
+    mount,
+    order: shuffle(randomizedQuestions.map((_, index) => index)),
+    position: 0,
+    selected: null,
+    answers: [],
+    startedAt: Date.now(),
+    endsAt: Date.now() + 120 * 60 * 1000
+  };
+  stopOfficialMockTimer();
+  officialMockTimer = window.setInterval(() => {
+    if (!officialMockRun) return stopOfficialMockTimer();
+    if (Date.now() >= officialMockRun.endsAt) {
+      finishOfficialMock(true);
+      return;
+    }
+    const timer = document.querySelector("#officialMockTimer");
+    if (timer) timer.textContent = formatMockTime(officialMockRun.endsAt - Date.now());
+  }, 1000);
+  renderOfficialMockQuestion();
+}
+
+function renderOfficialMockQuestion() {
+  const run = officialMockRun;
+  if (!run) return;
+  const questionIndex = run.order[run.position];
+  const question = run.battery.preguntas[questionIndex];
+  const options = question.opciones.map((option, index) => `
+    <label class="option-item">
+      <input type="radio" name="officialMockAnswer" value="${index}" ${run.selected === index ? "checked" : ""}>
+      <span class="option-index">${String.fromCharCode(65 + index)}</span>
+      <span class="option-copy">${escapeHtml(option)}</span>
+    </label>
+  `).join("");
+  const progress = Math.round((run.position / run.order.length) * 100);
+
+  run.mount.innerHTML = `
+    <section class="test-stage">
+      <div class="test-statusbar">
+        <span class="test-badge">Pregunta ${run.position + 1}/${run.order.length}</span>
+        <span id="officialMockTimer" class="test-badge">${formatMockTime(run.endsAt - Date.now())}</span>
+      </div>
+      <div class="test-progress">
+        <span>Progreso</span>
+        <div class="test-progress-meter" aria-hidden="true"><div class="test-progress-fill" style="width: ${progress}%"></div></div>
+        <span>${progress}%</span>
+      </div>
+      <article class="question-card">
+        <div class="question-eyebrow">
+          <span class="question-chip">Modo examen</span>
+          <span class="question-chip muted">Sin revisi\u00F3n ni feedback inmediato</span>
+        </div>
+        <p class="question-title">${escapeHtml(question.pregunta)}</p>
+        <div class="option-list">${options}</div>
+        <div class="test-actions">
+          <button id="confirmOfficialMockButton" class="action-button" type="button" ${run.selected === null ? "disabled" : ""}>Confirmar y continuar</button>
+        </div>
+      </article>
+    </section>
+  `;
+
+  run.mount.querySelectorAll('input[name="officialMockAnswer"]').forEach((input) => {
+    input.addEventListener("change", () => {
+      run.selected = Number(input.value);
+      run.mount.querySelector("#confirmOfficialMockButton").disabled = false;
+    });
+  });
+  run.mount.querySelector("#confirmOfficialMockButton")?.addEventListener("click", confirmOfficialMockAnswer);
+}
+
+function confirmOfficialMockAnswer() {
+  const run = officialMockRun;
+  if (!run || run.selected === null) return;
+  const questionIndex = run.order[run.position];
+  const question = run.battery.preguntas[questionIndex];
+  run.answers.push({
+    questionIndex,
+    selected: run.selected,
+    correct: run.selected === answerIndex(question)
+  });
+  if (run.position + 1 >= run.order.length) {
+    finishOfficialMock(false);
+    return;
+  }
+  run.position += 1;
+  run.selected = null;
+  renderOfficialMockQuestion();
+}
+
+function finishOfficialMock(timedOut = false) {
+  const run = officialMockRun;
+  if (!run) return;
+  stopOfficialMockTimer();
+
+  const byDomain = TEST_DOMAIN_OPTIONS.map((domain) => {
+    const answers = run.answers.filter((answer) => run.battery.preguntas[answer.questionIndex].dominio === domain.id);
+    const correct = answers.filter((answer) => answer.correct).length;
+    const total = run.battery.preguntas.filter((question) => question.dominio === domain.id).length;
+    const percent = total ? Math.round((correct / total) * 100) : 0;
+    return { ...domain, correct, total, percent };
+  });
+  const correct = run.answers.filter((answer) => answer.correct).length;
+  const percent = Math.round((correct / run.battery.preguntas.length) * 100);
+  const passed = run.answers.length === run.battery.preguntas.length
+    && percent >= 80
+    && byDomain.every((domain) => domain.percent >= 70);
+  const rows = byDomain.map((domain) => `
+    <tr><td>${escapeHtml(domain.label)}</td><td>${domain.correct}/${domain.total}</td><td>${domain.percent}%</td><td>${domain.percent >= 70 ? "Superado" : "Repasar"}</td></tr>
+  `).join("");
+  const answersByQuestion = new Map(run.answers.map((answer) => [answer.questionIndex, answer]));
+  const missed = run.battery.preguntas.map((question, questionIndex) => ({
+    question,
+    answer: answersByQuestion.get(questionIndex)
+  })).filter(({ answer }) => !answer?.correct).map(({ question, answer }, index) => {
+    const correctIndex = answerIndex(question);
+    const selectedText = answer ? question.opciones[answer.selected] : "Sin responder";
+    return `
+      <article class="question-card">
+        <div class="question-eyebrow"><span class="question-chip muted">Fallo ${index + 1} · ${escapeHtml(mockDomainName(question.dominio))}</span></div>
+        <p class="question-title">${escapeHtml(question.pregunta)}</p>
+        <p><strong>Tu respuesta:</strong> ${escapeHtml(selectedText)}</p>
+        <p><strong>Respuesta correcta:</strong> ${escapeHtml(question.opciones[correctIndex])}</p>
+        <p>${escapeHtml(question.explicacion)}</p>
+      </article>
+    `;
+  }).join("");
+
+  run.mount.innerHTML = `
+    <article class="markdown">
+      <h1>Resultado del simulacro</h1>
+      ${timedOut ? "<blockquote>Tiempo agotado: las preguntas no respondidas cuentan como incorrectas.</blockquote>" : ""}
+      <p class="score-box">${passed ? "Preparaci\u00F3n integral superada" : "A\u00FAn no superado"}: ${correct}/${run.battery.preguntas.length} \u00B7 ${percent}%</p>
+      <p>El criterio de esta herramienta exige 80% global y 70% en cada dominio. Es deliberadamente conservador y no convierte aciertos linealmente a la escala oficial.</p>
+      <table><thead><tr><th>Dominio</th><th>Aciertos</th><th>Resultado</th><th>Estado</th></tr></thead><tbody>${rows}</tbody></table>
+      <p><button id="restartOfficialMockButton" class="action-button" type="button">Repetir con otro orden</button></p>
+      <h2>Revisi\u00F3n de respuestas incorrectas</h2>
+      ${missed || "<p>No hay respuestas incorrectas.</p>"}
+    </article>
+  `;
+  run.mount.querySelector("#restartOfficialMockButton")?.addEventListener("click", () => startOfficialMock(run.battery, run.mount));
+}
+
+async function loadOfficialMock(summary, mount) {
+  const raw = await fetchJson(summary.file);
+  const battery = normalizeBattery(raw, summary.file, null, "gpt-2026");
+  renderOfficialMockIntro(battery, mount);
+}
+
 async function loadSummary(summaryId = "resumen-dominio-1", updateHash = true) {
+  stopOfficialMockTimer();
+  officialMockRun = null;
   const summary = SUMMARIES.find((item) => item.id === summaryId && item.available) || SUMMARIES[0];
   setSummaryViewActive(false);
   renderSummaryHome("", summary.id);
@@ -915,10 +1139,14 @@ async function loadSummary(summaryId = "resumen-dominio-1", updateHash = true) {
 
   const mount = document.querySelector("#summaryDocument");
   try {
-    const response = await fetch(siteUrl(summary.file));
-    if (!response.ok) throw new Error(`No se pudo cargar la chuleta (${response.status})`);
-    const markdown = await response.text();
-    mount.innerHTML = `<article class="markdown">${renderMarkdown(markdown, "Resumenes y chuletas")}</article>`;
+    if (summary.type === "exam") {
+      await loadOfficialMock(summary, mount);
+    } else {
+      const response = await fetch(siteUrl(summary.file));
+      if (!response.ok) throw new Error(`No se pudo cargar la chuleta (${response.status})`);
+      const markdown = await response.text();
+      mount.innerHTML = `<article class="markdown">${renderMarkdown(markdown, "Resumenes y chuletas")}</article>`;
+    }
     if (updateHash) history.replaceState(null, "", `#${summary.id}`);
   } catch (error) {
     mount.innerHTML = `<div class="error-state">${escapeHtml(error.message)}</div>`;
@@ -932,6 +1160,8 @@ async function loadSummariesView(updateHash = true, summaryId = "resumen-dominio
 }
 
 async function loadTestsView(updateHash = true) {
+  stopOfficialMockTimer();
+  officialMockRun = null;
   setTestViewActive(updateHash);
   content.innerHTML = '<div class="loading-state">Cargando baterias de test...</div>';
 
@@ -1882,7 +2112,7 @@ window.addEventListener("hashchange", () => {
     return;
   }
 
-  if (hash === "resumenes" || hash.startsWith("resumen-dominio-")) {
+  if (hash === "resumenes" || hash.startsWith("resumen-")) {
     loadSummariesView(false, hash === "resumenes" ? "resumen-dominio-1" : hash);
     return;
   }
@@ -1904,7 +2134,7 @@ renderMenu();
 const initialHash = location.hash.slice(1);
 if (initialHash === "tests") {
   loadTestsView(false);
-} else if (initialHash === "resumenes" || initialHash.startsWith("resumen-dominio-")) {
+} else if (initialHash === "resumenes" || initialHash.startsWith("resumen-")) {
   loadSummariesView(false, initialHash === "resumenes" ? "resumen-dominio-1" : initialHash);
 } else {
   const initialDomain = domainFromHash(initialHash);

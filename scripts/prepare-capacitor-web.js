@@ -9,6 +9,7 @@ const includes = [
   "app.js",
   "portada.jpg",
   "tests",
+  "Resumenes y chuletas",
   "Dominio 1: Principios de Seguridad",
   "Dominio 2: Respuesta a Incidentes, Continuidad del Negocio y Recuperacion ante Desastres",
   "Dominio 3: Conceptos de Control de Acceso",
