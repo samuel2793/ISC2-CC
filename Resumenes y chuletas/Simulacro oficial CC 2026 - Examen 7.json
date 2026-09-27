@@ -1,0 +1,1307 @@
+{
+  "titulo": "Simulacro integral CC 2026 — Examen 7",
+  "procedencia": "Selección curada de las baterías del proyecto, con casos situacionales y objetivos nuevos del esquema ISC2 CC 2026",
+  "descripcion": "100 preguntas nuevas tomadas de las baterías locales, sin repetir los seis exámenes anteriores y con fuente auditable. Reparto: 24/17/20/22/17.",
+  "preguntas": [
+    {
+      "pregunta": "Una recepcionista de una clínica médica abre por curiosidad el historial sanitario de un atleta famoso, aunque no participa en la atención de ese paciente. ¿Qué elemento de la tríada CIA se ha vulnerado?",
+      "opciones": [
+        "Integridad",
+        "Confidencialidad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 1,
+      "explicacion": "La confidencialidad exige que la información solo sea accesible para personas autorizadas con una necesidad legítima. Consultar el historial por curiosidad constituye un acceso no autorizado.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-1"
+    },
+    {
+      "pregunta": "Después de descargar una actualización de firmware, un ingeniero de redes calcula su valor SHA-256 y descubre que no coincide con el publicado por el proveedor. ¿Qué propiedad de seguridad debe sospechar que ha sido comprometida?",
+      "opciones": [
+        "Autenticación",
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una discrepancia en el hash indica que el archivo ha cambiado respecto al original, lo que supone un problema de integridad.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-2"
+    },
+    {
+      "pregunta": "Un proveedor afirma que nunca aprobó una orden de compra recibida electrónicamente por un fabricante. El fabricante presenta la orden con la firma digital del proveedor y se resuelve la disputa. ¿Qué concepto de seguridad permitió resolverla?",
+      "opciones": [
+        "Mínimo privilegio",
+        "No repudio",
+        "Defensa en profundidad",
+        "Disponibilidad"
+      ],
+      "respuesta": 1,
+      "explicacion": "El no repudio permite demostrar que una parte realizó una acción y dificulta que pueda negarla posteriormente; una firma digital válida vincula la operación con su clave privada.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-5"
+    },
+    {
+      "pregunta": "Un equipo de marketing quiere comprar una lista de correo. El responsable de privacidad revisa una muestra y señala un campo como información de identificación personal que requiere tratamiento especial. ¿Qué campo es el más probable?",
+      "opciones": [
+        "Código de encuesta asignado aleatoriamente",
+        "Estadísticas agregadas de edad",
+        "Solo el nombre de la ciudad",
+        "Número de pasaporte"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un número de pasaporte puede identificar de forma única a una persona concreta y constituye PII.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-7"
+    },
+    {
+      "pregunta": "Un análisis de vulnerabilidades descubre que un servidor expuesto a Internet sigue ejecutando una versión de sistema operativo para la que el proveedor dejó de publicar parches hace dos años. En términos de gestión de riesgos, ¿qué representa este hallazgo?",
+      "opciones": [
+        "Un exploit",
+        "Una vulnerabilidad",
+        "Una transferencia de riesgo",
+        "Una amenaza"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un sistema sin soporte y que no puede recibir parches constituye una debilidad susceptible de ser explotada, es decir, una vulnerabilidad.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-9"
+    },
+    {
+      "pregunta": "Un informe de inteligencia advierte que un colectivo hacktivista ha anunciado planes para atacar a empresas de tu sector el próximo trimestre. En terminología de riesgos, ¿cómo se describe MEJOR al colectivo?",
+      "opciones": [
+        "Un registro de riesgos",
+        "Una contramedida",
+        "Un actor de amenaza",
+        "Una vulnerabilidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un grupo con intención y capacidad para causar daño es un actor de amenaza.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-10"
+    },
+    {
+      "pregunta": "Una startup fintech evalúa una función que almacenaría los números completos de las tarjetas de sus clientes. La revisión legal determina que la carga de cumplimiento y la exposición ante una brecha serían enormes, por lo que la dirección cancela por completo la función y utiliza un proveedor de tokenización. ¿Qué estrategia de riesgo representa cancelar la función?",
+      "opciones": [
+        "Evitación",
+        "Aceptación",
+        "Mitigación",
+        "Explotación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Eliminar completamente la actividad que genera el riesgo es una estrategia de evitación.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-12"
+    },
+    {
+      "pregunta": "Un hospital está preocupado por la posibilidad de que ransomware alcance los sistemas clínicos, por lo que implanta filtrado de correo, segmentación de red y copias de seguridad offline para reducir la probabilidad y el impacto de un ataque. ¿Qué respuesta al riesgo representa esta combinación?",
+      "opciones": [
+        "Transferencia",
+        "Mitigación",
+        "Evitación",
+        "Rechazo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Implantar controles para reducir la probabilidad o el impacto de un riesgo mientras se mantiene la actividad constituye mitigación.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-13"
+    },
+    {
+      "pregunta": "Al priorizar riesgos para su tratamiento, un analista puntúa cada uno según la probabilidad de que ocurra y la gravedad de sus consecuencias. ¿Qué dos factores está combinando?",
+      "opciones": [
+        "Amenaza y control",
+        "Valor del activo y depreciación",
+        "Vulnerabilidad y nivel de parcheo",
+        "Probabilidad e impacto"
+      ],
+      "respuesta": 3,
+      "explicacion": "La priorización clásica del riesgo combina la probabilidad de ocurrencia con el impacto o gravedad de las consecuencias.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-15"
+    },
+    {
+      "pregunta": "El consejo de una empresa de pagos declara que solo está dispuesto a tolerar niveles mínimos de riesgo al perseguir sus objetivos e indica a los equipos que seleccionen los controles en consecuencia. ¿Qué ha expresado el consejo?",
+      "opciones": [
+        "Su tolerancia al riesgo",
+        "Su modelo de amenazas",
+        "Su riesgo residual",
+        "Su registro de riesgos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La cantidad de riesgo que una organización está dispuesta a aceptar se expresa mediante su tolerancia o apetito de riesgo.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-16"
+    },
+    {
+      "pregunta": "Un equipo de seguridad despliega un sensor que inspecciona el tráfico y genera una alerta cuando detecta patrones asociados a ataques conocidos, pero no bloquea nada. Según su función, ¿qué tipo de control es?",
+      "opciones": [
+        "Preventivo",
+        "Correctivo",
+        "Disuasorio",
+        "Detectivo"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un control que identifica y comunica actividad sospechosa sin impedirla es un control detectivo, como un IDS.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-19"
+    },
+    {
+      "pregunta": "Una persona certificada descubre que un compañero está alterando discretamente los resultados de análisis de vulnerabilidades antes de entregarlos al cliente para que parezcan mejores. Según el Código de Ética de ISC2, ¿qué está obligada a hacer?",
+      "opciones": [
+        "Esperar hasta la auditoría anual para mencionarlo",
+        "Modificar sus propios informes de la misma forma para mantener la coherencia",
+        "Ignorarlo porque el compañero no está certificado por ISC2",
+        "Actuar honorablemente y garantizar que el cliente reciba información honesta y precisa"
+      ],
+      "respuesta": 3,
+      "explicacion": "El Código de Ética exige actuar con honestidad, responsabilidad y diligencia, por lo que debe abordarse la manipulación para que el cliente reciba resultados veraces.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-23"
+    },
+    {
+      "pregunta": "La alta dirección publica un documento breve que establece que todos los datos sensibles de la empresa deben cifrarse y que cada empleado es responsable de proteger los activos de información. El documento marca la dirección, pero evita deliberadamente mencionar productos o pasos concretos. ¿Qué tipo de documento de gobierno es?",
+      "opciones": [
+        "Una política",
+        "Un estándar",
+        "Un procedimiento",
+        "Una guía"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una política expresa intenciones y requisitos de alto nivel de la dirección sin detallar cómo deben implementarse.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-24"
+    },
+    {
+      "pregunta": "El service desk mantiene un documento que explica a los técnicos cómo restablecer una cuenta bloqueada: verificar la identidad del llamante, comprobar el ticket, realizar el restablecimiento en el directorio y registrar la acción. ¿Qué tipo de documento es?",
+      "opciones": [
+        "Guía",
+        "Procedimiento",
+        "Política",
+        "Estándar"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un conjunto de instrucciones paso a paso para realizar una tarea específica es un procedimiento.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-25"
+    },
+    {
+      "pregunta": "Un proveedor sanitario regional está redactando su política de seguridad de la información. El departamento jurídico insiste en que primero debe ajustarse a la legislación nacional de privacidad sanitaria antes de reflejar preferencias internas. ¿Por qué tiene prioridad la legislación?",
+      "opciones": [
+        "Las regulaciones son referencias opcionales para organizaciones maduras",
+        "Las políticas internas siempre son más estrictas que las leyes",
+        "Las leyes y regulaciones son impuestas externamente y jurídicamente vinculantes, por lo que los documentos internos deben cumplirlas",
+        "Las políticas sustituyen a las leyes una vez aprobadas por el consejo"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las leyes y regulaciones establecen obligaciones legales externas que una política interna no puede contradecir ni sustituir.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-26"
+    },
+    {
+      "pregunta": "Un servicio de urgencias se queja de que un nuevo proceso de inicio de sesión de quince pasos retrasa a los médicos al acceder a historiales clínicos en momentos críticos. Seguridad acuerda simplificar la autenticación en los puestos clínicos manteniendo protegidos los registros. ¿Qué ilustra esta situación?",
+      "opciones": [
+        "Los controles de seguridad nunca afectan a las operaciones",
+        "La necesidad de equilibrar los controles de confidencialidad con los requisitos de disponibilidad según el contexto del negocio",
+        "Los médicos deberían compartir una sola cuenta",
+        "La integridad siempre tiene prioridad sobre la seguridad del paciente"
+      ],
+      "respuesta": 1,
+      "explicacion": "La seguridad debe equilibrar confidencialidad y disponibilidad según el contexto; en urgencias, el acceso rápido puede ser crítico.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-4"
+    },
+    {
+      "pregunta": "Una aplicación móvil para registrar rutas de carrera solicita la lista de contactos, el calendario y el historial preciso de ubicación, aunque solo necesita la ubicación para prestar el servicio. Un revisor de privacidad se opone. ¿Qué principio de privacidad está infringiendo la aplicación?",
+      "opciones": [
+        "Minimización de datos, recopilando solo lo necesario para la finalidad declarada",
+        "Defensa en profundidad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La minimización de datos exige recopilar únicamente la información necesaria para la finalidad declarada.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-7"
+    },
+    {
+      "pregunta": "Un responsable de seguridad explica a los directivos que una vulnerabilidad de un sistema no constituye, por sí sola, un riesgo; debe existir algo más. ¿Qué combinación produce correctamente un riesgo?",
+      "opciones": [
+        "Una vulnerabilidad por sí sola",
+        "Un activo sin debilidades",
+        "Una amenaza con capacidad de explotar una vulnerabilidad y causar un impacto adverso potencial",
+        "Dos firewalls en serie"
+      ],
+      "respuesta": 2,
+      "explicacion": "El riesgo surge cuando una amenaza puede explotar una vulnerabilidad y producir un impacto, considerando además su probabilidad.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-9"
+    },
+    {
+      "pregunta": "La propietaria de una pequeña empresa califica cada riesgo identificado como alto, medio o bajo en probabilidad e impacto usando juicio experto, y luego los representa en una matriz de colores para priorizarlos. ¿Qué tipo de evaluación de riesgos está realizando?",
+      "opciones": [
+        "Evaluación cualitativa",
+        "Prueba de penetración",
+        "Evaluación cuantitativa",
+        "Prueba de regresión"
+      ],
+      "respuesta": 0,
+      "explicacion": "El uso de categorías descriptivas y juicio experto, en lugar de valores monetarios, corresponde a una evaluación cualitativa.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-11"
+    },
+    {
+      "pregunta": "Después de implantar MFA y monitorización estricta, una organización reconoce que sigue existiendo cierta posibilidad de compromiso de cuentas. ¿Cómo se denomina el riesgo que permanece después de aplicar controles?",
+      "opciones": [
+        "Riesgo inherente",
+        "Riesgo cero",
+        "Riesgo transferido",
+        "Riesgo residual"
+      ],
+      "respuesta": 3,
+      "explicacion": "El riesgo residual es el que permanece después de aplicar medidas de mitigación.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-14"
+    },
+    {
+      "pregunta": "Un responsable de seguridad mantiene un documento vivo que enumera cada riesgo identificado, su propietario, probabilidad e impacto evaluados, tratamiento elegido y estado actual. ¿Cómo se llama este documento?",
+      "opciones": [
+        "Registro de riesgos",
+        "Diagrama de red",
+        "Ticket de incidente",
+        "Catálogo de servicios"
+      ],
+      "respuesta": 0,
+      "explicacion": "El registro de riesgos centraliza los riesgos identificados, sus responsables, valoraciones, tratamientos y estado.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-15"
+    },
+    {
+      "pregunta": "Una consultora de seguridad certificada recibe presiones de su gerente para declarar aprobada una auditoría cuando aún quedan hallazgos sin resolver, porque una renovación lucrativa depende de ello. Según el Código de Ética de ISC2, ¿qué debe hacer?",
+      "opciones": [
+        "Eliminar los hallazgos de los papeles de trabajo",
+        "Firmar la aprobación para preservar la relación con el cliente",
+        "Pedir a un colega junior que firme en su lugar",
+        "Negarse a tergiversar los resultados e informar con honestidad, aunque tenga un coste comercial"
+      ],
+      "respuesta": 3,
+      "explicacion": "El Código de Ética de ISC2 exige actuar con honestidad y responsabilidad; falsear resultados viola esas obligaciones.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-22"
+    },
+    {
+      "pregunta": "Una política empresarial exige cifrado fuerte para los datos de pago almacenados. Un documento asociado impone el algoritmo exacto aprobado, la longitud mínima de clave y los modos de cifrado certificados que todos los equipos deben implementar. ¿Qué tipo de documento es?",
+      "opciones": [
+        "Una anécdota",
+        "Un estándar",
+        "Una directriz",
+        "Una declaración de misión"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un estándar convierte la política en requisitos técnicos específicos y obligatorios para una implementación uniforme.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-24"
+    },
+    {
+      "pregunta": "La oficina de seguridad publica un documento con prácticas recomendadas para proteger oficinas domésticas, indicando que los equipos pueden adaptar las sugerencias a sus circunstancias y que seguirlas es recomendable pero no obligatorio. ¿Qué tipo de documento es?",
+      "opciones": [
+        "Un estándar",
+        "Un reglamento",
+        "Una directriz",
+        "Una política"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una directriz ofrece recomendaciones flexibles y no obligatorias, a diferencia de políticas, estándares o reglamentos.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-25"
+    },
+    {
+      "pregunta": "Durante la noche, un panel de monitorización registra un intento fallido de inicio de sesión SSH contra un jump server, seguido diez segundos después por un inicio correcto del mismo administrador. No ocurre nada más inusual. ¿Cómo debe clasificarse inicialmente esta observación?",
+      "opciones": [
+        "Un incidente de seguridad que requiere activar a todo el equipo de respuesta",
+        "Una brecha de datos",
+        "Un desastre que requiere activar el plan",
+        "Un evento que debe registrarse pero no escalarse sin indicadores adicionales"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una ocurrencia observable es un evento. Sin más indicadores de daño o compromiso, no debe considerarse automáticamente un incidente.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-27"
+    },
+    {
+      "pregunta": "Durante un brote activo de malware, los respondedores desconectan tres estaciones infectadas de la red para impedir que la infección se propague mientras investigan. ¿A qué fase de la respuesta a incidentes pertenece esta acción?",
+      "opciones": [
+        "Contención",
+        "Preparación",
+        "Actividad posterior al incidente",
+        "Detección y análisis"
+      ],
+      "respuesta": 0,
+      "explicacion": "Aislar sistemas afectados para limitar la propagación y los daños es una acción de contención.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-28"
+    },
+    {
+      "pregunta": "Una organización está redactando su plan de respuesta a incidentes y debate cuál debe ser su propósito general. ¿Qué afirmación refleja MEJOR el objetivo principal de la respuesta a incidentes?",
+      "opciones": [
+        "Demostrar a las aseguradoras que existen registros",
+        "Limitar los daños, reducir el tiempo y coste de recuperación y restaurar las operaciones normales",
+        "Garantizar que nunca se produzcan incidentes",
+        "Identificar empleados para aplicar medidas disciplinarias"
+      ],
+      "respuesta": 1,
+      "explicacion": "La respuesta a incidentes busca reducir el impacto, contener el daño y recuperar las operaciones normales de forma rápida y eficiente.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-29"
+    },
+    {
+      "pregunta": "Un coordinador de continuidad mantiene una tarjeta plastificada y un árbol telefónico impreso que indican quién debe llamar a quién cuando los sistemas están caídos. ¿Por qué se incluyen estos elementos de baja tecnología en el programa de continuidad de negocio?",
+      "opciones": [
+        "Permiten contactar y movilizar a personas clave aunque el correo electrónico y los directorios habituales no estén disponibles",
+        "Documentan decisiones de aceptación del riesgo",
+        "Son necesarios por motivos fiscales",
+        "Sustituyen la necesidad de copias de seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los métodos de comunicación fuera de banda permiten coordinar a los responsables incluso cuando la infraestructura habitual no funciona.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-32"
+    },
+    {
+      "pregunta": "Un corte eléctrico regional lleva cuatro horas y el responsable de operaciones debe decidir si activa formalmente el plan de continuidad de negocio. Según las buenas prácticas, ¿dónde deben definirse la autoridad y los criterios para tomar esta decisión?",
+      "opciones": [
+        "Deben improvisarse en el momento por quien esté presente",
+        "En el propio BCP, indicando quién puede activarlo y bajo qué condiciones",
+        "Mediante votación de todos los empleados",
+        "Por la compañía eléctrica"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un BCP adecuado debe establecer previamente quién tiene autoridad para activarlo y qué condiciones justifican hacerlo.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-33"
+    },
+    {
+      "pregunta": "Una agencia de diseño conserva sus únicas copias de seguridad en una unidad conectada al servidor de la oficina. Un incendio destruye la oficina, el servidor y la unidad. ¿Qué principio de copias de seguridad habría evitado la pérdida total de los datos?",
+      "opciones": [
+        "Cifrar la unidad de copia de seguridad",
+        "Realizar copias con mayor frecuencia en la misma unidad",
+        "Comprimir las copias para ahorrar espacio",
+        "Mantener al menos una copia de seguridad fuera de las instalaciones"
+      ],
+      "respuesta": 3,
+      "explicacion": "Mantener al menos una copia en una ubicación física separada protege frente a desastres que destruyen todo el emplazamiento.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-35"
+    },
+    {
+      "pregunta": "Un directivo pregunta en qué se diferencia el plan de recuperación ante desastres del plan más amplio de continuidad de negocio. ¿Qué respuesta es la MÁS precisa?",
+      "opciones": [
+        "DR se centra en restaurar sistemas TI y datos tras una interrupción, mientras que BC aborda la continuidad general de las operaciones empresariales",
+        "BC solo se aplica a desastres naturales y DR a ciberataques",
+        "Son documentos idénticos con nombres distintos",
+        "DR lo redacta RR. HH. y BC lo redacta TI"
+      ],
+      "respuesta": 0,
+      "explicacion": "Disaster Recovery se centra principalmente en restaurar tecnología y datos, mientras que Business Continuity abarca la continuidad de las funciones empresariales en su conjunto.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-36"
+    },
+    {
+      "pregunta": "Dos semanas después de resolver un incidente grave, el equipo de respuesta se reúne para revisar la cronología, identificar qué funcionó y qué falló, y asignar acciones de mejora para actualizar el plan. ¿Cómo se llama esta actividad y cuál es su propósito?",
+      "opciones": [
+        "Una prueba de penetración",
+        "Una audiencia disciplinaria para asignar culpas",
+        "Una revisión de lecciones aprendidas, destinada a mejorar la prevención y respuesta futuras",
+        "Una retrospectiva de marketing"
+      ],
+      "respuesta": 2,
+      "explicacion": "La revisión de lecciones aprendidas analiza la respuesta para mejorar controles, detección, procedimientos y el plan de respuesta.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-29"
+    },
+    {
+      "pregunta": "Un directivo pregunta por qué la empresa invierte en continuidad de negocio si ya tiene seguro. ¿Qué afirmación describe MEJOR el propósito de un plan de continuidad de negocio?",
+      "opciones": [
+        "Permite que la organización mantenga operativas, al menos parcialmente, sus funciones más críticas durante y después de una interrupción",
+        "Solo trata de evacuar edificios",
+        "Sustituye la necesidad de copias de seguridad",
+        "Garantiza que nunca ocurrirá un desastre"
+      ],
+      "respuesta": 0,
+      "explicacion": "La continuidad de negocio busca mantener las funciones esenciales durante y después de una interrupción.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-31"
+    },
+    {
+      "pregunta": "Un análisis de impacto en el negocio (BIA) completado clasifica el procesamiento de pedidos y las nóminas como las funciones más críticas en tiempo, con ventanas tolerables de interrupción mucho menores que otros departamentos. ¿Cómo debe influir este resultado en la planificación de continuidad y recuperación?",
+      "opciones": [
+        "Los resultados del BIA deben mantenerse en secreto frente a los planificadores",
+        "Las estrategias y recursos de recuperación deben priorizar las funciones más críticas en tiempo identificadas",
+        "Todos los sistemas deben restaurarse por orden alfabético",
+        "Los sistemas menos importantes deben recuperarse primero como práctica"
+      ],
+      "respuesta": 1,
+      "explicacion": "El BIA identifica qué funciones deben recuperarse antes y en qué plazos, por lo que guía la priorización de recursos y secuencias.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-32"
+    },
+    {
+      "pregunta": "Un coordinador de continuidad reúne a responsables de departamento en una sala y recorre verbalmente un escenario simulado de inundación paso a paso, comprobando que cada persona conoce su función, sin tocar sistemas de producción. ¿Qué tipo de ejercicio es?",
+      "opciones": [
+        "Una prueba de interrupción total",
+        "Una prueba de penetración",
+        "Un ejercicio de mesa (tabletop)",
+        "Una prueba paralela"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un tabletop es un ejercicio de discusión que valida funciones y decisiones sin afectar a los sistemas de producción.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-33"
+    },
+    {
+      "pregunta": "Tras un fallo de servidor, los administradores descubren que meses de copias nocturnas habían generado silenciosamente archivos inutilizables, dejando nada que restaurar. ¿Qué práctica habría descubierto este problema antes del desastre?",
+      "opciones": [
+        "Realizar restauraciones de prueba periódicas para verificar que las copias son recuperables",
+        "Aumentar la frecuencia de las copias",
+        "Desactivar las notificaciones de backup",
+        "Guardar más copias de los mismos backups corruptos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las restauraciones de prueba verifican que las copias pueden recuperarse realmente y que el proceso funciona antes de una emergencia.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-35"
+    },
+    {
+      "pregunta": "Una empresa exige que cada nuevo empleado complete formación de concienciación en seguridad y firme la política de uso aceptable antes de recibir credenciales. ¿Qué categoría de controles representan estos requisitos?",
+      "opciones": [
+        "Físicos",
+        "Técnicos",
+        "Administrativos",
+        "Correctivos"
+      ],
+      "respuesta": 2,
+      "explicacion": "La formación y las políticas son controles administrativos basados en reglas, procesos y gestión de personas.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-18"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «GRC»?",
+      "opciones": [
+        "El consejo aprueba el apetito de riesgo y exige informes periódicos sobre el programa de seguridad.",
+        "El negocio acepta perder como máximo los últimos quince minutos de transacciones.",
+        "El personal practica cómo utilizar el canal de reporte y qué hacer ante una solicitud fraudulenta.",
+        "Una plataforma relaciona obligaciones, riesgos, controles, propietarios, evidencias y acciones correctivas."
+      ],
+      "respuesta": 3,
+      "explicacion": "GRC: Integración de gobernanza, riesgo y cumplimiento para dirigir la seguridad de forma coherente y demostrable Ejemplo: Una plataforma relaciona obligaciones, riesgos, controles, propietarios, evidencias y acciones correctivas.",
+      "dominio": 2,
+      "fuente": "tests/gpt-2026/domain-2.json#pregunta-4"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «Cultura de seguridad»?",
+      "opciones": [
+        "Los directivos completan la formación, respetan controles y financian las correcciones prioritarias.",
+        "El personal reporta errores sin ocultarlos y la organización utiliza los reportes para mejorar.",
+        "Una IA sigue disponible, pero sus clasificaciones empeoran hasta afectar una función crítica.",
+        "La empresa determina qué función debe restaurarse primero y cuánto daño provoca cada hora de interrupción."
+      ],
+      "respuesta": 1,
+      "explicacion": "Cultura de seguridad: Valores y comportamientos compartidos que convierten la seguridad en parte del trabajo diario Ejemplo: El personal reporta errores sin ocultarlos y la organización utiliza los reportes para mejorar.",
+      "dominio": 2,
+      "fuente": "tests/gpt-2026/domain-2.json#pregunta-44"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «KRI»?",
+      "opciones": [
+        "El equipo mide si corrige el porcentaje objetivo de vulnerabilidades dentro del plazo.",
+        "El porcentaje de restauraciones fallidas supera el umbral y provoca una revisión de respaldos.",
+        "El equipo asigna propietarios y fechas a hallazgos dentro de una plataforma común.",
+        "TI recupera servidores y comunicaciones desde copias verificadas para volver a la operación normal."
+      ],
+      "respuesta": 1,
+      "explicacion": "KRI: Indicador que señala cambios en la exposición a un riesgo y puede activar escalado Ejemplo: El porcentaje de restauraciones fallidas supera el umbral y provoca una revisión de respaldos.",
+      "dominio": 2,
+      "fuente": "tests/gpt-2026/domain-2.json#pregunta-60"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «Dashboard»?",
+      "opciones": [
+        "Una IA sigue disponible, pero sus clasificaciones empeoran hasta afectar una función crítica.",
+        "La empresa determina qué función debe restaurarse primero y cuánto daño provoca cada hora de interrupción.",
+        "Los directivos completan la formación, respetan controles y financian las correcciones prioritarias.",
+        "La dirección consulta un panel mensual que destaca riesgos fuera de tolerancia."
+      ],
+      "respuesta": 3,
+      "explicacion": "Dashboard: Vista visual de métricas, tendencias, excepciones y umbrales para facilitar seguimiento Ejemplo: La dirección consulta un panel mensual que destaca riesgos fuera de tolerancia.",
+      "dominio": 2,
+      "fuente": "tests/gpt-2026/domain-2.json#pregunta-68"
+    },
+    {
+      "pregunta": "Una usuaria abre una aplicación bancaria y escribe su nombre de usuario. En ese momento exacto del proceso de inicio de sesión, ¿qué acción ha realizado?",
+      "opciones": [
+        "Contabilidad",
+        "Autenticación",
+        "Identificación",
+        "Autorización"
+      ],
+      "respuesta": 2,
+      "explicacion": "Introducir un nombre de usuario es identificación: la usuaria está declarando una identidad. La autenticación consiste en demostrar posteriormente que esa identidad es verdadera.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-6"
+    },
+    {
+      "pregunta": "Los visitantes de un centro de datos deben pasar por un puesto atendido donde un guardia verifica una identificación oficial antes de desbloquear la puerta interior. ¿Cómo se clasifica MEJOR este control?",
+      "opciones": [
+        "Control técnico",
+        "Control físico",
+        "Control compensatorio",
+        "Control administrativo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un guardia que controla el acceso a una instalación es un control físico.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-17"
+    },
+    {
+      "pregunta": "Una usuaria escribe su nombre de usuario y después su contraseña. El sistema compara la contraseña con el verificador almacenado antes de permitirle continuar. ¿Qué concepto de control de acceso representa la comparación de la contraseña?",
+      "opciones": [
+        "Federación",
+        "Autenticación",
+        "Autorización",
+        "Identificación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Comprobar que la identidad declarada es auténtica mediante una contraseña es autenticación.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-37"
+    },
+    {
+      "pregunta": "Para aprobar transferencias bancarias, un empleado debe introducir una frase de contraseña memorizada y después escanear su huella dactilar. ¿Qué combinación de factores de autenticación se utiliza?",
+      "opciones": [
+        "Algo que eres y algún lugar en el que estás",
+        "Algo que tienes y algo que sabes",
+        "Algo que sabes y algo que eres",
+        "Dos elementos de algo que sabes"
+      ],
+      "respuesta": 2,
+      "explicacion": "La frase de contraseña es algo que sabes y la huella dactilar es algo que eres, por lo que se utilizan dos categorías distintas de autenticación.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-38"
+    },
+    {
+      "pregunta": "Un help desk afirma que su portal utiliza MFA porque exige una contraseña y respuestas a tres preguntas personales de seguridad. ¿Por qué es incorrecta esta afirmación?",
+      "opciones": [
+        "Las contraseñas son factores biométricos",
+        "MFA requiere exactamente cuatro factores",
+        "Las preguntas de seguridad son un factor de posesión",
+        "Ambos elementos son factores de conocimiento, por lo que solo se utiliza un tipo de factor"
+      ],
+      "respuesta": 3,
+      "explicacion": "MFA requiere al menos dos categorías distintas de factores. Tanto la contraseña como las respuestas de seguridad son algo que el usuario sabe.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-39"
+    },
+    {
+      "pregunta": "Un técnico de campo inicia sesión en el portal de mantenimiento con una contraseña y un código de seis dígitos generado por un token físico de su llavero. ¿A qué categoría de factor de autenticación pertenece el código del token?",
+      "opciones": [
+        "Algo que tienes",
+        "Algo que haces",
+        "Algo que sabes",
+        "Algo que eres"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un código generado por un dispositivo físico demuestra posesión del dispositivo, por lo que es un factor de algo que tienes.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-40"
+    },
+    {
+      "pregunta": "Tras una exportación sospechosa de una base de datos, los investigadores revisan registros que muestran exactamente qué cuenta autenticada ejecutó la exportación y en qué momento. ¿Qué principio de seguridad respaldan estos registros?",
+      "opciones": [
+        "Redundancia",
+        "Responsabilidad",
+        "Disponibilidad",
+        "Anonimato"
+      ],
+      "respuesta": 1,
+      "explicacion": "Relacionar acciones concretas con identidades autenticadas mediante registros proporciona accountability o responsabilidad.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-41"
+    },
+    {
+      "pregunta": "Se descubre que un becario de verano del departamento de marketing posee permisos administrativos completos sobre el servidor de archivos de finanzas, concedidos por error durante el onboarding. ¿Qué principio de seguridad se ha vulnerado?",
+      "opciones": [
+        "No repudio",
+        "Defensa en profundidad",
+        "Mínimo privilegio",
+        "Separación de funciones"
+      ],
+      "respuesta": 2,
+      "explicacion": "El principio de mínimo privilegio exige conceder únicamente los permisos necesarios para realizar las funciones asignadas.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-42"
+    },
+    {
+      "pregunta": "Una analista tiene un nivel de autorización que técnicamente coincide con un archivo sensible sobre una fusión, pero no participa en el proyecto. Se rechaza su solicitud de acceso. ¿Qué principio justifica la denegación?",
+      "opciones": [
+        "Complejidad de contraseñas",
+        "Disponibilidad",
+        "Diseño fail-open",
+        "Necesidad de saber"
+      ],
+      "respuesta": 3,
+      "explicacion": "El principio de need to know restringe el acceso a quienes necesitan específicamente esa información para realizar su trabajo.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-43"
+    },
+    {
+      "pregunta": "En una pequeña empresa, el mismo empleado puede crear nuevos proveedores en el sistema de pagos y también aprobar pagos a esos proveedores. Un auditor lo identifica como riesgo de fraude. ¿Qué principio de control solucionaría el problema?",
+      "opciones": [
+        "Separación de funciones",
+        "Clustering",
+        "Single sign-on",
+        "Clasificación de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La separación de funciones divide tareas críticas entre distintas personas para evitar que una sola controle una transacción completa.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-44"
+    },
+    {
+      "pregunta": "La política de una empresa establece que la caja fuerte que contiene claves de firma solo puede abrirse cuando están presentes simultáneamente dos responsables designados, cada uno usando su propia combinación. ¿Cómo se denomina este mecanismo?",
+      "opciones": [
+        "Seguridad por oscuridad",
+        "Integridad de dos personas",
+        "Escalada de privilegios",
+        "Identidad federada"
+      ],
+      "respuesta": 1,
+      "explicacion": "Exigir la participación conjunta de dos personas autorizadas es two-person integrity o dual control.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-45"
+    },
+    {
+      "pregunta": "Un administrador de sistemas tiene dos cuentas: una estándar para correo y navegación web y otra privilegiada que solo utiliza para tareas administrativas. ¿Cuál es el PRINCIPAL beneficio de seguridad?",
+      "opciones": [
+        "Duplica su cuota de almacenamiento",
+        "Elimina la necesidad de registros",
+        "Reduce la exposición de credenciales privilegiadas frente a amenazas cotidianas como phishing y malware drive-by",
+        "Le permite eludir la gestión de cambios"
+      ],
+      "respuesta": 2,
+      "explicacion": "Usar una cuenta sin privilegios para tareas cotidianas limita el impacto de una posible infección o robo de credenciales.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-46"
+    },
+    {
+      "pregunta": "El primer día de una empleada, el equipo de identidad crea su cuenta y concede acceso según su función laboral documentada siguiendo una lista aprobada por su responsable. ¿Qué fase del ciclo de vida de identidad y acceso es?",
+      "opciones": [
+        "Desaprovisionamiento",
+        "Recertificación de accesos",
+        "Escalada de privilegios",
+        "Aprovisionamiento"
+      ],
+      "respuesta": 3,
+      "explicacion": "Crear cuentas y conceder los permisos iniciales apropiados a un nuevo usuario es aprovisionamiento.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-47"
+    },
+    {
+      "pregunta": "Una directora de ventas dimite y abandona el edificio al mediodía. A las 12:05, el equipo de identidad deshabilita su SSO, certificado VPN y tarjeta de acceso. ¿Por qué es esencial actuar con tanta rapidez?",
+      "opciones": [
+        "Porque las credenciales activas de antiguos empleados son una vía conocida para accesos no autorizados y robo de datos",
+        "Porque de otro modo nóminas no puede procesar su último pago",
+        "Para liberar licencias antes de final de mes",
+        "Para restablecer su saludo de buzón de voz"
+      ],
+      "respuesta": 0,
+      "explicacion": "El desaprovisionamiento rápido evita que las credenciales de un exempleado sigan siendo utilizables para acceder a sistemas o instalaciones.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-48"
+    },
+    {
+      "pregunta": "Un empleado abre una puerta segura con su tarjeta y un desconocido que lleva vasos de café entra inmediatamente detrás de él antes de que la puerta se cierre, sin presentar ninguna credencial. ¿Qué ha ocurrido?",
+      "opciones": [
+        "Vishing",
+        "Shoulder surfing",
+        "Tailgating",
+        "Dumpster diving"
+      ],
+      "respuesta": 2,
+      "explicacion": "Entrar siguiendo a una persona autorizada a través de un acceso controlado sin presentar credenciales es tailgating.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-50"
+    },
+    {
+      "pregunta": "Un almacén instala cámaras visibles que cubren todas las entradas y conserva las grabaciones durante noventa días. En términos de controles, ¿qué doble función suelen desempeñar estas cámaras?",
+      "opciones": [
+        "Administrativa y lógica",
+        "Preventiva y criptográfica",
+        "Correctiva y compensatoria",
+        "Disuasoria y detectiva"
+      ],
+      "respuesta": 3,
+      "explicacion": "Las cámaras visibles pueden disuadir a posibles intrusos y sus grabaciones permiten detectar e investigar incidentes.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-51"
+    },
+    {
+      "pregunta": "Recepción exige a cada visitante registrar su nombre, empresa, anfitrión y hora de llegada, así como registrar su salida. Además de cortesía, ¿qué propósito de seguridad tiene este registro?",
+      "opciones": [
+        "Crea un registro de responsabilidad de quién estuvo en la instalación y cuándo, útil para investigaciones",
+        "Elimina la necesidad de acompañantes",
+        "Cifra los datos de los visitantes",
+        "Mide la satisfacción de los clientes"
+      ],
+      "respuesta": 0,
+      "explicacion": "El registro de visitantes permite reconstruir quién estuvo físicamente presente en una instalación y en qué momento.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-52"
+    },
+    {
+      "pregunta": "Un campus farmacéutico rodea su edificio de investigación con bolardos antialunizaje, vallado perimetral continuo e iluminación intensa y uniforme en todos los accesos. ¿Cuál es el propósito conjunto de estas medidas?",
+      "opciones": [
+        "Mejorar la cobertura inalámbrica",
+        "Cumplir únicamente el código de incendios",
+        "Disuadir y retrasar accesos físicos no autorizados y facilitar la vigilancia",
+        "Proporcionar energía de respaldo"
+      ],
+      "respuesta": 2,
+      "explicacion": "Son controles físicos perimetrales destinados a disuadir, retrasar y hacer más visible cualquier intento de acceso no autorizado.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-54"
+    },
+    {
+      "pregunta": "En un recurso compartido de archivos departamental, el creador de cada documento decide personalmente quién puede leerlo o editarlo y puede modificar esos permisos cuando quiera. ¿Qué modelo de control de acceso se utiliza?",
+      "opciones": [
+        "Control de acceso obligatorio",
+        "Control de acceso basado en roles",
+        "Control de acceso basado en reglas",
+        "Control de acceso discrecional"
+      ],
+      "respuesta": 3,
+      "explicacion": "Cuando el propietario de un recurso decide discrecionalmente quién puede acceder a él, se utiliza DAC.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-55"
+    },
+    {
+      "pregunta": "El sistema de un contratista de defensa asigna una clasificación a cada archivo y una autorización a cada usuario. El propio sistema operativo bloquea los accesos cuando la autorización no es suficiente y los propietarios de los archivos no pueden anular esa decisión. ¿Qué modelo de control de acceso es?",
+      "opciones": [
+        "Control de acceso obligatorio",
+        "Control de acceso basado en roles",
+        "Control de acceso discrecional",
+        "Precios basados en atributos"
+      ],
+      "respuesta": 0,
+      "explicacion": "MAC utiliza etiquetas y niveles de autorización aplicados obligatoriamente por el sistema, sin que los propietarios puedan modificar las reglas.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-56"
+    },
+    {
+      "pregunta": "Un dispositivo de red examina la dirección IP de destino de cada paquete entrante y selecciona la mejor ruta para reenviarlo hacia otra red. ¿En qué capa del modelo OSI opera principalmente?",
+      "opciones": [
+        "Capa 2, Enlace de datos",
+        "Capa 5, Sesión",
+        "Capa 7, Aplicación",
+        "Capa 3, Red"
+      ],
+      "respuesta": 3,
+      "explicacion": "El encaminamiento basado en direcciones IP es una función de la capa 3, Red, del modelo OSI.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-59"
+    },
+    {
+      "pregunta": "Un protocolo establece una conexión, numera sus segmentos, confirma su recepción y retransmite aquello que se pierde, garantizando la entrega ordenada. ¿En qué capa OSI opera y qué protocolo es?",
+      "opciones": [
+        "Capa 4, TCP",
+        "Capa 7, DNS",
+        "Capa 2, Ethernet",
+        "Capa 3, IP"
+      ],
+      "respuesta": 0,
+      "explicacion": "TCP proporciona transporte fiable, orientado a conexión, con secuenciación, confirmaciones y retransmisiones en la capa 4.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-60"
+    },
+    {
+      "pregunta": "Un producto de videoconferencia envía deliberadamente sus flujos multimedia mediante UDP en lugar de TCP. ¿Cuál es la razón MÁS probable?",
+      "opciones": [
+        "UDP cifra el tráfico automáticamente",
+        "UDP evita retransmisiones y sobrecarga de conexión, ofreciendo menor latencia para medios en tiempo real",
+        "UDP solo funciona en redes de fibra",
+        "UDP garantiza que los paquetes lleguen en orden"
+      ],
+      "respuesta": 1,
+      "explicacion": "UDP reduce la latencia al no requerir establecimiento de conexión, confirmaciones ni retransmisiones, algo adecuado para audio y vídeo en tiempo real.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-61"
+    },
+    {
+      "pregunta": "Una auditoría descubre que los administradores gestionan switches mediante Telnet por el puerto 23, enviando las credenciales en texto claro. ¿Qué protocolo y puerto deberían adoptar como alternativa equivalente pero cifrada?",
+      "opciones": [
+        "HTTP en el puerto 80",
+        "FTP en el puerto 21",
+        "SNMP en el puerto 161",
+        "SSH en el puerto 22"
+      ],
+      "respuesta": 3,
+      "explicacion": "SSH utiliza normalmente TCP 22 y proporciona administración remota cifrada, siendo el sustituto estándar de Telnet.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-63"
+    },
+    {
+      "pregunta": "Una estación de trabajo tiene la dirección 192.168.10.44. Un analista explica que esa dirección no puede alcanzarse directamente desde Internet. ¿Por qué?",
+      "opciones": [
+        "Pertenece a un rango privado que los routers de Internet no enrutan, por lo que se necesita un mecanismo como NAT para acceder a Internet",
+        "Las direcciones que comienzan por 192 están reservadas para gobiernos",
+        "Es una dirección IPv6",
+        "Es una dirección de broadcast"
+      ],
+      "respuesta": 0,
+      "explicacion": "192.168.0.0/16 es un rango privado RFC 1918 y no se enruta directamente por Internet.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-64"
+    },
+    {
+      "pregunta": "Un ISP indica a una empresa en crecimiento que el agotamiento de IPv4 debe tenerse en cuenta en su planificación de direccionamiento y recomienda adoptar IPv6. ¿Qué característica fundamental de IPv6 resuelve este problema?",
+      "opciones": [
+        "IPv6 elimina la necesidad de routers",
+        "Las direcciones IPv6 tienen 128 bits y proporcionan un espacio de direcciones enormemente mayor que IPv4 de 32 bits",
+        "IPv6 solo funciona en redes inalámbricas",
+        "Las direcciones IPv6 son más cortas y fáciles de memorizar"
+      ],
+      "respuesta": 1,
+      "explicacion": "IPv6 utiliza direcciones de 128 bits, lo que proporciona un espacio de direccionamiento inmensamente mayor que los 32 bits de IPv4.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-65"
+    },
+    {
+      "pregunta": "Dentro de una LAN de oficina, un dispositivo recibe tramas Ethernet y reenvía cada una únicamente por el puerto asociado a la dirección hardware de destino que ha aprendido. ¿Qué dispositivo es y qué tipo de dirección utiliza?",
+      "opciones": [
+        "Un firewall que utiliza URL",
+        "Un hub que utiliza números de puerto",
+        "Un switch que utiliza direcciones MAC",
+        "Un router que utiliza direcciones IP"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un switch de capa 2 aprende direcciones MAC y las asocia con sus puertos para reenviar tramas.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-66"
+    },
+    {
+      "pregunta": "Un ingeniero de seguridad debe elegir entre dos tipos de sensores: uno que únicamente genera alertas al detectar tráfico de ataque y otro situado inline que puede descartar activamente los paquetes maliciosos. ¿Qué diferencia a estas dos tecnologías?",
+      "opciones": [
+        "El primero es un IPS y el segundo un IDS",
+        "El primero es un IDS, que detecta y alerta, mientras que el segundo es un IPS, que además puede bloquear en tiempo real",
+        "Ambos son firewalls de marcas diferentes",
+        "El primero es antivirus y el segundo un proxy"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un IDS detecta y alerta, mientras que un IPS funciona inline y puede impedir activamente que el tráfico malicioso continúe.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-68"
+    },
+    {
+      "pregunta": "Un requisito de cumplimiento exige supervisión capaz de detectar cambios no autorizados y procesos sospechosos en un servidor de base de datos concreto y de alto valor, independientemente del cifrado de red. ¿Qué tecnología encaja MEJOR?",
+      "opciones": [
+        "Un IDS basado en host instalado en el servidor de base de datos",
+        "Un DNS sinkhole",
+        "Un IDS basado en red en el switch central",
+        "Un firewall perimetral"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un HIDS se ejecuta en el propio servidor y puede observar procesos, archivos y registros locales aunque el tráfico de red esté cifrado.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-69"
+    },
+    {
+      "pregunta": "Miles de dispositivos domésticos comprometidos de todo el mundo inundan simultáneamente el sitio web público de un banco con solicitudes basura, impidiendo que los clientes legítimos se conecten. ¿Qué ataque está teniendo lugar?",
+      "opciones": [
+        "Ataque de fuerza bruta contra el inicio de sesión",
+        "Ataque distribuido de denegación de servicio",
+        "Ataque de inyección SQL",
+        "Shoulder surfing"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un DDoS utiliza múltiples sistemas distribuidos para saturar los recursos del objetivo y afectar a su disponibilidad.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-70"
+    },
+    {
+      "pregunta": "Una viajera utiliza el Wi-Fi gratuito de una cafetería y un atacante de la misma red se sitúa silenciosamente entre su portátil y los sitios que visita, retransmitiendo y leyendo el tráfico. ¿Cómo se denomina este ataque?",
+      "opciones": [
+        "Ataque watering hole",
+        "Cross-site scripting",
+        "Ataque on-path",
+        "Bomba lógica"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un ataque on-path, históricamente llamado man-in-the-middle, intercepta y retransmite comunicaciones entre dos partes.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-71"
+    },
+    {
+      "pregunta": "Durante el análisis de un ataque de red, los respondedores descubren que los paquetes maliciosos utilizaban una dirección IP de origen falsificada perteneciente a un socio de confianza, engañando a una regla de acceso. ¿Qué técnica utilizó el atacante?",
+      "opciones": [
+        "Degaussing",
+        "Phishing",
+        "Tokenización",
+        "Spoofing"
+      ],
+      "respuesta": 3,
+      "explicacion": "Falsificar datos de identificación, como una dirección IP de origen, para hacerse pasar por otra entidad es spoofing.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-72"
+    },
+    {
+      "pregunta": "Una universidad quiere mantener el tráfico de las residencias de estudiantes lógicamente separado del tráfico del personal administrativo aunque ambos compartan los mismos switches físicos. ¿Qué tecnología lo permite?",
+      "opciones": [
+        "Instalar una segunda conexión a Internet",
+        "Utilizar contraseñas Wi-Fi más fuertes",
+        "Configurar VLAN para segmentar ambos grupos en la capa 2",
+        "Comprar monitores más grandes"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las VLAN dividen una infraestructura física de switching en redes lógicas independientes de capa 2.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-75"
+    },
+    {
+      "pregunta": "Un arquitecto debe ubicar un servidor web público de modo que los usuarios de Internet puedan acceder a él, pero que una vulneración del servidor no conceda acceso directo a la red interna de bases de datos. ¿Dónde debería colocarlo?",
+      "opciones": [
+        "En la LAN interna junto a la base de datos",
+        "Dentro del SOC",
+        "Directamente en Internet sin firewall",
+        "En una red perimetral protegida o DMZ, separada de la red interna mediante políticas de firewall"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una DMZ permite publicar servicios hacia Internet manteniéndolos aislados de los sistemas internos mediante controles de red.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-76"
+    },
+    {
+      "pregunta": "Un nuevo CISO anuncia que ningún usuario ni dispositivo será considerado de confianza por defecto simplemente por estar dentro de la sede; cada solicitud de acceso deberá autenticarse, autorizarse y validarse continuamente. ¿Qué modelo de seguridad se está adoptando?",
+      "opciones": [
+        "Seguridad por oscuridad",
+        "Zero trust",
+        "Seguridad exclusivamente perimetral",
+        "Vacaciones obligatorias"
+      ],
+      "respuesta": 1,
+      "explicacion": "Zero trust elimina la confianza implícita basada en la ubicación de red y exige verificar continuamente usuarios, dispositivos y solicitudes.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-78"
+    },
+    {
+      "pregunta": "Durante una auditoría inalámbrica, un consultor descubre que un punto de acceso de una sucursal sigue protegido con WEP. ¿Por qué requiere una sustitución urgente y por qué tecnología debe reemplazarse?",
+      "opciones": [
+        "La sustitución requiere Internet por satélite",
+        "WEP es seguro si se oculta el SSID",
+        "WEP utiliza un cifrado roto desde hace años que puede vulnerarse rápidamente; debe utilizarse WPA2 o, preferiblemente, WPA3",
+        "WEP solo falla en redes de 5 GHz"
+      ],
+      "respuesta": 2,
+      "explicacion": "WEP presenta debilidades criptográficas fundamentales y debe sustituirse por WPA2 como mínimo, preferiblemente WPA3.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-79"
+    },
+    {
+      "pregunta": "Una consultora que trabaja desde hoteles necesita acceder a servidores de archivos internos como si estuviera en la oficina y proteger su tráfico contra escuchas en redes no confiables. ¿Qué tecnología satisface directamente esta necesidad?",
+      "opciones": [
+        "Un monitor CRT",
+        "Un punto de acceso Wi-Fi abierto",
+        "Un disco duro de mayor capacidad",
+        "Una VPN que cree un túnel cifrado hacia la red corporativa"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una VPN crea un túnel cifrado sobre redes no confiables para proporcionar acceso remoto protegido a los recursos corporativos.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-80"
+    },
+    {
+      "pregunta": "Una captura de paquetes de una estación de trabajo al abrir una conexión con un servidor web muestra tres paquetes iniciales antes de que fluya ningún dato. En orden, ¿cuáles son los tres pasos del handshake TCP?",
+      "opciones": [
+        "ACK, SYN, RST",
+        "SYN, SYN-ACK, ACK",
+        "FIN, FIN-ACK, FIN",
+        "GET, POST, PUT"
+      ],
+      "respuesta": 1,
+      "explicacion": "TCP establece la conexión con el handshake de tres vías SYN, SYN-ACK y ACK.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-61"
+    },
+    {
+      "pregunta": "Un escaneo de vulnerabilidades del rango IP público de una empresa encuentra el puerto TCP 3389 abierto directamente a Internet en un servidor financiero. ¿Por qué exige atención urgente?",
+      "opciones": [
+        "El tráfico RDP no puede transportar credenciales",
+        "Los puertos abiertos siempre son inofensivos",
+        "El puerto 3389 solo transporta tráfico de impresora",
+        "El puerto 3389 corresponde a Remote Desktop Protocol, objetivo frecuente de ataques de fuerza bruta y exploits, y no debería exponerse directamente a Internet"
+      ],
+      "respuesta": 3,
+      "explicacion": "TCP 3389 corresponde a RDP y su exposición directa a Internet amplía mucho la superficie de ataque.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-62"
+    },
+    {
+      "pregunta": "Una oficina doméstica tiene una docena de dispositivos que comparten una única dirección IP pública suministrada por el ISP, mientras el router reescribe direcciones al pasar el tráfico. ¿Qué mecanismo permite compartirla y qué efecto secundario de seguridad tiene?",
+      "opciones": [
+        "DNS, que cifra todo el tráfico",
+        "Traducción de direcciones de red (NAT), que además oculta el direccionamiento interno a observadores externos",
+        "RAID, que replica paquetes",
+        "Emparejamiento Bluetooth"
+      ],
+      "respuesta": 1,
+      "explicacion": "NAT permite que múltiples direcciones privadas compartan una o pocas direcciones públicas y oculta la topología interna de forma incidental.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-64"
+    },
+    {
+      "pregunta": "Un sistema de detección de intrusiones que compara el tráfico con una base de datos de patrones de ataques conocidos tiene un punto ciego inherente. ¿Qué amenaza es la que MENOS puede detectar?",
+      "opciones": [
+        "Un gusano muy conocido de hace cinco años",
+        "Una técnica de ataque completamente nueva sin firma existente",
+        "Tráfico que coincide con una regla existente",
+        "Un exploit documentado incluido en su base de patrones"
+      ],
+      "respuesta": 1,
+      "explicacion": "La detección basada en firmas solo reconoce patrones conocidos, por lo que las técnicas nuevas o de día cero pueden pasar inadvertidas.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-68"
+    },
+    {
+      "pregunta": "Un colegio dirige todas las solicitudes web de los alumnos a través de un servidor intermediario que bloquea categorías prohibidas, almacena en caché páginas populares, registra los sitios visitados por cada cuenta y oculta las direcciones de los dispositivos a los sitios externos. ¿Qué es este intermediario?",
+      "opciones": [
+        "Un servidor de impresión",
+        "Un servidor de tiempo",
+        "Un servidor proxy",
+        "Un servidor DHCP"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un proxy media entre clientes e Internet y puede filtrar contenido, almacenar en caché, registrar actividad y ocultar direcciones internas.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-69"
+    },
+    {
+      "pregunta": "Un banco está retirando cientos de SSD que almacenaron datos de cuentas. Un técnico propone pasarlos por el desmagnetizador utilizado para cintas antiguas. ¿Por qué es incorrecto el plan?",
+      "opciones": [
+        "El degaussing afecta al almacenamiento magnético, pero los SSD no son magnéticos, por lo que los datos podrían sobrevivir; se requiere destrucción física o un método de purga adecuado",
+        "Los SSD no pueden almacenar datos sensibles",
+        "El degaussing hace que los SSD sean más rápidos",
+        "El degaussing solo funciona con papel"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los SSD utilizan memoria flash, no almacenamiento magnético, por lo que el degaussing no es un método eficaz de destrucción de sus datos.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-85"
+    },
+    {
+      "pregunta": "Un ingeniero necesita cifrar rápidamente terabytes de copias de seguridad nocturnas y planea utilizar un algoritmo en el que la misma clave secreta cifra y descifra. ¿Qué tipo de criptografía es y cuál es su dificultad clásica?",
+      "opciones": [
+        "Criptografía asimétrica, cuyo problema es la lentitud",
+        "Esteganografía, cuyo problema es la compresión",
+        "Hashing, cuyo problema es la reversibilidad",
+        "Criptografía simétrica, cuyo problema es distribuir y gestionar de forma segura la clave compartida"
+      ],
+      "respuesta": 3,
+      "explicacion": "La criptografía simétrica utiliza la misma clave secreta para cifrar y descifrar y es eficiente para grandes volúmenes, pero plantea el problema de distribuir y proteger la clave compartida.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-88"
+    },
+    {
+      "pregunta": "Un centro de operaciones de seguridad quiere recopilar registros de inicio de sesión, logs de firewalls y eventos de servidores procedentes de cientos de sistemas en una plataforma que los correlacione y genere alertas ante combinaciones sospechosas. ¿Qué tecnología se describe?",
+      "opciones": [
+        "Procesador de textos",
+        "RAID 5",
+        "Switch KVM",
+        "Sistema SIEM"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un SIEM centraliza registros y eventos de seguridad, los correlaciona y genera alertas para facilitar la detección y análisis.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-92"
+    },
+    {
+      "pregunta": "Una regla de la pasarela de correo detecta un mensaje saliente que contiene cientos de números de seguridad social o identificación nacional de clientes y lo bloquea automáticamente hasta su revisión. ¿Qué clase de herramienta de seguridad realizó esta acción?",
+      "opciones": [
+        "Packet sniffer",
+        "Data Loss Prevention realizando monitorización de salida",
+        "Desfragmentación de disco",
+        "Protector de pantalla"
+      ],
+      "respuesta": 1,
+      "explicacion": "DLP inspecciona datos sensibles y puede impedir su salida no autorizada mediante controles de egress.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-94"
+    },
+    {
+      "pregunta": "Un proveedor publica una actualización de seguridad crítica que corrige una vulnerabilidad que ya está siendo explotada activamente. Según las buenas prácticas de gestión de parches, ¿qué debe hacer la organización?",
+      "opciones": [
+        "Ignorarla hasta la renovación anual",
+        "Esperar a que otras empresas sean atacadas primero",
+        "Desinstalar el software afectado únicamente de las copias de seguridad",
+        "Probar rápidamente el parche en sistemas representativos y desplegarlo de forma acelerada debido a la explotación activa"
+      ],
+      "respuesta": 3,
+      "explicacion": "Las vulnerabilidades críticas explotadas activamente requieren pruebas rápidas y un despliegue acelerado que equilibre urgencia y estabilidad.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-96"
+    },
+    {
+      "pregunta": "Un empleado descarga lo que parece ser un conversor PDF gratuito; convierte archivos correctamente, pero instala silenciosamente una puerta trasera de acceso remoto. ¿Qué categoría de malware es?",
+      "opciones": [
+        "Adware",
+        "Un troyano",
+        "Un grabador de macros",
+        "Un gusano"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un troyano se presenta como software legítimo o útil mientras instala una carga maliciosa.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-72"
+    },
+    {
+      "pregunta": "Durante la noche, código malicioso se propaga por sí solo de servidor en servidor a través de la red de una empresa, explotando un servicio de compartición de archivos sin parchear y sin que ningún usuario abra archivos ni pulse enlaces. ¿Qué tipo de malware se comporta así?",
+      "opciones": [
+        "Notas de ransomware",
+        "Un troyano, que requiere que un usuario lo instale",
+        "Un gusano, que se autorreplica por redes sin interacción del usuario",
+        "Un correo de phishing"
+      ],
+      "respuesta": 2,
+      "explicacion": "La autorreplicación y propagación automática por red sin interacción humana son características de un gusano.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-73"
+    },
+    {
+      "pregunta": "Un bufete clasifica sus archivos como públicos, internos, confidenciales o privilegiados, y su estándar de tratamiento asigna reglas de almacenamiento, transmisión y compartición progresivamente más estrictas a cada nivel. ¿Cuál es el propósito fundamental de vincular etiquetas y reglas de tratamiento?",
+      "opciones": [
+        "Garantizar que el esfuerzo y coste de protección sean proporcionales a la sensibilidad y valor de la información",
+        "Reducir el número de formatos de archivo",
+        "Hacer que todos los documentos sean igual de difíciles de acceder",
+        "Eliminar la necesidad de cifrado"
+      ],
+      "respuesta": 0,
+      "explicacion": "La clasificación permite aplicar controles proporcionales a la sensibilidad de los datos y asignar los recursos de seguridad de forma racional.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-83"
+    },
+    {
+      "pregunta": "Surge una disputa sobre quién debe decidir el nivel de clasificación de un nuevo conjunto de datos de analítica de clientes y quién debe configurar el almacenamiento y las copias de seguridad que lo protegen. Según los roles estándar de gobierno de datos, ¿cómo se dividen estas responsabilidades?",
+      "opciones": [
+        "La clasificación se decide por votación pública",
+        "El becario más reciente decide ambas",
+        "El propietario de los datos determina la clasificación y requisitos; el custodio de datos implementa la protección técnica correspondiente",
+        "El custodio clasifica y el propietario hace las copias de seguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El propietario de los datos define clasificación y requisitos, mientras el custodio implementa y opera los controles técnicos.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-85"
+    },
+    {
+      "pregunta": "Un desarrollador propone almacenar contraseñas de usuarios cifradas con una clave que posee la aplicación, pero un revisor de seguridad exige almacenar solo hashes unidireccionales con salt. ¿Por qué se prefiere el hashing para almacenar contraseñas?",
+      "opciones": [
+        "Los hashes pueden revertirse por los administradores cuando los usuarios olvidan la contraseña",
+        "La verificación solo requiere comparar hashes y una función unidireccional evita que una base de datos robada revele directamente las contraseñas",
+        "El hashing comprime la base de datos",
+        "El cifrado es ilegal"
+      ],
+      "respuesta": 1,
+      "explicacion": "La autenticación no necesita recuperar la contraseña original; un hash con salt reduce el impacto de una filtración y dificulta ataques de adivinación.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-89"
+    },
+    {
+      "pregunta": "Un escaneo automatizado semanal compara la configuración de cada servidor con el baseline de hardening aprobado y abre un ticket por cada desviación. Esta semana marca un servidor cuyo servicio de registro remoto fue reactivado fuera del control de cambios. ¿Qué práctica está actuando?",
+      "opciones": [
+        "Pruebas de carga",
+        "Ingeniería social",
+        "Planificación de capacidad",
+        "Monitorización de configuración que detecta desviaciones respecto del baseline de seguridad para investigar y remediar"
+      ],
+      "respuesta": 3,
+      "explicacion": "La monitorización de configuración compara el estado real con un baseline aprobado y detecta drift o cambios no autorizados.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-95"
+    },
+    {
+      "pregunta": "A las dos de la madrugada, una vulnerabilidad crítica está siendo explotada activamente y el equipo de firewall debe aplicar una regla de bloqueo urgente sin esperar al comité semanal. ¿Cómo lo gestiona un proceso maduro de cambios?",
+      "opciones": [
+        "Los cambios de emergencia deben ocultarse de los registros",
+        "Los cambios de emergencia pueden acelerarse con aprobación abreviada, pero deben documentarse y revisarse formalmente después",
+        "El cambio debe esperar a la siguiente reunión programada",
+        "Todo el proceso queda suspendido permanentemente durante emergencias"
+      ],
+      "respuesta": 1,
+      "explicacion": "La gestión madura define una vía de emergencia que acelera la autorización sin eliminar la documentación ni la revisión posterior.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-97"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «CTI»?",
+      "opciones": [
+        "El análisis distingue ciberdelincuentes, estados, hacktivistas y amenazas internas.",
+        "Un informe combina actor, campaña, técnicas, confianza y recomendaciones relevantes.",
+        "Dirección, legal y TI recorren decisiones de ransomware en una reunión facilitada.",
+        "Una herramienta revisa el código durante el desarrollo para encontrar patrones inseguros."
+      ],
+      "respuesta": 1,
+      "explicacion": "CTI: Información sobre amenazas analizada y contextualizada para apoyar una decisión Ejemplo: Un informe combina actor, campaña, técnicas, confianza y recomendaciones relevantes.",
+      "dominio": 5,
+      "fuente": "tests/gpt-2026/domain-5.json#pregunta-44"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «MITRE ATT&CK»?",
+      "opciones": [
+        "Defensa organiza controles desde reconocimiento hasta acciones sobre objetivos.",
+        "Una herramienta detecta que un puerto deshabilitado volvió a abrirse fuera del proceso de cambios.",
+        "La política prohíbe copiar secretos en chatbots públicos y exige masking en herramientas aprobadas.",
+        "El equipo mapea detecciones para descubrir técnicas sin cobertura."
+      ],
+      "respuesta": 3,
+      "explicacion": "MITRE ATT&CK: Framework que organiza tácticas y técnicas observadas en adversarios Ejemplo: El equipo mapea detecciones para descubrir técnicas sin cobertura.",
+      "dominio": 5,
+      "fuente": "tests/gpt-2026/domain-5.json#pregunta-52"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «Purple team»?",
+      "opciones": [
+        "Una herramienta revisa el código durante el desarrollo para encontrar patrones inseguros.",
+        "Red explica una técnica a blue y ambos comprueban juntos si la detección funciona.",
+        "Antes de reasignar un SSD se aplica y verifica el procedimiento aprobado para esa tecnología.",
+        "El equipo ajusta reglas ruidosas porque cientos de falsos positivos ocultan casos urgentes."
+      ],
+      "respuesta": 1,
+      "explicacion": "Purple team: Colaboración entre ataque y defensa para validar técnicas y acelerar mejoras Ejemplo: Red explica una técnica a blue y ambos comprueban juntos si la detección funciona.",
+      "dominio": 5,
+      "fuente": "tests/gpt-2026/domain-5.json#pregunta-92"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «SAST»?",
+      "opciones": [
+        "Un escáner interactúa con la aplicación desplegada para observar respuestas vulnerables.",
+        "La organización inventaría criptografía y prueba estándares resistentes antes de una migración.",
+        "Una herramienta revisa el código durante el desarrollo para encontrar patrones inseguros.",
+        "Un informe combina actor, campaña, técnicas, confianza y recomendaciones relevantes."
+      ],
+      "respuesta": 2,
+      "explicacion": "SAST: Análisis de código, bytecode o binarios sin ejecutar la aplicación Ejemplo: Una herramienta revisa el código durante el desarrollo para encontrar patrones inseguros.",
+      "dominio": 5,
+      "fuente": "tests/gpt-2026/domain-5.json#pregunta-96"
+    },
+    {
+      "pregunta": "¿Qué situación constituye el MEJOR ejemplo de «DAST»?",
+      "opciones": [
+        "La política prohíbe copiar secretos en chatbots públicos y exige masking en herramientas aprobadas.",
+        "Un adversario almacena comunicaciones que deben seguir secretas durante décadas.",
+        "El análisis distingue ciberdelincuentes, estados, hacktivistas y amenazas internas.",
+        "Un escáner interactúa con la aplicación desplegada para observar respuestas vulnerables."
+      ],
+      "respuesta": 3,
+      "explicacion": "DAST: Prueba de una aplicación mientras está ejecutándose desde sus interfaces Ejemplo: Un escáner interactúa con la aplicación desplegada para observar respuestas vulnerables.",
+      "dominio": 5,
+      "fuente": "tests/gpt-2026/domain-5.json#pregunta-100"
+    }
+  ]
+}

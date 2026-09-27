@@ -325,6 +325,14 @@ const SUMMARIES = [
     file: "Resumenes y chuletas/Simulacro oficial CC 2026 - Examen 6.json",
     type: "exam",
     available: true
+  },
+  {
+    id: "resumen-simulacro-2026-7",
+    number: "Examen final 7",
+    title: "Simulacro oficial CC 2026 · Examen 7",
+    file: "Resumenes y chuletas/Simulacro oficial CC 2026 - Examen 7.json",
+    type: "exam",
+    available: true
   }
 ];
 
