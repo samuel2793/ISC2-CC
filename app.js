@@ -285,6 +285,14 @@ const SUMMARIES = [
     file: "Resumenes y chuletas/Simulacro oficial CC 2026.json",
     type: "exam",
     available: true
+  },
+  {
+    id: "resumen-simulacro-2026-2",
+    number: "Examen final 2",
+    title: "Simulacro oficial CC 2026 · Examen 2",
+    file: "Resumenes y chuletas/Simulacro oficial CC 2026 - Examen 2.json",
+    type: "exam",
+    available: true
   }
 ];
 
@@ -940,8 +948,8 @@ function renderOfficialMockIntro(battery, mount) {
   stopOfficialMockTimer();
   mount.innerHTML = `
     <article class="markdown">
-      <h1>Simulacro integral CC 2026</h1>
-      <blockquote>Basado en el esquema oficial vigente desde el 1 de septiembre de 2026 y en la bater\u00EDa local de 11.406 preguntas.</blockquote>
+      <h1>${escapeHtml(battery.titulo)}</h1>
+      <blockquote>${escapeHtml(battery.descripcion)}</blockquote>
       <h2>Formato</h2>
       <table>
         <thead><tr><th>Dominio</th><th>Peso oficial</th><th>Preguntas</th></tr></thead>
