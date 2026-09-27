@@ -1,0 +1,1207 @@
+{
+  "titulo": "Simulacro integral CC 2026 — Examen 5",
+  "procedencia": "Quinto simulacro original elaborado a partir del temario y las baterías del proyecto, conforme al esquema oficial ISC2 CC vigente desde el 1 de septiembre de 2026",
+  "descripcion": "100 preguntas nuevas sobre errores sutiles, controles incompletos y reducción del riesgo residual.",
+  "preguntas": [
+    {
+      "pregunta": "Una organización cifra archivos sensibles, pero envía la clave en el mismo correo que los archivos. ¿Qué objetivo queda debilitado?",
+      "opciones": [
+        "Confidencialidad por mala gestión de claves",
+        "Integridad exclusivamente",
+        "Disponibilidad del servidor",
+        "No repudio del destinatario"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cifrado pierde valor si la clave se expone junto con los datos.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un sistema conserva una versión fiable, pero muestra al usuario una copia antigua como si fuera actual. ¿Qué propiedad se ve afectada principalmente?",
+      "opciones": [
+        "Integridad de la información presentada",
+        "Confidencialidad",
+        "Autenticación",
+        "Privacidad por consentimiento"
+      ],
+      "respuesta": 0,
+      "explicacion": "La información no es exacta ni actual para su propósito, por lo que falla integridad.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una plataforma está operativa el 99,9%, pero su único administrador no está localizable durante incidentes. ¿Qué riesgo de disponibilidad existe?",
+      "opciones": [
+        "Dependencia de una persona clave",
+        "Exceso de cifrado",
+        "No repudio insuficiente",
+        "Clasificación errónea"
+      ],
+      "respuesta": 0,
+      "explicacion": "La disponibilidad también depende de personas, soporte y procedimientos.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una aplicación conserva datos personales indefinidamente «por si acaso». ¿Qué práctica debe corregirse?",
+      "opciones": [
+        "Retención limitada a la finalidad y requisitos",
+        "Hashing de contraseñas",
+        "Segmentación de red",
+        "Accounting"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los datos deben conservarse solo durante el periodo necesario y autorizado.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un usuario presenta una credencial válida perteneciente a otra persona. ¿Qué ha fallado aunque el secreto sea correcto?",
+      "opciones": [
+        "La vinculación de la autenticación con la identidad legítima",
+        "La disponibilidad",
+        "La clasificación de datos",
+        "El RPO"
+      ],
+      "respuesta": 0,
+      "explicacion": "Validar una credencial no basta si no pertenece realmente a quien la usa.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una cuenta puede consultar y aprobar la misma solicitud, pese a autenticarse con MFA. ¿Qué afirmación es correcta?",
+      "opciones": [
+        "MFA no corrige una autorización excesiva ni la falta de SoD",
+        "MFA elimina todo riesgo interno",
+        "La cuenta necesita menos logging",
+        "El problema es solo disponibilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "La autenticación fuerte no sustituye el diseño correcto de permisos.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Los registros se envían a un servidor central, pero no se sincronizan los relojes. ¿Qué capacidad se deteriora?",
+      "opciones": [
+        "Reconstrucción y correlación fiable de eventos",
+        "Cifrado en reposo",
+        "Autenticación biométrica",
+        "Redundancia eléctrica"
+      ],
+      "respuesta": 0,
+      "explicacion": "Marcas temporales incoherentes dificultan establecer secuencia y causalidad.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una huella dactilar se filtra. ¿Por qué es más difícil responder que ante una contraseña comprometida?",
+      "opciones": [
+        "La biometría no puede cambiarse fácilmente",
+        "No es un factor de inherencia",
+        "Siempre está cifrada",
+        "No identifica a nadie"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los rasgos biométricos son persistentes y requieren protección y mecanismos alternativos.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un activo se valora solo por su coste de compra. ¿Qué dimensión puede faltar?",
+      "opciones": [
+        "Impacto en misión, datos, reputación y obligaciones",
+        "Longitud de su dirección IP",
+        "Número de usuarios del teclado",
+        "Color del equipo"
+      ],
+      "respuesta": 0,
+      "explicacion": "El valor para el riesgo incluye consecuencias de pérdida, no solo reposición.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una amenaza aprovecha una mala configuración conocida. ¿Qué elemento es la mala configuración?",
+      "opciones": [
+        "Vulnerabilidad",
+        "Activo",
+        "Impacto",
+        "Apetito"
+      ],
+      "respuesta": 0,
+      "explicacion": "Es una debilidad que puede ser explotada.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un control reduce el riesgo por debajo de la tolerancia, pero añade un nuevo riesgo operativo. ¿Qué debe hacerse?",
+      "opciones": [
+        "Evaluar también el riesgo introducido por el control",
+        "Ignorarlo por estar aprobado",
+        "Declarar riesgo cero",
+        "Transferirlo al usuario"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los controles pueden crear riesgos secundarios que deben valorarse.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una actividad deja de realizarse para eliminar su exposición. ¿Qué tratamiento es?",
+      "opciones": [
+        "Evitación",
+        "Mitigación",
+        "Transferencia",
+        "Aceptación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Al no ejecutar la actividad se evita el riesgo asociado.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una organización acepta un riesgo con revisión trimestral. Al cambiar el entorno, ¿qué procede?",
+      "opciones": [
+        "Reevaluar antes de esperar a la fecha prevista si el cambio es material",
+        "Mantener la decisión para siempre",
+        "Borrar el registro",
+        "Convertirlo en estándar"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las decisiones de riesgo se revisan ante cambios relevantes.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una política exige «seguridad adecuada» sin asignar responsables. ¿Qué mejora necesita?",
+      "opciones": [
+        "Propiedad y responsabilidades claras además del objetivo",
+        "Más palabras técnicas",
+        "Una dirección IP fija",
+        "Una sola contraseña"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gobernanza debe especificar quién decide, ejecuta y supervisa.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un estándar interno contradice un contrato obligatorio. ¿Qué debe hacer la organización?",
+      "opciones": [
+        "Resolver la contradicción y cumplir la obligación aplicable",
+        "Ignorar el contrato",
+        "Cumplir solo el estándar más antiguo",
+        "Aceptar verbalmente el riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los documentos internos deben alinearse con obligaciones externas y contractuales.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un procedimiento es correcto, pero describe una versión antigua del sistema. ¿Qué control falta?",
+      "opciones": [
+        "Mantenimiento y control de cambios documental",
+        "Cifrado asimétrico",
+        "Una cámara",
+        "Un KRI financiero"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los procedimientos deben revisarse cuando cambian procesos y tecnología.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una organización usa CIS Benchmarks para servidores. ¿Qué obtiene principalmente?",
+      "opciones": [
+        "Recomendaciones concretas de configuración segura",
+        "Una ley global",
+        "Una certificación automática",
+        "Un seguro contra brechas"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los Benchmarks proporcionan guías técnicas para productos y plataformas.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un torniquete registra entradas, pero alguien salta por encima. ¿Qué enseña el caso?",
+      "opciones": [
+        "Un control puede necesitar capas complementarias y monitorización",
+        "El registro garantiza prevención",
+        "Los controles físicos no sirven",
+        "El riesgo es solo digital"
+      ],
+      "respuesta": 0,
+      "explicacion": "Defensa en profundidad cubre formas de eludir una capa individual.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un control detecta malware, pero no hay proceso para aislarlo. ¿Qué capacidad falta?",
+      "opciones": [
+        "Respuesta correctiva o preventiva tras la detección",
+        "Más detección idéntica",
+        "Una política de privacidad",
+        "Un RPO"
+      ],
+      "respuesta": 0,
+      "explicacion": "Detectar sin acción no limita el daño.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "El equipo mide éxito por la ausencia de alertas, aunque el sensor está apagado. ¿Qué error comete?",
+      "opciones": [
+        "Confunde ausencia de evidencia con evidencia de ausencia",
+        "Aplica mínimo privilegio",
+        "Mejora integridad",
+        "Reduce riesgo inherente"
+      ],
+      "respuesta": 0,
+      "explicacion": "Antes de concluir hay que validar que el control tiene cobertura y funciona.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una empresa documenta por qué eligió un control más barato que deja riesgo alto sin aprobación. ¿Qué falta?",
+      "opciones": [
+        "Due care suficiente y aceptación por la autoridad adecuada",
+        "Due diligence porque existe documentación",
+        "No repudio criptográfico",
+        "Una directriz"
+      ],
+      "respuesta": 0,
+      "explicacion": "Analizar no basta si no se actúa razonablemente ni se autoriza el riesgo residual.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un consultor acepta trabajo especializado y subcontrata en secreto a alguien no autorizado. ¿Qué principio ético vulnera?",
+      "opciones": [
+        "Competencia, honestidad y deber hacia el cliente",
+        "Disponibilidad únicamente",
+        "Segmentación",
+        "Apetito de riesgo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Debe ser transparente sobre capacidad, recursos y terceros que tratarán la información.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un profesional descubre una actividad legal pero claramente dañina para el bien común. ¿Qué debe considerar?",
+      "opciones": [
+        "Las obligaciones éticas pueden exigir más que el mínimo legal",
+        "Todo lo legal es automáticamente ético",
+        "Solo el contrato importa",
+        "Debe borrar evidencia"
+      ],
+      "respuesta": 0,
+      "explicacion": "La ética profesional incluye protección de sociedad, confianza e infraestructura.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Un asistente de IA recibe secretos en prompts enviados a un servicio público. ¿Qué control reduce mejor el riesgo?",
+      "opciones": [
+        "Política de uso, clasificación, prevención de datos sensibles y alternativa aprobada",
+        "Permitir cualquier dato",
+        "Borrar los logs locales",
+        "Compartir la cuenta del servicio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Se deben controlar herramientas autorizadas y datos que pueden introducirse.",
+      "dominio": 1
+    },
+    {
+      "pregunta": "Una organización tiene políticas, pero cada área acepta riesgos por su cuenta sin límites. ¿Qué problema de gobernanza existe?",
+      "opciones": [
+        "Falta de autoridad y criterios coherentes de decisión",
+        "Exceso de cifrado",
+        "RPO demasiado bajo",
+        "Segmentación excesiva"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gobernanza debe definir quién puede aceptar qué nivel de riesgo.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un control cubre una regulación, pero no se sabe qué evidencia conservar. ¿Qué debe definir GRC?",
+      "opciones": [
+        "Requisitos de evidencia, propiedad, retención y frecuencia",
+        "Una contraseña común",
+        "Una nube pública",
+        "El puerto del auditor"
+      ],
+      "respuesta": 0,
+      "explicacion": "La trazabilidad de cumplimiento requiere evidencia suficiente y gestionada.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un riesgo cambia de propietario por reorganización. ¿Qué acción es necesaria?",
+      "opciones": [
+        "Transferir formalmente responsabilidad y confirmar tratamiento y seguimiento",
+        "Cerrar el riesgo",
+        "Borrar su historial",
+        "Reiniciar el BIA completo siempre"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cambio organizativo no debe dejar riesgos sin responsable.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un BIA se basa en procesos de hace tres años. ¿Cuándo debe actualizarse?",
+      "opciones": [
+        "Ante cambios materiales y de forma periódica",
+        "Solo después de un desastre",
+        "Nunca si fue aprobado",
+        "Al cambiar una contraseña"
+      ],
+      "respuesta": 0,
+      "explicacion": "Procesos, dependencias e impactos evolucionan y deben mantenerse actuales.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un RTO de una hora se fija sin consultar al negocio. ¿Cuál es el defecto?",
+      "opciones": [
+        "Puede no reflejar impacto ni prioridades reales del proceso",
+        "Siempre es demasiado corto",
+        "El RTO lo fija el proveedor exclusivamente",
+        "Debe ser igual al RPO"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los objetivos derivan del BIA y necesidades del negocio, no solo de preferencias técnicas.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Una copia diaria cumple el RTO, pero el negocio tolera perder solo diez minutos de datos. ¿Qué necesita?",
+      "opciones": [
+        "Mayor frecuencia o replicación para cumplir el RPO",
+        "Un sitio más frío",
+        "Menos capacidad de red",
+        "Una política sin pruebas"
+      ],
+      "respuesta": 0,
+      "explicacion": "La frecuencia debe limitar la pérdida máxima al objetivo.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Dos generadores usan el mismo depósito de combustible. ¿Qué riesgo persiste?",
+      "opciones": [
+        "Causa común que reduce la redundancia",
+        "Pérdida de integridad por hashing",
+        "Exceso de MFA",
+        "Falta de clasificación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los componentes redundantes deben evitar dependencias compartidas críticas.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Durante una emergencia, el equipo usa una lista impresa de contactos antigua. ¿Qué control falló?",
+      "opciones": [
+        "Mantenimiento y distribución de copias controladas del plan",
+        "Cifrado de datos",
+        "Una VLAN",
+        "PAM"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los artefactos offline también deben versionarse y actualizarse.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un ejercicio anuncia todos los eventos por adelantado y los participantes leen las respuestas. ¿Qué limitación tiene?",
+      "opciones": [
+        "No evalúa bien reacción, decisiones ni comunicaciones reales",
+        "Es demasiado técnico",
+        "Garantiza el RTO",
+        "Sustituye una restauración"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un ejercicio debe plantear incertidumbre suficiente para probar capacidades.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un atacante estudia redes sociales y envía un mensaje personalizado a una persona concreta. ¿Qué técnica es?",
+      "opciones": [
+        "Spear phishing",
+        "Phishing masivo únicamente",
+        "Tailgating",
+        "Shoulder surfing"
+      ],
+      "respuesta": 0,
+      "explicacion": "La personalización y objetivo específico caracterizan spear phishing.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Una llamada usa una voz clonada del director para ordenar una transferencia. ¿Qué respuesta es mejor?",
+      "opciones": [
+        "Aplicar verificación independiente y el proceso de doble aprobación",
+        "Confiar en la voz conocida",
+        "Responder con credenciales",
+        "Omitir el registro por urgencia"
+      ],
+      "respuesta": 0,
+      "explicacion": "La voz puede falsificarse; los procedimientos verificables deben prevalecer.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un empleado usa una contraseña larga pero idéntica en cinco servicios. ¿Cuál es el riesgo principal?",
+      "opciones": [
+        "Un compromiso permite reutilización de credenciales en los demás servicios",
+        "La longitud reduce disponibilidad",
+        "No puede aplicarse MFA",
+        "La contraseña se convierte en biometría"
+      ],
+      "respuesta": 0,
+      "explicacion": "La unicidad limita el alcance de una filtración.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "La dirección completa la formación con meses de retraso. ¿Qué mensaje cultural transmite?",
+      "opciones": [
+        "Que las reglas no se aplican por igual y la seguridad no es prioritaria",
+        "Que el control es más fuerte",
+        "Que el phishing desapareció",
+        "Que la formación es técnica"
+      ],
+      "respuesta": 0,
+      "explicacion": "El comportamiento del liderazgo establece el tono real.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "¿Qué KRI sería útil para riesgo de terceros?",
+      "opciones": [
+        "Porcentaje de proveedores críticos con evaluaciones o planes de remediación vencidos",
+        "Número de logotipos en contratos",
+        "Cantidad total de proveedores sin criticidad",
+        "Duración de reuniones"
+      ],
+      "respuesta": 0,
+      "explicacion": "Relaciona criticidad con controles de supervisión incumplidos.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Una métrica sube tras incorporar sistemas antes no monitorizados. ¿Cómo debe comunicarse?",
+      "opciones": [
+        "Explicando el cambio de cobertura antes de interpretar la tendencia",
+        "Como deterioro confirmado sin contexto",
+        "Ocultando el dato previo",
+        "Cambiando la definición retroactivamente"
+      ],
+      "respuesta": 0,
+      "explicacion": "La cobertura afecta comparabilidad y debe transparentarse.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un informe técnico llega a dirección con miles de IOC pero sin impacto ni decisión solicitada. ¿Qué falta?",
+      "opciones": [
+        "Síntesis de riesgo, implicaciones, opciones y recomendación",
+        "Más direcciones IP",
+        "Una contraseña",
+        "Un diagrama OSI completo"
+      ],
+      "respuesta": 0,
+      "explicacion": "El reporting debe traducir evidencia en decisiones para su audiencia.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Un modelo de IA participa en continuidad, pero nadie sabe qué versión produjo el plan. ¿Qué control falta?",
+      "opciones": [
+        "Gestión de versiones y trazabilidad de entradas y salidas",
+        "Un puerto seguro",
+        "Una VLAN pública",
+        "Eliminación de revisores humanos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los artefactos generados deben poder reproducirse, revisarse y atribuirse.",
+      "dominio": 2
+    },
+    {
+      "pregunta": "Una identidad se crea sin asociarla a una persona, servicio o propietario verificable. ¿Qué problema existe?",
+      "opciones": [
+        "No puede gobernarse ni atribuirse correctamente",
+        "Aumenta disponibilidad",
+        "Mejora privacidad",
+        "Aplica MAC"
+      ],
+      "respuesta": 0,
+      "explicacion": "Toda identidad necesita vínculo, propósito y responsable.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "El alta concede permisos mediante una petición aprobada, pero no conserva la petición. ¿Qué debilidad queda?",
+      "opciones": [
+        "Falta de evidencia de autorización",
+        "Falta de cifrado de red",
+        "Exceso de RPO",
+        "Pérdida de redundancia"
+      ],
+      "respuesta": 0,
+      "explicacion": "Debe poder demostrarse quién solicitó y aprobó cada acceso.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Un usuario cambia de empresa dentro del grupo y conserva acceso de la entidad anterior. ¿Qué proceso falló?",
+      "opciones": [
+        "Mover y deprovisioning entre contextos",
+        "Autenticación biométrica",
+        "Hashing",
+        "Segmentación física"
+      ],
+      "respuesta": 0,
+      "explicacion": "El cambio debe retirar accesos previos y conceder solo los nuevos.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Una baja programada se ejecuta seis horas tarde. ¿Qué métrica revela el riesgo?",
+      "opciones": [
+        "Tiempo entre baja efectiva y revocación completa",
+        "Número de cuentas del directorio",
+        "Longitud de la contraseña",
+        "Cantidad de aplicaciones"
+      ],
+      "respuesta": 0,
+      "explicacion": "La ventana de acceso posterior a la salida mide la exposición del proceso.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Una cuenta de emergencia nunca se usa, pero tiene privilegios máximos. ¿Qué control necesita?",
+      "opciones": [
+        "Protección reforzada, monitorización, pruebas y revisión periódica",
+        "Uso diario para mantenerla activa",
+        "Contraseña publicada",
+        "Exclusión de auditoría"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las cuentas break-glass son necesarias, pero de alto riesgo y deben gobernarse.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Un robot comparte cuenta con otros tres robots. ¿Qué mejora aporta más trazabilidad?",
+      "opciones": [
+        "Identidad individual por robot y logs protegidos",
+        "Una contraseña más corta",
+        "Eliminar propietarios",
+        "Desactivar rotación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las identidades separadas permiten atribución y revocación selectiva.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Un propietario aprueba accesos sin conocer para qué sirven los permisos técnicos. ¿Qué mejora corresponde?",
+      "opciones": [
+        "Presentar descripciones comprensibles y contexto de uso en la recertificación",
+        "Eliminar la revisión",
+        "Aprobar todos por defecto",
+        "Delegar en el solicitante"
+      ],
+      "respuesta": 0,
+      "explicacion": "El aprobador necesita información significativa para decidir.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "En DAC, malware ejecutado por un usuario accede a archivos que el usuario puede leer. ¿Qué debilidad ilustra?",
+      "opciones": [
+        "Los permisos del sujeto pueden heredarse por procesos comprometidos",
+        "MAC permite siempre el acceso",
+        "RBAC no usa roles",
+        "ABAC elimina malware"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un proceso puede actuar con los privilegios del usuario y abusar de accesos legítimos.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "En MAC, un usuario con nivel Alto intenta leer un documento Alto sin necesidad funcional. ¿Debe permitirse?",
+      "opciones": [
+        "No necesariamente; también puede exigirse necesidad de conocer",
+        "Sí, la etiqueta basta siempre",
+        "Sí, porque es propietario",
+        "No, MAC nunca permite lectura"
+      ],
+      "respuesta": 0,
+      "explicacion": "La autorización puede combinar clasificación y necesidad de conocer.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Un rol temporal se convierte en permanente porque nadie lo revisa. ¿Qué control de RBAC falta?",
+      "opciones": [
+        "Gobierno del ciclo de vida de roles y caducidad",
+        "Cifrado asimétrico",
+        "NAT",
+        "Un IDS"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los roles y asignaciones también requieren propietarios, revisión y retirada.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Una regla ABAC permite acceso por ubicación, pero usuarios usan proxies. ¿Qué lección aplica?",
+      "opciones": [
+        "Los atributos deben ser fiables y no usarse aisladamente si son manipulables",
+        "La ubicación es siempre un factor fuerte",
+        "ABAC elimina el fraude",
+        "Debe desactivarse accounting"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las señales de contexto tienen limitaciones y requieren combinación y validación.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Una ACL contiene permisos permitidos y denegados contradictorios. ¿Qué debe existir?",
+      "opciones": [
+        "Reglas claras de evaluación y pruebas de resultado efectivo",
+        "Más entradas duplicadas",
+        "Una cuenta compartida",
+        "Un hot site"
+      ],
+      "respuesta": 0,
+      "explicacion": "El orden y precedencia pueden cambiar el resultado y deben entenderse.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Un empleado aprueba gastos de un compañero y el compañero aprueba los suyos. ¿Qué riesgo elude la SoD formal?",
+      "opciones": [
+        "Colusión recíproca",
+        "Disponibilidad",
+        "Cifrado débil",
+        "Falta de SSO"
+      ],
+      "respuesta": 0,
+      "explicacion": "Separar funciones no elimina acuerdos entre personas; se necesitan supervisión y analítica.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "PAM registra una sesión, pero los logs pueden ser borrados por el mismo administrador. ¿Qué mejora es necesaria?",
+      "opciones": [
+        "Almacenamiento independiente e inmutable o fuertemente protegido",
+        "Eliminar grabación",
+        "Dar acceso a todos",
+        "Reducir MFA"
+      ],
+      "respuesta": 0,
+      "explicacion": "La evidencia privilegiada debe quedar fuera del control unilateral del observado.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Una credencial JIT se concede sin comprobar que existe ticket aprobado. ¿Qué fallo hay?",
+      "opciones": [
+        "Falta de vínculo entre elevación, necesidad y autorización",
+        "Exceso de cifrado",
+        "Un RPO alto",
+        "Falta de VLAN"
+      ],
+      "respuesta": 0,
+      "explicacion": "El privilegio temporal debe estar asociado a una tarea autorizada.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Una aplicación usa SSO, pero mantiene usuarios locales no revisados. ¿Qué riesgo existe?",
+      "opciones": [
+        "Una vía alternativa puede eludir MFA y bajas centrales",
+        "SSO deja de cifrar",
+        "El IdP pierde disponibilidad física",
+        "No hay objetos"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las cuentas locales paralelas debilitan el control central.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Una federación confía en cualquier audiencia del token. ¿Qué vulnerabilidad crea?",
+      "opciones": [
+        "Una afirmación destinada a otro servicio podría aceptarse indebidamente",
+        "Impide autenticación",
+        "Cifra demasiado",
+        "Aumenta el RTO"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los tokens deben validar emisor, audiencia, firma, tiempo y demás condiciones.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "IGA automatiza aprobaciones basándose en el jefe directo, pero el organigrama está desactualizado. ¿Qué debe mejorarse?",
+      "opciones": [
+        "Calidad de la fuente autoritativa y tratamiento de excepciones",
+        "Eliminar logs",
+        "Añadir roles universales",
+        "Usar cuentas compartidas"
+      ],
+      "respuesta": 0,
+      "explicacion": "La automatización amplifica errores en datos maestros.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "El acceso adaptativo solicita MFA en cada acción trivial y los usuarios buscan atajos. ¿Qué principio de diseño falta?",
+      "opciones": [
+        "Proporcionalidad al riesgo y usabilidad sostenible",
+        "Más fricción siempre",
+        "Ausencia de contexto",
+        "DAC obligatorio"
+      ],
+      "respuesta": 0,
+      "explicacion": "Controles excesivos pueden producir fatiga y conductas inseguras.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Una IA decide permisos basándose en patrones históricos que reflejan discriminación. ¿Qué respuesta es apropiada?",
+      "opciones": [
+        "Evaluar sesgo, limitar automatización y mantener revisión y apelación",
+        "Aceptar el histórico como neutral",
+        "Ocultar decisiones",
+        "Eliminar toda evidencia"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las decisiones de acceso automatizadas requieren equidad, transparencia y supervisión.",
+      "dominio": 3
+    },
+    {
+      "pregunta": "Un cable dañado provoca pérdida de señal. ¿En qué capa OSI comienza el diagnóstico?",
+      "opciones": [
+        "Física",
+        "Aplicación",
+        "Sesión",
+        "Transporte"
+      ],
+      "respuesta": 0,
+      "explicacion": "El medio, conectores y señal pertenecen a la capa física.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Dos hosts están en la misma VLAN, pero uno no aprende la MAC del otro. ¿Qué mecanismo local debe revisarse?",
+      "opciones": [
+        "ARP y capa de enlace",
+        "DNS público",
+        "TLS",
+        "SMTP"
+      ],
+      "respuesta": 0,
+      "explicacion": "La comunicación IPv4 local necesita resolver IP a MAC y entregar tramas.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un router recibe una ruta más específica y otra general. ¿Cuál suele preferir?",
+      "opciones": [
+        "La ruta con prefijo más largo",
+        "La ruta más antigua siempre",
+        "La dirección MAC mayor",
+        "La que use UDP"
+      ],
+      "respuesta": 0,
+      "explicacion": "El encaminamiento IP aplica normalmente coincidencia de prefijo más largo.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Una aplicación requiere entrega completa de un archivo. ¿Por qué TCP es adecuado?",
+      "opciones": [
+        "Confirma, reordena y retransmite segmentos perdidos",
+        "Cifra automáticamente todo",
+        "No usa puertos",
+        "Evita cualquier congestión"
+      ],
+      "respuesta": 0,
+      "explicacion": "TCP proporciona un flujo fiable aunque no garantiza cifrado.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un DNS responde con una dirección falsa por datos en caché manipulados. ¿Qué propiedad se ha comprometido?",
+      "opciones": [
+        "Integridad de la resolución",
+        "Disponibilidad física",
+        "No repudio del usuario",
+        "Privacidad del disco"
+      ],
+      "respuesta": 0,
+      "explicacion": "La respuesta ha sido alterada y dirige a un destino incorrecto.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Una empresa permite FTP porque «solo es interno». ¿Qué riesgo persiste?",
+      "opciones": [
+        "Credenciales y datos pueden viajar sin cifrar y la red interna no es plenamente confiable",
+        "FTP usa siempre TLS",
+        "El tráfico interno no puede capturarse",
+        "Solo afecta disponibilidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las redes internas también pueden ser comprometidas o monitorizadas.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un servicio usa un puerto no estándar. ¿Qué afirmación es correcta?",
+      "opciones": [
+        "Cambiar el puerto reduce ruido, pero no sustituye autenticación, parches y filtrado",
+        "El servicio queda invulnerable",
+        "El puerto determina el cifrado",
+        "No necesita logs"
+      ],
+      "respuesta": 0,
+      "explicacion": "La ocultación no corrige debilidades del servicio.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Una dirección IPv6 global se asigna a un servidor antes protegido por NAT. ¿Qué debe revisarse?",
+      "opciones": [
+        "Reglas de firewall y exposición extremo a extremo",
+        "Solo el nombre DNS",
+        "El RPO",
+        "La política de backups"
+      ],
+      "respuesta": 0,
+      "explicacion": "La conectividad directa no implica permiso; debe filtrarse explícitamente.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Una VPN usa cifrado fuerte, pero acepta certificados de cualquier autoridad no controlada. ¿Qué riesgo existe?",
+      "opciones": [
+        "Autenticación insuficiente del extremo y posible suplantación",
+        "Falta de disponibilidad por definición",
+        "Exceso de segmentación",
+        "Hashing reversible"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un canal cifrado hacia el atacante sigue siendo inseguro si no se valida la identidad.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un firewall bloquea conexiones nuevas, pero permite una sesión maliciosa ya establecida. ¿Qué acción puede ser necesaria?",
+      "opciones": [
+        "Terminar sesiones afectadas y actualizar reglas o estado",
+        "Reiniciar DNS únicamente",
+        "Eliminar backups",
+        "Cambiar VLAN de usuarios al azar"
+      ],
+      "respuesta": 0,
+      "explicacion": "Cambiar política no siempre invalida conexiones existentes.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un IPS bloquea tráfico legítimo crítico. ¿Qué equilibrio debe aplicarse?",
+      "opciones": [
+        "Ajustar reglas y excepciones controladas midiendo riesgo y falsos positivos",
+        "Desactivarlo permanentemente",
+        "Permitir todo",
+        "Ocultar el incidente"
+      ],
+      "respuesta": 0,
+      "explicacion": "La prevención debe ser eficaz sin causar indisponibilidad desproporcionada.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Una red Wi-Fi ofrece WPA3, pero WPS permanece activo con un PIN débil. ¿Qué debe hacerse?",
+      "opciones": [
+        "Desactivar el mecanismo débil aunque el cifrado principal sea fuerte",
+        "Confiar solo en WPA3",
+        "Publicar el PIN",
+        "Ocultar el SSID"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una vía auxiliar insegura puede anular controles más fuertes.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un dispositivo Bluetooth conserva modo detectable durante una reunión sensible. ¿Qué riesgo aumenta?",
+      "opciones": [
+        "Enumeración e intentos de conexión no autorizados",
+        "RPO de aplicaciones",
+        "Corrupción de backups",
+        "Falta de DNS"
+      ],
+      "respuesta": 0,
+      "explicacion": "La visibilidad inalámbrica expone información y superficie de ataque.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un fabricante deja de dar soporte a miles de sensores IoT. ¿Qué respuesta es MEJOR?",
+      "opciones": [
+        "Inventariar, segmentar, compensar temporalmente y planificar sustitución",
+        "Ignorarlos por ser pequeños",
+        "Darles acceso directo a Internet",
+        "Compartir credenciales"
+      ],
+      "respuesta": 0,
+      "explicacion": "El EOL debe tratarse por riesgo y ciclo de vida.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un proveedor necesita acceso a ICS una vez al mes. ¿Qué control reduce mejor el riesgo?",
+      "opciones": [
+        "Acceso remoto JIT mediante salto controlado, MFA y monitorización",
+        "VPN permanente con cuenta común",
+        "Puerto público al controlador",
+        "Desactivar grabación"
+      ],
+      "respuesta": 0,
+      "explicacion": "El acceso temporal y supervisado limita exposición.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Una DMZ permite iniciar conexiones hacia cualquier servidor interno. ¿Qué defecto existe?",
+      "opciones": [
+        "La zona expuesta no está contenida y facilita movimiento lateral",
+        "La DMZ cifra demasiado",
+        "Falta NAT únicamente",
+        "No puede alojar web"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los flujos desde la DMZ deben limitarse a dependencias imprescindibles.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Una política de microsegmentación se basa en nombres de carga, pero estos pueden falsificarse. ¿Qué necesita?",
+      "opciones": [
+        "Identidades y atributos autenticados, además de política validada",
+        "Más nombres sin verificación",
+        "Una red plana",
+        "Desactivar telemetría"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las decisiones son tan fiables como las identidades y atributos usados.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Defensa en profundidad añade cinco controles, pero todos dependen de Active Directory. ¿Qué debe evaluarse?",
+      "opciones": [
+        "El directorio como punto común de fallo y medidas independientes",
+        "Solo el número de licencias",
+        "El color de las consolas",
+        "La longitud de IPv6"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las capas compartidas pueden caer juntas ante un compromiso central.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Zero Trust permite acceso, pero el riesgo de sesión cambia después. ¿Qué capacidad necesita?",
+      "opciones": [
+        "Evaluación continua y revocación dinámica",
+        "Confianza hasta fin de año",
+        "Eliminación de logs",
+        "Un único control perimetral"
+      ],
+      "respuesta": 0,
+      "explicacion": "La decisión debe adaptarse a cambios de dispositivo, usuario o amenaza.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un cliente quiere consumir una base de datos gestionada sin administrar motor ni SO. ¿Qué modelo se aproxima más?",
+      "opciones": [
+        "PaaS o servicio de plataforma gestionada",
+        "IaaS puro administrando todo",
+        "Centro local",
+        "Nube comunitaria por definición"
+      ],
+      "respuesta": 0,
+      "explicacion": "El proveedor gestiona la plataforma y el cliente usa y protege datos y configuración.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Una empresa usa recursos públicos solo cuando su nube privada se satura. ¿Qué despliegue describe?",
+      "opciones": [
+        "Nube híbrida",
+        "Nube privada exclusiva",
+        "SaaS únicamente",
+        "Nube comunitaria"
+      ],
+      "respuesta": 0,
+      "explicacion": "Combina entornos privados y públicos coordinados.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "El proveedor cloud ofrece cifrado, pero el cliente publica accidentalmente un depósito. ¿Qué demuestra?",
+      "opciones": [
+        "La configuración del cliente sigue siendo su responsabilidad",
+        "El proveedor asume todo riesgo",
+        "El cifrado impide exposición",
+        "La nube elimina errores humanos"
+      ],
+      "respuesta": 0,
+      "explicacion": "El modelo compartido asigna al cliente identidades, datos y configuraciones que controla.",
+      "dominio": 4
+    },
+    {
+      "pregunta": "Un empleado descarga datos Confidenciales en un equipo no gestionado. ¿Qué control debería haberlo impedido?",
+      "opciones": [
+        "Política de manejo aplicada mediante controles de acceso y dispositivo",
+        "Un RTO menor",
+        "Una nube híbrida",
+        "Una firma del proveedor"
+      ],
+      "respuesta": 0,
+      "explicacion": "La clasificación debe traducirse en restricciones de almacenamiento y uso.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Una etiqueta se pierde al exportar un documento. ¿Qué riesgo crea?",
+      "opciones": [
+        "Los controles posteriores pueden tratarlo como menos sensible",
+        "El contenido se cifra automáticamente",
+        "Mejora disponibilidad",
+        "Elimina retención"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las etiquetas guían manejo y deben mantenerse o sustituirse por controles equivalentes.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un dataset se seudonimiza, pero existe una tabla separada que permite reidentificar. ¿Cómo debe protegerse esa tabla?",
+      "opciones": [
+        "Como información sensible con acceso muy restringido",
+        "Como dato público",
+        "Sin backups",
+        "Con cuenta compartida"
+      ],
+      "respuesta": 0,
+      "explicacion": "La seudonimización es reversible mediante información adicional que requiere fuerte protección.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un algoritmo simétrico protege datos, pero millones de dispositivos comparten la misma clave. ¿Cuál es el mayor riesgo?",
+      "opciones": [
+        "El compromiso de una clave afecta a todos y dificulta atribución y rotación",
+        "El cifrado se vuelve hashing",
+        "La disponibilidad siempre aumenta",
+        "No puede cifrar volumen"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las claves compartidas amplían el radio de impacto.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Una organización firma software, pero no protege la clave de firma. ¿Qué riesgo existe?",
+      "opciones": [
+        "Un atacante podría firmar código malicioso como legítimo",
+        "El software no podrá ejecutarse offline",
+        "El hash será reversible",
+        "La red perderá IPv6"
+      ],
+      "respuesta": 0,
+      "explicacion": "La confianza en la firma depende de custodiar la clave privada.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Los logs detallan datos personales innecesarios. ¿Qué mejora equilibra seguridad y privacidad?",
+      "opciones": [
+        "Minimizar contenido, restringir acceso y definir retención sin perder evidencia necesaria",
+        "Desactivar todo logging",
+        "Publicarlos para auditoría",
+        "Conservarlos para siempre"
+      ],
+      "respuesta": 0,
+      "explicacion": "El logging debe ser suficiente y proporcional, con protección y ciclo de vida.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un evento coincide con una regla, pero procede de una prueba autorizada. ¿Cómo debe gestionarse?",
+      "opciones": [
+        "Validarlo con el calendario y alcance, documentar el resultado y mantener vigilancia ante desviaciones",
+        "Borrarlo sin registro",
+        "Declarar brecha",
+        "Desactivar la regla permanentemente"
+      ],
+      "respuesta": 0,
+      "explicacion": "El contexto autorizado explica actividad, pero debe comprobarse que se mantiene dentro del alcance.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un incidente afecta a una cuenta con privilegios de dominio. ¿Por qué aumenta la prioridad?",
+      "opciones": [
+        "El potencial de alcance e impacto es muy alto",
+        "Las cuentas privilegiadas no generan logs",
+        "Solo afecta a una persona",
+        "El dominio siempre se recupera solo"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los privilegios amplían las acciones posibles del atacante.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un actor vende accesos iniciales a otras bandas. ¿Qué motivación predomina?",
+      "opciones": [
+        "Beneficio económico",
+        "Activismo sin dinero",
+        "Error accidental",
+        "Investigación defensiva"
+      ],
+      "respuesta": 0,
+      "explicacion": "Los brokers de acceso monetizan sistemas comprometidos.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Una fuente comparte IOC mediante un canal confiable, pero no son relevantes para la tecnología de la empresa. ¿Qué debe hacerse?",
+      "opciones": [
+        "Evaluar relevancia antes de desplegar detecciones o bloqueos",
+        "Bloquearlos todos sin análisis",
+        "Ignorar para siempre la fuente",
+        "Declarar incidente"
+      ],
+      "respuesta": 0,
+      "explicacion": "La inteligencia útil debe ser fiable, oportuna y aplicable al entorno.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "El primer respondedor ejecuta herramientas no aprobadas que alteran marcas temporales. ¿Qué principio perjudica?",
+      "opciones": [
+        "Preservación e integridad de evidencia",
+        "Disponibilidad de DNS",
+        "Mínimo privilegio de usuarios finales",
+        "Nube privada"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las acciones deben documentarse y minimizar cambios para conservar valor probatorio.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Tras erradicar malware, el equipo restaura desde una copia sin comprobar si también está infectada. ¿Qué faltó?",
+      "opciones": [
+        "Validar que la fuente y el estado restaurado sean confiables",
+        "Un KRI de proveedores",
+        "Una VLAN de invitados",
+        "Una firma del usuario"
+      ],
+      "respuesta": 0,
+      "explicacion": "La recuperación desde una fuente contaminada reinicia el incidente.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un tabletop demuestra que nadie sabe quién habla con medios. ¿Qué debe mejorar el IRP?",
+      "opciones": [
+        "Roles y coordinación con comunicaciones y dirección",
+        "El algoritmo de hashing",
+        "La topología Wi-Fi",
+        "El modelo de nube"
+      ],
+      "respuesta": 0,
+      "explicacion": "La respuesta incluye comunicación autorizada, no solo tareas técnicas.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un activo se vende al terminar su uso. ¿Qué evidencias deben conservarse?",
+      "opciones": [
+        "Autorización, sanitización verificada y actualización del inventario",
+        "La contraseña del comprador",
+        "Sesiones activas",
+        "Solo una fotografía"
+      ],
+      "respuesta": 0,
+      "explicacion": "La disposición segura debe ser trazable y demostrar retirada de datos.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un parche urgente rompe una aplicación. ¿Qué elemento del cambio reduce el impacto?",
+      "opciones": [
+        "Plan de rollback probado y criterios de reversión",
+        "Ausencia de documentación",
+        "Acceso público",
+        "Eliminar backups"
+      ],
+      "respuesta": 0,
+      "explicacion": "La reversión permite volver a un estado estable si el cambio falla.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Un análisis SAST detecta una posible inyección, pero no sabe si la ruta es alcanzable. ¿Qué sigue?",
+      "opciones": [
+        "Validar el hallazgo con revisión y pruebas apropiadas antes de priorizar remediación",
+        "Ignorarlo",
+        "Explotar producción sin permiso",
+        "Publicar el código"
+      ],
+      "respuesta": 0,
+      "explicacion": "La validación reduce falsos positivos y aporta contexto de riesgo.",
+      "dominio": 5
+    },
+    {
+      "pregunta": "Durante un pentest físico, un evaluador alcanza un área fuera del alcance. ¿Qué debe hacer?",
+      "opciones": [
+        "Detenerse, preservar evidencia y contactar según las reglas de compromiso",
+        "Continuar porque ya entró",
+        "Tomar datos reales",
+        "Ocultar el acceso"
+      ],
+      "respuesta": 0,
+      "explicacion": "La autorización y el alcance delimitan todas las acciones de prueba.",
+      "dominio": 5
+    }
+  ]
+}

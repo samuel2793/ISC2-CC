@@ -301,6 +301,30 @@ const SUMMARIES = [
     file: "Resumenes y chuletas/Simulacro oficial CC 2026 - Examen 3.json",
     type: "exam",
     available: true
+  },
+  {
+    id: "resumen-simulacro-2026-4",
+    number: "Examen final 4",
+    title: "Simulacro oficial CC 2026 · Examen 4",
+    file: "Resumenes y chuletas/Simulacro oficial CC 2026 - Examen 4.json",
+    type: "exam",
+    available: true
+  },
+  {
+    id: "resumen-simulacro-2026-5",
+    number: "Examen final 5",
+    title: "Simulacro oficial CC 2026 · Examen 5",
+    file: "Resumenes y chuletas/Simulacro oficial CC 2026 - Examen 5.json",
+    type: "exam",
+    available: true
+  },
+  {
+    id: "resumen-simulacro-2026-6",
+    number: "Examen final 6",
+    title: "Simulacro oficial CC 2026 · Examen 6",
+    file: "Resumenes y chuletas/Simulacro oficial CC 2026 - Examen 6.json",
+    type: "exam",
+    available: true
   }
 ];
 

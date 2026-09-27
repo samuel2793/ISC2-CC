@@ -1,0 +1,1307 @@
+{
+  "titulo": "Simulacro integral CC 2026 — Examen 6",
+  "procedencia": "Selección curada de las baterías oficial y de práctica del proyecto, revisada y reasignada al esquema ISC2 CC vigente desde el 1 de septiembre de 2026",
+  "descripcion": "100 preguntas difíciles pero justas tomadas de las baterías locales. Cada pregunta conserva su fuente para auditoría; el reparto es 24/17/20/22/17.",
+  "preguntas": [
+    {
+      "pregunta": "Un fabricante contrata un seguro cibernético que cubre los costes de respuesta a brechas y posteriormente sufre una brecha. La aseguradora paga los gastos de recuperación, pero la empresa continúa sufriendo desconfianza de los clientes y pérdida de contratos. ¿Qué lección sobre la transferencia del riesgo ilustra este caso?",
+      "opciones": [
+        "El seguro transfiere determinadas consecuencias financieras, pero algunos impactos, como el daño reputacional, no pueden transferirse por completo",
+        "El seguro elimina todas las consecuencias de un riesgo",
+        "La transferencia es idéntica a la evitación",
+        "La reputación no puede verse afectada por una brecha"
+      ],
+      "respuesta": 0,
+      "explicacion": "La transferencia puede trasladar determinadas pérdidas financieras a un tercero, pero otros impactos, como la reputación, la confianza o la pérdida de negocio, siguen afectando a la organización.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-13"
+    },
+    {
+      "pregunta": "Un análisis muestra que las contraseñas robadas son la principal causa de toma de control de cuentas en una empresa. Seguridad despliega autenticación multifactor en todos los accesos remotos, de modo que una contraseña robada por sí sola ya no sea suficiente. ¿Qué tratamiento del riesgo representa el despliegue de MFA?",
+      "opciones": [
+        "Aceptación de las tomas de control",
+        "Mitigación, reduciendo la probabilidad de una toma de control de cuenta exitosa",
+        "Evitación, ya que se eliminó el acceso remoto",
+        "Transferencia a los empleados"
+      ],
+      "respuesta": 1,
+      "explicacion": "La MFA introduce un control que reduce la probabilidad de que el robo de una contraseña derive en una toma de control de cuenta, manteniendo la actividad de acceso remoto. Esto es mitigación.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-12"
+    },
+    {
+      "pregunta": "Una empresa de venta de entradas en línea promete que su sitio estará disponible el 99,95 % del tiempo, pero toda su operación depende de una única conexión a Internet de un solo proveedor. Cuando ese proveedor sufre una interrupción regional, las ventas se detienen durante seis horas. ¿Qué propiedad de la tríada CIA no pudo mantener la arquitectura y debido a qué omisión?",
+      "opciones": [
+        "Disponibilidad, por la falta de conectividad redundante que eliminara el punto único de fallo",
+        "Integridad, por código sin firmar",
+        "No repudio, por ausencia de firmas",
+        "Confidencialidad, por cifrado débil"
+      ],
+      "respuesta": 0,
+      "explicacion": "La interrupción hizo que el servicio fuera inaccesible. Es un fallo de disponibilidad causado por un punto único de fallo que debería mitigarse con conexiones redundantes y diversas.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-1"
+    },
+    {
+      "pregunta": "Los terminales de tienda de una cadena minorista utilizan todos una cuenta compartida llamada 'staff123' para agilizar el trabajo. Tras desaparecer inventario, los investigadores descubren que los logs son inútiles porque todas las transacciones sospechosas aparecen asociadas a la misma cuenta. ¿Qué principio se sacrificó y provocó el fracaso de la investigación?",
+      "opciones": [
+        "Confidencialidad, porque los precios eran públicos",
+        "Disponibilidad, porque los terminales estaban fuera de servicio",
+        "Elasticidad, porque fluctuó la demanda",
+        "Responsabilidad y trazabilidad, porque las credenciales compartidas impiden atribuir acciones a individuos"
+      ],
+      "respuesta": 3,
+      "explicacion": "La responsabilidad exige poder relacionar cada acción con un individuo concreto. Las credenciales compartidas impiden esa atribución y reducen el valor probatorio de los registros.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-41"
+    },
+    {
+      "pregunta": "Una base de datos de recursos humanos muestra los salarios completos a todos los usuarios de RR. HH., aunque la mayoría solo necesita nombres y cargos. Tras una filtración, el sistema se rediseña para que cada rol vea únicamente las columnas necesarias para sus funciones. ¿Qué propiedad CIA refuerza principalmente el rediseño y mediante qué principio?",
+      "opciones": [
+        "Disponibilidad mediante clustering",
+        "Confidencialidad mediante la aplicación del mínimo privilegio a la visibilidad de los datos",
+        "No repudio mediante registro de eventos",
+        "Integridad mediante hashing"
+      ],
+      "respuesta": 1,
+      "explicacion": "Limitar la información visible a la estrictamente necesaria aplica el principio de mínimo privilegio y reduce la divulgación no autorizada, reforzando la confidencialidad.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-2"
+    },
+    {
+      "pregunta": "Los operadores de una red eléctrica descubren que las lecturas de temperatura de sensores remotos fueron manipuladas durante la transmisión, provocando decisiones incorrectas sobre la distribución de energía. Los datos nunca fueron divulgados y los sistemas permanecieron disponibles. ¿Qué propiedad de seguridad fue atacada?",
+      "opciones": [
+        "Confidencialidad",
+        "Portabilidad",
+        "Integridad de los datos de los sensores",
+        "Disponibilidad"
+      ],
+      "respuesta": 2,
+      "explicacion": "La modificación de las lecturas destruyó la exactitud y fiabilidad de la información, lo que constituye un ataque contra la integridad.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-3"
+    },
+    {
+      "pregunta": "Hoshi es miembro de ISC2 y trabaja para Triffid Corporation como responsable de datos. Triffid necesita una nueva solución de firewall y Hoshi debe recomendar un producto. El primo de Hoshi trabaja para un proveedor de firewalls y ese proveedor fabrica, de hecho, el mejor firewall disponible. ¿Qué debería hacer Hoshi?",
+      "opciones": [
+        "Recomendar el producto de su primo sin más consideraciones",
+        "Solicitar ser apartado de la tarea",
+        "Recomendar otro proveedor o producto",
+        "Revelar la relación familiar y recomendar el proveedor o producto"
+      ],
+      "respuesta": 3,
+      "explicacion": "Hoshi debe actuar en beneficio de su organización y recomendar la mejor solución, pero debe revelar el conflicto potencial para evitar cualquier apariencia de favoritismo.",
+      "dominio": 1,
+      "fuente": "tests/oficial/isc2-cc-pre-final-assessment/1.json#pregunta-27"
+    },
+    {
+      "pregunta": "Una analista certificada por ISC2 descubre que revelar públicamente una debilidad de seguridad de un cliente en una conferencia impulsaría su carrera, pero expondría al público a ataques contra infraestructuras críticas. Según los cánones del Código de Ética de ISC2, ¿qué deber debe tener prioridad?",
+      "opciones": [
+        "Maximizar la reputación profesional personal",
+        "Promover la profesión mediante el intercambio de conocimientos",
+        "Proteger a la sociedad, el bien común y la infraestructura",
+        "Prestar un servicio diligente a los principales"
+      ],
+      "respuesta": 2,
+      "explicacion": "El primer canon de ISC2, relativo a proteger a la sociedad, el bien común y la infraestructura, tiene prioridad cuando entra en conflicto con otros deberes.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-22"
+    },
+    {
+      "pregunta": "Un arquitecto de seguridad establece dos requisitos: los archivos de clientes deben ser ilegibles si son interceptados y la empresa debe poder comprobar que no fueron alterados mientras estaban almacenados. ¿Qué combinación de mecanismos corresponde correctamente a estos requisitos?",
+      "opciones": [
+        "Hashing para confidencialidad y cifrado para integridad",
+        "Cifrado para confidencialidad y hashing para verificar la integridad",
+        "Compresión para ambos",
+        "Balanceo de carga para ambos"
+      ],
+      "respuesta": 1,
+      "explicacion": "El cifrado impide leer los datos interceptados y protege su confidencialidad, mientras que comparar hashes criptográficos permite detectar modificaciones y verificar la integridad.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-4"
+    },
+    {
+      "pregunta": "Una evaluación recomienda un control costoso para un riesgo moderado. El propietario del sistema decide que la pérdida potencial es tolerable frente al coste del control, documenta la decisión y firma la aceptación. ¿Por qué debe firmarla el propietario del negocio y no el analista de seguridad?",
+      "opciones": [
+        "Las firmas son únicamente decorativas",
+        "El riesgo pertenece al negocio; el responsable del proceso y de sus posibles pérdidas tiene autoridad para aceptarlo",
+        "Los analistas tienen prohibido redactar documentos",
+        "Los equipos de seguridad son propietarios de todas las decisiones empresariales"
+      ],
+      "respuesta": 1,
+      "explicacion": "La aceptación del riesgo es una decisión empresarial. Seguridad asesora, pero la autoridad corresponde al responsable que asume las consecuencias del riesgo.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-11"
+    },
+    {
+      "pregunta": "Una planta de tratamiento de agua diseña la seguridad del sistema de control que mantiene la dosificación química dentro de límites seguros. Los responsables aceptan que algunas lecturas de sensores puedan ser visibles para personal no autorizado, pero los valores de dosificación nunca deben poder modificarse sin autorización. ¿Qué propiedad están priorizando?",
+      "opciones": [
+        "Integridad",
+        "No repudio",
+        "Redundancia",
+        "Confidencialidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "La prioridad es la integridad, ya que se pretende impedir modificaciones no autorizadas de los valores de dosificación.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-4"
+    },
+    {
+      "pregunta": "Una pequeña organización no puede pagar un servicio de monitorización de seguridad 24x7 recomendado por su marco de seguridad. En su lugar, una persona formada revisa cada mañana los registros de seguridad centralizados y también después de cada alerta. ¿Qué representa esta revisión?",
+      "opciones": [
+        "Una estrategia de evitación",
+        "Un control compensatorio que proporciona una alternativa de detección cuando el control recomendado no es viable",
+        "Una marca de agua disuasoria",
+        "Un firewall preventivo"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un control compensatorio proporciona una protección alternativa cuando el control preferido no puede implantarse, en este caso mediante revisión periódica de logs.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-19"
+    },
+    {
+      "pregunta": "Una evaluación de riesgos determina que una wiki interna poco utilizada podría ser desfigurada, con un impacto empresarial trivial y baja probabilidad. La remediación costaría mucho más que cualquier pérdida plausible. La dirección documenta la decisión de no tomar más medidas. ¿Qué respuesta al riesgo es esta?",
+      "opciones": [
+        "Mitigación",
+        "Evitación",
+        "Aceptación",
+        "Transferencia"
+      ],
+      "respuesta": 2,
+      "explicacion": "Documentar formalmente que se conservará un riesgo de bajo nivel sin controles adicionales es aceptación del riesgo.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-14"
+    },
+    {
+      "pregunta": "Tras una demanda por una brecha de seguridad, una empresa demuestra que había implantado salvaguardas aceptadas por el sector, mantenía políticas, formaba al personal y actuaba con rapidez ante problemas conocidos. ¿Qué concepto de gobierno describe este nivel demostrado de conducta protectora razonable?",
+      "opciones": [
+        "Seguridad por oscuridad",
+        "Elasticidad",
+        "Negación plausible",
+        "Diligencia debida (due care)"
+      ],
+      "respuesta": 3,
+      "explicacion": "La diligencia debida describe el nivel de esfuerzo protector razonable que una organización debe aplicar y poder demostrar.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-26"
+    },
+    {
+      "pregunta": "En lugar de crear su propio sistema de pago con tarjeta, una tienda en línea contrata a un procesador de pagos consolidado que asume la gestión de los datos de tarjeta bajo su propio programa de cumplimiento. Desde la perspectiva de la tienda, ¿qué tratamiento del riesgo representa principalmente este contrato?",
+      "opciones": [
+        "Evitación del riesgo dejando de vender productos",
+        "Amplificación del riesgo",
+        "Transferencia del riesgo mediante el traslado contractual de responsabilidades de gestión",
+        "Aceptación del riesgo de filtraciones de tarjetas"
+      ],
+      "respuesta": 2,
+      "explicacion": "Contratar a un tercero para asumir parte de la actividad y sus responsabilidades transfiere parte del riesgo.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-13"
+    },
+    {
+      "pregunta": "El director de riesgos presenta al consejo una declaración según la cual la empresa perseguirá un crecimiento agresivo en servicios cloud aceptando un riesgo operativo moderado, pero prácticamente ningún riesgo para la confidencialidad de los datos de clientes. ¿Qué expresa esta declaración?",
+      "opciones": [
+        "Un estándar de contraseñas",
+        "Un informe de incidente",
+        "El apetito de riesgo de la empresa, que orienta cuánto riesgo aceptará en distintas áreas",
+        "Un conjunto de reglas de firewall"
+      ],
+      "respuesta": 2,
+      "explicacion": "El apetito de riesgo expresa cuánto riesgo y qué tipos de riesgo está dispuesta a aceptar una organización para alcanzar sus objetivos.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-14"
+    },
+    {
+      "pregunta": "Un instrumento antiguo de laboratorio ejecuta software que no puede parchearse ni actualizarse sin invalidar su certificación. Para gestionar el riesgo, el equipo lo coloca en un segmento de red aislado con una supervisión estricta. ¿Cómo se describen MEJOR el aislamiento y la supervisión?",
+      "opciones": [
+        "Controles disuasorios",
+        "Controles compensatorios",
+        "Controles correctivos",
+        "Controles primarios"
+      ],
+      "respuesta": 1,
+      "explicacion": "Cuando no puede implantarse el control ideal, se utilizan medidas alternativas que reduzcan el mismo riesgo; son controles compensatorios.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-21"
+    },
+    {
+      "pregunta": "El primer inicio de sesión de una nueva empleada pasa por tres etapas: introduce su ID de usuario, después verifica contraseña y token y, finalmente, el sistema carga las aplicaciones permitidas por su perfil. ¿Qué secuencia nombra correctamente esas tres etapas?",
+      "opciones": [
+        "Autorización, autenticación, identificación",
+        "Identificación, autenticación, autorización",
+        "Contabilidad, identificación, cifrado",
+        "Autenticación, contabilidad, eliminación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Primero se declara una identidad mediante identificación, después se demuestra mediante autenticación y finalmente se determinan los permisos mediante autorización.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-5"
+    },
+    {
+      "pregunta": "Un proveedor anuncia una vulnerabilidad crítica en un software que una empresa utiliza en servidores expuestos a Internet y ya circula código para explotarla. El equipo de seguridad actualiza la evaluación de riesgos ese mismo día. ¿Qué cambió en términos de riesgo?",
+      "opciones": [
+        "El activo desapareció",
+        "Nada, porque las evaluaciones solo se realizan anualmente",
+        "El riesgo siempre disminuye cuando un proveedor publica un aviso",
+        "Una vulnerabilidad recién conocida junto con una amenaza activa aumenta notablemente la probabilidad de explotación y, por tanto, el riesgo"
+      ],
+      "respuesta": 3,
+      "explicacion": "La existencia de una vulnerabilidad conocida y de código de explotación activo aumenta la probabilidad de ataque y exige un tratamiento rápido del riesgo.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-9"
+    },
+    {
+      "pregunta": "El presupuesto solo permite tratar un riesgo este trimestre. El registro muestra: una amenaza muy probable con impacto grave, una improbable con impacto grave, una muy probable con impacto insignificante y una improbable con impacto insignificante. ¿Cuál debe abordarse PRIMERO?",
+      "opciones": [
+        "La muy probable y de impacto insignificante",
+        "La muy probable y de impacto grave",
+        "La que sea más barata de corregir",
+        "La improbable y de impacto insignificante"
+      ],
+      "respuesta": 1,
+      "explicacion": "La prioridad se determina combinando probabilidad e impacto; un riesgo muy probable y grave tiene la mayor prioridad.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-16"
+    },
+    {
+      "pregunta": "Para justificar un presupuesto de seguridad, un analista expresa cada riesgo importante como una pérdida monetaria anual esperada, multiplicando la frecuencia estimada del evento por el coste estimado por evento. ¿Qué tipo de evaluación de riesgos es?",
+      "opciones": [
+        "Anecdótica",
+        "Cuantitativa",
+        "Física",
+        "Cualitativa"
+      ],
+      "respuesta": 1,
+      "explicacion": "Expresar el riesgo con valores numéricos y monetarios basados en frecuencia y pérdida es una evaluación cuantitativa.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-12"
+    },
+    {
+      "pregunta": "Dos propuestas abordan el riesgo de ransomware: la propuesta A utiliza filtrado y hardening para reducir la probabilidad de infección; la propuesta B crea copias de seguridad inmutables y offline para reducir la pérdida de datos si la infección tiene éxito. ¿Cómo se diferencian en términos de riesgo?",
+      "opciones": [
+        "A reduce la probabilidad y B reduce el impacto; ambas son medidas de mitigación y son más eficaces combinadas",
+        "Ninguna modifica el riesgo",
+        "A es evitación y B es aceptación",
+        "Ambas transfieren el riesgo a aseguradoras"
+      ],
+      "respuesta": 0,
+      "explicacion": "La mitigación puede reducir tanto la probabilidad como el impacto. El hardening reduce la probabilidad y las copias resilientes reducen las consecuencias.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-10"
+    },
+    {
+      "pregunta": "Un servicio de mensajería hace que los clientes firmen en una tableta al recibir una entrega y almacena la firma, la marca temporal y la ubicación. Cuando un destinatario niega posteriormente haber recibido un paquete, ese registro permite demostrar la recepción. ¿Qué servicio de seguridad proporciona la captura de la firma?",
+      "opciones": [
+        "Disponibilidad del vehículo",
+        "Mínimo privilegio",
+        "Cifrado del paquete",
+        "No repudio de la recepción"
+      ],
+      "respuesta": 3,
+      "explicacion": "La evidencia vinculada a una persona, momento y lugar permite impedir que el destinatario niegue posteriormente la recepción, proporcionando no repudio.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-4"
+    },
+    {
+      "pregunta": "Una empleada revela una condición médica para solicitar adaptaciones en el trabajo. La información solo llega al responsable de RR. HH. y se utiliza exclusivamente para gestionar esas adaptaciones. ¿Qué principio de privacidad demuestra este uso?",
+      "opciones": [
+        "Limitación de finalidad, utilizando los datos personales solo para el propósito para el que fueron recogidos",
+        "Publicación abierta",
+        "Limitación de ancho de banda",
+        "Proliferación de datos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La limitación de finalidad exige que los datos personales se utilicen únicamente para los fines específicos declarados al recopilarlos.",
+      "dominio": 1,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-6"
+    },
+    {
+      "pregunta": "Un responsable de continuidad insiste en que se guarden copias impresas del plan de continuidad de negocio, incluidos los listados de contactos, en los domicilios de los responsables y en el sitio alternativo, además de mantener una copia en la intranet corporativa. ¿Cuál es el motivo?",
+      "opciones": [
+        "La interrupción que obliga a utilizar el plan puede dejar fuera de servicio la propia intranet, por lo que el plan debe seguir siendo accesible cuando los sistemas principales no estén disponibles",
+        "El papel parece más oficial",
+        "Las impresoras necesitan utilizarse periódicamente",
+        "Para aumentar el presupuesto de compra de papel"
+      ],
+      "respuesta": 0,
+      "explicacion": "El plan de continuidad debe permanecer disponible precisamente cuando la infraestructura habitual pueda haber fallado, por lo que es necesario mantener copias fuera de los sistemas principales y, preferiblemente, fuera del sitio.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-32"
+    },
+    {
+      "pregunta": "Una empresa de trading no puede tolerar más que unos pocos minutos de inactividad, por lo que paga por una instalación alternativa completamente equipada, con servidores en funcionamiento y datos replicados continuamente. ¿Qué tipo de sitio de recuperación ha elegido y cuál es su principal inconveniente?",
+      "opciones": [
+        "Un warm site, que necesita restaurar los datos",
+        "Un sitio móvil, ilegal en la mayoría de regiones",
+        "Un hot site, que es la opción más cara",
+        "Un cold site, que carece de equipos"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un hot site está prácticamente listo para asumir la operación de inmediato, pero su elevado coste es su principal desventaja.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-34"
+    },
+    {
+      "pregunta": "Antes de redactar su plan de continuidad de negocio, una empresa entrevista a los responsables de cada departamento para determinar qué funciones son más críticas y cuánto tiempo puede transcurrir antes de que una interrupción cause daños graves. ¿Cómo se denomina esta actividad?",
+      "opciones": [
+        "Estudio de transferencia del riesgo",
+        "Ejercicio de mesa",
+        "Prueba de penetración",
+        "Análisis de impacto en el negocio"
+      ],
+      "respuesta": 3,
+      "explicacion": "El Business Impact Analysis, o BIA, identifica funciones críticas, dependencias y consecuencias de las interrupciones a lo largo del tiempo.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-31"
+    },
+    {
+      "pregunta": "Una empresa elige una instalación alternativa que ya dispone de racks, servidores y equipos de red, pero cuyos sistemas no contienen datos actuales; tras un desastre, el personal restauraría copias recientes y levantaría los servicios en uno o dos días. ¿Qué tipo de sitio de recuperación es?",
+      "opciones": [
+        "Sitio frío",
+        "Sitio caliente",
+        "Sitio espejo",
+        "Sitio templado"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un sitio templado dispone de infraestructura y hardware, pero requiere restaurar datos y completar la puesta en marcha.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-34"
+    },
+    {
+      "pregunta": "Un banco activa su centro de datos de recuperación y lo mantiene funcionando durante un fin de semana procesando copias de las cargas reales, mientras el centro principal continúa atendiendo a los clientes. ¿Qué tipo de prueba de recuperación ante desastres es?",
+      "opciones": [
+        "Un ejercicio tabletop",
+        "Una prueba de interrupción completa",
+        "Una revisión mediante checklist",
+        "Una prueba paralela, en la que los sistemas de recuperación funcionan junto a producción sin realizar el corte"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una prueba paralela ejecuta el entorno alternativo simultáneamente con producción sin trasladar el servicio real al sitio de recuperación.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-33"
+    },
+    {
+      "pregunta": "El consejo pregunta por qué el equipo de recuperación ante desastres nunca ha cambiado simplemente toda la empresa al sitio de recuperación durante una jornada laboral para demostrar que el plan funciona. ¿Cuál es el compromiso aceptado de una prueba de interrupción total?",
+      "opciones": [
+        "Solo prueba el sistema de nóminas",
+        "Ofrece la validación más realista, pero implica riesgo real de interrupción del negocio, por lo que requiere planificación cuidadosa y aprobación de la dirección",
+        "Es el tipo de prueba menos realista",
+        "No implica ningún riesgo"
+      ],
+      "respuesta": 1,
+      "explicacion": "La interrupción total valida el plan con máxima fidelidad, pero puede causar una caída real si algo falla.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-36"
+    },
+    {
+      "pregunta": "Un análisis de impacto en el negocio de un fabricante revela algo que la dirección desconocía: el sistema de facturación del que dependen todos los departamentos utiliza un único servidor de base de datos y la nómina no puede ejecutarse sin un fichero enviado por un pequeño proveedor externo. ¿Qué valor de planificación acaba de aportar el BIA?",
+      "opciones": [
+        "Ha calculado tasas de conversión de marketing",
+        "Ha demostrado que la planificación es innecesaria",
+        "Ha sustituido al plan de recuperación ante desastres",
+        "Ha revelado dependencias ocultas y puntos únicos de fallo que las estrategias de recuperación deben abordar"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un BIA identifica sistemas, recursos y terceros de los que dependen las funciones críticas, revelando dependencias y puntos únicos de fallo que deben cubrirse en los planes de continuidad y recuperación.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-31"
+    },
+    {
+      "pregunta": "Un incendio destruye la sala principal de servidores de una empresa. El equipo de respuesta a incidentes determina que los sistemas no pueden restaurarse en el lugar y la dirección declara formalmente un desastre, activa el plan de recuperación y traslada las operaciones al sitio alternativo. ¿Qué ilustra esta secuencia sobre la relación entre IR, DR y BC?",
+      "opciones": [
+        "Los planes de DR sustituyen a los planes de IR",
+        "Las tres disciplinas nunca interactúan",
+        "BC solo se aplica a inundaciones",
+        "La respuesta a incidentes puede escalar a recuperación ante desastres y activación de continuidad de negocio cuando un incidente supera la capacidad normal de restauración"
+      ],
+      "respuesta": 3,
+      "explicacion": "IR, DR y BC están relacionados: la respuesta a incidentes gestiona el evento y, si el daño supera la recuperación normal, pueden activarse DR para restaurar sistemas y BC para mantener las funciones empresariales.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-36"
+    },
+    {
+      "pregunta": "En lugar de realizar una discusión en una sala de reuniones, una empresa organiza un ejercicio realista: los facilitadores introducen un escenario de ransomware simulado con alertas ficticias y acontecimientos progresivos, mientras los equipos ejecutan sus acciones de respuesta en tiempo real sin afectar a los sistemas de producción. ¿Qué tipo de ejercicio es?",
+      "opciones": [
+        "Una prueba de interrupción completa sobre sistemas reales",
+        "Un ejercicio de simulación, más realista que un tabletop pero sin afectar a producción",
+        "Una revisión presupuestaria",
+        "Una revisión de código"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una simulación hace que los equipos ejecuten sus funciones ante eventos ficticios en tiempo real sin interrumpir los sistemas productivos, ofreciendo mayor realismo que un ejercicio tabletop.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-33"
+    },
+    {
+      "pregunta": "Los respondedores confirman que un gusano se está propagando por los servidores de archivos. Un ingeniero quiere empezar a reconstruir equipos de inmediato, pero el responsable del incidente insiste en detener primero la propagación. ¿Por qué la contención precede a la erradicación en la respuesta a incidentes?",
+      "opciones": [
+        "Porque los auditores exigen orden alfabético",
+        "Porque eliminar malware mientras el incidente sigue propagándose permite reinfecciones y más daños; primero hay que estabilizar la situación",
+        "Porque reconstruir siempre es innecesario",
+        "Porque la contención es más barata que las copias de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "La contención estabiliza el entorno e impide que la amenaza siga propagándose mientras se procede a erradicarla.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-28"
+    },
+    {
+      "pregunta": "Los responsables encuentran un servidor comunicándose activamente con un atacante. Un administrador quiere apagarlo inmediatamente, pero el responsable del incidente desconecta su conexión de red y mantiene el sistema encendido. ¿Qué consideración favorece esta decisión?",
+      "opciones": [
+        "Los servidores encendidos no pueden examinarse",
+        "Apagar el sistema mejora el análisis forense",
+        "Los cables de alimentación son caros",
+        "El aislamiento detiene la comunicación del atacante y conserva evidencia volátil en memoria y el estado del sistema"
+      ],
+      "respuesta": 3,
+      "explicacion": "Desconectar la red contiene la actividad maliciosa sin destruir memoria RAM, procesos y conexiones activas que pueden ser importantes para el análisis forense.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-29"
+    },
+    {
+      "pregunta": "Durante una brecha muy publicitada, varios empleados bienintencionados empiezan a responder preguntas de periodistas con detalles contradictorios, aumentando la confusión y la exposición legal. ¿Qué elemento de un plan maduro de respuesta a incidentes evita este problema?",
+      "opciones": [
+        "Permitir que cualquier empleado hable libremente con la prensa",
+        "Negar por completo la brecha",
+        "Apagar el sistema telefónico de la empresa",
+        "Un plan de comunicaciones que designe portavoces autorizados y canales aprobados para declaraciones externas"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un plan de comunicaciones define quién puede hablar externamente y por qué canales, evitando mensajes contradictorios o no autorizados.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-30"
+    },
+    {
+      "pregunta": "Al formar un equipo de respuesta a incidentes, el responsable de seguridad insiste en incluir representantes de asesoría jurídica, recursos humanos y relaciones públicas junto con los respondedores técnicos. ¿Cuál es la MEJOR justificación?",
+      "opciones": [
+        "Los reguladores exigen el mismo número de personas de cada departamento",
+        "No se puede confiar en el personal técnico para incidentes sensibles",
+        "Los incidentes implican decisiones legales, laborales y de comunicación que exceden la autoridad del personal técnico",
+        "Reduce el coste de la respuesta"
+      ],
+      "respuesta": 2,
+      "explicacion": "Los incidentes graves pueden exigir decisiones jurídicas, de personal y de comunicación pública para las que se necesita experiencia y autoridad no exclusivamente técnica.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-30"
+    },
+    {
+      "pregunta": "Una analista revisa una alerta de intrusión y determina que era un falso positivo provocado por un escáner mal configurado y que ningún sistema estuvo realmente en peligro. Registra el hecho y lo cierra sin escalarlo. ¿Qué documento debe definir los criterios utilizados para decidir que la observación no justificaba declarar un incidente?",
+      "opciones": [
+        "El plan de marketing",
+        "El plano de distribución de oficinas",
+        "La lista de precios del proveedor",
+        "Los criterios de clasificación y escalado del plan de respuesta a incidentes"
+      ],
+      "respuesta": 3,
+      "explicacion": "El plan de respuesta a incidentes debe definir cómo se clasifican los eventos, qué niveles de gravedad existen y cuándo una observación debe escalarse formalmente a incidente.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-27"
+    },
+    {
+      "pregunta": "Poco después de activarse una alerta sospechosa, los respondedores trabajan para confirmar si existe realmente un incidente, determinar qué sistemas están afectados y asignar un nivel de gravedad antes de tomar medidas disruptivas. ¿Qué fase de la respuesta a incidentes están realizando?",
+      "opciones": [
+        "Detección y análisis",
+        "Erradicación",
+        "Recuperación",
+        "Preparación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Validar alertas, determinar el alcance y establecer la gravedad son actividades propias de la fase de detección y análisis.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-28"
+    },
+    {
+      "pregunta": "Con el segmento comprometido ya aislado, los respondedores eliminan la puerta trasera del atacante de todos los servidores afectados, borran las cuentas maliciosas creadas y corrigen la vulnerabilidad utilizada para entrar. ¿A qué fase de la respuesta a incidentes corresponden estas actividades?",
+      "opciones": [
+        "Contención",
+        "Erradicación",
+        "Análisis de impacto en el negocio",
+        "Lecciones aprendidas"
+      ],
+      "respuesta": 1,
+      "explicacion": "Eliminar malware, cuentas del atacante y vulnerabilidades utilizadas para el acceso forma parte de la fase de erradicación, que busca eliminar la presencia y las causas técnicas del incidente.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-29"
+    },
+    {
+      "pregunta": "Durante el onboarding, los empleados aprenden a pasar el cursor sobre los enlaces, verificar por teléfono las solicitudes de pago inesperadas utilizando números conocidos y reportar correos sospechosos con un solo clic. Meses después, la tasa de clics en simulaciones de phishing disminuye considerablemente. ¿Qué demuestra esto sobre la formación de concienciación en seguridad?",
+      "opciones": [
+        "Solo los directivos necesitan esta formación",
+        "La formación es un control técnico",
+        "Una formación de concienciación eficaz y practicada reduce de forma medible el éxito de la ingeniería social contra los empleados",
+        "La formación sustituye la necesidad de filtrado de correo"
+      ],
+      "respuesta": 2,
+      "explicacion": "La concienciación en seguridad es un control administrativo que modifica el comportamiento de los usuarios y puede reducir su susceptibilidad al phishing y otros ataques de ingeniería social.",
+      "dominio": 2,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-99"
+    },
+    {
+      "pregunta": "Una empresa asigna actualmente permisos de archivos usuario por usuario y las auditorías requieren semanas para revisar miles de concesiones individuales. Un consultor propone definir los permisos una sola vez por función laboral y asignar después los usuarios a esas funciones. ¿Qué modelo propone y qué beneficio aporta a las auditorías?",
+      "opciones": [
+        "Control discrecional con más hojas de cálculo",
+        "Control de acceso basado en roles, que permite revisar los permisos comprobando las definiciones de roles y sus miembros en lugar de miles de concesiones individuales",
+        "Ningún modelo, porque los modelos son solo teoría",
+        "Control obligatorio que exige autorizaciones militares"
+      ],
+      "respuesta": 1,
+      "explicacion": "RBAC agrupa permisos por roles asociados a funciones laborales. Esto simplifica las auditorías porque se revisan las definiciones de roles y quién pertenece a cada uno en vez de permisos individuales dispersos.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-55"
+    },
+    {
+      "pregunta": "Una auditoría anual de cuentas en una empresa de ingeniería descubre cuarenta cuentas habilitadas pertenecientes a contratistas cuyos contratos finalizaron hace más de un año y que no han tenido actividad reciente. ¿Cómo se denominan estas cuentas y por qué son relevantes?",
+      "opciones": [
+        "Cuentas de servicio necesarias para aplicaciones",
+        "Cuentas premium que aumentan los ingresos",
+        "Cuentas huérfanas o inactivas, que los atacantes pueden secuestrar sin ser detectados porque ningún propietario legítimo las supervisa",
+        "Cuentas honeypot creadas deliberadamente"
+      ],
+      "respuesta": 2,
+      "explicacion": "Las cuentas activas sin un propietario legítimo actual son cuentas huérfanas o inactivas. Son peligrosas porque pueden ser utilizadas por atacantes sin que un usuario real detecte rápidamente el uso indebido.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-48"
+    },
+    {
+      "pregunta": "Una empleada configura en su teléfono una aplicación de contraseña de un solo uso basada en tiempo. Cada treinta segundos muestra un nuevo código de seis dígitos derivado de una semilla secreta almacenada en el dispositivo. Cuando utiliza uno de esos códigos para iniciar sesión, ¿qué categoría de factor demuestra y por qué?",
+      "opciones": [
+        "Algún lugar donde está, porque los teléfonos tienen GPS",
+        "Algo que posee, porque generar códigos válidos requiere poseer el dispositivo registrado que contiene la semilla",
+        "Algo que es, porque el teléfono reconoce su rostro",
+        "Algo que sabe, porque el código es un número"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un TOTP demuestra posesión porque los códigos válidos dependen de una semilla secreta almacenada en el dispositivo registrado. El hecho de que el código sea numérico no lo convierte en un factor de conocimiento.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-39"
+    },
+    {
+      "pregunta": "Seguridad descubre que herramientas baratas pueden clonar las credenciales de proximidad usadas en las puertas de la oficina. Como mejora inmediata, añade teclados PIN para que la entrada requiera tanto la credencial como un código personal. ¿Qué ha conseguido este cambio?",
+      "opciones": [
+        "Ha convertido el acceso físico en autenticación de dos factores, por lo que una credencial clonada ya no basta",
+        "Ha hecho que las puertas se abran más rápido",
+        "Ha eliminado el sistema de credenciales",
+        "Ha eliminado la necesidad de registros de acceso"
+      ],
+      "respuesta": 0,
+      "explicacion": "La credencial aporta un factor de posesión y el PIN un factor de conocimiento, por lo que una credencial clonada por sí sola no permite entrar.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-53"
+    },
+    {
+      "pregunta": "Después de que una ingeniera se autentique correctamente en el repositorio de código, el sistema consulta sus permisos y le permite leer el proyecto principal, pero le bloquea el código de integración de nóminas. ¿Qué paso del control de acceso toma estas decisiones de permitir y bloquear?",
+      "opciones": [
+        "Identificación",
+        "Autenticación",
+        "Autorización",
+        "Cifrado"
+      ],
+      "respuesta": 2,
+      "explicacion": "La autorización determina qué acciones y recursos están permitidos para una identidad ya autenticada.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-37"
+    },
+    {
+      "pregunta": "Antes del lanzamiento confidencial de un producto, los documentos de ingeniería se restringen al equipo responsable. Un empleado de otra división con el mismo nivel jerárquico solicita acceso por curiosidad y se le deniega. ¿En qué principio se basa la decisión?",
+      "opciones": [
+        "Acceso por orden de llegada",
+        "Need to know, porque sus funciones no requieren esa información",
+        "Derecho de acceso por antigüedad",
+        "Popularidad"
+      ],
+      "respuesta": 1,
+      "explicacion": "El principio need to know limita el acceso a la información necesaria para realizar las funciones asignadas, independientemente de la jerarquía.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-43"
+    },
+    {
+      "pregunta": "La entrada de un centro de datos utiliza un pequeño vestíbulo con dos puertas interbloqueadas: la exterior debe cerrarse y bloquearse antes de que se abra la interior, y solo puede pasar una persona por autenticación. ¿Qué ataque pretende impedir principalmente este diseño?",
+      "opciones": [
+        "Fuerza bruta contra contraseñas",
+        "Tailgating",
+        "Phishing",
+        "Inyección SQL"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un mantrap o vestíbulo de control de acceso impide que una persona no autorizada entre siguiendo de cerca a otra autorizada.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-49"
+    },
+    {
+      "pregunta": "Prachi trabaja como administrador de bases de datos en Triffid, Inc. Puede añadir o eliminar usuarios, pero no puede leer ni modificar los datos de la propia base de datos. Cuando inicia sesión, una lista de control de acceso (ACL) comprueba qué permisos tiene. En esta situación, ¿qué representa Prachi?",
+      "opciones": [
+        "El archivo",
+        "La regla",
+        "El objeto",
+        "El sujeto"
+      ],
+      "respuesta": 3,
+      "explicacion": "Prachi es la entidad activa que intenta realizar acciones sobre la base de datos, por lo que representa al sujeto.",
+      "dominio": 3,
+      "fuente": "tests/oficial/isc2-cc-pre-final-assessment/1.json#pregunta-45"
+    },
+    {
+      "pregunta": "Larry y Fern trabajan en el centro de datos. Para entrar al centro de datos al comenzar su jornada laboral, ambos deben presentar sus propias llaves, que son diferentes, al lector de llaves antes de que se abra la puerta. ¿Qué concepto de seguridad se aplica en esta situación?",
+      "opciones": [
+        "Control dual",
+        "Segregación de funciones",
+        "Mínimo privilegio",
+        "Defensa en profundidad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Es un ejemplo de control dual: se requiere la participación de dos personas, cada una con un elemento de autenticación distinto, para realizar una función.",
+      "dominio": 3,
+      "fuente": "tests/oficial/isc2-cc-pre-final-assessment/1.json#pregunta-46"
+    },
+    {
+      "pregunta": "Los planos de una nueva sala de servidores especifican que no haya ventanas exteriores, que exista una única puerta reforzada, que las paredes se prolonguen por encima del falso techo hasta la estructura y que la sala esté alejada de las zonas públicas del edificio. ¿Cuál es el objetivo conjunto de estas decisiones arquitectónicas?",
+      "opciones": [
+        "Mejorar la iluminación natural",
+        "Cumplir las tendencias de oficinas abiertas",
+        "Reducir las vías de ataque físico hacia la sala para obligar a que el acceso pase por un único punto controlado y monitorizado",
+        "Mejorar la intensidad de la señal Wi-Fi"
+      ],
+      "respuesta": 2,
+      "explicacion": "Estas medidas eliminan rutas alternativas de entrada y concentran el acceso en un punto que puede ser controlado y supervisado, reduciendo la superficie de ataque física.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-52"
+    },
+    {
+      "pregunta": "Una empresa que utiliza códigos SMS para MFA sufre una toma de cuenta porque el atacante consigue transferir el número de teléfono de la víctima a otra SIM y recibe los códigos. ¿Qué demuestra el incidente y cuál es una alternativa más resistente?",
+      "opciones": [
+        "Las contraseñas más largas solucionan el SIM swapping",
+        "Los códigos SMS heredan vulnerabilidades de la red telefónica, como el SIM swapping; las aplicaciones autenticadoras o las llaves de seguridad hardware son alternativas más resistentes",
+        "La víctima debería dejar de utilizar teléfonos",
+        "Todas las formas de MFA son inútiles"
+      ],
+      "respuesta": 1,
+      "explicacion": "El SIM swapping permite secuestrar códigos SMS. Factores ligados al dispositivo o llaves FIDO no dependen del número telefónico y resisten mejor este ataque.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-39"
+    },
+    {
+      "pregunta": "El gerente de una nueva analista presenta una solicitud de acceso especificando los sistemas que requiere su función; cada propietario de sistema la aprueba antes de que el equipo de identidades otorgue los permisos. ¿Qué práctica del ciclo de vida representa este flujo?",
+      "opciones": [
+        "Desaprovisionamiento",
+        "Password spraying",
+        "Ataque de escalada de privilegios",
+        "Aprovisionamiento con autorización documentada de los aprobadores adecuados"
+      ],
+      "respuesta": 3,
+      "explicacion": "Conceder acceso inicial según necesidades del puesto y con aprobaciones documentadas es un proceso de aprovisionamiento.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-47"
+    },
+    {
+      "pregunta": "Un hospital concede a cada enfermero recién contratado el mismo conjunto de permisos asociado a la función de enfermería, en lugar de asignar derechos aplicación por aplicación. ¿Qué modelo de control de acceso utiliza y cuál es su principal beneficio administrativo?",
+      "opciones": [
+        "MAC, porque utiliza etiquetas de clasificación",
+        "RBAC, porque asignar permisos mediante roles simplifica el onboarding y reduce errores",
+        "DAC, porque cada enfermero es propietario de los registros",
+        "Control de acceso físico, porque los hospitales son edificios"
+      ],
+      "respuesta": 1,
+      "explicacion": "RBAC agrupa los permisos por funciones laborales, facilitando el aprovisionamiento consistente y la administración de accesos.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-57"
+    },
+    {
+      "pregunta": "Mila trabaja para una agencia gubernamental. Todos los datos tienen asignado un nivel de sensibilidad denominado clasificación, y cada persona tiene un nivel de autorización que determina qué clasificaciones puede consultar. El acceso se controla a nivel de sistema. ¿Qué modelo de control de acceso se está implementando?",
+      "opciones": [
+        "MAC (mandatory access control)",
+        "RBAC (role-based access control)",
+        "FAC (formal access control)",
+        "DAC (discretionary access control)"
+      ],
+      "respuesta": 0,
+      "explicacion": "MAC aplica controles obligatorios definidos a nivel del sistema o por administradores y utiliza clasificaciones y niveles de autorización que los usuarios no pueden modificar discrecionalmente.",
+      "dominio": 3,
+      "fuente": "tests/oficial/isc2-cc-pre-final-assessment/1.json#pregunta-52"
+    },
+    {
+      "pregunta": "Un auditor descubre que el mismo administrador configura el sistema de control de acceso y es la única persona que revisa sus logs, por lo que podría modificar permisos y borrar evidencias sin supervisión. ¿Qué principio se vulnera y cuál es la solución?",
+      "opciones": [
+        "Disponibilidad; añadir un segundo monitor",
+        "No repudio; borrar los logs",
+        "Separación de funciones; asignar la revisión de logs o la auditoría a una parte independiente",
+        "Mínimo privilegio; concederle más acceso"
+      ],
+      "respuesta": 2,
+      "explicacion": "La separación de funciones evita que una sola persona pueda ejecutar una acción sensible y ocultarla sin un control independiente.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-44"
+    },
+    {
+      "pregunta": "Un sistema de una agencia de inteligencia asigna etiquetas de clasificación a documentos y habilitaciones a usuarios, y el sistema operativo aplica las decisiones de acceso sin que autores ni supervisores puedan anularlas. Solo la función de administración de seguridad puede modificar las etiquetas. ¿Qué modelo es y cuál es su rasgo distintivo?",
+      "opciones": [
+        "Control de acceso basado en roles, cuyo rasgo distintivo son las funciones laborales",
+        "Control de acceso discrecional, cuyo rasgo distintivo es la decisión del propietario",
+        "Control de acceso obligatorio, cuyo rasgo distintivo son decisiones centralizadas basadas en etiquetas y fuera de la discreción del usuario",
+        "Control basado en contraseñas, cuyo rasgo distintivo es el secreto"
+      ],
+      "respuesta": 2,
+      "explicacion": "El control de acceso obligatorio (MAC) usa etiquetas y habilitaciones aplicadas centralmente, sin que el usuario pueda anular la política.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-56"
+    },
+    {
+      "pregunta": "Para una migración de datos de fin de semana, se conceden a un analista de base de datos derechos elevados temporales, que se revocan automáticamente el lunes por la mañana al finalizar la tarea. ¿Qué principio ejemplifica esta concesión limitada en el tiempo?",
+      "opciones": [
+        "Punto único de fallo",
+        "Separación de funciones",
+        "Mínimo privilegio aplicado dinámicamente, concediendo acceso elevado solo mientras es realmente necesario",
+        "Seguridad por oscuridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "El mínimo privilegio exige mantener solo los permisos necesarios durante el tiempo estrictamente necesario.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-42"
+    },
+    {
+      "pregunta": "TI conserva una credencial de administrador de emergencia para cada sistema crítico en una bóveda de contraseñas protegida y monitorizada. Retirar una credencial exige un número de ticket, genera alertas a seguridad y obliga a cambiar la contraseña al devolverla. ¿Por qué se aplican estos controles a las credenciales de emergencia?",
+      "opciones": [
+        "Las cuentas de emergencia tienen privilegios elevados y eluden procesos normales, por lo que su uso debe ser excepcional, justificado, visible y quedar invalidado posteriormente",
+        "Las bóvedas hacen que las contraseñas sean más fáciles de recordar",
+        "Los tickets sustituyen a la autenticación",
+        "Las alertas sirven para entretener al equipo de seguridad"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las credenciales break-glass tienen un nivel de privilegio excepcional, por lo que su uso debe quedar justificado, monitorizado y seguido de una rotación inmediata para mantener la responsabilidad y evitar su reutilización.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-46"
+    },
+    {
+      "pregunta": "Un administrador de identidades puede técnicamente concederse acceso a cualquier sistema. Por ello, la política exige que toda solicitud de acceso, incluida la suya propia, sea aprobada por el propietario del recurso y el flujo de trabajo impide la autoaprobación. ¿Qué principio implementa esta prohibición de autoaprobación?",
+      "opciones": [
+        "Retención de datos",
+        "Escalado elástico",
+        "Separación de funciones, garantizando que quien solicita el acceso no sea quien lo aprueba",
+        "Complejidad de contraseñas"
+      ],
+      "respuesta": 2,
+      "explicacion": "Separar la solicitud de la aprobación evita que una única persona pueda otorgarse privilegios sin supervisión, aplicando el principio de separación de funciones.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-44"
+    },
+    {
+      "pregunta": "Una empleada se traslada del departamento financiero al de ventas. Tres meses después, una auditoría descubre que conserva los permisos de los sistemas financieros además de sus nuevos accesos de ventas. ¿Qué proceso del ciclo de vida de identidades falló y cómo se denomina la situación resultante?",
+      "opciones": [
+        "Caducó la política de contraseñas",
+        "Falló el proceso de mover al no ajustar los accesos tras el cambio de función, produciendo acumulación de privilegios o privilege creep",
+        "El proceso de joiner concedió demasiado poco acceso",
+        "El proceso de copias de seguridad omitió su buzón"
+      ],
+      "respuesta": 1,
+      "explicacion": "Los cambios de puesto deben activar la revisión y retirada de permisos que ya no sean necesarios. Si esto no ocurre, los usuarios acumulan accesos históricos, fenómeno conocido como privilege creep.",
+      "dominio": 3,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-47"
+    },
+    {
+      "pregunta": "Durante un despliegue zero trust, una empleada de finanzas que abre la aplicación de nóminas desde su escritorio en la sede debe autenticarse con MFA, se comprueba el estado de seguridad de su portátil y se verifica su autorización específicamente para esa aplicación, igual que si estuviera conectada desde un hotel. ¿Qué principio de zero trust refleja este tratamiento uniforme?",
+      "opciones": [
+        "Confiar pero nunca verificar",
+        "La ubicación de red no otorga confianza; cada solicitud de acceso se verifica según identidad, estado del dispositivo y autorización independientemente de su origen",
+        "El tráfico de la sede está exento de políticas",
+        "Solo los invitados necesitan autenticación"
+      ],
+      "respuesta": 1,
+      "explicacion": "Zero trust elimina la confianza implícita basada en estar dentro del perímetro. Cada solicitud se evalúa según identidad, dispositivo, contexto y autorización sin importar desde qué red se origine.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-78"
+    },
+    {
+      "pregunta": "Una mañana falla completamente el servicio de resolución de nombres de una empresa. Los usuarios informan de que el correo, la navegación web y las aplicaciones cloud no funcionan, aunque los ingenieros confirman que la conectividad utilizando directamente direcciones IP es correcta. ¿Por qué el fallo de este único servicio tiene un efecto tan amplio?",
+      "opciones": [
+        "Porque DNS traduce los nombres utilizados por las aplicaciones a direcciones IP, de modo que al fallar la resolución muchos servicios parecen inaccesibles aunque la conectividad siga funcionando",
+        "Porque DNS transporta físicamente todos los paquetes",
+        "Porque DNS cifra la LAN",
+        "Porque los navegadores necesitan el puerto 25"
+      ],
+      "respuesta": 0,
+      "explicacion": "Las aplicaciones dependen normalmente de nombres de dominio. Si DNS no puede resolverlos a direcciones IP, los clientes no pueden localizar los servicios aunque la red IP funcione correctamente.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-66"
+    },
+    {
+      "pregunta": "Un equipo de desarrollo quiere escribir y desplegar su código de aplicación sobre una plataforma cloud donde el proveedor gestione los sistemas operativos, el runtime, los parches y el escalado, dejando al equipo centrarse únicamente en la aplicación y sus datos. ¿Qué modelo de servicio corresponde?",
+      "opciones": [
+        "Software as a Service",
+        "Platform as a Service",
+        "Alquiler de hardware",
+        "Infrastructure as a Service"
+      ],
+      "respuesta": 1,
+      "explicacion": "PaaS proporciona una plataforma gestionada que incluye sistema operativo, runtime y servicios de soporte, mientras el cliente desarrolla y gestiona sus propias aplicaciones y datos.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-81"
+    },
+    {
+      "pregunta": "Una startup alquila máquinas virtuales, volúmenes de almacenamiento y capacidad de red a un proveedor cloud, y después instala y administra sus propios sistemas operativos y aplicaciones. En este modelo de servicio, ¿quién es responsable de aplicar parches a esos sistemas operativos?",
+      "opciones": [
+        "El proveedor cloud, porque posee el hardware",
+        "El proveedor de servicios de Internet",
+        "La startup, porque en Infrastructure as a Service el cliente gestiona el sistema operativo y todo lo que está por encima",
+        "Nadie, porque los sistemas cloud se parchean solos"
+      ],
+      "respuesta": 2,
+      "explicacion": "En IaaS, el proveedor gestiona la infraestructura subyacente y el cliente es responsable del sistema operativo invitado, middleware y aplicaciones.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-81"
+    },
+    {
+      "pregunta": "Después de que una máquina virtual comprometida permitiera a los atacantes alcanzar decenas de cargas de trabajo vecinas, un equipo cloud implanta políticas para que cada carga solo pueda comunicarse con los pares específicos que necesita su función. ¿Cómo se llama este enfoque de aislamiento granular?",
+      "opciones": [
+        "Microsegmentación",
+        "Overclocking",
+        "Broadcasting",
+        "Escaneo de puertos"
+      ],
+      "respuesta": 0,
+      "explicacion": "La microsegmentación aplica políticas de red muy granulares por carga de trabajo y limita el movimiento lateral.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-75"
+    },
+    {
+      "pregunta": "Una organización sin ánimo de lucro de diez personas adopta una suite cloud de correo y documentos en la que el proveedor gestiona servidores, aplicación, parches y actualizaciones, mientras la organización solo administra usuarios y contenido. ¿Qué modelo de servicio cloud es?",
+      "opciones": [
+        "Software as a Service",
+        "Infrastructure as a Service",
+        "Alojamiento on-premises",
+        "Platform as a Service"
+      ],
+      "respuesta": 0,
+      "explicacion": "SaaS proporciona una aplicación completa operada por el proveedor, mientras el cliente gestiona principalmente usuarios, configuración y datos.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-81"
+    },
+    {
+      "pregunta": "Un minorista mantiene su sistema de inventario sensible en su propio centro de datos privado, pero durante las temporadas de alta demanda desvía tráfico web hacia un proveedor de nube pública, con ambos entornos conectados y coordinados. ¿Qué modelo de despliegue cloud describe esta situación?",
+      "opciones": [
+        "Community cloud",
+        "Hybrid cloud",
+        "Solo public cloud",
+        "Solo private cloud"
+      ],
+      "respuesta": 1,
+      "explicacion": "Una hybrid cloud combina infraestructura privada con recursos de nube pública integrados entre sí.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-82"
+    },
+    {
+      "pregunta": "El portátil de un auditor visitante, sin parches desde hace meses, se conecta a una toma de red de la oficina. Instantes después solo puede acceder a una red restringida de remediación con servidores de actualización y a nada más. ¿Qué control produjo este resultado y sobre qué base?",
+      "opciones": [
+        "El servidor DHCP se quedó sin direcciones",
+        "Un balanceador de carga lo redirigió por rendimiento",
+        "Control de acceso a red (NAC), que evaluó el cumplimiento del dispositivo y lo puso en cuarentena hasta su remediación",
+        "Spanning Tree Protocol bloqueó un bucle"
+      ],
+      "respuesta": 2,
+      "explicacion": "NAC evalúa la postura de seguridad del dispositivo y puede aislar equipos no conformes en una red de remediación.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-77"
+    },
+    {
+      "pregunta": "Los investigadores descubren que un atacante envió pequeñas consultas falsificadas a miles de resolvers abiertos de Internet, suplantando la dirección de la víctima como origen, de modo que cada resolver envió una respuesta mucho mayor a la víctima y saturó su ancho de banda. ¿Qué técnica de ataque es?",
+      "opciones": [
+        "Un ataque distribuido de denegación de servicio por reflexión y amplificación",
+        "Shoulder surfing",
+        "Un ataque de fuerza bruta contra inicios de sesión",
+        "Una campaña de phishing"
+      ],
+      "respuesta": 0,
+      "explicacion": "En un DDoS de reflexión y amplificación, el atacante suplanta la dirección de la víctima y provoca que terceros envíen hacia ella respuestas significativamente mayores que las solicitudes originales.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-70"
+    },
+    {
+      "pregunta": "En una LAN corporativa, la máquina de un atacante se anuncia falsamente como la puerta de enlace de red, haciendo que el tráfico de sus compañeros pase por su portátil antes de llegar a la puerta de enlace real, donde lo inspecciona discretamente. ¿Qué tipo de ataque es?",
+      "opciones": [
+        "Un ataque on-path realizado mediante suplantación de la puerta de enlace en la red local",
+        "Un ejercicio de mesa",
+        "Un ataque de diccionario contra contraseñas",
+        "Dumpster diving"
+      ],
+      "respuesta": 0,
+      "explicacion": "El atacante se sitúa en la ruta de comunicación de las víctimas, lo que constituye un ataque on-path o man-in-the-middle.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-71"
+    },
+    {
+      "pregunta": "Una empresa utiliza una aplicación CRM en modalidad SaaS. El proveedor gestiona software, servidores y parches, pero un empleado configura accidentalmente un enlace público a una lista de clientes. ¿Por qué la exposición corresponde al cliente?",
+      "opciones": [
+        "Los proveedores no son responsables de absolutamente nada",
+        "El cliente sigue siendo responsable de sus datos, permisos de usuario y configuración de compartición aunque el proveedor opere la aplicación y la infraestructura",
+        "Los datos cloud son públicos por ley",
+        "Solo el empleado tiene responsabilidad personal"
+      ],
+      "respuesta": 1,
+      "explicacion": "En SaaS el proveedor protege la plataforma, mientras que el cliente conserva responsabilidades sobre sus datos, identidades, permisos y configuraciones de acceso.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-81"
+    },
+    {
+      "pregunta": "Durante una temporada de alta demanda, un comercio distribuye peticiones web entre varios servidores idénticos mediante un dispositivo que también detecta servidores fallidos y deja de enviarles tráfico. ¿Qué dispositivo es y qué objetivo CIA protege principalmente?",
+      "opciones": [
+        "Un degausser para confidencialidad",
+        "Una trituradora para retención",
+        "Un keylogger para integridad",
+        "Un balanceador de carga, principalmente orientado a disponibilidad al distribuir la demanda y evitar nodos fallidos"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un load balancer distribuye tráfico y retira nodos no disponibles, aumentando la continuidad y disponibilidad del servicio.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-69"
+    },
+    {
+      "pregunta": "En el vestíbulo de un hotel, un atacante activa un punto de acceso malicioso que anuncia exactamente el mismo nombre de red que la Wi-Fi legítima del hotel. Los dispositivos de los huéspedes se conectan a la señal maliciosa más potente y el atacante puede interceptar su tráfico. ¿Cómo se denomina este ataque?",
+      "opciones": [
+        "Bluejacking",
+        "Ataque evil twin mediante un punto de acceso que imita al legítimo",
+        "Ataque de diccionario",
+        "Inyección SQL"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un evil twin es un punto de acceso malicioso que imita la identidad de una red Wi-Fi legítima para inducir a las víctimas a conectarse y facilitar la interceptación del tráfico.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-71"
+    },
+    {
+      "pregunta": "Dos edificios de oficinas tienen redes internas distintas con rangos de direcciones diferentes, y la empresa necesita que el tráfico circule entre ellas y hacia Internet. ¿Qué dispositivo está específicamente diseñado para conectar redes separadas y reenviar tráfico entre ellas?",
+      "opciones": [
+        "Un repetidor",
+        "Un hub",
+        "Un teclado inalámbrico",
+        "Un router"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un router conecta redes diferentes y toma decisiones de encaminamiento en la capa de red.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-66"
+    },
+    {
+      "pregunta": "Una empleada que viaja se conecta al Wi-Fi de un hotel e inmediatamente establece un túnel cifrado hacia la pasarela corporativa antes de trabajar; todo su tráfico circula después por ese túnel. ¿Qué protección principal ha obtenido en la red no confiable?",
+      "opciones": [
+        "La batería del portátil dura más",
+        "Su tráfico queda protegido frente a escucha e interceptación local entre el portátil y la pasarela corporativa",
+        "La red del hotel se vuelve confiable",
+        "Sus archivos se respaldan automáticamente"
+      ],
+      "respuesta": 1,
+      "explicacion": "La VPN cifra el tráfico a través de la red no confiable y reduce el riesgo de escucha o manipulación local en tránsito.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-80"
+    },
+    {
+      "pregunta": "Antes de contratar a un proveedor cloud, una empresa negocia un documento que compromete al proveedor a un 99,9 % de disponibilidad, tiempos definidos de respuesta de soporte y créditos económicos si no se cumplen los objetivos. ¿Qué documento es?",
+      "opciones": [
+        "Una política de uso aceptable",
+        "Un estándar de contraseñas",
+        "Un análisis de impacto en el negocio",
+        "Un acuerdo de nivel de servicio (SLA)"
+      ],
+      "respuesta": 3,
+      "explicacion": "Un SLA define compromisos medibles del servicio, como disponibilidad, tiempos de respuesta y compensaciones por incumplimiento.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-82"
+    },
+    {
+      "pregunta": "Un firewall perimetral moderno permite tráfico de retorno para conexiones iniciadas por usuarios internos y bloquea paquetes entrantes no solicitados porque recuerda las sesiones activas en una tabla de conexiones. ¿Cómo se llama esta capacidad?",
+      "opciones": [
+        "Inspección con estado (stateful inspection)",
+        "Wardriving",
+        "Port mirroring",
+        "Filtrado sin estado"
+      ],
+      "respuesta": 0,
+      "explicacion": "La inspección con estado mantiene información sobre conexiones activas y decide teniendo en cuenta el contexto de la sesión.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-67"
+    },
+    {
+      "pregunta": "Durante una incidencia, un ingeniero observa que ha fallado un servicio que usa UDP 53 y, justo después, los usuarios informan de que no pueden abrir sitios web por nombre aunque las conexiones directas por IP funcionan. ¿Qué servicio ha fallado?",
+      "opciones": [
+        "DNS",
+        "NTP",
+        "SMTP",
+        "DHCP"
+      ],
+      "respuesta": 0,
+      "explicacion": "DNS usa principalmente el puerto 53 y resuelve nombres a direcciones IP; si falla, el acceso por nombre deja de funcionar.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-63"
+    },
+    {
+      "pregunta": "Al configurar un nuevo firewall, una ingeniera establece como regla final descartar cualquier paquete que no haya sido permitido explícitamente por una regla anterior y después crea reglas de permiso muy específicas para los servicios necesarios. ¿Qué postura fundamental de seguridad está aplicando?",
+      "opciones": [
+        "Filtrado aleatorio",
+        "Denegación implícita, permitiendo únicamente el tráfico autorizado explícitamente y rechazando todo lo demás",
+        "Permitir por defecto",
+        "Diseño abierto"
+      ],
+      "respuesta": 1,
+      "explicacion": "La denegación implícita o deny by default establece que ningún tráfico se permite salvo que una regla lo autorice expresamente.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-67"
+    },
+    {
+      "pregunta": "Las oficinas de Londres y Singapur de una empresa deben intercambiar continuamente tráfico sensible a través de Internet público como si formaran parte de una única red privada, sin utilizar software cliente individual para cada usuario. ¿Qué solución cumple este requisito?",
+      "opciones": [
+        "Una VPN site-to-site, como un túnel IPsec entre los gateways de ambas oficinas",
+        "Enviar discos duros por correo cada semana",
+        "Un puente inalámbrico abierto",
+        "Módems de acceso telefónico individuales"
+      ],
+      "respuesta": 0,
+      "explicacion": "Una VPN site-to-site establece un túnel cifrado entre los gateways de dos redes y permite que sus sistemas se comuniquen de forma protegida a través de Internet sin requerir clientes VPN individuales.",
+      "dominio": 4,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-80"
+    },
+    {
+      "pregunta": "¿Cómo funciona un Web Application Firewall (WAF) en una red?",
+      "opciones": [
+        "Cifra los datos entre el servidor web y la red interna",
+        "Supervisa todo el tráfico procedente del exterior en busca de comportamiento malicioso antes de pasar las solicitudes al servidor web",
+        "Separa la información de pacientes de la información de facturación",
+        "Utiliza switches seguros para controlar el tráfico"
+      ],
+      "respuesta": 1,
+      "explicacion": "Un WAF inspecciona el tráfico dirigido a una aplicación web y detecta comportamiento malicioso antes de permitir que las solicitudes lleguen al servidor web.",
+      "dominio": 4,
+      "fuente": "tests/oficial/domain-4/1.json#pregunta-11"
+    },
+    {
+      "pregunta": "¿Cuál es uno de los servicios ofrecidos por muchos MSP en el que se supervisan firewalls y otras herramientas de seguridad para aportar experiencia en el triaje de eventos?",
+      "opciones": [
+        "Servicio de triaje de incidentes",
+        "Managed Detection and Response (MDR)",
+        "Servicio de firewall gestionado",
+        "Servicio de aplicación de parches de seguridad"
+      ],
+      "respuesta": 1,
+      "explicacion": "Managed Detection and Response (MDR) permite que un proveedor supervise firewalls y otras herramientas de seguridad y aporte experiencia especializada para detectar, analizar y realizar el triaje de eventos.",
+      "dominio": 4,
+      "fuente": "tests/oficial/domain-4/1.json#pregunta-16"
+    },
+    {
+      "pregunta": "Un hospital desplegó directamente en todas las estaciones de producción un parche del proveedor que no había sido probado. El parche entró en conflicto con el cliente de historias clínicas y paralizó la atención durante un día. ¿Qué práctica de gestión de parches habría tenido más probabilidades de detectar previamente el conflicto?",
+      "opciones": [
+        "Permitir que cada usuario elija sus parches",
+        "Probar los parches en un grupo de staging representativo antes de desplegarlos en toda la organización",
+        "No parchear nunca los sistemas clínicos",
+        "Aplicar parches únicamente de forma aleatoria"
+      ],
+      "respuesta": 1,
+      "explicacion": "Las pruebas previas y el despliegue escalonado sobre sistemas representativos permiten detectar incompatibilidades antes de afectar a toda la infraestructura de producción.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-97"
+    },
+    {
+      "pregunta": "El esquema de clasificación de una empresa va desde público, pasando por interno y confidencial, hasta restringido. Un documento recién redactado contiene condiciones de una fusión aún no anunciada cuya filtración podría afectar al precio de las acciones y provocar actuaciones regulatorias. ¿Cómo debe clasificarse y qué implica esa decisión?",
+      "opciones": [
+        "Público, para que los inversores puedan verlo",
+        "Interno, porque lo escribieron empleados",
+        "Sin clasificar, para evitar trámites",
+        "Restringido, el nivel de mayor sensibilidad, aplicando los controles más estrictos de almacenamiento, acceso y compartición definidos por el esquema"
+      ],
+      "respuesta": 3,
+      "explicacion": "La información cuya divulgación podría causar un daño especialmente grave debe recibir la clasificación más alta y quedar sometida a los controles de manejo más estrictos.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-83"
+    },
+    {
+      "pregunta": "Al retirar discos que almacenaron su propiedad intelectual más sensible, una empresa debe elegir entre sanitizarlos para revenderlos o destruirlos físicamente. La política exige destrucción para la clasificación más alta cuando el soporte abandona el control de la organización. ¿Qué justifica la medida?",
+      "opciones": [
+        "La destrucción siempre es más barata que el borrado",
+        "Para información de máximo valor que abandona la custodia, la destrucción física elimina cualquier duda residual sobre su recuperabilidad",
+        "Revender discos es ilegal en todos los países",
+        "Los discos explotan si se borran"
+      ],
+      "respuesta": 1,
+      "explicacion": "Para datos extremadamente sensibles, la destrucción física puede proporcionar mayor certeza de irrecuperabilidad que la reutilización del soporte.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-86"
+    },
+    {
+      "pregunta": "Un hospital quiere reutilizar cabinas de almacenamiento que antes contenían historiales de pacientes para un proyecto de baja sensibilidad y necesita sanitizarlas para que los datos antiguos sean irrecuperables incluso con técnicas de laboratorio, manteniendo el hardware utilizable. ¿Qué enfoque de sanitización encaja?",
+      "opciones": [
+        "Purga, usando técnicas como borrado criptográfico o sobrescritura avanzada que impidan incluso la recuperación de laboratorio y conserven el medio",
+        "Eliminación simple de archivos",
+        "Renombrar las carpetas",
+        "Trituración física de las cabinas"
+      ],
+      "respuesta": 0,
+      "explicacion": "La purga busca impedir recuperación avanzada manteniendo el soporte reutilizable, a diferencia de la destrucción física.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-87"
+    },
+    {
+      "pregunta": "Los registros financieros de hace siete años ya no se usan en las operaciones diarias, pero la ley exige conservarlos tres años más. La empresa los mueve a almacenamiento seguro y económico de largo plazo, manteniendo la posibilidad de recuperarlos cuando sea necesario. ¿En qué fase del ciclo de vida de los datos están?",
+      "opciones": [
+        "Uso",
+        "Destrucción",
+        "Creación",
+        "Archivo"
+      ],
+      "respuesta": 3,
+      "explicacion": "Los datos retenidos por cumplimiento o referencia ocasional, pero fuera del uso activo, están en la fase de archivo.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-86"
+    },
+    {
+      "pregunta": "Por separado, un inicio de sesión fallido en el registro VPN, una nueva cuenta de administrador en el directorio y una gran transferencia saliente en el firewall parecen eventos menores. Una plataforma ingiere las tres fuentes y las correlaciona en una sola alerta de alta prioridad que describe una posible cadena de intrusión. ¿Qué capacidad ilustra esto?",
+      "opciones": [
+        "Correlación SIEM que revela patrones de ataque que los silos de registros aislados podrían pasar por alto",
+        "Balanceo de carga",
+        "Cola de impresión",
+        "Desfragmentación"
+      ],
+      "respuesta": 0,
+      "explicacion": "Un SIEM agrega y correlaciona eventos de múltiples fuentes para detectar cadenas de ataque que no son evidentes en un único registro.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-92"
+    },
+    {
+      "pregunta": "La plataforma de supervisión de una empresa financiera analiza continuamente las transacciones y genera una alerta cuando los patrones de gasto se desvían significativamente del historial de un cliente, para que los analistas investiguen un posible fraude. En términos de controles, ¿cómo se describe MEJOR esta capacidad de alerta?",
+      "opciones": [
+        "Un control administrativo disuasorio",
+        "Un control físico preventivo",
+        "Un control técnico detectivo",
+        "Una política correctiva"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un sistema software que identifica actividad sospechosa y genera alertas realiza una función detectiva mediante un control técnico.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-18"
+    },
+    {
+      "pregunta": "Un cambio propuesto en un router entra en el proceso de la empresa: el solicitante documenta el cambio y el plan de reversión, un comité revisa el impacto, se concede aprobación, se prueba y programa el cambio, después se implementa y verifica, manteniendo registros de todo el proceso. ¿Cuál es el valor de seguridad de esta disciplina?",
+      "opciones": [
+        "Garantiza que los cambios se evalúen por riesgo, se autoricen, sean reversibles y trazables, evitando modificaciones no autorizadas o desestabilizadoras",
+        "Sustituye la necesidad de copias de seguridad",
+        "Solo importa para cambios cosméticos",
+        "Ralentiza el trabajo sin aportar beneficio"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión formal de cambios aporta evaluación de riesgo, autorización, rollback probado y trazabilidad.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-96"
+    },
+    {
+      "pregunta": "Después de que un empleado interno copiara una base de datos de clientes a una memoria USB, la empresa despliega software de endpoint que bloquea la escritura de archivos marcados como confidenciales en medios extraíbles y registra cada intento. ¿Qué clase de control protege ahora ese canal?",
+      "opciones": [
+        "Un hub",
+        "Desfragmentación de disco",
+        "Data Loss Prevention (DLP) aplicando políticas sobre medios extraíbles",
+        "Un salvapantallas"
+      ],
+      "respuesta": 2,
+      "explicacion": "DLP controla y registra el movimiento de datos sensibles hacia canales como dispositivos USB para prevenir exfiltración.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-94"
+    },
+    {
+      "pregunta": "Una empresa cifró años de archivos con una única clave guardada en el gestor personal de contraseñas de un administrador. El administrador abandona la empresa y la clave resulta inaccesible, haciendo ilegibles los archivos. ¿Qué disciplina evita este problema?",
+      "opciones": [
+        "Comprar discos más grandes",
+        "Imprimir previamente los archivos",
+        "Desactivar todo el cifrado",
+        "Gestión de claves, incluyendo backup o escrow seguro, custodia documentada y mecanismos de recuperación independientes de una sola persona"
+      ],
+      "respuesta": 3,
+      "explicacion": "Una gestión de claves adecuada establece custodia, copias de recuperación y procedimientos que evitan que los datos dependan de una única persona o clave no recuperable.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-89"
+    },
+    {
+      "pregunta": "Un responsable debe definir cuánto tiempo conservar diferentes logs. Las investigaciones pueden descubrir incidentes meses después, el almacenamiento es limitado y algunos registros contienen datos personales. ¿Qué debería determinar los periodos de retención?",
+      "opciones": [
+        "Una política que equilibre necesidades de investigación y cumplimiento con costes de almacenamiento y obligaciones de privacidad, definiendo periodos por tipo de log",
+        "Conservarlo todo para siempre independientemente de la ley",
+        "Eliminar todos los logs cada noche",
+        "Conservar únicamente los logs que no muestren problemas"
+      ],
+      "respuesta": 0,
+      "explicacion": "La retención debe equilibrar investigación, obligaciones regulatorias, privacidad, coste y utilidad, con periodos definidos según el tipo de registro.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/4.json#pregunta-92"
+    },
+    {
+      "pregunta": "Un administrador de firewall realiza un cambio de regla no documentado un viernes por la tarde para ayudar a un compañero. El lunes se descubre que el cambio expuso un servicio interno a Internet. ¿Qué proceso estaba diseñado para evitar precisamente este resultado?",
+      "opciones": [
+        "Gestión de cambios, con solicitud, revisión, aprobación, pruebas y documentación antes de la implantación",
+        "Procesamiento de nóminas",
+        "Evaluación anual",
+        "Aprobación de marketing"
+      ],
+      "respuesta": 0,
+      "explicacion": "La gestión formal de cambios exige revisar, aprobar, probar y documentar las modificaciones antes de aplicarlas en producción.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-97"
+    },
+    {
+      "pregunta": "Los investigadores descubren que un intruso con privilegios de administrador eliminó partes del registro de seguridad local para ocultar sus acciones. ¿Qué práctica preservaría MEJOR evidencias fiables pese a esa manipulación?",
+      "opciones": [
+        "Reenviar los logs casi en tiempo real a un servidor central separado y con acceso restringido",
+        "Conservar los logs únicamente en cada equipo local",
+        "Desactivar el registro para ahorrar espacio",
+        "Imprimir los logs semanalmente y eliminar los originales"
+      ],
+      "respuesta": 0,
+      "explicacion": "Enviar los logs a un repositorio central protegido conserva una copia independiente aunque un atacante manipule o borre los registros del sistema origen.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-93"
+    },
+    {
+      "pregunta": "Un ingeniero publica accidentalmente una clave privada en un repositorio público de código. El certificado asociado se usa para firmar las actualizaciones de software de la empresa. ¿Cuál es el peligro inmediato y qué debe hacer la empresa?",
+      "opciones": [
+        "No hay peligro, porque las claves privadas son públicas",
+        "La clave se vuelve más fuerte al exponerse",
+        "Solo hay que sustituir la clave pública correspondiente",
+        "Los atacantes podrían firmar software malicioso que los clientes confiarían como genuino, por lo que la clave debe revocarse y sustituirse inmediatamente"
+      ],
+      "respuesta": 3,
+      "explicacion": "Quien posea la clave privada de firma puede generar firmas válidas; por eso la clave comprometida debe revocarse y reemplazarse.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/2.json#pregunta-91"
+    },
+    {
+      "pregunta": "El servicio de soporte recibe una llamada sobre una estación de trabajo que muestra una demanda de rescate mientras los recursos compartidos de archivos asignados al equipo se vuelven rápidamente ilegibles. Además de avisar al equipo de respuesta, ¿qué acción de red inmediata debe realizarse respecto a esa estación?",
+      "opciones": [
+        "Mantenerla conectada indefinidamente para observar al atacante",
+        "Reiniciarla repetidamente",
+        "Pagar el rescate desde la estación",
+        "Aislarla inmediatamente de la red para impedir que el cifrado alcance más recursos compartidos"
+      ],
+      "respuesta": 3,
+      "explicacion": "El aislamiento inmediato del sistema afectado ayuda a contener el ransomware e impedir que continúe alcanzando recursos de red accesibles.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-74"
+    },
+    {
+      "pregunta": "Después de endurecer la configuración de su sistema de prevención de intrusiones, una empresa descubre que el dispositivo bloquea repetidamente un flujo de datos legítimo de un socio porque se parece superficialmente a un patrón de ataque. Cada bloqueo retrasa pedidos. ¿Qué desafío operativo de la prevención en línea ilustra este caso?",
+      "opciones": [
+        "Falsos negativos que mejoran el rendimiento",
+        "Registro excesivo de impresoras",
+        "Falsos positivos, donde tráfico legítimo que coincide con reglas de detección es bloqueado y exige un ajuste cuidadoso del dispositivo en línea",
+        "Sobrecarga del cifrado de las copias de seguridad"
+      ],
+      "respuesta": 2,
+      "explicacion": "Un IPS actúa en línea y puede interrumpir tráfico automáticamente. Si clasifica tráfico legítimo como malicioso se produce un falso positivo con impacto real sobre el negocio.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/3.json#pregunta-68"
+    },
+    {
+      "pregunta": "Antes de desplegar doscientos portátiles nuevos, el equipo de TI prepara una configuración documentada y aprobada: servicios innecesarios deshabilitados, cifrado activado, bloqueo de pantalla obligatorio y ajustes comunes aplicados de forma idéntica. ¿Cómo se denomina esta configuración de referencia?",
+      "opciones": [
+        "Honeypot",
+        "Exploit kit",
+        "Security baseline",
+        "Desastre"
+      ],
+      "respuesta": 2,
+      "explicacion": "Una security baseline es un conjunto estandarizado y aprobado de configuraciones seguras que sirve como referencia para los sistemas.",
+      "dominio": 5,
+      "fuente": "tests/udemy/isc2-certified-in-cybersecurity-practice-test/1.json#pregunta-95"
+    }
+  ]
+}
